@@ -17,37 +17,37 @@
         "word": "하다",
         "explanation": "가장 많이 쓰이는 동사. 어떤 행동을 함. 다른 명사와 결합하여 동사를 만든다.",
         "examples": {
-          "beginner": "저는 하다요.",
-          "intermediate": "매일 하다요.",
-          "advanced": "하다는 것은 중요한 활동입니다.",
-          "master": "하다는 행위의 다양한 맥락을 이해하면 표현력이 풍부해집니다."
+          "beginner": "하고 싶어요.",
+          "intermediate": "요즘 매일 하고 있어요.",
+          "advanced": "하는 것은 일상에서 중요한 부분입니다.",
+          "master": "하고 나면 항상 기분이 좋아지는 것 같아요."
         },
         "dialogue": {
           "context": "일상 활동에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "뭐 해요?",
-              "romanization": "mwo haeyo?",
-              "translation": "What are you doing?"
+              "text": "오늘 뭐 했어요?",
+              "romanization": "oneul mwo haeseoyo?",
+              "translation": "What did you do today?"
             },
             {
               "speaker": "B",
-              "text": "하다요.",
-              "romanization": "hadayo.",
-              "translation": "I to do."
+              "text": "하고 왔어요.",
+              "romanization": "hago waseoyo.",
+              "translation": "I went to do."
             },
             {
               "speaker": "A",
-              "text": "자주 해요?",
-              "romanization": "jaju haeyo?",
-              "translation": "Do you do it often?"
+              "text": "좋았어요?",
+              "romanization": "jotaseoyo?",
+              "translation": "Was it good?"
             },
             {
               "speaker": "B",
-              "text": "네, 거의 매일요.",
-              "romanization": "ne, geoui maeilyo.",
-              "translation": "Yes, almost every day."
+              "text": "네, 정말 좋았어요!",
+              "romanization": "ne, jeongmal jotaseoyo!",
+              "translation": "Yes, it was great!"
             }
           ]
         }
@@ -56,37 +56,37 @@
         "word": "to do",
         "explanation": "The most commonly used verb. To do an action. Combines with nouns to form verbs.",
         "examples": {
-          "beginner": "I to do.",
-          "intermediate": "I to do every day.",
-          "advanced": "to doing is an important activity.",
-          "master": "Understanding various contexts of to doing enriches expression."
+          "beginner": "I want to do.",
+          "intermediate": "These days I do every day.",
+          "advanced": "It is important to do regularly in daily life.",
+          "master": "After you do, you always feel better."
         },
         "dialogue": {
           "context": "Talking about daily activities",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What are you doing?",
+              "text": "What did you do today?",
               "romanization": "",
-              "translation": "뭐 해요?"
+              "translation": "오늘 뭐 했어요?"
             },
             {
               "speaker": "B",
-              "text": "I to do.",
+              "text": "I went to do.",
               "romanization": "",
-              "translation": "하다요."
+              "translation": "하고 왔어요."
             },
             {
               "speaker": "A",
-              "text": "Do you do it often?",
+              "text": "Was it good?",
               "romanization": "",
-              "translation": "자주 해요?"
+              "translation": "좋았어요?"
             },
             {
               "speaker": "B",
-              "text": "Yes, almost every day.",
+              "text": "Yes, it was great!",
               "romanization": "",
-              "translation": "네, 거의 매일요."
+              "translation": "네, 정말 좋았어요!"
             }
           ]
         }
@@ -115,37 +115,37 @@
         "word": "가다",
         "explanation": "한 장소에서 다른 장소로 이동하다.",
         "examples": {
-          "beginner": "저는 가다요.",
-          "intermediate": "매일 가다요.",
-          "advanced": "가다는 것은 중요한 활동입니다.",
-          "master": "가다는 행위의 다양한 맥락을 이해하면 표현력이 풍부해집니다."
+          "beginner": "가고 싶어요.",
+          "intermediate": "요즘 매일 가고 있어요.",
+          "advanced": "가는 것은 일상에서 중요한 부분입니다.",
+          "master": "가고 나면 항상 기분이 좋아지는 것 같아요."
         },
         "dialogue": {
           "context": "일상 활동에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "뭐 해요?",
-              "romanization": "mwo haeyo?",
-              "translation": "What are you doing?"
+              "text": "오늘 뭐 했어요?",
+              "romanization": "oneul mwo haeseoyo?",
+              "translation": "What did you do today?"
             },
             {
               "speaker": "B",
-              "text": "가다요.",
-              "romanization": "gadayo.",
-              "translation": "I to go."
+              "text": "가고 왔어요.",
+              "romanization": "gago waseoyo.",
+              "translation": "I went to go."
             },
             {
               "speaker": "A",
-              "text": "자주 해요?",
-              "romanization": "jaju haeyo?",
-              "translation": "Do you do it often?"
+              "text": "좋았어요?",
+              "romanization": "jotaseoyo?",
+              "translation": "Was it good?"
             },
             {
               "speaker": "B",
-              "text": "네, 거의 매일요.",
-              "romanization": "ne, geoui maeilyo.",
-              "translation": "Yes, almost every day."
+              "text": "네, 정말 좋았어요!",
+              "romanization": "ne, jeongmal jotaseoyo!",
+              "translation": "Yes, it was great!"
             }
           ]
         }
@@ -154,37 +154,37 @@
         "word": "to go",
         "explanation": "To move from one place to another.",
         "examples": {
-          "beginner": "I to go.",
-          "intermediate": "I to go every day.",
-          "advanced": "to going is an important activity.",
-          "master": "Understanding various contexts of to going enriches expression."
+          "beginner": "I want to go.",
+          "intermediate": "These days I go every day.",
+          "advanced": "It is important to go regularly in daily life.",
+          "master": "After you go, you always feel better."
         },
         "dialogue": {
           "context": "Talking about daily activities",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What are you doing?",
+              "text": "What did you do today?",
               "romanization": "",
-              "translation": "뭐 해요?"
+              "translation": "오늘 뭐 했어요?"
             },
             {
               "speaker": "B",
-              "text": "I to go.",
+              "text": "I went to go.",
               "romanization": "",
-              "translation": "가다요."
+              "translation": "가고 왔어요."
             },
             {
               "speaker": "A",
-              "text": "Do you do it often?",
+              "text": "Was it good?",
               "romanization": "",
-              "translation": "자주 해요?"
+              "translation": "좋았어요?"
             },
             {
               "speaker": "B",
-              "text": "Yes, almost every day.",
+              "text": "Yes, it was great!",
               "romanization": "",
-              "translation": "네, 거의 매일요."
+              "translation": "네, 정말 좋았어요!"
             }
           ]
         }
@@ -213,37 +213,37 @@
         "word": "오다",
         "explanation": "다른 장소에서 이곳으로 이동하다.",
         "examples": {
-          "beginner": "저는 오다요.",
-          "intermediate": "매일 오다요.",
-          "advanced": "오다는 것은 중요한 활동입니다.",
-          "master": "오다는 행위의 다양한 맥락을 이해하면 표현력이 풍부해집니다."
+          "beginner": "오고 싶어요.",
+          "intermediate": "요즘 매일 오고 있어요.",
+          "advanced": "오는 것은 일상에서 중요한 부분입니다.",
+          "master": "오고 나면 항상 기분이 좋아지는 것 같아요."
         },
         "dialogue": {
           "context": "일상 활동에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "뭐 해요?",
-              "romanization": "mwo haeyo?",
-              "translation": "What are you doing?"
+              "text": "오늘 뭐 했어요?",
+              "romanization": "oneul mwo haeseoyo?",
+              "translation": "What did you do today?"
             },
             {
               "speaker": "B",
-              "text": "오다요.",
-              "romanization": "odayo.",
-              "translation": "I to come."
+              "text": "오고 왔어요.",
+              "romanization": "ogo waseoyo.",
+              "translation": "I went to come."
             },
             {
               "speaker": "A",
-              "text": "자주 해요?",
-              "romanization": "jaju haeyo?",
-              "translation": "Do you do it often?"
+              "text": "좋았어요?",
+              "romanization": "jotaseoyo?",
+              "translation": "Was it good?"
             },
             {
               "speaker": "B",
-              "text": "네, 거의 매일요.",
-              "romanization": "ne, geoui maeilyo.",
-              "translation": "Yes, almost every day."
+              "text": "네, 정말 좋았어요!",
+              "romanization": "ne, jeongmal jotaseoyo!",
+              "translation": "Yes, it was great!"
             }
           ]
         }
@@ -252,37 +252,37 @@
         "word": "to come",
         "explanation": "To move from another place to here.",
         "examples": {
-          "beginner": "I to come.",
-          "intermediate": "I to come every day.",
-          "advanced": "to comeing is an important activity.",
-          "master": "Understanding various contexts of to comeing enriches expression."
+          "beginner": "I want to come.",
+          "intermediate": "These days I come every day.",
+          "advanced": "It is important to come regularly in daily life.",
+          "master": "After you come, you always feel better."
         },
         "dialogue": {
           "context": "Talking about daily activities",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What are you doing?",
+              "text": "What did you do today?",
               "romanization": "",
-              "translation": "뭐 해요?"
+              "translation": "오늘 뭐 했어요?"
             },
             {
               "speaker": "B",
-              "text": "I to come.",
+              "text": "I went to come.",
               "romanization": "",
-              "translation": "오다요."
+              "translation": "오고 왔어요."
             },
             {
               "speaker": "A",
-              "text": "Do you do it often?",
+              "text": "Was it good?",
               "romanization": "",
-              "translation": "자주 해요?"
+              "translation": "좋았어요?"
             },
             {
               "speaker": "B",
-              "text": "Yes, almost every day.",
+              "text": "Yes, it was great!",
               "romanization": "",
-              "translation": "네, 거의 매일요."
+              "translation": "네, 정말 좋았어요!"
             }
           ]
         }
@@ -311,37 +311,37 @@
         "word": "먹다",
         "explanation": "음식을 입으로 씹어서 삼키다.",
         "examples": {
-          "beginner": "저는 먹다요.",
-          "intermediate": "매일 먹다요.",
-          "advanced": "먹다는 것은 중요한 활동입니다.",
-          "master": "먹다는 행위의 다양한 맥락을 이해하면 표현력이 풍부해집니다."
+          "beginner": "먹고 싶어요.",
+          "intermediate": "요즘 매일 먹고 있어요.",
+          "advanced": "먹는 것은 일상에서 중요한 부분입니다.",
+          "master": "먹고 나면 항상 기분이 좋아지는 것 같아요."
         },
         "dialogue": {
           "context": "일상 활동에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "뭐 해요?",
-              "romanization": "mwo haeyo?",
-              "translation": "What are you doing?"
+              "text": "오늘 뭐 했어요?",
+              "romanization": "oneul mwo haeseoyo?",
+              "translation": "What did you do today?"
             },
             {
               "speaker": "B",
-              "text": "먹다요.",
-              "romanization": "meokdayo.",
-              "translation": "I to eat."
+              "text": "먹고 왔어요.",
+              "romanization": "meokgo waseoyo.",
+              "translation": "I went to eat."
             },
             {
               "speaker": "A",
-              "text": "자주 해요?",
-              "romanization": "jaju haeyo?",
-              "translation": "Do you do it often?"
+              "text": "좋았어요?",
+              "romanization": "jotaseoyo?",
+              "translation": "Was it good?"
             },
             {
               "speaker": "B",
-              "text": "네, 거의 매일요.",
-              "romanization": "ne, geoui maeilyo.",
-              "translation": "Yes, almost every day."
+              "text": "네, 정말 좋았어요!",
+              "romanization": "ne, jeongmal jotaseoyo!",
+              "translation": "Yes, it was great!"
             }
           ]
         }
@@ -350,37 +350,37 @@
         "word": "to eat",
         "explanation": "To chew and swallow food with the mouth.",
         "examples": {
-          "beginner": "I to eat.",
-          "intermediate": "I to eat every day.",
-          "advanced": "to eating is an important activity.",
-          "master": "Understanding various contexts of to eating enriches expression."
+          "beginner": "I want to eat.",
+          "intermediate": "These days I eat every day.",
+          "advanced": "It is important to eat regularly in daily life.",
+          "master": "After you eat, you always feel better."
         },
         "dialogue": {
           "context": "Talking about daily activities",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What are you doing?",
+              "text": "What did you do today?",
               "romanization": "",
-              "translation": "뭐 해요?"
+              "translation": "오늘 뭐 했어요?"
             },
             {
               "speaker": "B",
-              "text": "I to eat.",
+              "text": "I went to eat.",
               "romanization": "",
-              "translation": "먹다요."
+              "translation": "먹고 왔어요."
             },
             {
               "speaker": "A",
-              "text": "Do you do it often?",
+              "text": "Was it good?",
               "romanization": "",
-              "translation": "자주 해요?"
+              "translation": "좋았어요?"
             },
             {
               "speaker": "B",
-              "text": "Yes, almost every day.",
+              "text": "Yes, it was great!",
               "romanization": "",
-              "translation": "네, 거의 매일요."
+              "translation": "네, 정말 좋았어요!"
             }
           ]
         }
@@ -409,37 +409,37 @@
         "word": "마시다",
         "explanation": "액체를 입으로 삼키다.",
         "examples": {
-          "beginner": "저는 마시다요.",
-          "intermediate": "매일 마시다요.",
-          "advanced": "마시다는 것은 중요한 활동입니다.",
-          "master": "마시다는 행위의 다양한 맥락을 이해하면 표현력이 풍부해집니다."
+          "beginner": "마시고 싶어요.",
+          "intermediate": "요즘 매일 마시고 있어요.",
+          "advanced": "마시는 것은 일상에서 중요한 부분입니다.",
+          "master": "마시고 나면 항상 기분이 좋아지는 것 같아요."
         },
         "dialogue": {
           "context": "일상 활동에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "뭐 해요?",
-              "romanization": "mwo haeyo?",
-              "translation": "What are you doing?"
+              "text": "오늘 뭐 했어요?",
+              "romanization": "oneul mwo haeseoyo?",
+              "translation": "What did you do today?"
             },
             {
               "speaker": "B",
-              "text": "마시다요.",
-              "romanization": "masidayo.",
-              "translation": "I to drink."
+              "text": "마시고 왔어요.",
+              "romanization": "masigo waseoyo.",
+              "translation": "I went to drink."
             },
             {
               "speaker": "A",
-              "text": "자주 해요?",
-              "romanization": "jaju haeyo?",
-              "translation": "Do you do it often?"
+              "text": "좋았어요?",
+              "romanization": "jotaseoyo?",
+              "translation": "Was it good?"
             },
             {
               "speaker": "B",
-              "text": "네, 거의 매일요.",
-              "romanization": "ne, geoui maeilyo.",
-              "translation": "Yes, almost every day."
+              "text": "네, 정말 좋았어요!",
+              "romanization": "ne, jeongmal jotaseoyo!",
+              "translation": "Yes, it was great!"
             }
           ]
         }
@@ -448,37 +448,37 @@
         "word": "to drink",
         "explanation": "To swallow liquid through the mouth.",
         "examples": {
-          "beginner": "I to drink.",
-          "intermediate": "I to drink every day.",
-          "advanced": "to drinking is an important activity.",
-          "master": "Understanding various contexts of to drinking enriches expression."
+          "beginner": "I want to drink.",
+          "intermediate": "These days I drink every day.",
+          "advanced": "It is important to drink regularly in daily life.",
+          "master": "After you drink, you always feel better."
         },
         "dialogue": {
           "context": "Talking about daily activities",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What are you doing?",
+              "text": "What did you do today?",
               "romanization": "",
-              "translation": "뭐 해요?"
+              "translation": "오늘 뭐 했어요?"
             },
             {
               "speaker": "B",
-              "text": "I to drink.",
+              "text": "I went to drink.",
               "romanization": "",
-              "translation": "마시다요."
+              "translation": "마시고 왔어요."
             },
             {
               "speaker": "A",
-              "text": "Do you do it often?",
+              "text": "Was it good?",
               "romanization": "",
-              "translation": "자주 해요?"
+              "translation": "좋았어요?"
             },
             {
               "speaker": "B",
-              "text": "Yes, almost every day.",
+              "text": "Yes, it was great!",
               "romanization": "",
-              "translation": "네, 거의 매일요."
+              "translation": "네, 정말 좋았어요!"
             }
           ]
         }
@@ -507,37 +507,37 @@
         "word": "보다",
         "explanation": "눈으로 대상을 인식하다. 영화, TV 등을 시청하다.",
         "examples": {
-          "beginner": "저는 보다요.",
-          "intermediate": "매일 보다요.",
-          "advanced": "보다는 것은 중요한 활동입니다.",
-          "master": "보다는 행위의 다양한 맥락을 이해하면 표현력이 풍부해집니다."
+          "beginner": "보고 싶어요.",
+          "intermediate": "요즘 매일 보고 있어요.",
+          "advanced": "보는 것은 일상에서 중요한 부분입니다.",
+          "master": "보고 나면 항상 기분이 좋아지는 것 같아요."
         },
         "dialogue": {
           "context": "일상 활동에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "뭐 해요?",
-              "romanization": "mwo haeyo?",
-              "translation": "What are you doing?"
+              "text": "오늘 뭐 했어요?",
+              "romanization": "oneul mwo haeseoyo?",
+              "translation": "What did you do today?"
             },
             {
               "speaker": "B",
-              "text": "보다요.",
-              "romanization": "bodayo.",
-              "translation": "I to see / to watch / to look."
+              "text": "보고 왔어요.",
+              "romanization": "bogo waseoyo.",
+              "translation": "I went to see / to watch / to look."
             },
             {
               "speaker": "A",
-              "text": "자주 해요?",
-              "romanization": "jaju haeyo?",
-              "translation": "Do you do it often?"
+              "text": "좋았어요?",
+              "romanization": "jotaseoyo?",
+              "translation": "Was it good?"
             },
             {
               "speaker": "B",
-              "text": "네, 거의 매일요.",
-              "romanization": "ne, geoui maeilyo.",
-              "translation": "Yes, almost every day."
+              "text": "네, 정말 좋았어요!",
+              "romanization": "ne, jeongmal jotaseoyo!",
+              "translation": "Yes, it was great!"
             }
           ]
         }
@@ -546,37 +546,37 @@
         "word": "to see / to watch / to look",
         "explanation": "To perceive with the eyes. To watch movies, TV, etc.",
         "examples": {
-          "beginner": "I to see / to watch / to look.",
-          "intermediate": "I to see / to watch / to look every day.",
-          "advanced": "to see / to watch / to looking is an important activity.",
-          "master": "Understanding various contexts of to see / to watch / to looking enriches expression."
+          "beginner": "I want to see / to watch / to look.",
+          "intermediate": "These days I see / to watch / to look every day.",
+          "advanced": "It is important to see / to watch / to look regularly in daily life.",
+          "master": "After you see / to watch / to look, you always feel better."
         },
         "dialogue": {
           "context": "Talking about daily activities",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What are you doing?",
+              "text": "What did you do today?",
               "romanization": "",
-              "translation": "뭐 해요?"
+              "translation": "오늘 뭐 했어요?"
             },
             {
               "speaker": "B",
-              "text": "I to see / to watch / to look.",
+              "text": "I went to see / to watch / to look.",
               "romanization": "",
-              "translation": "보다요."
+              "translation": "보고 왔어요."
             },
             {
               "speaker": "A",
-              "text": "Do you do it often?",
+              "text": "Was it good?",
               "romanization": "",
-              "translation": "자주 해요?"
+              "translation": "좋았어요?"
             },
             {
               "speaker": "B",
-              "text": "Yes, almost every day.",
+              "text": "Yes, it was great!",
               "romanization": "",
-              "translation": "네, 거의 매일요."
+              "translation": "네, 정말 좋았어요!"
             }
           ]
         }
@@ -605,37 +605,37 @@
         "word": "듣다",
         "explanation": "귀로 소리를 인식하다. 수업을 받다.",
         "examples": {
-          "beginner": "저는 듣다요.",
-          "intermediate": "매일 듣다요.",
-          "advanced": "듣다는 것은 중요한 활동입니다.",
-          "master": "듣다는 행위의 다양한 맥락을 이해하면 표현력이 풍부해집니다."
+          "beginner": "듣고 싶어요.",
+          "intermediate": "요즘 매일 듣고 있어요.",
+          "advanced": "듣는 것은 일상에서 중요한 부분입니다.",
+          "master": "듣고 나면 항상 기분이 좋아지는 것 같아요."
         },
         "dialogue": {
           "context": "일상 활동에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "뭐 해요?",
-              "romanization": "mwo haeyo?",
-              "translation": "What are you doing?"
+              "text": "오늘 뭐 했어요?",
+              "romanization": "oneul mwo haeseoyo?",
+              "translation": "What did you do today?"
             },
             {
               "speaker": "B",
-              "text": "듣다요.",
-              "romanization": "deutdayo.",
-              "translation": "I to listen / to hear."
+              "text": "듣고 왔어요.",
+              "romanization": "deutgo waseoyo.",
+              "translation": "I went to listen / to hear."
             },
             {
               "speaker": "A",
-              "text": "자주 해요?",
-              "romanization": "jaju haeyo?",
-              "translation": "Do you do it often?"
+              "text": "좋았어요?",
+              "romanization": "jotaseoyo?",
+              "translation": "Was it good?"
             },
             {
               "speaker": "B",
-              "text": "네, 거의 매일요.",
-              "romanization": "ne, geoui maeilyo.",
-              "translation": "Yes, almost every day."
+              "text": "네, 정말 좋았어요!",
+              "romanization": "ne, jeongmal jotaseoyo!",
+              "translation": "Yes, it was great!"
             }
           ]
         }
@@ -644,37 +644,37 @@
         "word": "to listen / to hear",
         "explanation": "To perceive sound with the ears. To take classes.",
         "examples": {
-          "beginner": "I to listen / to hear.",
-          "intermediate": "I to listen / to hear every day.",
-          "advanced": "to listen / to hearing is an important activity.",
-          "master": "Understanding various contexts of to listen / to hearing enriches expression."
+          "beginner": "I want to listen / to hear.",
+          "intermediate": "These days I listen / to hear every day.",
+          "advanced": "It is important to listen / to hear regularly in daily life.",
+          "master": "After you listen / to hear, you always feel better."
         },
         "dialogue": {
           "context": "Talking about daily activities",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What are you doing?",
+              "text": "What did you do today?",
               "romanization": "",
-              "translation": "뭐 해요?"
+              "translation": "오늘 뭐 했어요?"
             },
             {
               "speaker": "B",
-              "text": "I to listen / to hear.",
+              "text": "I went to listen / to hear.",
               "romanization": "",
-              "translation": "듣다요."
+              "translation": "듣고 왔어요."
             },
             {
               "speaker": "A",
-              "text": "Do you do it often?",
+              "text": "Was it good?",
               "romanization": "",
-              "translation": "자주 해요?"
+              "translation": "좋았어요?"
             },
             {
               "speaker": "B",
-              "text": "Yes, almost every day.",
+              "text": "Yes, it was great!",
               "romanization": "",
-              "translation": "네, 거의 매일요."
+              "translation": "네, 정말 좋았어요!"
             }
           ]
         }
@@ -703,37 +703,37 @@
         "word": "말하다",
         "explanation": "입으로 소리를 내어 의사를 표현하다.",
         "examples": {
-          "beginner": "저는 말하다요.",
-          "intermediate": "매일 말하다요.",
-          "advanced": "말하다는 것은 중요한 활동입니다.",
-          "master": "말하다는 행위의 다양한 맥락을 이해하면 표현력이 풍부해집니다."
+          "beginner": "말하고 싶어요.",
+          "intermediate": "요즘 매일 말하고 있어요.",
+          "advanced": "말하는 것은 일상에서 중요한 부분입니다.",
+          "master": "말하고 나면 항상 기분이 좋아지는 것 같아요."
         },
         "dialogue": {
           "context": "일상 활동에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "뭐 해요?",
-              "romanization": "mwo haeyo?",
-              "translation": "What are you doing?"
+              "text": "오늘 뭐 했어요?",
+              "romanization": "oneul mwo haeseoyo?",
+              "translation": "What did you do today?"
             },
             {
               "speaker": "B",
-              "text": "말하다요.",
-              "romanization": "malhadayo.",
-              "translation": "I to speak / to say / to talk."
+              "text": "말하고 왔어요.",
+              "romanization": "malhago waseoyo.",
+              "translation": "I went to speak / to say / to talk."
             },
             {
               "speaker": "A",
-              "text": "자주 해요?",
-              "romanization": "jaju haeyo?",
-              "translation": "Do you do it often?"
+              "text": "좋았어요?",
+              "romanization": "jotaseoyo?",
+              "translation": "Was it good?"
             },
             {
               "speaker": "B",
-              "text": "네, 거의 매일요.",
-              "romanization": "ne, geoui maeilyo.",
-              "translation": "Yes, almost every day."
+              "text": "네, 정말 좋았어요!",
+              "romanization": "ne, jeongmal jotaseoyo!",
+              "translation": "Yes, it was great!"
             }
           ]
         }
@@ -742,37 +742,37 @@
         "word": "to speak / to say / to talk",
         "explanation": "To express meaning by making sounds with the mouth.",
         "examples": {
-          "beginner": "I to speak / to say / to talk.",
-          "intermediate": "I to speak / to say / to talk every day.",
-          "advanced": "to speak / to say / to talking is an important activity.",
-          "master": "Understanding various contexts of to speak / to say / to talking enriches expression."
+          "beginner": "I want to speak / to say / to talk.",
+          "intermediate": "These days I speak / to say / to talk every day.",
+          "advanced": "It is important to speak / to say / to talk regularly in daily life.",
+          "master": "After you speak / to say / to talk, you always feel better."
         },
         "dialogue": {
           "context": "Talking about daily activities",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What are you doing?",
+              "text": "What did you do today?",
               "romanization": "",
-              "translation": "뭐 해요?"
+              "translation": "오늘 뭐 했어요?"
             },
             {
               "speaker": "B",
-              "text": "I to speak / to say / to talk.",
+              "text": "I went to speak / to say / to talk.",
               "romanization": "",
-              "translation": "말하다요."
+              "translation": "말하고 왔어요."
             },
             {
               "speaker": "A",
-              "text": "Do you do it often?",
+              "text": "Was it good?",
               "romanization": "",
-              "translation": "자주 해요?"
+              "translation": "좋았어요?"
             },
             {
               "speaker": "B",
-              "text": "Yes, almost every day.",
+              "text": "Yes, it was great!",
               "romanization": "",
-              "translation": "네, 거의 매일요."
+              "translation": "네, 정말 좋았어요!"
             }
           ]
         }
@@ -801,37 +801,37 @@
         "word": "읽다",
         "explanation": "글자를 보고 의미를 이해하다.",
         "examples": {
-          "beginner": "저는 읽다요.",
-          "intermediate": "매일 읽다요.",
-          "advanced": "읽다는 것은 중요한 활동입니다.",
-          "master": "읽다는 행위의 다양한 맥락을 이해하면 표현력이 풍부해집니다."
+          "beginner": "읽고 싶어요.",
+          "intermediate": "요즘 매일 읽고 있어요.",
+          "advanced": "읽는 것은 일상에서 중요한 부분입니다.",
+          "master": "읽고 나면 항상 기분이 좋아지는 것 같아요."
         },
         "dialogue": {
           "context": "일상 활동에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "뭐 해요?",
-              "romanization": "mwo haeyo?",
-              "translation": "What are you doing?"
+              "text": "오늘 뭐 했어요?",
+              "romanization": "oneul mwo haeseoyo?",
+              "translation": "What did you do today?"
             },
             {
               "speaker": "B",
-              "text": "읽다요.",
-              "romanization": "ildayo.",
-              "translation": "I to read."
+              "text": "읽고 왔어요.",
+              "romanization": "ilgo waseoyo.",
+              "translation": "I went to read."
             },
             {
               "speaker": "A",
-              "text": "자주 해요?",
-              "romanization": "jaju haeyo?",
-              "translation": "Do you do it often?"
+              "text": "좋았어요?",
+              "romanization": "jotaseoyo?",
+              "translation": "Was it good?"
             },
             {
               "speaker": "B",
-              "text": "네, 거의 매일요.",
-              "romanization": "ne, geoui maeilyo.",
-              "translation": "Yes, almost every day."
+              "text": "네, 정말 좋았어요!",
+              "romanization": "ne, jeongmal jotaseoyo!",
+              "translation": "Yes, it was great!"
             }
           ]
         }
@@ -840,37 +840,37 @@
         "word": "to read",
         "explanation": "To look at written text and understand its meaning.",
         "examples": {
-          "beginner": "I to read.",
-          "intermediate": "I to read every day.",
-          "advanced": "to reading is an important activity.",
-          "master": "Understanding various contexts of to reading enriches expression."
+          "beginner": "I want to read.",
+          "intermediate": "These days I read every day.",
+          "advanced": "It is important to read regularly in daily life.",
+          "master": "After you read, you always feel better."
         },
         "dialogue": {
           "context": "Talking about daily activities",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What are you doing?",
+              "text": "What did you do today?",
               "romanization": "",
-              "translation": "뭐 해요?"
+              "translation": "오늘 뭐 했어요?"
             },
             {
               "speaker": "B",
-              "text": "I to read.",
+              "text": "I went to read.",
               "romanization": "",
-              "translation": "읽다요."
+              "translation": "읽고 왔어요."
             },
             {
               "speaker": "A",
-              "text": "Do you do it often?",
+              "text": "Was it good?",
               "romanization": "",
-              "translation": "자주 해요?"
+              "translation": "좋았어요?"
             },
             {
               "speaker": "B",
-              "text": "Yes, almost every day.",
+              "text": "Yes, it was great!",
               "romanization": "",
-              "translation": "네, 거의 매일요."
+              "translation": "네, 정말 좋았어요!"
             }
           ]
         }
@@ -899,37 +899,37 @@
         "word": "쓰다",
         "explanation": "글자를 적다. 또는 무언가를 사용하다.",
         "examples": {
-          "beginner": "저는 쓰다요.",
-          "intermediate": "매일 쓰다요.",
-          "advanced": "쓰다는 것은 중요한 활동입니다.",
-          "master": "쓰다는 행위의 다양한 맥락을 이해하면 표현력이 풍부해집니다."
+          "beginner": "쓰고 싶어요.",
+          "intermediate": "요즘 매일 쓰고 있어요.",
+          "advanced": "쓰는 것은 일상에서 중요한 부분입니다.",
+          "master": "쓰고 나면 항상 기분이 좋아지는 것 같아요."
         },
         "dialogue": {
           "context": "일상 활동에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "뭐 해요?",
-              "romanization": "mwo haeyo?",
-              "translation": "What are you doing?"
+              "text": "오늘 뭐 했어요?",
+              "romanization": "oneul mwo haeseoyo?",
+              "translation": "What did you do today?"
             },
             {
               "speaker": "B",
-              "text": "쓰다요.",
-              "romanization": "sseudayo.",
-              "translation": "I to write / to use."
+              "text": "쓰고 왔어요.",
+              "romanization": "sseugo waseoyo.",
+              "translation": "I went to write / to use."
             },
             {
               "speaker": "A",
-              "text": "자주 해요?",
-              "romanization": "jaju haeyo?",
-              "translation": "Do you do it often?"
+              "text": "좋았어요?",
+              "romanization": "jotaseoyo?",
+              "translation": "Was it good?"
             },
             {
               "speaker": "B",
-              "text": "네, 거의 매일요.",
-              "romanization": "ne, geoui maeilyo.",
-              "translation": "Yes, almost every day."
+              "text": "네, 정말 좋았어요!",
+              "romanization": "ne, jeongmal jotaseoyo!",
+              "translation": "Yes, it was great!"
             }
           ]
         }
@@ -938,37 +938,37 @@
         "word": "to write / to use",
         "explanation": "To put down letters. Or to use something.",
         "examples": {
-          "beginner": "I to write / to use.",
-          "intermediate": "I to write / to use every day.",
-          "advanced": "to write / to useing is an important activity.",
-          "master": "Understanding various contexts of to write / to useing enriches expression."
+          "beginner": "I want to write / to use.",
+          "intermediate": "These days I write / to use every day.",
+          "advanced": "It is important to write / to use regularly in daily life.",
+          "master": "After you write / to use, you always feel better."
         },
         "dialogue": {
           "context": "Talking about daily activities",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What are you doing?",
+              "text": "What did you do today?",
               "romanization": "",
-              "translation": "뭐 해요?"
+              "translation": "오늘 뭐 했어요?"
             },
             {
               "speaker": "B",
-              "text": "I to write / to use.",
+              "text": "I went to write / to use.",
               "romanization": "",
-              "translation": "쓰다요."
+              "translation": "쓰고 왔어요."
             },
             {
               "speaker": "A",
-              "text": "Do you do it often?",
+              "text": "Was it good?",
               "romanization": "",
-              "translation": "자주 해요?"
+              "translation": "좋았어요?"
             },
             {
               "speaker": "B",
-              "text": "Yes, almost every day.",
+              "text": "Yes, it was great!",
               "romanization": "",
-              "translation": "네, 거의 매일요."
+              "translation": "네, 정말 좋았어요!"
             }
           ]
         }
@@ -997,37 +997,37 @@
         "word": "알다",
         "explanation": "정보나 사실을 인식하다. 이해하다.",
         "examples": {
-          "beginner": "저는 알다요.",
-          "intermediate": "매일 알다요.",
-          "advanced": "알다는 것은 중요한 활동입니다.",
-          "master": "알다는 행위의 다양한 맥락을 이해하면 표현력이 풍부해집니다."
+          "beginner": "알고 싶어요.",
+          "intermediate": "요즘 매일 알고 있어요.",
+          "advanced": "알는 것은 일상에서 중요한 부분입니다.",
+          "master": "알고 나면 항상 기분이 좋아지는 것 같아요."
         },
         "dialogue": {
           "context": "일상 활동에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "뭐 해요?",
-              "romanization": "mwo haeyo?",
-              "translation": "What are you doing?"
+              "text": "오늘 뭐 했어요?",
+              "romanization": "oneul mwo haeseoyo?",
+              "translation": "What did you do today?"
             },
             {
               "speaker": "B",
-              "text": "알다요.",
-              "romanization": "aldayo.",
-              "translation": "I to know."
+              "text": "알고 왔어요.",
+              "romanization": "algo waseoyo.",
+              "translation": "I went to know."
             },
             {
               "speaker": "A",
-              "text": "자주 해요?",
-              "romanization": "jaju haeyo?",
-              "translation": "Do you do it often?"
+              "text": "좋았어요?",
+              "romanization": "jotaseoyo?",
+              "translation": "Was it good?"
             },
             {
               "speaker": "B",
-              "text": "네, 거의 매일요.",
-              "romanization": "ne, geoui maeilyo.",
-              "translation": "Yes, almost every day."
+              "text": "네, 정말 좋았어요!",
+              "romanization": "ne, jeongmal jotaseoyo!",
+              "translation": "Yes, it was great!"
             }
           ]
         }
@@ -1036,37 +1036,37 @@
         "word": "to know",
         "explanation": "To recognize information or facts. To understand.",
         "examples": {
-          "beginner": "I to know.",
-          "intermediate": "I to know every day.",
-          "advanced": "to knowing is an important activity.",
-          "master": "Understanding various contexts of to knowing enriches expression."
+          "beginner": "I want to know.",
+          "intermediate": "These days I know every day.",
+          "advanced": "It is important to know regularly in daily life.",
+          "master": "After you know, you always feel better."
         },
         "dialogue": {
           "context": "Talking about daily activities",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What are you doing?",
+              "text": "What did you do today?",
               "romanization": "",
-              "translation": "뭐 해요?"
+              "translation": "오늘 뭐 했어요?"
             },
             {
               "speaker": "B",
-              "text": "I to know.",
+              "text": "I went to know.",
               "romanization": "",
-              "translation": "알다요."
+              "translation": "알고 왔어요."
             },
             {
               "speaker": "A",
-              "text": "Do you do it often?",
+              "text": "Was it good?",
               "romanization": "",
-              "translation": "자주 해요?"
+              "translation": "좋았어요?"
             },
             {
               "speaker": "B",
-              "text": "Yes, almost every day.",
+              "text": "Yes, it was great!",
               "romanization": "",
-              "translation": "네, 거의 매일요."
+              "translation": "네, 정말 좋았어요!"
             }
           ]
         }
@@ -1095,37 +1095,37 @@
         "word": "모르다",
         "explanation": "정보나 사실을 알지 못하다.",
         "examples": {
-          "beginner": "저는 모르다요.",
-          "intermediate": "매일 모르다요.",
-          "advanced": "모르다는 것은 중요한 활동입니다.",
-          "master": "모르다는 행위의 다양한 맥락을 이해하면 표현력이 풍부해집니다."
+          "beginner": "모르고 싶어요.",
+          "intermediate": "요즘 매일 모르고 있어요.",
+          "advanced": "모르는 것은 일상에서 중요한 부분입니다.",
+          "master": "모르고 나면 항상 기분이 좋아지는 것 같아요."
         },
         "dialogue": {
           "context": "일상 활동에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "뭐 해요?",
-              "romanization": "mwo haeyo?",
-              "translation": "What are you doing?"
+              "text": "오늘 뭐 했어요?",
+              "romanization": "oneul mwo haeseoyo?",
+              "translation": "What did you do today?"
             },
             {
               "speaker": "B",
-              "text": "모르다요.",
-              "romanization": "moreudayo.",
-              "translation": "I to not know."
+              "text": "모르고 왔어요.",
+              "romanization": "moreugo waseoyo.",
+              "translation": "I went to not know."
             },
             {
               "speaker": "A",
-              "text": "자주 해요?",
-              "romanization": "jaju haeyo?",
-              "translation": "Do you do it often?"
+              "text": "좋았어요?",
+              "romanization": "jotaseoyo?",
+              "translation": "Was it good?"
             },
             {
               "speaker": "B",
-              "text": "네, 거의 매일요.",
-              "romanization": "ne, geoui maeilyo.",
-              "translation": "Yes, almost every day."
+              "text": "네, 정말 좋았어요!",
+              "romanization": "ne, jeongmal jotaseoyo!",
+              "translation": "Yes, it was great!"
             }
           ]
         }
@@ -1134,37 +1134,37 @@
         "word": "to not know",
         "explanation": "To not know information or facts.",
         "examples": {
-          "beginner": "I to not know.",
-          "intermediate": "I to not know every day.",
-          "advanced": "to not knowing is an important activity.",
-          "master": "Understanding various contexts of to not knowing enriches expression."
+          "beginner": "I want to not know.",
+          "intermediate": "These days I not know every day.",
+          "advanced": "It is important to not know regularly in daily life.",
+          "master": "After you not know, you always feel better."
         },
         "dialogue": {
           "context": "Talking about daily activities",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What are you doing?",
+              "text": "What did you do today?",
               "romanization": "",
-              "translation": "뭐 해요?"
+              "translation": "오늘 뭐 했어요?"
             },
             {
               "speaker": "B",
-              "text": "I to not know.",
+              "text": "I went to not know.",
               "romanization": "",
-              "translation": "모르다요."
+              "translation": "모르고 왔어요."
             },
             {
               "speaker": "A",
-              "text": "Do you do it often?",
+              "text": "Was it good?",
               "romanization": "",
-              "translation": "자주 해요?"
+              "translation": "좋았어요?"
             },
             {
               "speaker": "B",
-              "text": "Yes, almost every day.",
+              "text": "Yes, it was great!",
               "romanization": "",
-              "translation": "네, 거의 매일요."
+              "translation": "네, 정말 좋았어요!"
             }
           ]
         }
@@ -1193,37 +1193,37 @@
         "word": "있다",
         "explanation": "존재하다. 어떤 장소에 위치하다. 소유하다.",
         "examples": {
-          "beginner": "저는 있다요.",
-          "intermediate": "매일 있다요.",
-          "advanced": "있다는 것은 중요한 활동입니다.",
-          "master": "있다는 행위의 다양한 맥락을 이해하면 표현력이 풍부해집니다."
+          "beginner": "있고 싶어요.",
+          "intermediate": "요즘 매일 있고 있어요.",
+          "advanced": "있는 것은 일상에서 중요한 부분입니다.",
+          "master": "있고 나면 항상 기분이 좋아지는 것 같아요."
         },
         "dialogue": {
           "context": "일상 활동에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "뭐 해요?",
-              "romanization": "mwo haeyo?",
-              "translation": "What are you doing?"
+              "text": "오늘 뭐 했어요?",
+              "romanization": "oneul mwo haeseoyo?",
+              "translation": "What did you do today?"
             },
             {
               "speaker": "B",
-              "text": "있다요.",
-              "romanization": "isdayo.",
-              "translation": "I to exist / to have / to be (at)."
+              "text": "있고 왔어요.",
+              "romanization": "isgo waseoyo.",
+              "translation": "I went to exist / to have / to be (at)."
             },
             {
               "speaker": "A",
-              "text": "자주 해요?",
-              "romanization": "jaju haeyo?",
-              "translation": "Do you do it often?"
+              "text": "좋았어요?",
+              "romanization": "jotaseoyo?",
+              "translation": "Was it good?"
             },
             {
               "speaker": "B",
-              "text": "네, 거의 매일요.",
-              "romanization": "ne, geoui maeilyo.",
-              "translation": "Yes, almost every day."
+              "text": "네, 정말 좋았어요!",
+              "romanization": "ne, jeongmal jotaseoyo!",
+              "translation": "Yes, it was great!"
             }
           ]
         }
@@ -1232,37 +1232,37 @@
         "word": "to exist / to have / to be (at)",
         "explanation": "To exist. To be located at a place. To possess.",
         "examples": {
-          "beginner": "I to exist / to have / to be (at).",
-          "intermediate": "I to exist / to have / to be (at) every day.",
-          "advanced": "to exist / to have / to be (at)ing is an important activity.",
-          "master": "Understanding various contexts of to exist / to have / to be (at)ing enriches expression."
+          "beginner": "I want to exist / to have / to be (at).",
+          "intermediate": "These days I exist / to have / to be (at) every day.",
+          "advanced": "It is important to exist / to have / to be (at) regularly in daily life.",
+          "master": "After you exist / to have / to be (at), you always feel better."
         },
         "dialogue": {
           "context": "Talking about daily activities",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What are you doing?",
+              "text": "What did you do today?",
               "romanization": "",
-              "translation": "뭐 해요?"
+              "translation": "오늘 뭐 했어요?"
             },
             {
               "speaker": "B",
-              "text": "I to exist / to have / to be (at).",
+              "text": "I went to exist / to have / to be (at).",
               "romanization": "",
-              "translation": "있다요."
+              "translation": "있고 왔어요."
             },
             {
               "speaker": "A",
-              "text": "Do you do it often?",
+              "text": "Was it good?",
               "romanization": "",
-              "translation": "자주 해요?"
+              "translation": "좋았어요?"
             },
             {
               "speaker": "B",
-              "text": "Yes, almost every day.",
+              "text": "Yes, it was great!",
               "romanization": "",
-              "translation": "네, 거의 매일요."
+              "translation": "네, 정말 좋았어요!"
             }
           ]
         }
@@ -1291,37 +1291,37 @@
         "word": "없다",
         "explanation": "존재하지 않다. 소유하지 않다.",
         "examples": {
-          "beginner": "저는 없다요.",
-          "intermediate": "매일 없다요.",
-          "advanced": "없다는 것은 중요한 활동입니다.",
-          "master": "없다는 행위의 다양한 맥락을 이해하면 표현력이 풍부해집니다."
+          "beginner": "없고 싶어요.",
+          "intermediate": "요즘 매일 없고 있어요.",
+          "advanced": "없는 것은 일상에서 중요한 부분입니다.",
+          "master": "없고 나면 항상 기분이 좋아지는 것 같아요."
         },
         "dialogue": {
           "context": "일상 활동에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "뭐 해요?",
-              "romanization": "mwo haeyo?",
-              "translation": "What are you doing?"
+              "text": "오늘 뭐 했어요?",
+              "romanization": "oneul mwo haeseoyo?",
+              "translation": "What did you do today?"
             },
             {
               "speaker": "B",
-              "text": "없다요.",
-              "romanization": "eopdayo.",
-              "translation": "I to not exist / to not have."
+              "text": "없고 왔어요.",
+              "romanization": "eopgo waseoyo.",
+              "translation": "I went to not exist / to not have."
             },
             {
               "speaker": "A",
-              "text": "자주 해요?",
-              "romanization": "jaju haeyo?",
-              "translation": "Do you do it often?"
+              "text": "좋았어요?",
+              "romanization": "jotaseoyo?",
+              "translation": "Was it good?"
             },
             {
               "speaker": "B",
-              "text": "네, 거의 매일요.",
-              "romanization": "ne, geoui maeilyo.",
-              "translation": "Yes, almost every day."
+              "text": "네, 정말 좋았어요!",
+              "romanization": "ne, jeongmal jotaseoyo!",
+              "translation": "Yes, it was great!"
             }
           ]
         }
@@ -1330,37 +1330,37 @@
         "word": "to not exist / to not have",
         "explanation": "To not exist. To not possess.",
         "examples": {
-          "beginner": "I to not exist / to not have.",
-          "intermediate": "I to not exist / to not have every day.",
-          "advanced": "to not exist / to not haveing is an important activity.",
-          "master": "Understanding various contexts of to not exist / to not haveing enriches expression."
+          "beginner": "I want to not exist / to not have.",
+          "intermediate": "These days I not exist / to not have every day.",
+          "advanced": "It is important to not exist / to not have regularly in daily life.",
+          "master": "After you not exist / to not have, you always feel better."
         },
         "dialogue": {
           "context": "Talking about daily activities",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What are you doing?",
+              "text": "What did you do today?",
               "romanization": "",
-              "translation": "뭐 해요?"
+              "translation": "오늘 뭐 했어요?"
             },
             {
               "speaker": "B",
-              "text": "I to not exist / to not have.",
+              "text": "I went to not exist / to not have.",
               "romanization": "",
-              "translation": "없다요."
+              "translation": "없고 왔어요."
             },
             {
               "speaker": "A",
-              "text": "Do you do it often?",
+              "text": "Was it good?",
               "romanization": "",
-              "translation": "자주 해요?"
+              "translation": "좋았어요?"
             },
             {
               "speaker": "B",
-              "text": "Yes, almost every day.",
+              "text": "Yes, it was great!",
               "romanization": "",
-              "translation": "네, 거의 매일요."
+              "translation": "네, 정말 좋았어요!"
             }
           ]
         }
@@ -1389,37 +1389,37 @@
         "word": "자다",
         "explanation": "잠을 자다. 눈을 감고 휴식하다.",
         "examples": {
-          "beginner": "저는 자다요.",
-          "intermediate": "매일 자다요.",
-          "advanced": "자다는 것은 중요한 활동입니다.",
-          "master": "자다는 행위의 다양한 맥락을 이해하면 표현력이 풍부해집니다."
+          "beginner": "자고 싶어요.",
+          "intermediate": "요즘 매일 자고 있어요.",
+          "advanced": "자는 것은 일상에서 중요한 부분입니다.",
+          "master": "자고 나면 항상 기분이 좋아지는 것 같아요."
         },
         "dialogue": {
           "context": "일상 활동에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "뭐 해요?",
-              "romanization": "mwo haeyo?",
-              "translation": "What are you doing?"
+              "text": "오늘 뭐 했어요?",
+              "romanization": "oneul mwo haeseoyo?",
+              "translation": "What did you do today?"
             },
             {
               "speaker": "B",
-              "text": "자다요.",
-              "romanization": "jadayo.",
-              "translation": "I to sleep."
+              "text": "자고 왔어요.",
+              "romanization": "jago waseoyo.",
+              "translation": "I went to sleep."
             },
             {
               "speaker": "A",
-              "text": "자주 해요?",
-              "romanization": "jaju haeyo?",
-              "translation": "Do you do it often?"
+              "text": "좋았어요?",
+              "romanization": "jotaseoyo?",
+              "translation": "Was it good?"
             },
             {
               "speaker": "B",
-              "text": "네, 거의 매일요.",
-              "romanization": "ne, geoui maeilyo.",
-              "translation": "Yes, almost every day."
+              "text": "네, 정말 좋았어요!",
+              "romanization": "ne, jeongmal jotaseoyo!",
+              "translation": "Yes, it was great!"
             }
           ]
         }
@@ -1428,37 +1428,37 @@
         "word": "to sleep",
         "explanation": "To sleep. To rest with eyes closed.",
         "examples": {
-          "beginner": "I to sleep.",
-          "intermediate": "I to sleep every day.",
-          "advanced": "to sleeping is an important activity.",
-          "master": "Understanding various contexts of to sleeping enriches expression."
+          "beginner": "I want to sleep.",
+          "intermediate": "These days I sleep every day.",
+          "advanced": "It is important to sleep regularly in daily life.",
+          "master": "After you sleep, you always feel better."
         },
         "dialogue": {
           "context": "Talking about daily activities",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What are you doing?",
+              "text": "What did you do today?",
               "romanization": "",
-              "translation": "뭐 해요?"
+              "translation": "오늘 뭐 했어요?"
             },
             {
               "speaker": "B",
-              "text": "I to sleep.",
+              "text": "I went to sleep.",
               "romanization": "",
-              "translation": "자다요."
+              "translation": "자고 왔어요."
             },
             {
               "speaker": "A",
-              "text": "Do you do it often?",
+              "text": "Was it good?",
               "romanization": "",
-              "translation": "자주 해요?"
+              "translation": "좋았어요?"
             },
             {
               "speaker": "B",
-              "text": "Yes, almost every day.",
+              "text": "Yes, it was great!",
               "romanization": "",
-              "translation": "네, 거의 매일요."
+              "translation": "네, 정말 좋았어요!"
             }
           ]
         }
@@ -1487,37 +1487,37 @@
         "word": "일어나다",
         "explanation": "잠에서 깨다. 또는 앉거나 누운 상태에서 서다.",
         "examples": {
-          "beginner": "저는 일어나다요.",
-          "intermediate": "매일 일어나다요.",
-          "advanced": "일어나다는 것은 중요한 활동입니다.",
-          "master": "일어나다는 행위의 다양한 맥락을 이해하면 표현력이 풍부해집니다."
+          "beginner": "일어나고 싶어요.",
+          "intermediate": "요즘 매일 일어나고 있어요.",
+          "advanced": "일어나는 것은 일상에서 중요한 부분입니다.",
+          "master": "일어나고 나면 항상 기분이 좋아지는 것 같아요."
         },
         "dialogue": {
           "context": "일상 활동에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "뭐 해요?",
-              "romanization": "mwo haeyo?",
-              "translation": "What are you doing?"
+              "text": "오늘 뭐 했어요?",
+              "romanization": "oneul mwo haeseoyo?",
+              "translation": "What did you do today?"
             },
             {
               "speaker": "B",
-              "text": "일어나다요.",
-              "romanization": "ileonadayo.",
-              "translation": "I to wake up / to get up."
+              "text": "일어나고 왔어요.",
+              "romanization": "ileonago waseoyo.",
+              "translation": "I went to wake up / to get up."
             },
             {
               "speaker": "A",
-              "text": "자주 해요?",
-              "romanization": "jaju haeyo?",
-              "translation": "Do you do it often?"
+              "text": "좋았어요?",
+              "romanization": "jotaseoyo?",
+              "translation": "Was it good?"
             },
             {
               "speaker": "B",
-              "text": "네, 거의 매일요.",
-              "romanization": "ne, geoui maeilyo.",
-              "translation": "Yes, almost every day."
+              "text": "네, 정말 좋았어요!",
+              "romanization": "ne, jeongmal jotaseoyo!",
+              "translation": "Yes, it was great!"
             }
           ]
         }
@@ -1526,37 +1526,37 @@
         "word": "to wake up / to get up",
         "explanation": "To wake from sleep. Or to stand up from sitting or lying down.",
         "examples": {
-          "beginner": "I to wake up / to get up.",
-          "intermediate": "I to wake up / to get up every day.",
-          "advanced": "to wake up / to get uping is an important activity.",
-          "master": "Understanding various contexts of to wake up / to get uping enriches expression."
+          "beginner": "I want to wake up / to get up.",
+          "intermediate": "These days I wake up / to get up every day.",
+          "advanced": "It is important to wake up / to get up regularly in daily life.",
+          "master": "After you wake up / to get up, you always feel better."
         },
         "dialogue": {
           "context": "Talking about daily activities",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What are you doing?",
+              "text": "What did you do today?",
               "romanization": "",
-              "translation": "뭐 해요?"
+              "translation": "오늘 뭐 했어요?"
             },
             {
               "speaker": "B",
-              "text": "I to wake up / to get up.",
+              "text": "I went to wake up / to get up.",
               "romanization": "",
-              "translation": "일어나다요."
+              "translation": "일어나고 왔어요."
             },
             {
               "speaker": "A",
-              "text": "Do you do it often?",
+              "text": "Was it good?",
               "romanization": "",
-              "translation": "자주 해요?"
+              "translation": "좋았어요?"
             },
             {
               "speaker": "B",
-              "text": "Yes, almost every day.",
+              "text": "Yes, it was great!",
               "romanization": "",
-              "translation": "네, 거의 매일요."
+              "translation": "네, 정말 좋았어요!"
             }
           ]
         }
@@ -1585,37 +1585,37 @@
         "word": "사다",
         "explanation": "돈을 주고 물건을 얻다.",
         "examples": {
-          "beginner": "저는 사다요.",
-          "intermediate": "매일 사다요.",
-          "advanced": "사다는 것은 중요한 활동입니다.",
-          "master": "사다는 행위의 다양한 맥락을 이해하면 표현력이 풍부해집니다."
+          "beginner": "사고 싶어요.",
+          "intermediate": "요즘 매일 사고 있어요.",
+          "advanced": "사는 것은 일상에서 중요한 부분입니다.",
+          "master": "사고 나면 항상 기분이 좋아지는 것 같아요."
         },
         "dialogue": {
           "context": "일상 활동에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "뭐 해요?",
-              "romanization": "mwo haeyo?",
-              "translation": "What are you doing?"
+              "text": "오늘 뭐 했어요?",
+              "romanization": "oneul mwo haeseoyo?",
+              "translation": "What did you do today?"
             },
             {
               "speaker": "B",
-              "text": "사다요.",
-              "romanization": "sadayo.",
-              "translation": "I to buy."
+              "text": "사고 왔어요.",
+              "romanization": "sago waseoyo.",
+              "translation": "I went to buy."
             },
             {
               "speaker": "A",
-              "text": "자주 해요?",
-              "romanization": "jaju haeyo?",
-              "translation": "Do you do it often?"
+              "text": "좋았어요?",
+              "romanization": "jotaseoyo?",
+              "translation": "Was it good?"
             },
             {
               "speaker": "B",
-              "text": "네, 거의 매일요.",
-              "romanization": "ne, geoui maeilyo.",
-              "translation": "Yes, almost every day."
+              "text": "네, 정말 좋았어요!",
+              "romanization": "ne, jeongmal jotaseoyo!",
+              "translation": "Yes, it was great!"
             }
           ]
         }
@@ -1624,37 +1624,37 @@
         "word": "to buy",
         "explanation": "To give money and get goods.",
         "examples": {
-          "beginner": "I to buy.",
-          "intermediate": "I to buy every day.",
-          "advanced": "to buying is an important activity.",
-          "master": "Understanding various contexts of to buying enriches expression."
+          "beginner": "I want to buy.",
+          "intermediate": "These days I buy every day.",
+          "advanced": "It is important to buy regularly in daily life.",
+          "master": "After you buy, you always feel better."
         },
         "dialogue": {
           "context": "Talking about daily activities",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What are you doing?",
+              "text": "What did you do today?",
               "romanization": "",
-              "translation": "뭐 해요?"
+              "translation": "오늘 뭐 했어요?"
             },
             {
               "speaker": "B",
-              "text": "I to buy.",
+              "text": "I went to buy.",
               "romanization": "",
-              "translation": "사다요."
+              "translation": "사고 왔어요."
             },
             {
               "speaker": "A",
-              "text": "Do you do it often?",
+              "text": "Was it good?",
               "romanization": "",
-              "translation": "자주 해요?"
+              "translation": "좋았어요?"
             },
             {
               "speaker": "B",
-              "text": "Yes, almost every day.",
+              "text": "Yes, it was great!",
               "romanization": "",
-              "translation": "네, 거의 매일요."
+              "translation": "네, 정말 좋았어요!"
             }
           ]
         }
@@ -1683,37 +1683,37 @@
         "word": "팔다",
         "explanation": "물건을 돈을 받고 넘기다.",
         "examples": {
-          "beginner": "저는 팔다요.",
-          "intermediate": "매일 팔다요.",
-          "advanced": "팔다는 것은 중요한 활동입니다.",
-          "master": "팔다는 행위의 다양한 맥락을 이해하면 표현력이 풍부해집니다."
+          "beginner": "팔고 싶어요.",
+          "intermediate": "요즘 매일 팔고 있어요.",
+          "advanced": "팔는 것은 일상에서 중요한 부분입니다.",
+          "master": "팔고 나면 항상 기분이 좋아지는 것 같아요."
         },
         "dialogue": {
           "context": "일상 활동에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "뭐 해요?",
-              "romanization": "mwo haeyo?",
-              "translation": "What are you doing?"
+              "text": "오늘 뭐 했어요?",
+              "romanization": "oneul mwo haeseoyo?",
+              "translation": "What did you do today?"
             },
             {
               "speaker": "B",
-              "text": "팔다요.",
-              "romanization": "paldayo.",
-              "translation": "I to sell."
+              "text": "팔고 왔어요.",
+              "romanization": "palgo waseoyo.",
+              "translation": "I went to sell."
             },
             {
               "speaker": "A",
-              "text": "자주 해요?",
-              "romanization": "jaju haeyo?",
-              "translation": "Do you do it often?"
+              "text": "좋았어요?",
+              "romanization": "jotaseoyo?",
+              "translation": "Was it good?"
             },
             {
               "speaker": "B",
-              "text": "네, 거의 매일요.",
-              "romanization": "ne, geoui maeilyo.",
-              "translation": "Yes, almost every day."
+              "text": "네, 정말 좋았어요!",
+              "romanization": "ne, jeongmal jotaseoyo!",
+              "translation": "Yes, it was great!"
             }
           ]
         }
@@ -1722,37 +1722,37 @@
         "word": "to sell",
         "explanation": "To give goods in exchange for money.",
         "examples": {
-          "beginner": "I to sell.",
-          "intermediate": "I to sell every day.",
-          "advanced": "to selling is an important activity.",
-          "master": "Understanding various contexts of to selling enriches expression."
+          "beginner": "I want to sell.",
+          "intermediate": "These days I sell every day.",
+          "advanced": "It is important to sell regularly in daily life.",
+          "master": "After you sell, you always feel better."
         },
         "dialogue": {
           "context": "Talking about daily activities",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What are you doing?",
+              "text": "What did you do today?",
               "romanization": "",
-              "translation": "뭐 해요?"
+              "translation": "오늘 뭐 했어요?"
             },
             {
               "speaker": "B",
-              "text": "I to sell.",
+              "text": "I went to sell.",
               "romanization": "",
-              "translation": "팔다요."
+              "translation": "팔고 왔어요."
             },
             {
               "speaker": "A",
-              "text": "Do you do it often?",
+              "text": "Was it good?",
               "romanization": "",
-              "translation": "자주 해요?"
+              "translation": "좋았어요?"
             },
             {
               "speaker": "B",
-              "text": "Yes, almost every day.",
+              "text": "Yes, it was great!",
               "romanization": "",
-              "translation": "네, 거의 매일요."
+              "translation": "네, 정말 좋았어요!"
             }
           ]
         }
@@ -1781,37 +1781,37 @@
         "word": "주다",
         "explanation": "물건이나 것을 다른 사람에게 전달하다.",
         "examples": {
-          "beginner": "저는 주다요.",
-          "intermediate": "매일 주다요.",
-          "advanced": "주다는 것은 중요한 활동입니다.",
-          "master": "주다는 행위의 다양한 맥락을 이해하면 표현력이 풍부해집니다."
+          "beginner": "주고 싶어요.",
+          "intermediate": "요즘 매일 주고 있어요.",
+          "advanced": "주는 것은 일상에서 중요한 부분입니다.",
+          "master": "주고 나면 항상 기분이 좋아지는 것 같아요."
         },
         "dialogue": {
           "context": "일상 활동에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "뭐 해요?",
-              "romanization": "mwo haeyo?",
-              "translation": "What are you doing?"
+              "text": "오늘 뭐 했어요?",
+              "romanization": "oneul mwo haeseoyo?",
+              "translation": "What did you do today?"
             },
             {
               "speaker": "B",
-              "text": "주다요.",
-              "romanization": "judayo.",
-              "translation": "I to give."
+              "text": "주고 왔어요.",
+              "romanization": "jugo waseoyo.",
+              "translation": "I went to give."
             },
             {
               "speaker": "A",
-              "text": "자주 해요?",
-              "romanization": "jaju haeyo?",
-              "translation": "Do you do it often?"
+              "text": "좋았어요?",
+              "romanization": "jotaseoyo?",
+              "translation": "Was it good?"
             },
             {
               "speaker": "B",
-              "text": "네, 거의 매일요.",
-              "romanization": "ne, geoui maeilyo.",
-              "translation": "Yes, almost every day."
+              "text": "네, 정말 좋았어요!",
+              "romanization": "ne, jeongmal jotaseoyo!",
+              "translation": "Yes, it was great!"
             }
           ]
         }
@@ -1820,37 +1820,37 @@
         "word": "to give",
         "explanation": "To pass things or items to another person.",
         "examples": {
-          "beginner": "I to give.",
-          "intermediate": "I to give every day.",
-          "advanced": "to giveing is an important activity.",
-          "master": "Understanding various contexts of to giveing enriches expression."
+          "beginner": "I want to give.",
+          "intermediate": "These days I give every day.",
+          "advanced": "It is important to give regularly in daily life.",
+          "master": "After you give, you always feel better."
         },
         "dialogue": {
           "context": "Talking about daily activities",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What are you doing?",
+              "text": "What did you do today?",
               "romanization": "",
-              "translation": "뭐 해요?"
+              "translation": "오늘 뭐 했어요?"
             },
             {
               "speaker": "B",
-              "text": "I to give.",
+              "text": "I went to give.",
               "romanization": "",
-              "translation": "주다요."
+              "translation": "주고 왔어요."
             },
             {
               "speaker": "A",
-              "text": "Do you do it often?",
+              "text": "Was it good?",
               "romanization": "",
-              "translation": "자주 해요?"
+              "translation": "좋았어요?"
             },
             {
               "speaker": "B",
-              "text": "Yes, almost every day.",
+              "text": "Yes, it was great!",
               "romanization": "",
-              "translation": "네, 거의 매일요."
+              "translation": "네, 정말 좋았어요!"
             }
           ]
         }
@@ -1879,37 +1879,37 @@
         "word": "받다",
         "explanation": "다른 사람이 주는 것을 가지다.",
         "examples": {
-          "beginner": "저는 받다요.",
-          "intermediate": "매일 받다요.",
-          "advanced": "받다는 것은 중요한 활동입니다.",
-          "master": "받다는 행위의 다양한 맥락을 이해하면 표현력이 풍부해집니다."
+          "beginner": "받고 싶어요.",
+          "intermediate": "요즘 매일 받고 있어요.",
+          "advanced": "받는 것은 일상에서 중요한 부분입니다.",
+          "master": "받고 나면 항상 기분이 좋아지는 것 같아요."
         },
         "dialogue": {
           "context": "일상 활동에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "뭐 해요?",
-              "romanization": "mwo haeyo?",
-              "translation": "What are you doing?"
+              "text": "오늘 뭐 했어요?",
+              "romanization": "oneul mwo haeseoyo?",
+              "translation": "What did you do today?"
             },
             {
               "speaker": "B",
-              "text": "받다요.",
-              "romanization": "batdayo.",
-              "translation": "I to receive / to get."
+              "text": "받고 왔어요.",
+              "romanization": "batgo waseoyo.",
+              "translation": "I went to receive / to get."
             },
             {
               "speaker": "A",
-              "text": "자주 해요?",
-              "romanization": "jaju haeyo?",
-              "translation": "Do you do it often?"
+              "text": "좋았어요?",
+              "romanization": "jotaseoyo?",
+              "translation": "Was it good?"
             },
             {
               "speaker": "B",
-              "text": "네, 거의 매일요.",
-              "romanization": "ne, geoui maeilyo.",
-              "translation": "Yes, almost every day."
+              "text": "네, 정말 좋았어요!",
+              "romanization": "ne, jeongmal jotaseoyo!",
+              "translation": "Yes, it was great!"
             }
           ]
         }
@@ -1918,37 +1918,37 @@
         "word": "to receive / to get",
         "explanation": "To have what another person gives.",
         "examples": {
-          "beginner": "I to receive / to get.",
-          "intermediate": "I to receive / to get every day.",
-          "advanced": "to receive / to geting is an important activity.",
-          "master": "Understanding various contexts of to receive / to geting enriches expression."
+          "beginner": "I want to receive / to get.",
+          "intermediate": "These days I receive / to get every day.",
+          "advanced": "It is important to receive / to get regularly in daily life.",
+          "master": "After you receive / to get, you always feel better."
         },
         "dialogue": {
           "context": "Talking about daily activities",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What are you doing?",
+              "text": "What did you do today?",
               "romanization": "",
-              "translation": "뭐 해요?"
+              "translation": "오늘 뭐 했어요?"
             },
             {
               "speaker": "B",
-              "text": "I to receive / to get.",
+              "text": "I went to receive / to get.",
               "romanization": "",
-              "translation": "받다요."
+              "translation": "받고 왔어요."
             },
             {
               "speaker": "A",
-              "text": "Do you do it often?",
+              "text": "Was it good?",
               "romanization": "",
-              "translation": "자주 해요?"
+              "translation": "좋았어요?"
             },
             {
               "speaker": "B",
-              "text": "Yes, almost every day.",
+              "text": "Yes, it was great!",
               "romanization": "",
-              "translation": "네, 거의 매일요."
+              "translation": "네, 정말 좋았어요!"
             }
           ]
         }
@@ -1977,37 +1977,37 @@
         "word": "만나다",
         "explanation": "다른 사람과 같은 장소에서 보다.",
         "examples": {
-          "beginner": "저는 만나다요.",
-          "intermediate": "매일 만나다요.",
-          "advanced": "만나다는 것은 중요한 활동입니다.",
-          "master": "만나다는 행위의 다양한 맥락을 이해하면 표현력이 풍부해집니다."
+          "beginner": "만나고 싶어요.",
+          "intermediate": "요즘 매일 만나고 있어요.",
+          "advanced": "만나는 것은 일상에서 중요한 부분입니다.",
+          "master": "만나고 나면 항상 기분이 좋아지는 것 같아요."
         },
         "dialogue": {
           "context": "일상 활동에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "뭐 해요?",
-              "romanization": "mwo haeyo?",
-              "translation": "What are you doing?"
+              "text": "오늘 뭐 했어요?",
+              "romanization": "oneul mwo haeseoyo?",
+              "translation": "What did you do today?"
             },
             {
               "speaker": "B",
-              "text": "만나다요.",
-              "romanization": "mannadayo.",
-              "translation": "I to meet."
+              "text": "만나고 왔어요.",
+              "romanization": "mannago waseoyo.",
+              "translation": "I went to meet."
             },
             {
               "speaker": "A",
-              "text": "자주 해요?",
-              "romanization": "jaju haeyo?",
-              "translation": "Do you do it often?"
+              "text": "좋았어요?",
+              "romanization": "jotaseoyo?",
+              "translation": "Was it good?"
             },
             {
               "speaker": "B",
-              "text": "네, 거의 매일요.",
-              "romanization": "ne, geoui maeilyo.",
-              "translation": "Yes, almost every day."
+              "text": "네, 정말 좋았어요!",
+              "romanization": "ne, jeongmal jotaseoyo!",
+              "translation": "Yes, it was great!"
             }
           ]
         }
@@ -2016,37 +2016,37 @@
         "word": "to meet",
         "explanation": "To see another person at the same place.",
         "examples": {
-          "beginner": "I to meet.",
-          "intermediate": "I to meet every day.",
-          "advanced": "to meeting is an important activity.",
-          "master": "Understanding various contexts of to meeting enriches expression."
+          "beginner": "I want to meet.",
+          "intermediate": "These days I meet every day.",
+          "advanced": "It is important to meet regularly in daily life.",
+          "master": "After you meet, you always feel better."
         },
         "dialogue": {
           "context": "Talking about daily activities",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What are you doing?",
+              "text": "What did you do today?",
               "romanization": "",
-              "translation": "뭐 해요?"
+              "translation": "오늘 뭐 했어요?"
             },
             {
               "speaker": "B",
-              "text": "I to meet.",
+              "text": "I went to meet.",
               "romanization": "",
-              "translation": "만나다요."
+              "translation": "만나고 왔어요."
             },
             {
               "speaker": "A",
-              "text": "Do you do it often?",
+              "text": "Was it good?",
               "romanization": "",
-              "translation": "자주 해요?"
+              "translation": "좋았어요?"
             },
             {
               "speaker": "B",
-              "text": "Yes, almost every day.",
+              "text": "Yes, it was great!",
               "romanization": "",
-              "translation": "네, 거의 매일요."
+              "translation": "네, 정말 좋았어요!"
             }
           ]
         }
@@ -2075,37 +2075,37 @@
         "word": "기다리다",
         "explanation": "어떤 일이 일어나거나 사람이 올 때까지 머무르다.",
         "examples": {
-          "beginner": "저는 기다리다요.",
-          "intermediate": "매일 기다리다요.",
-          "advanced": "기다리다는 것은 중요한 활동입니다.",
-          "master": "기다리다는 행위의 다양한 맥락을 이해하면 표현력이 풍부해집니다."
+          "beginner": "기다리고 싶어요.",
+          "intermediate": "요즘 매일 기다리고 있어요.",
+          "advanced": "기다리는 것은 일상에서 중요한 부분입니다.",
+          "master": "기다리고 나면 항상 기분이 좋아지는 것 같아요."
         },
         "dialogue": {
           "context": "일상 활동에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "뭐 해요?",
-              "romanization": "mwo haeyo?",
-              "translation": "What are you doing?"
+              "text": "오늘 뭐 했어요?",
+              "romanization": "oneul mwo haeseoyo?",
+              "translation": "What did you do today?"
             },
             {
               "speaker": "B",
-              "text": "기다리다요.",
-              "romanization": "gidaridayo.",
-              "translation": "I to wait."
+              "text": "기다리고 왔어요.",
+              "romanization": "gidarigo waseoyo.",
+              "translation": "I went to wait."
             },
             {
               "speaker": "A",
-              "text": "자주 해요?",
-              "romanization": "jaju haeyo?",
-              "translation": "Do you do it often?"
+              "text": "좋았어요?",
+              "romanization": "jotaseoyo?",
+              "translation": "Was it good?"
             },
             {
               "speaker": "B",
-              "text": "네, 거의 매일요.",
-              "romanization": "ne, geoui maeilyo.",
-              "translation": "Yes, almost every day."
+              "text": "네, 정말 좋았어요!",
+              "romanization": "ne, jeongmal jotaseoyo!",
+              "translation": "Yes, it was great!"
             }
           ]
         }
@@ -2114,37 +2114,37 @@
         "word": "to wait",
         "explanation": "To stay until something happens or someone comes.",
         "examples": {
-          "beginner": "I to wait.",
-          "intermediate": "I to wait every day.",
-          "advanced": "to waiting is an important activity.",
-          "master": "Understanding various contexts of to waiting enriches expression."
+          "beginner": "I want to wait.",
+          "intermediate": "These days I wait every day.",
+          "advanced": "It is important to wait regularly in daily life.",
+          "master": "After you wait, you always feel better."
         },
         "dialogue": {
           "context": "Talking about daily activities",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What are you doing?",
+              "text": "What did you do today?",
               "romanization": "",
-              "translation": "뭐 해요?"
+              "translation": "오늘 뭐 했어요?"
             },
             {
               "speaker": "B",
-              "text": "I to wait.",
+              "text": "I went to wait.",
               "romanization": "",
-              "translation": "기다리다요."
+              "translation": "기다리고 왔어요."
             },
             {
               "speaker": "A",
-              "text": "Do you do it often?",
+              "text": "Was it good?",
               "romanization": "",
-              "translation": "자주 해요?"
+              "translation": "좋았어요?"
             },
             {
               "speaker": "B",
-              "text": "Yes, almost every day.",
+              "text": "Yes, it was great!",
               "romanization": "",
-              "translation": "네, 거의 매일요."
+              "translation": "네, 정말 좋았어요!"
             }
           ]
         }
@@ -2173,37 +2173,37 @@
         "word": "되다",
         "explanation": "어떤 상태나 상황으로 변하다. 가능하다.",
         "examples": {
-          "beginner": "저는 되다요.",
-          "intermediate": "매일 되다요.",
-          "advanced": "되다는 것은 중요한 활동입니다.",
-          "master": "되다는 행위의 다양한 맥락을 이해하면 표현력이 풍부해집니다."
+          "beginner": "되고 싶어요.",
+          "intermediate": "요즘 매일 되고 있어요.",
+          "advanced": "되는 것은 일상에서 중요한 부분입니다.",
+          "master": "되고 나면 항상 기분이 좋아지는 것 같아요."
         },
         "dialogue": {
           "context": "일상 활동에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "뭐 해요?",
-              "romanization": "mwo haeyo?",
-              "translation": "What are you doing?"
+              "text": "오늘 뭐 했어요?",
+              "romanization": "oneul mwo haeseoyo?",
+              "translation": "What did you do today?"
             },
             {
               "speaker": "B",
-              "text": "되다요.",
-              "romanization": "doedayo.",
-              "translation": "I to become / to be possible."
+              "text": "되고 왔어요.",
+              "romanization": "doego waseoyo.",
+              "translation": "I went to become / to be possible."
             },
             {
               "speaker": "A",
-              "text": "자주 해요?",
-              "romanization": "jaju haeyo?",
-              "translation": "Do you do it often?"
+              "text": "좋았어요?",
+              "romanization": "jotaseoyo?",
+              "translation": "Was it good?"
             },
             {
               "speaker": "B",
-              "text": "네, 거의 매일요.",
-              "romanization": "ne, geoui maeilyo.",
-              "translation": "Yes, almost every day."
+              "text": "네, 정말 좋았어요!",
+              "romanization": "ne, jeongmal jotaseoyo!",
+              "translation": "Yes, it was great!"
             }
           ]
         }
@@ -2212,37 +2212,37 @@
         "word": "to become / to be possible",
         "explanation": "To change into a state or situation. To be possible.",
         "examples": {
-          "beginner": "I to become / to be possible.",
-          "intermediate": "I to become / to be possible every day.",
-          "advanced": "to become / to be possibleing is an important activity.",
-          "master": "Understanding various contexts of to become / to be possibleing enriches expression."
+          "beginner": "I want to become / to be possible.",
+          "intermediate": "These days I become / to be possible every day.",
+          "advanced": "It is important to become / to be possible regularly in daily life.",
+          "master": "After you become / to be possible, you always feel better."
         },
         "dialogue": {
           "context": "Talking about daily activities",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What are you doing?",
+              "text": "What did you do today?",
               "romanization": "",
-              "translation": "뭐 해요?"
+              "translation": "오늘 뭐 했어요?"
             },
             {
               "speaker": "B",
-              "text": "I to become / to be possible.",
+              "text": "I went to become / to be possible.",
               "romanization": "",
-              "translation": "되다요."
+              "translation": "되고 왔어요."
             },
             {
               "speaker": "A",
-              "text": "Do you do it often?",
+              "text": "Was it good?",
               "romanization": "",
-              "translation": "자주 해요?"
+              "translation": "좋았어요?"
             },
             {
               "speaker": "B",
-              "text": "Yes, almost every day.",
+              "text": "Yes, it was great!",
               "romanization": "",
-              "translation": "네, 거의 매일요."
+              "translation": "네, 정말 좋았어요!"
             }
           ]
         }
@@ -2271,37 +2271,37 @@
         "word": "살다",
         "explanation": "생명이 있다. 어떤 장소에 거주하다.",
         "examples": {
-          "beginner": "저는 살다요.",
-          "intermediate": "매일 살다요.",
-          "advanced": "살다는 것은 중요한 활동입니다.",
-          "master": "살다는 행위의 다양한 맥락을 이해하면 표현력이 풍부해집니다."
+          "beginner": "살고 싶어요.",
+          "intermediate": "요즘 매일 살고 있어요.",
+          "advanced": "살는 것은 일상에서 중요한 부분입니다.",
+          "master": "살고 나면 항상 기분이 좋아지는 것 같아요."
         },
         "dialogue": {
           "context": "일상 활동에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "뭐 해요?",
-              "romanization": "mwo haeyo?",
-              "translation": "What are you doing?"
+              "text": "오늘 뭐 했어요?",
+              "romanization": "oneul mwo haeseoyo?",
+              "translation": "What did you do today?"
             },
             {
               "speaker": "B",
-              "text": "살다요.",
-              "romanization": "saldayo.",
-              "translation": "I to live."
+              "text": "살고 왔어요.",
+              "romanization": "salgo waseoyo.",
+              "translation": "I went to live."
             },
             {
               "speaker": "A",
-              "text": "자주 해요?",
-              "romanization": "jaju haeyo?",
-              "translation": "Do you do it often?"
+              "text": "좋았어요?",
+              "romanization": "jotaseoyo?",
+              "translation": "Was it good?"
             },
             {
               "speaker": "B",
-              "text": "네, 거의 매일요.",
-              "romanization": "ne, geoui maeilyo.",
-              "translation": "Yes, almost every day."
+              "text": "네, 정말 좋았어요!",
+              "romanization": "ne, jeongmal jotaseoyo!",
+              "translation": "Yes, it was great!"
             }
           ]
         }
@@ -2310,37 +2310,37 @@
         "word": "to live",
         "explanation": "To be alive. To reside in a place.",
         "examples": {
-          "beginner": "I to live.",
-          "intermediate": "I to live every day.",
-          "advanced": "to liveing is an important activity.",
-          "master": "Understanding various contexts of to liveing enriches expression."
+          "beginner": "I want to live.",
+          "intermediate": "These days I live every day.",
+          "advanced": "It is important to live regularly in daily life.",
+          "master": "After you live, you always feel better."
         },
         "dialogue": {
           "context": "Talking about daily activities",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What are you doing?",
+              "text": "What did you do today?",
               "romanization": "",
-              "translation": "뭐 해요?"
+              "translation": "오늘 뭐 했어요?"
             },
             {
               "speaker": "B",
-              "text": "I to live.",
+              "text": "I went to live.",
               "romanization": "",
-              "translation": "살다요."
+              "translation": "살고 왔어요."
             },
             {
               "speaker": "A",
-              "text": "Do you do it often?",
+              "text": "Was it good?",
               "romanization": "",
-              "translation": "자주 해요?"
+              "translation": "좋았어요?"
             },
             {
               "speaker": "B",
-              "text": "Yes, almost every day.",
+              "text": "Yes, it was great!",
               "romanization": "",
-              "translation": "네, 거의 매일요."
+              "translation": "네, 정말 좋았어요!"
             }
           ]
         }
@@ -2369,37 +2369,37 @@
         "word": "일하다",
         "explanation": "직업이나 업무를 수행하다.",
         "examples": {
-          "beginner": "저는 일하다요.",
-          "intermediate": "매일 일하다요.",
-          "advanced": "일하다는 것은 중요한 활동입니다.",
-          "master": "일하다는 행위의 다양한 맥락을 이해하면 표현력이 풍부해집니다."
+          "beginner": "일하고 싶어요.",
+          "intermediate": "요즘 매일 일하고 있어요.",
+          "advanced": "일하는 것은 일상에서 중요한 부분입니다.",
+          "master": "일하고 나면 항상 기분이 좋아지는 것 같아요."
         },
         "dialogue": {
           "context": "일상 활동에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "뭐 해요?",
-              "romanization": "mwo haeyo?",
-              "translation": "What are you doing?"
+              "text": "오늘 뭐 했어요?",
+              "romanization": "oneul mwo haeseoyo?",
+              "translation": "What did you do today?"
             },
             {
               "speaker": "B",
-              "text": "일하다요.",
-              "romanization": "ilhadayo.",
-              "translation": "I to work."
+              "text": "일하고 왔어요.",
+              "romanization": "ilhago waseoyo.",
+              "translation": "I went to work."
             },
             {
               "speaker": "A",
-              "text": "자주 해요?",
-              "romanization": "jaju haeyo?",
-              "translation": "Do you do it often?"
+              "text": "좋았어요?",
+              "romanization": "jotaseoyo?",
+              "translation": "Was it good?"
             },
             {
               "speaker": "B",
-              "text": "네, 거의 매일요.",
-              "romanization": "ne, geoui maeilyo.",
-              "translation": "Yes, almost every day."
+              "text": "네, 정말 좋았어요!",
+              "romanization": "ne, jeongmal jotaseoyo!",
+              "translation": "Yes, it was great!"
             }
           ]
         }
@@ -2408,37 +2408,37 @@
         "word": "to work",
         "explanation": "To perform a job or duties.",
         "examples": {
-          "beginner": "I to work.",
-          "intermediate": "I to work every day.",
-          "advanced": "to working is an important activity.",
-          "master": "Understanding various contexts of to working enriches expression."
+          "beginner": "I want to work.",
+          "intermediate": "These days I work every day.",
+          "advanced": "It is important to work regularly in daily life.",
+          "master": "After you work, you always feel better."
         },
         "dialogue": {
           "context": "Talking about daily activities",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What are you doing?",
+              "text": "What did you do today?",
               "romanization": "",
-              "translation": "뭐 해요?"
+              "translation": "오늘 뭐 했어요?"
             },
             {
               "speaker": "B",
-              "text": "I to work.",
+              "text": "I went to work.",
               "romanization": "",
-              "translation": "일하다요."
+              "translation": "일하고 왔어요."
             },
             {
               "speaker": "A",
-              "text": "Do you do it often?",
+              "text": "Was it good?",
               "romanization": "",
-              "translation": "자주 해요?"
+              "translation": "좋았어요?"
             },
             {
               "speaker": "B",
-              "text": "Yes, almost every day.",
+              "text": "Yes, it was great!",
               "romanization": "",
-              "translation": "네, 거의 매일요."
+              "translation": "네, 정말 좋았어요!"
             }
           ]
         }
@@ -2467,37 +2467,37 @@
         "word": "배우다",
         "explanation": "새로운 지식이나 기술을 얻다.",
         "examples": {
-          "beginner": "저는 배우다요.",
-          "intermediate": "매일 배우다요.",
-          "advanced": "배우다는 것은 중요한 활동입니다.",
-          "master": "배우다는 행위의 다양한 맥락을 이해하면 표현력이 풍부해집니다."
+          "beginner": "배우고 싶어요.",
+          "intermediate": "요즘 매일 배우고 있어요.",
+          "advanced": "배우는 것은 일상에서 중요한 부분입니다.",
+          "master": "배우고 나면 항상 기분이 좋아지는 것 같아요."
         },
         "dialogue": {
           "context": "일상 활동에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "뭐 해요?",
-              "romanization": "mwo haeyo?",
-              "translation": "What are you doing?"
+              "text": "오늘 뭐 했어요?",
+              "romanization": "oneul mwo haeseoyo?",
+              "translation": "What did you do today?"
             },
             {
               "speaker": "B",
-              "text": "배우다요.",
-              "romanization": "baeudayo.",
-              "translation": "I to learn."
+              "text": "배우고 왔어요.",
+              "romanization": "baeugo waseoyo.",
+              "translation": "I went to learn."
             },
             {
               "speaker": "A",
-              "text": "자주 해요?",
-              "romanization": "jaju haeyo?",
-              "translation": "Do you do it often?"
+              "text": "좋았어요?",
+              "romanization": "jotaseoyo?",
+              "translation": "Was it good?"
             },
             {
               "speaker": "B",
-              "text": "네, 거의 매일요.",
-              "romanization": "ne, geoui maeilyo.",
-              "translation": "Yes, almost every day."
+              "text": "네, 정말 좋았어요!",
+              "romanization": "ne, jeongmal jotaseoyo!",
+              "translation": "Yes, it was great!"
             }
           ]
         }
@@ -2506,37 +2506,37 @@
         "word": "to learn",
         "explanation": "To acquire new knowledge or skills.",
         "examples": {
-          "beginner": "I to learn.",
-          "intermediate": "I to learn every day.",
-          "advanced": "to learning is an important activity.",
-          "master": "Understanding various contexts of to learning enriches expression."
+          "beginner": "I want to learn.",
+          "intermediate": "These days I learn every day.",
+          "advanced": "It is important to learn regularly in daily life.",
+          "master": "After you learn, you always feel better."
         },
         "dialogue": {
           "context": "Talking about daily activities",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What are you doing?",
+              "text": "What did you do today?",
               "romanization": "",
-              "translation": "뭐 해요?"
+              "translation": "오늘 뭐 했어요?"
             },
             {
               "speaker": "B",
-              "text": "I to learn.",
+              "text": "I went to learn.",
               "romanization": "",
-              "translation": "배우다요."
+              "translation": "배우고 왔어요."
             },
             {
               "speaker": "A",
-              "text": "Do you do it often?",
+              "text": "Was it good?",
               "romanization": "",
-              "translation": "자주 해요?"
+              "translation": "좋았어요?"
             },
             {
               "speaker": "B",
-              "text": "Yes, almost every day.",
+              "text": "Yes, it was great!",
               "romanization": "",
-              "translation": "네, 거의 매일요."
+              "translation": "네, 정말 좋았어요!"
             }
           ]
         }
@@ -2565,37 +2565,37 @@
         "word": "가르치다",
         "explanation": "다른 사람에게 지식이나 기술을 전달하다.",
         "examples": {
-          "beginner": "저는 가르치다요.",
-          "intermediate": "매일 가르치다요.",
-          "advanced": "가르치다는 것은 중요한 활동입니다.",
-          "master": "가르치다는 행위의 다양한 맥락을 이해하면 표현력이 풍부해집니다."
+          "beginner": "가르치고 싶어요.",
+          "intermediate": "요즘 매일 가르치고 있어요.",
+          "advanced": "가르치는 것은 일상에서 중요한 부분입니다.",
+          "master": "가르치고 나면 항상 기분이 좋아지는 것 같아요."
         },
         "dialogue": {
           "context": "일상 활동에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "뭐 해요?",
-              "romanization": "mwo haeyo?",
-              "translation": "What are you doing?"
+              "text": "오늘 뭐 했어요?",
+              "romanization": "oneul mwo haeseoyo?",
+              "translation": "What did you do today?"
             },
             {
               "speaker": "B",
-              "text": "가르치다요.",
-              "romanization": "gareuchidayo.",
-              "translation": "I to teach."
+              "text": "가르치고 왔어요.",
+              "romanization": "gareuchigo waseoyo.",
+              "translation": "I went to teach."
             },
             {
               "speaker": "A",
-              "text": "자주 해요?",
-              "romanization": "jaju haeyo?",
-              "translation": "Do you do it often?"
+              "text": "좋았어요?",
+              "romanization": "jotaseoyo?",
+              "translation": "Was it good?"
             },
             {
               "speaker": "B",
-              "text": "네, 거의 매일요.",
-              "romanization": "ne, geoui maeilyo.",
-              "translation": "Yes, almost every day."
+              "text": "네, 정말 좋았어요!",
+              "romanization": "ne, jeongmal jotaseoyo!",
+              "translation": "Yes, it was great!"
             }
           ]
         }
@@ -2604,37 +2604,37 @@
         "word": "to teach",
         "explanation": "To transfer knowledge or skills to another person.",
         "examples": {
-          "beginner": "I to teach.",
-          "intermediate": "I to teach every day.",
-          "advanced": "to teaching is an important activity.",
-          "master": "Understanding various contexts of to teaching enriches expression."
+          "beginner": "I want to teach.",
+          "intermediate": "These days I teach every day.",
+          "advanced": "It is important to teach regularly in daily life.",
+          "master": "After you teach, you always feel better."
         },
         "dialogue": {
           "context": "Talking about daily activities",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What are you doing?",
+              "text": "What did you do today?",
               "romanization": "",
-              "translation": "뭐 해요?"
+              "translation": "오늘 뭐 했어요?"
             },
             {
               "speaker": "B",
-              "text": "I to teach.",
+              "text": "I went to teach.",
               "romanization": "",
-              "translation": "가르치다요."
+              "translation": "가르치고 왔어요."
             },
             {
               "speaker": "A",
-              "text": "Do you do it often?",
+              "text": "Was it good?",
               "romanization": "",
-              "translation": "자주 해요?"
+              "translation": "좋았어요?"
             },
             {
               "speaker": "B",
-              "text": "Yes, almost every day.",
+              "text": "Yes, it was great!",
               "romanization": "",
-              "translation": "네, 거의 매일요."
+              "translation": "네, 정말 좋았어요!"
             }
           ]
         }
@@ -2663,37 +2663,37 @@
         "word": "생각하다",
         "explanation": "머리로 판단하거나 떠올리다.",
         "examples": {
-          "beginner": "저는 생각하다요.",
-          "intermediate": "매일 생각하다요.",
-          "advanced": "생각하다는 것은 중요한 활동입니다.",
-          "master": "생각하다는 행위의 다양한 맥락을 이해하면 표현력이 풍부해집니다."
+          "beginner": "생각하고 싶어요.",
+          "intermediate": "요즘 매일 생각하고 있어요.",
+          "advanced": "생각하는 것은 일상에서 중요한 부분입니다.",
+          "master": "생각하고 나면 항상 기분이 좋아지는 것 같아요."
         },
         "dialogue": {
           "context": "일상 활동에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "뭐 해요?",
-              "romanization": "mwo haeyo?",
-              "translation": "What are you doing?"
+              "text": "오늘 뭐 했어요?",
+              "romanization": "oneul mwo haeseoyo?",
+              "translation": "What did you do today?"
             },
             {
               "speaker": "B",
-              "text": "생각하다요.",
-              "romanization": "saenggakhadayo.",
-              "translation": "I to think."
+              "text": "생각하고 왔어요.",
+              "romanization": "saenggakhago waseoyo.",
+              "translation": "I went to think."
             },
             {
               "speaker": "A",
-              "text": "자주 해요?",
-              "romanization": "jaju haeyo?",
-              "translation": "Do you do it often?"
+              "text": "좋았어요?",
+              "romanization": "jotaseoyo?",
+              "translation": "Was it good?"
             },
             {
               "speaker": "B",
-              "text": "네, 거의 매일요.",
-              "romanization": "ne, geoui maeilyo.",
-              "translation": "Yes, almost every day."
+              "text": "네, 정말 좋았어요!",
+              "romanization": "ne, jeongmal jotaseoyo!",
+              "translation": "Yes, it was great!"
             }
           ]
         }
@@ -2702,37 +2702,37 @@
         "word": "to think",
         "explanation": "To judge or recall with the mind.",
         "examples": {
-          "beginner": "I to think.",
-          "intermediate": "I to think every day.",
-          "advanced": "to thinking is an important activity.",
-          "master": "Understanding various contexts of to thinking enriches expression."
+          "beginner": "I want to think.",
+          "intermediate": "These days I think every day.",
+          "advanced": "It is important to think regularly in daily life.",
+          "master": "After you think, you always feel better."
         },
         "dialogue": {
           "context": "Talking about daily activities",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What are you doing?",
+              "text": "What did you do today?",
               "romanization": "",
-              "translation": "뭐 해요?"
+              "translation": "오늘 뭐 했어요?"
             },
             {
               "speaker": "B",
-              "text": "I to think.",
+              "text": "I went to think.",
               "romanization": "",
-              "translation": "생각하다요."
+              "translation": "생각하고 왔어요."
             },
             {
               "speaker": "A",
-              "text": "Do you do it often?",
+              "text": "Was it good?",
               "romanization": "",
-              "translation": "자주 해요?"
+              "translation": "좋았어요?"
             },
             {
               "speaker": "B",
-              "text": "Yes, almost every day.",
+              "text": "Yes, it was great!",
               "romanization": "",
-              "translation": "네, 거의 매일요."
+              "translation": "네, 정말 좋았어요!"
             }
           ]
         }
@@ -2761,37 +2761,37 @@
         "word": "느끼다",
         "explanation": "감각이나 감정을 인식하다.",
         "examples": {
-          "beginner": "저는 느끼다요.",
-          "intermediate": "매일 느끼다요.",
-          "advanced": "느끼다는 것은 중요한 활동입니다.",
-          "master": "느끼다는 행위의 다양한 맥락을 이해하면 표현력이 풍부해집니다."
+          "beginner": "느끼고 싶어요.",
+          "intermediate": "요즘 매일 느끼고 있어요.",
+          "advanced": "느끼는 것은 일상에서 중요한 부분입니다.",
+          "master": "느끼고 나면 항상 기분이 좋아지는 것 같아요."
         },
         "dialogue": {
           "context": "일상 활동에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "뭐 해요?",
-              "romanization": "mwo haeyo?",
-              "translation": "What are you doing?"
+              "text": "오늘 뭐 했어요?",
+              "romanization": "oneul mwo haeseoyo?",
+              "translation": "What did you do today?"
             },
             {
               "speaker": "B",
-              "text": "느끼다요.",
-              "romanization": "neukkidayo.",
-              "translation": "I to feel."
+              "text": "느끼고 왔어요.",
+              "romanization": "neukkigo waseoyo.",
+              "translation": "I went to feel."
             },
             {
               "speaker": "A",
-              "text": "자주 해요?",
-              "romanization": "jaju haeyo?",
-              "translation": "Do you do it often?"
+              "text": "좋았어요?",
+              "romanization": "jotaseoyo?",
+              "translation": "Was it good?"
             },
             {
               "speaker": "B",
-              "text": "네, 거의 매일요.",
-              "romanization": "ne, geoui maeilyo.",
-              "translation": "Yes, almost every day."
+              "text": "네, 정말 좋았어요!",
+              "romanization": "ne, jeongmal jotaseoyo!",
+              "translation": "Yes, it was great!"
             }
           ]
         }
@@ -2800,37 +2800,37 @@
         "word": "to feel",
         "explanation": "To perceive a sensation or emotion.",
         "examples": {
-          "beginner": "I to feel.",
-          "intermediate": "I to feel every day.",
-          "advanced": "to feeling is an important activity.",
-          "master": "Understanding various contexts of to feeling enriches expression."
+          "beginner": "I want to feel.",
+          "intermediate": "These days I feel every day.",
+          "advanced": "It is important to feel regularly in daily life.",
+          "master": "After you feel, you always feel better."
         },
         "dialogue": {
           "context": "Talking about daily activities",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What are you doing?",
+              "text": "What did you do today?",
               "romanization": "",
-              "translation": "뭐 해요?"
+              "translation": "오늘 뭐 했어요?"
             },
             {
               "speaker": "B",
-              "text": "I to feel.",
+              "text": "I went to feel.",
               "romanization": "",
-              "translation": "느끼다요."
+              "translation": "느끼고 왔어요."
             },
             {
               "speaker": "A",
-              "text": "Do you do it often?",
+              "text": "Was it good?",
               "romanization": "",
-              "translation": "자주 해요?"
+              "translation": "좋았어요?"
             },
             {
               "speaker": "B",
-              "text": "Yes, almost every day.",
+              "text": "Yes, it was great!",
               "romanization": "",
-              "translation": "네, 거의 매일요."
+              "translation": "네, 정말 좋았어요!"
             }
           ]
         }
@@ -2859,37 +2859,37 @@
         "word": "좋아하다",
         "explanation": "마음에 들어서 호감을 가지다.",
         "examples": {
-          "beginner": "저는 좋아하다요.",
-          "intermediate": "매일 좋아하다요.",
-          "advanced": "좋아하다는 것은 중요한 활동입니다.",
-          "master": "좋아하다는 행위의 다양한 맥락을 이해하면 표현력이 풍부해집니다."
+          "beginner": "좋아하고 싶어요.",
+          "intermediate": "요즘 매일 좋아하고 있어요.",
+          "advanced": "좋아하는 것은 일상에서 중요한 부분입니다.",
+          "master": "좋아하고 나면 항상 기분이 좋아지는 것 같아요."
         },
         "dialogue": {
           "context": "일상 활동에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "뭐 해요?",
-              "romanization": "mwo haeyo?",
-              "translation": "What are you doing?"
+              "text": "오늘 뭐 했어요?",
+              "romanization": "oneul mwo haeseoyo?",
+              "translation": "What did you do today?"
             },
             {
               "speaker": "B",
-              "text": "좋아하다요.",
-              "romanization": "jotahadayo.",
-              "translation": "I to like."
+              "text": "좋아하고 왔어요.",
+              "romanization": "jotahago waseoyo.",
+              "translation": "I went to like."
             },
             {
               "speaker": "A",
-              "text": "자주 해요?",
-              "romanization": "jaju haeyo?",
-              "translation": "Do you do it often?"
+              "text": "좋았어요?",
+              "romanization": "jotaseoyo?",
+              "translation": "Was it good?"
             },
             {
               "speaker": "B",
-              "text": "네, 거의 매일요.",
-              "romanization": "ne, geoui maeilyo.",
-              "translation": "Yes, almost every day."
+              "text": "네, 정말 좋았어요!",
+              "romanization": "ne, jeongmal jotaseoyo!",
+              "translation": "Yes, it was great!"
             }
           ]
         }
@@ -2898,37 +2898,37 @@
         "word": "to like",
         "explanation": "To have affection because something pleases you.",
         "examples": {
-          "beginner": "I to like.",
-          "intermediate": "I to like every day.",
-          "advanced": "to likeing is an important activity.",
-          "master": "Understanding various contexts of to likeing enriches expression."
+          "beginner": "I want to like.",
+          "intermediate": "These days I like every day.",
+          "advanced": "It is important to like regularly in daily life.",
+          "master": "After you like, you always feel better."
         },
         "dialogue": {
           "context": "Talking about daily activities",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What are you doing?",
+              "text": "What did you do today?",
               "romanization": "",
-              "translation": "뭐 해요?"
+              "translation": "오늘 뭐 했어요?"
             },
             {
               "speaker": "B",
-              "text": "I to like.",
+              "text": "I went to like.",
               "romanization": "",
-              "translation": "좋아하다요."
+              "translation": "좋아하고 왔어요."
             },
             {
               "speaker": "A",
-              "text": "Do you do it often?",
+              "text": "Was it good?",
               "romanization": "",
-              "translation": "자주 해요?"
+              "translation": "좋았어요?"
             },
             {
               "speaker": "B",
-              "text": "Yes, almost every day.",
+              "text": "Yes, it was great!",
               "romanization": "",
-              "translation": "네, 거의 매일요."
+              "translation": "네, 정말 좋았어요!"
             }
           ]
         }
@@ -2957,37 +2957,37 @@
         "word": "싫어하다",
         "explanation": "마음에 들지 않아서 거부감을 가지다.",
         "examples": {
-          "beginner": "저는 싫어하다요.",
-          "intermediate": "매일 싫어하다요.",
-          "advanced": "싫어하다는 것은 중요한 활동입니다.",
-          "master": "싫어하다는 행위의 다양한 맥락을 이해하면 표현력이 풍부해집니다."
+          "beginner": "싫어하고 싶어요.",
+          "intermediate": "요즘 매일 싫어하고 있어요.",
+          "advanced": "싫어하는 것은 일상에서 중요한 부분입니다.",
+          "master": "싫어하고 나면 항상 기분이 좋아지는 것 같아요."
         },
         "dialogue": {
           "context": "일상 활동에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "뭐 해요?",
-              "romanization": "mwo haeyo?",
-              "translation": "What are you doing?"
+              "text": "오늘 뭐 했어요?",
+              "romanization": "oneul mwo haeseoyo?",
+              "translation": "What did you do today?"
             },
             {
               "speaker": "B",
-              "text": "싫어하다요.",
-              "romanization": "sileohadayo.",
-              "translation": "I to dislike / to hate."
+              "text": "싫어하고 왔어요.",
+              "romanization": "sileohago waseoyo.",
+              "translation": "I went to dislike / to hate."
             },
             {
               "speaker": "A",
-              "text": "자주 해요?",
-              "romanization": "jaju haeyo?",
-              "translation": "Do you do it often?"
+              "text": "좋았어요?",
+              "romanization": "jotaseoyo?",
+              "translation": "Was it good?"
             },
             {
               "speaker": "B",
-              "text": "네, 거의 매일요.",
-              "romanization": "ne, geoui maeilyo.",
-              "translation": "Yes, almost every day."
+              "text": "네, 정말 좋았어요!",
+              "romanization": "ne, jeongmal jotaseoyo!",
+              "translation": "Yes, it was great!"
             }
           ]
         }
@@ -2996,37 +2996,37 @@
         "word": "to dislike / to hate",
         "explanation": "To have aversion because something doesn't please you.",
         "examples": {
-          "beginner": "I to dislike / to hate.",
-          "intermediate": "I to dislike / to hate every day.",
-          "advanced": "to dislike / to hateing is an important activity.",
-          "master": "Understanding various contexts of to dislike / to hateing enriches expression."
+          "beginner": "I want to dislike / to hate.",
+          "intermediate": "These days I dislike / to hate every day.",
+          "advanced": "It is important to dislike / to hate regularly in daily life.",
+          "master": "After you dislike / to hate, you always feel better."
         },
         "dialogue": {
           "context": "Talking about daily activities",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What are you doing?",
+              "text": "What did you do today?",
               "romanization": "",
-              "translation": "뭐 해요?"
+              "translation": "오늘 뭐 했어요?"
             },
             {
               "speaker": "B",
-              "text": "I to dislike / to hate.",
+              "text": "I went to dislike / to hate.",
               "romanization": "",
-              "translation": "싫어하다요."
+              "translation": "싫어하고 왔어요."
             },
             {
               "speaker": "A",
-              "text": "Do you do it often?",
+              "text": "Was it good?",
               "romanization": "",
-              "translation": "자주 해요?"
+              "translation": "좋았어요?"
             },
             {
               "speaker": "B",
-              "text": "Yes, almost every day.",
+              "text": "Yes, it was great!",
               "romanization": "",
-              "translation": "네, 거의 매일요."
+              "translation": "네, 정말 좋았어요!"
             }
           ]
         }
@@ -3055,37 +3055,37 @@
         "word": "필요하다",
         "explanation": "꼭 있어야 하다. 요구되다.",
         "examples": {
-          "beginner": "저는 필요하다요.",
-          "intermediate": "매일 필요하다요.",
-          "advanced": "필요하다는 것은 중요한 활동입니다.",
-          "master": "필요하다는 행위의 다양한 맥락을 이해하면 표현력이 풍부해집니다."
+          "beginner": "필요하고 싶어요.",
+          "intermediate": "요즘 매일 필요하고 있어요.",
+          "advanced": "필요하는 것은 일상에서 중요한 부분입니다.",
+          "master": "필요하고 나면 항상 기분이 좋아지는 것 같아요."
         },
         "dialogue": {
           "context": "일상 활동에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "뭐 해요?",
-              "romanization": "mwo haeyo?",
-              "translation": "What are you doing?"
+              "text": "오늘 뭐 했어요?",
+              "romanization": "oneul mwo haeseoyo?",
+              "translation": "What did you do today?"
             },
             {
               "speaker": "B",
-              "text": "필요하다요.",
-              "romanization": "pilyohadayo.",
-              "translation": "I to need / to be necessary."
+              "text": "필요하고 왔어요.",
+              "romanization": "pilyohago waseoyo.",
+              "translation": "I went to need / to be necessary."
             },
             {
               "speaker": "A",
-              "text": "자주 해요?",
-              "romanization": "jaju haeyo?",
-              "translation": "Do you do it often?"
+              "text": "좋았어요?",
+              "romanization": "jotaseoyo?",
+              "translation": "Was it good?"
             },
             {
               "speaker": "B",
-              "text": "네, 거의 매일요.",
-              "romanization": "ne, geoui maeilyo.",
-              "translation": "Yes, almost every day."
+              "text": "네, 정말 좋았어요!",
+              "romanization": "ne, jeongmal jotaseoyo!",
+              "translation": "Yes, it was great!"
             }
           ]
         }
@@ -3094,37 +3094,37 @@
         "word": "to need / to be necessary",
         "explanation": "To have to exist. To be required.",
         "examples": {
-          "beginner": "I to need / to be necessary.",
-          "intermediate": "I to need / to be necessary every day.",
-          "advanced": "to need / to be necessarying is an important activity.",
-          "master": "Understanding various contexts of to need / to be necessarying enriches expression."
+          "beginner": "I want to need / to be necessary.",
+          "intermediate": "These days I need / to be necessary every day.",
+          "advanced": "It is important to need / to be necessary regularly in daily life.",
+          "master": "After you need / to be necessary, you always feel better."
         },
         "dialogue": {
           "context": "Talking about daily activities",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What are you doing?",
+              "text": "What did you do today?",
               "romanization": "",
-              "translation": "뭐 해요?"
+              "translation": "오늘 뭐 했어요?"
             },
             {
               "speaker": "B",
-              "text": "I to need / to be necessary.",
+              "text": "I went to need / to be necessary.",
               "romanization": "",
-              "translation": "필요하다요."
+              "translation": "필요하고 왔어요."
             },
             {
               "speaker": "A",
-              "text": "Do you do it often?",
+              "text": "Was it good?",
               "romanization": "",
-              "translation": "자주 해요?"
+              "translation": "좋았어요?"
             },
             {
               "speaker": "B",
-              "text": "Yes, almost every day.",
+              "text": "Yes, it was great!",
               "romanization": "",
-              "translation": "네, 거의 매일요."
+              "translation": "네, 정말 좋았어요!"
             }
           ]
         }
@@ -3153,37 +3153,37 @@
         "word": "원하다",
         "explanation": "바라고 얻으려고 하다.",
         "examples": {
-          "beginner": "저는 원하다요.",
-          "intermediate": "매일 원하다요.",
-          "advanced": "원하다는 것은 중요한 활동입니다.",
-          "master": "원하다는 행위의 다양한 맥락을 이해하면 표현력이 풍부해집니다."
+          "beginner": "원하고 싶어요.",
+          "intermediate": "요즘 매일 원하고 있어요.",
+          "advanced": "원하는 것은 일상에서 중요한 부분입니다.",
+          "master": "원하고 나면 항상 기분이 좋아지는 것 같아요."
         },
         "dialogue": {
           "context": "일상 활동에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "뭐 해요?",
-              "romanization": "mwo haeyo?",
-              "translation": "What are you doing?"
+              "text": "오늘 뭐 했어요?",
+              "romanization": "oneul mwo haeseoyo?",
+              "translation": "What did you do today?"
             },
             {
               "speaker": "B",
-              "text": "원하다요.",
-              "romanization": "wonhadayo.",
-              "translation": "I to want."
+              "text": "원하고 왔어요.",
+              "romanization": "wonhago waseoyo.",
+              "translation": "I went to want."
             },
             {
               "speaker": "A",
-              "text": "자주 해요?",
-              "romanization": "jaju haeyo?",
-              "translation": "Do you do it often?"
+              "text": "좋았어요?",
+              "romanization": "jotaseoyo?",
+              "translation": "Was it good?"
             },
             {
               "speaker": "B",
-              "text": "네, 거의 매일요.",
-              "romanization": "ne, geoui maeilyo.",
-              "translation": "Yes, almost every day."
+              "text": "네, 정말 좋았어요!",
+              "romanization": "ne, jeongmal jotaseoyo!",
+              "translation": "Yes, it was great!"
             }
           ]
         }
@@ -3192,37 +3192,37 @@
         "word": "to want",
         "explanation": "To wish for and try to obtain.",
         "examples": {
-          "beginner": "I to want.",
-          "intermediate": "I to want every day.",
-          "advanced": "to wanting is an important activity.",
-          "master": "Understanding various contexts of to wanting enriches expression."
+          "beginner": "I want to want.",
+          "intermediate": "These days I want every day.",
+          "advanced": "It is important to want regularly in daily life.",
+          "master": "After you want, you always feel better."
         },
         "dialogue": {
           "context": "Talking about daily activities",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What are you doing?",
+              "text": "What did you do today?",
               "romanization": "",
-              "translation": "뭐 해요?"
+              "translation": "오늘 뭐 했어요?"
             },
             {
               "speaker": "B",
-              "text": "I to want.",
+              "text": "I went to want.",
               "romanization": "",
-              "translation": "원하다요."
+              "translation": "원하고 왔어요."
             },
             {
               "speaker": "A",
-              "text": "Do you do it often?",
+              "text": "Was it good?",
               "romanization": "",
-              "translation": "자주 해요?"
+              "translation": "좋았어요?"
             },
             {
               "speaker": "B",
-              "text": "Yes, almost every day.",
+              "text": "Yes, it was great!",
               "romanization": "",
-              "translation": "네, 거의 매일요."
+              "translation": "네, 정말 좋았어요!"
             }
           ]
         }
@@ -3251,37 +3251,37 @@
         "word": "덥다",
         "explanation": "온도가 높아서 불쾌하다.",
         "examples": {
-          "beginner": "저는 덥다요.",
-          "intermediate": "매일 덥다요.",
-          "advanced": "덥다는 것은 중요한 활동입니다.",
-          "master": "덥다는 행위의 다양한 맥락을 이해하면 표현력이 풍부해집니다."
+          "beginner": "덥고 싶어요.",
+          "intermediate": "요즘 매일 덥고 있어요.",
+          "advanced": "덥는 것은 일상에서 중요한 부분입니다.",
+          "master": "덥고 나면 항상 기분이 좋아지는 것 같아요."
         },
         "dialogue": {
           "context": "일상 활동에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "뭐 해요?",
-              "romanization": "mwo haeyo?",
-              "translation": "What are you doing?"
+              "text": "오늘 뭐 했어요?",
+              "romanization": "oneul mwo haeseoyo?",
+              "translation": "What did you do today?"
             },
             {
               "speaker": "B",
-              "text": "덥다요.",
-              "romanization": "deopdayo.",
-              "translation": "I to be hot."
+              "text": "덥고 왔어요.",
+              "romanization": "deopgo waseoyo.",
+              "translation": "I went to be hot."
             },
             {
               "speaker": "A",
-              "text": "자주 해요?",
-              "romanization": "jaju haeyo?",
-              "translation": "Do you do it often?"
+              "text": "좋았어요?",
+              "romanization": "jotaseoyo?",
+              "translation": "Was it good?"
             },
             {
               "speaker": "B",
-              "text": "네, 거의 매일요.",
-              "romanization": "ne, geoui maeilyo.",
-              "translation": "Yes, almost every day."
+              "text": "네, 정말 좋았어요!",
+              "romanization": "ne, jeongmal jotaseoyo!",
+              "translation": "Yes, it was great!"
             }
           ]
         }
@@ -3290,37 +3290,37 @@
         "word": "to be hot",
         "explanation": "To be uncomfortable because of high temperature.",
         "examples": {
-          "beginner": "I to be hot.",
-          "intermediate": "I to be hot every day.",
-          "advanced": "to be hoting is an important activity.",
-          "master": "Understanding various contexts of to be hoting enriches expression."
+          "beginner": "I want to be hot.",
+          "intermediate": "These days I be hot every day.",
+          "advanced": "It is important to be hot regularly in daily life.",
+          "master": "After you be hot, you always feel better."
         },
         "dialogue": {
           "context": "Talking about daily activities",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What are you doing?",
+              "text": "What did you do today?",
               "romanization": "",
-              "translation": "뭐 해요?"
+              "translation": "오늘 뭐 했어요?"
             },
             {
               "speaker": "B",
-              "text": "I to be hot.",
+              "text": "I went to be hot.",
               "romanization": "",
-              "translation": "덥다요."
+              "translation": "덥고 왔어요."
             },
             {
               "speaker": "A",
-              "text": "Do you do it often?",
+              "text": "Was it good?",
               "romanization": "",
-              "translation": "자주 해요?"
+              "translation": "좋았어요?"
             },
             {
               "speaker": "B",
-              "text": "Yes, almost every day.",
+              "text": "Yes, it was great!",
               "romanization": "",
-              "translation": "네, 거의 매일요."
+              "translation": "네, 정말 좋았어요!"
             }
           ]
         }
@@ -3349,37 +3349,37 @@
         "word": "춥다",
         "explanation": "온도가 낮아서 몸이 떨린다.",
         "examples": {
-          "beginner": "저는 춥다요.",
-          "intermediate": "매일 춥다요.",
-          "advanced": "춥다는 것은 중요한 활동입니다.",
-          "master": "춥다는 행위의 다양한 맥락을 이해하면 표현력이 풍부해집니다."
+          "beginner": "춥고 싶어요.",
+          "intermediate": "요즘 매일 춥고 있어요.",
+          "advanced": "춥는 것은 일상에서 중요한 부분입니다.",
+          "master": "춥고 나면 항상 기분이 좋아지는 것 같아요."
         },
         "dialogue": {
           "context": "일상 활동에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "뭐 해요?",
-              "romanization": "mwo haeyo?",
-              "translation": "What are you doing?"
+              "text": "오늘 뭐 했어요?",
+              "romanization": "oneul mwo haeseoyo?",
+              "translation": "What did you do today?"
             },
             {
               "speaker": "B",
-              "text": "춥다요.",
-              "romanization": "chupdayo.",
-              "translation": "I to be cold."
+              "text": "춥고 왔어요.",
+              "romanization": "chupgo waseoyo.",
+              "translation": "I went to be cold."
             },
             {
               "speaker": "A",
-              "text": "자주 해요?",
-              "romanization": "jaju haeyo?",
-              "translation": "Do you do it often?"
+              "text": "좋았어요?",
+              "romanization": "jotaseoyo?",
+              "translation": "Was it good?"
             },
             {
               "speaker": "B",
-              "text": "네, 거의 매일요.",
-              "romanization": "ne, geoui maeilyo.",
-              "translation": "Yes, almost every day."
+              "text": "네, 정말 좋았어요!",
+              "romanization": "ne, jeongmal jotaseoyo!",
+              "translation": "Yes, it was great!"
             }
           ]
         }
@@ -3388,37 +3388,37 @@
         "word": "to be cold",
         "explanation": "To shiver because of low temperature.",
         "examples": {
-          "beginner": "I to be cold.",
-          "intermediate": "I to be cold every day.",
-          "advanced": "to be colding is an important activity.",
-          "master": "Understanding various contexts of to be colding enriches expression."
+          "beginner": "I want to be cold.",
+          "intermediate": "These days I be cold every day.",
+          "advanced": "It is important to be cold regularly in daily life.",
+          "master": "After you be cold, you always feel better."
         },
         "dialogue": {
           "context": "Talking about daily activities",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What are you doing?",
+              "text": "What did you do today?",
               "romanization": "",
-              "translation": "뭐 해요?"
+              "translation": "오늘 뭐 했어요?"
             },
             {
               "speaker": "B",
-              "text": "I to be cold.",
+              "text": "I went to be cold.",
               "romanization": "",
-              "translation": "춥다요."
+              "translation": "춥고 왔어요."
             },
             {
               "speaker": "A",
-              "text": "Do you do it often?",
+              "text": "Was it good?",
               "romanization": "",
-              "translation": "자주 해요?"
+              "translation": "좋았어요?"
             },
             {
               "speaker": "B",
-              "text": "Yes, almost every day.",
+              "text": "Yes, it was great!",
               "romanization": "",
-              "translation": "네, 거의 매일요."
+              "translation": "네, 정말 좋았어요!"
             }
           ]
         }
@@ -3447,37 +3447,37 @@
         "word": "돌다",
         "explanation": "원을 그리며 움직이다. 방향을 바꾸다.",
         "examples": {
-          "beginner": "저는 돌다요.",
-          "intermediate": "매일 돌다요.",
-          "advanced": "돌다는 것은 중요한 활동입니다.",
-          "master": "돌다는 행위의 다양한 맥락을 이해하면 표현력이 풍부해집니다."
+          "beginner": "돌고 싶어요.",
+          "intermediate": "요즘 매일 돌고 있어요.",
+          "advanced": "돌는 것은 일상에서 중요한 부분입니다.",
+          "master": "돌고 나면 항상 기분이 좋아지는 것 같아요."
         },
         "dialogue": {
           "context": "일상 활동에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "뭐 해요?",
-              "romanization": "mwo haeyo?",
-              "translation": "What are you doing?"
+              "text": "오늘 뭐 했어요?",
+              "romanization": "oneul mwo haeseoyo?",
+              "translation": "What did you do today?"
             },
             {
               "speaker": "B",
-              "text": "돌다요.",
-              "romanization": "doldayo.",
-              "translation": "I to turn / to spin / to go around."
+              "text": "돌고 왔어요.",
+              "romanization": "dolgo waseoyo.",
+              "translation": "I went to turn / to spin / to go around."
             },
             {
               "speaker": "A",
-              "text": "자주 해요?",
-              "romanization": "jaju haeyo?",
-              "translation": "Do you do it often?"
+              "text": "좋았어요?",
+              "romanization": "jotaseoyo?",
+              "translation": "Was it good?"
             },
             {
               "speaker": "B",
-              "text": "네, 거의 매일요.",
-              "romanization": "ne, geoui maeilyo.",
-              "translation": "Yes, almost every day."
+              "text": "네, 정말 좋았어요!",
+              "romanization": "ne, jeongmal jotaseoyo!",
+              "translation": "Yes, it was great!"
             }
           ]
         }
@@ -3486,37 +3486,37 @@
         "word": "to turn / to spin / to go around",
         "explanation": "To move in a circle. To change direction.",
         "examples": {
-          "beginner": "I to turn / to spin / to go around.",
-          "intermediate": "I to turn / to spin / to go around every day.",
-          "advanced": "to turn / to spin / to go arounding is an important activity.",
-          "master": "Understanding various contexts of to turn / to spin / to go arounding enriches expression."
+          "beginner": "I want to turn / to spin / to go around.",
+          "intermediate": "These days I turn / to spin / to go around every day.",
+          "advanced": "It is important to turn / to spin / to go around regularly in daily life.",
+          "master": "After you turn / to spin / to go around, you always feel better."
         },
         "dialogue": {
           "context": "Talking about daily activities",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What are you doing?",
+              "text": "What did you do today?",
               "romanization": "",
-              "translation": "뭐 해요?"
+              "translation": "오늘 뭐 했어요?"
             },
             {
               "speaker": "B",
-              "text": "I to turn / to spin / to go around.",
+              "text": "I went to turn / to spin / to go around.",
               "romanization": "",
-              "translation": "돌다요."
+              "translation": "돌고 왔어요."
             },
             {
               "speaker": "A",
-              "text": "Do you do it often?",
+              "text": "Was it good?",
               "romanization": "",
-              "translation": "자주 해요?"
+              "translation": "좋았어요?"
             },
             {
               "speaker": "B",
-              "text": "Yes, almost every day.",
+              "text": "Yes, it was great!",
               "romanization": "",
-              "translation": "네, 거의 매일요."
+              "translation": "네, 정말 좋았어요!"
             }
           ]
         }
@@ -3545,37 +3545,37 @@
         "word": "돌아오다",
         "explanation": "원래 있던 곳으로 다시 오다.",
         "examples": {
-          "beginner": "저는 돌아오다요.",
-          "intermediate": "매일 돌아오다요.",
-          "advanced": "돌아오다는 것은 중요한 활동입니다.",
-          "master": "돌아오다는 행위의 다양한 맥락을 이해하면 표현력이 풍부해집니다."
+          "beginner": "돌아오고 싶어요.",
+          "intermediate": "요즘 매일 돌아오고 있어요.",
+          "advanced": "돌아오는 것은 일상에서 중요한 부분입니다.",
+          "master": "돌아오고 나면 항상 기분이 좋아지는 것 같아요."
         },
         "dialogue": {
           "context": "일상 활동에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "뭐 해요?",
-              "romanization": "mwo haeyo?",
-              "translation": "What are you doing?"
+              "text": "오늘 뭐 했어요?",
+              "romanization": "oneul mwo haeseoyo?",
+              "translation": "What did you do today?"
             },
             {
               "speaker": "B",
-              "text": "돌아오다요.",
-              "romanization": "dolaodayo.",
-              "translation": "I to come back / to return."
+              "text": "돌아오고 왔어요.",
+              "romanization": "dolaogo waseoyo.",
+              "translation": "I went to come back / to return."
             },
             {
               "speaker": "A",
-              "text": "자주 해요?",
-              "romanization": "jaju haeyo?",
-              "translation": "Do you do it often?"
+              "text": "좋았어요?",
+              "romanization": "jotaseoyo?",
+              "translation": "Was it good?"
             },
             {
               "speaker": "B",
-              "text": "네, 거의 매일요.",
-              "romanization": "ne, geoui maeilyo.",
-              "translation": "Yes, almost every day."
+              "text": "네, 정말 좋았어요!",
+              "romanization": "ne, jeongmal jotaseoyo!",
+              "translation": "Yes, it was great!"
             }
           ]
         }
@@ -3584,37 +3584,37 @@
         "word": "to come back / to return",
         "explanation": "To come back to where one was before.",
         "examples": {
-          "beginner": "I to come back / to return.",
-          "intermediate": "I to come back / to return every day.",
-          "advanced": "to come back / to returning is an important activity.",
-          "master": "Understanding various contexts of to come back / to returning enriches expression."
+          "beginner": "I want to come back / to return.",
+          "intermediate": "These days I come back / to return every day.",
+          "advanced": "It is important to come back / to return regularly in daily life.",
+          "master": "After you come back / to return, you always feel better."
         },
         "dialogue": {
           "context": "Talking about daily activities",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What are you doing?",
+              "text": "What did you do today?",
               "romanization": "",
-              "translation": "뭐 해요?"
+              "translation": "오늘 뭐 했어요?"
             },
             {
               "speaker": "B",
-              "text": "I to come back / to return.",
+              "text": "I went to come back / to return.",
               "romanization": "",
-              "translation": "돌아오다요."
+              "translation": "돌아오고 왔어요."
             },
             {
               "speaker": "A",
-              "text": "Do you do it often?",
+              "text": "Was it good?",
               "romanization": "",
-              "translation": "자주 해요?"
+              "translation": "좋았어요?"
             },
             {
               "speaker": "B",
-              "text": "Yes, almost every day.",
+              "text": "Yes, it was great!",
               "romanization": "",
-              "translation": "네, 거의 매일요."
+              "translation": "네, 정말 좋았어요!"
             }
           ]
         }
@@ -3643,37 +3643,37 @@
         "word": "내리다",
         "explanation": "위에서 아래로 이동하다. 교통수단에서 나오다.",
         "examples": {
-          "beginner": "저는 내리다요.",
-          "intermediate": "매일 내리다요.",
-          "advanced": "내리다는 것은 중요한 활동입니다.",
-          "master": "내리다는 행위의 다양한 맥락을 이해하면 표현력이 풍부해집니다."
+          "beginner": "내리고 싶어요.",
+          "intermediate": "요즘 매일 내리고 있어요.",
+          "advanced": "내리는 것은 일상에서 중요한 부분입니다.",
+          "master": "내리고 나면 항상 기분이 좋아지는 것 같아요."
         },
         "dialogue": {
           "context": "일상 활동에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "뭐 해요?",
-              "romanization": "mwo haeyo?",
-              "translation": "What are you doing?"
+              "text": "오늘 뭐 했어요?",
+              "romanization": "oneul mwo haeseoyo?",
+              "translation": "What did you do today?"
             },
             {
               "speaker": "B",
-              "text": "내리다요.",
-              "romanization": "naeridayo.",
-              "translation": "I to go down / to get off / to fall (rain/snow)."
+              "text": "내리고 왔어요.",
+              "romanization": "naerigo waseoyo.",
+              "translation": "I went to go down / to get off / to fall (rain/snow)."
             },
             {
               "speaker": "A",
-              "text": "자주 해요?",
-              "romanization": "jaju haeyo?",
-              "translation": "Do you do it often?"
+              "text": "좋았어요?",
+              "romanization": "jotaseoyo?",
+              "translation": "Was it good?"
             },
             {
               "speaker": "B",
-              "text": "네, 거의 매일요.",
-              "romanization": "ne, geoui maeilyo.",
-              "translation": "Yes, almost every day."
+              "text": "네, 정말 좋았어요!",
+              "romanization": "ne, jeongmal jotaseoyo!",
+              "translation": "Yes, it was great!"
             }
           ]
         }
@@ -3682,37 +3682,37 @@
         "word": "to go down / to get off / to fall (rain/snow)",
         "explanation": "To move from above to below. To get out of a vehicle.",
         "examples": {
-          "beginner": "I to go down / to get off / to fall (rain/snow).",
-          "intermediate": "I to go down / to get off / to fall (rain/snow) every day.",
-          "advanced": "to go down / to get off / to fall (rain/snow)ing is an important activity.",
-          "master": "Understanding various contexts of to go down / to get off / to fall (rain/snow)ing enriches expression."
+          "beginner": "I want to go down / to get off / to fall (rain/snow).",
+          "intermediate": "These days I go down / to get off / to fall (rain/snow) every day.",
+          "advanced": "It is important to go down / to get off / to fall (rain/snow) regularly in daily life.",
+          "master": "After you go down / to get off / to fall (rain/snow), you always feel better."
         },
         "dialogue": {
           "context": "Talking about daily activities",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What are you doing?",
+              "text": "What did you do today?",
               "romanization": "",
-              "translation": "뭐 해요?"
+              "translation": "오늘 뭐 했어요?"
             },
             {
               "speaker": "B",
-              "text": "I to go down / to get off / to fall (rain/snow).",
+              "text": "I went to go down / to get off / to fall (rain/snow).",
               "romanization": "",
-              "translation": "내리다요."
+              "translation": "내리고 왔어요."
             },
             {
               "speaker": "A",
-              "text": "Do you do it often?",
+              "text": "Was it good?",
               "romanization": "",
-              "translation": "자주 해요?"
+              "translation": "좋았어요?"
             },
             {
               "speaker": "B",
-              "text": "Yes, almost every day.",
+              "text": "Yes, it was great!",
               "romanization": "",
-              "translation": "네, 거의 매일요."
+              "translation": "네, 정말 좋았어요!"
             }
           ]
         }
@@ -3741,37 +3741,37 @@
         "word": "오르다",
         "explanation": "아래에서 위로 이동하다. 가격이나 수준이 높아지다.",
         "examples": {
-          "beginner": "저는 오르다요.",
-          "intermediate": "매일 오르다요.",
-          "advanced": "오르다는 것은 중요한 활동입니다.",
-          "master": "오르다는 행위의 다양한 맥락을 이해하면 표현력이 풍부해집니다."
+          "beginner": "오르고 싶어요.",
+          "intermediate": "요즘 매일 오르고 있어요.",
+          "advanced": "오르는 것은 일상에서 중요한 부분입니다.",
+          "master": "오르고 나면 항상 기분이 좋아지는 것 같아요."
         },
         "dialogue": {
           "context": "일상 활동에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "뭐 해요?",
-              "romanization": "mwo haeyo?",
-              "translation": "What are you doing?"
+              "text": "오늘 뭐 했어요?",
+              "romanization": "oneul mwo haeseoyo?",
+              "translation": "What did you do today?"
             },
             {
               "speaker": "B",
-              "text": "오르다요.",
-              "romanization": "oreudayo.",
-              "translation": "I to climb / to go up / to rise."
+              "text": "오르고 왔어요.",
+              "romanization": "oreugo waseoyo.",
+              "translation": "I went to climb / to go up / to rise."
             },
             {
               "speaker": "A",
-              "text": "자주 해요?",
-              "romanization": "jaju haeyo?",
-              "translation": "Do you do it often?"
+              "text": "좋았어요?",
+              "romanization": "jotaseoyo?",
+              "translation": "Was it good?"
             },
             {
               "speaker": "B",
-              "text": "네, 거의 매일요.",
-              "romanization": "ne, geoui maeilyo.",
-              "translation": "Yes, almost every day."
+              "text": "네, 정말 좋았어요!",
+              "romanization": "ne, jeongmal jotaseoyo!",
+              "translation": "Yes, it was great!"
             }
           ]
         }
@@ -3780,37 +3780,37 @@
         "word": "to climb / to go up / to rise",
         "explanation": "To move from below to above. For prices or levels to increase.",
         "examples": {
-          "beginner": "I to climb / to go up / to rise.",
-          "intermediate": "I to climb / to go up / to rise every day.",
-          "advanced": "to climb / to go up / to riseing is an important activity.",
-          "master": "Understanding various contexts of to climb / to go up / to riseing enriches expression."
+          "beginner": "I want to climb / to go up / to rise.",
+          "intermediate": "These days I climb / to go up / to rise every day.",
+          "advanced": "It is important to climb / to go up / to rise regularly in daily life.",
+          "master": "After you climb / to go up / to rise, you always feel better."
         },
         "dialogue": {
           "context": "Talking about daily activities",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What are you doing?",
+              "text": "What did you do today?",
               "romanization": "",
-              "translation": "뭐 해요?"
+              "translation": "오늘 뭐 했어요?"
             },
             {
               "speaker": "B",
-              "text": "I to climb / to go up / to rise.",
+              "text": "I went to climb / to go up / to rise.",
               "romanization": "",
-              "translation": "오르다요."
+              "translation": "오르고 왔어요."
             },
             {
               "speaker": "A",
-              "text": "Do you do it often?",
+              "text": "Was it good?",
               "romanization": "",
-              "translation": "자주 해요?"
+              "translation": "좋았어요?"
             },
             {
               "speaker": "B",
-              "text": "Yes, almost every day.",
+              "text": "Yes, it was great!",
               "romanization": "",
-              "translation": "네, 거의 매일요."
+              "translation": "네, 정말 좋았어요!"
             }
           ]
         }
@@ -3839,37 +3839,37 @@
         "word": "타다",
         "explanation": "교통수단에 몸을 싣다. 불에 타다.",
         "examples": {
-          "beginner": "저는 타다요.",
-          "intermediate": "매일 타다요.",
-          "advanced": "타다는 것은 중요한 활동입니다.",
-          "master": "타다는 행위의 다양한 맥락을 이해하면 표현력이 풍부해집니다."
+          "beginner": "타고 싶어요.",
+          "intermediate": "요즘 매일 타고 있어요.",
+          "advanced": "타는 것은 일상에서 중요한 부분입니다.",
+          "master": "타고 나면 항상 기분이 좋아지는 것 같아요."
         },
         "dialogue": {
           "context": "일상 활동에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "뭐 해요?",
-              "romanization": "mwo haeyo?",
-              "translation": "What are you doing?"
+              "text": "오늘 뭐 했어요?",
+              "romanization": "oneul mwo haeseoyo?",
+              "translation": "What did you do today?"
             },
             {
               "speaker": "B",
-              "text": "타다요.",
-              "romanization": "tadayo.",
-              "translation": "I to ride / to take (transportation) / to burn."
+              "text": "타고 왔어요.",
+              "romanization": "tago waseoyo.",
+              "translation": "I went to ride / to take (transportation) / to burn."
             },
             {
               "speaker": "A",
-              "text": "자주 해요?",
-              "romanization": "jaju haeyo?",
-              "translation": "Do you do it often?"
+              "text": "좋았어요?",
+              "romanization": "jotaseoyo?",
+              "translation": "Was it good?"
             },
             {
               "speaker": "B",
-              "text": "네, 거의 매일요.",
-              "romanization": "ne, geoui maeilyo.",
-              "translation": "Yes, almost every day."
+              "text": "네, 정말 좋았어요!",
+              "romanization": "ne, jeongmal jotaseoyo!",
+              "translation": "Yes, it was great!"
             }
           ]
         }
@@ -3878,37 +3878,37 @@
         "word": "to ride / to take (transportation) / to burn",
         "explanation": "To get on a means of transportation. To burn in fire.",
         "examples": {
-          "beginner": "I to ride / to take (transportation) / to burn.",
-          "intermediate": "I to ride / to take (transportation) / to burn every day.",
-          "advanced": "to ride / to take (transportation) / to burning is an important activity.",
-          "master": "Understanding various contexts of to ride / to take (transportation) / to burning enriches expression."
+          "beginner": "I want to ride / to take (transportation) / to burn.",
+          "intermediate": "These days I ride / to take (transportation) / to burn every day.",
+          "advanced": "It is important to ride / to take (transportation) / to burn regularly in daily life.",
+          "master": "After you ride / to take (transportation) / to burn, you always feel better."
         },
         "dialogue": {
           "context": "Talking about daily activities",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What are you doing?",
+              "text": "What did you do today?",
               "romanization": "",
-              "translation": "뭐 해요?"
+              "translation": "오늘 뭐 했어요?"
             },
             {
               "speaker": "B",
-              "text": "I to ride / to take (transportation) / to burn.",
+              "text": "I went to ride / to take (transportation) / to burn.",
               "romanization": "",
-              "translation": "타다요."
+              "translation": "타고 왔어요."
             },
             {
               "speaker": "A",
-              "text": "Do you do it often?",
+              "text": "Was it good?",
               "romanization": "",
-              "translation": "자주 해요?"
+              "translation": "좋았어요?"
             },
             {
               "speaker": "B",
-              "text": "Yes, almost every day.",
+              "text": "Yes, it was great!",
               "romanization": "",
-              "translation": "네, 거의 매일요."
+              "translation": "네, 정말 좋았어요!"
             }
           ]
         }
@@ -3937,37 +3937,37 @@
         "word": "걷다",
         "explanation": "발을 움직여 이동하다.",
         "examples": {
-          "beginner": "저는 걷다요.",
-          "intermediate": "매일 걷다요.",
-          "advanced": "걷다는 것은 중요한 활동입니다.",
-          "master": "걷다는 행위의 다양한 맥락을 이해하면 표현력이 풍부해집니다."
+          "beginner": "걷고 싶어요.",
+          "intermediate": "요즘 매일 걷고 있어요.",
+          "advanced": "걷는 것은 일상에서 중요한 부분입니다.",
+          "master": "걷고 나면 항상 기분이 좋아지는 것 같아요."
         },
         "dialogue": {
           "context": "일상 활동에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "뭐 해요?",
-              "romanization": "mwo haeyo?",
-              "translation": "What are you doing?"
+              "text": "오늘 뭐 했어요?",
+              "romanization": "oneul mwo haeseoyo?",
+              "translation": "What did you do today?"
             },
             {
               "speaker": "B",
-              "text": "걷다요.",
-              "romanization": "geotdayo.",
-              "translation": "I to walk."
+              "text": "걷고 왔어요.",
+              "romanization": "geotgo waseoyo.",
+              "translation": "I went to walk."
             },
             {
               "speaker": "A",
-              "text": "자주 해요?",
-              "romanization": "jaju haeyo?",
-              "translation": "Do you do it often?"
+              "text": "좋았어요?",
+              "romanization": "jotaseoyo?",
+              "translation": "Was it good?"
             },
             {
               "speaker": "B",
-              "text": "네, 거의 매일요.",
-              "romanization": "ne, geoui maeilyo.",
-              "translation": "Yes, almost every day."
+              "text": "네, 정말 좋았어요!",
+              "romanization": "ne, jeongmal jotaseoyo!",
+              "translation": "Yes, it was great!"
             }
           ]
         }
@@ -3976,37 +3976,37 @@
         "word": "to walk",
         "explanation": "To move by moving the feet.",
         "examples": {
-          "beginner": "I to walk.",
-          "intermediate": "I to walk every day.",
-          "advanced": "to walking is an important activity.",
-          "master": "Understanding various contexts of to walking enriches expression."
+          "beginner": "I want to walk.",
+          "intermediate": "These days I walk every day.",
+          "advanced": "It is important to walk regularly in daily life.",
+          "master": "After you walk, you always feel better."
         },
         "dialogue": {
           "context": "Talking about daily activities",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What are you doing?",
+              "text": "What did you do today?",
               "romanization": "",
-              "translation": "뭐 해요?"
+              "translation": "오늘 뭐 했어요?"
             },
             {
               "speaker": "B",
-              "text": "I to walk.",
+              "text": "I went to walk.",
               "romanization": "",
-              "translation": "걷다요."
+              "translation": "걷고 왔어요."
             },
             {
               "speaker": "A",
-              "text": "Do you do it often?",
+              "text": "Was it good?",
               "romanization": "",
-              "translation": "자주 해요?"
+              "translation": "좋았어요?"
             },
             {
               "speaker": "B",
-              "text": "Yes, almost every day.",
+              "text": "Yes, it was great!",
               "romanization": "",
-              "translation": "네, 거의 매일요."
+              "translation": "네, 정말 좋았어요!"
             }
           ]
         }
@@ -4035,37 +4035,37 @@
         "word": "달리다",
         "explanation": "빠르게 뛰어가다.",
         "examples": {
-          "beginner": "저는 달리다요.",
-          "intermediate": "매일 달리다요.",
-          "advanced": "달리다는 것은 중요한 활동입니다.",
-          "master": "달리다는 행위의 다양한 맥락을 이해하면 표현력이 풍부해집니다."
+          "beginner": "달리고 싶어요.",
+          "intermediate": "요즘 매일 달리고 있어요.",
+          "advanced": "달리는 것은 일상에서 중요한 부분입니다.",
+          "master": "달리고 나면 항상 기분이 좋아지는 것 같아요."
         },
         "dialogue": {
           "context": "일상 활동에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "뭐 해요?",
-              "romanization": "mwo haeyo?",
-              "translation": "What are you doing?"
+              "text": "오늘 뭐 했어요?",
+              "romanization": "oneul mwo haeseoyo?",
+              "translation": "What did you do today?"
             },
             {
               "speaker": "B",
-              "text": "달리다요.",
-              "romanization": "dalridayo.",
-              "translation": "I to run."
+              "text": "달리고 왔어요.",
+              "romanization": "dalrigo waseoyo.",
+              "translation": "I went to run."
             },
             {
               "speaker": "A",
-              "text": "자주 해요?",
-              "romanization": "jaju haeyo?",
-              "translation": "Do you do it often?"
+              "text": "좋았어요?",
+              "romanization": "jotaseoyo?",
+              "translation": "Was it good?"
             },
             {
               "speaker": "B",
-              "text": "네, 거의 매일요.",
-              "romanization": "ne, geoui maeilyo.",
-              "translation": "Yes, almost every day."
+              "text": "네, 정말 좋았어요!",
+              "romanization": "ne, jeongmal jotaseoyo!",
+              "translation": "Yes, it was great!"
             }
           ]
         }
@@ -4074,37 +4074,37 @@
         "word": "to run",
         "explanation": "To move quickly by running.",
         "examples": {
-          "beginner": "I to run.",
-          "intermediate": "I to run every day.",
-          "advanced": "to runing is an important activity.",
-          "master": "Understanding various contexts of to runing enriches expression."
+          "beginner": "I want to run.",
+          "intermediate": "These days I run every day.",
+          "advanced": "It is important to run regularly in daily life.",
+          "master": "After you run, you always feel better."
         },
         "dialogue": {
           "context": "Talking about daily activities",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What are you doing?",
+              "text": "What did you do today?",
               "romanization": "",
-              "translation": "뭐 해요?"
+              "translation": "오늘 뭐 했어요?"
             },
             {
               "speaker": "B",
-              "text": "I to run.",
+              "text": "I went to run.",
               "romanization": "",
-              "translation": "달리다요."
+              "translation": "달리고 왔어요."
             },
             {
               "speaker": "A",
-              "text": "Do you do it often?",
+              "text": "Was it good?",
               "romanization": "",
-              "translation": "자주 해요?"
+              "translation": "좋았어요?"
             },
             {
               "speaker": "B",
-              "text": "Yes, almost every day.",
+              "text": "Yes, it was great!",
               "romanization": "",
-              "translation": "네, 거의 매일요."
+              "translation": "네, 정말 좋았어요!"
             }
           ]
         }
@@ -4133,37 +4133,37 @@
         "word": "앉다",
         "explanation": "의자나 바닥에 엉덩이를 대고 자세를 취하다.",
         "examples": {
-          "beginner": "저는 앉다요.",
-          "intermediate": "매일 앉다요.",
-          "advanced": "앉다는 것은 중요한 활동입니다.",
-          "master": "앉다는 행위의 다양한 맥락을 이해하면 표현력이 풍부해집니다."
+          "beginner": "앉고 싶어요.",
+          "intermediate": "요즘 매일 앉고 있어요.",
+          "advanced": "앉는 것은 일상에서 중요한 부분입니다.",
+          "master": "앉고 나면 항상 기분이 좋아지는 것 같아요."
         },
         "dialogue": {
           "context": "일상 활동에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "뭐 해요?",
-              "romanization": "mwo haeyo?",
-              "translation": "What are you doing?"
+              "text": "오늘 뭐 했어요?",
+              "romanization": "oneul mwo haeseoyo?",
+              "translation": "What did you do today?"
             },
             {
               "speaker": "B",
-              "text": "앉다요.",
-              "romanization": "andayo.",
-              "translation": "I to sit."
+              "text": "앉고 왔어요.",
+              "romanization": "ango waseoyo.",
+              "translation": "I went to sit."
             },
             {
               "speaker": "A",
-              "text": "자주 해요?",
-              "romanization": "jaju haeyo?",
-              "translation": "Do you do it often?"
+              "text": "좋았어요?",
+              "romanization": "jotaseoyo?",
+              "translation": "Was it good?"
             },
             {
               "speaker": "B",
-              "text": "네, 거의 매일요.",
-              "romanization": "ne, geoui maeilyo.",
-              "translation": "Yes, almost every day."
+              "text": "네, 정말 좋았어요!",
+              "romanization": "ne, jeongmal jotaseoyo!",
+              "translation": "Yes, it was great!"
             }
           ]
         }
@@ -4172,37 +4172,37 @@
         "word": "to sit",
         "explanation": "To take a position with buttocks on a chair or floor.",
         "examples": {
-          "beginner": "I to sit.",
-          "intermediate": "I to sit every day.",
-          "advanced": "to siting is an important activity.",
-          "master": "Understanding various contexts of to siting enriches expression."
+          "beginner": "I want to sit.",
+          "intermediate": "These days I sit every day.",
+          "advanced": "It is important to sit regularly in daily life.",
+          "master": "After you sit, you always feel better."
         },
         "dialogue": {
           "context": "Talking about daily activities",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What are you doing?",
+              "text": "What did you do today?",
               "romanization": "",
-              "translation": "뭐 해요?"
+              "translation": "오늘 뭐 했어요?"
             },
             {
               "speaker": "B",
-              "text": "I to sit.",
+              "text": "I went to sit.",
               "romanization": "",
-              "translation": "앉다요."
+              "translation": "앉고 왔어요."
             },
             {
               "speaker": "A",
-              "text": "Do you do it often?",
+              "text": "Was it good?",
               "romanization": "",
-              "translation": "자주 해요?"
+              "translation": "좋았어요?"
             },
             {
               "speaker": "B",
-              "text": "Yes, almost every day.",
+              "text": "Yes, it was great!",
               "romanization": "",
-              "translation": "네, 거의 매일요."
+              "translation": "네, 정말 좋았어요!"
             }
           ]
         }
@@ -4231,37 +4231,37 @@
         "word": "서다",
         "explanation": "두 발로 몸을 지탱하고 있다. 멈추다.",
         "examples": {
-          "beginner": "저는 서다요.",
-          "intermediate": "매일 서다요.",
-          "advanced": "서다는 것은 중요한 활동입니다.",
-          "master": "서다는 행위의 다양한 맥락을 이해하면 표현력이 풍부해집니다."
+          "beginner": "서고 싶어요.",
+          "intermediate": "요즘 매일 서고 있어요.",
+          "advanced": "서는 것은 일상에서 중요한 부분입니다.",
+          "master": "서고 나면 항상 기분이 좋아지는 것 같아요."
         },
         "dialogue": {
           "context": "일상 활동에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "뭐 해요?",
-              "romanization": "mwo haeyo?",
-              "translation": "What are you doing?"
+              "text": "오늘 뭐 했어요?",
+              "romanization": "oneul mwo haeseoyo?",
+              "translation": "What did you do today?"
             },
             {
               "speaker": "B",
-              "text": "서다요.",
-              "romanization": "seodayo.",
-              "translation": "I to stand / to stop."
+              "text": "서고 왔어요.",
+              "romanization": "seogo waseoyo.",
+              "translation": "I went to stand / to stop."
             },
             {
               "speaker": "A",
-              "text": "자주 해요?",
-              "romanization": "jaju haeyo?",
-              "translation": "Do you do it often?"
+              "text": "좋았어요?",
+              "romanization": "jotaseoyo?",
+              "translation": "Was it good?"
             },
             {
               "speaker": "B",
-              "text": "네, 거의 매일요.",
-              "romanization": "ne, geoui maeilyo.",
-              "translation": "Yes, almost every day."
+              "text": "네, 정말 좋았어요!",
+              "romanization": "ne, jeongmal jotaseoyo!",
+              "translation": "Yes, it was great!"
             }
           ]
         }
@@ -4270,37 +4270,37 @@
         "word": "to stand / to stop",
         "explanation": "To support the body on two feet. To stop.",
         "examples": {
-          "beginner": "I to stand / to stop.",
-          "intermediate": "I to stand / to stop every day.",
-          "advanced": "to stand / to stoping is an important activity.",
-          "master": "Understanding various contexts of to stand / to stoping enriches expression."
+          "beginner": "I want to stand / to stop.",
+          "intermediate": "These days I stand / to stop every day.",
+          "advanced": "It is important to stand / to stop regularly in daily life.",
+          "master": "After you stand / to stop, you always feel better."
         },
         "dialogue": {
           "context": "Talking about daily activities",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What are you doing?",
+              "text": "What did you do today?",
               "romanization": "",
-              "translation": "뭐 해요?"
+              "translation": "오늘 뭐 했어요?"
             },
             {
               "speaker": "B",
-              "text": "I to stand / to stop.",
+              "text": "I went to stand / to stop.",
               "romanization": "",
-              "translation": "서다요."
+              "translation": "서고 왔어요."
             },
             {
               "speaker": "A",
-              "text": "Do you do it often?",
+              "text": "Was it good?",
               "romanization": "",
-              "translation": "자주 해요?"
+              "translation": "좋았어요?"
             },
             {
               "speaker": "B",
-              "text": "Yes, almost every day.",
+              "text": "Yes, it was great!",
               "romanization": "",
-              "translation": "네, 거의 매일요."
+              "translation": "네, 정말 좋았어요!"
             }
           ]
         }
@@ -4329,37 +4329,37 @@
         "word": "눕다",
         "explanation": "몸을 수평으로 대고 있다.",
         "examples": {
-          "beginner": "저는 눕다요.",
-          "intermediate": "매일 눕다요.",
-          "advanced": "눕다는 것은 중요한 활동입니다.",
-          "master": "눕다는 행위의 다양한 맥락을 이해하면 표현력이 풍부해집니다."
+          "beginner": "눕고 싶어요.",
+          "intermediate": "요즘 매일 눕고 있어요.",
+          "advanced": "눕는 것은 일상에서 중요한 부분입니다.",
+          "master": "눕고 나면 항상 기분이 좋아지는 것 같아요."
         },
         "dialogue": {
           "context": "일상 활동에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "뭐 해요?",
-              "romanization": "mwo haeyo?",
-              "translation": "What are you doing?"
+              "text": "오늘 뭐 했어요?",
+              "romanization": "oneul mwo haeseoyo?",
+              "translation": "What did you do today?"
             },
             {
               "speaker": "B",
-              "text": "눕다요.",
-              "romanization": "nupdayo.",
-              "translation": "I to lie down."
+              "text": "눕고 왔어요.",
+              "romanization": "nupgo waseoyo.",
+              "translation": "I went to lie down."
             },
             {
               "speaker": "A",
-              "text": "자주 해요?",
-              "romanization": "jaju haeyo?",
-              "translation": "Do you do it often?"
+              "text": "좋았어요?",
+              "romanization": "jotaseoyo?",
+              "translation": "Was it good?"
             },
             {
               "speaker": "B",
-              "text": "네, 거의 매일요.",
-              "romanization": "ne, geoui maeilyo.",
-              "translation": "Yes, almost every day."
+              "text": "네, 정말 좋았어요!",
+              "romanization": "ne, jeongmal jotaseoyo!",
+              "translation": "Yes, it was great!"
             }
           ]
         }
@@ -4368,37 +4368,37 @@
         "word": "to lie down",
         "explanation": "To be in a horizontal position.",
         "examples": {
-          "beginner": "I to lie down.",
-          "intermediate": "I to lie down every day.",
-          "advanced": "to lie downing is an important activity.",
-          "master": "Understanding various contexts of to lie downing enriches expression."
+          "beginner": "I want to lie down.",
+          "intermediate": "These days I lie down every day.",
+          "advanced": "It is important to lie down regularly in daily life.",
+          "master": "After you lie down, you always feel better."
         },
         "dialogue": {
           "context": "Talking about daily activities",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What are you doing?",
+              "text": "What did you do today?",
               "romanization": "",
-              "translation": "뭐 해요?"
+              "translation": "오늘 뭐 했어요?"
             },
             {
               "speaker": "B",
-              "text": "I to lie down.",
+              "text": "I went to lie down.",
               "romanization": "",
-              "translation": "눕다요."
+              "translation": "눕고 왔어요."
             },
             {
               "speaker": "A",
-              "text": "Do you do it often?",
+              "text": "Was it good?",
               "romanization": "",
-              "translation": "자주 해요?"
+              "translation": "좋았어요?"
             },
             {
               "speaker": "B",
-              "text": "Yes, almost every day.",
+              "text": "Yes, it was great!",
               "romanization": "",
-              "translation": "네, 거의 매일요."
+              "translation": "네, 정말 좋았어요!"
             }
           ]
         }
@@ -4427,37 +4427,37 @@
         "word": "열다",
         "explanation": "닫혀 있는 것을 움직여 안이 보이게 하다.",
         "examples": {
-          "beginner": "저는 열다요.",
-          "intermediate": "매일 열다요.",
-          "advanced": "열다는 것은 중요한 활동입니다.",
-          "master": "열다는 행위의 다양한 맥락을 이해하면 표현력이 풍부해집니다."
+          "beginner": "열고 싶어요.",
+          "intermediate": "요즘 매일 열고 있어요.",
+          "advanced": "열는 것은 일상에서 중요한 부분입니다.",
+          "master": "열고 나면 항상 기분이 좋아지는 것 같아요."
         },
         "dialogue": {
           "context": "일상 활동에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "뭐 해요?",
-              "romanization": "mwo haeyo?",
-              "translation": "What are you doing?"
+              "text": "오늘 뭐 했어요?",
+              "romanization": "oneul mwo haeseoyo?",
+              "translation": "What did you do today?"
             },
             {
               "speaker": "B",
-              "text": "열다요.",
-              "romanization": "yeoldayo.",
-              "translation": "I to open."
+              "text": "열고 왔어요.",
+              "romanization": "yeolgo waseoyo.",
+              "translation": "I went to open."
             },
             {
               "speaker": "A",
-              "text": "자주 해요?",
-              "romanization": "jaju haeyo?",
-              "translation": "Do you do it often?"
+              "text": "좋았어요?",
+              "romanization": "jotaseoyo?",
+              "translation": "Was it good?"
             },
             {
               "speaker": "B",
-              "text": "네, 거의 매일요.",
-              "romanization": "ne, geoui maeilyo.",
-              "translation": "Yes, almost every day."
+              "text": "네, 정말 좋았어요!",
+              "romanization": "ne, jeongmal jotaseoyo!",
+              "translation": "Yes, it was great!"
             }
           ]
         }
@@ -4466,37 +4466,37 @@
         "word": "to open",
         "explanation": "To move something closed so the inside is visible.",
         "examples": {
-          "beginner": "I to open.",
-          "intermediate": "I to open every day.",
-          "advanced": "to opening is an important activity.",
-          "master": "Understanding various contexts of to opening enriches expression."
+          "beginner": "I want to open.",
+          "intermediate": "These days I open every day.",
+          "advanced": "It is important to open regularly in daily life.",
+          "master": "After you open, you always feel better."
         },
         "dialogue": {
           "context": "Talking about daily activities",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What are you doing?",
+              "text": "What did you do today?",
               "romanization": "",
-              "translation": "뭐 해요?"
+              "translation": "오늘 뭐 했어요?"
             },
             {
               "speaker": "B",
-              "text": "I to open.",
+              "text": "I went to open.",
               "romanization": "",
-              "translation": "열다요."
+              "translation": "열고 왔어요."
             },
             {
               "speaker": "A",
-              "text": "Do you do it often?",
+              "text": "Was it good?",
               "romanization": "",
-              "translation": "자주 해요?"
+              "translation": "좋았어요?"
             },
             {
               "speaker": "B",
-              "text": "Yes, almost every day.",
+              "text": "Yes, it was great!",
               "romanization": "",
-              "translation": "네, 거의 매일요."
+              "translation": "네, 정말 좋았어요!"
             }
           ]
         }
@@ -4525,37 +4525,37 @@
         "word": "닫다",
         "explanation": "열려 있는 것을 움직여 안이 안 보이게 하다.",
         "examples": {
-          "beginner": "저는 닫다요.",
-          "intermediate": "매일 닫다요.",
-          "advanced": "닫다는 것은 중요한 활동입니다.",
-          "master": "닫다는 행위의 다양한 맥락을 이해하면 표현력이 풍부해집니다."
+          "beginner": "닫고 싶어요.",
+          "intermediate": "요즘 매일 닫고 있어요.",
+          "advanced": "닫는 것은 일상에서 중요한 부분입니다.",
+          "master": "닫고 나면 항상 기분이 좋아지는 것 같아요."
         },
         "dialogue": {
           "context": "일상 활동에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "뭐 해요?",
-              "romanization": "mwo haeyo?",
-              "translation": "What are you doing?"
+              "text": "오늘 뭐 했어요?",
+              "romanization": "oneul mwo haeseoyo?",
+              "translation": "What did you do today?"
             },
             {
               "speaker": "B",
-              "text": "닫다요.",
-              "romanization": "datdayo.",
-              "translation": "I to close."
+              "text": "닫고 왔어요.",
+              "romanization": "datgo waseoyo.",
+              "translation": "I went to close."
             },
             {
               "speaker": "A",
-              "text": "자주 해요?",
-              "romanization": "jaju haeyo?",
-              "translation": "Do you do it often?"
+              "text": "좋았어요?",
+              "romanization": "jotaseoyo?",
+              "translation": "Was it good?"
             },
             {
               "speaker": "B",
-              "text": "네, 거의 매일요.",
-              "romanization": "ne, geoui maeilyo.",
-              "translation": "Yes, almost every day."
+              "text": "네, 정말 좋았어요!",
+              "romanization": "ne, jeongmal jotaseoyo!",
+              "translation": "Yes, it was great!"
             }
           ]
         }
@@ -4564,37 +4564,37 @@
         "word": "to close",
         "explanation": "To move something open so the inside is not visible.",
         "examples": {
-          "beginner": "I to close.",
-          "intermediate": "I to close every day.",
-          "advanced": "to closeing is an important activity.",
-          "master": "Understanding various contexts of to closeing enriches expression."
+          "beginner": "I want to close.",
+          "intermediate": "These days I close every day.",
+          "advanced": "It is important to close regularly in daily life.",
+          "master": "After you close, you always feel better."
         },
         "dialogue": {
           "context": "Talking about daily activities",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What are you doing?",
+              "text": "What did you do today?",
               "romanization": "",
-              "translation": "뭐 해요?"
+              "translation": "오늘 뭐 했어요?"
             },
             {
               "speaker": "B",
-              "text": "I to close.",
+              "text": "I went to close.",
               "romanization": "",
-              "translation": "닫다요."
+              "translation": "닫고 왔어요."
             },
             {
               "speaker": "A",
-              "text": "Do you do it often?",
+              "text": "Was it good?",
               "romanization": "",
-              "translation": "자주 해요?"
+              "translation": "좋았어요?"
             },
             {
               "speaker": "B",
-              "text": "Yes, almost every day.",
+              "text": "Yes, it was great!",
               "romanization": "",
-              "translation": "네, 거의 매일요."
+              "translation": "네, 정말 좋았어요!"
             }
           ]
         }
@@ -4623,37 +4623,37 @@
         "word": "찾다",
         "explanation": "잃어버린 것이나 필요한 것을 발견하다.",
         "examples": {
-          "beginner": "저는 찾다요.",
-          "intermediate": "매일 찾다요.",
-          "advanced": "찾다는 것은 중요한 활동입니다.",
-          "master": "찾다는 행위의 다양한 맥락을 이해하면 표현력이 풍부해집니다."
+          "beginner": "찾고 싶어요.",
+          "intermediate": "요즘 매일 찾고 있어요.",
+          "advanced": "찾는 것은 일상에서 중요한 부분입니다.",
+          "master": "찾고 나면 항상 기분이 좋아지는 것 같아요."
         },
         "dialogue": {
           "context": "일상 활동에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "뭐 해요?",
-              "romanization": "mwo haeyo?",
-              "translation": "What are you doing?"
+              "text": "오늘 뭐 했어요?",
+              "romanization": "oneul mwo haeseoyo?",
+              "translation": "What did you do today?"
             },
             {
               "speaker": "B",
-              "text": "찾다요.",
-              "romanization": "chatdayo.",
-              "translation": "I to find / to look for."
+              "text": "찾고 왔어요.",
+              "romanization": "chatgo waseoyo.",
+              "translation": "I went to find / to look for."
             },
             {
               "speaker": "A",
-              "text": "자주 해요?",
-              "romanization": "jaju haeyo?",
-              "translation": "Do you do it often?"
+              "text": "좋았어요?",
+              "romanization": "jotaseoyo?",
+              "translation": "Was it good?"
             },
             {
               "speaker": "B",
-              "text": "네, 거의 매일요.",
-              "romanization": "ne, geoui maeilyo.",
-              "translation": "Yes, almost every day."
+              "text": "네, 정말 좋았어요!",
+              "romanization": "ne, jeongmal jotaseoyo!",
+              "translation": "Yes, it was great!"
             }
           ]
         }
@@ -4662,37 +4662,37 @@
         "word": "to find / to look for",
         "explanation": "To discover something lost or needed.",
         "examples": {
-          "beginner": "I to find / to look for.",
-          "intermediate": "I to find / to look for every day.",
-          "advanced": "to find / to look foring is an important activity.",
-          "master": "Understanding various contexts of to find / to look foring enriches expression."
+          "beginner": "I want to find / to look for.",
+          "intermediate": "These days I find / to look for every day.",
+          "advanced": "It is important to find / to look for regularly in daily life.",
+          "master": "After you find / to look for, you always feel better."
         },
         "dialogue": {
           "context": "Talking about daily activities",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What are you doing?",
+              "text": "What did you do today?",
               "romanization": "",
-              "translation": "뭐 해요?"
+              "translation": "오늘 뭐 했어요?"
             },
             {
               "speaker": "B",
-              "text": "I to find / to look for.",
+              "text": "I went to find / to look for.",
               "romanization": "",
-              "translation": "찾다요."
+              "translation": "찾고 왔어요."
             },
             {
               "speaker": "A",
-              "text": "Do you do it often?",
+              "text": "Was it good?",
               "romanization": "",
-              "translation": "자주 해요?"
+              "translation": "좋았어요?"
             },
             {
               "speaker": "B",
-              "text": "Yes, almost every day.",
+              "text": "Yes, it was great!",
               "romanization": "",
-              "translation": "네, 거의 매일요."
+              "translation": "네, 정말 좋았어요!"
             }
           ]
         }
@@ -4721,37 +4721,37 @@
         "word": "전화하다",
         "explanation": "전화기로 다른 사람과 이야기하다.",
         "examples": {
-          "beginner": "저는 전화하다요.",
-          "intermediate": "매일 전화하다요.",
-          "advanced": "전화하다는 것은 중요한 활동입니다.",
-          "master": "전화하다는 행위의 다양한 맥락을 이해하면 표현력이 풍부해집니다."
+          "beginner": "전화하고 싶어요.",
+          "intermediate": "요즘 매일 전화하고 있어요.",
+          "advanced": "전화하는 것은 일상에서 중요한 부분입니다.",
+          "master": "전화하고 나면 항상 기분이 좋아지는 것 같아요."
         },
         "dialogue": {
           "context": "일상 활동에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "뭐 해요?",
-              "romanization": "mwo haeyo?",
-              "translation": "What are you doing?"
+              "text": "오늘 뭐 했어요?",
+              "romanization": "oneul mwo haeseoyo?",
+              "translation": "What did you do today?"
             },
             {
               "speaker": "B",
-              "text": "전화하다요.",
-              "romanization": "jeonhwahadayo.",
-              "translation": "I to call (by phone)."
+              "text": "전화하고 왔어요.",
+              "romanization": "jeonhwahago waseoyo.",
+              "translation": "I went to call (by phone)."
             },
             {
               "speaker": "A",
-              "text": "자주 해요?",
-              "romanization": "jaju haeyo?",
-              "translation": "Do you do it often?"
+              "text": "좋았어요?",
+              "romanization": "jotaseoyo?",
+              "translation": "Was it good?"
             },
             {
               "speaker": "B",
-              "text": "네, 거의 매일요.",
-              "romanization": "ne, geoui maeilyo.",
-              "translation": "Yes, almost every day."
+              "text": "네, 정말 좋았어요!",
+              "romanization": "ne, jeongmal jotaseoyo!",
+              "translation": "Yes, it was great!"
             }
           ]
         }
@@ -4760,37 +4760,37 @@
         "word": "to call (by phone)",
         "explanation": "To talk to another person using a phone.",
         "examples": {
-          "beginner": "I to call (by phone).",
-          "intermediate": "I to call (by phone) every day.",
-          "advanced": "to call (by phone)ing is an important activity.",
-          "master": "Understanding various contexts of to call (by phone)ing enriches expression."
+          "beginner": "I want to call (by phone).",
+          "intermediate": "These days I call (by phone) every day.",
+          "advanced": "It is important to call (by phone) regularly in daily life.",
+          "master": "After you call (by phone), you always feel better."
         },
         "dialogue": {
           "context": "Talking about daily activities",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What are you doing?",
+              "text": "What did you do today?",
               "romanization": "",
-              "translation": "뭐 해요?"
+              "translation": "오늘 뭐 했어요?"
             },
             {
               "speaker": "B",
-              "text": "I to call (by phone).",
+              "text": "I went to call (by phone).",
               "romanization": "",
-              "translation": "전화하다요."
+              "translation": "전화하고 왔어요."
             },
             {
               "speaker": "A",
-              "text": "Do you do it often?",
+              "text": "Was it good?",
               "romanization": "",
-              "translation": "자주 해요?"
+              "translation": "좋았어요?"
             },
             {
               "speaker": "B",
-              "text": "Yes, almost every day.",
+              "text": "Yes, it was great!",
               "romanization": "",
-              "translation": "네, 거의 매일요."
+              "translation": "네, 정말 좋았어요!"
             }
           ]
         }
@@ -4819,37 +4819,37 @@
         "word": "보내다",
         "explanation": "물건이나 메시지를 다른 곳으로 전달하다.",
         "examples": {
-          "beginner": "저는 보내다요.",
-          "intermediate": "매일 보내다요.",
-          "advanced": "보내다는 것은 중요한 활동입니다.",
-          "master": "보내다는 행위의 다양한 맥락을 이해하면 표현력이 풍부해집니다."
+          "beginner": "보내고 싶어요.",
+          "intermediate": "요즘 매일 보내고 있어요.",
+          "advanced": "보내는 것은 일상에서 중요한 부분입니다.",
+          "master": "보내고 나면 항상 기분이 좋아지는 것 같아요."
         },
         "dialogue": {
           "context": "일상 활동에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "뭐 해요?",
-              "romanization": "mwo haeyo?",
-              "translation": "What are you doing?"
+              "text": "오늘 뭐 했어요?",
+              "romanization": "oneul mwo haeseoyo?",
+              "translation": "What did you do today?"
             },
             {
               "speaker": "B",
-              "text": "보내다요.",
-              "romanization": "bonaedayo.",
-              "translation": "I to send / to spend (time)."
+              "text": "보내고 왔어요.",
+              "romanization": "bonaego waseoyo.",
+              "translation": "I went to send / to spend (time)."
             },
             {
               "speaker": "A",
-              "text": "자주 해요?",
-              "romanization": "jaju haeyo?",
-              "translation": "Do you do it often?"
+              "text": "좋았어요?",
+              "romanization": "jotaseoyo?",
+              "translation": "Was it good?"
             },
             {
               "speaker": "B",
-              "text": "네, 거의 매일요.",
-              "romanization": "ne, geoui maeilyo.",
-              "translation": "Yes, almost every day."
+              "text": "네, 정말 좋았어요!",
+              "romanization": "ne, jeongmal jotaseoyo!",
+              "translation": "Yes, it was great!"
             }
           ]
         }
@@ -4858,37 +4858,37 @@
         "word": "to send / to spend (time)",
         "explanation": "To deliver things or messages to another place.",
         "examples": {
-          "beginner": "I to send / to spend (time).",
-          "intermediate": "I to send / to spend (time) every day.",
-          "advanced": "to send / to spend (time)ing is an important activity.",
-          "master": "Understanding various contexts of to send / to spend (time)ing enriches expression."
+          "beginner": "I want to send / to spend (time).",
+          "intermediate": "These days I send / to spend (time) every day.",
+          "advanced": "It is important to send / to spend (time) regularly in daily life.",
+          "master": "After you send / to spend (time), you always feel better."
         },
         "dialogue": {
           "context": "Talking about daily activities",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What are you doing?",
+              "text": "What did you do today?",
               "romanization": "",
-              "translation": "뭐 해요?"
+              "translation": "오늘 뭐 했어요?"
             },
             {
               "speaker": "B",
-              "text": "I to send / to spend (time).",
+              "text": "I went to send / to spend (time).",
               "romanization": "",
-              "translation": "보내다요."
+              "translation": "보내고 왔어요."
             },
             {
               "speaker": "A",
-              "text": "Do you do it often?",
+              "text": "Was it good?",
               "romanization": "",
-              "translation": "자주 해요?"
+              "translation": "좋았어요?"
             },
             {
               "speaker": "B",
-              "text": "Yes, almost every day.",
+              "text": "Yes, it was great!",
               "romanization": "",
-              "translation": "네, 거의 매일요."
+              "translation": "네, 정말 좋았어요!"
             }
           ]
         }

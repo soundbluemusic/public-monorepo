@@ -213,37 +213,37 @@
         "word": "비싸다",
         "explanation": "가격이 높다.",
         "examples": {
-          "beginner": "비싸다를 사요.",
-          "intermediate": "비싸다가 세일이에요.",
-          "advanced": "비싸다를 구매할 때 품질을 확인해야 합니다.",
-          "master": "비싸다 시장의 트렌드를 이해하면 현명한 소비가 가능합니다."
+          "beginner": "이건 정말 비싸네요!",
+          "intermediate": "생각보다 비싸지 않아요.",
+          "advanced": "비싸다고 느끼는 것은 사람마다 다릅니다.",
+          "master": "\"비싸다\"의 정도를 다양하게 표현할 수 있으면 한국어가 풍부해집니다."
         },
         "dialogue": {
-          "context": "쇼핑하며",
+          "context": "무언가를 보며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "뭐 찾으세요?",
-              "romanization": "mwo chateuseyo?",
-              "translation": "What are you looking for?"
+              "text": "이거 어때요?",
+              "romanization": "igeo eottaeyo?",
+              "translation": "How is this?"
             },
             {
               "speaker": "B",
-              "text": "비싸다를 찾고 있어요.",
-              "romanization": "bissadareul chatgo iseoyo.",
-              "translation": "I'm looking for expensive."
+              "text": "비싸네요.",
+              "romanization": "bissaneyo.",
+              "translation": "It's expensive."
             },
             {
               "speaker": "A",
-              "text": "여기 있어요.",
-              "romanization": "yeogi iseoyo.",
-              "translation": "Here it is."
+              "text": "그래요? 저도 그렇게 생각해요.",
+              "romanization": "geuraeyo? jeodo geureotge saenggakhaeyo.",
+              "translation": "Really? I think so too."
             },
             {
               "speaker": "B",
-              "text": "얼마예요?",
-              "romanization": "eolmayeyo?",
-              "translation": "How much is it?"
+              "text": "맞아요.",
+              "romanization": "matayo.",
+              "translation": "Right."
             }
           ]
         }
@@ -252,37 +252,37 @@
         "word": "expensive",
         "explanation": "The price is high.",
         "examples": {
-          "beginner": "I buy expensive.",
-          "intermediate": "expensive is on sale.",
-          "advanced": "When buying expensive, you should check the quality.",
-          "master": "Understanding expensive market trends enables smart consumption."
+          "beginner": "This is really expensive!",
+          "intermediate": "It's not as expensive as I thought.",
+          "advanced": "Feeling that something is expensive varies from person to person.",
+          "master": "Being able to express varying degrees of \"expensive\" enriches your Korean."
         },
         "dialogue": {
-          "context": "While shopping",
+          "context": "Looking at something",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What are you looking for?",
+              "text": "How is this?",
               "romanization": "",
-              "translation": "뭐 찾으세요?"
+              "translation": "이거 어때요?"
             },
             {
               "speaker": "B",
-              "text": "I'm looking for expensive.",
+              "text": "It's expensive.",
               "romanization": "",
-              "translation": "비싸다를 찾고 있어요."
+              "translation": "비싸네요."
             },
             {
               "speaker": "A",
-              "text": "Here it is.",
+              "text": "Really? I think so too.",
               "romanization": "",
-              "translation": "여기 있어요."
+              "translation": "그래요? 저도 그렇게 생각해요."
             },
             {
               "speaker": "B",
-              "text": "How much is it?",
+              "text": "Right.",
               "romanization": "",
-              "translation": "얼마예요?"
+              "translation": "맞아요."
             }
           ]
         }
@@ -311,37 +311,37 @@
         "word": "싸다",
         "explanation": "가격이 낮다.",
         "examples": {
-          "beginner": "싸다를 사요.",
-          "intermediate": "싸다가 세일이에요.",
-          "advanced": "싸다를 구매할 때 품질을 확인해야 합니다.",
-          "master": "싸다 시장의 트렌드를 이해하면 현명한 소비가 가능합니다."
+          "beginner": "이건 정말 싸네요!",
+          "intermediate": "생각보다 싸지 않아요.",
+          "advanced": "싸다고 느끼는 것은 사람마다 다릅니다.",
+          "master": "\"싸다\"의 정도를 다양하게 표현할 수 있으면 한국어가 풍부해집니다."
         },
         "dialogue": {
-          "context": "쇼핑하며",
+          "context": "무언가를 보며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "뭐 찾으세요?",
-              "romanization": "mwo chateuseyo?",
-              "translation": "What are you looking for?"
+              "text": "이거 어때요?",
+              "romanization": "igeo eottaeyo?",
+              "translation": "How is this?"
             },
             {
               "speaker": "B",
-              "text": "싸다를 찾고 있어요.",
-              "romanization": "ssadareul chatgo iseoyo.",
-              "translation": "I'm looking for cheap / inexpensive."
+              "text": "싸네요.",
+              "romanization": "ssaneyo.",
+              "translation": "It's cheap / inexpensive."
             },
             {
               "speaker": "A",
-              "text": "여기 있어요.",
-              "romanization": "yeogi iseoyo.",
-              "translation": "Here it is."
+              "text": "그래요? 저도 그렇게 생각해요.",
+              "romanization": "geuraeyo? jeodo geureotge saenggakhaeyo.",
+              "translation": "Really? I think so too."
             },
             {
               "speaker": "B",
-              "text": "얼마예요?",
-              "romanization": "eolmayeyo?",
-              "translation": "How much is it?"
+              "text": "맞아요.",
+              "romanization": "matayo.",
+              "translation": "Right."
             }
           ]
         }
@@ -350,37 +350,37 @@
         "word": "cheap / inexpensive",
         "explanation": "The price is low.",
         "examples": {
-          "beginner": "I buy cheap / inexpensive.",
-          "intermediate": "cheap / inexpensive is on sale.",
-          "advanced": "When buying cheap / inexpensive, you should check the quality.",
-          "master": "Understanding cheap / inexpensive market trends enables smart consumption."
+          "beginner": "This is really cheap / inexpensive!",
+          "intermediate": "It's not as cheap / inexpensive as I thought.",
+          "advanced": "Feeling that something is cheap / inexpensive varies from person to person.",
+          "master": "Being able to express varying degrees of \"cheap / inexpensive\" enriches your Korean."
         },
         "dialogue": {
-          "context": "While shopping",
+          "context": "Looking at something",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What are you looking for?",
+              "text": "How is this?",
               "romanization": "",
-              "translation": "뭐 찾으세요?"
+              "translation": "이거 어때요?"
             },
             {
               "speaker": "B",
-              "text": "I'm looking for cheap / inexpensive.",
+              "text": "It's cheap / inexpensive.",
               "romanization": "",
-              "translation": "싸다를 찾고 있어요."
+              "translation": "싸네요."
             },
             {
               "speaker": "A",
-              "text": "Here it is.",
+              "text": "Really? I think so too.",
               "romanization": "",
-              "translation": "여기 있어요."
+              "translation": "그래요? 저도 그렇게 생각해요."
             },
             {
               "speaker": "B",
-              "text": "How much is it?",
+              "text": "Right.",
               "romanization": "",
-              "translation": "얼마예요?"
+              "translation": "맞아요."
             }
           ]
         }
@@ -2173,37 +2173,37 @@
         "word": "입어 보다",
         "explanation": "옷을 사기 전에 미리 입어서 확인하다.",
         "examples": {
-          "beginner": "입어 보다를 사요.",
-          "intermediate": "입어 보다가 세일이에요.",
-          "advanced": "입어 보다를 구매할 때 품질을 확인해야 합니다.",
-          "master": "입어 보다 시장의 트렌드를 이해하면 현명한 소비가 가능합니다."
+          "beginner": "입어 보고 싶어요.",
+          "intermediate": "요즘 자주 입어 보고 있어요.",
+          "advanced": "입어 보는 것은 생활에서 중요한 부분입니다.",
+          "master": "입어 보고 나면 늘 보람을 느낍니다."
         },
         "dialogue": {
-          "context": "쇼핑하며",
+          "context": "일상에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "뭐 찾으세요?",
-              "romanization": "mwo chateuseyo?",
-              "translation": "What are you looking for?"
+              "text": "오늘 뭐 했어요?",
+              "romanization": "oneul mwo haeseoyo?",
+              "translation": "What did you do today?"
             },
             {
               "speaker": "B",
-              "text": "입어 보다를 찾고 있어요.",
-              "romanization": "ipeo bodareul chatgo iseoyo.",
-              "translation": "I'm looking for to try on."
+              "text": "입어 보고 왔어요.",
+              "romanization": "ipeo bogo waseoyo.",
+              "translation": "I went to try on."
             },
             {
               "speaker": "A",
-              "text": "여기 있어요.",
-              "romanization": "yeogi iseoyo.",
-              "translation": "Here it is."
+              "text": "재미있었어요?",
+              "romanization": "jaemiiseoseoyo?",
+              "translation": "Was it fun?"
             },
             {
               "speaker": "B",
-              "text": "얼마예요?",
-              "romanization": "eolmayeyo?",
-              "translation": "How much is it?"
+              "text": "네, 좋았어요.",
+              "romanization": "ne, jotaseoyo.",
+              "translation": "Yes, it was good."
             }
           ]
         }
@@ -2212,37 +2212,37 @@
         "word": "to try on",
         "explanation": "To wear clothes to check before buying.",
         "examples": {
-          "beginner": "I buy to try on.",
-          "intermediate": "to try on is on sale.",
-          "advanced": "When buying to try on, you should check the quality.",
-          "master": "Understanding to try on market trends enables smart consumption."
+          "beginner": "I want to try on.",
+          "intermediate": "These days I often try on.",
+          "advanced": "It is important to try on regularly in life.",
+          "master": "After you try on, you always feel a sense of accomplishment."
         },
         "dialogue": {
-          "context": "While shopping",
+          "context": "Talking about daily life",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What are you looking for?",
+              "text": "What did you do today?",
               "romanization": "",
-              "translation": "뭐 찾으세요?"
+              "translation": "오늘 뭐 했어요?"
             },
             {
               "speaker": "B",
-              "text": "I'm looking for to try on.",
+              "text": "I went to try on.",
               "romanization": "",
-              "translation": "입어 보다를 찾고 있어요."
+              "translation": "입어 보고 왔어요."
             },
             {
               "speaker": "A",
-              "text": "Here it is.",
+              "text": "Was it fun?",
               "romanization": "",
-              "translation": "여기 있어요."
+              "translation": "재미있었어요?"
             },
             {
               "speaker": "B",
-              "text": "How much is it?",
+              "text": "Yes, it was good.",
               "romanization": "",
-              "translation": "얼마예요?"
+              "translation": "네, 좋았어요."
             }
           ]
         }

@@ -174,7 +174,16 @@ function toRomanization(korean: string): string {
  */
 function josa(
   word: string,
-  type: '을/를' | '이/가' | '은/는' | '으로/로' | '이에요/예요' | '과/와' | '아/야',
+  type:
+    | '을/를'
+    | '이/가'
+    | '은/는'
+    | '으로/로'
+    | '이에요/예요'
+    | '과/와'
+    | '아/야'
+    | '이라고/라고'
+    | '이라는/라는',
 ): string {
   const lastChar = word.charCodeAt(word.length - 1);
   // 한글 범위가 아니면 받침 없는 것으로 처리
@@ -195,7 +204,49 @@ function josa(
       return word + (hasBatchim ? '과' : '와');
     case '아/야':
       return word + (hasBatchim ? '아' : '야');
+    case '이라고/라고':
+      return word + (hasBatchim ? '이라고' : '라고');
+    case '이라는/라는':
+      return word + (hasBatchim ? '이라는' : '라는');
   }
+}
+
+/**
+ * 단어 없이 조사만 반환합니다.
+ * 예: josaSuffix('학생', '이라고/라고') → '이라고'
+ *     josaSuffix('나라', '이라고/라고') → '라고'
+ */
+function josaSuffix(
+  word: string,
+  type: '을/를' | '이/가' | '은/는' | '과/와' | '이라고/라고' | '이라는/라는',
+): string {
+  const lastChar = word.charCodeAt(word.length - 1);
+  const hasBatchim = lastChar >= 0xac00 && lastChar <= 0xd7a3 && (lastChar - 0xac00) % 28 !== 0;
+  switch (type) {
+    case '을/를':
+      return hasBatchim ? '을' : '를';
+    case '이/가':
+      return hasBatchim ? '이' : '가';
+    case '은/는':
+      return hasBatchim ? '은' : '는';
+    case '과/와':
+      return hasBatchim ? '과' : '와';
+    case '이라고/라고':
+      return hasBatchim ? '이라고' : '라고';
+    case '이라는/라는':
+      return hasBatchim ? '이라는' : '라는';
+  }
+}
+
+/**
+ * 동사 원형에서 어간을 추출합니다.
+ * 예: verbStem('서다') → '서', verbStem('달리다') → '달리', verbStem('먹다') → '먹'
+ */
+function verbStem(word: string): string {
+  if (word.endsWith('다')) {
+    return word.slice(0, -1);
+  }
+  return word;
 }
 
 // ============================================
@@ -229,16 +280,16 @@ const categoryTemplates: CategoryTemplates = {
   greetings: (korean, english, _explanation, _partOfSpeech) => ({
     sentences: {
       ko: {
-        beginner: `"${korean}" 라고 인사해요.`,
-        intermediate: `한국에서는 "${korean}"라고 자주 말해요.`,
-        advanced: `"${korean}"는 한국어에서 중요한 인사 표현입니다.`,
-        master: `"${korean}"의 문화적 맥락을 이해하면 한국인과의 소통이 더 자연스러워집니다.`,
+        beginner: `친구를 만나면 "${korean}"${josaSuffix(korean, '이라고/라고')} 해요.`,
+        intermediate: `아침에 선생님께 "${korean}"${josaSuffix(korean, '이라고/라고')} 인사했어요.`,
+        advanced: `"${korean}"은 상대방과의 관계에 따라 다르게 사용됩니다.`,
+        master: `"${korean}"의 사용 맥락과 어감 차이를 알면 한국인처럼 자연스럽게 인사할 수 있습니다.`,
       },
       en: {
-        beginner: `We say "${korean}" to greet.`,
-        intermediate: `In Korea, people often say "${korean}".`,
-        advanced: `"${korean}" is an important greeting expression in Korean.`,
-        master: `Understanding the cultural context of "${korean}" makes communication with Koreans more natural.`,
+        beginner: `When meeting a friend, you say "${korean}".`,
+        intermediate: `I greeted my teacher with "${korean}" in the morning.`,
+        advanced: `"${korean}" is used differently depending on your relationship with the other person.`,
+        master: `Knowing the context and nuance of "${korean}" allows you to greet as naturally as a native Korean speaker.`,
       },
     },
     dialogues: [
@@ -261,15 +312,15 @@ const categoryTemplates: CategoryTemplates = {
     sentences: {
       ko: {
         beginner: `${josa(korean, '을/를')} 먹어요.`,
-        intermediate: `${josa(korean, '이/가')} 맛있어요.`,
-        advanced: `${josa(korean, '은/는')} 한국의 대표적인 음식 중 하나입니다.`,
-        master: `${korean}의 조리법과 역사는 한국 식문화를 이해하는 데 중요합니다.`,
+        intermediate: `오늘 점심에 ${josa(korean, '을/를')} 먹었는데 맛있었어요.`,
+        advanced: `${josa(korean, '은/는')} 한국 사람들이 자주 먹는 음식이에요.`,
+        master: `${korean}의 맛과 조리법은 지역마다 다르게 발전해 왔습니다.`,
       },
       en: {
         beginner: `I eat ${english.toLowerCase()}.`,
-        intermediate: `${english} is delicious.`,
-        advanced: `${english} is one of Korea's representative foods.`,
-        master: `The cooking method and history of ${english.toLowerCase()} is important for understanding Korean food culture.`,
+        intermediate: `I had ${english.toLowerCase()} for lunch today and it was delicious.`,
+        advanced: `${english} is a food that Korean people eat frequently.`,
+        master: `The flavor and cooking methods of ${english.toLowerCase()} have developed differently across regions.`,
       },
     },
     dialogues: [
@@ -330,16 +381,16 @@ const categoryTemplates: CategoryTemplates = {
   emotions: (korean, english, _explanation, _partOfSpeech) => ({
     sentences: {
       ko: {
-        beginner: `저는 ${korean}해요.`,
-        intermediate: `오늘은 좀 ${korean}한 기분이에요.`,
-        advanced: `${korean}한 감정을 표현하는 것은 중요합니다.`,
+        beginner: `${josa(korean, '을/를')} 느껴요.`,
+        intermediate: `오늘은 ${josa(korean, '이/가')} 가득한 하루였어요.`,
+        advanced: `${josa(korean, '은/는')} 누구나 경험하는 자연스러운 감정입니다.`,
         master: `${korean}이라는 감정의 뉘앙스를 이해하면 한국어 의사소통이 깊어집니다.`,
       },
       en: {
         beginner: `I feel ${english.toLowerCase()}.`,
-        intermediate: `Today I feel a bit ${english.toLowerCase()}.`,
-        advanced: `Expressing ${english.toLowerCase()} feelings is important.`,
-        master: `Understanding the nuance of ${english.toLowerCase()} deepens Korean communication.`,
+        intermediate: `Today was a day full of ${english.toLowerCase()}.`,
+        advanced: `${english} is a natural emotion that everyone experiences.`,
+        master: `Understanding the nuance of "${english.toLowerCase()}" deepens Korean communication.`,
       },
     },
     dialogues: [
@@ -347,7 +398,11 @@ const categoryTemplates: CategoryTemplates = {
         context: { ko: '친구와 감정을 나누며', en: 'Sharing feelings with a friend' },
         lines: [
           { speaker: 'A', ko: '오늘 기분이 어때요?', en: 'How do you feel today?' },
-          { speaker: 'B', ko: `좀 ${korean}해요.`, en: `I feel a bit ${english.toLowerCase()}.` },
+          {
+            speaker: 'B',
+            ko: `${josa(korean, '이/가')} 느껴져요.`,
+            en: `I feel ${english.toLowerCase()}.`,
+          },
           { speaker: 'A', ko: '왜요? 무슨 일 있어요?', en: 'Why? What happened?' },
           { speaker: 'B', ko: '그냥 요즘 좀 그래요.', en: 'Just feeling that way lately.' },
         ],
@@ -598,26 +653,30 @@ const categoryTemplates: CategoryTemplates = {
   'verbs-basic': (korean, english, _explanation, _partOfSpeech) => ({
     sentences: {
       ko: {
-        beginner: `저는 ${korean}요.`,
-        intermediate: `매일 ${korean}요.`,
-        advanced: `${korean}는 것은 중요한 활동입니다.`,
-        master: `${korean}는 행위의 다양한 맥락을 이해하면 표현력이 풍부해집니다.`,
+        beginner: `${verbStem(korean)}고 싶어요.`,
+        intermediate: `요즘 매일 ${verbStem(korean)}고 있어요.`,
+        advanced: `${verbStem(korean)}는 것은 일상에서 중요한 부분입니다.`,
+        master: `${verbStem(korean)}고 나면 항상 기분이 좋아지는 것 같아요.`,
       },
       en: {
-        beginner: `I ${english.toLowerCase()}.`,
-        intermediate: `I ${english.toLowerCase()} every day.`,
-        advanced: `${english}ing is an important activity.`,
-        master: `Understanding various contexts of ${english.toLowerCase()}ing enriches expression.`,
+        beginner: `I want ${english.toLowerCase()}.`,
+        intermediate: `These days I ${english.toLowerCase().replace(/^to /, '')} every day.`,
+        advanced: `It is important ${english.toLowerCase()} regularly in daily life.`,
+        master: `After you ${english.toLowerCase().replace(/^to /, '')}, you always feel better.`,
       },
     },
     dialogues: [
       {
         context: { ko: '일상 활동에 대해 이야기하며', en: 'Talking about daily activities' },
         lines: [
-          { speaker: 'A', ko: '뭐 해요?', en: 'What are you doing?' },
-          { speaker: 'B', ko: `${korean}요.`, en: `I ${english.toLowerCase()}.` },
-          { speaker: 'A', ko: '자주 해요?', en: 'Do you do it often?' },
-          { speaker: 'B', ko: '네, 거의 매일요.', en: 'Yes, almost every day.' },
+          { speaker: 'A', ko: '오늘 뭐 했어요?', en: 'What did you do today?' },
+          {
+            speaker: 'B',
+            ko: `${verbStem(korean)}고 왔어요.`,
+            en: `I went to ${english.toLowerCase().replace(/^to /, '')}.`,
+          },
+          { speaker: 'A', ko: '좋았어요?', en: 'Was it good?' },
+          { speaker: 'B', ko: '네, 정말 좋았어요!', en: 'Yes, it was great!' },
         ],
       },
     ],
@@ -629,26 +688,30 @@ const categoryTemplates: CategoryTemplates = {
   'adjectives-basic': (korean, english, _explanation, _partOfSpeech) => ({
     sentences: {
       ko: {
-        beginner: `이것은 ${korean}요.`,
-        intermediate: `정말 ${korean}네요.`,
-        advanced: `${korean}다는 것은 긍정적인/부정적인 특성입니다.`,
-        master: `${korean}의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다.`,
+        beginner: `이건 정말 ${verbStem(korean)}네요!`,
+        intermediate: `생각보다 ${verbStem(korean)}지 않아요.`,
+        advanced: `${verbStem(korean)}다고 느끼는 것은 사람마다 다릅니다.`,
+        master: `"${korean}"의 정도를 다양하게 표현할 수 있으면 한국어가 풍부해집니다.`,
       },
       en: {
-        beginner: `This is ${english.toLowerCase()}.`,
-        intermediate: `It's really ${english.toLowerCase()}.`,
-        advanced: `Being ${english.toLowerCase()} is a positive/negative characteristic.`,
-        master: `Understanding the nuance of ${english.toLowerCase()} enables subtle emotional expression.`,
+        beginner: `This is really ${english.toLowerCase()}!`,
+        intermediate: `It's not as ${english.toLowerCase()} as I thought.`,
+        advanced: `Feeling that something is ${english.toLowerCase()} varies from person to person.`,
+        master: `Being able to express varying degrees of "${english.toLowerCase()}" enriches your Korean.`,
       },
     },
     dialogues: [
       {
-        context: { ko: '무언가를 평가하며', en: 'Evaluating something' },
+        context: { ko: '무언가를 보며', en: 'Looking at something' },
         lines: [
           { speaker: 'A', ko: '이거 어때요?', en: 'How is this?' },
-          { speaker: 'B', ko: `${korean}요.`, en: `It's ${english.toLowerCase()}.` },
-          { speaker: 'A', ko: '정말요?', en: 'Really?' },
-          { speaker: 'B', ko: '네, 아주 좋아요.', en: 'Yes, very nice.' },
+          {
+            speaker: 'B',
+            ko: `${verbStem(korean)}네요.`,
+            en: `It's ${english.toLowerCase()}.`,
+          },
+          { speaker: 'A', ko: '그래요? 저도 그렇게 생각해요.', en: 'Really? I think so too.' },
+          { speaker: 'B', ko: '맞아요.', en: 'Right.' },
         ],
       },
     ],
@@ -660,16 +723,16 @@ const categoryTemplates: CategoryTemplates = {
   particles: (korean, _english, explanation, _partOfSpeech) => ({
     sentences: {
       ko: {
-        beginner: `${josa(korean, '을/를')} 사용해요.`,
-        intermediate: `이 문장에서 ${josa(korean, '이/가')} 필요해요.`,
-        advanced: `"${korean}"의 올바른 사용은 한국어 문법의 핵심입니다.`,
-        master: `"${korean}"의 미묘한 차이를 이해하면 자연스러운 한국어 구사가 가능합니다.`,
+        beginner: `"나${korean}" 처럼 문장에서 써요.`,
+        intermediate: `"${korean}"${josaSuffix(korean, '을/를')} 빼면 문장이 어색해져요.`,
+        advanced: `"${korean}"${josaSuffix(korean, '은/는')} 문장에서 의미를 명확하게 하는 역할을 합니다.`,
+        master: `"${korean}"의 미묘한 차이를 이해하면 한국어다운 문장을 만들 수 있습니다.`,
       },
       en: {
-        beginner: `Use "${korean}".`,
-        intermediate: `"${korean}" is needed in this sentence.`,
-        advanced: `Correct use of "${korean}" is key to Korean grammar.`,
-        master: `Understanding subtle differences in "${korean}" enables natural Korean speaking.`,
+        beginner: `You use it in sentences like "나${korean}".`,
+        intermediate: `Without "${korean}", the sentence sounds awkward.`,
+        advanced: `"${korean}" serves to clarify meaning within a sentence.`,
+        master: `Understanding the subtle differences of "${korean}" helps create natural-sounding Korean sentences.`,
       },
     },
     dialogues: [
@@ -726,16 +789,16 @@ const categoryTemplates: CategoryTemplates = {
   sports: (korean, english, _explanation, _partOfSpeech) => ({
     sentences: {
       ko: {
-        beginner: `${josa(korean, '을/를')} 해요.`,
-        intermediate: `${josa(korean, '을/를')} 좋아해요.`,
-        advanced: `${josa(korean, '은/는')} 체력 향상에 좋습니다.`,
-        master: `${korean}의 기술과 전략을 이해하면 경기 관람이 더 재미있습니다.`,
+        beginner: `${josa(korean, '을/를')} 좋아해요.`,
+        intermediate: `주말마다 친구들과 ${josa(korean, '을/를')} 해요.`,
+        advanced: `${josa(korean, '은/는')} 한국에서 인기 있는 운동 중 하나입니다.`,
+        master: `${korean}의 규칙과 전략을 이해하면 경기를 더 재미있게 볼 수 있습니다.`,
       },
       en: {
-        beginner: `I play ${english.toLowerCase()}.`,
-        intermediate: `I like ${english.toLowerCase()}.`,
-        advanced: `${english} is good for improving fitness.`,
-        master: `Understanding the techniques and strategies of ${english.toLowerCase()} makes watching games more enjoyable.`,
+        beginner: `I like ${english.toLowerCase()}.`,
+        intermediate: `I play ${english.toLowerCase()} with friends every weekend.`,
+        advanced: `${english} is one of the most popular sports in Korea.`,
+        master: `Understanding the rules and strategies of ${english.toLowerCase()} makes watching games more enjoyable.`,
       },
     },
     dialogues: [
@@ -991,16 +1054,16 @@ const categoryTemplates: CategoryTemplates = {
   coding: (korean, english, _explanation, _partOfSpeech) => ({
     sentences: {
       ko: {
-        beginner: `${josa(korean, '을/를')} 사용해요.`,
-        intermediate: `${josa(korean, '이/가')} 프로그래밍에서 중요해요.`,
-        advanced: `${korean}의 개념을 이해하면 코딩 실력이 향상됩니다.`,
-        master: `${korean}의 심층적 이해는 효율적인 소프트웨어 개발의 핵심입니다.`,
+        beginner: `${josa(korean, '을/를')} 배우고 있어요.`,
+        intermediate: `이 프로젝트에서 ${josa(korean, '을/를')} 사용했어요.`,
+        advanced: `${josa(korean, '은/는')} 현대 웹 개발에서 자주 쓰이는 기술입니다.`,
+        master: `${korean}의 동작 원리를 깊이 이해하면 더 나은 설계가 가능합니다.`,
       },
       en: {
-        beginner: `I use ${english.toLowerCase()}.`,
-        intermediate: `${english} is important in programming.`,
-        advanced: `Understanding ${english.toLowerCase()} improves coding skills.`,
-        master: `Deep understanding of ${english.toLowerCase()} is key to efficient software development.`,
+        beginner: `I am learning ${english.toLowerCase()}.`,
+        intermediate: `I used ${english.toLowerCase()} in this project.`,
+        advanced: `${english} is a widely used technology in modern web development.`,
+        master: `Deeply understanding how ${english.toLowerCase()} works enables better architecture design.`,
       },
     },
     dialogues: [
@@ -1026,16 +1089,16 @@ const categoryTemplates: CategoryTemplates = {
   actions: (korean, english, _explanation, _partOfSpeech) => ({
     sentences: {
       ko: {
-        beginner: `${josa(korean, '을/를')} 해요.`,
-        intermediate: `매일 ${josa(korean, '을/를')} 연습해요.`,
-        advanced: `${josa(korean, '은/는')} 기본적인 동작입니다.`,
-        master: `${korean}의 정확한 수행은 효율적인 움직임의 기초입니다.`,
+        beginner: `아이가 ${verbStem(korean)}고 있어요.`,
+        intermediate: `체육 시간에 ${verbStem(korean)}는 연습을 했어요.`,
+        advanced: `${verbStem(korean)}고 나서 친구들과 이야기했어요.`,
+        master: `${verbStem(korean)}는 것과 ${verbStem(korean)}지 않는 것의 차이를 잘 이해해야 합니다.`,
       },
       en: {
-        beginner: `I ${english.toLowerCase()}.`,
-        intermediate: `I practice ${english.toLowerCase()} every day.`,
-        advanced: `${english} is a basic action.`,
-        master: `Precise execution of ${english.toLowerCase()} is the foundation of efficient movement.`,
+        beginner: `The child is trying to ${english.toLowerCase()}.`,
+        intermediate: `We practiced how to ${english.toLowerCase()} in gym class.`,
+        advanced: `I decided to ${english.toLowerCase().replace(/^to /, '')} and then talked with my friends.`,
+        master: `Understanding the difference between "${korean}" and its variations is important.`,
       },
     },
     dialogues: [
@@ -1045,8 +1108,8 @@ const categoryTemplates: CategoryTemplates = {
           { speaker: 'A', ko: '지금 뭐 해요?', en: 'What are you doing now?' },
           {
             speaker: 'B',
-            ko: `${josa(korean, '을/를')} 하고 있어요.`,
-            en: `I'm ${english.toLowerCase()}ing.`,
+            ko: `${verbStem(korean)}고 있어요.`,
+            en: `I'm trying to ${english.toLowerCase()}.`,
           },
           { speaker: 'A', ko: '어렵지 않아요?', en: "Isn't it hard?" },
           {
@@ -1234,16 +1297,16 @@ const categoryTemplates: CategoryTemplates = {
       return {
         sentences: {
           ko: {
-            beginner: `오늘 ${korean}해요.`,
-            intermediate: `자주 ${korean}하는 편이에요.`,
-            advanced: `${korean}하는 것은 일상에서 흔한 활동입니다.`,
+            beginner: `"${korean}"를 배우고 있어요.`,
+            intermediate: `"${korean}"는 자주 쓰는 표현이에요.`,
+            advanced: `"${korean}"의 쓰임을 알면 일상 표현이 다양해집니다.`,
             master: `${korean}의 다양한 맥락을 이해하면 자연스러운 표현이 가능합니다.`,
           },
           en: {
             beginner: `I ${english.toLowerCase()} today.`,
             intermediate: `I tend to ${english.toLowerCase()} often.`,
-            advanced: `${english}ing is a common activity in daily life.`,
-            master: `Understanding various contexts of ${english.toLowerCase()} enables natural expression.`,
+            advanced: `It is common to ${english.toLowerCase()} in daily life.`,
+            master: `Understanding various contexts of "${english.toLowerCase()}" enables natural expression.`,
           },
         },
         dialogues: [
@@ -1251,7 +1314,11 @@ const categoryTemplates: CategoryTemplates = {
             context: { ko: '일상에 대해 이야기하며', en: 'Talking about daily life' },
             lines: [
               { speaker: 'A', ko: '오늘 뭐 했어요?', en: 'What did you do today?' },
-              { speaker: 'B', ko: `${korean}했어요.`, en: `I ${english.toLowerCase()}ed.` },
+              {
+                speaker: 'B',
+                ko: `${verbStem(korean)}었어요.`,
+                en: `I did ${english.toLowerCase()}.`,
+              },
               { speaker: 'A', ko: '재미있었어요?', en: 'Was it fun?' },
               { speaker: 'B', ko: '네, 좋았어요.', en: 'Yes, it was good.' },
             ],
@@ -1368,16 +1435,16 @@ const categoryTemplates: CategoryTemplates = {
   'cultural-expressions': (korean, english, _explanation, _partOfSpeech) => ({
     sentences: {
       ko: {
-        beginner: `"${korean}"이라고 말해요.`,
-        intermediate: `한국에서는 "${korean}"을 자주 사용해요.`,
-        advanced: `"${korean}"은 한국 문화의 독특한 표현입니다.`,
-        master: `"${korean}"의 문화적 맥락을 이해하면 한국인의 사고방식을 알 수 있습니다.`,
+        beginner: `"${korean}"${josaSuffix(korean, '이라는/라는')} 표현을 배웠어요.`,
+        intermediate: `한국 드라마에서 "${korean}"${josaSuffix(korean, '이라는/라는')} 말을 자주 들어요.`,
+        advanced: `"${korean}"은 한국의 문화와 정서가 담긴 고유한 표현입니다.`,
+        master: `"${korean}"의 배경을 이해하면 한국인의 사고방식과 가치관을 엿볼 수 있습니다.`,
       },
       en: {
-        beginner: `We say "${korean}".`,
-        intermediate: `In Korea, people often use "${korean}".`,
-        advanced: `"${korean}" is a unique expression in Korean culture.`,
-        master: `Understanding the cultural context of "${korean}" reveals the Korean way of thinking.`,
+        beginner: `I learned the expression "${korean}".`,
+        intermediate: `I often hear "${korean}" in Korean dramas.`,
+        advanced: `"${korean}" is a uniquely Korean expression that carries cultural sentiment.`,
+        master: `Understanding the background of "${korean}" offers insight into Korean values and mindset.`,
       },
     },
     dialogues: [
@@ -1403,16 +1470,16 @@ const categoryTemplates: CategoryTemplates = {
   'daily-misc': (korean, english, _explanation, _partOfSpeech) => ({
     sentences: {
       ko: {
-        beginner: `${josa(korean, '이/가')} 필요해요.`,
-        intermediate: `매일 ${josa(korean, '을/를')} 사용해요.`,
-        advanced: `${josa(korean, '은/는')} 일상생활에서 빠질 수 없습니다.`,
-        master: `${korean}의 활용법을 알면 생활이 더 편리해집니다.`,
+        beginner: `${josa(korean, '이/가')} 어디 있어요?`,
+        intermediate: `오늘 ${josa(korean, '을/를')} 새로 샀어요.`,
+        advanced: `${josa(korean, '은/는')} 매일 쓰는 물건이라 없으면 불편해요.`,
+        master: `${korean}의 올바른 사용법을 알면 일상이 더 효율적이 됩니다.`,
       },
       en: {
-        beginner: `I need ${english.toLowerCase()}.`,
-        intermediate: `I use ${english.toLowerCase()} every day.`,
-        advanced: `${english} is indispensable in daily life.`,
-        master: `Knowing how to use ${english.toLowerCase()} makes life more convenient.`,
+        beginner: `Where is the ${english.toLowerCase()}?`,
+        intermediate: `I bought a new ${english.toLowerCase()} today.`,
+        advanced: `${english} is something I use every day, so it's inconvenient without one.`,
+        master: `Knowing the proper use of ${english.toLowerCase()} makes daily life more efficient.`,
       },
     },
     dialogues: [
@@ -1439,15 +1506,15 @@ const categoryTemplates: CategoryTemplates = {
     sentences: {
       ko: {
         beginner: `${josa(korean, '을/를')} 마셔요.`,
-        intermediate: `${josa(korean, '이/가')} 맛있어요.`,
-        advanced: `${josa(korean, '은/는')} 한국에서 인기 있는 음료입니다.`,
-        master: `${korean}의 다양한 종류와 문화적 의미를 이해하면 한국 음료 문화를 깊이 알 수 있습니다.`,
+        intermediate: `카페에서 ${josa(korean, '을/를')} 주문했어요.`,
+        advanced: `${josa(korean, '은/는')} 한국 사람들이 즐겨 마시는 음료예요.`,
+        master: `${korean}의 종류와 마시는 방식에는 한국의 음료 문화가 담겨 있습니다.`,
       },
       en: {
         beginner: `I drink ${english.toLowerCase()}.`,
-        intermediate: `${english} is delicious.`,
-        advanced: `${english} is a popular drink in Korea.`,
-        master: `Understanding the varieties and cultural significance of ${english.toLowerCase()} deepens appreciation of Korean beverage culture.`,
+        intermediate: `I ordered ${english.toLowerCase()} at a cafe.`,
+        advanced: `${english} is a drink that Korean people enjoy.`,
+        master: `The varieties and ways of drinking ${english.toLowerCase()} reflect Korean beverage culture.`,
       },
     },
     dialogues: [
@@ -1539,16 +1606,16 @@ const categoryTemplates: CategoryTemplates = {
   gestures: (korean, english, _explanation, _partOfSpeech) => ({
     sentences: {
       ko: {
-        beginner: `${josa(korean, '을/를')} 해 봐요.`,
-        intermediate: `한국에서 ${josa(korean, '은/는')} 이런 뜻이에요.`,
-        advanced: `${korean}의 의미는 문화에 따라 다릅니다.`,
-        master: `${korean}의 문화적 맥락을 이해하면 비언어 의사소통이 원활해집니다.`,
+        beginner: `한국에서는 ${josa(korean, '을/를')} 이렇게 해요.`,
+        intermediate: `${josa(korean, '은/는')} 한국에서 특별한 의미가 있어요.`,
+        advanced: `${korean}의 의미는 나라마다 다를 수 있어서 주의가 필요합니다.`,
+        master: `${korean}의 문화적 맥락을 이해하면 몸짓만으로도 원활한 소통이 가능합니다.`,
       },
       en: {
-        beginner: `Try doing ${english.toLowerCase()}.`,
-        intermediate: `In Korea, ${english.toLowerCase()} means this.`,
-        advanced: `The meaning of ${english.toLowerCase()} varies across cultures.`,
-        master: `Understanding the cultural context of ${english.toLowerCase()} improves nonverbal communication.`,
+        beginner: `In Korea, you do ${english.toLowerCase()} like this.`,
+        intermediate: `${english} has a special meaning in Korea.`,
+        advanced: `The meaning of ${english.toLowerCase()} can differ by country, so caution is needed.`,
+        master: `Understanding the cultural context of ${english.toLowerCase()} enables smooth communication through gestures alone.`,
       },
     },
     dialogues: [
@@ -1652,16 +1719,16 @@ const categoryTemplates: CategoryTemplates = {
   honorifics: (korean, english, explanation, _partOfSpeech) => ({
     sentences: {
       ko: {
-        beginner: `"${korean}"이라고 말해요.`,
-        intermediate: `웃어른에게 "${korean}"을 사용해요.`,
-        advanced: `"${korean}"의 올바른 사용은 한국어 예절의 핵심입니다.`,
-        master: `"${korean}"의 뉘앙스를 이해하면 상황에 맞는 존댓말 구사가 가능합니다.`,
+        beginner: `선생님께 "${korean}"${josaSuffix(korean, '이라고/라고')} 해요.`,
+        intermediate: `처음 만난 사람에게는 "${korean}"${josaSuffix(korean, '을/를')} 써야 해요.`,
+        advanced: `"${korean}"${josaSuffix(korean, '은/는')} 한국에서 예의를 지킬 때 꼭 필요한 표현입니다.`,
+        master: `"${korean}"의 뉘앙스를 이해하면 격식과 친밀함을 적절히 조절할 수 있습니다.`,
       },
       en: {
-        beginner: `We say "${korean}".`,
-        intermediate: `Use "${korean}" with elders.`,
-        advanced: `Correct use of "${korean}" is key to Korean etiquette.`,
-        master: `Understanding the nuance of "${korean}" enables situationally appropriate honorific use.`,
+        beginner: `You say "${korean}" to a teacher.`,
+        intermediate: `You should use "${korean}" when meeting someone for the first time.`,
+        advanced: `"${korean}" is an essential expression for showing politeness in Korea.`,
+        master: `Understanding the nuance of "${korean}" helps balance formality and familiarity appropriately.`,
       },
     },
     dialogues: [
@@ -1673,7 +1740,11 @@ const categoryTemplates: CategoryTemplates = {
             ko: '이 상황에서 어떻게 말해요?',
             en: 'How do you speak in this situation?',
           },
-          { speaker: 'B', ko: `"${korean}"이라고 해요.`, en: `You say "${korean}".` },
+          {
+            speaker: 'B',
+            ko: `"${korean}"${josaSuffix(korean, '이라고/라고')} 해요.`,
+            en: `You say "${korean}".`,
+          },
           { speaker: 'A', ko: '왜 그렇게 말해야 해요?', en: 'Why do I have to say it that way?' },
           {
             speaker: 'B',
@@ -1691,24 +1762,32 @@ const categoryTemplates: CategoryTemplates = {
   idioms: (korean, english, _explanation, _partOfSpeech) => ({
     sentences: {
       ko: {
-        beginner: `"${korean}"이라는 표현이 있어요.`,
-        intermediate: `"${korean}"을 일상에서 자주 써요.`,
-        advanced: `"${korean}"은 한국어의 독특한 관용 표현입니다.`,
-        master: `"${korean}"의 유래를 알면 한국 문화에 대한 이해가 깊어집니다.`,
+        beginner: `"${korean}"${josaSuffix(korean, '이라는/라는')} 말을 배웠어요.`,
+        intermediate: `할머니가 "${korean}"${josaSuffix(korean, '이라고/라고')} 자주 말씀하세요.`,
+        advanced: `"${korean}"은 오래전부터 쓰여온 한국 고유의 관용 표현입니다.`,
+        master: `"${korean}"의 유래와 쓰임을 알면 한국인의 사고방식을 엿볼 수 있습니다.`,
       },
       en: {
-        beginner: `There is an expression "${korean}".`,
-        intermediate: `We often use "${korean}" in daily life.`,
-        advanced: `"${korean}" is a unique Korean idiomatic expression.`,
-        master: `Knowing the origin of "${korean}" deepens understanding of Korean culture.`,
+        beginner: `I learned the expression "${korean}".`,
+        intermediate: `My grandmother often says "${korean}".`,
+        advanced: `"${korean}" is a traditional Korean idiomatic expression used since long ago.`,
+        master: `Knowing the origin and usage of "${korean}" offers a glimpse into the Korean way of thinking.`,
       },
     },
     dialogues: [
       {
         context: { ko: '관용어를 배우며', en: 'Learning idioms' },
         lines: [
-          { speaker: 'A', ko: `"${korean}"이 무슨 뜻이에요?`, en: `What does "${korean}" mean?` },
-          { speaker: 'B', ko: `"${english}"라는 뜻이에요.`, en: `It means "${english}".` },
+          {
+            speaker: 'A',
+            ko: `"${korean}"${josaSuffix(korean, '이/가')} 무슨 뜻이에요?`,
+            en: `What does "${korean}" mean?`,
+          },
+          {
+            speaker: 'B',
+            ko: `"${english}"${josaSuffix(english, '이라는/라는')} 뜻이에요.`,
+            en: `It means "${english}".`,
+          },
           { speaker: 'A', ko: '재미있는 표현이네요!', en: "That's an interesting expression!" },
           {
             speaker: 'B',
@@ -1726,16 +1805,16 @@ const categoryTemplates: CategoryTemplates = {
   interjections: (korean, english, _explanation, _partOfSpeech) => ({
     sentences: {
       ko: {
-        beginner: `${korean}! 놀랐어요.`,
-        intermediate: `한국 사람들은 "${korean}"을 자주 말해요.`,
-        advanced: `"${korean}"은 감정을 즉각적으로 표현하는 감탄사입니다.`,
-        master: `"${korean}"의 사용 빈도와 맥락은 한국어 화자의 감정 표현 방식을 보여줍니다.`,
+        beginner: `${korean}! 깜짝이야!`,
+        intermediate: `선물을 받고 "${korean}!" 하고 소리쳤어요.`,
+        advanced: `"${korean}"은 놀라거나 감탄할 때 자연스럽게 나오는 표현이에요.`,
+        master: `"${korean}"이 쓰이는 상황을 이해하면 한국어 감정 표현의 폭이 넓어집니다.`,
       },
       en: {
-        beginner: `${korean}! I was surprised.`,
-        intermediate: `Korean people often say "${korean}".`,
-        advanced: `"${korean}" is an interjection that immediately expresses emotion.`,
-        master: `The frequency and context of "${korean}" reveals how Korean speakers express emotions.`,
+        beginner: `${korean}! What a surprise!`,
+        intermediate: `I shouted "${korean}!" when I received the gift.`,
+        advanced: `"${korean}" is a natural expression that comes out when surprised or amazed.`,
+        master: `Understanding when "${korean}" is used broadens the range of emotional expression in Korean.`,
       },
     },
     dialogues: [
@@ -1865,35 +1944,78 @@ const categoryTemplates: CategoryTemplates = {
   }),
 
   // ============================================
+  // 지리 (geography)
+  // ============================================
+  geography: (korean, english, _explanation, _partOfSpeech) => ({
+    sentences: {
+      ko: {
+        beginner: `${josa(korean, '은/는')} 어디에 있어요?`,
+        intermediate: `${josa(korean, '은/는')} 지도에서 찾을 수 있어요.`,
+        advanced: `${korean}의 지리적 특징은 그 지역의 기후와 문화에 영향을 줍니다.`,
+        master: `${korean}에 대한 지리적 이해는 세계의 다양성을 파악하는 데 도움이 됩니다.`,
+      },
+      en: {
+        beginner: `Where is ${english}?`,
+        intermediate: `You can find ${english} on a map.`,
+        advanced: `The geographical features of ${english} influence the region's climate and culture.`,
+        master: `Geographical understanding of ${english} helps grasp the diversity of the world.`,
+      },
+    },
+    dialogues: [
+      {
+        context: { ko: '지리를 공부하며', en: 'Studying geography' },
+        lines: [
+          {
+            speaker: 'A',
+            ko: `${josa(korean, '이/가')} 어디에 있어요?`,
+            en: `Where is ${english}?`,
+          },
+          { speaker: 'B', ko: '지도에서 보여줄게요.', en: "I'll show you on the map." },
+          { speaker: 'A', ko: '거기는 어떤 곳이에요?', en: "What's it like there?" },
+          {
+            speaker: 'B',
+            ko: '자연환경이 독특한 곳이에요.',
+            en: "It's a place with unique natural environment.",
+          },
+        ],
+      },
+    ],
+  }),
+
+  // ============================================
   // 일반 명사 (nouns-common)
   // ============================================
   'nouns-common': (korean, english, _explanation, _partOfSpeech) => ({
     sentences: {
       ko: {
-        beginner: `${josa(korean, '이/가')} 있어요.`,
-        intermediate: `${josa(korean, '을/를')} 사용해요.`,
-        advanced: `${josa(korean, '은/는')} 일상에서 자주 접하는 것입니다.`,
-        master: `${korean}의 다양한 쓰임을 이해하면 어휘력이 풍부해집니다.`,
+        beginner: `${josa(korean, '이/가')} 뭐예요?`,
+        intermediate: `${josa(korean, '을/를')} 잘 알고 있어요.`,
+        advanced: `${josa(korean, '은/는')} 알아 두면 도움이 되는 표현이에요.`,
+        master: `${korean}의 다양한 쓰임새와 맥락을 이해하면 표현이 자연스러워집니다.`,
       },
       en: {
-        beginner: `There is a ${english.toLowerCase()}.`,
-        intermediate: `I use ${english.toLowerCase()}.`,
-        advanced: `${english} is something we frequently encounter in daily life.`,
-        master: `Understanding the various uses of ${english.toLowerCase()} enriches vocabulary.`,
+        beginner: `What is ${english.toLowerCase()}?`,
+        intermediate: `I know ${english.toLowerCase()} well.`,
+        advanced: `${english} is a useful expression to know.`,
+        master: `Understanding the various usages and contexts of ${english.toLowerCase()} makes expression more natural.`,
       },
     },
     dialogues: [
       {
-        context: { ko: '물건에 대해 이야기하며', en: 'Talking about objects' },
+        context: { ko: '단어에 대해 이야기하며', en: 'Talking about a word' },
         lines: [
           {
             speaker: 'A',
-            ko: `${josa(korean, '이/가')} 어디 있어요?`,
-            en: `Where is the ${english.toLowerCase()}?`,
+            ko: `${josa(korean, '이/가')} 뭐예요?`,
+            en: `What is ${english.toLowerCase()}?`,
           },
-          { speaker: 'B', ko: '여기 있어요.', en: 'Here it is.' },
-          { speaker: 'A', ko: '고마워요.', en: 'Thanks.' },
-          { speaker: 'B', ko: '천만에요.', en: "You're welcome." },
+          {
+            speaker: 'B',
+            ko: `한국어에서 자주 쓰는 단어예요.`,
+            en: `It's a commonly used word in Korean.`,
+          },
+          { speaker: 'A', ko: '예문을 알려 주세요.', en: 'Please give me an example.' },
+          { speaker: 'B', ko: '네, 알려 줄게요.', en: 'Sure, I will.' },
         ],
       },
     ],
@@ -1977,9 +2099,9 @@ const categoryTemplates: CategoryTemplates = {
         master: `${korean}의 다양한 활용을 이해하면 자연스러운 한국어 구사가 가능합니다.`,
       },
       en: {
-        beginner: `I ${english.toLowerCase()}ed today.`,
+        beginner: `I did ${english.toLowerCase()} today.`,
         intermediate: `I tend to ${english.toLowerCase()} often.`,
-        advanced: `${english}ing is a common expression.`,
+        advanced: `It is common to ${english.toLowerCase()} in daily life.`,
         master: `Understanding various uses of "${english.toLowerCase()}" enables natural Korean speaking.`,
       },
     },
@@ -1988,7 +2110,7 @@ const categoryTemplates: CategoryTemplates = {
         context: { ko: '일상 대화에서', en: 'In daily conversation' },
         lines: [
           { speaker: 'A', ko: '오늘 뭐 했어요?', en: 'What did you do today?' },
-          { speaker: 'B', ko: `${korean}했어요.`, en: `I ${english.toLowerCase()}ed.` },
+          { speaker: 'B', ko: `${korean}했어요.`, en: `I did ${english.toLowerCase()}.` },
           { speaker: 'A', ko: '그랬군요.', en: 'I see.' },
           { speaker: 'B', ko: '네, 바쁜 하루였어요.', en: 'Yes, it was a busy day.' },
         ],
@@ -2076,16 +2198,16 @@ const categoryTemplates: CategoryTemplates = {
   pronouns: (korean, english, explanation, _partOfSpeech) => ({
     sentences: {
       ko: {
-        beginner: `"${korean}"을 사용해요.`,
-        intermediate: `"${korean}"은 자주 쓰는 대명사예요.`,
-        advanced: `"${korean}"의 올바른 사용은 한국어 문법의 기본입니다.`,
-        master: `"${korean}"의 사용 맥락을 이해하면 격식과 비격식 표현을 구분할 수 있습니다.`,
+        beginner: `"${korean}"은 "${english}"라는 뜻이에요.`,
+        intermediate: `"${korean}"은 일상 대화에서 자주 나와요.`,
+        advanced: `"${korean}"은 상황과 격식에 따라 사용 범위가 달라집니다.`,
+        master: `"${korean}"의 격식 차이를 이해하면 상황에 맞는 표현을 고를 수 있습니다.`,
       },
       en: {
-        beginner: `We use "${korean}".`,
-        intermediate: `"${korean}" is a frequently used pronoun.`,
-        advanced: `Correct use of "${korean}" is fundamental to Korean grammar.`,
-        master: `Understanding the context of "${korean}" helps distinguish formal and informal expressions.`,
+        beginner: `"${korean}" means "${english}".`,
+        intermediate: `"${korean}" comes up often in everyday conversation.`,
+        advanced: `The usage of "${korean}" varies depending on the situation and level of formality.`,
+        master: `Understanding the formality differences of "${korean}" helps choose the right expression for each situation.`,
       },
     },
     dialogues: [
@@ -2107,16 +2229,16 @@ const categoryTemplates: CategoryTemplates = {
   responses: (korean, english, _explanation, _partOfSpeech) => ({
     sentences: {
       ko: {
-        beginner: `"${korean}"이라고 대답해요.`,
-        intermediate: `한국에서는 "${korean}"이라고 자주 말해요.`,
-        advanced: `"${korean}"은 대화에서 자연스러운 응답 표현입니다.`,
-        master: `"${korean}"의 상황별 사용법을 이해하면 대화가 자연스러워집니다.`,
+        beginner: `누가 물으면 "${korean}"${josaSuffix(korean, '이라고/라고')} 해요.`,
+        intermediate: `친구가 부르면 "${korean}"${josaSuffix(korean, '이라고/라고')} 대답해요.`,
+        advanced: `"${korean}"은 상황에 따라 다른 뉘앙스로 쓰입니다.`,
+        master: `"${korean}"을 적절한 상황에 사용하면 대화가 훨씬 자연스러워집니다.`,
       },
       en: {
-        beginner: `We answer "${korean}".`,
-        intermediate: `In Korea, people often say "${korean}".`,
-        advanced: `"${korean}" is a natural response expression in conversation.`,
-        master: `Understanding the situational use of "${korean}" makes conversation more natural.`,
+        beginner: `When someone asks, you say "${korean}".`,
+        intermediate: `When a friend calls, you reply with "${korean}".`,
+        advanced: `"${korean}" carries different nuances depending on the situation.`,
+        master: `Using "${korean}" in the right context makes conversation much more natural.`,
       },
     },
     dialogues: [
@@ -2139,15 +2261,15 @@ const categoryTemplates: CategoryTemplates = {
     sentences: {
       ko: {
         beginner: `매일 ${josa(korean, '을/를')} 해요.`,
-        intermediate: `아침마다 ${josa(korean, '을/를')} 합니다.`,
-        advanced: `${josa(korean, '은/는')} 건강한 생활 습관의 일부입니다.`,
-        master: `${korean}의 규칙적인 실천은 자기 관리 능력을 보여줍니다.`,
+        intermediate: `${josa(korean, '은/는')} 제 일상에서 중요해요.`,
+        advanced: `${josa(korean, '은/는')} 규칙적인 생활에 빠질 수 없는 부분이에요.`,
+        master: `${korean}에 대한 습관을 들이면 생활 리듬이 안정됩니다.`,
       },
       en: {
-        beginner: `I ${english.toLowerCase()} every day.`,
-        intermediate: `I ${english.toLowerCase()} every morning.`,
-        advanced: `${english} is part of a healthy lifestyle.`,
-        master: `Regular practice of ${english.toLowerCase()} demonstrates self-management ability.`,
+        beginner: `I do ${english.toLowerCase()} every day.`,
+        intermediate: `${english} is important in my daily life.`,
+        advanced: `${english} is an essential part of a regular routine.`,
+        master: `Building a habit around ${english.toLowerCase()} helps stabilize your daily rhythm.`,
       },
     },
     dialogues: [
@@ -2208,16 +2330,16 @@ const categoryTemplates: CategoryTemplates = {
   slang: (korean, english, _explanation, _partOfSpeech) => ({
     sentences: {
       ko: {
-        beginner: `"${korean}"이라고 말해요.`,
-        intermediate: `친구들끼리 "${korean}"을 자주 써요.`,
-        advanced: `"${korean}"은 젊은 세대에서 유행하는 표현입니다.`,
-        master: `"${korean}"의 유래와 사용 맥락을 이해하면 한국의 대중문화를 알 수 있습니다.`,
+        beginner: `"${korean}"${josaSuffix(korean, '이라는/라는')} 말 들어 봤어요?`,
+        intermediate: `친구가 "${korean}"${josaSuffix(korean, '이라고/라고')} 해서 웃었어요.`,
+        advanced: `"${korean}"은 주로 친한 사이에서 쓰는 비격식 표현이에요.`,
+        master: `"${korean}"의 유래와 사용 맥락을 알면 한국 대중문화의 흐름을 이해할 수 있습니다.`,
       },
       en: {
-        beginner: `We say "${korean}".`,
-        intermediate: `Friends often use "${korean}".`,
-        advanced: `"${korean}" is an expression popular among the younger generation.`,
-        master: `Understanding the origin and context of "${korean}" reveals Korean pop culture.`,
+        beginner: `Have you heard the word "${korean}"?`,
+        intermediate: `My friend said "${korean}" and it made me laugh.`,
+        advanced: `"${korean}" is an informal expression mainly used among close friends.`,
+        master: `Understanding the origin and context of "${korean}" helps grasp trends in Korean pop culture.`,
       },
     },
     dialogues: [
@@ -2278,15 +2400,15 @@ const categoryTemplates: CategoryTemplates = {
   'verbs-common': (korean, english, _explanation, _partOfSpeech) => ({
     sentences: {
       ko: {
-        beginner: `오늘 ${korean}해요.`,
-        intermediate: `자주 ${korean}하는 편이에요.`,
-        advanced: `${korean}하는 것은 중요한 일상 활동입니다.`,
+        beginner: `"${korean}"를 배우고 있어요.`,
+        intermediate: `"${korean}"는 일상에서 자주 쓰는 동사예요.`,
+        advanced: `"${korean}"의 쓰임을 알면 일상 표현이 다양해집니다.`,
         master: `${korean}의 다양한 맥락을 이해하면 자연스러운 한국어 구사가 가능합니다.`,
       },
       en: {
         beginner: `I ${english.toLowerCase()} today.`,
         intermediate: `I tend to ${english.toLowerCase()} often.`,
-        advanced: `${english}ing is an important daily activity.`,
+        advanced: `It is important to ${english.toLowerCase()} in daily life.`,
         master: `Understanding various contexts of ${english.toLowerCase()} enables natural Korean speaking.`,
       },
     },
@@ -2295,7 +2417,11 @@ const categoryTemplates: CategoryTemplates = {
         context: { ko: '일상 대화에서', en: 'In daily conversation' },
         lines: [
           { speaker: 'A', ko: '오늘 뭐 할 거예요?', en: 'What will you do today?' },
-          { speaker: 'B', ko: `${korean}할 거예요.`, en: `I'll ${english.toLowerCase()}.` },
+          {
+            speaker: 'B',
+            ko: `${verbStem(korean)}을 거예요.`,
+            en: `I'll ${english.toLowerCase()}.`,
+          },
           { speaker: 'A', ko: '좋겠다!', en: 'Sounds nice!' },
           { speaker: 'B', ko: '같이 할래요?', en: 'Want to join?' },
         ],
@@ -2344,16 +2470,16 @@ const categoryTemplates: CategoryTemplates = {
   weather: (korean, english, _explanation, _partOfSpeech) => ({
     sentences: {
       ko: {
-        beginner: `오늘 ${josa(korean, '이에요/예요')}.`,
-        intermediate: `${korean} 날씨에는 뭐 해요?`,
-        advanced: `${josa(korean, '은/는')} 한국의 계절 변화를 보여줍니다.`,
-        master: `${korean}에 대한 다양한 표현을 알면 자연스러운 일상 대화가 가능합니다.`,
+        beginner: `오늘 ${korean} 어때요?`,
+        intermediate: `뉴스에서 ${korean} 소식을 들었어요.`,
+        advanced: `한국에서는 ${korean}에 따라 먹는 음식이 달라지는 문화가 있어요.`,
+        master: `${josa(korean, '과/와')} 관련된 다양한 한국어 표현을 알면 일상 대화가 자연스러워집니다.`,
       },
       en: {
-        beginner: `Today is ${english.toLowerCase()}.`,
-        intermediate: `What do you do in ${english.toLowerCase()} weather?`,
-        advanced: `${english} shows the seasonal changes in Korea.`,
-        master: `Knowing various expressions for ${english.toLowerCase()} enables natural daily conversation.`,
+        beginner: `How is the ${english.toLowerCase()} today?`,
+        intermediate: `I heard about the ${english.toLowerCase()} on the news.`,
+        advanced: `In Korea, the food people eat changes depending on the ${english.toLowerCase()}.`,
+        master: `Knowing various Korean expressions related to ${english.toLowerCase()} makes daily conversation more natural.`,
       },
     },
     dialogues: [
@@ -2363,11 +2489,11 @@ const categoryTemplates: CategoryTemplates = {
           { speaker: 'A', ko: '오늘 날씨 어때요?', en: "How's the weather today?" },
           {
             speaker: 'B',
-            ko: `오늘은 ${josa(korean, '이에요/예요')}.`,
-            en: `It's ${english.toLowerCase()} today.`,
+            ko: `오늘 ${korean} 때문에 밖에 못 나가요.`,
+            en: `I can't go outside because of the ${english.toLowerCase()} today.`,
           },
-          { speaker: 'A', ko: '우산 가져가야 해요?', en: 'Should I bring an umbrella?' },
-          { speaker: 'B', ko: '그러는 게 좋을 것 같아요.', en: 'I think you should.' },
+          { speaker: 'A', ko: '그래요? 그럼 집에서 쉬어요.', en: 'Really? Then rest at home.' },
+          { speaker: 'B', ko: '네, 그래야 할 것 같아요.', en: 'Yes, I think I should.' },
         ],
       },
     ],
@@ -2392,26 +2518,34 @@ function defaultTemplate(
       return {
         sentences: {
           ko: {
-            beginner: `오늘 ${korean}해요.`,
-            intermediate: `자주 ${korean}하는 편이에요.`,
-            advanced: `${korean}하는 것은 중요한 활동입니다.`,
-            master: `${korean}의 다양한 맥락을 이해하면 자연스러운 표현이 가능합니다.`,
+            beginner: `${verbStem(korean)}고 싶어요.`,
+            intermediate: `요즘 자주 ${verbStem(korean)}고 있어요.`,
+            advanced: `${verbStem(korean)}는 것은 생활에서 중요한 부분입니다.`,
+            master: `${verbStem(korean)}고 나면 늘 보람을 느낍니다.`,
           },
           en: {
-            beginner: `I ${english.toLowerCase()} today.`,
-            intermediate: `I tend to ${english.toLowerCase()} often.`,
-            advanced: `${english}ing is an important activity.`,
-            master: `Understanding various contexts of ${english.toLowerCase()} enables natural expression.`,
+            beginner: `I want ${english.toLowerCase()}.`,
+            intermediate: `These days I often ${english.toLowerCase().replace(/^to /, '')}.`,
+            advanced: `It is important ${english.toLowerCase()} regularly in life.`,
+            master: `After you ${english.toLowerCase().replace(/^to /, '')}, you always feel a sense of accomplishment.`,
           },
         },
         dialogues: [
           {
-            context: { ko: '일상 대화에서', en: 'In daily conversation' },
+            context: { ko: '일상에 대해 이야기하며', en: 'Talking about daily life' },
             lines: [
-              { speaker: 'A', ko: '오늘 뭐 했어요?', en: 'What did you do today?' },
-              { speaker: 'B', ko: `${korean}했어요.`, en: `I ${english.toLowerCase()}ed.` },
-              { speaker: 'A', ko: '어땠어요?', en: 'How was it?' },
-              { speaker: 'B', ko: '좋았어요.', en: 'It was good.' },
+              {
+                speaker: 'A',
+                ko: '오늘 뭐 했어요?',
+                en: 'What did you do today?',
+              },
+              {
+                speaker: 'B',
+                ko: `${verbStem(korean)}고 왔어요.`,
+                en: `I went to ${english.toLowerCase().replace(/^to /, '')}.`,
+              },
+              { speaker: 'A', ko: '재미있었어요?', en: 'Was it fun?' },
+              { speaker: 'B', ko: '네, 좋았어요.', en: 'Yes, it was good.' },
             ],
           },
         ],
@@ -2421,26 +2555,34 @@ function defaultTemplate(
       return {
         sentences: {
           ko: {
-            beginner: `이것은 ${korean}해요.`,
-            intermediate: `정말 ${korean}하네요.`,
-            advanced: `${korean}하다는 것은 상태를 나타내는 중요한 표현입니다.`,
-            master: `${korean}의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다.`,
+            beginner: `이건 정말 ${verbStem(korean)}네요!`,
+            intermediate: `생각보다 ${verbStem(korean)}지 않아요.`,
+            advanced: `${verbStem(korean)}다고 느끼는 것은 사람마다 다릅니다.`,
+            master: `"${korean}"의 정도를 다양하게 표현할 수 있으면 한국어가 풍부해집니다.`,
           },
           en: {
-            beginner: `This is ${english.toLowerCase()}.`,
-            intermediate: `It's really ${english.toLowerCase()}.`,
-            advanced: `Being ${english.toLowerCase()} is an important expression describing a state.`,
-            master: `Understanding the nuance of "${english.toLowerCase()}" enables subtle emotional expression.`,
+            beginner: `This is really ${english.toLowerCase()}!`,
+            intermediate: `It's not as ${english.toLowerCase()} as I thought.`,
+            advanced: `Feeling that something is ${english.toLowerCase()} varies from person to person.`,
+            master: `Being able to express varying degrees of "${english.toLowerCase()}" enriches your Korean.`,
           },
         },
         dialogues: [
           {
-            context: { ko: '무언가를 평가하며', en: 'Evaluating something' },
+            context: { ko: '무언가를 보며', en: 'Looking at something' },
             lines: [
-              { speaker: 'A', ko: '이거 어때요?', en: 'How is this?' },
-              { speaker: 'B', ko: `${korean}해요.`, en: `It's ${english.toLowerCase()}.` },
-              { speaker: 'A', ko: '정말요?', en: 'Really?' },
-              { speaker: 'B', ko: '네, 확실해요.', en: 'Yes, definitely.' },
+              {
+                speaker: 'A',
+                ko: '이거 어때요?',
+                en: 'How is this?',
+              },
+              {
+                speaker: 'B',
+                ko: `${verbStem(korean)}네요.`,
+                en: `It's ${english.toLowerCase()}.`,
+              },
+              { speaker: 'A', ko: '그래요? 저도 그렇게 생각해요.', en: 'Really? I think so too.' },
+              { speaker: 'B', ko: '맞아요.', en: 'Right.' },
             ],
           },
         ],
@@ -2450,16 +2592,16 @@ function defaultTemplate(
       return {
         sentences: {
           ko: {
-            beginner: `${korean} 해요.`,
-            intermediate: `그 사람은 ${korean} 말해요.`,
-            advanced: `"${korean}"은 동작의 정도를 표현하는 부사입니다.`,
-            master: `"${korean}"의 적절한 사용은 문장의 표현력을 높입니다.`,
+            beginner: `${korean} 걸어요.`,
+            intermediate: `동생이 ${korean} 밥을 먹어요.`,
+            advanced: `"${korean}"을 쓰면 동작이 어떻게 이루어지는지 더 정확히 표현할 수 있어요.`,
+            master: `"${korean}"의 위치와 강세에 따라 문장의 의미가 미묘하게 달라집니다.`,
           },
           en: {
-            beginner: `I do it ${english.toLowerCase()}.`,
-            intermediate: `That person speaks ${english.toLowerCase()}.`,
-            advanced: `"${korean}" is an adverb that expresses the degree of action.`,
-            master: `Proper use of "${korean}" enhances the expressiveness of sentences.`,
+            beginner: `I walk ${english.toLowerCase()}.`,
+            intermediate: `My younger sibling eats ${english.toLowerCase()}.`,
+            advanced: `Using "${korean}" helps express more precisely how an action is performed.`,
+            master: `The meaning of a sentence subtly changes depending on the position and emphasis of "${korean}".`,
           },
         },
         dialogues: [
@@ -2480,16 +2622,16 @@ function defaultTemplate(
       return {
         sentences: {
           ko: {
-            beginner: `${josa(korean, '이/가')} 있어요.`,
-            intermediate: `${josa(korean, '을/를')} 배웠어요.`,
-            advanced: `${josa(korean, '은/는')} 중요한 개념입니다.`,
-            master: `${korean}에 대한 이해는 학습에 필수적입니다.`,
+            beginner: `${josa(korean, '이/가')} 뭐예요?`,
+            intermediate: `오늘 ${korean}에 대해 배웠어요.`,
+            advanced: `${josa(korean, '은/는')} 알아두면 도움이 되는 개념입니다.`,
+            master: `${korean}의 다양한 쓰임을 이해하면 어휘력이 풍부해집니다.`,
           },
           en: {
-            beginner: `There is ${english.toLowerCase()}.`,
-            intermediate: `I learned about ${english.toLowerCase()}.`,
-            advanced: `${english} is an important concept.`,
-            master: `Understanding ${english.toLowerCase()} is essential for learning.`,
+            beginner: `What is ${english.toLowerCase()}?`,
+            intermediate: `I learned about ${english.toLowerCase()} today.`,
+            advanced: `${english} is a useful concept to know.`,
+            master: `Understanding the various uses of ${english.toLowerCase()} enriches vocabulary.`,
           },
         },
         dialogues: [
@@ -2531,8 +2673,29 @@ function generateExamplesForEntry(entry: Entry): Entry {
   const categoryId = entry.categoryId;
   const partOfSpeech = entry.partOfSpeech;
 
+  // 명사 전용 카테고리에 동사/형용사가 섞여 있는 경우 defaultTemplate 사용
+  const nounOnlyCategories = new Set([
+    'shopping',
+    'gestures',
+    'health',
+    'home',
+    'objects',
+    'clothing',
+    'food',
+    'drinks',
+    'nature',
+    'places',
+    'transportation',
+    'emotions',
+    'weather',
+  ]);
+  const isVerbOrAdj = partOfSpeech === 'verb' || partOfSpeech === 'adjective';
+  const useDefault = isVerbOrAdj && nounOnlyCategories.has(categoryId);
+
   // 해당 category 템플릿 가져오기
-  const templateFn = categoryTemplates[categoryId] || defaultTemplate;
+  const templateFn = useDefault
+    ? defaultTemplate
+    : categoryTemplates[categoryId] || defaultTemplate;
   const templates = templateFn(korean, english, explanation, partOfSpeech);
 
   // 문장예문 업데이트
@@ -2571,11 +2734,6 @@ function processCategory(categoryFile: string): { name: string; updated: number 
   const inputPath = join(ROOT_DIR, 'data/context/entries', categoryFile);
   const entries: Entry[] = JSON.parse(readFileSync(inputPath, 'utf-8'));
   const categoryName = categoryFile.replace('.json', '');
-
-  // geography는 이미 처리했으므로 스킵
-  if (categoryName === 'geography') {
-    return { name: categoryName, updated: 0 };
-  }
 
   const updatedEntries = entries.map((entry) => generateExamplesForEntry(entry));
 

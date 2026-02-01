@@ -17,13 +17,13 @@
         "word": "좋다",
         "explanation": "마음에 들다. 훌륭하다. 편안하다.",
         "examples": {
-          "beginner": "이것은 좋다요.",
-          "intermediate": "정말 좋다네요.",
-          "advanced": "좋다다는 것은 긍정적인/부정적인 특성입니다.",
-          "master": "좋다의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다."
+          "beginner": "이건 정말 좋네요!",
+          "intermediate": "생각보다 좋지 않아요.",
+          "advanced": "좋다고 느끼는 것은 사람마다 다릅니다.",
+          "master": "\"좋다\"의 정도를 다양하게 표현할 수 있으면 한국어가 풍부해집니다."
         },
         "dialogue": {
-          "context": "무언가를 평가하며",
+          "context": "무언가를 보며",
           "dialogue": [
             {
               "speaker": "A",
@@ -33,21 +33,21 @@
             },
             {
               "speaker": "B",
-              "text": "좋다요.",
-              "romanization": "jotdayo.",
+              "text": "좋네요.",
+              "romanization": "jotneyo.",
               "translation": "It's good / nice."
             },
             {
               "speaker": "A",
-              "text": "정말요?",
-              "romanization": "jeongmalyo?",
-              "translation": "Really?"
+              "text": "그래요? 저도 그렇게 생각해요.",
+              "romanization": "geuraeyo? jeodo geureotge saenggakhaeyo.",
+              "translation": "Really? I think so too."
             },
             {
               "speaker": "B",
-              "text": "네, 아주 좋아요.",
-              "romanization": "ne, aju jotayo.",
-              "translation": "Yes, very nice."
+              "text": "맞아요.",
+              "romanization": "matayo.",
+              "translation": "Right."
             }
           ]
         }
@@ -56,13 +56,13 @@
         "word": "good / nice",
         "explanation": "Pleasing. Excellent. Comfortable.",
         "examples": {
-          "beginner": "This is good / nice.",
-          "intermediate": "It's really good / nice.",
-          "advanced": "Being good / nice is a positive/negative characteristic.",
-          "master": "Understanding the nuance of good / nice enables subtle emotional expression."
+          "beginner": "This is really good / nice!",
+          "intermediate": "It's not as good / nice as I thought.",
+          "advanced": "Feeling that something is good / nice varies from person to person.",
+          "master": "Being able to express varying degrees of \"good / nice\" enriches your Korean."
         },
         "dialogue": {
-          "context": "Evaluating something",
+          "context": "Looking at something",
           "dialogue": [
             {
               "speaker": "A",
@@ -74,19 +74,19 @@
               "speaker": "B",
               "text": "It's good / nice.",
               "romanization": "",
-              "translation": "좋다요."
+              "translation": "좋네요."
             },
             {
               "speaker": "A",
-              "text": "Really?",
+              "text": "Really? I think so too.",
               "romanization": "",
-              "translation": "정말요?"
+              "translation": "그래요? 저도 그렇게 생각해요."
             },
             {
               "speaker": "B",
-              "text": "Yes, very nice.",
+              "text": "Right.",
               "romanization": "",
-              "translation": "네, 아주 좋아요."
+              "translation": "맞아요."
             }
           ]
         }
@@ -115,13 +115,13 @@
         "word": "나쁘다",
         "explanation": "좋지 않다. 해롭다. 잘못되다.",
         "examples": {
-          "beginner": "이것은 나쁘다요.",
-          "intermediate": "정말 나쁘다네요.",
-          "advanced": "나쁘다다는 것은 긍정적인/부정적인 특성입니다.",
-          "master": "나쁘다의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다."
+          "beginner": "이건 정말 나쁘네요!",
+          "intermediate": "생각보다 나쁘지 않아요.",
+          "advanced": "나쁘다고 느끼는 것은 사람마다 다릅니다.",
+          "master": "\"나쁘다\"의 정도를 다양하게 표현할 수 있으면 한국어가 풍부해집니다."
         },
         "dialogue": {
-          "context": "무언가를 평가하며",
+          "context": "무언가를 보며",
           "dialogue": [
             {
               "speaker": "A",
@@ -131,21 +131,21 @@
             },
             {
               "speaker": "B",
-              "text": "나쁘다요.",
-              "romanization": "nappeudayo.",
+              "text": "나쁘네요.",
+              "romanization": "nappeuneyo.",
               "translation": "It's bad."
             },
             {
               "speaker": "A",
-              "text": "정말요?",
-              "romanization": "jeongmalyo?",
-              "translation": "Really?"
+              "text": "그래요? 저도 그렇게 생각해요.",
+              "romanization": "geuraeyo? jeodo geureotge saenggakhaeyo.",
+              "translation": "Really? I think so too."
             },
             {
               "speaker": "B",
-              "text": "네, 아주 좋아요.",
-              "romanization": "ne, aju jotayo.",
-              "translation": "Yes, very nice."
+              "text": "맞아요.",
+              "romanization": "matayo.",
+              "translation": "Right."
             }
           ]
         }
@@ -154,13 +154,13 @@
         "word": "bad",
         "explanation": "Not good. Harmful. Wrong.",
         "examples": {
-          "beginner": "This is bad.",
-          "intermediate": "It's really bad.",
-          "advanced": "Being bad is a positive/negative characteristic.",
-          "master": "Understanding the nuance of bad enables subtle emotional expression."
+          "beginner": "This is really bad!",
+          "intermediate": "It's not as bad as I thought.",
+          "advanced": "Feeling that something is bad varies from person to person.",
+          "master": "Being able to express varying degrees of \"bad\" enriches your Korean."
         },
         "dialogue": {
-          "context": "Evaluating something",
+          "context": "Looking at something",
           "dialogue": [
             {
               "speaker": "A",
@@ -172,19 +172,19 @@
               "speaker": "B",
               "text": "It's bad.",
               "romanization": "",
-              "translation": "나쁘다요."
+              "translation": "나쁘네요."
             },
             {
               "speaker": "A",
-              "text": "Really?",
+              "text": "Really? I think so too.",
               "romanization": "",
-              "translation": "정말요?"
+              "translation": "그래요? 저도 그렇게 생각해요."
             },
             {
               "speaker": "B",
-              "text": "Yes, very nice.",
+              "text": "Right.",
               "romanization": "",
-              "translation": "네, 아주 좋아요."
+              "translation": "맞아요."
             }
           ]
         }
@@ -213,13 +213,13 @@
         "word": "크다",
         "explanation": "크기가 일반적인 것보다 위이다. 소리가 높다.",
         "examples": {
-          "beginner": "이것은 크다요.",
-          "intermediate": "정말 크다네요.",
-          "advanced": "크다다는 것은 긍정적인/부정적인 특성입니다.",
-          "master": "크다의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다."
+          "beginner": "이건 정말 크네요!",
+          "intermediate": "생각보다 크지 않아요.",
+          "advanced": "크다고 느끼는 것은 사람마다 다릅니다.",
+          "master": "\"크다\"의 정도를 다양하게 표현할 수 있으면 한국어가 풍부해집니다."
         },
         "dialogue": {
-          "context": "무언가를 평가하며",
+          "context": "무언가를 보며",
           "dialogue": [
             {
               "speaker": "A",
@@ -229,21 +229,21 @@
             },
             {
               "speaker": "B",
-              "text": "크다요.",
-              "romanization": "keudayo.",
+              "text": "크네요.",
+              "romanization": "keuneyo.",
               "translation": "It's big / large / loud."
             },
             {
               "speaker": "A",
-              "text": "정말요?",
-              "romanization": "jeongmalyo?",
-              "translation": "Really?"
+              "text": "그래요? 저도 그렇게 생각해요.",
+              "romanization": "geuraeyo? jeodo geureotge saenggakhaeyo.",
+              "translation": "Really? I think so too."
             },
             {
               "speaker": "B",
-              "text": "네, 아주 좋아요.",
-              "romanization": "ne, aju jotayo.",
-              "translation": "Yes, very nice."
+              "text": "맞아요.",
+              "romanization": "matayo.",
+              "translation": "Right."
             }
           ]
         }
@@ -252,13 +252,13 @@
         "word": "big / large / loud",
         "explanation": "Size is above average. Sound is high.",
         "examples": {
-          "beginner": "This is big / large / loud.",
-          "intermediate": "It's really big / large / loud.",
-          "advanced": "Being big / large / loud is a positive/negative characteristic.",
-          "master": "Understanding the nuance of big / large / loud enables subtle emotional expression."
+          "beginner": "This is really big / large / loud!",
+          "intermediate": "It's not as big / large / loud as I thought.",
+          "advanced": "Feeling that something is big / large / loud varies from person to person.",
+          "master": "Being able to express varying degrees of \"big / large / loud\" enriches your Korean."
         },
         "dialogue": {
-          "context": "Evaluating something",
+          "context": "Looking at something",
           "dialogue": [
             {
               "speaker": "A",
@@ -270,19 +270,19 @@
               "speaker": "B",
               "text": "It's big / large / loud.",
               "romanization": "",
-              "translation": "크다요."
+              "translation": "크네요."
             },
             {
               "speaker": "A",
-              "text": "Really?",
+              "text": "Really? I think so too.",
               "romanization": "",
-              "translation": "정말요?"
+              "translation": "그래요? 저도 그렇게 생각해요."
             },
             {
               "speaker": "B",
-              "text": "Yes, very nice.",
+              "text": "Right.",
               "romanization": "",
-              "translation": "네, 아주 좋아요."
+              "translation": "맞아요."
             }
           ]
         }
@@ -311,13 +311,13 @@
         "word": "작다",
         "explanation": "크기가 일반적인 것보다 아래이다.",
         "examples": {
-          "beginner": "이것은 작다요.",
-          "intermediate": "정말 작다네요.",
-          "advanced": "작다다는 것은 긍정적인/부정적인 특성입니다.",
-          "master": "작다의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다."
+          "beginner": "이건 정말 작네요!",
+          "intermediate": "생각보다 작지 않아요.",
+          "advanced": "작다고 느끼는 것은 사람마다 다릅니다.",
+          "master": "\"작다\"의 정도를 다양하게 표현할 수 있으면 한국어가 풍부해집니다."
         },
         "dialogue": {
-          "context": "무언가를 평가하며",
+          "context": "무언가를 보며",
           "dialogue": [
             {
               "speaker": "A",
@@ -327,21 +327,21 @@
             },
             {
               "speaker": "B",
-              "text": "작다요.",
-              "romanization": "jakdayo.",
+              "text": "작네요.",
+              "romanization": "jakneyo.",
               "translation": "It's small / little."
             },
             {
               "speaker": "A",
-              "text": "정말요?",
-              "romanization": "jeongmalyo?",
-              "translation": "Really?"
+              "text": "그래요? 저도 그렇게 생각해요.",
+              "romanization": "geuraeyo? jeodo geureotge saenggakhaeyo.",
+              "translation": "Really? I think so too."
             },
             {
               "speaker": "B",
-              "text": "네, 아주 좋아요.",
-              "romanization": "ne, aju jotayo.",
-              "translation": "Yes, very nice."
+              "text": "맞아요.",
+              "romanization": "matayo.",
+              "translation": "Right."
             }
           ]
         }
@@ -350,13 +350,13 @@
         "word": "small / little",
         "explanation": "Size is below average.",
         "examples": {
-          "beginner": "This is small / little.",
-          "intermediate": "It's really small / little.",
-          "advanced": "Being small / little is a positive/negative characteristic.",
-          "master": "Understanding the nuance of small / little enables subtle emotional expression."
+          "beginner": "This is really small / little!",
+          "intermediate": "It's not as small / little as I thought.",
+          "advanced": "Feeling that something is small / little varies from person to person.",
+          "master": "Being able to express varying degrees of \"small / little\" enriches your Korean."
         },
         "dialogue": {
-          "context": "Evaluating something",
+          "context": "Looking at something",
           "dialogue": [
             {
               "speaker": "A",
@@ -368,19 +368,19 @@
               "speaker": "B",
               "text": "It's small / little.",
               "romanization": "",
-              "translation": "작다요."
+              "translation": "작네요."
             },
             {
               "speaker": "A",
-              "text": "Really?",
+              "text": "Really? I think so too.",
               "romanization": "",
-              "translation": "정말요?"
+              "translation": "그래요? 저도 그렇게 생각해요."
             },
             {
               "speaker": "B",
-              "text": "Yes, very nice.",
+              "text": "Right.",
               "romanization": "",
-              "translation": "네, 아주 좋아요."
+              "translation": "맞아요."
             }
           ]
         }
@@ -409,13 +409,13 @@
         "word": "많다",
         "explanation": "수량이나 정도가 크다.",
         "examples": {
-          "beginner": "이것은 많다요.",
-          "intermediate": "정말 많다네요.",
-          "advanced": "많다다는 것은 긍정적인/부정적인 특성입니다.",
-          "master": "많다의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다."
+          "beginner": "이건 정말 많네요!",
+          "intermediate": "생각보다 많지 않아요.",
+          "advanced": "많다고 느끼는 것은 사람마다 다릅니다.",
+          "master": "\"많다\"의 정도를 다양하게 표현할 수 있으면 한국어가 풍부해집니다."
         },
         "dialogue": {
-          "context": "무언가를 평가하며",
+          "context": "무언가를 보며",
           "dialogue": [
             {
               "speaker": "A",
@@ -425,21 +425,21 @@
             },
             {
               "speaker": "B",
-              "text": "많다요.",
-              "romanization": "mandayo.",
+              "text": "많네요.",
+              "romanization": "manneyo.",
               "translation": "It's many / much / a lot."
             },
             {
               "speaker": "A",
-              "text": "정말요?",
-              "romanization": "jeongmalyo?",
-              "translation": "Really?"
+              "text": "그래요? 저도 그렇게 생각해요.",
+              "romanization": "geuraeyo? jeodo geureotge saenggakhaeyo.",
+              "translation": "Really? I think so too."
             },
             {
               "speaker": "B",
-              "text": "네, 아주 좋아요.",
-              "romanization": "ne, aju jotayo.",
-              "translation": "Yes, very nice."
+              "text": "맞아요.",
+              "romanization": "matayo.",
+              "translation": "Right."
             }
           ]
         }
@@ -448,13 +448,13 @@
         "word": "many / much / a lot",
         "explanation": "Quantity or degree is large.",
         "examples": {
-          "beginner": "This is many / much / a lot.",
-          "intermediate": "It's really many / much / a lot.",
-          "advanced": "Being many / much / a lot is a positive/negative characteristic.",
-          "master": "Understanding the nuance of many / much / a lot enables subtle emotional expression."
+          "beginner": "This is really many / much / a lot!",
+          "intermediate": "It's not as many / much / a lot as I thought.",
+          "advanced": "Feeling that something is many / much / a lot varies from person to person.",
+          "master": "Being able to express varying degrees of \"many / much / a lot\" enriches your Korean."
         },
         "dialogue": {
-          "context": "Evaluating something",
+          "context": "Looking at something",
           "dialogue": [
             {
               "speaker": "A",
@@ -466,19 +466,19 @@
               "speaker": "B",
               "text": "It's many / much / a lot.",
               "romanization": "",
-              "translation": "많다요."
+              "translation": "많네요."
             },
             {
               "speaker": "A",
-              "text": "Really?",
+              "text": "Really? I think so too.",
               "romanization": "",
-              "translation": "정말요?"
+              "translation": "그래요? 저도 그렇게 생각해요."
             },
             {
               "speaker": "B",
-              "text": "Yes, very nice.",
+              "text": "Right.",
               "romanization": "",
-              "translation": "네, 아주 좋아요."
+              "translation": "맞아요."
             }
           ]
         }
@@ -507,13 +507,13 @@
         "word": "적다",
         "explanation": "수량이나 정도가 작다.",
         "examples": {
-          "beginner": "이것은 적다요.",
-          "intermediate": "정말 적다네요.",
-          "advanced": "적다다는 것은 긍정적인/부정적인 특성입니다.",
-          "master": "적다의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다."
+          "beginner": "이건 정말 적네요!",
+          "intermediate": "생각보다 적지 않아요.",
+          "advanced": "적다고 느끼는 것은 사람마다 다릅니다.",
+          "master": "\"적다\"의 정도를 다양하게 표현할 수 있으면 한국어가 풍부해집니다."
         },
         "dialogue": {
-          "context": "무언가를 평가하며",
+          "context": "무언가를 보며",
           "dialogue": [
             {
               "speaker": "A",
@@ -523,21 +523,21 @@
             },
             {
               "speaker": "B",
-              "text": "적다요.",
-              "romanization": "jeokdayo.",
+              "text": "적네요.",
+              "romanization": "jeokneyo.",
               "translation": "It's few / little."
             },
             {
               "speaker": "A",
-              "text": "정말요?",
-              "romanization": "jeongmalyo?",
-              "translation": "Really?"
+              "text": "그래요? 저도 그렇게 생각해요.",
+              "romanization": "geuraeyo? jeodo geureotge saenggakhaeyo.",
+              "translation": "Really? I think so too."
             },
             {
               "speaker": "B",
-              "text": "네, 아주 좋아요.",
-              "romanization": "ne, aju jotayo.",
-              "translation": "Yes, very nice."
+              "text": "맞아요.",
+              "romanization": "matayo.",
+              "translation": "Right."
             }
           ]
         }
@@ -546,13 +546,13 @@
         "word": "few / little",
         "explanation": "Quantity or degree is small.",
         "examples": {
-          "beginner": "This is few / little.",
-          "intermediate": "It's really few / little.",
-          "advanced": "Being few / little is a positive/negative characteristic.",
-          "master": "Understanding the nuance of few / little enables subtle emotional expression."
+          "beginner": "This is really few / little!",
+          "intermediate": "It's not as few / little as I thought.",
+          "advanced": "Feeling that something is few / little varies from person to person.",
+          "master": "Being able to express varying degrees of \"few / little\" enriches your Korean."
         },
         "dialogue": {
-          "context": "Evaluating something",
+          "context": "Looking at something",
           "dialogue": [
             {
               "speaker": "A",
@@ -564,19 +564,19 @@
               "speaker": "B",
               "text": "It's few / little.",
               "romanization": "",
-              "translation": "적다요."
+              "translation": "적네요."
             },
             {
               "speaker": "A",
-              "text": "Really?",
+              "text": "Really? I think so too.",
               "romanization": "",
-              "translation": "정말요?"
+              "translation": "그래요? 저도 그렇게 생각해요."
             },
             {
               "speaker": "B",
-              "text": "Yes, very nice.",
+              "text": "Right.",
               "romanization": "",
-              "translation": "네, 아주 좋아요."
+              "translation": "맞아요."
             }
           ]
         }
@@ -605,13 +605,13 @@
         "word": "길다",
         "explanation": "한쪽 끝에서 다른 쪽 끝까지의 거리가 멀다.",
         "examples": {
-          "beginner": "이것은 길다요.",
-          "intermediate": "정말 길다네요.",
-          "advanced": "길다다는 것은 긍정적인/부정적인 특성입니다.",
-          "master": "길다의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다."
+          "beginner": "이건 정말 길네요!",
+          "intermediate": "생각보다 길지 않아요.",
+          "advanced": "길다고 느끼는 것은 사람마다 다릅니다.",
+          "master": "\"길다\"의 정도를 다양하게 표현할 수 있으면 한국어가 풍부해집니다."
         },
         "dialogue": {
-          "context": "무언가를 평가하며",
+          "context": "무언가를 보며",
           "dialogue": [
             {
               "speaker": "A",
@@ -621,21 +621,21 @@
             },
             {
               "speaker": "B",
-              "text": "길다요.",
-              "romanization": "gildayo.",
+              "text": "길네요.",
+              "romanization": "gilneyo.",
               "translation": "It's long."
             },
             {
               "speaker": "A",
-              "text": "정말요?",
-              "romanization": "jeongmalyo?",
-              "translation": "Really?"
+              "text": "그래요? 저도 그렇게 생각해요.",
+              "romanization": "geuraeyo? jeodo geureotge saenggakhaeyo.",
+              "translation": "Really? I think so too."
             },
             {
               "speaker": "B",
-              "text": "네, 아주 좋아요.",
-              "romanization": "ne, aju jotayo.",
-              "translation": "Yes, very nice."
+              "text": "맞아요.",
+              "romanization": "matayo.",
+              "translation": "Right."
             }
           ]
         }
@@ -644,13 +644,13 @@
         "word": "long",
         "explanation": "The distance from one end to the other is far.",
         "examples": {
-          "beginner": "This is long.",
-          "intermediate": "It's really long.",
-          "advanced": "Being long is a positive/negative characteristic.",
-          "master": "Understanding the nuance of long enables subtle emotional expression."
+          "beginner": "This is really long!",
+          "intermediate": "It's not as long as I thought.",
+          "advanced": "Feeling that something is long varies from person to person.",
+          "master": "Being able to express varying degrees of \"long\" enriches your Korean."
         },
         "dialogue": {
-          "context": "Evaluating something",
+          "context": "Looking at something",
           "dialogue": [
             {
               "speaker": "A",
@@ -662,19 +662,19 @@
               "speaker": "B",
               "text": "It's long.",
               "romanization": "",
-              "translation": "길다요."
+              "translation": "길네요."
             },
             {
               "speaker": "A",
-              "text": "Really?",
+              "text": "Really? I think so too.",
               "romanization": "",
-              "translation": "정말요?"
+              "translation": "그래요? 저도 그렇게 생각해요."
             },
             {
               "speaker": "B",
-              "text": "Yes, very nice.",
+              "text": "Right.",
               "romanization": "",
-              "translation": "네, 아주 좋아요."
+              "translation": "맞아요."
             }
           ]
         }
@@ -703,13 +703,13 @@
         "word": "짧다",
         "explanation": "한쪽 끝에서 다른 쪽 끝까지의 거리가 가깝다.",
         "examples": {
-          "beginner": "이것은 짧다요.",
-          "intermediate": "정말 짧다네요.",
-          "advanced": "짧다다는 것은 긍정적인/부정적인 특성입니다.",
-          "master": "짧다의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다."
+          "beginner": "이건 정말 짧네요!",
+          "intermediate": "생각보다 짧지 않아요.",
+          "advanced": "짧다고 느끼는 것은 사람마다 다릅니다.",
+          "master": "\"짧다\"의 정도를 다양하게 표현할 수 있으면 한국어가 풍부해집니다."
         },
         "dialogue": {
-          "context": "무언가를 평가하며",
+          "context": "무언가를 보며",
           "dialogue": [
             {
               "speaker": "A",
@@ -719,21 +719,21 @@
             },
             {
               "speaker": "B",
-              "text": "짧다요.",
-              "romanization": "jjaldayo.",
+              "text": "짧네요.",
+              "romanization": "jjalneyo.",
               "translation": "It's short."
             },
             {
               "speaker": "A",
-              "text": "정말요?",
-              "romanization": "jeongmalyo?",
-              "translation": "Really?"
+              "text": "그래요? 저도 그렇게 생각해요.",
+              "romanization": "geuraeyo? jeodo geureotge saenggakhaeyo.",
+              "translation": "Really? I think so too."
             },
             {
               "speaker": "B",
-              "text": "네, 아주 좋아요.",
-              "romanization": "ne, aju jotayo.",
-              "translation": "Yes, very nice."
+              "text": "맞아요.",
+              "romanization": "matayo.",
+              "translation": "Right."
             }
           ]
         }
@@ -742,13 +742,13 @@
         "word": "short",
         "explanation": "The distance from one end to the other is close.",
         "examples": {
-          "beginner": "This is short.",
-          "intermediate": "It's really short.",
-          "advanced": "Being short is a positive/negative characteristic.",
-          "master": "Understanding the nuance of short enables subtle emotional expression."
+          "beginner": "This is really short!",
+          "intermediate": "It's not as short as I thought.",
+          "advanced": "Feeling that something is short varies from person to person.",
+          "master": "Being able to express varying degrees of \"short\" enriches your Korean."
         },
         "dialogue": {
-          "context": "Evaluating something",
+          "context": "Looking at something",
           "dialogue": [
             {
               "speaker": "A",
@@ -760,19 +760,19 @@
               "speaker": "B",
               "text": "It's short.",
               "romanization": "",
-              "translation": "짧다요."
+              "translation": "짧네요."
             },
             {
               "speaker": "A",
-              "text": "Really?",
+              "text": "Really? I think so too.",
               "romanization": "",
-              "translation": "정말요?"
+              "translation": "그래요? 저도 그렇게 생각해요."
             },
             {
               "speaker": "B",
-              "text": "Yes, very nice.",
+              "text": "Right.",
               "romanization": "",
-              "translation": "네, 아주 좋아요."
+              "translation": "맞아요."
             }
           ]
         }
@@ -801,13 +801,13 @@
         "word": "높다",
         "explanation": "아래에서 위까지의 거리가 멀다. 수준이나 정도가 위이다.",
         "examples": {
-          "beginner": "이것은 높다요.",
-          "intermediate": "정말 높다네요.",
-          "advanced": "높다다는 것은 긍정적인/부정적인 특성입니다.",
-          "master": "높다의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다."
+          "beginner": "이건 정말 높네요!",
+          "intermediate": "생각보다 높지 않아요.",
+          "advanced": "높다고 느끼는 것은 사람마다 다릅니다.",
+          "master": "\"높다\"의 정도를 다양하게 표현할 수 있으면 한국어가 풍부해집니다."
         },
         "dialogue": {
-          "context": "무언가를 평가하며",
+          "context": "무언가를 보며",
           "dialogue": [
             {
               "speaker": "A",
@@ -817,21 +817,21 @@
             },
             {
               "speaker": "B",
-              "text": "높다요.",
-              "romanization": "nopdayo.",
+              "text": "높네요.",
+              "romanization": "nopneyo.",
               "translation": "It's high / tall."
             },
             {
               "speaker": "A",
-              "text": "정말요?",
-              "romanization": "jeongmalyo?",
-              "translation": "Really?"
+              "text": "그래요? 저도 그렇게 생각해요.",
+              "romanization": "geuraeyo? jeodo geureotge saenggakhaeyo.",
+              "translation": "Really? I think so too."
             },
             {
               "speaker": "B",
-              "text": "네, 아주 좋아요.",
-              "romanization": "ne, aju jotayo.",
-              "translation": "Yes, very nice."
+              "text": "맞아요.",
+              "romanization": "matayo.",
+              "translation": "Right."
             }
           ]
         }
@@ -840,13 +840,13 @@
         "word": "high / tall",
         "explanation": "The distance from bottom to top is far. Level or degree is high.",
         "examples": {
-          "beginner": "This is high / tall.",
-          "intermediate": "It's really high / tall.",
-          "advanced": "Being high / tall is a positive/negative characteristic.",
-          "master": "Understanding the nuance of high / tall enables subtle emotional expression."
+          "beginner": "This is really high / tall!",
+          "intermediate": "It's not as high / tall as I thought.",
+          "advanced": "Feeling that something is high / tall varies from person to person.",
+          "master": "Being able to express varying degrees of \"high / tall\" enriches your Korean."
         },
         "dialogue": {
-          "context": "Evaluating something",
+          "context": "Looking at something",
           "dialogue": [
             {
               "speaker": "A",
@@ -858,19 +858,19 @@
               "speaker": "B",
               "text": "It's high / tall.",
               "romanization": "",
-              "translation": "높다요."
+              "translation": "높네요."
             },
             {
               "speaker": "A",
-              "text": "Really?",
+              "text": "Really? I think so too.",
               "romanization": "",
-              "translation": "정말요?"
+              "translation": "그래요? 저도 그렇게 생각해요."
             },
             {
               "speaker": "B",
-              "text": "Yes, very nice.",
+              "text": "Right.",
               "romanization": "",
-              "translation": "네, 아주 좋아요."
+              "translation": "맞아요."
             }
           ]
         }
@@ -899,13 +899,13 @@
         "word": "낮다",
         "explanation": "아래에서 위까지의 거리가 가깝다. 수준이나 정도가 아래이다.",
         "examples": {
-          "beginner": "이것은 낮다요.",
-          "intermediate": "정말 낮다네요.",
-          "advanced": "낮다다는 것은 긍정적인/부정적인 특성입니다.",
-          "master": "낮다의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다."
+          "beginner": "이건 정말 낮네요!",
+          "intermediate": "생각보다 낮지 않아요.",
+          "advanced": "낮다고 느끼는 것은 사람마다 다릅니다.",
+          "master": "\"낮다\"의 정도를 다양하게 표현할 수 있으면 한국어가 풍부해집니다."
         },
         "dialogue": {
-          "context": "무언가를 평가하며",
+          "context": "무언가를 보며",
           "dialogue": [
             {
               "speaker": "A",
@@ -915,21 +915,21 @@
             },
             {
               "speaker": "B",
-              "text": "낮다요.",
-              "romanization": "natdayo.",
+              "text": "낮네요.",
+              "romanization": "natneyo.",
               "translation": "It's low / short (height)."
             },
             {
               "speaker": "A",
-              "text": "정말요?",
-              "romanization": "jeongmalyo?",
-              "translation": "Really?"
+              "text": "그래요? 저도 그렇게 생각해요.",
+              "romanization": "geuraeyo? jeodo geureotge saenggakhaeyo.",
+              "translation": "Really? I think so too."
             },
             {
               "speaker": "B",
-              "text": "네, 아주 좋아요.",
-              "romanization": "ne, aju jotayo.",
-              "translation": "Yes, very nice."
+              "text": "맞아요.",
+              "romanization": "matayo.",
+              "translation": "Right."
             }
           ]
         }
@@ -938,13 +938,13 @@
         "word": "low / short (height)",
         "explanation": "The distance from bottom to top is close. Level or degree is low.",
         "examples": {
-          "beginner": "This is low / short (height).",
-          "intermediate": "It's really low / short (height).",
-          "advanced": "Being low / short (height) is a positive/negative characteristic.",
-          "master": "Understanding the nuance of low / short (height) enables subtle emotional expression."
+          "beginner": "This is really low / short (height)!",
+          "intermediate": "It's not as low / short (height) as I thought.",
+          "advanced": "Feeling that something is low / short (height) varies from person to person.",
+          "master": "Being able to express varying degrees of \"low / short (height)\" enriches your Korean."
         },
         "dialogue": {
-          "context": "Evaluating something",
+          "context": "Looking at something",
           "dialogue": [
             {
               "speaker": "A",
@@ -956,19 +956,19 @@
               "speaker": "B",
               "text": "It's low / short (height).",
               "romanization": "",
-              "translation": "낮다요."
+              "translation": "낮네요."
             },
             {
               "speaker": "A",
-              "text": "Really?",
+              "text": "Really? I think so too.",
               "romanization": "",
-              "translation": "정말요?"
+              "translation": "그래요? 저도 그렇게 생각해요."
             },
             {
               "speaker": "B",
-              "text": "Yes, very nice.",
+              "text": "Right.",
               "romanization": "",
-              "translation": "네, 아주 좋아요."
+              "translation": "맞아요."
             }
           ]
         }
@@ -997,13 +997,13 @@
         "word": "빠르다",
         "explanation": "속도가 높다. 시간이 적게 걸린다.",
         "examples": {
-          "beginner": "이것은 빠르다요.",
-          "intermediate": "정말 빠르다네요.",
-          "advanced": "빠르다다는 것은 긍정적인/부정적인 특성입니다.",
-          "master": "빠르다의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다."
+          "beginner": "이건 정말 빠르네요!",
+          "intermediate": "생각보다 빠르지 않아요.",
+          "advanced": "빠르다고 느끼는 것은 사람마다 다릅니다.",
+          "master": "\"빠르다\"의 정도를 다양하게 표현할 수 있으면 한국어가 풍부해집니다."
         },
         "dialogue": {
-          "context": "무언가를 평가하며",
+          "context": "무언가를 보며",
           "dialogue": [
             {
               "speaker": "A",
@@ -1013,21 +1013,21 @@
             },
             {
               "speaker": "B",
-              "text": "빠르다요.",
-              "romanization": "ppareudayo.",
+              "text": "빠르네요.",
+              "romanization": "ppareuneyo.",
               "translation": "It's fast / quick."
             },
             {
               "speaker": "A",
-              "text": "정말요?",
-              "romanization": "jeongmalyo?",
-              "translation": "Really?"
+              "text": "그래요? 저도 그렇게 생각해요.",
+              "romanization": "geuraeyo? jeodo geureotge saenggakhaeyo.",
+              "translation": "Really? I think so too."
             },
             {
               "speaker": "B",
-              "text": "네, 아주 좋아요.",
-              "romanization": "ne, aju jotayo.",
-              "translation": "Yes, very nice."
+              "text": "맞아요.",
+              "romanization": "matayo.",
+              "translation": "Right."
             }
           ]
         }
@@ -1036,13 +1036,13 @@
         "word": "fast / quick",
         "explanation": "Speed is high. Takes little time.",
         "examples": {
-          "beginner": "This is fast / quick.",
-          "intermediate": "It's really fast / quick.",
-          "advanced": "Being fast / quick is a positive/negative characteristic.",
-          "master": "Understanding the nuance of fast / quick enables subtle emotional expression."
+          "beginner": "This is really fast / quick!",
+          "intermediate": "It's not as fast / quick as I thought.",
+          "advanced": "Feeling that something is fast / quick varies from person to person.",
+          "master": "Being able to express varying degrees of \"fast / quick\" enriches your Korean."
         },
         "dialogue": {
-          "context": "Evaluating something",
+          "context": "Looking at something",
           "dialogue": [
             {
               "speaker": "A",
@@ -1054,19 +1054,19 @@
               "speaker": "B",
               "text": "It's fast / quick.",
               "romanization": "",
-              "translation": "빠르다요."
+              "translation": "빠르네요."
             },
             {
               "speaker": "A",
-              "text": "Really?",
+              "text": "Really? I think so too.",
               "romanization": "",
-              "translation": "정말요?"
+              "translation": "그래요? 저도 그렇게 생각해요."
             },
             {
               "speaker": "B",
-              "text": "Yes, very nice.",
+              "text": "Right.",
               "romanization": "",
-              "translation": "네, 아주 좋아요."
+              "translation": "맞아요."
             }
           ]
         }
@@ -1095,13 +1095,13 @@
         "word": "느리다",
         "explanation": "속도가 낮다. 시간이 많이 걸린다.",
         "examples": {
-          "beginner": "이것은 느리다요.",
-          "intermediate": "정말 느리다네요.",
-          "advanced": "느리다다는 것은 긍정적인/부정적인 특성입니다.",
-          "master": "느리다의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다."
+          "beginner": "이건 정말 느리네요!",
+          "intermediate": "생각보다 느리지 않아요.",
+          "advanced": "느리다고 느끼는 것은 사람마다 다릅니다.",
+          "master": "\"느리다\"의 정도를 다양하게 표현할 수 있으면 한국어가 풍부해집니다."
         },
         "dialogue": {
-          "context": "무언가를 평가하며",
+          "context": "무언가를 보며",
           "dialogue": [
             {
               "speaker": "A",
@@ -1111,21 +1111,21 @@
             },
             {
               "speaker": "B",
-              "text": "느리다요.",
-              "romanization": "neuridayo.",
+              "text": "느리네요.",
+              "romanization": "neurineyo.",
               "translation": "It's slow."
             },
             {
               "speaker": "A",
-              "text": "정말요?",
-              "romanization": "jeongmalyo?",
-              "translation": "Really?"
+              "text": "그래요? 저도 그렇게 생각해요.",
+              "romanization": "geuraeyo? jeodo geureotge saenggakhaeyo.",
+              "translation": "Really? I think so too."
             },
             {
               "speaker": "B",
-              "text": "네, 아주 좋아요.",
-              "romanization": "ne, aju jotayo.",
-              "translation": "Yes, very nice."
+              "text": "맞아요.",
+              "romanization": "matayo.",
+              "translation": "Right."
             }
           ]
         }
@@ -1134,13 +1134,13 @@
         "word": "slow",
         "explanation": "Speed is low. Takes a lot of time.",
         "examples": {
-          "beginner": "This is slow.",
-          "intermediate": "It's really slow.",
-          "advanced": "Being slow is a positive/negative characteristic.",
-          "master": "Understanding the nuance of slow enables subtle emotional expression."
+          "beginner": "This is really slow!",
+          "intermediate": "It's not as slow as I thought.",
+          "advanced": "Feeling that something is slow varies from person to person.",
+          "master": "Being able to express varying degrees of \"slow\" enriches your Korean."
         },
         "dialogue": {
-          "context": "Evaluating something",
+          "context": "Looking at something",
           "dialogue": [
             {
               "speaker": "A",
@@ -1152,19 +1152,19 @@
               "speaker": "B",
               "text": "It's slow.",
               "romanization": "",
-              "translation": "느리다요."
+              "translation": "느리네요."
             },
             {
               "speaker": "A",
-              "text": "Really?",
+              "text": "Really? I think so too.",
               "romanization": "",
-              "translation": "정말요?"
+              "translation": "그래요? 저도 그렇게 생각해요."
             },
             {
               "speaker": "B",
-              "text": "Yes, very nice.",
+              "text": "Right.",
               "romanization": "",
-              "translation": "네, 아주 좋아요."
+              "translation": "맞아요."
             }
           ]
         }
@@ -1193,13 +1193,13 @@
         "word": "무겁다",
         "explanation": "무게가 많이 나간다.",
         "examples": {
-          "beginner": "이것은 무겁다요.",
-          "intermediate": "정말 무겁다네요.",
-          "advanced": "무겁다다는 것은 긍정적인/부정적인 특성입니다.",
-          "master": "무겁다의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다."
+          "beginner": "이건 정말 무겁네요!",
+          "intermediate": "생각보다 무겁지 않아요.",
+          "advanced": "무겁다고 느끼는 것은 사람마다 다릅니다.",
+          "master": "\"무겁다\"의 정도를 다양하게 표현할 수 있으면 한국어가 풍부해집니다."
         },
         "dialogue": {
-          "context": "무언가를 평가하며",
+          "context": "무언가를 보며",
           "dialogue": [
             {
               "speaker": "A",
@@ -1209,21 +1209,21 @@
             },
             {
               "speaker": "B",
-              "text": "무겁다요.",
-              "romanization": "mugeopdayo.",
+              "text": "무겁네요.",
+              "romanization": "mugeopneyo.",
               "translation": "It's heavy."
             },
             {
               "speaker": "A",
-              "text": "정말요?",
-              "romanization": "jeongmalyo?",
-              "translation": "Really?"
+              "text": "그래요? 저도 그렇게 생각해요.",
+              "romanization": "geuraeyo? jeodo geureotge saenggakhaeyo.",
+              "translation": "Really? I think so too."
             },
             {
               "speaker": "B",
-              "text": "네, 아주 좋아요.",
-              "romanization": "ne, aju jotayo.",
-              "translation": "Yes, very nice."
+              "text": "맞아요.",
+              "romanization": "matayo.",
+              "translation": "Right."
             }
           ]
         }
@@ -1232,13 +1232,13 @@
         "word": "heavy",
         "explanation": "Weight is high.",
         "examples": {
-          "beginner": "This is heavy.",
-          "intermediate": "It's really heavy.",
-          "advanced": "Being heavy is a positive/negative characteristic.",
-          "master": "Understanding the nuance of heavy enables subtle emotional expression."
+          "beginner": "This is really heavy!",
+          "intermediate": "It's not as heavy as I thought.",
+          "advanced": "Feeling that something is heavy varies from person to person.",
+          "master": "Being able to express varying degrees of \"heavy\" enriches your Korean."
         },
         "dialogue": {
-          "context": "Evaluating something",
+          "context": "Looking at something",
           "dialogue": [
             {
               "speaker": "A",
@@ -1250,19 +1250,19 @@
               "speaker": "B",
               "text": "It's heavy.",
               "romanization": "",
-              "translation": "무겁다요."
+              "translation": "무겁네요."
             },
             {
               "speaker": "A",
-              "text": "Really?",
+              "text": "Really? I think so too.",
               "romanization": "",
-              "translation": "정말요?"
+              "translation": "그래요? 저도 그렇게 생각해요."
             },
             {
               "speaker": "B",
-              "text": "Yes, very nice.",
+              "text": "Right.",
               "romanization": "",
-              "translation": "네, 아주 좋아요."
+              "translation": "맞아요."
             }
           ]
         }
@@ -1291,13 +1291,13 @@
         "word": "가볍다",
         "explanation": "무게가 적게 나간다.",
         "examples": {
-          "beginner": "이것은 가볍다요.",
-          "intermediate": "정말 가볍다네요.",
-          "advanced": "가볍다다는 것은 긍정적인/부정적인 특성입니다.",
-          "master": "가볍다의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다."
+          "beginner": "이건 정말 가볍네요!",
+          "intermediate": "생각보다 가볍지 않아요.",
+          "advanced": "가볍다고 느끼는 것은 사람마다 다릅니다.",
+          "master": "\"가볍다\"의 정도를 다양하게 표현할 수 있으면 한국어가 풍부해집니다."
         },
         "dialogue": {
-          "context": "무언가를 평가하며",
+          "context": "무언가를 보며",
           "dialogue": [
             {
               "speaker": "A",
@@ -1307,21 +1307,21 @@
             },
             {
               "speaker": "B",
-              "text": "가볍다요.",
-              "romanization": "gabyeopdayo.",
+              "text": "가볍네요.",
+              "romanization": "gabyeopneyo.",
               "translation": "It's light."
             },
             {
               "speaker": "A",
-              "text": "정말요?",
-              "romanization": "jeongmalyo?",
-              "translation": "Really?"
+              "text": "그래요? 저도 그렇게 생각해요.",
+              "romanization": "geuraeyo? jeodo geureotge saenggakhaeyo.",
+              "translation": "Really? I think so too."
             },
             {
               "speaker": "B",
-              "text": "네, 아주 좋아요.",
-              "romanization": "ne, aju jotayo.",
-              "translation": "Yes, very nice."
+              "text": "맞아요.",
+              "romanization": "matayo.",
+              "translation": "Right."
             }
           ]
         }
@@ -1330,13 +1330,13 @@
         "word": "light",
         "explanation": "Weight is low.",
         "examples": {
-          "beginner": "This is light.",
-          "intermediate": "It's really light.",
-          "advanced": "Being light is a positive/negative characteristic.",
-          "master": "Understanding the nuance of light enables subtle emotional expression."
+          "beginner": "This is really light!",
+          "intermediate": "It's not as light as I thought.",
+          "advanced": "Feeling that something is light varies from person to person.",
+          "master": "Being able to express varying degrees of \"light\" enriches your Korean."
         },
         "dialogue": {
-          "context": "Evaluating something",
+          "context": "Looking at something",
           "dialogue": [
             {
               "speaker": "A",
@@ -1348,19 +1348,19 @@
               "speaker": "B",
               "text": "It's light.",
               "romanization": "",
-              "translation": "가볍다요."
+              "translation": "가볍네요."
             },
             {
               "speaker": "A",
-              "text": "Really?",
+              "text": "Really? I think so too.",
               "romanization": "",
-              "translation": "정말요?"
+              "translation": "그래요? 저도 그렇게 생각해요."
             },
             {
               "speaker": "B",
-              "text": "Yes, very nice.",
+              "text": "Right.",
               "romanization": "",
-              "translation": "네, 아주 좋아요."
+              "translation": "맞아요."
             }
           ]
         }
@@ -1389,13 +1389,13 @@
         "word": "예쁘다",
         "explanation": "보기에 아름답다. 귀엽다.",
         "examples": {
-          "beginner": "이것은 예쁘다요.",
-          "intermediate": "정말 예쁘다네요.",
-          "advanced": "예쁘다다는 것은 긍정적인/부정적인 특성입니다.",
-          "master": "예쁘다의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다."
+          "beginner": "이건 정말 예쁘네요!",
+          "intermediate": "생각보다 예쁘지 않아요.",
+          "advanced": "예쁘다고 느끼는 것은 사람마다 다릅니다.",
+          "master": "\"예쁘다\"의 정도를 다양하게 표현할 수 있으면 한국어가 풍부해집니다."
         },
         "dialogue": {
-          "context": "무언가를 평가하며",
+          "context": "무언가를 보며",
           "dialogue": [
             {
               "speaker": "A",
@@ -1405,21 +1405,21 @@
             },
             {
               "speaker": "B",
-              "text": "예쁘다요.",
-              "romanization": "yeppeudayo.",
+              "text": "예쁘네요.",
+              "romanization": "yeppeuneyo.",
               "translation": "It's pretty / beautiful."
             },
             {
               "speaker": "A",
-              "text": "정말요?",
-              "romanization": "jeongmalyo?",
-              "translation": "Really?"
+              "text": "그래요? 저도 그렇게 생각해요.",
+              "romanization": "geuraeyo? jeodo geureotge saenggakhaeyo.",
+              "translation": "Really? I think so too."
             },
             {
               "speaker": "B",
-              "text": "네, 아주 좋아요.",
-              "romanization": "ne, aju jotayo.",
-              "translation": "Yes, very nice."
+              "text": "맞아요.",
+              "romanization": "matayo.",
+              "translation": "Right."
             }
           ]
         }
@@ -1428,13 +1428,13 @@
         "word": "pretty / beautiful",
         "explanation": "Beautiful to look at. Cute.",
         "examples": {
-          "beginner": "This is pretty / beautiful.",
-          "intermediate": "It's really pretty / beautiful.",
-          "advanced": "Being pretty / beautiful is a positive/negative characteristic.",
-          "master": "Understanding the nuance of pretty / beautiful enables subtle emotional expression."
+          "beginner": "This is really pretty / beautiful!",
+          "intermediate": "It's not as pretty / beautiful as I thought.",
+          "advanced": "Feeling that something is pretty / beautiful varies from person to person.",
+          "master": "Being able to express varying degrees of \"pretty / beautiful\" enriches your Korean."
         },
         "dialogue": {
-          "context": "Evaluating something",
+          "context": "Looking at something",
           "dialogue": [
             {
               "speaker": "A",
@@ -1446,19 +1446,19 @@
               "speaker": "B",
               "text": "It's pretty / beautiful.",
               "romanization": "",
-              "translation": "예쁘다요."
+              "translation": "예쁘네요."
             },
             {
               "speaker": "A",
-              "text": "Really?",
+              "text": "Really? I think so too.",
               "romanization": "",
-              "translation": "정말요?"
+              "translation": "그래요? 저도 그렇게 생각해요."
             },
             {
               "speaker": "B",
-              "text": "Yes, very nice.",
+              "text": "Right.",
               "romanization": "",
-              "translation": "네, 아주 좋아요."
+              "translation": "맞아요."
             }
           ]
         }
@@ -1487,13 +1487,13 @@
         "word": "잘생기다",
         "explanation": "남자의 외모가 좋다.",
         "examples": {
-          "beginner": "이것은 잘생기다요.",
-          "intermediate": "정말 잘생기다네요.",
-          "advanced": "잘생기다다는 것은 긍정적인/부정적인 특성입니다.",
-          "master": "잘생기다의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다."
+          "beginner": "이건 정말 잘생기네요!",
+          "intermediate": "생각보다 잘생기지 않아요.",
+          "advanced": "잘생기다고 느끼는 것은 사람마다 다릅니다.",
+          "master": "\"잘생기다\"의 정도를 다양하게 표현할 수 있으면 한국어가 풍부해집니다."
         },
         "dialogue": {
-          "context": "무언가를 평가하며",
+          "context": "무언가를 보며",
           "dialogue": [
             {
               "speaker": "A",
@@ -1503,21 +1503,21 @@
             },
             {
               "speaker": "B",
-              "text": "잘생기다요.",
-              "romanization": "jalsaenggidayo.",
+              "text": "잘생기네요.",
+              "romanization": "jalsaenggineyo.",
               "translation": "It's handsome / good-looking."
             },
             {
               "speaker": "A",
-              "text": "정말요?",
-              "romanization": "jeongmalyo?",
-              "translation": "Really?"
+              "text": "그래요? 저도 그렇게 생각해요.",
+              "romanization": "geuraeyo? jeodo geureotge saenggakhaeyo.",
+              "translation": "Really? I think so too."
             },
             {
               "speaker": "B",
-              "text": "네, 아주 좋아요.",
-              "romanization": "ne, aju jotayo.",
-              "translation": "Yes, very nice."
+              "text": "맞아요.",
+              "romanization": "matayo.",
+              "translation": "Right."
             }
           ]
         }
@@ -1526,13 +1526,13 @@
         "word": "handsome / good-looking",
         "explanation": "A man's appearance is good.",
         "examples": {
-          "beginner": "This is handsome / good-looking.",
-          "intermediate": "It's really handsome / good-looking.",
-          "advanced": "Being handsome / good-looking is a positive/negative characteristic.",
-          "master": "Understanding the nuance of handsome / good-looking enables subtle emotional expression."
+          "beginner": "This is really handsome / good-looking!",
+          "intermediate": "It's not as handsome / good-looking as I thought.",
+          "advanced": "Feeling that something is handsome / good-looking varies from person to person.",
+          "master": "Being able to express varying degrees of \"handsome / good-looking\" enriches your Korean."
         },
         "dialogue": {
-          "context": "Evaluating something",
+          "context": "Looking at something",
           "dialogue": [
             {
               "speaker": "A",
@@ -1544,19 +1544,19 @@
               "speaker": "B",
               "text": "It's handsome / good-looking.",
               "romanization": "",
-              "translation": "잘생기다요."
+              "translation": "잘생기네요."
             },
             {
               "speaker": "A",
-              "text": "Really?",
+              "text": "Really? I think so too.",
               "romanization": "",
-              "translation": "정말요?"
+              "translation": "그래요? 저도 그렇게 생각해요."
             },
             {
               "speaker": "B",
-              "text": "Yes, very nice.",
+              "text": "Right.",
               "romanization": "",
-              "translation": "네, 아주 좋아요."
+              "translation": "맞아요."
             }
           ]
         }
@@ -1585,13 +1585,13 @@
         "word": "뜨겁다",
         "explanation": "온도가 매우 높다.",
         "examples": {
-          "beginner": "이것은 뜨겁다요.",
-          "intermediate": "정말 뜨겁다네요.",
-          "advanced": "뜨겁다다는 것은 긍정적인/부정적인 특성입니다.",
-          "master": "뜨겁다의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다."
+          "beginner": "이건 정말 뜨겁네요!",
+          "intermediate": "생각보다 뜨겁지 않아요.",
+          "advanced": "뜨겁다고 느끼는 것은 사람마다 다릅니다.",
+          "master": "\"뜨겁다\"의 정도를 다양하게 표현할 수 있으면 한국어가 풍부해집니다."
         },
         "dialogue": {
-          "context": "무언가를 평가하며",
+          "context": "무언가를 보며",
           "dialogue": [
             {
               "speaker": "A",
@@ -1601,21 +1601,21 @@
             },
             {
               "speaker": "B",
-              "text": "뜨겁다요.",
-              "romanization": "tteugeopdayo.",
+              "text": "뜨겁네요.",
+              "romanization": "tteugeopneyo.",
               "translation": "It's hot (to touch)."
             },
             {
               "speaker": "A",
-              "text": "정말요?",
-              "romanization": "jeongmalyo?",
-              "translation": "Really?"
+              "text": "그래요? 저도 그렇게 생각해요.",
+              "romanization": "geuraeyo? jeodo geureotge saenggakhaeyo.",
+              "translation": "Really? I think so too."
             },
             {
               "speaker": "B",
-              "text": "네, 아주 좋아요.",
-              "romanization": "ne, aju jotayo.",
-              "translation": "Yes, very nice."
+              "text": "맞아요.",
+              "romanization": "matayo.",
+              "translation": "Right."
             }
           ]
         }
@@ -1624,13 +1624,13 @@
         "word": "hot (to touch)",
         "explanation": "Temperature is very high.",
         "examples": {
-          "beginner": "This is hot (to touch).",
-          "intermediate": "It's really hot (to touch).",
-          "advanced": "Being hot (to touch) is a positive/negative characteristic.",
-          "master": "Understanding the nuance of hot (to touch) enables subtle emotional expression."
+          "beginner": "This is really hot (to touch)!",
+          "intermediate": "It's not as hot (to touch) as I thought.",
+          "advanced": "Feeling that something is hot (to touch) varies from person to person.",
+          "master": "Being able to express varying degrees of \"hot (to touch)\" enriches your Korean."
         },
         "dialogue": {
-          "context": "Evaluating something",
+          "context": "Looking at something",
           "dialogue": [
             {
               "speaker": "A",
@@ -1642,19 +1642,19 @@
               "speaker": "B",
               "text": "It's hot (to touch).",
               "romanization": "",
-              "translation": "뜨겁다요."
+              "translation": "뜨겁네요."
             },
             {
               "speaker": "A",
-              "text": "Really?",
+              "text": "Really? I think so too.",
               "romanization": "",
-              "translation": "정말요?"
+              "translation": "그래요? 저도 그렇게 생각해요."
             },
             {
               "speaker": "B",
-              "text": "Yes, very nice.",
+              "text": "Right.",
               "romanization": "",
-              "translation": "네, 아주 좋아요."
+              "translation": "맞아요."
             }
           ]
         }
@@ -1683,13 +1683,13 @@
         "word": "차갑다",
         "explanation": "온도가 매우 낮다.",
         "examples": {
-          "beginner": "이것은 차갑다요.",
-          "intermediate": "정말 차갑다네요.",
-          "advanced": "차갑다다는 것은 긍정적인/부정적인 특성입니다.",
-          "master": "차갑다의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다."
+          "beginner": "이건 정말 차갑네요!",
+          "intermediate": "생각보다 차갑지 않아요.",
+          "advanced": "차갑다고 느끼는 것은 사람마다 다릅니다.",
+          "master": "\"차갑다\"의 정도를 다양하게 표현할 수 있으면 한국어가 풍부해집니다."
         },
         "dialogue": {
-          "context": "무언가를 평가하며",
+          "context": "무언가를 보며",
           "dialogue": [
             {
               "speaker": "A",
@@ -1699,21 +1699,21 @@
             },
             {
               "speaker": "B",
-              "text": "차갑다요.",
-              "romanization": "chagapdayo.",
+              "text": "차갑네요.",
+              "romanization": "chagapneyo.",
               "translation": "It's cold (to touch)."
             },
             {
               "speaker": "A",
-              "text": "정말요?",
-              "romanization": "jeongmalyo?",
-              "translation": "Really?"
+              "text": "그래요? 저도 그렇게 생각해요.",
+              "romanization": "geuraeyo? jeodo geureotge saenggakhaeyo.",
+              "translation": "Really? I think so too."
             },
             {
               "speaker": "B",
-              "text": "네, 아주 좋아요.",
-              "romanization": "ne, aju jotayo.",
-              "translation": "Yes, very nice."
+              "text": "맞아요.",
+              "romanization": "matayo.",
+              "translation": "Right."
             }
           ]
         }
@@ -1722,13 +1722,13 @@
         "word": "cold (to touch)",
         "explanation": "Temperature is very low.",
         "examples": {
-          "beginner": "This is cold (to touch).",
-          "intermediate": "It's really cold (to touch).",
-          "advanced": "Being cold (to touch) is a positive/negative characteristic.",
-          "master": "Understanding the nuance of cold (to touch) enables subtle emotional expression."
+          "beginner": "This is really cold (to touch)!",
+          "intermediate": "It's not as cold (to touch) as I thought.",
+          "advanced": "Feeling that something is cold (to touch) varies from person to person.",
+          "master": "Being able to express varying degrees of \"cold (to touch)\" enriches your Korean."
         },
         "dialogue": {
-          "context": "Evaluating something",
+          "context": "Looking at something",
           "dialogue": [
             {
               "speaker": "A",
@@ -1740,19 +1740,19 @@
               "speaker": "B",
               "text": "It's cold (to touch).",
               "romanization": "",
-              "translation": "차갑다요."
+              "translation": "차갑네요."
             },
             {
               "speaker": "A",
-              "text": "Really?",
+              "text": "Really? I think so too.",
               "romanization": "",
-              "translation": "정말요?"
+              "translation": "그래요? 저도 그렇게 생각해요."
             },
             {
               "speaker": "B",
-              "text": "Yes, very nice.",
+              "text": "Right.",
               "romanization": "",
-              "translation": "네, 아주 좋아요."
+              "translation": "맞아요."
             }
           ]
         }
@@ -1781,13 +1781,13 @@
         "word": "따뜻하다",
         "explanation": "적당히 온도가 높다. 마음이 포근하다.",
         "examples": {
-          "beginner": "이것은 따뜻하다요.",
-          "intermediate": "정말 따뜻하다네요.",
-          "advanced": "따뜻하다다는 것은 긍정적인/부정적인 특성입니다.",
-          "master": "따뜻하다의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다."
+          "beginner": "이건 정말 따뜻하네요!",
+          "intermediate": "생각보다 따뜻하지 않아요.",
+          "advanced": "따뜻하다고 느끼는 것은 사람마다 다릅니다.",
+          "master": "\"따뜻하다\"의 정도를 다양하게 표현할 수 있으면 한국어가 풍부해집니다."
         },
         "dialogue": {
-          "context": "무언가를 평가하며",
+          "context": "무언가를 보며",
           "dialogue": [
             {
               "speaker": "A",
@@ -1797,21 +1797,21 @@
             },
             {
               "speaker": "B",
-              "text": "따뜻하다요.",
-              "romanization": "ttatteushadayo.",
+              "text": "따뜻하네요.",
+              "romanization": "ttatteushaneyo.",
               "translation": "It's warm."
             },
             {
               "speaker": "A",
-              "text": "정말요?",
-              "romanization": "jeongmalyo?",
-              "translation": "Really?"
+              "text": "그래요? 저도 그렇게 생각해요.",
+              "romanization": "geuraeyo? jeodo geureotge saenggakhaeyo.",
+              "translation": "Really? I think so too."
             },
             {
               "speaker": "B",
-              "text": "네, 아주 좋아요.",
-              "romanization": "ne, aju jotayo.",
-              "translation": "Yes, very nice."
+              "text": "맞아요.",
+              "romanization": "matayo.",
+              "translation": "Right."
             }
           ]
         }
@@ -1820,13 +1820,13 @@
         "word": "warm",
         "explanation": "Moderately high temperature. Heart is cozy.",
         "examples": {
-          "beginner": "This is warm.",
-          "intermediate": "It's really warm.",
-          "advanced": "Being warm is a positive/negative characteristic.",
-          "master": "Understanding the nuance of warm enables subtle emotional expression."
+          "beginner": "This is really warm!",
+          "intermediate": "It's not as warm as I thought.",
+          "advanced": "Feeling that something is warm varies from person to person.",
+          "master": "Being able to express varying degrees of \"warm\" enriches your Korean."
         },
         "dialogue": {
-          "context": "Evaluating something",
+          "context": "Looking at something",
           "dialogue": [
             {
               "speaker": "A",
@@ -1838,19 +1838,19 @@
               "speaker": "B",
               "text": "It's warm.",
               "romanization": "",
-              "translation": "따뜻하다요."
+              "translation": "따뜻하네요."
             },
             {
               "speaker": "A",
-              "text": "Really?",
+              "text": "Really? I think so too.",
               "romanization": "",
-              "translation": "정말요?"
+              "translation": "그래요? 저도 그렇게 생각해요."
             },
             {
               "speaker": "B",
-              "text": "Yes, very nice.",
+              "text": "Right.",
               "romanization": "",
-              "translation": "네, 아주 좋아요."
+              "translation": "맞아요."
             }
           ]
         }
@@ -1879,13 +1879,13 @@
         "word": "시원하다",
         "explanation": "적당히 온도가 낮아 상쾌하다. 막힌 것이 뚫려 후련하다.",
         "examples": {
-          "beginner": "이것은 시원하다요.",
-          "intermediate": "정말 시원하다네요.",
-          "advanced": "시원하다다는 것은 긍정적인/부정적인 특성입니다.",
-          "master": "시원하다의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다."
+          "beginner": "이건 정말 시원하네요!",
+          "intermediate": "생각보다 시원하지 않아요.",
+          "advanced": "시원하다고 느끼는 것은 사람마다 다릅니다.",
+          "master": "\"시원하다\"의 정도를 다양하게 표현할 수 있으면 한국어가 풍부해집니다."
         },
         "dialogue": {
-          "context": "무언가를 평가하며",
+          "context": "무언가를 보며",
           "dialogue": [
             {
               "speaker": "A",
@@ -1895,21 +1895,21 @@
             },
             {
               "speaker": "B",
-              "text": "시원하다요.",
-              "romanization": "siwonhadayo.",
+              "text": "시원하네요.",
+              "romanization": "siwonhaneyo.",
               "translation": "It's cool / refreshing."
             },
             {
               "speaker": "A",
-              "text": "정말요?",
-              "romanization": "jeongmalyo?",
-              "translation": "Really?"
+              "text": "그래요? 저도 그렇게 생각해요.",
+              "romanization": "geuraeyo? jeodo geureotge saenggakhaeyo.",
+              "translation": "Really? I think so too."
             },
             {
               "speaker": "B",
-              "text": "네, 아주 좋아요.",
-              "romanization": "ne, aju jotayo.",
-              "translation": "Yes, very nice."
+              "text": "맞아요.",
+              "romanization": "matayo.",
+              "translation": "Right."
             }
           ]
         }
@@ -1918,13 +1918,13 @@
         "word": "cool / refreshing",
         "explanation": "Pleasantly cool temperature. Relief from something blocked.",
         "examples": {
-          "beginner": "This is cool / refreshing.",
-          "intermediate": "It's really cool / refreshing.",
-          "advanced": "Being cool / refreshing is a positive/negative characteristic.",
-          "master": "Understanding the nuance of cool / refreshing enables subtle emotional expression."
+          "beginner": "This is really cool / refreshing!",
+          "intermediate": "It's not as cool / refreshing as I thought.",
+          "advanced": "Feeling that something is cool / refreshing varies from person to person.",
+          "master": "Being able to express varying degrees of \"cool / refreshing\" enriches your Korean."
         },
         "dialogue": {
-          "context": "Evaluating something",
+          "context": "Looking at something",
           "dialogue": [
             {
               "speaker": "A",
@@ -1936,19 +1936,19 @@
               "speaker": "B",
               "text": "It's cool / refreshing.",
               "romanization": "",
-              "translation": "시원하다요."
+              "translation": "시원하네요."
             },
             {
               "speaker": "A",
-              "text": "Really?",
+              "text": "Really? I think so too.",
               "romanization": "",
-              "translation": "정말요?"
+              "translation": "그래요? 저도 그렇게 생각해요."
             },
             {
               "speaker": "B",
-              "text": "Yes, very nice.",
+              "text": "Right.",
               "romanization": "",
-              "translation": "네, 아주 좋아요."
+              "translation": "맞아요."
             }
           ]
         }
@@ -1977,13 +1977,13 @@
         "word": "맛있다",
         "explanation": "음식의 맛이 좋다.",
         "examples": {
-          "beginner": "이것은 맛있다요.",
-          "intermediate": "정말 맛있다네요.",
-          "advanced": "맛있다다는 것은 긍정적인/부정적인 특성입니다.",
-          "master": "맛있다의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다."
+          "beginner": "이건 정말 맛있네요!",
+          "intermediate": "생각보다 맛있지 않아요.",
+          "advanced": "맛있다고 느끼는 것은 사람마다 다릅니다.",
+          "master": "\"맛있다\"의 정도를 다양하게 표현할 수 있으면 한국어가 풍부해집니다."
         },
         "dialogue": {
-          "context": "무언가를 평가하며",
+          "context": "무언가를 보며",
           "dialogue": [
             {
               "speaker": "A",
@@ -1993,21 +1993,21 @@
             },
             {
               "speaker": "B",
-              "text": "맛있다요.",
-              "romanization": "masisdayo.",
+              "text": "맛있네요.",
+              "romanization": "masisneyo.",
               "translation": "It's delicious / tasty."
             },
             {
               "speaker": "A",
-              "text": "정말요?",
-              "romanization": "jeongmalyo?",
-              "translation": "Really?"
+              "text": "그래요? 저도 그렇게 생각해요.",
+              "romanization": "geuraeyo? jeodo geureotge saenggakhaeyo.",
+              "translation": "Really? I think so too."
             },
             {
               "speaker": "B",
-              "text": "네, 아주 좋아요.",
-              "romanization": "ne, aju jotayo.",
-              "translation": "Yes, very nice."
+              "text": "맞아요.",
+              "romanization": "matayo.",
+              "translation": "Right."
             }
           ]
         }
@@ -2016,13 +2016,13 @@
         "word": "delicious / tasty",
         "explanation": "The taste of food is good.",
         "examples": {
-          "beginner": "This is delicious / tasty.",
-          "intermediate": "It's really delicious / tasty.",
-          "advanced": "Being delicious / tasty is a positive/negative characteristic.",
-          "master": "Understanding the nuance of delicious / tasty enables subtle emotional expression."
+          "beginner": "This is really delicious / tasty!",
+          "intermediate": "It's not as delicious / tasty as I thought.",
+          "advanced": "Feeling that something is delicious / tasty varies from person to person.",
+          "master": "Being able to express varying degrees of \"delicious / tasty\" enriches your Korean."
         },
         "dialogue": {
-          "context": "Evaluating something",
+          "context": "Looking at something",
           "dialogue": [
             {
               "speaker": "A",
@@ -2034,19 +2034,19 @@
               "speaker": "B",
               "text": "It's delicious / tasty.",
               "romanization": "",
-              "translation": "맛있다요."
+              "translation": "맛있네요."
             },
             {
               "speaker": "A",
-              "text": "Really?",
+              "text": "Really? I think so too.",
               "romanization": "",
-              "translation": "정말요?"
+              "translation": "그래요? 저도 그렇게 생각해요."
             },
             {
               "speaker": "B",
-              "text": "Yes, very nice.",
+              "text": "Right.",
               "romanization": "",
-              "translation": "네, 아주 좋아요."
+              "translation": "맞아요."
             }
           ]
         }
@@ -2075,13 +2075,13 @@
         "word": "맛없다",
         "explanation": "음식의 맛이 좋지 않다.",
         "examples": {
-          "beginner": "이것은 맛없다요.",
-          "intermediate": "정말 맛없다네요.",
-          "advanced": "맛없다다는 것은 긍정적인/부정적인 특성입니다.",
-          "master": "맛없다의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다."
+          "beginner": "이건 정말 맛없네요!",
+          "intermediate": "생각보다 맛없지 않아요.",
+          "advanced": "맛없다고 느끼는 것은 사람마다 다릅니다.",
+          "master": "\"맛없다\"의 정도를 다양하게 표현할 수 있으면 한국어가 풍부해집니다."
         },
         "dialogue": {
-          "context": "무언가를 평가하며",
+          "context": "무언가를 보며",
           "dialogue": [
             {
               "speaker": "A",
@@ -2091,21 +2091,21 @@
             },
             {
               "speaker": "B",
-              "text": "맛없다요.",
-              "romanization": "maseopdayo.",
+              "text": "맛없네요.",
+              "romanization": "maseopneyo.",
               "translation": "It's not delicious / tasteless."
             },
             {
               "speaker": "A",
-              "text": "정말요?",
-              "romanization": "jeongmalyo?",
-              "translation": "Really?"
+              "text": "그래요? 저도 그렇게 생각해요.",
+              "romanization": "geuraeyo? jeodo geureotge saenggakhaeyo.",
+              "translation": "Really? I think so too."
             },
             {
               "speaker": "B",
-              "text": "네, 아주 좋아요.",
-              "romanization": "ne, aju jotayo.",
-              "translation": "Yes, very nice."
+              "text": "맞아요.",
+              "romanization": "matayo.",
+              "translation": "Right."
             }
           ]
         }
@@ -2114,13 +2114,13 @@
         "word": "not delicious / tasteless",
         "explanation": "The taste of food is not good.",
         "examples": {
-          "beginner": "This is not delicious / tasteless.",
-          "intermediate": "It's really not delicious / tasteless.",
-          "advanced": "Being not delicious / tasteless is a positive/negative characteristic.",
-          "master": "Understanding the nuance of not delicious / tasteless enables subtle emotional expression."
+          "beginner": "This is really not delicious / tasteless!",
+          "intermediate": "It's not as not delicious / tasteless as I thought.",
+          "advanced": "Feeling that something is not delicious / tasteless varies from person to person.",
+          "master": "Being able to express varying degrees of \"not delicious / tasteless\" enriches your Korean."
         },
         "dialogue": {
-          "context": "Evaluating something",
+          "context": "Looking at something",
           "dialogue": [
             {
               "speaker": "A",
@@ -2132,19 +2132,19 @@
               "speaker": "B",
               "text": "It's not delicious / tasteless.",
               "romanization": "",
-              "translation": "맛없다요."
+              "translation": "맛없네요."
             },
             {
               "speaker": "A",
-              "text": "Really?",
+              "text": "Really? I think so too.",
               "romanization": "",
-              "translation": "정말요?"
+              "translation": "그래요? 저도 그렇게 생각해요."
             },
             {
               "speaker": "B",
-              "text": "Yes, very nice.",
+              "text": "Right.",
               "romanization": "",
-              "translation": "네, 아주 좋아요."
+              "translation": "맞아요."
             }
           ]
         }
@@ -2173,13 +2173,13 @@
         "word": "짜다",
         "explanation": "소금 맛이 강하다.",
         "examples": {
-          "beginner": "이것은 짜다요.",
-          "intermediate": "정말 짜다네요.",
-          "advanced": "짜다다는 것은 긍정적인/부정적인 특성입니다.",
-          "master": "짜다의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다."
+          "beginner": "이건 정말 짜네요!",
+          "intermediate": "생각보다 짜지 않아요.",
+          "advanced": "짜다고 느끼는 것은 사람마다 다릅니다.",
+          "master": "\"짜다\"의 정도를 다양하게 표현할 수 있으면 한국어가 풍부해집니다."
         },
         "dialogue": {
-          "context": "무언가를 평가하며",
+          "context": "무언가를 보며",
           "dialogue": [
             {
               "speaker": "A",
@@ -2189,21 +2189,21 @@
             },
             {
               "speaker": "B",
-              "text": "짜다요.",
-              "romanization": "jjadayo.",
+              "text": "짜네요.",
+              "romanization": "jjaneyo.",
               "translation": "It's salty."
             },
             {
               "speaker": "A",
-              "text": "정말요?",
-              "romanization": "jeongmalyo?",
-              "translation": "Really?"
+              "text": "그래요? 저도 그렇게 생각해요.",
+              "romanization": "geuraeyo? jeodo geureotge saenggakhaeyo.",
+              "translation": "Really? I think so too."
             },
             {
               "speaker": "B",
-              "text": "네, 아주 좋아요.",
-              "romanization": "ne, aju jotayo.",
-              "translation": "Yes, very nice."
+              "text": "맞아요.",
+              "romanization": "matayo.",
+              "translation": "Right."
             }
           ]
         }
@@ -2212,13 +2212,13 @@
         "word": "salty",
         "explanation": "The taste of salt is strong.",
         "examples": {
-          "beginner": "This is salty.",
-          "intermediate": "It's really salty.",
-          "advanced": "Being salty is a positive/negative characteristic.",
-          "master": "Understanding the nuance of salty enables subtle emotional expression."
+          "beginner": "This is really salty!",
+          "intermediate": "It's not as salty as I thought.",
+          "advanced": "Feeling that something is salty varies from person to person.",
+          "master": "Being able to express varying degrees of \"salty\" enriches your Korean."
         },
         "dialogue": {
-          "context": "Evaluating something",
+          "context": "Looking at something",
           "dialogue": [
             {
               "speaker": "A",
@@ -2230,19 +2230,19 @@
               "speaker": "B",
               "text": "It's salty.",
               "romanization": "",
-              "translation": "짜다요."
+              "translation": "짜네요."
             },
             {
               "speaker": "A",
-              "text": "Really?",
+              "text": "Really? I think so too.",
               "romanization": "",
-              "translation": "정말요?"
+              "translation": "그래요? 저도 그렇게 생각해요."
             },
             {
               "speaker": "B",
-              "text": "Yes, very nice.",
+              "text": "Right.",
               "romanization": "",
-              "translation": "네, 아주 좋아요."
+              "translation": "맞아요."
             }
           ]
         }
@@ -2271,13 +2271,13 @@
         "word": "달다",
         "explanation": "설탕 맛이 강하다.",
         "examples": {
-          "beginner": "이것은 달다요.",
-          "intermediate": "정말 달다네요.",
-          "advanced": "달다다는 것은 긍정적인/부정적인 특성입니다.",
-          "master": "달다의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다."
+          "beginner": "이건 정말 달네요!",
+          "intermediate": "생각보다 달지 않아요.",
+          "advanced": "달다고 느끼는 것은 사람마다 다릅니다.",
+          "master": "\"달다\"의 정도를 다양하게 표현할 수 있으면 한국어가 풍부해집니다."
         },
         "dialogue": {
-          "context": "무언가를 평가하며",
+          "context": "무언가를 보며",
           "dialogue": [
             {
               "speaker": "A",
@@ -2287,21 +2287,21 @@
             },
             {
               "speaker": "B",
-              "text": "달다요.",
-              "romanization": "daldayo.",
+              "text": "달네요.",
+              "romanization": "dalneyo.",
               "translation": "It's sweet."
             },
             {
               "speaker": "A",
-              "text": "정말요?",
-              "romanization": "jeongmalyo?",
-              "translation": "Really?"
+              "text": "그래요? 저도 그렇게 생각해요.",
+              "romanization": "geuraeyo? jeodo geureotge saenggakhaeyo.",
+              "translation": "Really? I think so too."
             },
             {
               "speaker": "B",
-              "text": "네, 아주 좋아요.",
-              "romanization": "ne, aju jotayo.",
-              "translation": "Yes, very nice."
+              "text": "맞아요.",
+              "romanization": "matayo.",
+              "translation": "Right."
             }
           ]
         }
@@ -2310,13 +2310,13 @@
         "word": "sweet",
         "explanation": "The taste of sugar is strong.",
         "examples": {
-          "beginner": "This is sweet.",
-          "intermediate": "It's really sweet.",
-          "advanced": "Being sweet is a positive/negative characteristic.",
-          "master": "Understanding the nuance of sweet enables subtle emotional expression."
+          "beginner": "This is really sweet!",
+          "intermediate": "It's not as sweet as I thought.",
+          "advanced": "Feeling that something is sweet varies from person to person.",
+          "master": "Being able to express varying degrees of \"sweet\" enriches your Korean."
         },
         "dialogue": {
-          "context": "Evaluating something",
+          "context": "Looking at something",
           "dialogue": [
             {
               "speaker": "A",
@@ -2328,19 +2328,19 @@
               "speaker": "B",
               "text": "It's sweet.",
               "romanization": "",
-              "translation": "달다요."
+              "translation": "달네요."
             },
             {
               "speaker": "A",
-              "text": "Really?",
+              "text": "Really? I think so too.",
               "romanization": "",
-              "translation": "정말요?"
+              "translation": "그래요? 저도 그렇게 생각해요."
             },
             {
               "speaker": "B",
-              "text": "Yes, very nice.",
+              "text": "Right.",
               "romanization": "",
-              "translation": "네, 아주 좋아요."
+              "translation": "맞아요."
             }
           ]
         }
@@ -2369,13 +2369,13 @@
         "word": "맵다",
         "explanation": "고추 맛이 강하다. 혀가 아프다.",
         "examples": {
-          "beginner": "이것은 맵다요.",
-          "intermediate": "정말 맵다네요.",
-          "advanced": "맵다다는 것은 긍정적인/부정적인 특성입니다.",
-          "master": "맵다의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다."
+          "beginner": "이건 정말 맵네요!",
+          "intermediate": "생각보다 맵지 않아요.",
+          "advanced": "맵다고 느끼는 것은 사람마다 다릅니다.",
+          "master": "\"맵다\"의 정도를 다양하게 표현할 수 있으면 한국어가 풍부해집니다."
         },
         "dialogue": {
-          "context": "무언가를 평가하며",
+          "context": "무언가를 보며",
           "dialogue": [
             {
               "speaker": "A",
@@ -2385,21 +2385,21 @@
             },
             {
               "speaker": "B",
-              "text": "맵다요.",
-              "romanization": "maepdayo.",
+              "text": "맵네요.",
+              "romanization": "maepneyo.",
               "translation": "It's spicy."
             },
             {
               "speaker": "A",
-              "text": "정말요?",
-              "romanization": "jeongmalyo?",
-              "translation": "Really?"
+              "text": "그래요? 저도 그렇게 생각해요.",
+              "romanization": "geuraeyo? jeodo geureotge saenggakhaeyo.",
+              "translation": "Really? I think so too."
             },
             {
               "speaker": "B",
-              "text": "네, 아주 좋아요.",
-              "romanization": "ne, aju jotayo.",
-              "translation": "Yes, very nice."
+              "text": "맞아요.",
+              "romanization": "matayo.",
+              "translation": "Right."
             }
           ]
         }
@@ -2408,13 +2408,13 @@
         "word": "spicy",
         "explanation": "The taste of chili is strong. The tongue hurts.",
         "examples": {
-          "beginner": "This is spicy.",
-          "intermediate": "It's really spicy.",
-          "advanced": "Being spicy is a positive/negative characteristic.",
-          "master": "Understanding the nuance of spicy enables subtle emotional expression."
+          "beginner": "This is really spicy!",
+          "intermediate": "It's not as spicy as I thought.",
+          "advanced": "Feeling that something is spicy varies from person to person.",
+          "master": "Being able to express varying degrees of \"spicy\" enriches your Korean."
         },
         "dialogue": {
-          "context": "Evaluating something",
+          "context": "Looking at something",
           "dialogue": [
             {
               "speaker": "A",
@@ -2426,19 +2426,19 @@
               "speaker": "B",
               "text": "It's spicy.",
               "romanization": "",
-              "translation": "맵다요."
+              "translation": "맵네요."
             },
             {
               "speaker": "A",
-              "text": "Really?",
+              "text": "Really? I think so too.",
               "romanization": "",
-              "translation": "정말요?"
+              "translation": "그래요? 저도 그렇게 생각해요."
             },
             {
               "speaker": "B",
-              "text": "Yes, very nice.",
+              "text": "Right.",
               "romanization": "",
-              "translation": "네, 아주 좋아요."
+              "translation": "맞아요."
             }
           ]
         }
@@ -2467,13 +2467,13 @@
         "word": "시다",
         "explanation": "식초나 레몬 같은 맛이다.",
         "examples": {
-          "beginner": "이것은 시다요.",
-          "intermediate": "정말 시다네요.",
-          "advanced": "시다다는 것은 긍정적인/부정적인 특성입니다.",
-          "master": "시다의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다."
+          "beginner": "이건 정말 시네요!",
+          "intermediate": "생각보다 시지 않아요.",
+          "advanced": "시다고 느끼는 것은 사람마다 다릅니다.",
+          "master": "\"시다\"의 정도를 다양하게 표현할 수 있으면 한국어가 풍부해집니다."
         },
         "dialogue": {
-          "context": "무언가를 평가하며",
+          "context": "무언가를 보며",
           "dialogue": [
             {
               "speaker": "A",
@@ -2483,21 +2483,21 @@
             },
             {
               "speaker": "B",
-              "text": "시다요.",
-              "romanization": "sidayo.",
+              "text": "시네요.",
+              "romanization": "sineyo.",
               "translation": "It's sour."
             },
             {
               "speaker": "A",
-              "text": "정말요?",
-              "romanization": "jeongmalyo?",
-              "translation": "Really?"
+              "text": "그래요? 저도 그렇게 생각해요.",
+              "romanization": "geuraeyo? jeodo geureotge saenggakhaeyo.",
+              "translation": "Really? I think so too."
             },
             {
               "speaker": "B",
-              "text": "네, 아주 좋아요.",
-              "romanization": "ne, aju jotayo.",
-              "translation": "Yes, very nice."
+              "text": "맞아요.",
+              "romanization": "matayo.",
+              "translation": "Right."
             }
           ]
         }
@@ -2506,13 +2506,13 @@
         "word": "sour",
         "explanation": "A taste like vinegar or lemon.",
         "examples": {
-          "beginner": "This is sour.",
-          "intermediate": "It's really sour.",
-          "advanced": "Being sour is a positive/negative characteristic.",
-          "master": "Understanding the nuance of sour enables subtle emotional expression."
+          "beginner": "This is really sour!",
+          "intermediate": "It's not as sour as I thought.",
+          "advanced": "Feeling that something is sour varies from person to person.",
+          "master": "Being able to express varying degrees of \"sour\" enriches your Korean."
         },
         "dialogue": {
-          "context": "Evaluating something",
+          "context": "Looking at something",
           "dialogue": [
             {
               "speaker": "A",
@@ -2524,19 +2524,19 @@
               "speaker": "B",
               "text": "It's sour.",
               "romanization": "",
-              "translation": "시다요."
+              "translation": "시네요."
             },
             {
               "speaker": "A",
-              "text": "Really?",
+              "text": "Really? I think so too.",
               "romanization": "",
-              "translation": "정말요?"
+              "translation": "그래요? 저도 그렇게 생각해요."
             },
             {
               "speaker": "B",
-              "text": "Yes, very nice.",
+              "text": "Right.",
               "romanization": "",
-              "translation": "네, 아주 좋아요."
+              "translation": "맞아요."
             }
           ]
         }
@@ -2565,13 +2565,13 @@
         "word": "쓰다",
         "explanation": "약이나 쓴 차 같은 맛이다.",
         "examples": {
-          "beginner": "이것은 쓰다요.",
-          "intermediate": "정말 쓰다네요.",
-          "advanced": "쓰다다는 것은 긍정적인/부정적인 특성입니다.",
-          "master": "쓰다의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다."
+          "beginner": "이건 정말 쓰네요!",
+          "intermediate": "생각보다 쓰지 않아요.",
+          "advanced": "쓰다고 느끼는 것은 사람마다 다릅니다.",
+          "master": "\"쓰다\"의 정도를 다양하게 표현할 수 있으면 한국어가 풍부해집니다."
         },
         "dialogue": {
-          "context": "무언가를 평가하며",
+          "context": "무언가를 보며",
           "dialogue": [
             {
               "speaker": "A",
@@ -2581,21 +2581,21 @@
             },
             {
               "speaker": "B",
-              "text": "쓰다요.",
-              "romanization": "sseudayo.",
+              "text": "쓰네요.",
+              "romanization": "sseuneyo.",
               "translation": "It's bitter."
             },
             {
               "speaker": "A",
-              "text": "정말요?",
-              "romanization": "jeongmalyo?",
-              "translation": "Really?"
+              "text": "그래요? 저도 그렇게 생각해요.",
+              "romanization": "geuraeyo? jeodo geureotge saenggakhaeyo.",
+              "translation": "Really? I think so too."
             },
             {
               "speaker": "B",
-              "text": "네, 아주 좋아요.",
-              "romanization": "ne, aju jotayo.",
-              "translation": "Yes, very nice."
+              "text": "맞아요.",
+              "romanization": "matayo.",
+              "translation": "Right."
             }
           ]
         }
@@ -2604,13 +2604,13 @@
         "word": "bitter",
         "explanation": "A taste like medicine or bitter tea.",
         "examples": {
-          "beginner": "This is bitter.",
-          "intermediate": "It's really bitter.",
-          "advanced": "Being bitter is a positive/negative characteristic.",
-          "master": "Understanding the nuance of bitter enables subtle emotional expression."
+          "beginner": "This is really bitter!",
+          "intermediate": "It's not as bitter as I thought.",
+          "advanced": "Feeling that something is bitter varies from person to person.",
+          "master": "Being able to express varying degrees of \"bitter\" enriches your Korean."
         },
         "dialogue": {
-          "context": "Evaluating something",
+          "context": "Looking at something",
           "dialogue": [
             {
               "speaker": "A",
@@ -2622,19 +2622,19 @@
               "speaker": "B",
               "text": "It's bitter.",
               "romanization": "",
-              "translation": "쓰다요."
+              "translation": "쓰네요."
             },
             {
               "speaker": "A",
-              "text": "Really?",
+              "text": "Really? I think so too.",
               "romanization": "",
-              "translation": "정말요?"
+              "translation": "그래요? 저도 그렇게 생각해요."
             },
             {
               "speaker": "B",
-              "text": "Yes, very nice.",
+              "text": "Right.",
               "romanization": "",
-              "translation": "네, 아주 좋아요."
+              "translation": "맞아요."
             }
           ]
         }
@@ -2663,13 +2663,13 @@
         "word": "어렵다",
         "explanation": "하기가 쉽지 않다. 이해하기 힘들다.",
         "examples": {
-          "beginner": "이것은 어렵다요.",
-          "intermediate": "정말 어렵다네요.",
-          "advanced": "어렵다다는 것은 긍정적인/부정적인 특성입니다.",
-          "master": "어렵다의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다."
+          "beginner": "이건 정말 어렵네요!",
+          "intermediate": "생각보다 어렵지 않아요.",
+          "advanced": "어렵다고 느끼는 것은 사람마다 다릅니다.",
+          "master": "\"어렵다\"의 정도를 다양하게 표현할 수 있으면 한국어가 풍부해집니다."
         },
         "dialogue": {
-          "context": "무언가를 평가하며",
+          "context": "무언가를 보며",
           "dialogue": [
             {
               "speaker": "A",
@@ -2679,21 +2679,21 @@
             },
             {
               "speaker": "B",
-              "text": "어렵다요.",
-              "romanization": "eoryeopdayo.",
+              "text": "어렵네요.",
+              "romanization": "eoryeopneyo.",
               "translation": "It's difficult / hard."
             },
             {
               "speaker": "A",
-              "text": "정말요?",
-              "romanization": "jeongmalyo?",
-              "translation": "Really?"
+              "text": "그래요? 저도 그렇게 생각해요.",
+              "romanization": "geuraeyo? jeodo geureotge saenggakhaeyo.",
+              "translation": "Really? I think so too."
             },
             {
               "speaker": "B",
-              "text": "네, 아주 좋아요.",
-              "romanization": "ne, aju jotayo.",
-              "translation": "Yes, very nice."
+              "text": "맞아요.",
+              "romanization": "matayo.",
+              "translation": "Right."
             }
           ]
         }
@@ -2702,13 +2702,13 @@
         "word": "difficult / hard",
         "explanation": "Not easy to do. Hard to understand.",
         "examples": {
-          "beginner": "This is difficult / hard.",
-          "intermediate": "It's really difficult / hard.",
-          "advanced": "Being difficult / hard is a positive/negative characteristic.",
-          "master": "Understanding the nuance of difficult / hard enables subtle emotional expression."
+          "beginner": "This is really difficult / hard!",
+          "intermediate": "It's not as difficult / hard as I thought.",
+          "advanced": "Feeling that something is difficult / hard varies from person to person.",
+          "master": "Being able to express varying degrees of \"difficult / hard\" enriches your Korean."
         },
         "dialogue": {
-          "context": "Evaluating something",
+          "context": "Looking at something",
           "dialogue": [
             {
               "speaker": "A",
@@ -2720,19 +2720,19 @@
               "speaker": "B",
               "text": "It's difficult / hard.",
               "romanization": "",
-              "translation": "어렵다요."
+              "translation": "어렵네요."
             },
             {
               "speaker": "A",
-              "text": "Really?",
+              "text": "Really? I think so too.",
               "romanization": "",
-              "translation": "정말요?"
+              "translation": "그래요? 저도 그렇게 생각해요."
             },
             {
               "speaker": "B",
-              "text": "Yes, very nice.",
+              "text": "Right.",
               "romanization": "",
-              "translation": "네, 아주 좋아요."
+              "translation": "맞아요."
             }
           ]
         }
@@ -2761,13 +2761,13 @@
         "word": "쉽다",
         "explanation": "하기가 어렵지 않다. 이해하기 간단하다.",
         "examples": {
-          "beginner": "이것은 쉽다요.",
-          "intermediate": "정말 쉽다네요.",
-          "advanced": "쉽다다는 것은 긍정적인/부정적인 특성입니다.",
-          "master": "쉽다의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다."
+          "beginner": "이건 정말 쉽네요!",
+          "intermediate": "생각보다 쉽지 않아요.",
+          "advanced": "쉽다고 느끼는 것은 사람마다 다릅니다.",
+          "master": "\"쉽다\"의 정도를 다양하게 표현할 수 있으면 한국어가 풍부해집니다."
         },
         "dialogue": {
-          "context": "무언가를 평가하며",
+          "context": "무언가를 보며",
           "dialogue": [
             {
               "speaker": "A",
@@ -2777,21 +2777,21 @@
             },
             {
               "speaker": "B",
-              "text": "쉽다요.",
-              "romanization": "swipdayo.",
+              "text": "쉽네요.",
+              "romanization": "swipneyo.",
               "translation": "It's easy."
             },
             {
               "speaker": "A",
-              "text": "정말요?",
-              "romanization": "jeongmalyo?",
-              "translation": "Really?"
+              "text": "그래요? 저도 그렇게 생각해요.",
+              "romanization": "geuraeyo? jeodo geureotge saenggakhaeyo.",
+              "translation": "Really? I think so too."
             },
             {
               "speaker": "B",
-              "text": "네, 아주 좋아요.",
-              "romanization": "ne, aju jotayo.",
-              "translation": "Yes, very nice."
+              "text": "맞아요.",
+              "romanization": "matayo.",
+              "translation": "Right."
             }
           ]
         }
@@ -2800,13 +2800,13 @@
         "word": "easy",
         "explanation": "Not difficult to do. Simple to understand.",
         "examples": {
-          "beginner": "This is easy.",
-          "intermediate": "It's really easy.",
-          "advanced": "Being easy is a positive/negative characteristic.",
-          "master": "Understanding the nuance of easy enables subtle emotional expression."
+          "beginner": "This is really easy!",
+          "intermediate": "It's not as easy as I thought.",
+          "advanced": "Feeling that something is easy varies from person to person.",
+          "master": "Being able to express varying degrees of \"easy\" enriches your Korean."
         },
         "dialogue": {
-          "context": "Evaluating something",
+          "context": "Looking at something",
           "dialogue": [
             {
               "speaker": "A",
@@ -2818,19 +2818,19 @@
               "speaker": "B",
               "text": "It's easy.",
               "romanization": "",
-              "translation": "쉽다요."
+              "translation": "쉽네요."
             },
             {
               "speaker": "A",
-              "text": "Really?",
+              "text": "Really? I think so too.",
               "romanization": "",
-              "translation": "정말요?"
+              "translation": "그래요? 저도 그렇게 생각해요."
             },
             {
               "speaker": "B",
-              "text": "Yes, very nice.",
+              "text": "Right.",
               "romanization": "",
-              "translation": "네, 아주 좋아요."
+              "translation": "맞아요."
             }
           ]
         }
@@ -2859,13 +2859,13 @@
         "word": "재미있다",
         "explanation": "즐겁고 흥미롭다.",
         "examples": {
-          "beginner": "이것은 재미있다요.",
-          "intermediate": "정말 재미있다네요.",
-          "advanced": "재미있다다는 것은 긍정적인/부정적인 특성입니다.",
-          "master": "재미있다의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다."
+          "beginner": "이건 정말 재미있네요!",
+          "intermediate": "생각보다 재미있지 않아요.",
+          "advanced": "재미있다고 느끼는 것은 사람마다 다릅니다.",
+          "master": "\"재미있다\"의 정도를 다양하게 표현할 수 있으면 한국어가 풍부해집니다."
         },
         "dialogue": {
-          "context": "무언가를 평가하며",
+          "context": "무언가를 보며",
           "dialogue": [
             {
               "speaker": "A",
@@ -2875,21 +2875,21 @@
             },
             {
               "speaker": "B",
-              "text": "재미있다요.",
-              "romanization": "jaemiisdayo.",
+              "text": "재미있네요.",
+              "romanization": "jaemiisneyo.",
               "translation": "It's interesting / fun."
             },
             {
               "speaker": "A",
-              "text": "정말요?",
-              "romanization": "jeongmalyo?",
-              "translation": "Really?"
+              "text": "그래요? 저도 그렇게 생각해요.",
+              "romanization": "geuraeyo? jeodo geureotge saenggakhaeyo.",
+              "translation": "Really? I think so too."
             },
             {
               "speaker": "B",
-              "text": "네, 아주 좋아요.",
-              "romanization": "ne, aju jotayo.",
-              "translation": "Yes, very nice."
+              "text": "맞아요.",
+              "romanization": "matayo.",
+              "translation": "Right."
             }
           ]
         }
@@ -2898,13 +2898,13 @@
         "word": "interesting / fun",
         "explanation": "Enjoyable and interesting.",
         "examples": {
-          "beginner": "This is interesting / fun.",
-          "intermediate": "It's really interesting / fun.",
-          "advanced": "Being interesting / fun is a positive/negative characteristic.",
-          "master": "Understanding the nuance of interesting / fun enables subtle emotional expression."
+          "beginner": "This is really interesting / fun!",
+          "intermediate": "It's not as interesting / fun as I thought.",
+          "advanced": "Feeling that something is interesting / fun varies from person to person.",
+          "master": "Being able to express varying degrees of \"interesting / fun\" enriches your Korean."
         },
         "dialogue": {
-          "context": "Evaluating something",
+          "context": "Looking at something",
           "dialogue": [
             {
               "speaker": "A",
@@ -2916,19 +2916,19 @@
               "speaker": "B",
               "text": "It's interesting / fun.",
               "romanization": "",
-              "translation": "재미있다요."
+              "translation": "재미있네요."
             },
             {
               "speaker": "A",
-              "text": "Really?",
+              "text": "Really? I think so too.",
               "romanization": "",
-              "translation": "정말요?"
+              "translation": "그래요? 저도 그렇게 생각해요."
             },
             {
               "speaker": "B",
-              "text": "Yes, very nice.",
+              "text": "Right.",
               "romanization": "",
-              "translation": "네, 아주 좋아요."
+              "translation": "맞아요."
             }
           ]
         }
@@ -2957,13 +2957,13 @@
         "word": "재미없다",
         "explanation": "즐겁지 않고 지루하다.",
         "examples": {
-          "beginner": "이것은 재미없다요.",
-          "intermediate": "정말 재미없다네요.",
-          "advanced": "재미없다다는 것은 긍정적인/부정적인 특성입니다.",
-          "master": "재미없다의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다."
+          "beginner": "이건 정말 재미없네요!",
+          "intermediate": "생각보다 재미없지 않아요.",
+          "advanced": "재미없다고 느끼는 것은 사람마다 다릅니다.",
+          "master": "\"재미없다\"의 정도를 다양하게 표현할 수 있으면 한국어가 풍부해집니다."
         },
         "dialogue": {
-          "context": "무언가를 평가하며",
+          "context": "무언가를 보며",
           "dialogue": [
             {
               "speaker": "A",
@@ -2973,21 +2973,21 @@
             },
             {
               "speaker": "B",
-              "text": "재미없다요.",
-              "romanization": "jaemieopdayo.",
+              "text": "재미없네요.",
+              "romanization": "jaemieopneyo.",
               "translation": "It's boring / not fun."
             },
             {
               "speaker": "A",
-              "text": "정말요?",
-              "romanization": "jeongmalyo?",
-              "translation": "Really?"
+              "text": "그래요? 저도 그렇게 생각해요.",
+              "romanization": "geuraeyo? jeodo geureotge saenggakhaeyo.",
+              "translation": "Really? I think so too."
             },
             {
               "speaker": "B",
-              "text": "네, 아주 좋아요.",
-              "romanization": "ne, aju jotayo.",
-              "translation": "Yes, very nice."
+              "text": "맞아요.",
+              "romanization": "matayo.",
+              "translation": "Right."
             }
           ]
         }
@@ -2996,13 +2996,13 @@
         "word": "boring / not fun",
         "explanation": "Not enjoyable and dull.",
         "examples": {
-          "beginner": "This is boring / not fun.",
-          "intermediate": "It's really boring / not fun.",
-          "advanced": "Being boring / not fun is a positive/negative characteristic.",
-          "master": "Understanding the nuance of boring / not fun enables subtle emotional expression."
+          "beginner": "This is really boring / not fun!",
+          "intermediate": "It's not as boring / not fun as I thought.",
+          "advanced": "Feeling that something is boring / not fun varies from person to person.",
+          "master": "Being able to express varying degrees of \"boring / not fun\" enriches your Korean."
         },
         "dialogue": {
-          "context": "Evaluating something",
+          "context": "Looking at something",
           "dialogue": [
             {
               "speaker": "A",
@@ -3014,19 +3014,19 @@
               "speaker": "B",
               "text": "It's boring / not fun.",
               "romanization": "",
-              "translation": "재미없다요."
+              "translation": "재미없네요."
             },
             {
               "speaker": "A",
-              "text": "Really?",
+              "text": "Really? I think so too.",
               "romanization": "",
-              "translation": "정말요?"
+              "translation": "그래요? 저도 그렇게 생각해요."
             },
             {
               "speaker": "B",
-              "text": "Yes, very nice.",
+              "text": "Right.",
               "romanization": "",
-              "translation": "네, 아주 좋아요."
+              "translation": "맞아요."
             }
           ]
         }
@@ -3055,13 +3055,13 @@
         "word": "바쁘다",
         "explanation": "할 일이 많아서 시간이 없다.",
         "examples": {
-          "beginner": "이것은 바쁘다요.",
-          "intermediate": "정말 바쁘다네요.",
-          "advanced": "바쁘다다는 것은 긍정적인/부정적인 특성입니다.",
-          "master": "바쁘다의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다."
+          "beginner": "이건 정말 바쁘네요!",
+          "intermediate": "생각보다 바쁘지 않아요.",
+          "advanced": "바쁘다고 느끼는 것은 사람마다 다릅니다.",
+          "master": "\"바쁘다\"의 정도를 다양하게 표현할 수 있으면 한국어가 풍부해집니다."
         },
         "dialogue": {
-          "context": "무언가를 평가하며",
+          "context": "무언가를 보며",
           "dialogue": [
             {
               "speaker": "A",
@@ -3071,21 +3071,21 @@
             },
             {
               "speaker": "B",
-              "text": "바쁘다요.",
-              "romanization": "bappeudayo.",
+              "text": "바쁘네요.",
+              "romanization": "bappeuneyo.",
               "translation": "It's busy."
             },
             {
               "speaker": "A",
-              "text": "정말요?",
-              "romanization": "jeongmalyo?",
-              "translation": "Really?"
+              "text": "그래요? 저도 그렇게 생각해요.",
+              "romanization": "geuraeyo? jeodo geureotge saenggakhaeyo.",
+              "translation": "Really? I think so too."
             },
             {
               "speaker": "B",
-              "text": "네, 아주 좋아요.",
-              "romanization": "ne, aju jotayo.",
-              "translation": "Yes, very nice."
+              "text": "맞아요.",
+              "romanization": "matayo.",
+              "translation": "Right."
             }
           ]
         }
@@ -3094,13 +3094,13 @@
         "word": "busy",
         "explanation": "Having many things to do and no time.",
         "examples": {
-          "beginner": "This is busy.",
-          "intermediate": "It's really busy.",
-          "advanced": "Being busy is a positive/negative characteristic.",
-          "master": "Understanding the nuance of busy enables subtle emotional expression."
+          "beginner": "This is really busy!",
+          "intermediate": "It's not as busy as I thought.",
+          "advanced": "Feeling that something is busy varies from person to person.",
+          "master": "Being able to express varying degrees of \"busy\" enriches your Korean."
         },
         "dialogue": {
-          "context": "Evaluating something",
+          "context": "Looking at something",
           "dialogue": [
             {
               "speaker": "A",
@@ -3112,19 +3112,19 @@
               "speaker": "B",
               "text": "It's busy.",
               "romanization": "",
-              "translation": "바쁘다요."
+              "translation": "바쁘네요."
             },
             {
               "speaker": "A",
-              "text": "Really?",
+              "text": "Really? I think so too.",
               "romanization": "",
-              "translation": "정말요?"
+              "translation": "그래요? 저도 그렇게 생각해요."
             },
             {
               "speaker": "B",
-              "text": "Yes, very nice.",
+              "text": "Right.",
               "romanization": "",
-              "translation": "네, 아주 좋아요."
+              "translation": "맞아요."
             }
           ]
         }
@@ -3153,13 +3153,13 @@
         "word": "한가하다",
         "explanation": "할 일이 없어서 여유롭다.",
         "examples": {
-          "beginner": "이것은 한가하다요.",
-          "intermediate": "정말 한가하다네요.",
-          "advanced": "한가하다다는 것은 긍정적인/부정적인 특성입니다.",
-          "master": "한가하다의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다."
+          "beginner": "이건 정말 한가하네요!",
+          "intermediate": "생각보다 한가하지 않아요.",
+          "advanced": "한가하다고 느끼는 것은 사람마다 다릅니다.",
+          "master": "\"한가하다\"의 정도를 다양하게 표현할 수 있으면 한국어가 풍부해집니다."
         },
         "dialogue": {
-          "context": "무언가를 평가하며",
+          "context": "무언가를 보며",
           "dialogue": [
             {
               "speaker": "A",
@@ -3169,21 +3169,21 @@
             },
             {
               "speaker": "B",
-              "text": "한가하다요.",
-              "romanization": "hangahadayo.",
+              "text": "한가하네요.",
+              "romanization": "hangahaneyo.",
               "translation": "It's free / not busy / leisurely."
             },
             {
               "speaker": "A",
-              "text": "정말요?",
-              "romanization": "jeongmalyo?",
-              "translation": "Really?"
+              "text": "그래요? 저도 그렇게 생각해요.",
+              "romanization": "geuraeyo? jeodo geureotge saenggakhaeyo.",
+              "translation": "Really? I think so too."
             },
             {
               "speaker": "B",
-              "text": "네, 아주 좋아요.",
-              "romanization": "ne, aju jotayo.",
-              "translation": "Yes, very nice."
+              "text": "맞아요.",
+              "romanization": "matayo.",
+              "translation": "Right."
             }
           ]
         }
@@ -3192,13 +3192,13 @@
         "word": "free / not busy / leisurely",
         "explanation": "Having nothing to do and being relaxed.",
         "examples": {
-          "beginner": "This is free / not busy / leisurely.",
-          "intermediate": "It's really free / not busy / leisurely.",
-          "advanced": "Being free / not busy / leisurely is a positive/negative characteristic.",
-          "master": "Understanding the nuance of free / not busy / leisurely enables subtle emotional expression."
+          "beginner": "This is really free / not busy / leisurely!",
+          "intermediate": "It's not as free / not busy / leisurely as I thought.",
+          "advanced": "Feeling that something is free / not busy / leisurely varies from person to person.",
+          "master": "Being able to express varying degrees of \"free / not busy / leisurely\" enriches your Korean."
         },
         "dialogue": {
-          "context": "Evaluating something",
+          "context": "Looking at something",
           "dialogue": [
             {
               "speaker": "A",
@@ -3210,19 +3210,19 @@
               "speaker": "B",
               "text": "It's free / not busy / leisurely.",
               "romanization": "",
-              "translation": "한가하다요."
+              "translation": "한가하네요."
             },
             {
               "speaker": "A",
-              "text": "Really?",
+              "text": "Really? I think so too.",
               "romanization": "",
-              "translation": "정말요?"
+              "translation": "그래요? 저도 그렇게 생각해요."
             },
             {
               "speaker": "B",
-              "text": "Yes, very nice.",
+              "text": "Right.",
               "romanization": "",
-              "translation": "네, 아주 좋아요."
+              "translation": "맞아요."
             }
           ]
         }
@@ -3251,13 +3251,13 @@
         "word": "피곤하다",
         "explanation": "몸과 마음이 지쳐 있다.",
         "examples": {
-          "beginner": "이것은 피곤하다요.",
-          "intermediate": "정말 피곤하다네요.",
-          "advanced": "피곤하다다는 것은 긍정적인/부정적인 특성입니다.",
-          "master": "피곤하다의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다."
+          "beginner": "이건 정말 피곤하네요!",
+          "intermediate": "생각보다 피곤하지 않아요.",
+          "advanced": "피곤하다고 느끼는 것은 사람마다 다릅니다.",
+          "master": "\"피곤하다\"의 정도를 다양하게 표현할 수 있으면 한국어가 풍부해집니다."
         },
         "dialogue": {
-          "context": "무언가를 평가하며",
+          "context": "무언가를 보며",
           "dialogue": [
             {
               "speaker": "A",
@@ -3267,21 +3267,21 @@
             },
             {
               "speaker": "B",
-              "text": "피곤하다요.",
-              "romanization": "pigonhadayo.",
+              "text": "피곤하네요.",
+              "romanization": "pigonhaneyo.",
               "translation": "It's tired."
             },
             {
               "speaker": "A",
-              "text": "정말요?",
-              "romanization": "jeongmalyo?",
-              "translation": "Really?"
+              "text": "그래요? 저도 그렇게 생각해요.",
+              "romanization": "geuraeyo? jeodo geureotge saenggakhaeyo.",
+              "translation": "Really? I think so too."
             },
             {
               "speaker": "B",
-              "text": "네, 아주 좋아요.",
-              "romanization": "ne, aju jotayo.",
-              "translation": "Yes, very nice."
+              "text": "맞아요.",
+              "romanization": "matayo.",
+              "translation": "Right."
             }
           ]
         }
@@ -3290,13 +3290,13 @@
         "word": "tired",
         "explanation": "Body and mind are exhausted.",
         "examples": {
-          "beginner": "This is tired.",
-          "intermediate": "It's really tired.",
-          "advanced": "Being tired is a positive/negative characteristic.",
-          "master": "Understanding the nuance of tired enables subtle emotional expression."
+          "beginner": "This is really tired!",
+          "intermediate": "It's not as tired as I thought.",
+          "advanced": "Feeling that something is tired varies from person to person.",
+          "master": "Being able to express varying degrees of \"tired\" enriches your Korean."
         },
         "dialogue": {
-          "context": "Evaluating something",
+          "context": "Looking at something",
           "dialogue": [
             {
               "speaker": "A",
@@ -3308,19 +3308,19 @@
               "speaker": "B",
               "text": "It's tired.",
               "romanization": "",
-              "translation": "피곤하다요."
+              "translation": "피곤하네요."
             },
             {
               "speaker": "A",
-              "text": "Really?",
+              "text": "Really? I think so too.",
               "romanization": "",
-              "translation": "정말요?"
+              "translation": "그래요? 저도 그렇게 생각해요."
             },
             {
               "speaker": "B",
-              "text": "Yes, very nice.",
+              "text": "Right.",
               "romanization": "",
-              "translation": "네, 아주 좋아요."
+              "translation": "맞아요."
             }
           ]
         }
@@ -3349,13 +3349,13 @@
         "word": "건강하다",
         "explanation": "몸 상태가 좋다. 병이 없다.",
         "examples": {
-          "beginner": "이것은 건강하다요.",
-          "intermediate": "정말 건강하다네요.",
-          "advanced": "건강하다다는 것은 긍정적인/부정적인 특성입니다.",
-          "master": "건강하다의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다."
+          "beginner": "이건 정말 건강하네요!",
+          "intermediate": "생각보다 건강하지 않아요.",
+          "advanced": "건강하다고 느끼는 것은 사람마다 다릅니다.",
+          "master": "\"건강하다\"의 정도를 다양하게 표현할 수 있으면 한국어가 풍부해집니다."
         },
         "dialogue": {
-          "context": "무언가를 평가하며",
+          "context": "무언가를 보며",
           "dialogue": [
             {
               "speaker": "A",
@@ -3365,21 +3365,21 @@
             },
             {
               "speaker": "B",
-              "text": "건강하다요.",
-              "romanization": "geonganghadayo.",
+              "text": "건강하네요.",
+              "romanization": "geonganghaneyo.",
               "translation": "It's healthy."
             },
             {
               "speaker": "A",
-              "text": "정말요?",
-              "romanization": "jeongmalyo?",
-              "translation": "Really?"
+              "text": "그래요? 저도 그렇게 생각해요.",
+              "romanization": "geuraeyo? jeodo geureotge saenggakhaeyo.",
+              "translation": "Really? I think so too."
             },
             {
               "speaker": "B",
-              "text": "네, 아주 좋아요.",
-              "romanization": "ne, aju jotayo.",
-              "translation": "Yes, very nice."
+              "text": "맞아요.",
+              "romanization": "matayo.",
+              "translation": "Right."
             }
           ]
         }
@@ -3388,13 +3388,13 @@
         "word": "healthy",
         "explanation": "The body's condition is good. No illness.",
         "examples": {
-          "beginner": "This is healthy.",
-          "intermediate": "It's really healthy.",
-          "advanced": "Being healthy is a positive/negative characteristic.",
-          "master": "Understanding the nuance of healthy enables subtle emotional expression."
+          "beginner": "This is really healthy!",
+          "intermediate": "It's not as healthy as I thought.",
+          "advanced": "Feeling that something is healthy varies from person to person.",
+          "master": "Being able to express varying degrees of \"healthy\" enriches your Korean."
         },
         "dialogue": {
-          "context": "Evaluating something",
+          "context": "Looking at something",
           "dialogue": [
             {
               "speaker": "A",
@@ -3406,19 +3406,19 @@
               "speaker": "B",
               "text": "It's healthy.",
               "romanization": "",
-              "translation": "건강하다요."
+              "translation": "건강하네요."
             },
             {
               "speaker": "A",
-              "text": "Really?",
+              "text": "Really? I think so too.",
               "romanization": "",
-              "translation": "정말요?"
+              "translation": "그래요? 저도 그렇게 생각해요."
             },
             {
               "speaker": "B",
-              "text": "Yes, very nice.",
+              "text": "Right.",
               "romanization": "",
-              "translation": "네, 아주 좋아요."
+              "translation": "맞아요."
             }
           ]
         }
@@ -3447,13 +3447,13 @@
         "word": "아프다",
         "explanation": "몸의 어느 부분이 고통스럽다. 마음이 슬프다.",
         "examples": {
-          "beginner": "이것은 아프다요.",
-          "intermediate": "정말 아프다네요.",
-          "advanced": "아프다다는 것은 긍정적인/부정적인 특성입니다.",
-          "master": "아프다의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다."
+          "beginner": "이건 정말 아프네요!",
+          "intermediate": "생각보다 아프지 않아요.",
+          "advanced": "아프다고 느끼는 것은 사람마다 다릅니다.",
+          "master": "\"아프다\"의 정도를 다양하게 표현할 수 있으면 한국어가 풍부해집니다."
         },
         "dialogue": {
-          "context": "무언가를 평가하며",
+          "context": "무언가를 보며",
           "dialogue": [
             {
               "speaker": "A",
@@ -3463,21 +3463,21 @@
             },
             {
               "speaker": "B",
-              "text": "아프다요.",
-              "romanization": "apeudayo.",
+              "text": "아프네요.",
+              "romanization": "apeuneyo.",
               "translation": "It's sick / hurt / painful."
             },
             {
               "speaker": "A",
-              "text": "정말요?",
-              "romanization": "jeongmalyo?",
-              "translation": "Really?"
+              "text": "그래요? 저도 그렇게 생각해요.",
+              "romanization": "geuraeyo? jeodo geureotge saenggakhaeyo.",
+              "translation": "Really? I think so too."
             },
             {
               "speaker": "B",
-              "text": "네, 아주 좋아요.",
-              "romanization": "ne, aju jotayo.",
-              "translation": "Yes, very nice."
+              "text": "맞아요.",
+              "romanization": "matayo.",
+              "translation": "Right."
             }
           ]
         }
@@ -3486,13 +3486,13 @@
         "word": "sick / hurt / painful",
         "explanation": "Some part of the body is in pain. The heart is sad.",
         "examples": {
-          "beginner": "This is sick / hurt / painful.",
-          "intermediate": "It's really sick / hurt / painful.",
-          "advanced": "Being sick / hurt / painful is a positive/negative characteristic.",
-          "master": "Understanding the nuance of sick / hurt / painful enables subtle emotional expression."
+          "beginner": "This is really sick / hurt / painful!",
+          "intermediate": "It's not as sick / hurt / painful as I thought.",
+          "advanced": "Feeling that something is sick / hurt / painful varies from person to person.",
+          "master": "Being able to express varying degrees of \"sick / hurt / painful\" enriches your Korean."
         },
         "dialogue": {
-          "context": "Evaluating something",
+          "context": "Looking at something",
           "dialogue": [
             {
               "speaker": "A",
@@ -3504,19 +3504,19 @@
               "speaker": "B",
               "text": "It's sick / hurt / painful.",
               "romanization": "",
-              "translation": "아프다요."
+              "translation": "아프네요."
             },
             {
               "speaker": "A",
-              "text": "Really?",
+              "text": "Really? I think so too.",
               "romanization": "",
-              "translation": "정말요?"
+              "translation": "그래요? 저도 그렇게 생각해요."
             },
             {
               "speaker": "B",
-              "text": "Yes, very nice.",
+              "text": "Right.",
               "romanization": "",
-              "translation": "네, 아주 좋아요."
+              "translation": "맞아요."
             }
           ]
         }
@@ -3545,13 +3545,13 @@
         "word": "행복하다",
         "explanation": "기쁘고 만족스럽다.",
         "examples": {
-          "beginner": "이것은 행복하다요.",
-          "intermediate": "정말 행복하다네요.",
-          "advanced": "행복하다다는 것은 긍정적인/부정적인 특성입니다.",
-          "master": "행복하다의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다."
+          "beginner": "이건 정말 행복하네요!",
+          "intermediate": "생각보다 행복하지 않아요.",
+          "advanced": "행복하다고 느끼는 것은 사람마다 다릅니다.",
+          "master": "\"행복하다\"의 정도를 다양하게 표현할 수 있으면 한국어가 풍부해집니다."
         },
         "dialogue": {
-          "context": "무언가를 평가하며",
+          "context": "무언가를 보며",
           "dialogue": [
             {
               "speaker": "A",
@@ -3561,21 +3561,21 @@
             },
             {
               "speaker": "B",
-              "text": "행복하다요.",
-              "romanization": "haengbokhadayo.",
+              "text": "행복하네요.",
+              "romanization": "haengbokhaneyo.",
               "translation": "It's happy."
             },
             {
               "speaker": "A",
-              "text": "정말요?",
-              "romanization": "jeongmalyo?",
-              "translation": "Really?"
+              "text": "그래요? 저도 그렇게 생각해요.",
+              "romanization": "geuraeyo? jeodo geureotge saenggakhaeyo.",
+              "translation": "Really? I think so too."
             },
             {
               "speaker": "B",
-              "text": "네, 아주 좋아요.",
-              "romanization": "ne, aju jotayo.",
-              "translation": "Yes, very nice."
+              "text": "맞아요.",
+              "romanization": "matayo.",
+              "translation": "Right."
             }
           ]
         }
@@ -3584,13 +3584,13 @@
         "word": "happy",
         "explanation": "Joyful and satisfied.",
         "examples": {
-          "beginner": "This is happy.",
-          "intermediate": "It's really happy.",
-          "advanced": "Being happy is a positive/negative characteristic.",
-          "master": "Understanding the nuance of happy enables subtle emotional expression."
+          "beginner": "This is really happy!",
+          "intermediate": "It's not as happy as I thought.",
+          "advanced": "Feeling that something is happy varies from person to person.",
+          "master": "Being able to express varying degrees of \"happy\" enriches your Korean."
         },
         "dialogue": {
-          "context": "Evaluating something",
+          "context": "Looking at something",
           "dialogue": [
             {
               "speaker": "A",
@@ -3602,19 +3602,19 @@
               "speaker": "B",
               "text": "It's happy.",
               "romanization": "",
-              "translation": "행복하다요."
+              "translation": "행복하네요."
             },
             {
               "speaker": "A",
-              "text": "Really?",
+              "text": "Really? I think so too.",
               "romanization": "",
-              "translation": "정말요?"
+              "translation": "그래요? 저도 그렇게 생각해요."
             },
             {
               "speaker": "B",
-              "text": "Yes, very nice.",
+              "text": "Right.",
               "romanization": "",
-              "translation": "네, 아주 좋아요."
+              "translation": "맞아요."
             }
           ]
         }
@@ -3643,13 +3643,13 @@
         "word": "슬프다",
         "explanation": "마음이 아프고 울고 싶다.",
         "examples": {
-          "beginner": "이것은 슬프다요.",
-          "intermediate": "정말 슬프다네요.",
-          "advanced": "슬프다다는 것은 긍정적인/부정적인 특성입니다.",
-          "master": "슬프다의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다."
+          "beginner": "이건 정말 슬프네요!",
+          "intermediate": "생각보다 슬프지 않아요.",
+          "advanced": "슬프다고 느끼는 것은 사람마다 다릅니다.",
+          "master": "\"슬프다\"의 정도를 다양하게 표현할 수 있으면 한국어가 풍부해집니다."
         },
         "dialogue": {
-          "context": "무언가를 평가하며",
+          "context": "무언가를 보며",
           "dialogue": [
             {
               "speaker": "A",
@@ -3659,21 +3659,21 @@
             },
             {
               "speaker": "B",
-              "text": "슬프다요.",
-              "romanization": "seulpeudayo.",
+              "text": "슬프네요.",
+              "romanization": "seulpeuneyo.",
               "translation": "It's sad."
             },
             {
               "speaker": "A",
-              "text": "정말요?",
-              "romanization": "jeongmalyo?",
-              "translation": "Really?"
+              "text": "그래요? 저도 그렇게 생각해요.",
+              "romanization": "geuraeyo? jeodo geureotge saenggakhaeyo.",
+              "translation": "Really? I think so too."
             },
             {
               "speaker": "B",
-              "text": "네, 아주 좋아요.",
-              "romanization": "ne, aju jotayo.",
-              "translation": "Yes, very nice."
+              "text": "맞아요.",
+              "romanization": "matayo.",
+              "translation": "Right."
             }
           ]
         }
@@ -3682,13 +3682,13 @@
         "word": "sad",
         "explanation": "The heart hurts and wants to cry.",
         "examples": {
-          "beginner": "This is sad.",
-          "intermediate": "It's really sad.",
-          "advanced": "Being sad is a positive/negative characteristic.",
-          "master": "Understanding the nuance of sad enables subtle emotional expression."
+          "beginner": "This is really sad!",
+          "intermediate": "It's not as sad as I thought.",
+          "advanced": "Feeling that something is sad varies from person to person.",
+          "master": "Being able to express varying degrees of \"sad\" enriches your Korean."
         },
         "dialogue": {
-          "context": "Evaluating something",
+          "context": "Looking at something",
           "dialogue": [
             {
               "speaker": "A",
@@ -3700,19 +3700,19 @@
               "speaker": "B",
               "text": "It's sad.",
               "romanization": "",
-              "translation": "슬프다요."
+              "translation": "슬프네요."
             },
             {
               "speaker": "A",
-              "text": "Really?",
+              "text": "Really? I think so too.",
               "romanization": "",
-              "translation": "정말요?"
+              "translation": "그래요? 저도 그렇게 생각해요."
             },
             {
               "speaker": "B",
-              "text": "Yes, very nice.",
+              "text": "Right.",
               "romanization": "",
-              "translation": "네, 아주 좋아요."
+              "translation": "맞아요."
             }
           ]
         }
@@ -3741,13 +3741,13 @@
         "word": "기쁘다",
         "explanation": "마음이 즐겁고 좋다.",
         "examples": {
-          "beginner": "이것은 기쁘다요.",
-          "intermediate": "정말 기쁘다네요.",
-          "advanced": "기쁘다다는 것은 긍정적인/부정적인 특성입니다.",
-          "master": "기쁘다의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다."
+          "beginner": "이건 정말 기쁘네요!",
+          "intermediate": "생각보다 기쁘지 않아요.",
+          "advanced": "기쁘다고 느끼는 것은 사람마다 다릅니다.",
+          "master": "\"기쁘다\"의 정도를 다양하게 표현할 수 있으면 한국어가 풍부해집니다."
         },
         "dialogue": {
-          "context": "무언가를 평가하며",
+          "context": "무언가를 보며",
           "dialogue": [
             {
               "speaker": "A",
@@ -3757,21 +3757,21 @@
             },
             {
               "speaker": "B",
-              "text": "기쁘다요.",
-              "romanization": "gippeudayo.",
+              "text": "기쁘네요.",
+              "romanization": "gippeuneyo.",
               "translation": "It's glad / delighted."
             },
             {
               "speaker": "A",
-              "text": "정말요?",
-              "romanization": "jeongmalyo?",
-              "translation": "Really?"
+              "text": "그래요? 저도 그렇게 생각해요.",
+              "romanization": "geuraeyo? jeodo geureotge saenggakhaeyo.",
+              "translation": "Really? I think so too."
             },
             {
               "speaker": "B",
-              "text": "네, 아주 좋아요.",
-              "romanization": "ne, aju jotayo.",
-              "translation": "Yes, very nice."
+              "text": "맞아요.",
+              "romanization": "matayo.",
+              "translation": "Right."
             }
           ]
         }
@@ -3780,13 +3780,13 @@
         "word": "glad / delighted",
         "explanation": "The heart is joyful and good.",
         "examples": {
-          "beginner": "This is glad / delighted.",
-          "intermediate": "It's really glad / delighted.",
-          "advanced": "Being glad / delighted is a positive/negative characteristic.",
-          "master": "Understanding the nuance of glad / delighted enables subtle emotional expression."
+          "beginner": "This is really glad / delighted!",
+          "intermediate": "It's not as glad / delighted as I thought.",
+          "advanced": "Feeling that something is glad / delighted varies from person to person.",
+          "master": "Being able to express varying degrees of \"glad / delighted\" enriches your Korean."
         },
         "dialogue": {
-          "context": "Evaluating something",
+          "context": "Looking at something",
           "dialogue": [
             {
               "speaker": "A",
@@ -3798,19 +3798,19 @@
               "speaker": "B",
               "text": "It's glad / delighted.",
               "romanization": "",
-              "translation": "기쁘다요."
+              "translation": "기쁘네요."
             },
             {
               "speaker": "A",
-              "text": "Really?",
+              "text": "Really? I think so too.",
               "romanization": "",
-              "translation": "정말요?"
+              "translation": "그래요? 저도 그렇게 생각해요."
             },
             {
               "speaker": "B",
-              "text": "Yes, very nice.",
+              "text": "Right.",
               "romanization": "",
-              "translation": "네, 아주 좋아요."
+              "translation": "맞아요."
             }
           ]
         }
@@ -3839,13 +3839,13 @@
         "word": "화나다",
         "explanation": "마음이 불쾌하고 짜증이 난다.",
         "examples": {
-          "beginner": "이것은 화나다요.",
-          "intermediate": "정말 화나다네요.",
-          "advanced": "화나다다는 것은 긍정적인/부정적인 특성입니다.",
-          "master": "화나다의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다."
+          "beginner": "이건 정말 화나네요!",
+          "intermediate": "생각보다 화나지 않아요.",
+          "advanced": "화나다고 느끼는 것은 사람마다 다릅니다.",
+          "master": "\"화나다\"의 정도를 다양하게 표현할 수 있으면 한국어가 풍부해집니다."
         },
         "dialogue": {
-          "context": "무언가를 평가하며",
+          "context": "무언가를 보며",
           "dialogue": [
             {
               "speaker": "A",
@@ -3855,21 +3855,21 @@
             },
             {
               "speaker": "B",
-              "text": "화나다요.",
-              "romanization": "hwanadayo.",
+              "text": "화나네요.",
+              "romanization": "hwananeyo.",
               "translation": "It's angry / upset."
             },
             {
               "speaker": "A",
-              "text": "정말요?",
-              "romanization": "jeongmalyo?",
-              "translation": "Really?"
+              "text": "그래요? 저도 그렇게 생각해요.",
+              "romanization": "geuraeyo? jeodo geureotge saenggakhaeyo.",
+              "translation": "Really? I think so too."
             },
             {
               "speaker": "B",
-              "text": "네, 아주 좋아요.",
-              "romanization": "ne, aju jotayo.",
-              "translation": "Yes, very nice."
+              "text": "맞아요.",
+              "romanization": "matayo.",
+              "translation": "Right."
             }
           ]
         }
@@ -3878,13 +3878,13 @@
         "word": "angry / upset",
         "explanation": "The heart is displeased and irritated.",
         "examples": {
-          "beginner": "This is angry / upset.",
-          "intermediate": "It's really angry / upset.",
-          "advanced": "Being angry / upset is a positive/negative characteristic.",
-          "master": "Understanding the nuance of angry / upset enables subtle emotional expression."
+          "beginner": "This is really angry / upset!",
+          "intermediate": "It's not as angry / upset as I thought.",
+          "advanced": "Feeling that something is angry / upset varies from person to person.",
+          "master": "Being able to express varying degrees of \"angry / upset\" enriches your Korean."
         },
         "dialogue": {
-          "context": "Evaluating something",
+          "context": "Looking at something",
           "dialogue": [
             {
               "speaker": "A",
@@ -3896,19 +3896,19 @@
               "speaker": "B",
               "text": "It's angry / upset.",
               "romanization": "",
-              "translation": "화나다요."
+              "translation": "화나네요."
             },
             {
               "speaker": "A",
-              "text": "Really?",
+              "text": "Really? I think so too.",
               "romanization": "",
-              "translation": "정말요?"
+              "translation": "그래요? 저도 그렇게 생각해요."
             },
             {
               "speaker": "B",
-              "text": "Yes, very nice.",
+              "text": "Right.",
               "romanization": "",
-              "translation": "네, 아주 좋아요."
+              "translation": "맞아요."
             }
           ]
         }
@@ -3937,13 +3937,13 @@
         "word": "무섭다",
         "explanation": "두렵고 겁이 난다.",
         "examples": {
-          "beginner": "이것은 무섭다요.",
-          "intermediate": "정말 무섭다네요.",
-          "advanced": "무섭다다는 것은 긍정적인/부정적인 특성입니다.",
-          "master": "무섭다의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다."
+          "beginner": "이건 정말 무섭네요!",
+          "intermediate": "생각보다 무섭지 않아요.",
+          "advanced": "무섭다고 느끼는 것은 사람마다 다릅니다.",
+          "master": "\"무섭다\"의 정도를 다양하게 표현할 수 있으면 한국어가 풍부해집니다."
         },
         "dialogue": {
-          "context": "무언가를 평가하며",
+          "context": "무언가를 보며",
           "dialogue": [
             {
               "speaker": "A",
@@ -3953,21 +3953,21 @@
             },
             {
               "speaker": "B",
-              "text": "무섭다요.",
-              "romanization": "museopdayo.",
+              "text": "무섭네요.",
+              "romanization": "museopneyo.",
               "translation": "It's scary / frightening / afraid."
             },
             {
               "speaker": "A",
-              "text": "정말요?",
-              "romanization": "jeongmalyo?",
-              "translation": "Really?"
+              "text": "그래요? 저도 그렇게 생각해요.",
+              "romanization": "geuraeyo? jeodo geureotge saenggakhaeyo.",
+              "translation": "Really? I think so too."
             },
             {
               "speaker": "B",
-              "text": "네, 아주 좋아요.",
-              "romanization": "ne, aju jotayo.",
-              "translation": "Yes, very nice."
+              "text": "맞아요.",
+              "romanization": "matayo.",
+              "translation": "Right."
             }
           ]
         }
@@ -3976,13 +3976,13 @@
         "word": "scary / frightening / afraid",
         "explanation": "Fearful and scared.",
         "examples": {
-          "beginner": "This is scary / frightening / afraid.",
-          "intermediate": "It's really scary / frightening / afraid.",
-          "advanced": "Being scary / frightening / afraid is a positive/negative characteristic.",
-          "master": "Understanding the nuance of scary / frightening / afraid enables subtle emotional expression."
+          "beginner": "This is really scary / frightening / afraid!",
+          "intermediate": "It's not as scary / frightening / afraid as I thought.",
+          "advanced": "Feeling that something is scary / frightening / afraid varies from person to person.",
+          "master": "Being able to express varying degrees of \"scary / frightening / afraid\" enriches your Korean."
         },
         "dialogue": {
-          "context": "Evaluating something",
+          "context": "Looking at something",
           "dialogue": [
             {
               "speaker": "A",
@@ -3994,19 +3994,19 @@
               "speaker": "B",
               "text": "It's scary / frightening / afraid.",
               "romanization": "",
-              "translation": "무섭다요."
+              "translation": "무섭네요."
             },
             {
               "speaker": "A",
-              "text": "Really?",
+              "text": "Really? I think so too.",
               "romanization": "",
-              "translation": "정말요?"
+              "translation": "그래요? 저도 그렇게 생각해요."
             },
             {
               "speaker": "B",
-              "text": "Yes, very nice.",
+              "text": "Right.",
               "romanization": "",
-              "translation": "네, 아주 좋아요."
+              "translation": "맞아요."
             }
           ]
         }
@@ -4035,13 +4035,13 @@
         "word": "외롭다",
         "explanation": "혼자라서 쓸쓸하다.",
         "examples": {
-          "beginner": "이것은 외롭다요.",
-          "intermediate": "정말 외롭다네요.",
-          "advanced": "외롭다다는 것은 긍정적인/부정적인 특성입니다.",
-          "master": "외롭다의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다."
+          "beginner": "이건 정말 외롭네요!",
+          "intermediate": "생각보다 외롭지 않아요.",
+          "advanced": "외롭다고 느끼는 것은 사람마다 다릅니다.",
+          "master": "\"외롭다\"의 정도를 다양하게 표현할 수 있으면 한국어가 풍부해집니다."
         },
         "dialogue": {
-          "context": "무언가를 평가하며",
+          "context": "무언가를 보며",
           "dialogue": [
             {
               "speaker": "A",
@@ -4051,21 +4051,21 @@
             },
             {
               "speaker": "B",
-              "text": "외롭다요.",
-              "romanization": "oeropdayo.",
+              "text": "외롭네요.",
+              "romanization": "oeropneyo.",
               "translation": "It's lonely."
             },
             {
               "speaker": "A",
-              "text": "정말요?",
-              "romanization": "jeongmalyo?",
-              "translation": "Really?"
+              "text": "그래요? 저도 그렇게 생각해요.",
+              "romanization": "geuraeyo? jeodo geureotge saenggakhaeyo.",
+              "translation": "Really? I think so too."
             },
             {
               "speaker": "B",
-              "text": "네, 아주 좋아요.",
-              "romanization": "ne, aju jotayo.",
-              "translation": "Yes, very nice."
+              "text": "맞아요.",
+              "romanization": "matayo.",
+              "translation": "Right."
             }
           ]
         }
@@ -4074,13 +4074,13 @@
         "word": "lonely",
         "explanation": "Feeling desolate because of being alone.",
         "examples": {
-          "beginner": "This is lonely.",
-          "intermediate": "It's really lonely.",
-          "advanced": "Being lonely is a positive/negative characteristic.",
-          "master": "Understanding the nuance of lonely enables subtle emotional expression."
+          "beginner": "This is really lonely!",
+          "intermediate": "It's not as lonely as I thought.",
+          "advanced": "Feeling that something is lonely varies from person to person.",
+          "master": "Being able to express varying degrees of \"lonely\" enriches your Korean."
         },
         "dialogue": {
-          "context": "Evaluating something",
+          "context": "Looking at something",
           "dialogue": [
             {
               "speaker": "A",
@@ -4092,19 +4092,19 @@
               "speaker": "B",
               "text": "It's lonely.",
               "romanization": "",
-              "translation": "외롭다요."
+              "translation": "외롭네요."
             },
             {
               "speaker": "A",
-              "text": "Really?",
+              "text": "Really? I think so too.",
               "romanization": "",
-              "translation": "정말요?"
+              "translation": "그래요? 저도 그렇게 생각해요."
             },
             {
               "speaker": "B",
-              "text": "Yes, very nice.",
+              "text": "Right.",
               "romanization": "",
-              "translation": "네, 아주 좋아요."
+              "translation": "맞아요."
             }
           ]
         }
@@ -4133,13 +4133,13 @@
         "word": "친절하다",
         "explanation": "다른 사람에게 따뜻하고 도움을 주다.",
         "examples": {
-          "beginner": "이것은 친절하다요.",
-          "intermediate": "정말 친절하다네요.",
-          "advanced": "친절하다다는 것은 긍정적인/부정적인 특성입니다.",
-          "master": "친절하다의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다."
+          "beginner": "이건 정말 친절하네요!",
+          "intermediate": "생각보다 친절하지 않아요.",
+          "advanced": "친절하다고 느끼는 것은 사람마다 다릅니다.",
+          "master": "\"친절하다\"의 정도를 다양하게 표현할 수 있으면 한국어가 풍부해집니다."
         },
         "dialogue": {
-          "context": "무언가를 평가하며",
+          "context": "무언가를 보며",
           "dialogue": [
             {
               "speaker": "A",
@@ -4149,21 +4149,21 @@
             },
             {
               "speaker": "B",
-              "text": "친절하다요.",
-              "romanization": "chinjeolhadayo.",
+              "text": "친절하네요.",
+              "romanization": "chinjeolhaneyo.",
               "translation": "It's kind / friendly."
             },
             {
               "speaker": "A",
-              "text": "정말요?",
-              "romanization": "jeongmalyo?",
-              "translation": "Really?"
+              "text": "그래요? 저도 그렇게 생각해요.",
+              "romanization": "geuraeyo? jeodo geureotge saenggakhaeyo.",
+              "translation": "Really? I think so too."
             },
             {
               "speaker": "B",
-              "text": "네, 아주 좋아요.",
-              "romanization": "ne, aju jotayo.",
-              "translation": "Yes, very nice."
+              "text": "맞아요.",
+              "romanization": "matayo.",
+              "translation": "Right."
             }
           ]
         }
@@ -4172,13 +4172,13 @@
         "word": "kind / friendly",
         "explanation": "Being warm and helpful to others.",
         "examples": {
-          "beginner": "This is kind / friendly.",
-          "intermediate": "It's really kind / friendly.",
-          "advanced": "Being kind / friendly is a positive/negative characteristic.",
-          "master": "Understanding the nuance of kind / friendly enables subtle emotional expression."
+          "beginner": "This is really kind / friendly!",
+          "intermediate": "It's not as kind / friendly as I thought.",
+          "advanced": "Feeling that something is kind / friendly varies from person to person.",
+          "master": "Being able to express varying degrees of \"kind / friendly\" enriches your Korean."
         },
         "dialogue": {
-          "context": "Evaluating something",
+          "context": "Looking at something",
           "dialogue": [
             {
               "speaker": "A",
@@ -4190,19 +4190,19 @@
               "speaker": "B",
               "text": "It's kind / friendly.",
               "romanization": "",
-              "translation": "친절하다요."
+              "translation": "친절하네요."
             },
             {
               "speaker": "A",
-              "text": "Really?",
+              "text": "Really? I think so too.",
               "romanization": "",
-              "translation": "정말요?"
+              "translation": "그래요? 저도 그렇게 생각해요."
             },
             {
               "speaker": "B",
-              "text": "Yes, very nice.",
+              "text": "Right.",
               "romanization": "",
-              "translation": "네, 아주 좋아요."
+              "translation": "맞아요."
             }
           ]
         }
@@ -4231,13 +4231,13 @@
         "word": "정직하다",
         "explanation": "거짓말을 하지 않고 진실하다.",
         "examples": {
-          "beginner": "이것은 정직하다요.",
-          "intermediate": "정말 정직하다네요.",
-          "advanced": "정직하다다는 것은 긍정적인/부정적인 특성입니다.",
-          "master": "정직하다의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다."
+          "beginner": "이건 정말 정직하네요!",
+          "intermediate": "생각보다 정직하지 않아요.",
+          "advanced": "정직하다고 느끼는 것은 사람마다 다릅니다.",
+          "master": "\"정직하다\"의 정도를 다양하게 표현할 수 있으면 한국어가 풍부해집니다."
         },
         "dialogue": {
-          "context": "무언가를 평가하며",
+          "context": "무언가를 보며",
           "dialogue": [
             {
               "speaker": "A",
@@ -4247,21 +4247,21 @@
             },
             {
               "speaker": "B",
-              "text": "정직하다요.",
-              "romanization": "jeongjikhadayo.",
+              "text": "정직하네요.",
+              "romanization": "jeongjikhaneyo.",
               "translation": "It's honest."
             },
             {
               "speaker": "A",
-              "text": "정말요?",
-              "romanization": "jeongmalyo?",
-              "translation": "Really?"
+              "text": "그래요? 저도 그렇게 생각해요.",
+              "romanization": "geuraeyo? jeodo geureotge saenggakhaeyo.",
+              "translation": "Really? I think so too."
             },
             {
               "speaker": "B",
-              "text": "네, 아주 좋아요.",
-              "romanization": "ne, aju jotayo.",
-              "translation": "Yes, very nice."
+              "text": "맞아요.",
+              "romanization": "matayo.",
+              "translation": "Right."
             }
           ]
         }
@@ -4270,13 +4270,13 @@
         "word": "honest",
         "explanation": "Not telling lies and being truthful.",
         "examples": {
-          "beginner": "This is honest.",
-          "intermediate": "It's really honest.",
-          "advanced": "Being honest is a positive/negative characteristic.",
-          "master": "Understanding the nuance of honest enables subtle emotional expression."
+          "beginner": "This is really honest!",
+          "intermediate": "It's not as honest as I thought.",
+          "advanced": "Feeling that something is honest varies from person to person.",
+          "master": "Being able to express varying degrees of \"honest\" enriches your Korean."
         },
         "dialogue": {
-          "context": "Evaluating something",
+          "context": "Looking at something",
           "dialogue": [
             {
               "speaker": "A",
@@ -4288,19 +4288,19 @@
               "speaker": "B",
               "text": "It's honest.",
               "romanization": "",
-              "translation": "정직하다요."
+              "translation": "정직하네요."
             },
             {
               "speaker": "A",
-              "text": "Really?",
+              "text": "Really? I think so too.",
               "romanization": "",
-              "translation": "정말요?"
+              "translation": "그래요? 저도 그렇게 생각해요."
             },
             {
               "speaker": "B",
-              "text": "Yes, very nice.",
+              "text": "Right.",
               "romanization": "",
-              "translation": "네, 아주 좋아요."
+              "translation": "맞아요."
             }
           ]
         }
@@ -4329,13 +4329,13 @@
         "word": "부지런하다",
         "explanation": "열심히 일하고 게으르지 않다.",
         "examples": {
-          "beginner": "이것은 부지런하다요.",
-          "intermediate": "정말 부지런하다네요.",
-          "advanced": "부지런하다다는 것은 긍정적인/부정적인 특성입니다.",
-          "master": "부지런하다의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다."
+          "beginner": "이건 정말 부지런하네요!",
+          "intermediate": "생각보다 부지런하지 않아요.",
+          "advanced": "부지런하다고 느끼는 것은 사람마다 다릅니다.",
+          "master": "\"부지런하다\"의 정도를 다양하게 표현할 수 있으면 한국어가 풍부해집니다."
         },
         "dialogue": {
-          "context": "무언가를 평가하며",
+          "context": "무언가를 보며",
           "dialogue": [
             {
               "speaker": "A",
@@ -4345,21 +4345,21 @@
             },
             {
               "speaker": "B",
-              "text": "부지런하다요.",
-              "romanization": "bujireonhadayo.",
+              "text": "부지런하네요.",
+              "romanization": "bujireonhaneyo.",
               "translation": "It's diligent / hardworking."
             },
             {
               "speaker": "A",
-              "text": "정말요?",
-              "romanization": "jeongmalyo?",
-              "translation": "Really?"
+              "text": "그래요? 저도 그렇게 생각해요.",
+              "romanization": "geuraeyo? jeodo geureotge saenggakhaeyo.",
+              "translation": "Really? I think so too."
             },
             {
               "speaker": "B",
-              "text": "네, 아주 좋아요.",
-              "romanization": "ne, aju jotayo.",
-              "translation": "Yes, very nice."
+              "text": "맞아요.",
+              "romanization": "matayo.",
+              "translation": "Right."
             }
           ]
         }
@@ -4368,13 +4368,13 @@
         "word": "diligent / hardworking",
         "explanation": "Working hard and not being lazy.",
         "examples": {
-          "beginner": "This is diligent / hardworking.",
-          "intermediate": "It's really diligent / hardworking.",
-          "advanced": "Being diligent / hardworking is a positive/negative characteristic.",
-          "master": "Understanding the nuance of diligent / hardworking enables subtle emotional expression."
+          "beginner": "This is really diligent / hardworking!",
+          "intermediate": "It's not as diligent / hardworking as I thought.",
+          "advanced": "Feeling that something is diligent / hardworking varies from person to person.",
+          "master": "Being able to express varying degrees of \"diligent / hardworking\" enriches your Korean."
         },
         "dialogue": {
-          "context": "Evaluating something",
+          "context": "Looking at something",
           "dialogue": [
             {
               "speaker": "A",
@@ -4386,19 +4386,19 @@
               "speaker": "B",
               "text": "It's diligent / hardworking.",
               "romanization": "",
-              "translation": "부지런하다요."
+              "translation": "부지런하네요."
             },
             {
               "speaker": "A",
-              "text": "Really?",
+              "text": "Really? I think so too.",
               "romanization": "",
-              "translation": "정말요?"
+              "translation": "그래요? 저도 그렇게 생각해요."
             },
             {
               "speaker": "B",
-              "text": "Yes, very nice.",
+              "text": "Right.",
               "romanization": "",
-              "translation": "네, 아주 좋아요."
+              "translation": "맞아요."
             }
           ]
         }
@@ -4427,13 +4427,13 @@
         "word": "게으르다",
         "explanation": "일하기 싫어하고 움직이지 않다.",
         "examples": {
-          "beginner": "이것은 게으르다요.",
-          "intermediate": "정말 게으르다네요.",
-          "advanced": "게으르다다는 것은 긍정적인/부정적인 특성입니다.",
-          "master": "게으르다의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다."
+          "beginner": "이건 정말 게으르네요!",
+          "intermediate": "생각보다 게으르지 않아요.",
+          "advanced": "게으르다고 느끼는 것은 사람마다 다릅니다.",
+          "master": "\"게으르다\"의 정도를 다양하게 표현할 수 있으면 한국어가 풍부해집니다."
         },
         "dialogue": {
-          "context": "무언가를 평가하며",
+          "context": "무언가를 보며",
           "dialogue": [
             {
               "speaker": "A",
@@ -4443,21 +4443,21 @@
             },
             {
               "speaker": "B",
-              "text": "게으르다요.",
-              "romanization": "geeureudayo.",
+              "text": "게으르네요.",
+              "romanization": "geeureuneyo.",
               "translation": "It's lazy."
             },
             {
               "speaker": "A",
-              "text": "정말요?",
-              "romanization": "jeongmalyo?",
-              "translation": "Really?"
+              "text": "그래요? 저도 그렇게 생각해요.",
+              "romanization": "geuraeyo? jeodo geureotge saenggakhaeyo.",
+              "translation": "Really? I think so too."
             },
             {
               "speaker": "B",
-              "text": "네, 아주 좋아요.",
-              "romanization": "ne, aju jotayo.",
-              "translation": "Yes, very nice."
+              "text": "맞아요.",
+              "romanization": "matayo.",
+              "translation": "Right."
             }
           ]
         }
@@ -4466,13 +4466,13 @@
         "word": "lazy",
         "explanation": "Not wanting to work and not moving.",
         "examples": {
-          "beginner": "This is lazy.",
-          "intermediate": "It's really lazy.",
-          "advanced": "Being lazy is a positive/negative characteristic.",
-          "master": "Understanding the nuance of lazy enables subtle emotional expression."
+          "beginner": "This is really lazy!",
+          "intermediate": "It's not as lazy as I thought.",
+          "advanced": "Feeling that something is lazy varies from person to person.",
+          "master": "Being able to express varying degrees of \"lazy\" enriches your Korean."
         },
         "dialogue": {
-          "context": "Evaluating something",
+          "context": "Looking at something",
           "dialogue": [
             {
               "speaker": "A",
@@ -4484,19 +4484,19 @@
               "speaker": "B",
               "text": "It's lazy.",
               "romanization": "",
-              "translation": "게으르다요."
+              "translation": "게으르네요."
             },
             {
               "speaker": "A",
-              "text": "Really?",
+              "text": "Really? I think so too.",
               "romanization": "",
-              "translation": "정말요?"
+              "translation": "그래요? 저도 그렇게 생각해요."
             },
             {
               "speaker": "B",
-              "text": "Yes, very nice.",
+              "text": "Right.",
               "romanization": "",
-              "translation": "네, 아주 좋아요."
+              "translation": "맞아요."
             }
           ]
         }
@@ -4525,13 +4525,13 @@
         "word": "조용하다",
         "explanation": "소리가 없거나 작다.",
         "examples": {
-          "beginner": "이것은 조용하다요.",
-          "intermediate": "정말 조용하다네요.",
-          "advanced": "조용하다다는 것은 긍정적인/부정적인 특성입니다.",
-          "master": "조용하다의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다."
+          "beginner": "이건 정말 조용하네요!",
+          "intermediate": "생각보다 조용하지 않아요.",
+          "advanced": "조용하다고 느끼는 것은 사람마다 다릅니다.",
+          "master": "\"조용하다\"의 정도를 다양하게 표현할 수 있으면 한국어가 풍부해집니다."
         },
         "dialogue": {
-          "context": "무언가를 평가하며",
+          "context": "무언가를 보며",
           "dialogue": [
             {
               "speaker": "A",
@@ -4541,21 +4541,21 @@
             },
             {
               "speaker": "B",
-              "text": "조용하다요.",
-              "romanization": "joyonghadayo.",
+              "text": "조용하네요.",
+              "romanization": "joyonghaneyo.",
               "translation": "It's quiet."
             },
             {
               "speaker": "A",
-              "text": "정말요?",
-              "romanization": "jeongmalyo?",
-              "translation": "Really?"
+              "text": "그래요? 저도 그렇게 생각해요.",
+              "romanization": "geuraeyo? jeodo geureotge saenggakhaeyo.",
+              "translation": "Really? I think so too."
             },
             {
               "speaker": "B",
-              "text": "네, 아주 좋아요.",
-              "romanization": "ne, aju jotayo.",
-              "translation": "Yes, very nice."
+              "text": "맞아요.",
+              "romanization": "matayo.",
+              "translation": "Right."
             }
           ]
         }
@@ -4564,13 +4564,13 @@
         "word": "quiet",
         "explanation": "There is no sound or the sound is small.",
         "examples": {
-          "beginner": "This is quiet.",
-          "intermediate": "It's really quiet.",
-          "advanced": "Being quiet is a positive/negative characteristic.",
-          "master": "Understanding the nuance of quiet enables subtle emotional expression."
+          "beginner": "This is really quiet!",
+          "intermediate": "It's not as quiet as I thought.",
+          "advanced": "Feeling that something is quiet varies from person to person.",
+          "master": "Being able to express varying degrees of \"quiet\" enriches your Korean."
         },
         "dialogue": {
-          "context": "Evaluating something",
+          "context": "Looking at something",
           "dialogue": [
             {
               "speaker": "A",
@@ -4582,19 +4582,19 @@
               "speaker": "B",
               "text": "It's quiet.",
               "romanization": "",
-              "translation": "조용하다요."
+              "translation": "조용하네요."
             },
             {
               "speaker": "A",
-              "text": "Really?",
+              "text": "Really? I think so too.",
               "romanization": "",
-              "translation": "정말요?"
+              "translation": "그래요? 저도 그렇게 생각해요."
             },
             {
               "speaker": "B",
-              "text": "Yes, very nice.",
+              "text": "Right.",
               "romanization": "",
-              "translation": "네, 아주 좋아요."
+              "translation": "맞아요."
             }
           ]
         }
@@ -4623,13 +4623,13 @@
         "word": "시끄럽다",
         "explanation": "소리가 크고 불쾌하다.",
         "examples": {
-          "beginner": "이것은 시끄럽다요.",
-          "intermediate": "정말 시끄럽다네요.",
-          "advanced": "시끄럽다다는 것은 긍정적인/부정적인 특성입니다.",
-          "master": "시끄럽다의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다."
+          "beginner": "이건 정말 시끄럽네요!",
+          "intermediate": "생각보다 시끄럽지 않아요.",
+          "advanced": "시끄럽다고 느끼는 것은 사람마다 다릅니다.",
+          "master": "\"시끄럽다\"의 정도를 다양하게 표현할 수 있으면 한국어가 풍부해집니다."
         },
         "dialogue": {
-          "context": "무언가를 평가하며",
+          "context": "무언가를 보며",
           "dialogue": [
             {
               "speaker": "A",
@@ -4639,21 +4639,21 @@
             },
             {
               "speaker": "B",
-              "text": "시끄럽다요.",
-              "romanization": "sikkeureopdayo.",
+              "text": "시끄럽네요.",
+              "romanization": "sikkeureopneyo.",
               "translation": "It's noisy / loud."
             },
             {
               "speaker": "A",
-              "text": "정말요?",
-              "romanization": "jeongmalyo?",
-              "translation": "Really?"
+              "text": "그래요? 저도 그렇게 생각해요.",
+              "romanization": "geuraeyo? jeodo geureotge saenggakhaeyo.",
+              "translation": "Really? I think so too."
             },
             {
               "speaker": "B",
-              "text": "네, 아주 좋아요.",
-              "romanization": "ne, aju jotayo.",
-              "translation": "Yes, very nice."
+              "text": "맞아요.",
+              "romanization": "matayo.",
+              "translation": "Right."
             }
           ]
         }
@@ -4662,13 +4662,13 @@
         "word": "noisy / loud",
         "explanation": "The sound is loud and unpleasant.",
         "examples": {
-          "beginner": "This is noisy / loud.",
-          "intermediate": "It's really noisy / loud.",
-          "advanced": "Being noisy / loud is a positive/negative characteristic.",
-          "master": "Understanding the nuance of noisy / loud enables subtle emotional expression."
+          "beginner": "This is really noisy / loud!",
+          "intermediate": "It's not as noisy / loud as I thought.",
+          "advanced": "Feeling that something is noisy / loud varies from person to person.",
+          "master": "Being able to express varying degrees of \"noisy / loud\" enriches your Korean."
         },
         "dialogue": {
-          "context": "Evaluating something",
+          "context": "Looking at something",
           "dialogue": [
             {
               "speaker": "A",
@@ -4680,19 +4680,19 @@
               "speaker": "B",
               "text": "It's noisy / loud.",
               "romanization": "",
-              "translation": "시끄럽다요."
+              "translation": "시끄럽네요."
             },
             {
               "speaker": "A",
-              "text": "Really?",
+              "text": "Really? I think so too.",
               "romanization": "",
-              "translation": "정말요?"
+              "translation": "그래요? 저도 그렇게 생각해요."
             },
             {
               "speaker": "B",
-              "text": "Yes, very nice.",
+              "text": "Right.",
               "romanization": "",
-              "translation": "네, 아주 좋아요."
+              "translation": "맞아요."
             }
           ]
         }
@@ -4721,13 +4721,13 @@
         "word": "깨끗하다",
         "explanation": "더러운 것이 없다. 깔끔하다.",
         "examples": {
-          "beginner": "이것은 깨끗하다요.",
-          "intermediate": "정말 깨끗하다네요.",
-          "advanced": "깨끗하다다는 것은 긍정적인/부정적인 특성입니다.",
-          "master": "깨끗하다의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다."
+          "beginner": "이건 정말 깨끗하네요!",
+          "intermediate": "생각보다 깨끗하지 않아요.",
+          "advanced": "깨끗하다고 느끼는 것은 사람마다 다릅니다.",
+          "master": "\"깨끗하다\"의 정도를 다양하게 표현할 수 있으면 한국어가 풍부해집니다."
         },
         "dialogue": {
-          "context": "무언가를 평가하며",
+          "context": "무언가를 보며",
           "dialogue": [
             {
               "speaker": "A",
@@ -4737,21 +4737,21 @@
             },
             {
               "speaker": "B",
-              "text": "깨끗하다요.",
-              "romanization": "kkaekkeushadayo.",
+              "text": "깨끗하네요.",
+              "romanization": "kkaekkeushaneyo.",
               "translation": "It's clean."
             },
             {
               "speaker": "A",
-              "text": "정말요?",
-              "romanization": "jeongmalyo?",
-              "translation": "Really?"
+              "text": "그래요? 저도 그렇게 생각해요.",
+              "romanization": "geuraeyo? jeodo geureotge saenggakhaeyo.",
+              "translation": "Really? I think so too."
             },
             {
               "speaker": "B",
-              "text": "네, 아주 좋아요.",
-              "romanization": "ne, aju jotayo.",
-              "translation": "Yes, very nice."
+              "text": "맞아요.",
+              "romanization": "matayo.",
+              "translation": "Right."
             }
           ]
         }
@@ -4760,13 +4760,13 @@
         "word": "clean",
         "explanation": "There is nothing dirty. Neat.",
         "examples": {
-          "beginner": "This is clean.",
-          "intermediate": "It's really clean.",
-          "advanced": "Being clean is a positive/negative characteristic.",
-          "master": "Understanding the nuance of clean enables subtle emotional expression."
+          "beginner": "This is really clean!",
+          "intermediate": "It's not as clean as I thought.",
+          "advanced": "Feeling that something is clean varies from person to person.",
+          "master": "Being able to express varying degrees of \"clean\" enriches your Korean."
         },
         "dialogue": {
-          "context": "Evaluating something",
+          "context": "Looking at something",
           "dialogue": [
             {
               "speaker": "A",
@@ -4778,19 +4778,19 @@
               "speaker": "B",
               "text": "It's clean.",
               "romanization": "",
-              "translation": "깨끗하다요."
+              "translation": "깨끗하네요."
             },
             {
               "speaker": "A",
-              "text": "Really?",
+              "text": "Really? I think so too.",
               "romanization": "",
-              "translation": "정말요?"
+              "translation": "그래요? 저도 그렇게 생각해요."
             },
             {
               "speaker": "B",
-              "text": "Yes, very nice.",
+              "text": "Right.",
               "romanization": "",
-              "translation": "네, 아주 좋아요."
+              "translation": "맞아요."
             }
           ]
         }
@@ -4819,13 +4819,13 @@
         "word": "더럽다",
         "explanation": "깨끗하지 않고 지저분하다.",
         "examples": {
-          "beginner": "이것은 더럽다요.",
-          "intermediate": "정말 더럽다네요.",
-          "advanced": "더럽다다는 것은 긍정적인/부정적인 특성입니다.",
-          "master": "더럽다의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다."
+          "beginner": "이건 정말 더럽네요!",
+          "intermediate": "생각보다 더럽지 않아요.",
+          "advanced": "더럽다고 느끼는 것은 사람마다 다릅니다.",
+          "master": "\"더럽다\"의 정도를 다양하게 표현할 수 있으면 한국어가 풍부해집니다."
         },
         "dialogue": {
-          "context": "무언가를 평가하며",
+          "context": "무언가를 보며",
           "dialogue": [
             {
               "speaker": "A",
@@ -4835,21 +4835,21 @@
             },
             {
               "speaker": "B",
-              "text": "더럽다요.",
-              "romanization": "deoreopdayo.",
+              "text": "더럽네요.",
+              "romanization": "deoreopneyo.",
               "translation": "It's dirty."
             },
             {
               "speaker": "A",
-              "text": "정말요?",
-              "romanization": "jeongmalyo?",
-              "translation": "Really?"
+              "text": "그래요? 저도 그렇게 생각해요.",
+              "romanization": "geuraeyo? jeodo geureotge saenggakhaeyo.",
+              "translation": "Really? I think so too."
             },
             {
               "speaker": "B",
-              "text": "네, 아주 좋아요.",
-              "romanization": "ne, aju jotayo.",
-              "translation": "Yes, very nice."
+              "text": "맞아요.",
+              "romanization": "matayo.",
+              "translation": "Right."
             }
           ]
         }
@@ -4858,13 +4858,13 @@
         "word": "dirty",
         "explanation": "Not clean and messy.",
         "examples": {
-          "beginner": "This is dirty.",
-          "intermediate": "It's really dirty.",
-          "advanced": "Being dirty is a positive/negative characteristic.",
-          "master": "Understanding the nuance of dirty enables subtle emotional expression."
+          "beginner": "This is really dirty!",
+          "intermediate": "It's not as dirty as I thought.",
+          "advanced": "Feeling that something is dirty varies from person to person.",
+          "master": "Being able to express varying degrees of \"dirty\" enriches your Korean."
         },
         "dialogue": {
-          "context": "Evaluating something",
+          "context": "Looking at something",
           "dialogue": [
             {
               "speaker": "A",
@@ -4876,19 +4876,19 @@
               "speaker": "B",
               "text": "It's dirty.",
               "romanization": "",
-              "translation": "더럽다요."
+              "translation": "더럽네요."
             },
             {
               "speaker": "A",
-              "text": "Really?",
+              "text": "Really? I think so too.",
               "romanization": "",
-              "translation": "정말요?"
+              "translation": "그래요? 저도 그렇게 생각해요."
             },
             {
               "speaker": "B",
-              "text": "Yes, very nice.",
+              "text": "Right.",
               "romanization": "",
-              "translation": "네, 아주 좋아요."
+              "translation": "맞아요."
             }
           ]
         }

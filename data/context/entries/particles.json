@@ -18,10 +18,10 @@
         "word": "이",
         "explanation": "받침 있는 명사 뒤에 붙어 주어임을 나타내는 조사.",
         "examples": {
-          "beginner": "이를 사용해요.",
-          "intermediate": "이 문장에서 이가 필요해요.",
-          "advanced": "\"이\"의 올바른 사용은 한국어 문법의 핵심입니다.",
-          "master": "\"이\"의 미묘한 차이를 이해하면 자연스러운 한국어 구사가 가능합니다."
+          "beginner": "\"나이\" 처럼 문장에서 써요.",
+          "intermediate": "\"이\"를 빼면 문장이 어색해져요.",
+          "advanced": "\"이\"는 문장에서 의미를 명확하게 하는 역할을 합니다.",
+          "master": "\"이\"의 미묘한 차이를 이해하면 한국어다운 문장을 만들 수 있습니다."
         },
         "dialogue": {
           "context": "한국어를 공부하며",
@@ -57,10 +57,10 @@
         "word": "(subject marker)",
         "explanation": "Subject particle attached after consonant-ending nouns.",
         "examples": {
-          "beginner": "Use \"이\".",
-          "intermediate": "\"이\" is needed in this sentence.",
-          "advanced": "Correct use of \"이\" is key to Korean grammar.",
-          "master": "Understanding subtle differences in \"이\" enables natural Korean speaking."
+          "beginner": "You use it in sentences like \"나이\".",
+          "intermediate": "Without \"이\", the sentence sounds awkward.",
+          "advanced": "\"이\" serves to clarify meaning within a sentence.",
+          "master": "Understanding the subtle differences of \"이\" helps create natural-sounding Korean sentences."
         },
         "dialogue": {
           "context": "Studying Korean",
@@ -117,10 +117,10 @@
         "word": "가",
         "explanation": "받침 없는 명사 뒤에 붙어 주어임을 나타내는 조사.",
         "examples": {
-          "beginner": "가를 사용해요.",
-          "intermediate": "이 문장에서 가가 필요해요.",
-          "advanced": "\"가\"의 올바른 사용은 한국어 문법의 핵심입니다.",
-          "master": "\"가\"의 미묘한 차이를 이해하면 자연스러운 한국어 구사가 가능합니다."
+          "beginner": "\"나가\" 처럼 문장에서 써요.",
+          "intermediate": "\"가\"를 빼면 문장이 어색해져요.",
+          "advanced": "\"가\"는 문장에서 의미를 명확하게 하는 역할을 합니다.",
+          "master": "\"가\"의 미묘한 차이를 이해하면 한국어다운 문장을 만들 수 있습니다."
         },
         "dialogue": {
           "context": "한국어를 공부하며",
@@ -156,10 +156,10 @@
         "word": "(subject marker)",
         "explanation": "Subject particle attached after vowel-ending nouns.",
         "examples": {
-          "beginner": "Use \"가\".",
-          "intermediate": "\"가\" is needed in this sentence.",
-          "advanced": "Correct use of \"가\" is key to Korean grammar.",
-          "master": "Understanding subtle differences in \"가\" enables natural Korean speaking."
+          "beginner": "You use it in sentences like \"나가\".",
+          "intermediate": "Without \"가\", the sentence sounds awkward.",
+          "advanced": "\"가\" serves to clarify meaning within a sentence.",
+          "master": "Understanding the subtle differences of \"가\" helps create natural-sounding Korean sentences."
         },
         "dialogue": {
           "context": "Studying Korean",
@@ -216,10 +216,10 @@
         "word": "을",
         "explanation": "받침 있는 명사 뒤에 붙어 목적어임을 나타내는 조사.",
         "examples": {
-          "beginner": "을을 사용해요.",
-          "intermediate": "이 문장에서 을이 필요해요.",
-          "advanced": "\"을\"의 올바른 사용은 한국어 문법의 핵심입니다.",
-          "master": "\"을\"의 미묘한 차이를 이해하면 자연스러운 한국어 구사가 가능합니다."
+          "beginner": "\"나을\" 처럼 문장에서 써요.",
+          "intermediate": "\"을\"을 빼면 문장이 어색해져요.",
+          "advanced": "\"을\"은 문장에서 의미를 명확하게 하는 역할을 합니다.",
+          "master": "\"을\"의 미묘한 차이를 이해하면 한국어다운 문장을 만들 수 있습니다."
         },
         "dialogue": {
           "context": "한국어를 공부하며",
@@ -255,10 +255,10 @@
         "word": "(object marker)",
         "explanation": "Object particle attached after consonant-ending nouns.",
         "examples": {
-          "beginner": "Use \"을\".",
-          "intermediate": "\"을\" is needed in this sentence.",
-          "advanced": "Correct use of \"을\" is key to Korean grammar.",
-          "master": "Understanding subtle differences in \"을\" enables natural Korean speaking."
+          "beginner": "You use it in sentences like \"나을\".",
+          "intermediate": "Without \"을\", the sentence sounds awkward.",
+          "advanced": "\"을\" serves to clarify meaning within a sentence.",
+          "master": "Understanding the subtle differences of \"을\" helps create natural-sounding Korean sentences."
         },
         "dialogue": {
           "context": "Studying Korean",
@@ -315,10 +315,10 @@
         "word": "를",
         "explanation": "받침 없는 명사 뒤에 붙어 목적어임을 나타내는 조사.",
         "examples": {
-          "beginner": "를을 사용해요.",
-          "intermediate": "이 문장에서 를이 필요해요.",
-          "advanced": "\"를\"의 올바른 사용은 한국어 문법의 핵심입니다.",
-          "master": "\"를\"의 미묘한 차이를 이해하면 자연스러운 한국어 구사가 가능합니다."
+          "beginner": "\"나를\" 처럼 문장에서 써요.",
+          "intermediate": "\"를\"을 빼면 문장이 어색해져요.",
+          "advanced": "\"를\"은 문장에서 의미를 명확하게 하는 역할을 합니다.",
+          "master": "\"를\"의 미묘한 차이를 이해하면 한국어다운 문장을 만들 수 있습니다."
         },
         "dialogue": {
           "context": "한국어를 공부하며",
@@ -354,10 +354,10 @@
         "word": "(object marker)",
         "explanation": "Object particle attached after vowel-ending nouns.",
         "examples": {
-          "beginner": "Use \"를\".",
-          "intermediate": "\"를\" is needed in this sentence.",
-          "advanced": "Correct use of \"를\" is key to Korean grammar.",
-          "master": "Understanding subtle differences in \"를\" enables natural Korean speaking."
+          "beginner": "You use it in sentences like \"나를\".",
+          "intermediate": "Without \"를\", the sentence sounds awkward.",
+          "advanced": "\"를\" serves to clarify meaning within a sentence.",
+          "master": "Understanding the subtle differences of \"를\" helps create natural-sounding Korean sentences."
         },
         "dialogue": {
           "context": "Studying Korean",
@@ -414,10 +414,10 @@
         "word": "은",
         "explanation": "받침 있는 명사 뒤에 붙어 주제나 대조를 나타내는 조사.",
         "examples": {
-          "beginner": "은을 사용해요.",
-          "intermediate": "이 문장에서 은이 필요해요.",
-          "advanced": "\"은\"의 올바른 사용은 한국어 문법의 핵심입니다.",
-          "master": "\"은\"의 미묘한 차이를 이해하면 자연스러운 한국어 구사가 가능합니다."
+          "beginner": "\"나은\" 처럼 문장에서 써요.",
+          "intermediate": "\"은\"을 빼면 문장이 어색해져요.",
+          "advanced": "\"은\"은 문장에서 의미를 명확하게 하는 역할을 합니다.",
+          "master": "\"은\"의 미묘한 차이를 이해하면 한국어다운 문장을 만들 수 있습니다."
         },
         "dialogue": {
           "context": "한국어를 공부하며",
@@ -453,10 +453,10 @@
         "word": "(topic marker)",
         "explanation": "Topic particle attached after consonant-ending nouns, indicating topic or contrast.",
         "examples": {
-          "beginner": "Use \"은\".",
-          "intermediate": "\"은\" is needed in this sentence.",
-          "advanced": "Correct use of \"은\" is key to Korean grammar.",
-          "master": "Understanding subtle differences in \"은\" enables natural Korean speaking."
+          "beginner": "You use it in sentences like \"나은\".",
+          "intermediate": "Without \"은\", the sentence sounds awkward.",
+          "advanced": "\"은\" serves to clarify meaning within a sentence.",
+          "master": "Understanding the subtle differences of \"은\" helps create natural-sounding Korean sentences."
         },
         "dialogue": {
           "context": "Studying Korean",
@@ -513,10 +513,10 @@
         "word": "는",
         "explanation": "받침 없는 명사 뒤에 붙어 주제나 대조를 나타내는 조사.",
         "examples": {
-          "beginner": "는을 사용해요.",
-          "intermediate": "이 문장에서 는이 필요해요.",
-          "advanced": "\"는\"의 올바른 사용은 한국어 문법의 핵심입니다.",
-          "master": "\"는\"의 미묘한 차이를 이해하면 자연스러운 한국어 구사가 가능합니다."
+          "beginner": "\"나는\" 처럼 문장에서 써요.",
+          "intermediate": "\"는\"을 빼면 문장이 어색해져요.",
+          "advanced": "\"는\"은 문장에서 의미를 명확하게 하는 역할을 합니다.",
+          "master": "\"는\"의 미묘한 차이를 이해하면 한국어다운 문장을 만들 수 있습니다."
         },
         "dialogue": {
           "context": "한국어를 공부하며",
@@ -552,10 +552,10 @@
         "word": "(topic marker)",
         "explanation": "Topic particle attached after vowel-ending nouns, indicating topic or contrast.",
         "examples": {
-          "beginner": "Use \"는\".",
-          "intermediate": "\"는\" is needed in this sentence.",
-          "advanced": "Correct use of \"는\" is key to Korean grammar.",
-          "master": "Understanding subtle differences in \"는\" enables natural Korean speaking."
+          "beginner": "You use it in sentences like \"나는\".",
+          "intermediate": "Without \"는\", the sentence sounds awkward.",
+          "advanced": "\"는\" serves to clarify meaning within a sentence.",
+          "master": "Understanding the subtle differences of \"는\" helps create natural-sounding Korean sentences."
         },
         "dialogue": {
           "context": "Studying Korean",
@@ -613,10 +613,10 @@
         "word": "에",
         "explanation": "장소, 시간, 방향을 나타내는 조사. '~에 가다', '~에 있다' 등과 함께 사용.",
         "examples": {
-          "beginner": "에를 사용해요.",
-          "intermediate": "이 문장에서 에가 필요해요.",
-          "advanced": "\"에\"의 올바른 사용은 한국어 문법의 핵심입니다.",
-          "master": "\"에\"의 미묘한 차이를 이해하면 자연스러운 한국어 구사가 가능합니다."
+          "beginner": "\"나에\" 처럼 문장에서 써요.",
+          "intermediate": "\"에\"를 빼면 문장이 어색해져요.",
+          "advanced": "\"에\"는 문장에서 의미를 명확하게 하는 역할을 합니다.",
+          "master": "\"에\"의 미묘한 차이를 이해하면 한국어다운 문장을 만들 수 있습니다."
         },
         "dialogue": {
           "context": "한국어를 공부하며",
@@ -652,10 +652,10 @@
         "word": "(location/time marker)",
         "explanation": "Particle indicating location, time, or direction. Used with verbs like 'go to', 'be at'.",
         "examples": {
-          "beginner": "Use \"에\".",
-          "intermediate": "\"에\" is needed in this sentence.",
-          "advanced": "Correct use of \"에\" is key to Korean grammar.",
-          "master": "Understanding subtle differences in \"에\" enables natural Korean speaking."
+          "beginner": "You use it in sentences like \"나에\".",
+          "intermediate": "Without \"에\", the sentence sounds awkward.",
+          "advanced": "\"에\" serves to clarify meaning within a sentence.",
+          "master": "Understanding the subtle differences of \"에\" helps create natural-sounding Korean sentences."
         },
         "dialogue": {
           "context": "Studying Korean",
@@ -713,10 +713,10 @@
         "word": "에서",
         "explanation": "동작이 일어나는 장소를 나타내거나 출발점을 나타내는 조사.",
         "examples": {
-          "beginner": "에서를 사용해요.",
-          "intermediate": "이 문장에서 에서가 필요해요.",
-          "advanced": "\"에서\"의 올바른 사용은 한국어 문법의 핵심입니다.",
-          "master": "\"에서\"의 미묘한 차이를 이해하면 자연스러운 한국어 구사가 가능합니다."
+          "beginner": "\"나에서\" 처럼 문장에서 써요.",
+          "intermediate": "\"에서\"를 빼면 문장이 어색해져요.",
+          "advanced": "\"에서\"는 문장에서 의미를 명확하게 하는 역할을 합니다.",
+          "master": "\"에서\"의 미묘한 차이를 이해하면 한국어다운 문장을 만들 수 있습니다."
         },
         "dialogue": {
           "context": "한국어를 공부하며",
@@ -752,10 +752,10 @@
         "word": "(at/from)",
         "explanation": "Particle indicating where an action takes place or the starting point.",
         "examples": {
-          "beginner": "Use \"에서\".",
-          "intermediate": "\"에서\" is needed in this sentence.",
-          "advanced": "Correct use of \"에서\" is key to Korean grammar.",
-          "master": "Understanding subtle differences in \"에서\" enables natural Korean speaking."
+          "beginner": "You use it in sentences like \"나에서\".",
+          "intermediate": "Without \"에서\", the sentence sounds awkward.",
+          "advanced": "\"에서\" serves to clarify meaning within a sentence.",
+          "master": "Understanding the subtle differences of \"에서\" helps create natural-sounding Korean sentences."
         },
         "dialogue": {
           "context": "Studying Korean",
@@ -812,10 +812,10 @@
         "word": "로",
         "explanation": "받침 없거나 'ㄹ' 받침 뒤에 붙어 방향, 수단, 자격을 나타내는 조사.",
         "examples": {
-          "beginner": "로를 사용해요.",
-          "intermediate": "이 문장에서 로가 필요해요.",
-          "advanced": "\"로\"의 올바른 사용은 한국어 문법의 핵심입니다.",
-          "master": "\"로\"의 미묘한 차이를 이해하면 자연스러운 한국어 구사가 가능합니다."
+          "beginner": "\"나로\" 처럼 문장에서 써요.",
+          "intermediate": "\"로\"를 빼면 문장이 어색해져요.",
+          "advanced": "\"로\"는 문장에서 의미를 명확하게 하는 역할을 합니다.",
+          "master": "\"로\"의 미묘한 차이를 이해하면 한국어다운 문장을 만들 수 있습니다."
         },
         "dialogue": {
           "context": "한국어를 공부하며",
@@ -851,10 +851,10 @@
         "word": "(to/by/as)",
         "explanation": "Particle after vowels or ㄹ indicating direction, means, or role.",
         "examples": {
-          "beginner": "Use \"로\".",
-          "intermediate": "\"로\" is needed in this sentence.",
-          "advanced": "Correct use of \"로\" is key to Korean grammar.",
-          "master": "Understanding subtle differences in \"로\" enables natural Korean speaking."
+          "beginner": "You use it in sentences like \"나로\".",
+          "intermediate": "Without \"로\", the sentence sounds awkward.",
+          "advanced": "\"로\" serves to clarify meaning within a sentence.",
+          "master": "Understanding the subtle differences of \"로\" helps create natural-sounding Korean sentences."
         },
         "dialogue": {
           "context": "Studying Korean",
@@ -911,10 +911,10 @@
         "word": "으로",
         "explanation": "'ㄹ' 제외한 받침 있는 명사 뒤에 붙어 방향, 수단, 자격을 나타내는 조사.",
         "examples": {
-          "beginner": "으로를 사용해요.",
-          "intermediate": "이 문장에서 으로가 필요해요.",
-          "advanced": "\"으로\"의 올바른 사용은 한국어 문법의 핵심입니다.",
-          "master": "\"으로\"의 미묘한 차이를 이해하면 자연스러운 한국어 구사가 가능합니다."
+          "beginner": "\"나으로\" 처럼 문장에서 써요.",
+          "intermediate": "\"으로\"를 빼면 문장이 어색해져요.",
+          "advanced": "\"으로\"는 문장에서 의미를 명확하게 하는 역할을 합니다.",
+          "master": "\"으로\"의 미묘한 차이를 이해하면 한국어다운 문장을 만들 수 있습니다."
         },
         "dialogue": {
           "context": "한국어를 공부하며",
@@ -950,10 +950,10 @@
         "word": "(to/by/as)",
         "explanation": "Particle after consonants (except ㄹ) indicating direction, means, or role.",
         "examples": {
-          "beginner": "Use \"으로\".",
-          "intermediate": "\"으로\" is needed in this sentence.",
-          "advanced": "Correct use of \"으로\" is key to Korean grammar.",
-          "master": "Understanding subtle differences in \"으로\" enables natural Korean speaking."
+          "beginner": "You use it in sentences like \"나으로\".",
+          "intermediate": "Without \"으로\", the sentence sounds awkward.",
+          "advanced": "\"으로\" serves to clarify meaning within a sentence.",
+          "master": "Understanding the subtle differences of \"으로\" helps create natural-sounding Korean sentences."
         },
         "dialogue": {
           "context": "Studying Korean",
@@ -1009,10 +1009,10 @@
         "word": "와",
         "explanation": "받침 없는 명사 뒤에 붙어 '~와 함께', '~와 같이'의 의미를 나타내는 조사.",
         "examples": {
-          "beginner": "와를 사용해요.",
-          "intermediate": "이 문장에서 와가 필요해요.",
-          "advanced": "\"와\"의 올바른 사용은 한국어 문법의 핵심입니다.",
-          "master": "\"와\"의 미묘한 차이를 이해하면 자연스러운 한국어 구사가 가능합니다."
+          "beginner": "\"나와\" 처럼 문장에서 써요.",
+          "intermediate": "\"와\"를 빼면 문장이 어색해져요.",
+          "advanced": "\"와\"는 문장에서 의미를 명확하게 하는 역할을 합니다.",
+          "master": "\"와\"의 미묘한 차이를 이해하면 한국어다운 문장을 만들 수 있습니다."
         },
         "dialogue": {
           "context": "한국어를 공부하며",
@@ -1048,10 +1048,10 @@
         "word": "(and/with)",
         "explanation": "Particle after vowel-ending nouns meaning 'and' or 'with'.",
         "examples": {
-          "beginner": "Use \"와\".",
-          "intermediate": "\"와\" is needed in this sentence.",
-          "advanced": "Correct use of \"와\" is key to Korean grammar.",
-          "master": "Understanding subtle differences in \"와\" enables natural Korean speaking."
+          "beginner": "You use it in sentences like \"나와\".",
+          "intermediate": "Without \"와\", the sentence sounds awkward.",
+          "advanced": "\"와\" serves to clarify meaning within a sentence.",
+          "master": "Understanding the subtle differences of \"와\" helps create natural-sounding Korean sentences."
         },
         "dialogue": {
           "context": "Studying Korean",
@@ -1107,10 +1107,10 @@
         "word": "과",
         "explanation": "받침 있는 명사 뒤에 붙어 '~와 함께', '~와 같이'의 의미를 나타내는 조사.",
         "examples": {
-          "beginner": "과를 사용해요.",
-          "intermediate": "이 문장에서 과가 필요해요.",
-          "advanced": "\"과\"의 올바른 사용은 한국어 문법의 핵심입니다.",
-          "master": "\"과\"의 미묘한 차이를 이해하면 자연스러운 한국어 구사가 가능합니다."
+          "beginner": "\"나과\" 처럼 문장에서 써요.",
+          "intermediate": "\"과\"를 빼면 문장이 어색해져요.",
+          "advanced": "\"과\"는 문장에서 의미를 명확하게 하는 역할을 합니다.",
+          "master": "\"과\"의 미묘한 차이를 이해하면 한국어다운 문장을 만들 수 있습니다."
         },
         "dialogue": {
           "context": "한국어를 공부하며",
@@ -1146,10 +1146,10 @@
         "word": "(and/with)",
         "explanation": "Particle after consonant-ending nouns meaning 'and' or 'with'.",
         "examples": {
-          "beginner": "Use \"과\".",
-          "intermediate": "\"과\" is needed in this sentence.",
-          "advanced": "Correct use of \"과\" is key to Korean grammar.",
-          "master": "Understanding subtle differences in \"과\" enables natural Korean speaking."
+          "beginner": "You use it in sentences like \"나과\".",
+          "intermediate": "Without \"과\", the sentence sounds awkward.",
+          "advanced": "\"과\" serves to clarify meaning within a sentence.",
+          "master": "Understanding the subtle differences of \"과\" helps create natural-sounding Korean sentences."
         },
         "dialogue": {
           "context": "Studying Korean",
@@ -1206,10 +1206,10 @@
         "word": "의",
         "explanation": "명사 뒤에 붙어 소유나 관계를 나타내는 조사. 영어의 's, of에 해당.",
         "examples": {
-          "beginner": "의를 사용해요.",
-          "intermediate": "이 문장에서 의가 필요해요.",
-          "advanced": "\"의\"의 올바른 사용은 한국어 문법의 핵심입니다.",
-          "master": "\"의\"의 미묘한 차이를 이해하면 자연스러운 한국어 구사가 가능합니다."
+          "beginner": "\"나의\" 처럼 문장에서 써요.",
+          "intermediate": "\"의\"를 빼면 문장이 어색해져요.",
+          "advanced": "\"의\"는 문장에서 의미를 명확하게 하는 역할을 합니다.",
+          "master": "\"의\"의 미묘한 차이를 이해하면 한국어다운 문장을 만들 수 있습니다."
         },
         "dialogue": {
           "context": "한국어를 공부하며",
@@ -1245,10 +1245,10 @@
         "word": "(of/'s)",
         "explanation": "Possessive particle indicating ownership or relationship.",
         "examples": {
-          "beginner": "Use \"의\".",
-          "intermediate": "\"의\" is needed in this sentence.",
-          "advanced": "Correct use of \"의\" is key to Korean grammar.",
-          "master": "Understanding subtle differences in \"의\" enables natural Korean speaking."
+          "beginner": "You use it in sentences like \"나의\".",
+          "intermediate": "Without \"의\", the sentence sounds awkward.",
+          "advanced": "\"의\" serves to clarify meaning within a sentence.",
+          "master": "Understanding the subtle differences of \"의\" helps create natural-sounding Korean sentences."
         },
         "dialogue": {
           "context": "Studying Korean",
@@ -1305,10 +1305,10 @@
         "word": "도",
         "explanation": "명사 뒤에 붙어 '~도', '역시', '또한'의 의미를 나타내는 보조사.",
         "examples": {
-          "beginner": "도를 사용해요.",
-          "intermediate": "이 문장에서 도가 필요해요.",
-          "advanced": "\"도\"의 올바른 사용은 한국어 문법의 핵심입니다.",
-          "master": "\"도\"의 미묘한 차이를 이해하면 자연스러운 한국어 구사가 가능합니다."
+          "beginner": "\"나도\" 처럼 문장에서 써요.",
+          "intermediate": "\"도\"를 빼면 문장이 어색해져요.",
+          "advanced": "\"도\"는 문장에서 의미를 명확하게 하는 역할을 합니다.",
+          "master": "\"도\"의 미묘한 차이를 이해하면 한국어다운 문장을 만들 수 있습니다."
         },
         "dialogue": {
           "context": "한국어를 공부하며",
@@ -1344,10 +1344,10 @@
         "word": "(also/too)",
         "explanation": "Auxiliary particle meaning 'also', 'too', or 'even'.",
         "examples": {
-          "beginner": "Use \"도\".",
-          "intermediate": "\"도\" is needed in this sentence.",
-          "advanced": "Correct use of \"도\" is key to Korean grammar.",
-          "master": "Understanding subtle differences in \"도\" enables natural Korean speaking."
+          "beginner": "You use it in sentences like \"나도\".",
+          "intermediate": "Without \"도\", the sentence sounds awkward.",
+          "advanced": "\"도\" serves to clarify meaning within a sentence.",
+          "master": "Understanding the subtle differences of \"도\" helps create natural-sounding Korean sentences."
         },
         "dialogue": {
           "context": "Studying Korean",
@@ -1403,10 +1403,10 @@
         "word": "만",
         "explanation": "명사 뒤에 붙어 '오직', '단지'의 의미로 제한을 나타내는 보조사.",
         "examples": {
-          "beginner": "만을 사용해요.",
-          "intermediate": "이 문장에서 만이 필요해요.",
-          "advanced": "\"만\"의 올바른 사용은 한국어 문법의 핵심입니다.",
-          "master": "\"만\"의 미묘한 차이를 이해하면 자연스러운 한국어 구사가 가능합니다."
+          "beginner": "\"나만\" 처럼 문장에서 써요.",
+          "intermediate": "\"만\"을 빼면 문장이 어색해져요.",
+          "advanced": "\"만\"은 문장에서 의미를 명확하게 하는 역할을 합니다.",
+          "master": "\"만\"의 미묘한 차이를 이해하면 한국어다운 문장을 만들 수 있습니다."
         },
         "dialogue": {
           "context": "한국어를 공부하며",
@@ -1442,10 +1442,10 @@
         "word": "(only/just)",
         "explanation": "Auxiliary particle indicating limitation, meaning 'only' or 'just'.",
         "examples": {
-          "beginner": "Use \"만\".",
-          "intermediate": "\"만\" is needed in this sentence.",
-          "advanced": "Correct use of \"만\" is key to Korean grammar.",
-          "master": "Understanding subtle differences in \"만\" enables natural Korean speaking."
+          "beginner": "You use it in sentences like \"나만\".",
+          "intermediate": "Without \"만\", the sentence sounds awkward.",
+          "advanced": "\"만\" serves to clarify meaning within a sentence.",
+          "master": "Understanding the subtle differences of \"만\" helps create natural-sounding Korean sentences."
         },
         "dialogue": {
           "context": "Studying Korean",
@@ -1502,10 +1502,10 @@
         "word": "까지",
         "explanation": "명사 뒤에 붙어 끝 지점이나 '~조차'의 의미를 나타내는 보조사.",
         "examples": {
-          "beginner": "까지를 사용해요.",
-          "intermediate": "이 문장에서 까지가 필요해요.",
-          "advanced": "\"까지\"의 올바른 사용은 한국어 문법의 핵심입니다.",
-          "master": "\"까지\"의 미묘한 차이를 이해하면 자연스러운 한국어 구사가 가능합니다."
+          "beginner": "\"나까지\" 처럼 문장에서 써요.",
+          "intermediate": "\"까지\"를 빼면 문장이 어색해져요.",
+          "advanced": "\"까지\"는 문장에서 의미를 명확하게 하는 역할을 합니다.",
+          "master": "\"까지\"의 미묘한 차이를 이해하면 한국어다운 문장을 만들 수 있습니다."
         },
         "dialogue": {
           "context": "한국어를 공부하며",
@@ -1541,10 +1541,10 @@
         "word": "(until/to/even)",
         "explanation": "Particle indicating end point or 'even'.",
         "examples": {
-          "beginner": "Use \"까지\".",
-          "intermediate": "\"까지\" is needed in this sentence.",
-          "advanced": "Correct use of \"까지\" is key to Korean grammar.",
-          "master": "Understanding subtle differences in \"까지\" enables natural Korean speaking."
+          "beginner": "You use it in sentences like \"나까지\".",
+          "intermediate": "Without \"까지\", the sentence sounds awkward.",
+          "advanced": "\"까지\" serves to clarify meaning within a sentence.",
+          "master": "Understanding the subtle differences of \"까지\" helps create natural-sounding Korean sentences."
         },
         "dialogue": {
           "context": "Studying Korean",
@@ -1601,10 +1601,10 @@
         "word": "부터",
         "explanation": "명사 뒤에 붙어 시작 지점을 나타내는 조사.",
         "examples": {
-          "beginner": "부터를 사용해요.",
-          "intermediate": "이 문장에서 부터가 필요해요.",
-          "advanced": "\"부터\"의 올바른 사용은 한국어 문법의 핵심입니다.",
-          "master": "\"부터\"의 미묘한 차이를 이해하면 자연스러운 한국어 구사가 가능합니다."
+          "beginner": "\"나부터\" 처럼 문장에서 써요.",
+          "intermediate": "\"부터\"를 빼면 문장이 어색해져요.",
+          "advanced": "\"부터\"는 문장에서 의미를 명확하게 하는 역할을 합니다.",
+          "master": "\"부터\"의 미묘한 차이를 이해하면 한국어다운 문장을 만들 수 있습니다."
         },
         "dialogue": {
           "context": "한국어를 공부하며",
@@ -1640,10 +1640,10 @@
         "word": "(from/since)",
         "explanation": "Particle indicating starting point.",
         "examples": {
-          "beginner": "Use \"부터\".",
-          "intermediate": "\"부터\" is needed in this sentence.",
-          "advanced": "Correct use of \"부터\" is key to Korean grammar.",
-          "master": "Understanding subtle differences in \"부터\" enables natural Korean speaking."
+          "beginner": "You use it in sentences like \"나부터\".",
+          "intermediate": "Without \"부터\", the sentence sounds awkward.",
+          "advanced": "\"부터\" serves to clarify meaning within a sentence.",
+          "master": "Understanding the subtle differences of \"부터\" helps create natural-sounding Korean sentences."
         },
         "dialogue": {
           "context": "Studying Korean",
@@ -1699,10 +1699,10 @@
         "word": "보다",
         "explanation": "명사 뒤에 붙어 비교의 기준을 나타내는 조사.",
         "examples": {
-          "beginner": "보다를 사용해요.",
-          "intermediate": "이 문장에서 보다가 필요해요.",
-          "advanced": "\"보다\"의 올바른 사용은 한국어 문법의 핵심입니다.",
-          "master": "\"보다\"의 미묘한 차이를 이해하면 자연스러운 한국어 구사가 가능합니다."
+          "beginner": "\"나보다\" 처럼 문장에서 써요.",
+          "intermediate": "\"보다\"를 빼면 문장이 어색해져요.",
+          "advanced": "\"보다\"는 문장에서 의미를 명확하게 하는 역할을 합니다.",
+          "master": "\"보다\"의 미묘한 차이를 이해하면 한국어다운 문장을 만들 수 있습니다."
         },
         "dialogue": {
           "context": "한국어를 공부하며",
@@ -1738,10 +1738,10 @@
         "word": "(than)",
         "explanation": "Particle indicating comparison standard.",
         "examples": {
-          "beginner": "Use \"보다\".",
-          "intermediate": "\"보다\" is needed in this sentence.",
-          "advanced": "Correct use of \"보다\" is key to Korean grammar.",
-          "master": "Understanding subtle differences in \"보다\" enables natural Korean speaking."
+          "beginner": "You use it in sentences like \"나보다\".",
+          "intermediate": "Without \"보다\", the sentence sounds awkward.",
+          "advanced": "\"보다\" serves to clarify meaning within a sentence.",
+          "master": "Understanding the subtle differences of \"보다\" helps create natural-sounding Korean sentences."
         },
         "dialogue": {
           "context": "Studying Korean",
@@ -1799,10 +1799,10 @@
         "word": "한테",
         "explanation": "사람이나 동물 뒤에 붙어 '~에게'의 구어체 표현.",
         "examples": {
-          "beginner": "한테를 사용해요.",
-          "intermediate": "이 문장에서 한테가 필요해요.",
-          "advanced": "\"한테\"의 올바른 사용은 한국어 문법의 핵심입니다.",
-          "master": "\"한테\"의 미묘한 차이를 이해하면 자연스러운 한국어 구사가 가능합니다."
+          "beginner": "\"나한테\" 처럼 문장에서 써요.",
+          "intermediate": "\"한테\"를 빼면 문장이 어색해져요.",
+          "advanced": "\"한테\"는 문장에서 의미를 명확하게 하는 역할을 합니다.",
+          "master": "\"한테\"의 미묘한 차이를 이해하면 한국어다운 문장을 만들 수 있습니다."
         },
         "dialogue": {
           "context": "한국어를 공부하며",
@@ -1838,10 +1838,10 @@
         "word": "(to someone)",
         "explanation": "Informal particle used after people/animals meaning 'to'.",
         "examples": {
-          "beginner": "Use \"한테\".",
-          "intermediate": "\"한테\" is needed in this sentence.",
-          "advanced": "Correct use of \"한테\" is key to Korean grammar.",
-          "master": "Understanding subtle differences in \"한테\" enables natural Korean speaking."
+          "beginner": "You use it in sentences like \"나한테\".",
+          "intermediate": "Without \"한테\", the sentence sounds awkward.",
+          "advanced": "\"한테\" serves to clarify meaning within a sentence.",
+          "master": "Understanding the subtle differences of \"한테\" helps create natural-sounding Korean sentences."
         },
         "dialogue": {
           "context": "Studying Korean",
@@ -1899,10 +1899,10 @@
         "word": "에게",
         "explanation": "사람이나 동물 뒤에 붙어 행동의 대상을 나타내는 조사.",
         "examples": {
-          "beginner": "에게를 사용해요.",
-          "intermediate": "이 문장에서 에게가 필요해요.",
-          "advanced": "\"에게\"의 올바른 사용은 한국어 문법의 핵심입니다.",
-          "master": "\"에게\"의 미묘한 차이를 이해하면 자연스러운 한국어 구사가 가능합니다."
+          "beginner": "\"나에게\" 처럼 문장에서 써요.",
+          "intermediate": "\"에게\"를 빼면 문장이 어색해져요.",
+          "advanced": "\"에게\"는 문장에서 의미를 명확하게 하는 역할을 합니다.",
+          "master": "\"에게\"의 미묘한 차이를 이해하면 한국어다운 문장을 만들 수 있습니다."
         },
         "dialogue": {
           "context": "한국어를 공부하며",
@@ -1938,10 +1938,10 @@
         "word": "(to someone)",
         "explanation": "Particle used after people/animals indicating recipient.",
         "examples": {
-          "beginner": "Use \"에게\".",
-          "intermediate": "\"에게\" is needed in this sentence.",
-          "advanced": "Correct use of \"에게\" is key to Korean grammar.",
-          "master": "Understanding subtle differences in \"에게\" enables natural Korean speaking."
+          "beginner": "You use it in sentences like \"나에게\".",
+          "intermediate": "Without \"에게\", the sentence sounds awkward.",
+          "advanced": "\"에게\" serves to clarify meaning within a sentence.",
+          "master": "Understanding the subtle differences of \"에게\" helps create natural-sounding Korean sentences."
         },
         "dialogue": {
           "context": "Studying Korean",
@@ -1998,10 +1998,10 @@
         "word": "처럼",
         "explanation": "명사 뒤에 붙어 비유나 비슷함을 나타내는 조사.",
         "examples": {
-          "beginner": "처럼을 사용해요.",
-          "intermediate": "이 문장에서 처럼이 필요해요.",
-          "advanced": "\"처럼\"의 올바른 사용은 한국어 문법의 핵심입니다.",
-          "master": "\"처럼\"의 미묘한 차이를 이해하면 자연스러운 한국어 구사가 가능합니다."
+          "beginner": "\"나처럼\" 처럼 문장에서 써요.",
+          "intermediate": "\"처럼\"을 빼면 문장이 어색해져요.",
+          "advanced": "\"처럼\"은 문장에서 의미를 명확하게 하는 역할을 합니다.",
+          "master": "\"처럼\"의 미묘한 차이를 이해하면 한국어다운 문장을 만들 수 있습니다."
         },
         "dialogue": {
           "context": "한국어를 공부하며",
@@ -2037,10 +2037,10 @@
         "word": "(like/as)",
         "explanation": "Particle indicating simile or resemblance.",
         "examples": {
-          "beginner": "Use \"처럼\".",
-          "intermediate": "\"처럼\" is needed in this sentence.",
-          "advanced": "Correct use of \"처럼\" is key to Korean grammar.",
-          "master": "Understanding subtle differences in \"처럼\" enables natural Korean speaking."
+          "beginner": "You use it in sentences like \"나처럼\".",
+          "intermediate": "Without \"처럼\", the sentence sounds awkward.",
+          "advanced": "\"처럼\" serves to clarify meaning within a sentence.",
+          "master": "Understanding the subtle differences of \"처럼\" helps create natural-sounding Korean sentences."
         },
         "dialogue": {
           "context": "Studying Korean",
@@ -2097,10 +2097,10 @@
         "word": "같이",
         "explanation": "명사 뒤에 붙어 '~처럼' 또는 '함께'의 의미를 나타내는 조사.",
         "examples": {
-          "beginner": "같이를 사용해요.",
-          "intermediate": "이 문장에서 같이가 필요해요.",
-          "advanced": "\"같이\"의 올바른 사용은 한국어 문법의 핵심입니다.",
-          "master": "\"같이\"의 미묘한 차이를 이해하면 자연스러운 한국어 구사가 가능합니다."
+          "beginner": "\"나같이\" 처럼 문장에서 써요.",
+          "intermediate": "\"같이\"를 빼면 문장이 어색해져요.",
+          "advanced": "\"같이\"는 문장에서 의미를 명확하게 하는 역할을 합니다.",
+          "master": "\"같이\"의 미묘한 차이를 이해하면 한국어다운 문장을 만들 수 있습니다."
         },
         "dialogue": {
           "context": "한국어를 공부하며",
@@ -2136,10 +2136,10 @@
         "word": "(like/together)",
         "explanation": "Particle meaning 'like' or 'together'.",
         "examples": {
-          "beginner": "Use \"같이\".",
-          "intermediate": "\"같이\" is needed in this sentence.",
-          "advanced": "Correct use of \"같이\" is key to Korean grammar.",
-          "master": "Understanding subtle differences in \"같이\" enables natural Korean speaking."
+          "beginner": "You use it in sentences like \"나같이\".",
+          "intermediate": "Without \"같이\", the sentence sounds awkward.",
+          "advanced": "\"같이\" serves to clarify meaning within a sentence.",
+          "master": "Understanding the subtle differences of \"같이\" helps create natural-sounding Korean sentences."
         },
         "dialogue": {
           "context": "Studying Korean",
@@ -2196,10 +2196,10 @@
         "word": "하고",
         "explanation": "명사 뒤에 붙어 '~와/과'의 구어체 표현. 나열이나 동반을 나타냄.",
         "examples": {
-          "beginner": "하고를 사용해요.",
-          "intermediate": "이 문장에서 하고가 필요해요.",
-          "advanced": "\"하고\"의 올바른 사용은 한국어 문법의 핵심입니다.",
-          "master": "\"하고\"의 미묘한 차이를 이해하면 자연스러운 한국어 구사가 가능합니다."
+          "beginner": "\"나하고\" 처럼 문장에서 써요.",
+          "intermediate": "\"하고\"를 빼면 문장이 어색해져요.",
+          "advanced": "\"하고\"는 문장에서 의미를 명확하게 하는 역할을 합니다.",
+          "master": "\"하고\"의 미묘한 차이를 이해하면 한국어다운 문장을 만들 수 있습니다."
         },
         "dialogue": {
           "context": "한국어를 공부하며",
@@ -2235,10 +2235,10 @@
         "word": "(and/with)",
         "explanation": "Informal particle meaning 'and' or 'with'.",
         "examples": {
-          "beginner": "Use \"하고\".",
-          "intermediate": "\"하고\" is needed in this sentence.",
-          "advanced": "Correct use of \"하고\" is key to Korean grammar.",
-          "master": "Understanding subtle differences in \"하고\" enables natural Korean speaking."
+          "beginner": "You use it in sentences like \"나하고\".",
+          "intermediate": "Without \"하고\", the sentence sounds awkward.",
+          "advanced": "\"하고\" serves to clarify meaning within a sentence.",
+          "master": "Understanding the subtle differences of \"하고\" helps create natural-sounding Korean sentences."
         },
         "dialogue": {
           "context": "Studying Korean",
@@ -2295,10 +2295,10 @@
         "word": "밖에",
         "explanation": "명사 뒤에 붙어 '~만'의 의미를 강조. 반드시 부정문과 함께 사용.",
         "examples": {
-          "beginner": "밖에를 사용해요.",
-          "intermediate": "이 문장에서 밖에가 필요해요.",
-          "advanced": "\"밖에\"의 올바른 사용은 한국어 문법의 핵심입니다.",
-          "master": "\"밖에\"의 미묘한 차이를 이해하면 자연스러운 한국어 구사가 가능합니다."
+          "beginner": "\"나밖에\" 처럼 문장에서 써요.",
+          "intermediate": "\"밖에\"를 빼면 문장이 어색해져요.",
+          "advanced": "\"밖에\"는 문장에서 의미를 명확하게 하는 역할을 합니다.",
+          "master": "\"밖에\"의 미묘한 차이를 이해하면 한국어다운 문장을 만들 수 있습니다."
         },
         "dialogue": {
           "context": "한국어를 공부하며",
@@ -2334,10 +2334,10 @@
         "word": "(only/nothing but)",
         "explanation": "Particle emphasizing 'only', always used with negative verbs.",
         "examples": {
-          "beginner": "Use \"밖에\".",
-          "intermediate": "\"밖에\" is needed in this sentence.",
-          "advanced": "Correct use of \"밖에\" is key to Korean grammar.",
-          "master": "Understanding subtle differences in \"밖에\" enables natural Korean speaking."
+          "beginner": "You use it in sentences like \"나밖에\".",
+          "intermediate": "Without \"밖에\", the sentence sounds awkward.",
+          "advanced": "\"밖에\" serves to clarify meaning within a sentence.",
+          "master": "Understanding the subtle differences of \"밖에\" helps create natural-sounding Korean sentences."
         },
         "dialogue": {
           "context": "Studying Korean",
@@ -2394,10 +2394,10 @@
         "word": "마저",
         "explanation": "명사 뒤에 붙어 마지막 남은 것까지 포함함을 나타내는 보조사.",
         "examples": {
-          "beginner": "마저를 사용해요.",
-          "intermediate": "이 문장에서 마저가 필요해요.",
-          "advanced": "\"마저\"의 올바른 사용은 한국어 문법의 핵심입니다.",
-          "master": "\"마저\"의 미묘한 차이를 이해하면 자연스러운 한국어 구사가 가능합니다."
+          "beginner": "\"나마저\" 처럼 문장에서 써요.",
+          "intermediate": "\"마저\"를 빼면 문장이 어색해져요.",
+          "advanced": "\"마저\"는 문장에서 의미를 명확하게 하는 역할을 합니다.",
+          "master": "\"마저\"의 미묘한 차이를 이해하면 한국어다운 문장을 만들 수 있습니다."
         },
         "dialogue": {
           "context": "한국어를 공부하며",
@@ -2433,10 +2433,10 @@
         "word": "(even/the last)",
         "explanation": "Particle indicating inclusion of the last remaining thing.",
         "examples": {
-          "beginner": "Use \"마저\".",
-          "intermediate": "\"마저\" is needed in this sentence.",
-          "advanced": "Correct use of \"마저\" is key to Korean grammar.",
-          "master": "Understanding subtle differences in \"마저\" enables natural Korean speaking."
+          "beginner": "You use it in sentences like \"나마저\".",
+          "intermediate": "Without \"마저\", the sentence sounds awkward.",
+          "advanced": "\"마저\" serves to clarify meaning within a sentence.",
+          "master": "Understanding the subtle differences of \"마저\" helps create natural-sounding Korean sentences."
         },
         "dialogue": {
           "context": "Studying Korean",
@@ -2493,10 +2493,10 @@
         "word": "조차",
         "explanation": "명사 뒤에 붙어 예상 밖의 극단적인 경우까지 포함함을 나타내는 보조사.",
         "examples": {
-          "beginner": "조차를 사용해요.",
-          "intermediate": "이 문장에서 조차가 필요해요.",
-          "advanced": "\"조차\"의 올바른 사용은 한국어 문법의 핵심입니다.",
-          "master": "\"조차\"의 미묘한 차이를 이해하면 자연스러운 한국어 구사가 가능합니다."
+          "beginner": "\"나조차\" 처럼 문장에서 써요.",
+          "intermediate": "\"조차\"를 빼면 문장이 어색해져요.",
+          "advanced": "\"조차\"는 문장에서 의미를 명확하게 하는 역할을 합니다.",
+          "master": "\"조차\"의 미묘한 차이를 이해하면 한국어다운 문장을 만들 수 있습니다."
         },
         "dialogue": {
           "context": "한국어를 공부하며",
@@ -2532,10 +2532,10 @@
         "word": "(even)",
         "explanation": "Particle indicating extreme or unexpected inclusion.",
         "examples": {
-          "beginner": "Use \"조차\".",
-          "intermediate": "\"조차\" is needed in this sentence.",
-          "advanced": "Correct use of \"조차\" is key to Korean grammar.",
-          "master": "Understanding subtle differences in \"조차\" enables natural Korean speaking."
+          "beginner": "You use it in sentences like \"나조차\".",
+          "intermediate": "Without \"조차\", the sentence sounds awkward.",
+          "advanced": "\"조차\" serves to clarify meaning within a sentence.",
+          "master": "Understanding the subtle differences of \"조차\" helps create natural-sounding Korean sentences."
         },
         "dialogue": {
           "context": "Studying Korean",
@@ -2591,10 +2591,10 @@
         "word": "라고",
         "explanation": "받침 없는 명사 뒤에 붙어 인용이나 호칭을 나타내는 조사.",
         "examples": {
-          "beginner": "라고를 사용해요.",
-          "intermediate": "이 문장에서 라고가 필요해요.",
-          "advanced": "\"라고\"의 올바른 사용은 한국어 문법의 핵심입니다.",
-          "master": "\"라고\"의 미묘한 차이를 이해하면 자연스러운 한국어 구사가 가능합니다."
+          "beginner": "\"나라고\" 처럼 문장에서 써요.",
+          "intermediate": "\"라고\"를 빼면 문장이 어색해져요.",
+          "advanced": "\"라고\"는 문장에서 의미를 명확하게 하는 역할을 합니다.",
+          "master": "\"라고\"의 미묘한 차이를 이해하면 한국어다운 문장을 만들 수 있습니다."
         },
         "dialogue": {
           "context": "한국어를 공부하며",
@@ -2630,10 +2630,10 @@
         "word": "(called/said)",
         "explanation": "Quotation particle after vowel-ending words.",
         "examples": {
-          "beginner": "Use \"라고\".",
-          "intermediate": "\"라고\" is needed in this sentence.",
-          "advanced": "Correct use of \"라고\" is key to Korean grammar.",
-          "master": "Understanding subtle differences in \"라고\" enables natural Korean speaking."
+          "beginner": "You use it in sentences like \"나라고\".",
+          "intermediate": "Without \"라고\", the sentence sounds awkward.",
+          "advanced": "\"라고\" serves to clarify meaning within a sentence.",
+          "master": "Understanding the subtle differences of \"라고\" helps create natural-sounding Korean sentences."
         },
         "dialogue": {
           "context": "Studying Korean",
@@ -2689,10 +2689,10 @@
         "word": "이라고",
         "explanation": "받침 있는 명사 뒤에 붙어 인용이나 호칭을 나타내는 조사.",
         "examples": {
-          "beginner": "이라고를 사용해요.",
-          "intermediate": "이 문장에서 이라고가 필요해요.",
-          "advanced": "\"이라고\"의 올바른 사용은 한국어 문법의 핵심입니다.",
-          "master": "\"이라고\"의 미묘한 차이를 이해하면 자연스러운 한국어 구사가 가능합니다."
+          "beginner": "\"나이라고\" 처럼 문장에서 써요.",
+          "intermediate": "\"이라고\"를 빼면 문장이 어색해져요.",
+          "advanced": "\"이라고\"는 문장에서 의미를 명확하게 하는 역할을 합니다.",
+          "master": "\"이라고\"의 미묘한 차이를 이해하면 한국어다운 문장을 만들 수 있습니다."
         },
         "dialogue": {
           "context": "한국어를 공부하며",
@@ -2728,10 +2728,10 @@
         "word": "(called/said)",
         "explanation": "Quotation particle after consonant-ending words.",
         "examples": {
-          "beginner": "Use \"이라고\".",
-          "intermediate": "\"이라고\" is needed in this sentence.",
-          "advanced": "Correct use of \"이라고\" is key to Korean grammar.",
-          "master": "Understanding subtle differences in \"이라고\" enables natural Korean speaking."
+          "beginner": "You use it in sentences like \"나이라고\".",
+          "intermediate": "Without \"이라고\", the sentence sounds awkward.",
+          "advanced": "\"이라고\" serves to clarify meaning within a sentence.",
+          "master": "Understanding the subtle differences of \"이라고\" helps create natural-sounding Korean sentences."
         },
         "dialogue": {
           "context": "Studying Korean",
@@ -2788,10 +2788,10 @@
         "word": "께",
         "explanation": "높임의 대상 뒤에 붙어 '에게'의 존경 표현.",
         "examples": {
-          "beginner": "께를 사용해요.",
-          "intermediate": "이 문장에서 께가 필요해요.",
-          "advanced": "\"께\"의 올바른 사용은 한국어 문법의 핵심입니다.",
-          "master": "\"께\"의 미묘한 차이를 이해하면 자연스러운 한국어 구사가 가능합니다."
+          "beginner": "\"나께\" 처럼 문장에서 써요.",
+          "intermediate": "\"께\"를 빼면 문장이 어색해져요.",
+          "advanced": "\"께\"는 문장에서 의미를 명확하게 하는 역할을 합니다.",
+          "master": "\"께\"의 미묘한 차이를 이해하면 한국어다운 문장을 만들 수 있습니다."
         },
         "dialogue": {
           "context": "한국어를 공부하며",
@@ -2827,10 +2827,10 @@
         "word": "(to - honorific)",
         "explanation": "Honorific form of 'to', used with respected people.",
         "examples": {
-          "beginner": "Use \"께\".",
-          "intermediate": "\"께\" is needed in this sentence.",
-          "advanced": "Correct use of \"께\" is key to Korean grammar.",
-          "master": "Understanding subtle differences in \"께\" enables natural Korean speaking."
+          "beginner": "You use it in sentences like \"나께\".",
+          "intermediate": "Without \"께\", the sentence sounds awkward.",
+          "advanced": "\"께\" serves to clarify meaning within a sentence.",
+          "master": "Understanding the subtle differences of \"께\" helps create natural-sounding Korean sentences."
         },
         "dialogue": {
           "context": "Studying Korean",
@@ -2887,10 +2887,10 @@
         "word": "서",
         "explanation": "'~어서/아서'의 줄임말로 이유나 순서를 나타내는 연결 조사.",
         "examples": {
-          "beginner": "서를 사용해요.",
-          "intermediate": "이 문장에서 서가 필요해요.",
-          "advanced": "\"서\"의 올바른 사용은 한국어 문법의 핵심입니다.",
-          "master": "\"서\"의 미묘한 차이를 이해하면 자연스러운 한국어 구사가 가능합니다."
+          "beginner": "\"나서\" 처럼 문장에서 써요.",
+          "intermediate": "\"서\"를 빼면 문장이 어색해져요.",
+          "advanced": "\"서\"는 문장에서 의미를 명확하게 하는 역할을 합니다.",
+          "master": "\"서\"의 미묘한 차이를 이해하면 한국어다운 문장을 만들 수 있습니다."
         },
         "dialogue": {
           "context": "한국어를 공부하며",
@@ -2926,10 +2926,10 @@
         "word": "(so/because)",
         "explanation": "Connective particle indicating reason or sequence.",
         "examples": {
-          "beginner": "Use \"서\".",
-          "intermediate": "\"서\" is needed in this sentence.",
-          "advanced": "Correct use of \"서\" is key to Korean grammar.",
-          "master": "Understanding subtle differences in \"서\" enables natural Korean speaking."
+          "beginner": "You use it in sentences like \"나서\".",
+          "intermediate": "Without \"서\", the sentence sounds awkward.",
+          "advanced": "\"서\" serves to clarify meaning within a sentence.",
+          "master": "Understanding the subtle differences of \"서\" helps create natural-sounding Korean sentences."
         },
         "dialogue": {
           "context": "Studying Korean",

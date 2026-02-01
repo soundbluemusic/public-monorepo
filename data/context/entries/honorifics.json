@@ -20,10 +20,10 @@
         "word": "-요",
         "explanation": "해요체의 종결어미로, 존댓말의 가장 기본적인 표현입니다. 동사나 형용사 뒤에 붙여 공손함을 나타냅니다. 일상 대화에서 가장 많이 쓰이는 존댓말 형태입니다.",
         "examples": {
-          "beginner": "\"-요\"이라고 말해요.",
-          "intermediate": "웃어른에게 \"-요\"을 사용해요.",
-          "advanced": "\"-요\"의 올바른 사용은 한국어 예절의 핵심입니다.",
-          "master": "\"-요\"의 뉘앙스를 이해하면 상황에 맞는 존댓말 구사가 가능합니다."
+          "beginner": "선생님께 \"-요\"라고 해요.",
+          "intermediate": "처음 만난 사람에게는 \"-요\"를 써야 해요.",
+          "advanced": "\"-요\"는 한국에서 예의를 지킬 때 꼭 필요한 표현입니다.",
+          "master": "\"-요\"의 뉘앙스를 이해하면 격식과 친밀함을 적절히 조절할 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -47,8 +47,8 @@
             },
             {
               "speaker": "B",
-              "text": "\"-요\"이라고 해요.",
-              "romanization": "\"-yo\"irago haeyo.",
+              "text": "\"-요\"라고 해요.",
+              "romanization": "\"-yo\"rago haeyo.",
               "translation": "You say \"-요\"."
             },
             {
@@ -70,10 +70,10 @@
         "word": "-yo (polite ending)",
         "explanation": "The most common polite sentence ending in Korean (해요체 / haeyo-che). Added to verbs and adjectives to show politeness. It's the middle level of formality — more polite than casual speech (반말) but softer than formal speech (-습니다).",
         "examples": {
-          "beginner": "We say \"-요\".",
-          "intermediate": "Use \"-요\" with elders.",
-          "advanced": "Correct use of \"-요\" is key to Korean etiquette.",
-          "master": "Understanding the nuance of \"-요\" enables situationally appropriate honorific use."
+          "beginner": "You say \"-요\" to a teacher.",
+          "intermediate": "You should use \"-요\" when meeting someone for the first time.",
+          "advanced": "\"-요\" is an essential expression for showing politeness in Korea.",
+          "master": "Understanding the nuance of \"-요\" helps balance formality and familiarity appropriately."
         },
         "variations": {
           "formal": [
@@ -99,7 +99,7 @@
               "speaker": "B",
               "text": "You say \"-요\".",
               "romanization": "",
-              "translation": "\"-요\"이라고 해요."
+              "translation": "\"-요\"라고 해요."
             },
             {
               "speaker": "A",
@@ -142,10 +142,10 @@
         "word": "-세요",
         "explanation": "주체 높임 선어말어미 '-시-'와 해요체 '-어요'가 결합한 형태입니다. 상대방의 행동을 높여 말하거나 공손한 요청을 할 때 사용합니다. '가세요', '드세요', '안녕하세요' 등에 쓰입니다.",
         "examples": {
-          "beginner": "\"-세요\"이라고 말해요.",
-          "intermediate": "웃어른에게 \"-세요\"을 사용해요.",
-          "advanced": "\"-세요\"의 올바른 사용은 한국어 예절의 핵심입니다.",
-          "master": "\"-세요\"의 뉘앙스를 이해하면 상황에 맞는 존댓말 구사가 가능합니다."
+          "beginner": "선생님께 \"-세요\"라고 해요.",
+          "intermediate": "처음 만난 사람에게는 \"-세요\"를 써야 해요.",
+          "advanced": "\"-세요\"는 한국에서 예의를 지킬 때 꼭 필요한 표현입니다.",
+          "master": "\"-세요\"의 뉘앙스를 이해하면 격식과 친밀함을 적절히 조절할 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -169,8 +169,8 @@
             },
             {
               "speaker": "B",
-              "text": "\"-세요\"이라고 해요.",
-              "romanization": "\"-seyo\"irago haeyo.",
+              "text": "\"-세요\"라고 해요.",
+              "romanization": "\"-seyo\"rago haeyo.",
               "translation": "You say \"-세요\"."
             },
             {
@@ -192,10 +192,10 @@
         "word": "-seyo (polite honorific ending)",
         "explanation": "A combination of the subject honorific marker '-시-' and the polite ending '-어요'. Used to elevate the listener's actions or make polite requests. Found in expressions like '가세요' (please go), '드세요' (please eat), and '안녕하세요' (hello).",
         "examples": {
-          "beginner": "We say \"-세요\".",
-          "intermediate": "Use \"-세요\" with elders.",
-          "advanced": "Correct use of \"-세요\" is key to Korean etiquette.",
-          "master": "Understanding the nuance of \"-세요\" enables situationally appropriate honorific use."
+          "beginner": "You say \"-세요\" to a teacher.",
+          "intermediate": "You should use \"-세요\" when meeting someone for the first time.",
+          "advanced": "\"-세요\" is an essential expression for showing politeness in Korea.",
+          "master": "Understanding the nuance of \"-세요\" helps balance formality and familiarity appropriately."
         },
         "variations": {
           "formal": [
@@ -221,7 +221,7 @@
               "speaker": "B",
               "text": "You say \"-세요\".",
               "romanization": "",
-              "translation": "\"-세요\"이라고 해요."
+              "translation": "\"-세요\"라고 해요."
             },
             {
               "speaker": "A",
@@ -264,10 +264,10 @@
         "word": "님",
         "explanation": "상대방을 높여 부를 때 이름이나 직함 뒤에 붙이는 존칭 접미사입니다. '선생님', '사장님', '손님' 등에 쓰입니다. 인터넷에서는 닉네임 뒤에도 붙입니다.",
         "examples": {
-          "beginner": "\"님\"이라고 말해요.",
-          "intermediate": "웃어른에게 \"님\"을 사용해요.",
-          "advanced": "\"님\"의 올바른 사용은 한국어 예절의 핵심입니다.",
-          "master": "\"님\"의 뉘앙스를 이해하면 상황에 맞는 존댓말 구사가 가능합니다."
+          "beginner": "선생님께 \"님\"이라고 해요.",
+          "intermediate": "처음 만난 사람에게는 \"님\"을 써야 해요.",
+          "advanced": "\"님\"은 한국에서 예의를 지킬 때 꼭 필요한 표현입니다.",
+          "master": "\"님\"의 뉘앙스를 이해하면 격식과 친밀함을 적절히 조절할 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -314,10 +314,10 @@
         "word": "-nim (honorific suffix)",
         "explanation": "An honorific suffix attached after a name or title to show respect. Used in '선생님' (teacher), '사장님' (boss), '손님' (guest/customer). On the internet, it's commonly added after usernames as a sign of respect.",
         "examples": {
-          "beginner": "We say \"님\".",
-          "intermediate": "Use \"님\" with elders.",
-          "advanced": "Correct use of \"님\" is key to Korean etiquette.",
-          "master": "Understanding the nuance of \"님\" enables situationally appropriate honorific use."
+          "beginner": "You say \"님\" to a teacher.",
+          "intermediate": "You should use \"님\" when meeting someone for the first time.",
+          "advanced": "\"님\" is an essential expression for showing politeness in Korea.",
+          "master": "Understanding the nuance of \"님\" helps balance formality and familiarity appropriately."
         },
         "variations": {
           "formal": [
@@ -386,10 +386,10 @@
         "word": "씨",
         "explanation": "이름 뒤에 붙여 상대를 보통 수준으로 높이는 호칭입니다. '님'보다 격이 낮고, 주로 성+이름 뒤에 붙입니다. 성만 쓰고 '씨'를 붙이면 무례할 수 있으므로 주의해야 합니다.",
         "examples": {
-          "beginner": "\"씨\"이라고 말해요.",
-          "intermediate": "웃어른에게 \"씨\"을 사용해요.",
-          "advanced": "\"씨\"의 올바른 사용은 한국어 예절의 핵심입니다.",
-          "master": "\"씨\"의 뉘앙스를 이해하면 상황에 맞는 존댓말 구사가 가능합니다."
+          "beginner": "선생님께 \"씨\"라고 해요.",
+          "intermediate": "처음 만난 사람에게는 \"씨\"를 써야 해요.",
+          "advanced": "\"씨\"는 한국에서 예의를 지킬 때 꼭 필요한 표현입니다.",
+          "master": "\"씨\"의 뉘앙스를 이해하면 격식과 친밀함을 적절히 조절할 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -413,8 +413,8 @@
             },
             {
               "speaker": "B",
-              "text": "\"씨\"이라고 해요.",
-              "romanization": "\"ssi\"irago haeyo.",
+              "text": "\"씨\"라고 해요.",
+              "romanization": "\"ssi\"rago haeyo.",
               "translation": "You say \"씨\"."
             },
             {
@@ -436,10 +436,10 @@
         "word": "-ssi (Mr./Ms./name suffix)",
         "explanation": "A moderately polite suffix attached after a person's full name. Less formal than '-님' but polite enough for everyday use. Important: attaching '-씨' after only a surname (e.g., '김 씨') can sound rude; always use the full name (e.g., '김민수 씨').",
         "examples": {
-          "beginner": "We say \"씨\".",
-          "intermediate": "Use \"씨\" with elders.",
-          "advanced": "Correct use of \"씨\" is key to Korean etiquette.",
-          "master": "Understanding the nuance of \"씨\" enables situationally appropriate honorific use."
+          "beginner": "You say \"씨\" to a teacher.",
+          "intermediate": "You should use \"씨\" when meeting someone for the first time.",
+          "advanced": "\"씨\" is an essential expression for showing politeness in Korea.",
+          "master": "Understanding the nuance of \"씨\" helps balance formality and familiarity appropriately."
         },
         "variations": {
           "formal": [
@@ -465,7 +465,7 @@
               "speaker": "B",
               "text": "You say \"씨\".",
               "romanization": "",
-              "translation": "\"씨\"이라고 해요."
+              "translation": "\"씨\"라고 해요."
             },
             {
               "speaker": "A",
@@ -509,10 +509,10 @@
         "word": "존댓말",
         "explanation": "상대방을 높여 말하는 말투의 총칭입니다. 반대말은 '반말'(casual speech)입니다. 한국어의 존비어 체계는 세계적으로 가장 복잡한 경어법 중 하나입니다.",
         "examples": {
-          "beginner": "\"존댓말\"이라고 말해요.",
-          "intermediate": "웃어른에게 \"존댓말\"을 사용해요.",
-          "advanced": "\"존댓말\"의 올바른 사용은 한국어 예절의 핵심입니다.",
-          "master": "\"존댓말\"의 뉘앙스를 이해하면 상황에 맞는 존댓말 구사가 가능합니다."
+          "beginner": "선생님께 \"존댓말\"이라고 해요.",
+          "intermediate": "처음 만난 사람에게는 \"존댓말\"을 써야 해요.",
+          "advanced": "\"존댓말\"은 한국에서 예의를 지킬 때 꼭 필요한 표현입니다.",
+          "master": "\"존댓말\"의 뉘앙스를 이해하면 격식과 친밀함을 적절히 조절할 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -561,10 +561,10 @@
         "word": "formal/polite speech",
         "explanation": "The general term for polite or formal speech in Korean. The opposite is '반말' (casual speech). Korean has one of the world's most complex honorific systems, with three types: subject, addressee, and object honorification.",
         "examples": {
-          "beginner": "We say \"존댓말\".",
-          "intermediate": "Use \"존댓말\" with elders.",
-          "advanced": "Correct use of \"존댓말\" is key to Korean etiquette.",
-          "master": "Understanding the nuance of \"존댓말\" enables situationally appropriate honorific use."
+          "beginner": "You say \"존댓말\" to a teacher.",
+          "intermediate": "You should use \"존댓말\" when meeting someone for the first time.",
+          "advanced": "\"존댓말\" is an essential expression for showing politeness in Korea.",
+          "master": "Understanding the nuance of \"존댓말\" helps balance formality and familiarity appropriately."
         },
         "variations": {
           "formal": [
@@ -636,10 +636,10 @@
         "word": "반말",
         "explanation": "높임 표현 없이 편하게 말하는 말투입니다. 친구, 동생, 친한 사이에서 사용합니다. 처음 만난 사람이나 윗사람에게 반말을 쓰면 매우 무례합니다. '말을 놓다'는 반말로 전환하겠다는 뜻입니다.",
         "examples": {
-          "beginner": "\"반말\"이라고 말해요.",
-          "intermediate": "웃어른에게 \"반말\"을 사용해요.",
-          "advanced": "\"반말\"의 올바른 사용은 한국어 예절의 핵심입니다.",
-          "master": "\"반말\"의 뉘앙스를 이해하면 상황에 맞는 존댓말 구사가 가능합니다."
+          "beginner": "선생님께 \"반말\"이라고 해요.",
+          "intermediate": "처음 만난 사람에게는 \"반말\"을 써야 해요.",
+          "advanced": "\"반말\"은 한국에서 예의를 지킬 때 꼭 필요한 표현입니다.",
+          "master": "\"반말\"의 뉘앙스를 이해하면 격식과 친밀함을 적절히 조절할 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -686,10 +686,10 @@
         "word": "casual speech / informal speech",
         "explanation": "Informal speech without honorific markers, used among friends, younger people, or close relationships. Using 반말 with strangers or elders is considered very rude. The phrase '말을 놓다' means to switch to casual speech.",
         "examples": {
-          "beginner": "We say \"반말\".",
-          "intermediate": "Use \"반말\" with elders.",
-          "advanced": "Correct use of \"반말\" is key to Korean etiquette.",
-          "master": "Understanding the nuance of \"반말\" enables situationally appropriate honorific use."
+          "beginner": "You say \"반말\" to a teacher.",
+          "intermediate": "You should use \"반말\" when meeting someone for the first time.",
+          "advanced": "\"반말\" is an essential expression for showing politeness in Korea.",
+          "master": "Understanding the nuance of \"반말\" helps balance formality and familiarity appropriately."
         },
         "variations": {
           "formal": [
@@ -758,10 +758,10 @@
         "word": "높임말",
         "explanation": "상대방이나 주어를 높여서 말하는 표현의 총칭입니다. 존댓말과 비슷하지만 더 넓은 개념으로, 주체 높임(-시-), 상대 높임(-요, -습니다), 객체 높임(드리다, 여쭙다)을 모두 포함합니다.",
         "examples": {
-          "beginner": "\"높임말\"이라고 말해요.",
-          "intermediate": "웃어른에게 \"높임말\"을 사용해요.",
-          "advanced": "\"높임말\"의 올바른 사용은 한국어 예절의 핵심입니다.",
-          "master": "\"높임말\"의 뉘앙스를 이해하면 상황에 맞는 존댓말 구사가 가능합니다."
+          "beginner": "선생님께 \"높임말\"이라고 해요.",
+          "intermediate": "처음 만난 사람에게는 \"높임말\"을 써야 해요.",
+          "advanced": "\"높임말\"은 한국에서 예의를 지킬 때 꼭 필요한 표현입니다.",
+          "master": "\"높임말\"의 뉘앙스를 이해하면 격식과 친밀함을 적절히 조절할 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -808,10 +808,10 @@
         "word": "honorific speech / elevated speech",
         "explanation": "A general term for speech that elevates the subject or addressee. Broader than 존댓말, it encompasses all three types of Korean honorification: subject honorifics (-시-), addressee honorifics (-요, -습니다), and object honorifics (드리다, 여쭙다).",
         "examples": {
-          "beginner": "We say \"높임말\".",
-          "intermediate": "Use \"높임말\" with elders.",
-          "advanced": "Correct use of \"높임말\" is key to Korean etiquette.",
-          "master": "Understanding the nuance of \"높임말\" enables situationally appropriate honorific use."
+          "beginner": "You say \"높임말\" to a teacher.",
+          "intermediate": "You should use \"높임말\" when meeting someone for the first time.",
+          "advanced": "\"높임말\" is an essential expression for showing politeness in Korea.",
+          "master": "Understanding the nuance of \"높임말\" helps balance formality and familiarity appropriately."
         },
         "variations": {
           "formal": [
@@ -880,10 +880,10 @@
         "word": "-습니다 / -ㅂ니다",
         "explanation": "격식체의 종결어미로, 가장 공손한 존댓말 형태입니다. 뉴스, 발표, 비즈니스 등 공식적인 상황에서 사용합니다. 받침이 있으면 '-습니다', 없으면 '-ㅂ니다'를 씁니다.",
         "examples": {
-          "beginner": "\"-습니다\"이라고 말해요.",
-          "intermediate": "웃어른에게 \"-습니다\"을 사용해요.",
-          "advanced": "\"-습니다\"의 올바른 사용은 한국어 예절의 핵심입니다.",
-          "master": "\"-습니다\"의 뉘앙스를 이해하면 상황에 맞는 존댓말 구사가 가능합니다."
+          "beginner": "선생님께 \"-습니다\"라고 해요.",
+          "intermediate": "처음 만난 사람에게는 \"-습니다\"를 써야 해요.",
+          "advanced": "\"-습니다\"는 한국에서 예의를 지킬 때 꼭 필요한 표현입니다.",
+          "master": "\"-습니다\"의 뉘앙스를 이해하면 격식과 친밀함을 적절히 조절할 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -907,8 +907,8 @@
             },
             {
               "speaker": "B",
-              "text": "\"-습니다\"이라고 해요.",
-              "romanization": "\"-seupnida\"irago haeyo.",
+              "text": "\"-습니다\"라고 해요.",
+              "romanization": "\"-seupnida\"rago haeyo.",
               "translation": "You say \"-습니다\"."
             },
             {
@@ -930,10 +930,10 @@
         "word": "-seumnida (formal ending)",
         "explanation": "The most formal and polite sentence ending in Korean (합니다체 / hamnida-che). Used in news broadcasts, presentations, business, and official situations. Use '-습니다' after consonants and '-ㅂ니다' after vowels.",
         "examples": {
-          "beginner": "We say \"-습니다\".",
-          "intermediate": "Use \"-습니다\" with elders.",
-          "advanced": "Correct use of \"-습니다\" is key to Korean etiquette.",
-          "master": "Understanding the nuance of \"-습니다\" enables situationally appropriate honorific use."
+          "beginner": "You say \"-습니다\" to a teacher.",
+          "intermediate": "You should use \"-습니다\" when meeting someone for the first time.",
+          "advanced": "\"-습니다\" is an essential expression for showing politeness in Korea.",
+          "master": "Understanding the nuance of \"-습니다\" helps balance formality and familiarity appropriately."
         },
         "variations": {
           "formal": [
@@ -959,7 +959,7 @@
               "speaker": "B",
               "text": "You say \"-습니다\".",
               "romanization": "",
-              "translation": "\"-습니다\"이라고 해요."
+              "translation": "\"-습니다\"라고 해요."
             },
             {
               "speaker": "A",
@@ -1002,10 +1002,10 @@
         "word": "-입니다",
         "explanation": "'이다'의 격식체 종결형으로, 자기 소개나 사실을 정중하게 말할 때 사용합니다. '저는 학생입니다', '이것은 책입니다'처럼 명사 뒤에 붙습니다. 해요체 형태는 '-이에요/-예요'입니다.",
         "examples": {
-          "beginner": "\"-입니다\"이라고 말해요.",
-          "intermediate": "웃어른에게 \"-입니다\"을 사용해요.",
-          "advanced": "\"-입니다\"의 올바른 사용은 한국어 예절의 핵심입니다.",
-          "master": "\"-입니다\"의 뉘앙스를 이해하면 상황에 맞는 존댓말 구사가 가능합니다."
+          "beginner": "선생님께 \"-입니다\"라고 해요.",
+          "intermediate": "처음 만난 사람에게는 \"-입니다\"를 써야 해요.",
+          "advanced": "\"-입니다\"는 한국에서 예의를 지킬 때 꼭 필요한 표현입니다.",
+          "master": "\"-입니다\"의 뉘앙스를 이해하면 격식과 친밀함을 적절히 조절할 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -1029,8 +1029,8 @@
             },
             {
               "speaker": "B",
-              "text": "\"-입니다\"이라고 해요.",
-              "romanization": "\"-ipnida\"irago haeyo.",
+              "text": "\"-입니다\"라고 해요.",
+              "romanization": "\"-ipnida\"rago haeyo.",
               "translation": "You say \"-입니다\"."
             },
             {
@@ -1052,10 +1052,10 @@
         "word": "-imnida (to be — formal)",
         "explanation": "The formal declarative ending of '이다' (to be). Used for polite self-introductions and stating facts. Attached after nouns: '학생입니다' (I am a student), '책입니다' (It is a book). The 해요체 equivalent is '-이에요/-예요'.",
         "examples": {
-          "beginner": "We say \"-입니다\".",
-          "intermediate": "Use \"-입니다\" with elders.",
-          "advanced": "Correct use of \"-입니다\" is key to Korean etiquette.",
-          "master": "Understanding the nuance of \"-입니다\" enables situationally appropriate honorific use."
+          "beginner": "You say \"-입니다\" to a teacher.",
+          "intermediate": "You should use \"-입니다\" when meeting someone for the first time.",
+          "advanced": "\"-입니다\" is an essential expression for showing politeness in Korea.",
+          "master": "Understanding the nuance of \"-입니다\" helps balance formality and familiarity appropriately."
         },
         "variations": {
           "formal": [
@@ -1081,7 +1081,7 @@
               "speaker": "B",
               "text": "You say \"-입니다\".",
               "romanization": "",
-              "translation": "\"-입니다\"이라고 해요."
+              "translation": "\"-입니다\"라고 해요."
             },
             {
               "speaker": "A",
@@ -1124,10 +1124,10 @@
         "word": "드리다",
         "explanation": "'주다'의 겸양어(겸손 표현)로, 윗사람에게 무엇을 줄 때 사용합니다. 자신을 낮추어 상대를 높이는 객체 높임법의 대표적 표현입니다. '선물을 드리다', '말씀을 드리다' 등으로 씁니다.",
         "examples": {
-          "beginner": "\"드리다\"이라고 말해요.",
-          "intermediate": "웃어른에게 \"드리다\"을 사용해요.",
-          "advanced": "\"드리다\"의 올바른 사용은 한국어 예절의 핵심입니다.",
-          "master": "\"드리다\"의 뉘앙스를 이해하면 상황에 맞는 존댓말 구사가 가능합니다."
+          "beginner": "선생님께 \"드리다\"라고 해요.",
+          "intermediate": "처음 만난 사람에게는 \"드리다\"를 써야 해요.",
+          "advanced": "\"드리다\"는 한국에서 예의를 지킬 때 꼭 필요한 표현입니다.",
+          "master": "\"드리다\"의 뉘앙스를 이해하면 격식과 친밀함을 적절히 조절할 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -1151,8 +1151,8 @@
             },
             {
               "speaker": "B",
-              "text": "\"드리다\"이라고 해요.",
-              "romanization": "\"deurida\"irago haeyo.",
+              "text": "\"드리다\"라고 해요.",
+              "romanization": "\"deurida\"rago haeyo.",
               "translation": "You say \"드리다\"."
             },
             {
@@ -1174,10 +1174,10 @@
         "word": "to give (humble)",
         "explanation": "The humble form of '주다' (to give), used when giving something to a superior. It's a key example of object honorification where the speaker lowers themselves to elevate the recipient. Used in phrases like '선물을 드리다' (to give a gift) and '말씀을 드리다' (to tell/inform).",
         "examples": {
-          "beginner": "We say \"드리다\".",
-          "intermediate": "Use \"드리다\" with elders.",
-          "advanced": "Correct use of \"드리다\" is key to Korean etiquette.",
-          "master": "Understanding the nuance of \"드리다\" enables situationally appropriate honorific use."
+          "beginner": "You say \"드리다\" to a teacher.",
+          "intermediate": "You should use \"드리다\" when meeting someone for the first time.",
+          "advanced": "\"드리다\" is an essential expression for showing politeness in Korea.",
+          "master": "Understanding the nuance of \"드리다\" helps balance formality and familiarity appropriately."
         },
         "variations": {
           "formal": [
@@ -1203,7 +1203,7 @@
               "speaker": "B",
               "text": "You say \"드리다\".",
               "romanization": "",
-              "translation": "\"드리다\"이라고 해요."
+              "translation": "\"드리다\"라고 해요."
             },
             {
               "speaker": "A",
@@ -1246,10 +1246,10 @@
         "word": "주시다",
         "explanation": "'주다'의 주체 높임 표현으로, 윗사람이 아랫사람에게 무엇을 줄 때 사용합니다. '-시-'가 들어가 주어(주는 사람)를 높입니다. '선생님이 주시다', '부모님이 주시다' 등으로 씁니다.",
         "examples": {
-          "beginner": "\"주시다\"이라고 말해요.",
-          "intermediate": "웃어른에게 \"주시다\"을 사용해요.",
-          "advanced": "\"주시다\"의 올바른 사용은 한국어 예절의 핵심입니다.",
-          "master": "\"주시다\"의 뉘앙스를 이해하면 상황에 맞는 존댓말 구사가 가능합니다."
+          "beginner": "선생님께 \"주시다\"라고 해요.",
+          "intermediate": "처음 만난 사람에게는 \"주시다\"를 써야 해요.",
+          "advanced": "\"주시다\"는 한국에서 예의를 지킬 때 꼭 필요한 표현입니다.",
+          "master": "\"주시다\"의 뉘앙스를 이해하면 격식과 친밀함을 적절히 조절할 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -1273,8 +1273,8 @@
             },
             {
               "speaker": "B",
-              "text": "\"주시다\"이라고 해요.",
-              "romanization": "\"jusida\"irago haeyo.",
+              "text": "\"주시다\"라고 해요.",
+              "romanization": "\"jusida\"rago haeyo.",
               "translation": "You say \"주시다\"."
             },
             {
@@ -1296,10 +1296,10 @@
         "word": "to give (honorific)",
         "explanation": "The subject-honorific form of '주다' (to give), used when the giver is someone of higher status. The honorific marker '-시-' elevates the subject (the giver). Compare with '드리다' which humbles the giver instead.",
         "examples": {
-          "beginner": "We say \"주시다\".",
-          "intermediate": "Use \"주시다\" with elders.",
-          "advanced": "Correct use of \"주시다\" is key to Korean etiquette.",
-          "master": "Understanding the nuance of \"주시다\" enables situationally appropriate honorific use."
+          "beginner": "You say \"주시다\" to a teacher.",
+          "intermediate": "You should use \"주시다\" when meeting someone for the first time.",
+          "advanced": "\"주시다\" is an essential expression for showing politeness in Korea.",
+          "master": "Understanding the nuance of \"주시다\" helps balance formality and familiarity appropriately."
         },
         "variations": {
           "formal": [
@@ -1325,7 +1325,7 @@
               "speaker": "B",
               "text": "You say \"주시다\".",
               "romanization": "",
-              "translation": "\"주시다\"이라고 해요."
+              "translation": "\"주시다\"라고 해요."
             },
             {
               "speaker": "A",
@@ -1368,10 +1368,10 @@
         "word": "말씀",
         "explanation": "'말'의 높임말로, 윗사람의 말을 높이거나 자신의 말을 겸손하게 표현할 때 사용합니다. '선생님의 말씀'(높임), '제가 말씀드리다'(겸양) 두 가지 용법이 있습니다.",
         "examples": {
-          "beginner": "\"말씀\"이라고 말해요.",
-          "intermediate": "웃어른에게 \"말씀\"을 사용해요.",
-          "advanced": "\"말씀\"의 올바른 사용은 한국어 예절의 핵심입니다.",
-          "master": "\"말씀\"의 뉘앙스를 이해하면 상황에 맞는 존댓말 구사가 가능합니다."
+          "beginner": "선생님께 \"말씀\"이라고 해요.",
+          "intermediate": "처음 만난 사람에게는 \"말씀\"을 써야 해요.",
+          "advanced": "\"말씀\"은 한국에서 예의를 지킬 때 꼭 필요한 표현입니다.",
+          "master": "\"말씀\"의 뉘앙스를 이해하면 격식과 친밀함을 적절히 조절할 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -1418,10 +1418,10 @@
         "word": "words / speech (honorific)",
         "explanation": "The honorific form of '말' (words/speech). Has two uses: to elevate a superior's words ('선생님의 말씀' — the teacher's words) or to humble one's own speech ('말씀드리다' — I'd like to say/tell). Context determines which meaning applies.",
         "examples": {
-          "beginner": "We say \"말씀\".",
-          "intermediate": "Use \"말씀\" with elders.",
-          "advanced": "Correct use of \"말씀\" is key to Korean etiquette.",
-          "master": "Understanding the nuance of \"말씀\" enables situationally appropriate honorific use."
+          "beginner": "You say \"말씀\" to a teacher.",
+          "intermediate": "You should use \"말씀\" when meeting someone for the first time.",
+          "advanced": "\"말씀\" is an essential expression for showing politeness in Korea.",
+          "master": "Understanding the nuance of \"말씀\" helps balance formality and familiarity appropriately."
         },
         "variations": {
           "formal": [
@@ -1490,10 +1490,10 @@
         "word": "댁",
         "explanation": "'집'의 높임말로, 상대방의 집을 높여 부를 때 사용합니다. 또한 상대방을 간접적으로 높여 부르는 대명사로도 쓰입니다. '댁에서 오셨어요?'(어디서 오셨어요?의 높임). 전통적이고 격식 있는 표현입니다.",
         "examples": {
-          "beginner": "\"댁\"이라고 말해요.",
-          "intermediate": "웃어른에게 \"댁\"을 사용해요.",
-          "advanced": "\"댁\"의 올바른 사용은 한국어 예절의 핵심입니다.",
-          "master": "\"댁\"의 뉘앙스를 이해하면 상황에 맞는 존댓말 구사가 가능합니다."
+          "beginner": "선생님께 \"댁\"이라고 해요.",
+          "intermediate": "처음 만난 사람에게는 \"댁\"을 써야 해요.",
+          "advanced": "\"댁\"은 한국에서 예의를 지킬 때 꼭 필요한 표현입니다.",
+          "master": "\"댁\"의 뉘앙스를 이해하면 격식과 친밀함을 적절히 조절할 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -1540,10 +1540,10 @@
         "word": "home / residence (honorific)",
         "explanation": "The honorific form of '집' (house/home). Used to respectfully refer to someone's house or as an indirect second-person pronoun. '댁이 어디세요?' can mean both 'Where is your home?' and 'Where are you from?' A traditional, formal expression mostly used by older generations.",
         "examples": {
-          "beginner": "We say \"댁\".",
-          "intermediate": "Use \"댁\" with elders.",
-          "advanced": "Correct use of \"댁\" is key to Korean etiquette.",
-          "master": "Understanding the nuance of \"댁\" enables situationally appropriate honorific use."
+          "beginner": "You say \"댁\" to a teacher.",
+          "intermediate": "You should use \"댁\" when meeting someone for the first time.",
+          "advanced": "\"댁\" is an essential expression for showing politeness in Korea.",
+          "master": "Understanding the nuance of \"댁\" helps balance formality and familiarity appropriately."
         },
         "variations": {
           "formal": [
@@ -1613,10 +1613,10 @@
         "word": "연세",
         "explanation": "'나이'의 높임말로, 어른의 나이를 여쭐 때 사용합니다. '나이'를 직접 사용하면 버릇없게 들릴 수 있으므로, 윗사람에게는 반드시 '연세'를 씁니다. '연세가 어떻게 되세요?'가 올바른 표현입니다.",
         "examples": {
-          "beginner": "\"연세\"이라고 말해요.",
-          "intermediate": "웃어른에게 \"연세\"을 사용해요.",
-          "advanced": "\"연세\"의 올바른 사용은 한국어 예절의 핵심입니다.",
-          "master": "\"연세\"의 뉘앙스를 이해하면 상황에 맞는 존댓말 구사가 가능합니다."
+          "beginner": "선생님께 \"연세\"라고 해요.",
+          "intermediate": "처음 만난 사람에게는 \"연세\"를 써야 해요.",
+          "advanced": "\"연세\"는 한국에서 예의를 지킬 때 꼭 필요한 표현입니다.",
+          "master": "\"연세\"의 뉘앙스를 이해하면 격식과 친밀함을 적절히 조절할 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -1640,8 +1640,8 @@
             },
             {
               "speaker": "B",
-              "text": "\"연세\"이라고 해요.",
-              "romanization": "\"yeonse\"irago haeyo.",
+              "text": "\"연세\"라고 해요.",
+              "romanization": "\"yeonse\"rago haeyo.",
               "translation": "You say \"연세\"."
             },
             {
@@ -1663,10 +1663,10 @@
         "word": "age (honorific)",
         "explanation": "The honorific form of '나이' (age). Must be used when asking about an elder's age, as using '나이' directly can sound rude. The standard polite question is '연세가 어떻게 되세요?' (How old are you? — honorific).",
         "examples": {
-          "beginner": "We say \"연세\".",
-          "intermediate": "Use \"연세\" with elders.",
-          "advanced": "Correct use of \"연세\" is key to Korean etiquette.",
-          "master": "Understanding the nuance of \"연세\" enables situationally appropriate honorific use."
+          "beginner": "You say \"연세\" to a teacher.",
+          "intermediate": "You should use \"연세\" when meeting someone for the first time.",
+          "advanced": "\"연세\" is an essential expression for showing politeness in Korea.",
+          "master": "Understanding the nuance of \"연세\" helps balance formality and familiarity appropriately."
         },
         "variations": {
           "formal": [
@@ -1692,7 +1692,7 @@
               "speaker": "B",
               "text": "You say \"연세\".",
               "romanization": "",
-              "translation": "\"연세\"이라고 해요."
+              "translation": "\"연세\"라고 해요."
             },
             {
               "speaker": "A",
@@ -1736,10 +1736,10 @@
         "word": "진지",
         "explanation": "'밥'의 높임말로, 어른의 식사를 높여 말할 때 사용합니다. '진지 드셨어요?'는 어른에게 식사했는지 묻는 공손한 인사입니다. 주로 할머니, 할아버지 등 어른에게 사용합니다.",
         "examples": {
-          "beginner": "\"진지\"이라고 말해요.",
-          "intermediate": "웃어른에게 \"진지\"을 사용해요.",
-          "advanced": "\"진지\"의 올바른 사용은 한국어 예절의 핵심입니다.",
-          "master": "\"진지\"의 뉘앙스를 이해하면 상황에 맞는 존댓말 구사가 가능합니다."
+          "beginner": "선생님께 \"진지\"라고 해요.",
+          "intermediate": "처음 만난 사람에게는 \"진지\"를 써야 해요.",
+          "advanced": "\"진지\"는 한국에서 예의를 지킬 때 꼭 필요한 표현입니다.",
+          "master": "\"진지\"의 뉘앙스를 이해하면 격식과 친밀함을 적절히 조절할 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -1763,8 +1763,8 @@
             },
             {
               "speaker": "B",
-              "text": "\"진지\"이라고 해요.",
-              "romanization": "\"jinji\"irago haeyo.",
+              "text": "\"진지\"라고 해요.",
+              "romanization": "\"jinji\"rago haeyo.",
               "translation": "You say \"진지\"."
             },
             {
@@ -1786,10 +1786,10 @@
         "word": "meal / rice (honorific)",
         "explanation": "The honorific form of '밥' (rice/meal). Used when referring to an elder's meal. '진지 드셨어요?' (Have you eaten?) is a polite greeting to elders. Primarily used with grandparents and senior figures.",
         "examples": {
-          "beginner": "We say \"진지\".",
-          "intermediate": "Use \"진지\" with elders.",
-          "advanced": "Correct use of \"진지\" is key to Korean etiquette.",
-          "master": "Understanding the nuance of \"진지\" enables situationally appropriate honorific use."
+          "beginner": "You say \"진지\" to a teacher.",
+          "intermediate": "You should use \"진지\" when meeting someone for the first time.",
+          "advanced": "\"진지\" is an essential expression for showing politeness in Korea.",
+          "master": "Understanding the nuance of \"진지\" helps balance formality and familiarity appropriately."
         },
         "variations": {
           "formal": [
@@ -1815,7 +1815,7 @@
               "speaker": "B",
               "text": "You say \"진지\".",
               "romanization": "",
-              "translation": "\"진지\"이라고 해요."
+              "translation": "\"진지\"라고 해요."
             },
             {
               "speaker": "A",
@@ -1858,10 +1858,10 @@
         "word": "성함",
         "explanation": "'이름'의 높임말로, 상대방의 이름을 정중하게 여쭐 때 사용합니다. '성함이 어떻게 되세요?'가 가장 일반적인 표현입니다. 고객 응대, 공식 상황에서 자주 쓰입니다.",
         "examples": {
-          "beginner": "\"성함\"이라고 말해요.",
-          "intermediate": "웃어른에게 \"성함\"을 사용해요.",
-          "advanced": "\"성함\"의 올바른 사용은 한국어 예절의 핵심입니다.",
-          "master": "\"성함\"의 뉘앙스를 이해하면 상황에 맞는 존댓말 구사가 가능합니다."
+          "beginner": "선생님께 \"성함\"이라고 해요.",
+          "intermediate": "처음 만난 사람에게는 \"성함\"을 써야 해요.",
+          "advanced": "\"성함\"은 한국에서 예의를 지킬 때 꼭 필요한 표현입니다.",
+          "master": "\"성함\"의 뉘앙스를 이해하면 격식과 친밀함을 적절히 조절할 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -1908,10 +1908,10 @@
         "word": "name (honorific)",
         "explanation": "The honorific form of '이름' (name). Used to politely ask someone's name. '성함이 어떻게 되세요?' (May I have your name?) is the standard polite form. Frequently used in customer service and formal situations.",
         "examples": {
-          "beginner": "We say \"성함\".",
-          "intermediate": "Use \"성함\" with elders.",
-          "advanced": "Correct use of \"성함\" is key to Korean etiquette.",
-          "master": "Understanding the nuance of \"성함\" enables situationally appropriate honorific use."
+          "beginner": "You say \"성함\" to a teacher.",
+          "intermediate": "You should use \"성함\" when meeting someone for the first time.",
+          "advanced": "\"성함\" is an essential expression for showing politeness in Korea.",
+          "master": "Understanding the nuance of \"성함\" helps balance formality and familiarity appropriately."
         },
         "variations": {
           "formal": [
@@ -1980,10 +1980,10 @@
         "word": "계시다",
         "explanation": "'있다'의 주체 높임말로, 윗사람이 어딘가에 있거나 머물 때 사용합니다. '선생님이 교실에 계세요', '할머니가 집에 계세요' 등으로 씁니다. '있다'를 직접 쓰면 높임이 되지 않습니다.",
         "examples": {
-          "beginner": "\"계시다\"이라고 말해요.",
-          "intermediate": "웃어른에게 \"계시다\"을 사용해요.",
-          "advanced": "\"계시다\"의 올바른 사용은 한국어 예절의 핵심입니다.",
-          "master": "\"계시다\"의 뉘앙스를 이해하면 상황에 맞는 존댓말 구사가 가능합니다."
+          "beginner": "선생님께 \"계시다\"라고 해요.",
+          "intermediate": "처음 만난 사람에게는 \"계시다\"를 써야 해요.",
+          "advanced": "\"계시다\"는 한국에서 예의를 지킬 때 꼭 필요한 표현입니다.",
+          "master": "\"계시다\"의 뉘앙스를 이해하면 격식과 친밀함을 적절히 조절할 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -2007,8 +2007,8 @@
             },
             {
               "speaker": "B",
-              "text": "\"계시다\"이라고 해요.",
-              "romanization": "\"gyesida\"irago haeyo.",
+              "text": "\"계시다\"라고 해요.",
+              "romanization": "\"gyesida\"rago haeyo.",
               "translation": "You say \"계시다\"."
             },
             {
@@ -2030,10 +2030,10 @@
         "word": "to be / to exist (honorific)",
         "explanation": "The honorific form of '있다' (to be/exist). Used when a person of higher status is present somewhere. Unlike regular honorification with '-시-', '계시다' is a completely separate word. Examples: '선생님이 계세요' (The teacher is here), '할머니가 집에 계세요' (Grandmother is at home).",
         "examples": {
-          "beginner": "We say \"계시다\".",
-          "intermediate": "Use \"계시다\" with elders.",
-          "advanced": "Correct use of \"계시다\" is key to Korean etiquette.",
-          "master": "Understanding the nuance of \"계시다\" enables situationally appropriate honorific use."
+          "beginner": "You say \"계시다\" to a teacher.",
+          "intermediate": "You should use \"계시다\" when meeting someone for the first time.",
+          "advanced": "\"계시다\" is an essential expression for showing politeness in Korea.",
+          "master": "Understanding the nuance of \"계시다\" helps balance formality and familiarity appropriately."
         },
         "variations": {
           "formal": [
@@ -2059,7 +2059,7 @@
               "speaker": "B",
               "text": "You say \"계시다\".",
               "romanization": "",
-              "translation": "\"계시다\"이라고 해요."
+              "translation": "\"계시다\"라고 해요."
             },
             {
               "speaker": "A",
@@ -2103,10 +2103,10 @@
         "word": "잡수시다",
         "explanation": "'먹다'의 높임말로, 웃어른이 음식을 드실 때 사용하는 존경 표현입니다. '드시다'보다 더 높은 경어로, 주로 조부모님이나 연세가 많은 분께 사용합니다.",
         "examples": {
-          "beginner": "\"잡수시다\"이라고 말해요.",
-          "intermediate": "웃어른에게 \"잡수시다\"을 사용해요.",
-          "advanced": "\"잡수시다\"의 올바른 사용은 한국어 예절의 핵심입니다.",
-          "master": "\"잡수시다\"의 뉘앙스를 이해하면 상황에 맞는 존댓말 구사가 가능합니다."
+          "beginner": "선생님께 \"잡수시다\"라고 해요.",
+          "intermediate": "처음 만난 사람에게는 \"잡수시다\"를 써야 해요.",
+          "advanced": "\"잡수시다\"는 한국에서 예의를 지킬 때 꼭 필요한 표현입니다.",
+          "master": "\"잡수시다\"의 뉘앙스를 이해하면 격식과 친밀함을 적절히 조절할 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -2130,8 +2130,8 @@
             },
             {
               "speaker": "B",
-              "text": "\"잡수시다\"이라고 해요.",
-              "romanization": "\"japsusida\"irago haeyo.",
+              "text": "\"잡수시다\"라고 해요.",
+              "romanization": "\"japsusida\"rago haeyo.",
               "translation": "You say \"잡수시다\"."
             },
             {
@@ -2153,10 +2153,10 @@
         "word": "japsusida (to eat — highest honorific)",
         "explanation": "The highest honorific form of 'to eat' (먹다) in Korean. Used when referring to elders eating, especially grandparents or very senior people. It is a step above '드시다' (deusida) in formality.",
         "examples": {
-          "beginner": "We say \"잡수시다\".",
-          "intermediate": "Use \"잡수시다\" with elders.",
-          "advanced": "Correct use of \"잡수시다\" is key to Korean etiquette.",
-          "master": "Understanding the nuance of \"잡수시다\" enables situationally appropriate honorific use."
+          "beginner": "You say \"잡수시다\" to a teacher.",
+          "intermediate": "You should use \"잡수시다\" when meeting someone for the first time.",
+          "advanced": "\"잡수시다\" is an essential expression for showing politeness in Korea.",
+          "master": "Understanding the nuance of \"잡수시다\" helps balance formality and familiarity appropriately."
         },
         "variations": {
           "formal": [
@@ -2182,7 +2182,7 @@
               "speaker": "B",
               "text": "You say \"잡수시다\".",
               "romanization": "",
-              "translation": "\"잡수시다\"이라고 해요."
+              "translation": "\"잡수시다\"라고 해요."
             },
             {
               "speaker": "A",
@@ -2225,10 +2225,10 @@
         "word": "주무시다",
         "explanation": "'자다'의 높임말로, 웃어른이 잠을 주무실 때 사용하는 존경 표현입니다. 부모님이나 어르신께 '안녕히 주무세요'라고 인사하는 것이 일반적입니다.",
         "examples": {
-          "beginner": "\"주무시다\"이라고 말해요.",
-          "intermediate": "웃어른에게 \"주무시다\"을 사용해요.",
-          "advanced": "\"주무시다\"의 올바른 사용은 한국어 예절의 핵심입니다.",
-          "master": "\"주무시다\"의 뉘앙스를 이해하면 상황에 맞는 존댓말 구사가 가능합니다."
+          "beginner": "선생님께 \"주무시다\"라고 해요.",
+          "intermediate": "처음 만난 사람에게는 \"주무시다\"를 써야 해요.",
+          "advanced": "\"주무시다\"는 한국에서 예의를 지킬 때 꼭 필요한 표현입니다.",
+          "master": "\"주무시다\"의 뉘앙스를 이해하면 격식과 친밀함을 적절히 조절할 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -2252,8 +2252,8 @@
             },
             {
               "speaker": "B",
-              "text": "\"주무시다\"이라고 해요.",
-              "romanization": "\"jumusida\"irago haeyo.",
+              "text": "\"주무시다\"라고 해요.",
+              "romanization": "\"jumusida\"rago haeyo.",
               "translation": "You say \"주무시다\"."
             },
             {
@@ -2275,10 +2275,10 @@
         "word": "jumusida (to sleep — honorific)",
         "explanation": "The honorific form of 'to sleep' (자다) in Korean. Used when referring to elders sleeping. The phrase '안녕히 주무세요' (sleep well) is the standard polite way to say goodnight to elders.",
         "examples": {
-          "beginner": "We say \"주무시다\".",
-          "intermediate": "Use \"주무시다\" with elders.",
-          "advanced": "Correct use of \"주무시다\" is key to Korean etiquette.",
-          "master": "Understanding the nuance of \"주무시다\" enables situationally appropriate honorific use."
+          "beginner": "You say \"주무시다\" to a teacher.",
+          "intermediate": "You should use \"주무시다\" when meeting someone for the first time.",
+          "advanced": "\"주무시다\" is an essential expression for showing politeness in Korea.",
+          "master": "Understanding the nuance of \"주무시다\" helps balance formality and familiarity appropriately."
         },
         "variations": {
           "formal": [
@@ -2304,7 +2304,7 @@
               "speaker": "B",
               "text": "You say \"주무시다\".",
               "romanization": "",
-              "translation": "\"주무시다\"이라고 해요."
+              "translation": "\"주무시다\"라고 해요."
             },
             {
               "speaker": "A",
@@ -2348,10 +2348,10 @@
         "word": "돌아가시다",
         "explanation": "'죽다'의 높임말로, 존경하는 분이 세상을 떠나셨을 때 사용하는 완곡한 존경 표현입니다. 직접적으로 '죽다'라고 하면 무례하므로, 반드시 높임말을 사용해야 합니다.",
         "examples": {
-          "beginner": "\"돌아가시다\"이라고 말해요.",
-          "intermediate": "웃어른에게 \"돌아가시다\"을 사용해요.",
-          "advanced": "\"돌아가시다\"의 올바른 사용은 한국어 예절의 핵심입니다.",
-          "master": "\"돌아가시다\"의 뉘앙스를 이해하면 상황에 맞는 존댓말 구사가 가능합니다."
+          "beginner": "선생님께 \"돌아가시다\"라고 해요.",
+          "intermediate": "처음 만난 사람에게는 \"돌아가시다\"를 써야 해요.",
+          "advanced": "\"돌아가시다\"는 한국에서 예의를 지킬 때 꼭 필요한 표현입니다.",
+          "master": "\"돌아가시다\"의 뉘앙스를 이해하면 격식과 친밀함을 적절히 조절할 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -2375,8 +2375,8 @@
             },
             {
               "speaker": "B",
-              "text": "\"돌아가시다\"이라고 해요.",
-              "romanization": "\"dolagasida\"irago haeyo.",
+              "text": "\"돌아가시다\"라고 해요.",
+              "romanization": "\"dolagasida\"rago haeyo.",
               "translation": "You say \"돌아가시다\"."
             },
             {
@@ -2398,10 +2398,10 @@
         "word": "doragasida (to pass away — honorific)",
         "explanation": "The honorific euphemism for 'to die' (죽다) in Korean. Used when respectfully referring to someone's death. It is considered very rude to use '죽다' for elders or respected people; '돌아가시다' must be used instead.",
         "examples": {
-          "beginner": "We say \"돌아가시다\".",
-          "intermediate": "Use \"돌아가시다\" with elders.",
-          "advanced": "Correct use of \"돌아가시다\" is key to Korean etiquette.",
-          "master": "Understanding the nuance of \"돌아가시다\" enables situationally appropriate honorific use."
+          "beginner": "You say \"돌아가시다\" to a teacher.",
+          "intermediate": "You should use \"돌아가시다\" when meeting someone for the first time.",
+          "advanced": "\"돌아가시다\" is an essential expression for showing politeness in Korea.",
+          "master": "Understanding the nuance of \"돌아가시다\" helps balance formality and familiarity appropriately."
         },
         "variations": {
           "formal": [
@@ -2427,7 +2427,7 @@
               "speaker": "B",
               "text": "You say \"돌아가시다\".",
               "romanization": "",
-              "translation": "\"돌아가시다\"이라고 해요."
+              "translation": "\"돌아가시다\"라고 해요."
             },
             {
               "speaker": "A",
@@ -2470,10 +2470,10 @@
         "word": "편찮으시다",
         "explanation": "'아프다'의 높임말로, 웃어른의 건강이 좋지 않으실 때 사용하는 존경 표현입니다. '편찮다'에 존경의 '-시-'가 결합된 형태입니다.",
         "examples": {
-          "beginner": "\"편찮으시다\"이라고 말해요.",
-          "intermediate": "웃어른에게 \"편찮으시다\"을 사용해요.",
-          "advanced": "\"편찮으시다\"의 올바른 사용은 한국어 예절의 핵심입니다.",
-          "master": "\"편찮으시다\"의 뉘앙스를 이해하면 상황에 맞는 존댓말 구사가 가능합니다."
+          "beginner": "선생님께 \"편찮으시다\"라고 해요.",
+          "intermediate": "처음 만난 사람에게는 \"편찮으시다\"를 써야 해요.",
+          "advanced": "\"편찮으시다\"는 한국에서 예의를 지킬 때 꼭 필요한 표현입니다.",
+          "master": "\"편찮으시다\"의 뉘앙스를 이해하면 격식과 친밀함을 적절히 조절할 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -2497,8 +2497,8 @@
             },
             {
               "speaker": "B",
-              "text": "\"편찮으시다\"이라고 해요.",
-              "romanization": "\"pyeonchaneusida\"irago haeyo.",
+              "text": "\"편찮으시다\"라고 해요.",
+              "romanization": "\"pyeonchaneusida\"rago haeyo.",
               "translation": "You say \"편찮으시다\"."
             },
             {
@@ -2520,10 +2520,10 @@
         "word": "pyeonchaneuisida (to be unwell — honorific)",
         "explanation": "The honorific form of 'to be sick/unwell' (아프다) in Korean. Used when speaking about an elder's poor health. It combines '편찮다' (unwell, euphemism) with the honorific suffix '-시-'.",
         "examples": {
-          "beginner": "We say \"편찮으시다\".",
-          "intermediate": "Use \"편찮으시다\" with elders.",
-          "advanced": "Correct use of \"편찮으시다\" is key to Korean etiquette.",
-          "master": "Understanding the nuance of \"편찮으시다\" enables situationally appropriate honorific use."
+          "beginner": "You say \"편찮으시다\" to a teacher.",
+          "intermediate": "You should use \"편찮으시다\" when meeting someone for the first time.",
+          "advanced": "\"편찮으시다\" is an essential expression for showing politeness in Korea.",
+          "master": "Understanding the nuance of \"편찮으시다\" helps balance formality and familiarity appropriately."
         },
         "variations": {
           "formal": [
@@ -2549,7 +2549,7 @@
               "speaker": "B",
               "text": "You say \"편찮으시다\".",
               "romanization": "",
-              "translation": "\"편찮으시다\"이라고 해요."
+              "translation": "\"편찮으시다\"라고 해요."
             },
             {
               "speaker": "A",
@@ -2593,10 +2593,10 @@
         "word": "선생님",
         "explanation": "교사를 부르는 존칭이자, 전문가나 윗사람을 높여 부를 때 사용하는 호칭입니다. 학교에서뿐 아니라 의사, 변호사 등 전문직 종사자에게도 사용합니다.",
         "examples": {
-          "beginner": "\"선생님\"이라고 말해요.",
-          "intermediate": "웃어른에게 \"선생님\"을 사용해요.",
-          "advanced": "\"선생님\"의 올바른 사용은 한국어 예절의 핵심입니다.",
-          "master": "\"선생님\"의 뉘앙스를 이해하면 상황에 맞는 존댓말 구사가 가능합니다."
+          "beginner": "선생님께 \"선생님\"이라고 해요.",
+          "intermediate": "처음 만난 사람에게는 \"선생님\"을 써야 해요.",
+          "advanced": "\"선생님\"은 한국에서 예의를 지킬 때 꼭 필요한 표현입니다.",
+          "master": "\"선생님\"의 뉘앙스를 이해하면 격식과 친밀함을 적절히 조절할 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -2643,10 +2643,10 @@
         "word": "seonsaengnim (teacher / sir / ma'am)",
         "explanation": "An honorific title meaning 'teacher' but used far more broadly in Korean. It is used for teachers, doctors, lawyers, writers, and other professionals. It conveys deep respect and is one of the most common honorific titles.",
         "examples": {
-          "beginner": "We say \"선생님\".",
-          "intermediate": "Use \"선생님\" with elders.",
-          "advanced": "Correct use of \"선생님\" is key to Korean etiquette.",
-          "master": "Understanding the nuance of \"선생님\" enables situationally appropriate honorific use."
+          "beginner": "You say \"선생님\" to a teacher.",
+          "intermediate": "You should use \"선생님\" when meeting someone for the first time.",
+          "advanced": "\"선생님\" is an essential expression for showing politeness in Korea.",
+          "master": "Understanding the nuance of \"선생님\" helps balance formality and familiarity appropriately."
         },
         "variations": {
           "formal": [
@@ -2715,10 +2715,10 @@
         "word": "사장님",
         "explanation": "회사의 최고 경영자를 높여 부르는 호칭입니다. 한국 직장 문화에서 직급에 '님'을 붙여 부르는 것이 기본 예의이며, 식당이나 가게 주인에게도 사용합니다.",
         "examples": {
-          "beginner": "\"사장님\"이라고 말해요.",
-          "intermediate": "웃어른에게 \"사장님\"을 사용해요.",
-          "advanced": "\"사장님\"의 올바른 사용은 한국어 예절의 핵심입니다.",
-          "master": "\"사장님\"의 뉘앙스를 이해하면 상황에 맞는 존댓말 구사가 가능합니다."
+          "beginner": "선생님께 \"사장님\"이라고 해요.",
+          "intermediate": "처음 만난 사람에게는 \"사장님\"을 써야 해요.",
+          "advanced": "\"사장님\"은 한국에서 예의를 지킬 때 꼭 필요한 표현입니다.",
+          "master": "\"사장님\"의 뉘앙스를 이해하면 격식과 친밀함을 적절히 조절할 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -2765,10 +2765,10 @@
         "word": "sajangnim (boss / company president)",
         "explanation": "An honorific title for the head of a company or business owner. In Korean workplace culture, titles are always followed by '님' (-nim) as a sign of respect. Also used colloquially for restaurant or shop owners.",
         "examples": {
-          "beginner": "We say \"사장님\".",
-          "intermediate": "Use \"사장님\" with elders.",
-          "advanced": "Correct use of \"사장님\" is key to Korean etiquette.",
-          "master": "Understanding the nuance of \"사장님\" enables situationally appropriate honorific use."
+          "beginner": "You say \"사장님\" to a teacher.",
+          "intermediate": "You should use \"사장님\" when meeting someone for the first time.",
+          "advanced": "\"사장님\" is an essential expression for showing politeness in Korea.",
+          "master": "Understanding the nuance of \"사장님\" helps balance formality and familiarity appropriately."
         },
         "variations": {
           "formal": [
@@ -2837,10 +2837,10 @@
         "word": "부장님",
         "explanation": "회사에서 부서의 장을 높여 부르는 호칭입니다. 한국 기업의 직급 체계에서 차장과 이사 사이에 위치하며, 부서를 총괄하는 중간 관리직입니다.",
         "examples": {
-          "beginner": "\"부장님\"이라고 말해요.",
-          "intermediate": "웃어른에게 \"부장님\"을 사용해요.",
-          "advanced": "\"부장님\"의 올바른 사용은 한국어 예절의 핵심입니다.",
-          "master": "\"부장님\"의 뉘앙스를 이해하면 상황에 맞는 존댓말 구사가 가능합니다."
+          "beginner": "선생님께 \"부장님\"이라고 해요.",
+          "intermediate": "처음 만난 사람에게는 \"부장님\"을 써야 해요.",
+          "advanced": "\"부장님\"은 한국에서 예의를 지킬 때 꼭 필요한 표현입니다.",
+          "master": "\"부장님\"의 뉘앙스를 이해하면 격식과 친밀함을 적절히 조절할 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -2887,10 +2887,10 @@
         "word": "bujangnim (department head)",
         "explanation": "An honorific title for a department head in a Korean company. In the Korean corporate hierarchy, '부장' sits between '차장' (deputy manager) and '이사' (director). It is a mid-to-senior management position overseeing an entire department.",
         "examples": {
-          "beginner": "We say \"부장님\".",
-          "intermediate": "Use \"부장님\" with elders.",
-          "advanced": "Correct use of \"부장님\" is key to Korean etiquette.",
-          "master": "Understanding the nuance of \"부장님\" enables situationally appropriate honorific use."
+          "beginner": "You say \"부장님\" to a teacher.",
+          "intermediate": "You should use \"부장님\" when meeting someone for the first time.",
+          "advanced": "\"부장님\" is an essential expression for showing politeness in Korea.",
+          "master": "Understanding the nuance of \"부장님\" helps balance formality and familiarity appropriately."
         },
         "variations": {
           "formal": [
@@ -2959,10 +2959,10 @@
         "word": "과장님",
         "explanation": "회사에서 과(課)의 장을 높여 부르는 호칭입니다. 대리 위, 차장 아래의 직급으로, 실무 관리를 담당하는 중간 관리직입니다.",
         "examples": {
-          "beginner": "\"과장님\"이라고 말해요.",
-          "intermediate": "웃어른에게 \"과장님\"을 사용해요.",
-          "advanced": "\"과장님\"의 올바른 사용은 한국어 예절의 핵심입니다.",
-          "master": "\"과장님\"의 뉘앙스를 이해하면 상황에 맞는 존댓말 구사가 가능합니다."
+          "beginner": "선생님께 \"과장님\"이라고 해요.",
+          "intermediate": "처음 만난 사람에게는 \"과장님\"을 써야 해요.",
+          "advanced": "\"과장님\"은 한국에서 예의를 지킬 때 꼭 필요한 표현입니다.",
+          "master": "\"과장님\"의 뉘앙스를 이해하면 격식과 친밀함을 적절히 조절할 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -3009,10 +3009,10 @@
         "word": "gwajangnim (section chief)",
         "explanation": "An honorific title for a section chief in a Korean company. It sits above '대리' (assistant manager) and below '차장' (deputy manager). This is a hands-on management role overseeing a section or team.",
         "examples": {
-          "beginner": "We say \"과장님\".",
-          "intermediate": "Use \"과장님\" with elders.",
-          "advanced": "Correct use of \"과장님\" is key to Korean etiquette.",
-          "master": "Understanding the nuance of \"과장님\" enables situationally appropriate honorific use."
+          "beginner": "You say \"과장님\" to a teacher.",
+          "intermediate": "You should use \"과장님\" when meeting someone for the first time.",
+          "advanced": "\"과장님\" is an essential expression for showing politeness in Korea.",
+          "master": "Understanding the nuance of \"과장님\" helps balance formality and familiarity appropriately."
         },
         "variations": {
           "formal": [
@@ -3081,10 +3081,10 @@
         "word": "대리님",
         "explanation": "회사에서 사원 바로 위의 직급을 높여 부르는 호칭입니다. 한국 기업 직급 체계의 첫 번째 승진 단계로, 실무를 수행하면서 후배를 지도하는 역할입니다.",
         "examples": {
-          "beginner": "\"대리님\"이라고 말해요.",
-          "intermediate": "웃어른에게 \"대리님\"을 사용해요.",
-          "advanced": "\"대리님\"의 올바른 사용은 한국어 예절의 핵심입니다.",
-          "master": "\"대리님\"의 뉘앙스를 이해하면 상황에 맞는 존댓말 구사가 가능합니다."
+          "beginner": "선생님께 \"대리님\"이라고 해요.",
+          "intermediate": "처음 만난 사람에게는 \"대리님\"을 써야 해요.",
+          "advanced": "\"대리님\"은 한국에서 예의를 지킬 때 꼭 필요한 표현입니다.",
+          "master": "\"대리님\"의 뉘앙스를 이해하면 격식과 친밀함을 적절히 조절할 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -3131,10 +3131,10 @@
         "word": "daerinim (assistant manager)",
         "explanation": "An honorific title for an assistant manager in a Korean company. It is the first promotion level above '사원' (staff), typically achieved 3-4 years after joining. The role involves hands-on work while mentoring junior staff.",
         "examples": {
-          "beginner": "We say \"대리님\".",
-          "intermediate": "Use \"대리님\" with elders.",
-          "advanced": "Correct use of \"대리님\" is key to Korean etiquette.",
-          "master": "Understanding the nuance of \"대리님\" enables situationally appropriate honorific use."
+          "beginner": "You say \"대리님\" to a teacher.",
+          "intermediate": "You should use \"대리님\" when meeting someone for the first time.",
+          "advanced": "\"대리님\" is an essential expression for showing politeness in Korea.",
+          "master": "Understanding the nuance of \"대리님\" helps balance formality and familiarity appropriately."
         },
         "variations": {
           "formal": [
@@ -3204,10 +3204,10 @@
         "word": "형",
         "explanation": "남자가 자기보다 나이 많은 남자를 부르는 호칭입니다. 친형제뿐 아니라 친한 선배나 친구 사이에서도 사용합니다. 한국 문화에서 나이와 성별에 따라 호칭이 달라지는 대표적인 예입니다.",
         "examples": {
-          "beginner": "\"형\"이라고 말해요.",
-          "intermediate": "웃어른에게 \"형\"을 사용해요.",
-          "advanced": "\"형\"의 올바른 사용은 한국어 예절의 핵심입니다.",
-          "master": "\"형\"의 뉘앙스를 이해하면 상황에 맞는 존댓말 구사가 가능합니다."
+          "beginner": "선생님께 \"형\"이라고 해요.",
+          "intermediate": "처음 만난 사람에게는 \"형\"을 써야 해요.",
+          "advanced": "\"형\"은 한국에서 예의를 지킬 때 꼭 필요한 표현입니다.",
+          "master": "\"형\"의 뉘앙스를 이해하면 격식과 친밀함을 적절히 조절할 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -3254,10 +3254,10 @@
         "word": "hyeong (older brother — used by males)",
         "explanation": "A term used by males to address an older male, whether a biological brother or a close older friend/senior. It reflects Korea's age-based honorific system where different titles are used depending on the speaker's and listener's gender and age.",
         "examples": {
-          "beginner": "We say \"형\".",
-          "intermediate": "Use \"형\" with elders.",
-          "advanced": "Correct use of \"형\" is key to Korean etiquette.",
-          "master": "Understanding the nuance of \"형\" enables situationally appropriate honorific use."
+          "beginner": "You say \"형\" to a teacher.",
+          "intermediate": "You should use \"형\" when meeting someone for the first time.",
+          "advanced": "\"형\" is an essential expression for showing politeness in Korea.",
+          "master": "Understanding the nuance of \"형\" helps balance formality and familiarity appropriately."
         },
         "variations": {
           "formal": [
@@ -3327,10 +3327,10 @@
         "word": "누나",
         "explanation": "남자가 자기보다 나이 많은 여자를 부르는 호칭입니다. 친누나뿐 아니라 친한 여자 선배에게도 사용합니다. '언니'는 여자가 쓰는 말이므로 혼동하지 않도록 주의해야 합니다.",
         "examples": {
-          "beginner": "\"누나\"이라고 말해요.",
-          "intermediate": "웃어른에게 \"누나\"을 사용해요.",
-          "advanced": "\"누나\"의 올바른 사용은 한국어 예절의 핵심입니다.",
-          "master": "\"누나\"의 뉘앙스를 이해하면 상황에 맞는 존댓말 구사가 가능합니다."
+          "beginner": "선생님께 \"누나\"라고 해요.",
+          "intermediate": "처음 만난 사람에게는 \"누나\"를 써야 해요.",
+          "advanced": "\"누나\"는 한국에서 예의를 지킬 때 꼭 필요한 표현입니다.",
+          "master": "\"누나\"의 뉘앙스를 이해하면 격식과 친밀함을 적절히 조절할 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -3354,8 +3354,8 @@
             },
             {
               "speaker": "B",
-              "text": "\"누나\"이라고 해요.",
-              "romanization": "\"nuna\"irago haeyo.",
+              "text": "\"누나\"라고 해요.",
+              "romanization": "\"nuna\"rago haeyo.",
               "translation": "You say \"누나\"."
             },
             {
@@ -3377,10 +3377,10 @@
         "word": "nuna (older sister — used by males)",
         "explanation": "A term used by males to address an older female, whether a biological sister or a close older female friend/senior. Note that females use '언니' (eonni) instead. The distinction is based on the speaker's gender.",
         "examples": {
-          "beginner": "We say \"누나\".",
-          "intermediate": "Use \"누나\" with elders.",
-          "advanced": "Correct use of \"누나\" is key to Korean etiquette.",
-          "master": "Understanding the nuance of \"누나\" enables situationally appropriate honorific use."
+          "beginner": "You say \"누나\" to a teacher.",
+          "intermediate": "You should use \"누나\" when meeting someone for the first time.",
+          "advanced": "\"누나\" is an essential expression for showing politeness in Korea.",
+          "master": "Understanding the nuance of \"누나\" helps balance formality and familiarity appropriately."
         },
         "variations": {
           "formal": [
@@ -3406,7 +3406,7 @@
               "speaker": "B",
               "text": "You say \"누나\".",
               "romanization": "",
-              "translation": "\"누나\"이라고 해요."
+              "translation": "\"누나\"라고 해요."
             },
             {
               "speaker": "A",
@@ -3450,10 +3450,10 @@
         "word": "오빠",
         "explanation": "여자가 자기보다 나이 많은 남자를 부르는 호칭입니다. 친오빠뿐 아니라 친한 남자 선배, 남자친구에게도 사용합니다. K-pop 팬들이 남자 아이돌을 부를 때도 자주 씁니다.",
         "examples": {
-          "beginner": "\"오빠\"이라고 말해요.",
-          "intermediate": "웃어른에게 \"오빠\"을 사용해요.",
-          "advanced": "\"오빠\"의 올바른 사용은 한국어 예절의 핵심입니다.",
-          "master": "\"오빠\"의 뉘앙스를 이해하면 상황에 맞는 존댓말 구사가 가능합니다."
+          "beginner": "선생님께 \"오빠\"라고 해요.",
+          "intermediate": "처음 만난 사람에게는 \"오빠\"를 써야 해요.",
+          "advanced": "\"오빠\"는 한국에서 예의를 지킬 때 꼭 필요한 표현입니다.",
+          "master": "\"오빠\"의 뉘앙스를 이해하면 격식과 친밀함을 적절히 조절할 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -3477,8 +3477,8 @@
             },
             {
               "speaker": "B",
-              "text": "\"오빠\"이라고 해요.",
-              "romanization": "\"oppa\"irago haeyo.",
+              "text": "\"오빠\"라고 해요.",
+              "romanization": "\"oppa\"rago haeyo.",
               "translation": "You say \"오빠\"."
             },
             {
@@ -3500,10 +3500,10 @@
         "word": "oppa (older brother — used by females)",
         "explanation": "A term used by females to address an older male, whether a biological brother, close older male friend, or boyfriend. It has become widely known globally through K-pop culture, where female fans use it to address male idols.",
         "examples": {
-          "beginner": "We say \"오빠\".",
-          "intermediate": "Use \"오빠\" with elders.",
-          "advanced": "Correct use of \"오빠\" is key to Korean etiquette.",
-          "master": "Understanding the nuance of \"오빠\" enables situationally appropriate honorific use."
+          "beginner": "You say \"오빠\" to a teacher.",
+          "intermediate": "You should use \"오빠\" when meeting someone for the first time.",
+          "advanced": "\"오빠\" is an essential expression for showing politeness in Korea.",
+          "master": "Understanding the nuance of \"오빠\" helps balance formality and familiarity appropriately."
         },
         "variations": {
           "formal": [
@@ -3529,7 +3529,7 @@
               "speaker": "B",
               "text": "You say \"오빠\".",
               "romanization": "",
-              "translation": "\"오빠\"이라고 해요."
+              "translation": "\"오빠\"라고 해요."
             },
             {
               "speaker": "A",
@@ -3573,10 +3573,10 @@
         "word": "언니",
         "explanation": "여자가 자기보다 나이 많은 여자를 부르는 호칭입니다. 친언니뿐 아니라 친한 여자 선배에게도 사용합니다. 남자가 나이 많은 여자를 부를 때는 '누나'를 사용합니다.",
         "examples": {
-          "beginner": "\"언니\"이라고 말해요.",
-          "intermediate": "웃어른에게 \"언니\"을 사용해요.",
-          "advanced": "\"언니\"의 올바른 사용은 한국어 예절의 핵심입니다.",
-          "master": "\"언니\"의 뉘앙스를 이해하면 상황에 맞는 존댓말 구사가 가능합니다."
+          "beginner": "선생님께 \"언니\"라고 해요.",
+          "intermediate": "처음 만난 사람에게는 \"언니\"를 써야 해요.",
+          "advanced": "\"언니\"는 한국에서 예의를 지킬 때 꼭 필요한 표현입니다.",
+          "master": "\"언니\"의 뉘앙스를 이해하면 격식과 친밀함을 적절히 조절할 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -3600,8 +3600,8 @@
             },
             {
               "speaker": "B",
-              "text": "\"언니\"이라고 해요.",
-              "romanization": "\"eonni\"irago haeyo.",
+              "text": "\"언니\"라고 해요.",
+              "romanization": "\"eonni\"rago haeyo.",
               "translation": "You say \"언니\"."
             },
             {
@@ -3623,10 +3623,10 @@
         "word": "eonni (older sister — used by females)",
         "explanation": "A term used by females to address an older female, whether a biological sister or a close older female friend/senior. Males use '누나' (nuna) instead. This distinction is one of the key features of Korean's gender-specific honorific system.",
         "examples": {
-          "beginner": "We say \"언니\".",
-          "intermediate": "Use \"언니\" with elders.",
-          "advanced": "Correct use of \"언니\" is key to Korean etiquette.",
-          "master": "Understanding the nuance of \"언니\" enables situationally appropriate honorific use."
+          "beginner": "You say \"언니\" to a teacher.",
+          "intermediate": "You should use \"언니\" when meeting someone for the first time.",
+          "advanced": "\"언니\" is an essential expression for showing politeness in Korea.",
+          "master": "Understanding the nuance of \"언니\" helps balance formality and familiarity appropriately."
         },
         "variations": {
           "formal": [
@@ -3652,7 +3652,7 @@
               "speaker": "B",
               "text": "You say \"언니\".",
               "romanization": "",
-              "translation": "\"언니\"이라고 해요."
+              "translation": "\"언니\"라고 해요."
             },
             {
               "speaker": "A",
@@ -3696,10 +3696,10 @@
         "word": "아저씨",
         "explanation": "중년 남성을 부르는 일반적인 호칭입니다. 삼촌이라는 뜻도 있지만, 일상에서는 이름을 모르는 중년 남성에게 널리 사용합니다. 젊은 사람에게 쓰면 실례가 될 수 있습니다.",
         "examples": {
-          "beginner": "\"아저씨\"이라고 말해요.",
-          "intermediate": "웃어른에게 \"아저씨\"을 사용해요.",
-          "advanced": "\"아저씨\"의 올바른 사용은 한국어 예절의 핵심입니다.",
-          "master": "\"아저씨\"의 뉘앙스를 이해하면 상황에 맞는 존댓말 구사가 가능합니다."
+          "beginner": "선생님께 \"아저씨\"라고 해요.",
+          "intermediate": "처음 만난 사람에게는 \"아저씨\"를 써야 해요.",
+          "advanced": "\"아저씨\"는 한국에서 예의를 지킬 때 꼭 필요한 표현입니다.",
+          "master": "\"아저씨\"의 뉘앙스를 이해하면 격식과 친밀함을 적절히 조절할 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -3723,8 +3723,8 @@
             },
             {
               "speaker": "B",
-              "text": "\"아저씨\"이라고 해요.",
-              "romanization": "\"ajeossi\"irago haeyo.",
+              "text": "\"아저씨\"라고 해요.",
+              "romanization": "\"ajeossi\"rago haeyo.",
               "translation": "You say \"아저씨\"."
             },
             {
@@ -3746,10 +3746,10 @@
         "word": "ajeossi (uncle / mister)",
         "explanation": "A common title for middle-aged men in Korean. While it literally means 'uncle,' it is widely used to address any middle-aged man whose name you don't know. Using it for younger men can be considered rude as it implies they look old.",
         "examples": {
-          "beginner": "We say \"아저씨\".",
-          "intermediate": "Use \"아저씨\" with elders.",
-          "advanced": "Correct use of \"아저씨\" is key to Korean etiquette.",
-          "master": "Understanding the nuance of \"아저씨\" enables situationally appropriate honorific use."
+          "beginner": "You say \"아저씨\" to a teacher.",
+          "intermediate": "You should use \"아저씨\" when meeting someone for the first time.",
+          "advanced": "\"아저씨\" is an essential expression for showing politeness in Korea.",
+          "master": "Understanding the nuance of \"아저씨\" helps balance formality and familiarity appropriately."
         },
         "variations": {
           "formal": [
@@ -3775,7 +3775,7 @@
               "speaker": "B",
               "text": "You say \"아저씨\".",
               "romanization": "",
-              "translation": "\"아저씨\"이라고 해요."
+              "translation": "\"아저씨\"라고 해요."
             },
             {
               "speaker": "A",
@@ -3819,10 +3819,10 @@
         "word": "아주머니",
         "explanation": "중년 여성을 부르는 일반적인 호칭입니다. '아줌마'보다 정중한 표현이며, 이름을 모르는 중년 여성에게 사용합니다. 젊은 여성에게 사용하면 실례가 될 수 있습니다.",
         "examples": {
-          "beginner": "\"아주머니\"이라고 말해요.",
-          "intermediate": "웃어른에게 \"아주머니\"을 사용해요.",
-          "advanced": "\"아주머니\"의 올바른 사용은 한국어 예절의 핵심입니다.",
-          "master": "\"아주머니\"의 뉘앙스를 이해하면 상황에 맞는 존댓말 구사가 가능합니다."
+          "beginner": "선생님께 \"아주머니\"라고 해요.",
+          "intermediate": "처음 만난 사람에게는 \"아주머니\"를 써야 해요.",
+          "advanced": "\"아주머니\"는 한국에서 예의를 지킬 때 꼭 필요한 표현입니다.",
+          "master": "\"아주머니\"의 뉘앙스를 이해하면 격식과 친밀함을 적절히 조절할 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -3846,8 +3846,8 @@
             },
             {
               "speaker": "B",
-              "text": "\"아주머니\"이라고 해요.",
-              "romanization": "\"ajumeoni\"irago haeyo.",
+              "text": "\"아주머니\"라고 해요.",
+              "romanization": "\"ajumeoni\"rago haeyo.",
               "translation": "You say \"아주머니\"."
             },
             {
@@ -3869,10 +3869,10 @@
         "word": "ajumeoni (aunt / ma'am)",
         "explanation": "A polite title for middle-aged women in Korean. It is the more respectful form of '아줌마' (ajumma). Used to address middle-aged women whose name you don't know. Like '아저씨', using it for younger women can be considered rude.",
         "examples": {
-          "beginner": "We say \"아주머니\".",
-          "intermediate": "Use \"아주머니\" with elders.",
-          "advanced": "Correct use of \"아주머니\" is key to Korean etiquette.",
-          "master": "Understanding the nuance of \"아주머니\" enables situationally appropriate honorific use."
+          "beginner": "You say \"아주머니\" to a teacher.",
+          "intermediate": "You should use \"아주머니\" when meeting someone for the first time.",
+          "advanced": "\"아주머니\" is an essential expression for showing politeness in Korea.",
+          "master": "Understanding the nuance of \"아주머니\" helps balance formality and familiarity appropriately."
         },
         "variations": {
           "formal": [
@@ -3898,7 +3898,7 @@
               "speaker": "B",
               "text": "You say \"아주머니\".",
               "romanization": "",
-              "translation": "\"아주머니\"이라고 해요."
+              "translation": "\"아주머니\"라고 해요."
             },
             {
               "speaker": "A",
@@ -3941,10 +3941,10 @@
         "word": "할아버지",
         "explanation": "아버지의 아버지, 또는 노년 남성을 부르는 호칭입니다. 친할아버지뿐 아니라 나이 많은 남성 어르신에게도 사용합니다. 한국 문화에서 어른을 공경하는 마음이 담긴 호칭입니다.",
         "examples": {
-          "beginner": "\"할아버지\"이라고 말해요.",
-          "intermediate": "웃어른에게 \"할아버지\"을 사용해요.",
-          "advanced": "\"할아버지\"의 올바른 사용은 한국어 예절의 핵심입니다.",
-          "master": "\"할아버지\"의 뉘앙스를 이해하면 상황에 맞는 존댓말 구사가 가능합니다."
+          "beginner": "선생님께 \"할아버지\"라고 해요.",
+          "intermediate": "처음 만난 사람에게는 \"할아버지\"를 써야 해요.",
+          "advanced": "\"할아버지\"는 한국에서 예의를 지킬 때 꼭 필요한 표현입니다.",
+          "master": "\"할아버지\"의 뉘앙스를 이해하면 격식과 친밀함을 적절히 조절할 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -3968,8 +3968,8 @@
             },
             {
               "speaker": "B",
-              "text": "\"할아버지\"이라고 해요.",
-              "romanization": "\"halabeoji\"irago haeyo.",
+              "text": "\"할아버지\"라고 해요.",
+              "romanization": "\"halabeoji\"rago haeyo.",
               "translation": "You say \"할아버지\"."
             },
             {
@@ -3991,10 +3991,10 @@
         "word": "harabeoji (grandfather)",
         "explanation": "The Korean word for 'grandfather,' also used as a respectful title for elderly men in general. In Korean culture, it reflects the deep respect for elders rooted in Confucian values.",
         "examples": {
-          "beginner": "We say \"할아버지\".",
-          "intermediate": "Use \"할아버지\" with elders.",
-          "advanced": "Correct use of \"할아버지\" is key to Korean etiquette.",
-          "master": "Understanding the nuance of \"할아버지\" enables situationally appropriate honorific use."
+          "beginner": "You say \"할아버지\" to a teacher.",
+          "intermediate": "You should use \"할아버지\" when meeting someone for the first time.",
+          "advanced": "\"할아버지\" is an essential expression for showing politeness in Korea.",
+          "master": "Understanding the nuance of \"할아버지\" helps balance formality and familiarity appropriately."
         },
         "variations": {
           "formal": [
@@ -4020,7 +4020,7 @@
               "speaker": "B",
               "text": "You say \"할아버지\".",
               "romanization": "",
-              "translation": "\"할아버지\"이라고 해요."
+              "translation": "\"할아버지\"라고 해요."
             },
             {
               "speaker": "A",
@@ -4063,10 +4063,10 @@
         "word": "할머니",
         "explanation": "아버지의 어머니, 또는 노년 여성을 부르는 호칭입니다. 친할머니뿐 아니라 나이 많은 여성 어르신에게도 사용합니다. 한국 가정에서 할머니는 따뜻함과 사랑의 상징입니다.",
         "examples": {
-          "beginner": "\"할머니\"이라고 말해요.",
-          "intermediate": "웃어른에게 \"할머니\"을 사용해요.",
-          "advanced": "\"할머니\"의 올바른 사용은 한국어 예절의 핵심입니다.",
-          "master": "\"할머니\"의 뉘앙스를 이해하면 상황에 맞는 존댓말 구사가 가능합니다."
+          "beginner": "선생님께 \"할머니\"라고 해요.",
+          "intermediate": "처음 만난 사람에게는 \"할머니\"를 써야 해요.",
+          "advanced": "\"할머니\"는 한국에서 예의를 지킬 때 꼭 필요한 표현입니다.",
+          "master": "\"할머니\"의 뉘앙스를 이해하면 격식과 친밀함을 적절히 조절할 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -4090,8 +4090,8 @@
             },
             {
               "speaker": "B",
-              "text": "\"할머니\"이라고 해요.",
-              "romanization": "\"halmeoni\"irago haeyo.",
+              "text": "\"할머니\"라고 해요.",
+              "romanization": "\"halmeoni\"rago haeyo.",
               "translation": "You say \"할머니\"."
             },
             {
@@ -4113,10 +4113,10 @@
         "word": "halmeoni (grandmother)",
         "explanation": "The Korean word for 'grandmother,' also used as a respectful title for elderly women in general. In Korean families, grandmothers symbolize warmth, love, and care, often associated with home-cooked meals and affection for grandchildren.",
         "examples": {
-          "beginner": "We say \"할머니\".",
-          "intermediate": "Use \"할머니\" with elders.",
-          "advanced": "Correct use of \"할머니\" is key to Korean etiquette.",
-          "master": "Understanding the nuance of \"할머니\" enables situationally appropriate honorific use."
+          "beginner": "You say \"할머니\" to a teacher.",
+          "intermediate": "You should use \"할머니\" when meeting someone for the first time.",
+          "advanced": "\"할머니\" is an essential expression for showing politeness in Korea.",
+          "master": "Understanding the nuance of \"할머니\" helps balance formality and familiarity appropriately."
         },
         "variations": {
           "formal": [
@@ -4142,7 +4142,7 @@
               "speaker": "B",
               "text": "You say \"할머니\".",
               "romanization": "",
-              "translation": "\"할머니\"이라고 해요."
+              "translation": "\"할머니\"라고 해요."
             },
             {
               "speaker": "A",
