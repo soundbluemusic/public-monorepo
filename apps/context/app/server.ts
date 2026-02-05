@@ -13,22 +13,35 @@ import tanstackHandler from '@tanstack/react-start/server-entry';
 
 const SITE_URL = 'https://context.soundbluemusic.com';
 
-function getCurrentDateString(): string {
-  return new Date().toISOString().slice(0, 10);
+/** 콘텐츠 최종 수정일 (실제 데이터 변경 시 업데이트) */
+const CONTENT_LAST_MODIFIED = '2026-01-25';
+
+/**
+ * URL 경로의 각 세그먼트를 퍼센트 인코딩합니다.
+ * 한글 등 비ASCII 문자가 포함된 entry ID를 올바르게 인코딩합니다.
+ *
+ * @example encodePathForSitemap('/entry/d-foo-된jang') → '/entry/d-foo-%EB%90%9Cjang'
+ */
+function encodePathForSitemap(path: string): string {
+  return path
+    .split('/')
+    .map((segment) => (segment ? encodeURIComponent(segment) : ''))
+    .join('/');
 }
 
 function generateBilingualUrl(
   path: string,
   priority: string,
   changefreq: string,
-  now: string,
+  lastmod: string,
 ): string {
-  const enUrl = `${SITE_URL}${path}`;
-  const koUrl = `${SITE_URL}/ko${path === '/' ? '' : path}`;
+  const encodedPath = encodePathForSitemap(path);
+  const enUrl = `${SITE_URL}${encodedPath}`;
+  const koUrl = `${SITE_URL}/ko${encodedPath === '/' ? '' : encodedPath}`;
 
   return `  <url>
     <loc>${enUrl}</loc>
-    <lastmod>${now}</lastmod>
+    <lastmod>${lastmod}</lastmod>
     <changefreq>${changefreq}</changefreq>
     <priority>${priority}</priority>
     <xhtml:link rel="alternate" hreflang="en" href="${enUrl}"/>
@@ -37,7 +50,7 @@ function generateBilingualUrl(
   </url>
   <url>
     <loc>${koUrl}</loc>
-    <lastmod>${now}</lastmod>
+    <lastmod>${lastmod}</lastmod>
     <changefreq>${changefreq}</changefreq>
     <priority>${priority}</priority>
     <xhtml:link rel="alternate" hreflang="en" href="${enUrl}"/>
@@ -70,9 +83,12 @@ const jsonHeaders = {
 
 const STATIC_PAGES = [
   { path: '/', priority: '1.0', changefreq: 'weekly' },
-  { path: '/about', priority: '0.8', changefreq: 'monthly' },
   { path: '/browse', priority: '0.9', changefreq: 'weekly' },
+  { path: '/about', priority: '0.8', changefreq: 'monthly' },
+  { path: '/conversations', priority: '0.8', changefreq: 'weekly' },
+  { path: '/tags', priority: '0.7', changefreq: 'weekly' },
   { path: '/download', priority: '0.7', changefreq: 'monthly' },
+  { path: '/sitemap', priority: '0.5', changefreq: 'monthly' },
   { path: '/built-with', priority: '0.5', changefreq: 'monthly' },
   { path: '/license', priority: '0.3', changefreq: 'yearly' },
   { path: '/privacy', priority: '0.3', changefreq: 'yearly' },
@@ -94,13 +110,14 @@ async function handleSitemapIndex(env: CloudflareEnv): Promise<Response> {
       .prepare('SELECT id FROM categories ORDER BY sort_order')
       .all<{ id: string }>();
 
-    const now = getCurrentDateString();
     const sitemaps = [
-      { loc: `${SITE_URL}/sitemap-pages.xml`, lastmod: now },
-      { loc: `${SITE_URL}/sitemap-categories.xml`, lastmod: now },
+      { loc: `${SITE_URL}/sitemap-pages.xml`, lastmod: CONTENT_LAST_MODIFIED },
+      { loc: `${SITE_URL}/sitemap-categories.xml`, lastmod: CONTENT_LAST_MODIFIED },
+      { loc: `${SITE_URL}/sitemap-conversations.xml`, lastmod: CONTENT_LAST_MODIFIED },
+      { loc: `${SITE_URL}/sitemap-tags.xml`, lastmod: CONTENT_LAST_MODIFIED },
       ...categories.map((cat) => ({
         loc: `${SITE_URL}/sitemaps/entries/${cat.id}.xml`,
-        lastmod: now,
+        lastmod: CONTENT_LAST_MODIFIED,
       })),
     ];
 
@@ -125,9 +142,8 @@ ${sitemaps
 }
 
 function handleSitemapPages(): Response {
-  const now = getCurrentDateString();
   const urls = STATIC_PAGES.map((page) =>
-    generateBilingualUrl(page.path, page.priority, page.changefreq, now),
+    generateBilingualUrl(page.path, page.priority, page.changefreq, CONTENT_LAST_MODIFIED),
   ).join('\n');
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
@@ -155,9 +171,10 @@ async function handleSitemapCategories(env: CloudflareEnv): Promise<Response> {
       .prepare('SELECT id FROM categories ORDER BY sort_order')
       .all<{ id: string }>();
 
-    const now = getCurrentDateString();
     const urls = categories
-      .map((cat) => generateBilingualUrl(`/category/${cat.id}`, '0.8', 'weekly', now))
+      .map((cat) =>
+        generateBilingualUrl(`/category/${cat.id}`, '0.8', 'weekly', CONTENT_LAST_MODIFIED),
+      )
       .join('\n');
 
     const xml = `<?xml version="1.0" encoding="UTF-8"?>
@@ -194,9 +211,10 @@ async function handleSitemapEntries(env: CloudflareEnv, categoryId: string): Pro
       return new Response('Category not found or empty', { status: 404 });
     }
 
-    const now = getCurrentDateString();
     const urls = entries
-      .map((entry) => generateBilingualUrl(`/entry/${entry.id}`, '0.6', 'monthly', now))
+      .map((entry) =>
+        generateBilingualUrl(`/entry/${entry.id}`, '0.7', 'monthly', CONTENT_LAST_MODIFIED),
+      )
       .join('\n');
 
     const xml = `<?xml version="1.0" encoding="UTF-8"?>
@@ -209,6 +227,95 @@ ${urls}
     return new Response(xml, { headers: xmlHeaders });
   } catch (error) {
     console.error(`Failed to generate entry sitemap for ${categoryId}:`, error);
+    return new Response('Failed to generate sitemap', { status: 500 });
+  }
+}
+
+async function handleSitemapConversations(env: CloudflareEnv): Promise<Response> {
+  const db = getD1Database(env);
+
+  if (!db) {
+    return new Response('Database not available', {
+      status: 503,
+      headers: { 'Content-Type': 'text/plain' },
+    });
+  }
+
+  try {
+    const { results: categories } = await db
+      .prepare('SELECT DISTINCT category_id FROM conversations ORDER BY category_id')
+      .all<{ category_id: string }>();
+
+    const urls = categories
+      .map((cat) =>
+        generateBilingualUrl(
+          `/conversations/${cat.category_id}`,
+          '0.6',
+          'monthly',
+          CONTENT_LAST_MODIFIED,
+        ),
+      )
+      .join('\n');
+
+    const xml = `<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+${urls}
+</urlset>`;
+
+    return new Response(xml, { headers: xmlHeaders });
+  } catch (error) {
+    console.error('Failed to generate conversations sitemap:', error);
+    return new Response('Failed to generate sitemap', { status: 500 });
+  }
+}
+
+async function handleSitemapTags(env: CloudflareEnv): Promise<Response> {
+  const db = getD1Database(env);
+
+  if (!db) {
+    return new Response('Database not available', {
+      status: 503,
+      headers: { 'Content-Type': 'text/plain' },
+    });
+  }
+
+  try {
+    const { results } = await db
+      .prepare("SELECT tags FROM entries WHERE tags IS NOT NULL AND tags != '[]'")
+      .all<{ tags: string }>();
+
+    const uniqueTags = new Set<string>();
+    for (const row of results) {
+      try {
+        const tags = JSON.parse(row.tags) as string[];
+        for (const tag of tags) {
+          uniqueTags.add(tag);
+        }
+      } catch {
+        // Skip invalid JSON
+      }
+    }
+
+    const sortedTags = Array.from(uniqueTags).sort();
+
+    const urls = sortedTags
+      .map((tag) =>
+        generateBilingualUrl(`/tag/${tag}`, '0.5', 'monthly', CONTENT_LAST_MODIFIED),
+      )
+      .join('\n');
+
+    const xml = `<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+${urls}
+</urlset>`;
+
+    return new Response(xml, { headers: xmlHeaders });
+  } catch (error) {
+    console.error('Failed to generate tags sitemap:', error);
     return new Response('Failed to generate sitemap', { status: 500 });
   }
 }
@@ -296,6 +403,14 @@ async function handleApiRoute(request: Request, env: CloudflareEnv): Promise<Res
     return handleSitemapCategories(env);
   }
 
+  if (pathname === '/sitemap-conversations.xml') {
+    return handleSitemapConversations(env);
+  }
+
+  if (pathname === '/sitemap-tags.xml') {
+    return handleSitemapTags(env);
+  }
+
   // /sitemaps/entries/:categoryId.xml
   const entrySitemapMatch = pathname.match(/^\/sitemaps\/entries\/([^/]+)\.xml$/);
   if (entrySitemapMatch?.[1]) {
@@ -322,6 +437,17 @@ async function handleApiRoute(request: Request, env: CloudflareEnv): Promise<Res
 }
 
 // ============================================================================
+// Security Headers (Workers에서는 _headers 파일이 적용되지 않으므로 직접 설정)
+// ============================================================================
+
+const SECURITY_HEADERS: Record<string, string> = {
+  'X-Content-Type-Options': 'nosniff',
+  'X-Frame-Options': 'DENY',
+  'X-XSS-Protection': '1; mode=block',
+  'Referrer-Policy': 'strict-origin-when-cross-origin',
+};
+
+// ============================================================================
 // Server Handler
 // ============================================================================
 
@@ -335,6 +461,19 @@ export default {
 
     // Pass to TanStack Start for page routes
     // @ts-expect-error - TanStack Start internal handler
-    return tanstackHandler.fetch(request, env, ctx);
+    const response = await tanstackHandler.fetch(request, env, ctx);
+
+    // HTML 응답에 Cache-Control + 보안 헤더 추가
+    const contentType = response.headers.get('Content-Type');
+    if (contentType?.includes('text/html')) {
+      const newResponse = new Response(response.body, response);
+      newResponse.headers.set('Cache-Control', 'public, max-age=0, must-revalidate');
+      for (const [key, value] of Object.entries(SECURITY_HEADERS)) {
+        newResponse.headers.set(key, value);
+      }
+      return newResponse;
+    }
+
+    return response;
   },
 };

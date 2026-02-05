@@ -71,33 +71,53 @@ function requireLoaderData<T>(ctx: DynamicHeadFunctionArgs<T>): T {
 }
 
 /**
- * SEO 링크 태그 생성 (canonical + hreflang)
+ * SEO URL 계산 (canonical, en, ko)
  */
-function generateSeoLinks(pathname: string, baseUrl: string): HeadLink[] {
+function computeSeoUrls(
+  pathname: string,
+  baseUrl: string,
+): { canonical: string; en: string; ko: string } {
   const cleanBaseUrl = baseUrl.replace(/\/$/, '');
   const cleanPath = pathname.startsWith('/') ? pathname : `/${pathname}`;
 
   const isKorean = cleanPath.startsWith('/ko');
   const pathWithoutLocale = isKorean ? cleanPath.replace(/^\/ko/, '') || '/' : cleanPath;
 
-  const enUrl = pathWithoutLocale === '/' ? cleanBaseUrl : `${cleanBaseUrl}${pathWithoutLocale}`;
-  const koUrl =
+  const en = pathWithoutLocale === '/' ? cleanBaseUrl : `${cleanBaseUrl}${pathWithoutLocale}`;
+  const ko =
     pathWithoutLocale === '/' ? `${cleanBaseUrl}/ko` : `${cleanBaseUrl}/ko${pathWithoutLocale}`;
 
-  const canonicalUrl = isKorean ? koUrl : enUrl;
+  return { canonical: isKorean ? ko : en, en, ko };
+}
+
+/**
+ * SEO 링크 태그 생성 (canonical + hreflang)
+ */
+function generateSeoLinks(pathname: string, baseUrl: string): HeadLink[] {
+  const urls = computeSeoUrls(pathname, baseUrl);
 
   return [
-    { rel: 'canonical', href: canonicalUrl },
-    { rel: 'alternate', hrefLang: 'en', href: enUrl },
-    { rel: 'alternate', hrefLang: 'ko', href: koUrl },
-    { rel: 'alternate', hrefLang: 'x-default', href: enUrl },
+    { rel: 'canonical', href: urls.canonical },
+    { rel: 'alternate', hrefLang: 'en', href: urls.en },
+    { rel: 'alternate', hrefLang: 'ko', href: urls.ko },
+    { rel: 'alternate', hrefLang: 'x-default', href: urls.en },
   ];
+}
+
+/**
+ * OG 메타 태그 추가 옵션
+ */
+interface OgMetaOptions {
+  /** 현재 페이지의 정규화된 URL (og:url) */
+  url?: string;
+  /** 현재 로케일 (og:locale) */
+  locale?: 'en' | 'ko';
 }
 
 /**
  * MetaData를 HeadMeta 배열로 변환
  */
-function metaDataToHeadMeta(meta: MetaData): HeadMeta[] {
+function metaDataToHeadMeta(meta: MetaData, options?: OgMetaOptions): HeadMeta[] {
   const result: HeadMeta[] = [{ title: meta.title }];
 
   if (meta.description) {
@@ -112,6 +132,16 @@ function metaDataToHeadMeta(meta: MetaData): HeadMeta[] {
   result.push({ property: 'og:title', content: meta.title });
   if (meta.description) {
     result.push({ property: 'og:description', content: meta.description });
+  }
+  result.push({ property: 'og:type', content: 'website' });
+  if (options?.url) {
+    result.push({ property: 'og:url', content: options.url });
+  }
+  if (options?.locale) {
+    const ogLocale = options.locale === 'ko' ? 'ko_KR' : 'en_US';
+    const ogLocaleAlt = options.locale === 'ko' ? 'en_US' : 'ko_KR';
+    result.push({ property: 'og:locale', content: ogLocale });
+    result.push({ property: 'og:locale:alternate', content: ogLocaleAlt });
   }
 
   // Twitter Card
@@ -149,9 +179,13 @@ export function headFactory(
     const pathname = location?.pathname ?? '/';
     const isKorean = pathname.startsWith('/ko');
     const meta = isKorean ? localizedMeta.ko : localizedMeta.en;
+    const urls = computeSeoUrls(pathname, baseUrl);
 
     return {
-      meta: metaDataToHeadMeta(meta),
+      meta: metaDataToHeadMeta(meta, {
+        url: urls.canonical,
+        locale: isKorean ? 'ko' : 'en',
+      }),
       links: generateSeoLinks(pathname, baseUrl),
     };
   };
@@ -188,9 +222,13 @@ export function dynamicHeadFactory<T>(
     const isKorean = pathname.startsWith('/ko');
     const localizedMeta = getLocalizedMeta(loaderData);
     const meta = isKorean ? localizedMeta.ko : localizedMeta.en;
+    const urls = computeSeoUrls(pathname, baseUrl);
 
     return {
-      meta: metaDataToHeadMeta(meta),
+      meta: metaDataToHeadMeta(meta, {
+        url: urls.canonical,
+        locale: isKorean ? 'ko' : 'en',
+      }),
       links: generateSeoLinks(pathname, baseUrl),
     };
   };
@@ -204,9 +242,10 @@ export function headFactoryKo(localizedMeta: LocalizedMeta, baseUrl: string): ()
   return (): HeadConfig => {
     const meta = localizedMeta.ko;
     const pathname = '/ko'; // 한글 페이지는 /ko 기준
+    const urls = computeSeoUrls(pathname, baseUrl);
 
     return {
-      meta: metaDataToHeadMeta(meta),
+      meta: metaDataToHeadMeta(meta, { url: urls.canonical, locale: 'ko' }),
       links: generateSeoLinks(pathname, baseUrl),
     };
   };
@@ -220,9 +259,10 @@ export function headFactoryEn(localizedMeta: LocalizedMeta, baseUrl: string): ()
   return (): HeadConfig => {
     const meta = localizedMeta.en;
     const pathname = '/'; // 영어 페이지는 / 기준
+    const urls = computeSeoUrls(pathname, baseUrl);
 
     return {
-      meta: metaDataToHeadMeta(meta),
+      meta: metaDataToHeadMeta(meta, { url: urls.canonical, locale: 'en' }),
       links: generateSeoLinks(pathname, baseUrl),
     };
   };
@@ -243,9 +283,10 @@ export function dynamicHeadFactoryKo<T>(
     const pathname = getPathname
       ? `/ko${getPathname(loaderData)}`
       : (ctx.location?.pathname ?? '/ko');
+    const urls = computeSeoUrls(pathname, baseUrl);
 
     return {
-      meta: metaDataToHeadMeta(meta),
+      meta: metaDataToHeadMeta(meta, { url: urls.canonical, locale: 'ko' }),
       links: generateSeoLinks(pathname, baseUrl),
     };
   };
@@ -264,9 +305,10 @@ export function dynamicHeadFactoryEn<T>(
     const localizedMeta = getLocalizedMeta(loaderData);
     const meta = localizedMeta.en;
     const pathname = getPathname ? getPathname(loaderData) : (ctx.location?.pathname ?? '/');
+    const urls = computeSeoUrls(pathname, baseUrl);
 
     return {
-      meta: metaDataToHeadMeta(meta),
+      meta: metaDataToHeadMeta(meta, { url: urls.canonical, locale: 'en' }),
       links: generateSeoLinks(pathname, baseUrl),
     };
   };

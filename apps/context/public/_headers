@@ -1,6 +1,10 @@
 # Cloudflare Pages - Security Headers Configuration
 # Context App (context.soundbluemusic.com)
 # https://developers.cloudflare.com/pages/configuration/headers/
+#
+# NOTE: Workers 모드 (run_worker_first=true)에서는 이 파일이 적용되지 않습니다.
+# 보안 헤더는 server.ts의 SECURITY_HEADERS에서 설정합니다.
+# 정적 자산 캐시 헤더는 Workers Asset 서빙에서 자동 처리됩니다.
 
 # =============================================================================
 # GLOBAL SECURITY HEADERS

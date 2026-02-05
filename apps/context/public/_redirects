@@ -1,6 +1,9 @@
 # Cloudflare Pages - Redirects Configuration
 # SSR + D1 모드 - Entry 페이지는 D1에서 실시간 조회
 # https://developers.cloudflare.com/pages/configuration/redirects/
+#
+# NOTE: Workers 모드 (run_worker_first=true)에서는 이 파일이 적용되지 않습니다.
+# 리다이렉트는 server.ts의 handleApiRoute에서 처리합니다.
 
 # SEO 파일 - 명시적 서빙
 /sitemap.xml            /sitemap.xml            200
