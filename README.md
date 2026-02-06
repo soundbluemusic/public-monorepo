@@ -173,6 +173,7 @@ public-monorepo/
 | [soundbluemusic.com](https://soundbluemusic.com) | Main site |
 | [tools.soundbluemusic.com](https://tools.soundbluemusic.com) | Tool collection |
 | [dialogue.soundbluemusic.com](https://dialogue.soundbluemusic.com) | Learning chatbot |
+| [offline.observer](https://offline.observer) | Sound production |
 
 ---
 

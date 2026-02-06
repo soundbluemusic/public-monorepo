@@ -72,6 +72,16 @@ export const FAMILY_APPS = [
     icon: 'message-circle',
     category: 'learning' as AppCategory,
   },
+  {
+    id: 'offline-observer',
+    name: 'Offline Observer',
+    nameKo: 'Offline Observer',
+    description: 'Sound Production',
+    descriptionKo: '사운드 제작',
+    url: 'https://offline.observer',
+    icon: 'music',
+    category: 'tools' as AppCategory,
+  },
 ] as const;
 
 export type FamilyApp = (typeof FAMILY_APPS)[number];

@@ -30,6 +30,7 @@ import {
   Instagram,
   type LucideIcon,
   MessageCircle,
+  Music,
   PiSquare,
   Twitter,
   Wrench,
@@ -42,7 +43,14 @@ export interface ServicesDropdownProps {
   locale?: 'en' | 'ko';
 }
 
-type ServiceIconName = 'home' | 'book-open' | 'pi-square' | 'code' | 'wrench' | 'message-circle';
+type ServiceIconName =
+  | 'home'
+  | 'book-open'
+  | 'pi-square'
+  | 'code'
+  | 'wrench'
+  | 'message-circle'
+  | 'music';
 type SocialIconName = 'youtube' | 'twitter' | 'instagram' | 'at-sign';
 
 const SERVICE_ICON_MAP: Record<ServiceIconName, LucideIcon> = {
@@ -52,6 +60,7 @@ const SERVICE_ICON_MAP: Record<ServiceIconName, LucideIcon> = {
   code: Code,
   wrench: Wrench,
   'message-circle': MessageCircle,
+  music: Music,
 };
 
 const SOCIAL_ICON_MAP: Record<SocialIconName, LucideIcon> = {

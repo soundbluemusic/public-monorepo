@@ -16,6 +16,7 @@ import {
   Home,
   type LucideIcon,
   MessageCircle,
+  Music,
   PiSquare,
   Wrench,
 } from 'lucide-react';
@@ -28,7 +29,7 @@ export interface FamilySitesProps {
   locale?: 'en' | 'ko';
 }
 
-type IconName = 'home' | 'book-open' | 'pi-square' | 'code' | 'wrench' | 'message-circle';
+type IconName = 'home' | 'book-open' | 'pi-square' | 'code' | 'wrench' | 'message-circle' | 'music';
 
 const ICON_MAP: Record<IconName, LucideIcon> = {
   home: Home,
@@ -37,6 +38,7 @@ const ICON_MAP: Record<IconName, LucideIcon> = {
   code: Code,
   wrench: Wrench,
   'message-circle': MessageCircle,
+  music: Music,
 };
 
 function getIcon(iconName: string): LucideIcon {
