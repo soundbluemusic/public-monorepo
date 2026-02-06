@@ -22,7 +22,7 @@ const STATIC_PAGES: StaticPage[] = [
   { path: '/', priority: '1.0', changefreq: 'weekly' },
   { path: '/libraries', priority: '0.9', changefreq: 'weekly' },
   { path: '/web-api', priority: '0.9', changefreq: 'weekly' },
-  { path: '/sitemap', priority: '0.5', changefreq: 'monthly' },
+  { path: '/sitemap', priority: '0.3', changefreq: 'monthly' },
 ];
 
 // Generate library slugs from actual data (Single Source of Truth)
@@ -80,7 +80,7 @@ generateSitemaps(CONFIG, STATIC_PAGES, [
       CONFIG.siteUrl,
       '/library',
       LIBRARY_SLUGS,
-      '0.7',
+      '0.8',
       'monthly',
       CONFIG.languages,
       TRAILING_SLASH,
@@ -92,7 +92,7 @@ generateSitemaps(CONFIG, STATIC_PAGES, [
       CONFIG.siteUrl,
       '/web-api',
       WEB_APIS,
-      '0.7',
+      '0.8',
       'monthly',
       CONFIG.languages,
       TRAILING_SLASH,
