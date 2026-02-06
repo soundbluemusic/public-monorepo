@@ -10,13 +10,19 @@ export const Route = createFileRoute('/search')({
   validateSearch: (search: Record<string, unknown>) => ({
     q: typeof search.q === 'string' ? search.q : '',
   }),
-  head: headFactoryEn(
-    {
-      ko: { title: '검색 - 수리', description: '수학 개념 검색' },
-      en: { title: 'Search - Roots', description: 'Search math concepts' },
-    },
-    'https://roots.soundbluemusic.com',
-  ),
+  head: () => {
+    const config = headFactoryEn(
+      {
+        ko: { title: '검색 - 수리', description: '수학 개념 검색' },
+        en: { title: 'Search - Roots', description: 'Search math concepts' },
+      },
+      'https://roots.soundbluemusic.com',
+    )();
+    return {
+      ...config,
+      meta: [...(config.meta ?? []), { name: 'robots', content: 'noindex' }],
+    };
+  },
   component: SearchPageWrapper,
 });
 

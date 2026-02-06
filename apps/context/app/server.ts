@@ -87,12 +87,12 @@ const STATIC_PAGES = [
   { path: '/about', priority: '0.8', changefreq: 'monthly' },
   { path: '/conversations', priority: '0.8', changefreq: 'weekly' },
   { path: '/tags', priority: '0.7', changefreq: 'weekly' },
-  { path: '/download', priority: '0.7', changefreq: 'monthly' },
-  { path: '/sitemap', priority: '0.5', changefreq: 'monthly' },
-  { path: '/built-with', priority: '0.5', changefreq: 'monthly' },
-  { path: '/license', priority: '0.3', changefreq: 'yearly' },
-  { path: '/privacy', priority: '0.3', changefreq: 'yearly' },
-  { path: '/terms', priority: '0.3', changefreq: 'yearly' },
+  { path: '/download', priority: '0.5', changefreq: 'monthly' },
+  { path: '/sitemap', priority: '0.3', changefreq: 'monthly' },
+  { path: '/built-with', priority: '0.3', changefreq: 'monthly' },
+  { path: '/license', priority: '0.1', changefreq: 'yearly' },
+  { path: '/privacy', priority: '0.1', changefreq: 'yearly' },
+  { path: '/terms', priority: '0.1', changefreq: 'yearly' },
 ];
 
 async function handleSitemapIndex(env: CloudflareEnv): Promise<Response> {
@@ -213,7 +213,7 @@ async function handleSitemapEntries(env: CloudflareEnv, categoryId: string): Pro
 
     const urls = entries
       .map((entry) =>
-        generateBilingualUrl(`/entry/${entry.id}`, '0.7', 'monthly', CONTENT_LAST_MODIFIED),
+        generateBilingualUrl(`/entry/${entry.id}`, '0.8', 'monthly', CONTENT_LAST_MODIFIED),
       )
       .join('\n');
 
@@ -250,7 +250,7 @@ async function handleSitemapConversations(env: CloudflareEnv): Promise<Response>
       .map((cat) =>
         generateBilingualUrl(
           `/conversations/${cat.category_id}`,
-          '0.6',
+          '0.7',
           'monthly',
           CONTENT_LAST_MODIFIED,
         ),
