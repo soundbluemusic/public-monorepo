@@ -22,7 +22,7 @@ import {
   Smartphone,
   Trash2,
 } from 'lucide-react';
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { Layout } from '@/components/layout';
 import { OfflineDownloadDialog } from '@/components/OfflineDownloadDialog';
 import { APP_CONFIG } from '@/config';
@@ -102,28 +102,42 @@ function DownloadPage() {
   );
   const [offlineDate, setOfflineDate] = useState<string | null>(null);
   const [hasUpdate, setHasUpdate] = useState(false);
+  const copyTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  // Cleanup timer on unmount
+  useEffect(() => {
+    return () => {
+      if (copyTimerRef.current) clearTimeout(copyTimerRef.current);
+    };
+  }, []);
 
   useEffect(() => {
+    let isMounted = true;
+
     async function checkOfflineStatus() {
       try {
         const status = getOfflineDBStatus();
         if (status === 'ready') {
-          setOfflineStatus('ready');
+          if (isMounted) setOfflineStatus('ready');
           const meta = await getOfflineDBMeta();
-          if (meta) {
+          if (meta && isMounted) {
             const date = new Date(meta.downloadedAt);
             setOfflineDate(date.toLocaleDateString(locale === 'ko' ? 'ko-KR' : 'en-US'));
           }
           const updateCheck = await checkOfflineDBUpdate();
-          setHasUpdate(updateCheck.hasUpdate);
+          if (isMounted) setHasUpdate(updateCheck.hasUpdate);
         } else {
-          setOfflineStatus('not-downloaded');
+          if (isMounted) setOfflineStatus('not-downloaded');
         }
       } catch {
-        setOfflineStatus('not-downloaded');
+        if (isMounted) setOfflineStatus('not-downloaded');
       }
     }
     checkOfflineStatus();
+
+    return () => {
+      isMounted = false;
+    };
   }, [locale]);
 
   const handleOfflineDownload = useCallback(async () => {
@@ -203,9 +217,10 @@ function DownloadPage() {
   ];
 
   const handleCopyUrl = useCallback((url: string) => {
+    if (copyTimerRef.current) clearTimeout(copyTimerRef.current);
     navigator.clipboard.writeText(url);
     setCopiedUrl(url);
-    setTimeout(() => setCopiedUrl(null), 2000);
+    copyTimerRef.current = setTimeout(() => setCopiedUrl(null), 2000);
   }, []);
 
   const handleOpenGitHub = useCallback(() => {

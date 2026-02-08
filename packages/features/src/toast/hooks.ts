@@ -30,12 +30,14 @@ export interface ToastOptions {
 interface ToastStore {
   toasts: Toast[];
   listeners: Set<() => void>;
+  timers: Map<string, ReturnType<typeof setTimeout>>;
 }
 
 // 전역 스토어 (모든 컴포넌트에서 공유)
 const store: ToastStore = {
   toasts: [],
   listeners: new Set(),
+  timers: new Map(),
 };
 
 /** 리스너에게 상태 변경 알림 */
@@ -63,11 +65,12 @@ export function addToast(options: ToastOptions): string {
   store.toasts = [...store.toasts, toast];
   emitChange();
 
-  // 자동 제거
+  // 자동 제거 (타이머 ID 저장)
   if (toast.duration > 0) {
-    setTimeout(() => {
+    const timerId = setTimeout(() => {
       removeToast(id);
     }, toast.duration);
+    store.timers.set(id, timerId);
   }
 
   return id;
@@ -75,12 +78,23 @@ export function addToast(options: ToastOptions): string {
 
 /** Toast 제거 */
 export function removeToast(id: string): void {
+  // Clear timer if exists
+  const timerId = store.timers.get(id);
+  if (timerId) {
+    clearTimeout(timerId);
+    store.timers.delete(id);
+  }
   store.toasts = store.toasts.filter((t) => t.id !== id);
   emitChange();
 }
 
 /** 모든 Toast 제거 */
 export function clearToasts(): void {
+  // Clear all timers
+  for (const timerId of store.timers.values()) {
+    clearTimeout(timerId);
+  }
+  store.timers.clear();
   store.toasts = [];
   emitChange();
 }

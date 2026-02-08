@@ -43,6 +43,8 @@ export function ConceptPage({ concept, conceptId }: ConceptPageProps) {
 
   // conceptNames 로드 (클라이언트 전용)
   useEffect(() => {
+    let isMounted = true;
+
     if (isClient) {
       fetch('/concept-names.json')
         .then((res) => {
@@ -52,23 +54,37 @@ export function ConceptPage({ concept, conceptId }: ConceptPageProps) {
           }
           return res.json();
         })
-        .then(setConceptNames)
+        .then((data) => {
+          if (isMounted) setConceptNames(data);
+        })
         .catch((error) => {
           console.error('[ConceptPage] Failed to load concept-names:', error);
         });
     }
+
+    return () => {
+      isMounted = false;
+    };
   }, [isClient]);
 
   // 즐겨찾기 상태 확인 (클라이언트 전용)
   useEffect(() => {
+    let isMounted = true;
+
     if (isClient && conceptId) {
       favorites
         .isFavorite(conceptId)
-        .then(setIsFavorite)
+        .then((result) => {
+          if (isMounted) setIsFavorite(result);
+        })
         .catch((error) => {
           console.error('[ConceptPage] IndexedDB access failed:', error);
         });
     }
+
+    return () => {
+      isMounted = false;
+    };
   }, [isClient, conceptId]);
 
   const toggleFavorite = async () => {

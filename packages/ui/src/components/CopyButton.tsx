@@ -5,7 +5,7 @@
  */
 
 import { Check, Copy } from 'lucide-react';
-import { memo, useCallback, useState } from 'react';
+import { memo, useCallback, useEffect, useRef, useState } from 'react';
 import { cn } from '../utils/cn';
 
 export interface CopyButtonProps {
@@ -72,13 +72,24 @@ export const CopyButton = memo(function CopyButton({
   onCopy,
 }: CopyButtonProps) {
   const [copied, setCopied] = useState(false);
+  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  // Cleanup timer on unmount
+  useEffect(() => {
+    return () => {
+      if (timerRef.current) clearTimeout(timerRef.current);
+    };
+  }, []);
 
   const handleCopy = useCallback(async () => {
+    // Clear any existing timer
+    if (timerRef.current) clearTimeout(timerRef.current);
+
     try {
       await navigator.clipboard.writeText(text);
       setCopied(true);
       onCopy?.();
-      setTimeout(() => setCopied(false), 2000);
+      timerRef.current = setTimeout(() => setCopied(false), 2000);
     } catch {
       // 폴백: 숨겨진 textarea로 복사
       const textarea = document.createElement('textarea');
@@ -91,7 +102,7 @@ export const CopyButton = memo(function CopyButton({
       document.body.removeChild(textarea);
       setCopied(true);
       onCopy?.();
-      setTimeout(() => setCopied(false), 2000);
+      timerRef.current = setTimeout(() => setCopied(false), 2000);
     }
   }, [text, onCopy]);
 

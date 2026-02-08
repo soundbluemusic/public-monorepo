@@ -5,7 +5,7 @@
  */
 
 import { Check, MessageSquare, ThumbsDown, ThumbsUp } from 'lucide-react';
-import { memo, useCallback, useState } from 'react';
+import { memo, useCallback, useEffect, useRef, useState } from 'react';
 import { cn } from '../utils/cn';
 
 export type FeedbackType = 'positive' | 'negative' | null;
@@ -257,15 +257,26 @@ export const FloatingFeedback = memo(function FloatingFeedback({
   const [rating, setRating] = useState<number | null>(null);
   const [comment, setComment] = useState('');
   const [submitted, setSubmitted] = useState(false);
+  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  // Cleanup timer on unmount
+  useEffect(() => {
+    return () => {
+      if (timerRef.current) clearTimeout(timerRef.current);
+    };
+  }, []);
 
   const handleSubmit = useCallback(() => {
+    // Clear any existing timer
+    if (timerRef.current) clearTimeout(timerRef.current);
+
     onFeedback?.({
       pageId,
       rating: rating ?? undefined,
       comment: comment || undefined,
     });
     setSubmitted(true);
-    setTimeout(() => {
+    timerRef.current = setTimeout(() => {
       setIsOpen(false);
       setSubmitted(false);
       setRating(null);

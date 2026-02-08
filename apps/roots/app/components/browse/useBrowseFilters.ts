@@ -126,6 +126,7 @@ export function useBrowseFilters(): UseBrowseFiltersReturn {
   // URL update helper - use browser history API
   const updateUrlParams = useCallback(
     (updates: Record<string, string | null>) => {
+      if (typeof window === 'undefined') return;
       const params = getSearchParams();
       for (const [key, value] of Object.entries(updates)) {
         if (value === null || value === '' || value === 'all') {
@@ -252,6 +253,7 @@ export function useBrowseFilters(): UseBrowseFiltersReturn {
 
   // Page change handler
   const handlePageChange = (page: number) => {
+    if (typeof window === 'undefined') return;
     setCurrentPage(page);
     const params = getSearchParams();
     if (page === 1) {
@@ -273,7 +275,9 @@ export function useBrowseFilters(): UseBrowseFiltersReturn {
     setFilterField('all');
     setSortBy('name');
     setCurrentPage(1);
-    window.history.replaceState(null, '', routerState.location.pathname);
+    if (typeof window !== 'undefined') {
+      window.history.replaceState(null, '', routerState.location.pathname);
+    }
   };
 
   return {

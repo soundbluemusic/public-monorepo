@@ -90,14 +90,10 @@ function HomePage() {
 
   // 오늘의 단어: 클라이언트에서만 로드 (SSR 시에는 null)
   const [dailyWord, setDailyWord] = useState<MeaningEntry | null>(null);
-  const [isClient, setIsClient] = useState(false);
 
+  // 클라이언트에서 오늘의 단어 로드 (통합된 단일 useEffect)
   useEffect(() => {
-    setIsClient(true);
-  }, []);
-
-  useEffect(() => {
-    if (!isClient) return;
+    let isMounted = true;
 
     const loadDailyWord = async () => {
       try {
@@ -112,9 +108,9 @@ function HomePage() {
         const randomIndex = dayOfYear % lightEntries.length;
         const dailyWordLight = lightEntries[randomIndex];
 
-        if (dailyWordLight) {
+        if (dailyWordLight && isMounted) {
           const entry = await getEntryById(dailyWordLight.id);
-          setDailyWord(entry ?? null);
+          if (isMounted) setDailyWord(entry ?? null);
         }
       } catch (error) {
         console.error('[HomePage] Failed to load daily word:', error);
@@ -122,7 +118,11 @@ function HomePage() {
     };
 
     loadDailyWord();
-  }, [isClient]);
+
+    return () => {
+      isMounted = false;
+    };
+  }, []);
 
   const { overallProgress, categoryProgress } = useStudyData({
     totalEntries,

@@ -46,23 +46,33 @@ export function SearchPage({ query }: SearchPageProps) {
 
   // 검색 수행 (비동기)
   useEffect(() => {
+    let isMounted = true;
+
     if (query.length >= 2) {
       setIsSearching(true);
       searchConcepts(query, locale, 20)
         .then((searchResults) => {
-          setResults(searchResults);
-          setIsSearching(false);
+          if (isMounted) {
+            setResults(searchResults);
+            setIsSearching(false);
+          }
         })
         .catch(() => {
-          setIsSearching(false);
-          toast({
-            message: t('toast.searchFailed'),
-            type: 'error',
-          });
+          if (isMounted) {
+            setIsSearching(false);
+            toast({
+              message: t('toast.searchFailed'),
+              type: 'error',
+            });
+          }
         });
     } else {
       setResults([]);
     }
+
+    return () => {
+      isMounted = false;
+    };
   }, [query, locale, t]);
 
   return (

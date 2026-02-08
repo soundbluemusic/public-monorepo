@@ -1,6 +1,6 @@
 import { LIMITS } from '@soundblue/core/validation';
 import { useNavigate, useSearch } from '@tanstack/react-router';
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { HIGH_SUPPORT_THRESHOLD, NEW_API_YEAR } from '../../constants';
 import type { WebAPI, webApiCategories } from '../../data/web-apis';
 
@@ -32,27 +32,31 @@ export function useWebApiFilters({ apis, categories }: UseWebApiFiltersOptions) 
   const searchParams = useSearch({ strict: false }) as SearchParams;
   const navigate = useNavigate();
 
-  // Initialize state from URL params (one-way: URL → State on mount only)
-  const categoryParam = searchParams.category;
-  const initialParams = {
-    q: searchParams.q || '',
-    // 카테고리 검증: categories 배열에 포함된 경우만 사용
-    category: (categoryParam && categories.includes(categoryParam)
-      ? categoryParam
-      : 'All') as CategoryFilter,
-    filter: searchParams.filter,
-    trending: searchParams.trending,
-  };
-
-  const [search, setSearch] = useState(initialParams.q);
-  const [category, setCategory] = useState<CategoryFilter>(initialParams.category);
-  const [quickFilter, setQuickFilter] = useState<QuickFilterType>(() => {
-    if (initialParams.trending === 'true') return 'trending';
-    if (initialParams.filter === 'highSupport' || initialParams.filter === 'new')
-      return initialParams.filter;
-    return null;
-  });
+  // SSR Hydration 안전: 기본값으로 초기화 (클라이언트에서 useEffect로 URL 동기화)
+  const [search, setSearch] = useState('');
+  const [category, setCategory] = useState<CategoryFilter>('All');
+  const [quickFilter, setQuickFilter] = useState<QuickFilterType>(null);
   const [sortBy, setSortBy] = useState<SortOption>('support');
+
+  // 클라이언트에서만 URL 파라미터 동기화 (hydration 불일치 방지)
+  useEffect(() => {
+    const q = searchParams.q;
+    const cat = searchParams.category;
+    const filter = searchParams.filter;
+    const trending = searchParams.trending;
+
+    if (q) setSearch(q);
+
+    if (cat && categories.includes(cat)) {
+      setCategory(cat as CategoryFilter);
+    }
+
+    if (trending === 'true') {
+      setQuickFilter('trending');
+    } else if (filter === 'highSupport' || filter === 'new') {
+      setQuickFilter(filter);
+    }
+  }, [searchParams, categories]);
 
   const filteredApis = useMemo(() => {
     let filtered = apis;

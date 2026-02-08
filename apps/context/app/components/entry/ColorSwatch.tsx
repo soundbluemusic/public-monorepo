@@ -8,7 +8,7 @@
 import { toast } from '@soundblue/features/toast';
 import { cn } from '@soundblue/ui/utils';
 import { Check, Copy } from 'lucide-react';
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 // 색상 데이터는 JSON에서 import
 import colorCodes from '@/data/color-codes.json';
 import { useI18n } from '@/i18n';
@@ -72,8 +72,19 @@ export function ColorSwatch({ colorCode, colorName, className }: ColorSwatchProp
   const { locale, t } = useI18n();
   const [copied, setCopied] = useState(false);
   const _isDark = isDarkColor(colorCode);
+  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  // Cleanup timer on unmount
+  useEffect(() => {
+    return () => {
+      if (timerRef.current) clearTimeout(timerRef.current);
+    };
+  }, []);
 
   const handleCopy = async () => {
+    // Clear any existing timer
+    if (timerRef.current) clearTimeout(timerRef.current);
+
     try {
       await navigator.clipboard.writeText(colorCode);
       setCopied(true);
@@ -81,7 +92,7 @@ export function ColorSwatch({ colorCode, colorName, className }: ColorSwatchProp
         message: t('toast.colorCodeCopied'),
         type: 'success',
       });
-      setTimeout(() => setCopied(false), 2000);
+      timerRef.current = setTimeout(() => setCopied(false), 2000);
     } catch {
       toast({
         message: t('toast.copyFailed'),

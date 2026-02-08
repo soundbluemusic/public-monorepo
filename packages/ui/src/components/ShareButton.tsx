@@ -80,6 +80,14 @@ export const ShareButton = memo(function ShareButton({
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);
+  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  // Cleanup timer on unmount
+  useEffect(() => {
+    return () => {
+      if (timerRef.current) clearTimeout(timerRef.current);
+    };
+  }, []);
 
   // 외부 클릭 시 드롭다운 닫기
   useEffect(() => {
@@ -104,11 +112,14 @@ export const ShareButton = memo(function ShareButton({
   const canNativeShare = typeof navigator !== 'undefined' && 'share' in navigator;
 
   const copyToClipboard = useCallback(async () => {
+    // Clear any existing timer
+    if (timerRef.current) clearTimeout(timerRef.current);
+
     try {
       await navigator.clipboard.writeText(url);
       setCopied(true);
       onShare?.();
-      setTimeout(() => setCopied(false), 2000);
+      timerRef.current = setTimeout(() => setCopied(false), 2000);
     } catch {
       // 폴백: 숨겨진 input으로 복사
       const input = document.createElement('input');
@@ -119,7 +130,7 @@ export const ShareButton = memo(function ShareButton({
       document.body.removeChild(input);
       setCopied(true);
       onShare?.();
-      setTimeout(() => setCopied(false), 2000);
+      timerRef.current = setTimeout(() => setCopied(false), 2000);
     }
     setIsOpen(false);
   }, [url, onShare]);

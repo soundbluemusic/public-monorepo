@@ -2,7 +2,7 @@ import { useSettingsStore } from '@soundblue/features/settings';
 import { cn } from '@soundblue/ui/utils';
 import { Link } from '@tanstack/react-router';
 import { ArrowUp, ChevronRight } from 'lucide-react';
-import { type ReactNode, useEffect, useState } from 'react';
+import { type ReactNode, useEffect, useRef, useState } from 'react';
 import { useI18n } from '@/i18n';
 import { BottomNav } from '../navigation/BottomNav';
 import { Sidebar } from '../navigation/Sidebar';
@@ -55,19 +55,23 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
   }, []);
 
   // 스크롤 이벤트 throttling (requestAnimationFrame 사용)
+  const rafIdRef = useRef<number | null>(null);
+
   useEffect(() => {
-    let ticking = false;
     const handleScroll = () => {
-      if (!ticking) {
-        requestAnimationFrame(() => {
-          setShowBackToTop(window.scrollY > 300);
-          ticking = false;
-        });
-        ticking = true;
-      }
+      if (rafIdRef.current !== null) return;
+      rafIdRef.current = requestAnimationFrame(() => {
+        setShowBackToTop(window.scrollY > 300);
+        rafIdRef.current = null;
+      });
     };
     window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      if (rafIdRef.current !== null) {
+        cancelAnimationFrame(rafIdRef.current);
+      }
+    };
   }, []);
 
   const scrollToTop = () => {
