@@ -654,6 +654,240 @@ export function generateJsonLdScript(schema: JsonLdSchema): string {
 }
 
 // ============================================================================
+// Navigation & List Schemas
+// ============================================================================
+
+/**
+ * SiteNavigationElement 스키마 생성을 위한 네비게이션 항목
+ *
+ * @see https://schema.org/SiteNavigationElement
+ */
+export interface NavigationItem {
+  /** 네비게이션 링크 이름 */
+  name: string;
+  /** 네비게이션 링크 URL */
+  url: string;
+}
+
+/**
+ * SiteNavigationElement 스키마 설정
+ *
+ * 검색엔진이 사이트의 주요 네비게이션 구조를 파악하는 데 사용됩니다.
+ * Google 사이트링크(Sitelinks) 노출에 도움을 줍니다.
+ *
+ * @see https://schema.org/SiteNavigationElement
+ *
+ * @example
+ * ```typescript
+ * const config: SiteNavigationSchema = {
+ *   name: 'Main Navigation',
+ *   url: 'https://context.soundbluemusic.com',
+ *   navigationItems: [
+ *     { name: 'Home', url: 'https://context.soundbluemusic.com/' },
+ *     { name: 'Browse', url: 'https://context.soundbluemusic.com/browse' },
+ *     { name: 'Categories', url: 'https://context.soundbluemusic.com/categories' },
+ *   ],
+ * };
+ * ```
+ */
+export interface SiteNavigationSchema {
+  /** 네비게이션 이름 (예: 'Main Navigation') */
+  name: string;
+  /** 사이트 기본 URL */
+  url: string;
+  /** 네비게이션 항목 배열 */
+  navigationItems: NavigationItem[];
+}
+
+/** SiteNavigationElement JSON-LD schema */
+export interface SiteNavigationJsonLd extends JsonLdSchema {
+  '@type': 'ItemList';
+  name: string;
+  url: string;
+  itemListElement: Array<{
+    '@type': 'SiteNavigationElement';
+    position: number;
+    name: string;
+    url: string;
+  }>;
+}
+
+/**
+ * SiteNavigationElement JSON-LD 스키마를 생성합니다.
+ *
+ * 사이트의 주요 네비게이션 링크를 검색엔진에 명시적으로 알려줍니다.
+ * Google 검색 결과에서 사이트링크(Sitelinks) 노출에 도움을 줍니다.
+ *
+ * @param config - SiteNavigation 스키마 설정 객체
+ * @returns Schema.org ItemList + SiteNavigationElement 형식의 JSON-LD 객체
+ *
+ * @example
+ * ```typescript
+ * const schema = generateSiteNavigationSchema({
+ *   name: 'Main Navigation',
+ *   url: 'https://context.soundbluemusic.com',
+ *   navigationItems: [
+ *     { name: 'Home', url: 'https://context.soundbluemusic.com/' },
+ *     { name: 'Browse', url: 'https://context.soundbluemusic.com/browse' },
+ *   ],
+ * });
+ * ```
+ *
+ * @see https://schema.org/SiteNavigationElement
+ */
+export function generateSiteNavigationSchema(
+  config: SiteNavigationSchema,
+): SiteNavigationJsonLd {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: config.name,
+    url: config.url,
+    itemListElement: config.navigationItems.map((item, index) => ({
+      '@type': 'SiteNavigationElement' as const,
+      position: index + 1,
+      name: item.name,
+      url: item.url,
+    })),
+  };
+}
+
+/**
+ * ItemList 스키마 생성을 위한 단일 항목
+ *
+ * @see https://schema.org/ListItem
+ */
+export interface ItemListItem {
+  /** 항목 이름 */
+  name: string;
+  /** 항목 URL */
+  url: string;
+  /** 항목 설명 (선택사항) */
+  description?: string;
+}
+
+/**
+ * ItemList 스키마 설정
+ *
+ * 목록 페이지의 항목들을 구조화된 데이터로 제공합니다.
+ * Google 검색 결과에서 캐러셀/리스트 리치 스니펫으로 노출될 수 있습니다.
+ *
+ * @see https://schema.org/ItemList
+ * @see https://developers.google.com/search/docs/appearance/structured-data/carousel
+ *
+ * @example
+ * ```typescript
+ * const config: ItemListSchema = {
+ *   name: 'Korean Dictionary Categories',
+ *   description: '52 categories of Korean vocabulary',
+ *   url: 'https://context.soundbluemusic.com/',
+ *   items: [
+ *     { name: 'Greetings', url: 'https://context.soundbluemusic.com/category/greetings' },
+ *     { name: 'Food', url: 'https://context.soundbluemusic.com/category/food' },
+ *   ],
+ * };
+ * ```
+ */
+export interface ItemListSchema {
+  /** 목록 이름 (선택사항) */
+  name?: string;
+  /** 목록 설명 (선택사항) */
+  description?: string;
+  /** 목록 페이지 URL */
+  url: string;
+  /** 목록 항목 배열 */
+  items: ItemListItem[];
+  /** 전체 항목 수 (선택사항 - items 배열이 일부만 포함하는 경우) */
+  numberOfItems?: number;
+}
+
+/** ItemList JSON-LD schema */
+export interface ItemListJsonLd extends JsonLdSchema {
+  '@type': 'ItemList';
+  name?: string;
+  description?: string;
+  url: string;
+  numberOfItems: number;
+  itemListElement: Array<{
+    '@type': 'ListItem';
+    position: number;
+    name: string;
+    url: string;
+    description?: string;
+  }>;
+}
+
+/**
+ * ItemList JSON-LD 스키마를 생성합니다.
+ *
+ * 목록 페이지의 항목들을 구조화된 데이터로 제공합니다.
+ * Google 검색 결과에서 캐러셀/리스트 리치 스니펫으로 표시될 수 있습니다.
+ *
+ * @param config - ItemList 스키마 설정 객체
+ * @returns Schema.org ItemList 형식의 JSON-LD 객체
+ *
+ * @example 카테고리 목록
+ * ```typescript
+ * const schema = generateItemListSchema({
+ *   name: 'Categories',
+ *   url: 'https://context.soundbluemusic.com/',
+ *   items: categories.map(c => ({
+ *     name: c.name.en,
+ *     url: `https://context.soundbluemusic.com/category/${c.id}`,
+ *   })),
+ * });
+ * ```
+ *
+ * @example 라이브러리 목록
+ * ```typescript
+ * const schema = generateItemListSchema({
+ *   name: 'MIT Licensed Libraries',
+ *   url: 'https://permissive.soundbluemusic.com/libraries',
+ *   items: libraries.map(lib => ({
+ *     name: lib.name,
+ *     url: `https://permissive.soundbluemusic.com/library/${lib.slug}`,
+ *     description: lib.description,
+ *   })),
+ * });
+ * ```
+ *
+ * @see https://schema.org/ItemList
+ * @see https://developers.google.com/search/docs/appearance/structured-data/carousel
+ */
+export function generateItemListSchema(config: ItemListSchema): ItemListJsonLd {
+  const schema: ItemListJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    url: config.url,
+    numberOfItems: config.numberOfItems ?? config.items.length,
+    itemListElement: config.items.map((item, index) => {
+      const listItem: ItemListJsonLd['itemListElement'][number] = {
+        '@type': 'ListItem',
+        position: index + 1,
+        name: item.name,
+        url: item.url,
+      };
+
+      if (item.description) {
+        listItem.description = item.description;
+      }
+
+      return listItem;
+    }),
+  };
+
+  if (config.name) {
+    schema.name = config.name;
+  }
+
+  if (config.description) {
+    schema.description = config.description;
+  }
+
+  return schema;
+}
+
+// ============================================================================
 // Extended Schema Types (Phase 2 & 3)
 // ============================================================================
 

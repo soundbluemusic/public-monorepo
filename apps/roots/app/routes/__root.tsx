@@ -65,22 +65,59 @@ export const Route = createRootRoute({
     scripts: [
       {
         type: 'application/ld+json',
-        children: JSON.stringify({
-          '@context': 'https://schema.org',
-          '@type': 'WebSite',
-          name: 'Roots - Math Documentation',
-          url: 'https://roots.soundbluemusic.com',
-          description: 'Learn math concepts easily - From basic arithmetic to advanced calculus',
-          inLanguage: ['ko', 'en'],
-          potentialAction: {
-            '@type': 'SearchAction',
-            target: {
-              '@type': 'EntryPoint',
-              urlTemplate: 'https://roots.soundbluemusic.com/search?q={search_term_string}',
+        children: JSON.stringify([
+          {
+            '@context': 'https://schema.org',
+            '@type': 'WebSite',
+            name: 'Roots - Math Documentation',
+            url: 'https://roots.soundbluemusic.com',
+            description:
+              'Learn math concepts easily - From basic arithmetic to advanced calculus',
+            inLanguage: ['ko', 'en'],
+            potentialAction: {
+              '@type': 'SearchAction',
+              target: {
+                '@type': 'EntryPoint',
+                urlTemplate:
+                  'https://roots.soundbluemusic.com/search?q={search_term_string}',
+              },
+              'query-input': 'required name=search_term_string',
             },
-            'query-input': 'required name=search_term_string',
           },
-        }),
+          {
+            '@context': 'https://schema.org',
+            '@type': 'Organization',
+            name: 'SoundBlue Music',
+            url: 'https://soundbluemusic.com',
+            logo: 'https://roots.soundbluemusic.com/logo.png',
+            sameAs: [
+              'https://www.youtube.com/@SoundBlueMusic',
+              'https://x.com/SoundBlueMusic',
+              'https://www.instagram.com/soundbluemusic/',
+              'https://www.threads.com/@soundbluemusic',
+            ],
+          },
+          {
+            '@context': 'https://schema.org',
+            '@type': 'ItemList',
+            name: 'Main Navigation',
+            url: 'https://roots.soundbluemusic.com',
+            itemListElement: [
+              {
+                '@type': 'SiteNavigationElement',
+                position: 1,
+                name: 'Home',
+                url: 'https://roots.soundbluemusic.com/',
+              },
+              {
+                '@type': 'SiteNavigationElement',
+                position: 2,
+                name: 'Browse',
+                url: 'https://roots.soundbluemusic.com/browse',
+              },
+            ],
+          },
+        ]),
       },
     ],
   }),

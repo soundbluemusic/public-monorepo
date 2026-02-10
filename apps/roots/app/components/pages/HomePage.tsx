@@ -4,6 +4,7 @@
 
 import { LIMITS } from '@soundblue/core/validation';
 import { type SearchResult, useSearchWorker } from '@soundblue/search/react';
+import { generateItemListSchema, serializeSchema } from '@soundblue/seo/structured-data';
 import { useAutoAnimate } from '@soundblue/ui/hooks';
 import { cn } from '@soundblue/ui/utils';
 import { Link, useNavigate } from '@tanstack/react-router';
@@ -14,9 +15,27 @@ import { useI18n } from '../../i18n';
 import { preloadSearchIndex } from '../../lib/search';
 import { Layout } from '../layout/Layout';
 
+const ROOTS_BASE_URL = 'https://roots.soundbluemusic.com';
+
 export function HomePage() {
   const { locale, localePath, t } = useI18n();
   const navigate = useNavigate();
+  const localePrefix = locale === 'ko' ? '/ko' : '';
+
+  const featuredListSchema = generateItemListSchema({
+    name: locale === 'ko' ? '추천 수학 개념' : 'Featured Math Concepts',
+    description:
+      locale === 'ko'
+        ? '누구나 쉽게 배우는 수학 개념'
+        : 'Learn math concepts easily',
+    url: `${ROOTS_BASE_URL}${localePrefix}`,
+    items: FEATURED_CONCEPTS.map((concept) => ({
+      name: locale === 'ko' ? concept.nameKo : concept.nameEn,
+      url: `${ROOTS_BASE_URL}${localePrefix}/concept/${concept.id}`,
+      description: locale === 'ko' ? concept.descKo : concept.descEn,
+    })),
+    numberOfItems: 438,
+  });
 
   // Search state
   const [showResults, setShowResults] = useState(false);
@@ -101,6 +120,11 @@ export function HomePage() {
 
   return (
     <Layout>
+      <script
+        type="application/ld+json"
+        // biome-ignore lint/security/noDangerouslySetInnerHtml: Required for Schema.org JSON-LD
+        dangerouslySetInnerHTML={{ __html: serializeSchema(featuredListSchema) }}
+      />
       {/* Hero Section */}
       <div className="text-center py-12 mb-8">
         <h1 className="text-4xl font-bold text-(--text-primary) mb-3">{t('logoText')}</h1>

@@ -1,4 +1,5 @@
 import { headFactoryEn } from '@soundblue/seo/meta';
+import { generateItemListSchema, serializeSchema } from '@soundblue/seo/structured-data';
 import { createFileRoute } from '@tanstack/react-router';
 import DocsLayout from '../components/layout/DocsLayout';
 import {
@@ -8,7 +9,7 @@ import {
   SearchAndSort,
   useLibraryFilters,
 } from '../components/libraries';
-import { categories, libraries } from '../data/libraries';
+import { categories, getLibrarySlug, libraries } from '../data/libraries';
 
 const localizedMeta = {
   ko: { title: 'Libraries - Permissive', description: 'MIT 라이센스 오픈소스 라이브러리' },
@@ -26,9 +27,22 @@ export const Route = createFileRoute('/libraries')({
   component: LibrariesPage,
 });
 
+const PERMISSIVE_BASE_URL = 'https://permissive.soundbluemusic.com';
+
 function LibrariesPage() {
   const { libraries: libs } = Route.useLoaderData();
   const locale = 'en';
+
+  const libraryListSchema = generateItemListSchema({
+    name: 'MIT Licensed Open Source Libraries',
+    description: 'Free open-source libraries for web development',
+    url: `${PERMISSIVE_BASE_URL}/libraries`,
+    items: libs.map((lib) => ({
+      name: lib.name,
+      url: `${PERMISSIVE_BASE_URL}/library/${getLibrarySlug(lib.name)}`,
+      description: lib.description,
+    })),
+  });
 
   const {
     search,
@@ -49,6 +63,11 @@ function LibrariesPage() {
 
   return (
     <DocsLayout>
+      <script
+        type="application/ld+json"
+        // biome-ignore lint/security/noDangerouslySetInnerHtml: Required for Schema.org JSON-LD
+        dangerouslySetInnerHTML={{ __html: serializeSchema(libraryListSchema) }}
+      />
       {/* Header */}
       <div className="mb-6">
         <h1 className="text-2xl font-bold text-(--text-primary) mb-2">Libraries</h1>

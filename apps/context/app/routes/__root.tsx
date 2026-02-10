@@ -41,25 +41,69 @@ html, body {
 `;
 
 /**
- * JSON-LD WebSite Schema
+ * JSON-LD Structured Data Schemas
  */
-const WEBSITE_SCHEMA = JSON.stringify({
-  '@context': 'https://schema.org',
-  '@type': 'WebSite',
-  name: 'Context - Korean Meaning Dictionary',
-  url: 'https://context.soundbluemusic.com',
-  description:
-    'Korean meaning dictionary for learners - Understand Korean words and contexts easily',
-  inLanguage: ['ko', 'en'],
-  potentialAction: {
-    '@type': 'SearchAction',
-    target: {
-      '@type': 'EntryPoint',
-      urlTemplate: 'https://context.soundbluemusic.com/browse?q={search_term_string}',
+const CONTEXT_BASE_URL = 'https://context.soundbluemusic.com';
+
+const STRUCTURED_DATA = JSON.stringify([
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'Context - Korean Meaning Dictionary',
+    url: CONTEXT_BASE_URL,
+    description:
+      'Korean meaning dictionary for learners - Understand Korean words and contexts easily',
+    inLanguage: ['ko', 'en'],
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: {
+        '@type': 'EntryPoint',
+        urlTemplate: `${CONTEXT_BASE_URL}/browse?q={search_term_string}`,
+      },
+      'query-input': 'required name=search_term_string',
     },
-    'query-input': 'required name=search_term_string',
   },
-});
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'SoundBlue Music',
+    url: 'https://soundbluemusic.com',
+    logo: `${CONTEXT_BASE_URL}/logo.png`,
+    sameAs: [
+      'https://www.youtube.com/@SoundBlueMusic',
+      'https://x.com/SoundBlueMusic',
+      'https://www.instagram.com/soundbluemusic/',
+      'https://www.threads.com/@soundbluemusic',
+    ],
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'Main Navigation',
+    url: CONTEXT_BASE_URL,
+    itemListElement: [
+      { '@type': 'SiteNavigationElement', position: 1, name: 'Home', url: `${CONTEXT_BASE_URL}/` },
+      {
+        '@type': 'SiteNavigationElement',
+        position: 2,
+        name: 'Browse',
+        url: `${CONTEXT_BASE_URL}/browse`,
+      },
+      {
+        '@type': 'SiteNavigationElement',
+        position: 3,
+        name: 'Categories',
+        url: `${CONTEXT_BASE_URL}/categories`,
+      },
+      {
+        '@type': 'SiteNavigationElement',
+        position: 4,
+        name: 'Conversations',
+        url: `${CONTEXT_BASE_URL}/conversations`,
+      },
+    ],
+  },
+]);
 
 export const Route = createRootRoute({
   head: () => ({
@@ -112,7 +156,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
         <script
           type="application/ld+json"
           // biome-ignore lint/security/noDangerouslySetInnerHtml: Required for Schema.org JSON-LD
-          dangerouslySetInnerHTML={{ __html: WEBSITE_SCHEMA }}
+          dangerouslySetInnerHTML={{ __html: STRUCTURED_DATA }}
         />
       </head>
       <body>
