@@ -7,7 +7,19 @@
  * - 엣지 타입: 기반, 선행, 사용, 관련
  */
 
-import * as d3 from 'd3';
+// D3 서브모듈만 import (번들 크기 최적화: ~70KB → ~15KB gzip)
+import { type D3DragEvent, drag as d3Drag } from 'd3-drag';
+import {
+  forceCenter,
+  forceCollide,
+  forceLink,
+  forceManyBody,
+  forceSimulation,
+  type Simulation,
+  type SimulationLinkDatum,
+} from 'd3-force';
+import { type Selection, select } from 'd3-selection';
+import { type D3ZoomEvent, zoom as d3Zoom, type ZoomTransform, zoomIdentity } from 'd3-zoom';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import type {
   ConceptGraph as ConceptGraphData,
@@ -28,7 +40,7 @@ interface SimulationNode extends GraphNode {
   vy?: number;
 }
 
-interface SimulationLink extends d3.SimulationLinkDatum<SimulationNode> {
+interface SimulationLink extends SimulationLinkDatum<SimulationNode> {
   source: SimulationNode;
   target: SimulationNode;
   type: EdgeType;
@@ -93,12 +105,12 @@ export function ConceptGraph({
   const tooltipRef = useRef<HTMLDivElement>(null);
 
   const [hoveredNode, setHoveredNode] = useState<SimulationNode | null>(null);
-  const [transform, setTransform] = useState<d3.ZoomTransform>(d3.zoomIdentity);
+  const [transform, setTransform] = useState<ZoomTransform>(zoomIdentity);
 
   // Refs for simulation data (to avoid re-renders)
   const nodesRef = useRef<SimulationNode[]>([]);
   const linksRef = useRef<SimulationLink[]>([]);
-  const simulationRef = useRef<d3.Simulation<SimulationNode, SimulationLink> | null>(null);
+  const simulationRef = useRef<Simulation<SimulationNode, SimulationLink> | null>(null);
 
   // Initialize simulation data
   useEffect(() => {
@@ -227,35 +239,32 @@ export function ConceptGraph({
     const links = linksRef.current;
 
     // Create simulation
-    const simulation = d3
-      .forceSimulation<SimulationNode>(nodes)
+    const simulation = forceSimulation<SimulationNode>(nodes)
       .force(
         'link',
-        d3
-          .forceLink<SimulationNode, SimulationLink>(links)
+        forceLink<SimulationNode, SimulationLink>(links)
           .id((d) => d.id)
           .distance(100),
       )
-      .force('charge', d3.forceManyBody().strength(-200))
-      .force('center', d3.forceCenter(width / 2, height / 2))
+      .force('charge', forceManyBody().strength(-200))
+      .force('center', forceCenter(width / 2, height / 2))
       .force(
         'collision',
-        d3.forceCollide<SimulationNode>().radius((d) => getNodeRadius(d.difficulty) + 5),
+        forceCollide<SimulationNode>().radius((d) => getNodeRadius(d.difficulty) + 5),
       )
       .on('tick', draw);
 
     simulationRef.current = simulation;
 
     // Zoom behavior
-    const zoom = d3
-      .zoom<HTMLCanvasElement, unknown>()
+    const zoomBehavior = d3Zoom<HTMLCanvasElement, unknown>()
       .scaleExtent([0.1, 10])
-      .on('zoom', (event: d3.D3ZoomEvent<HTMLCanvasElement, unknown>) => {
+      .on('zoom', (event: D3ZoomEvent<HTMLCanvasElement, unknown>) => {
         setTransform(event.transform);
       });
 
     // Drag behavior
-    const dragSubject = (event: d3.D3DragEvent<HTMLCanvasElement, unknown, SimulationNode>) => {
+    const dragSubject = (event: D3DragEvent<HTMLCanvasElement, unknown, SimulationNode>) => {
       const [x, y] = transform.invert([event.x, event.y]);
       for (const node of nodes) {
         const dx = x - node.x;
@@ -268,8 +277,7 @@ export function ConceptGraph({
       return undefined;
     };
 
-    const drag = d3
-      .drag<HTMLCanvasElement, unknown, SimulationNode | undefined>()
+    const dragBehavior = d3Drag<HTMLCanvasElement, unknown, SimulationNode | undefined>()
       .subject(dragSubject)
       .on('start', (event) => {
         if (!event.active) simulation.alphaTarget(0.05).restart();
@@ -294,16 +302,16 @@ export function ConceptGraph({
       });
 
     // Apply behaviors
-    const selection = d3.select(canvas);
+    const selection = select(canvas);
     // D3 타입 호환성을 위해 unknown 사용
     selection.call(
-      zoom as unknown as (
-        selection: d3.Selection<HTMLCanvasElement, unknown, null, undefined>,
+      zoomBehavior as unknown as (
+        selection: Selection<HTMLCanvasElement, unknown, null, undefined>,
       ) => void,
     );
     selection.call(
-      drag as unknown as (
-        selection: d3.Selection<HTMLCanvasElement, unknown, null, undefined>,
+      dragBehavior as unknown as (
+        selection: Selection<HTMLCanvasElement, unknown, null, undefined>,
       ) => void,
     );
 

@@ -1423,7 +1423,7 @@ const categoryTemplates: CategoryTemplates = {
   // ============================================
   // 접속사 (conjunctions)
   // ============================================
-  conjunctions: (korean, english, explanation, _partOfSpeech) => ({
+  conjunctions: (korean, _english, explanation, _partOfSpeech) => ({
     sentences: {
       ko: {
         beginner: `"${korean}" 을 사용해서 문장을 만들어요.`,
@@ -1458,7 +1458,7 @@ const categoryTemplates: CategoryTemplates = {
   // ============================================
   // 자음 (consonants, double-consonants)
   // ============================================
-  consonants: (korean, english, explanation, _partOfSpeech) => ({
+  consonants: (korean, _english, _explanation, _partOfSpeech) => ({
     sentences: {
       ko: {
         beginner: `"${korean}" 소리를 내 봐요.`,
@@ -1777,7 +1777,7 @@ const categoryTemplates: CategoryTemplates = {
   // ============================================
   // 존댓말 (honorifics)
   // ============================================
-  honorifics: (korean, english, explanation, _partOfSpeech) => ({
+  honorifics: (korean, _english, _explanation, _partOfSpeech) => ({
     sentences: {
       ko: {
         beginner: `선생님께 "${korean}"${josaSuffix(korean, '이라고/라고')} 해요.`,
@@ -2120,7 +2120,7 @@ const categoryTemplates: CategoryTemplates = {
   // ============================================
   // 의성어 (onomatopoeia)
   // ============================================
-  onomatopoeia: (korean, english, _explanation, _partOfSpeech) => ({
+  onomatopoeia: (korean, _english, _explanation, _partOfSpeech) => ({
     sentences: {
       ko: {
         beginner: `"${korean}" 소리가 나요.`,
@@ -2419,7 +2419,7 @@ const categoryTemplates: CategoryTemplates = {
   // ============================================
   // 동사 어간 (verb-stems)
   // ============================================
-  'verb-stems': (korean, english, explanation, _partOfSpeech) => ({
+  'verb-stems': (korean, _english, explanation, _partOfSpeech) => ({
     sentences: {
       ko: {
         beginner: `"${korean}"으로 문장을 만들어요.`,
@@ -2493,7 +2493,7 @@ const categoryTemplates: CategoryTemplates = {
   // ============================================
   // 모음 (vowels-basic, vowels-compound)
   // ============================================
-  'vowels-basic': (korean, english, explanation, _partOfSpeech) => ({
+  'vowels-basic': (korean, _english, _explanation, _partOfSpeech) => ({
     sentences: {
       ko: {
         beginner: `"${korean}" 소리를 내 봐요.`,

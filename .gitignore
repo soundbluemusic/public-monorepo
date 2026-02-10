@@ -46,6 +46,7 @@ Thumbs.db
 # Logs
 *.log
 logs/
+failed_logs/
 npm-debug.log*
 pnpm-debug.log*
 

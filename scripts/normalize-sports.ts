@@ -256,7 +256,7 @@ for (const entry of data) {
   }
 }
 
-writeFileSync(sportsPath, JSON.stringify(data, null, 2) + '\n', 'utf-8');
+writeFileSync(sportsPath, `${JSON.stringify(data, null, 2)}\n`, 'utf-8');
 
 console.log(`\n완료: ${changed}개 엔트리 정규화, 총 ${data.length}개 엔트리`);
 console.log(`ID 변경: ${idMap.size}개`);

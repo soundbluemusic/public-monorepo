@@ -30,6 +30,74 @@ export const buildOptimizations = {
 } as const;
 
 /**
+ * 번들 청킹 전략 함수
+ *
+ * vendor 라이브러리를 개별 청크로 분리하여:
+ * - 캐시 효율 극대화 (변경되지 않는 vendor는 장기 캐시)
+ * - 메인 번들 크기 감소
+ * - 병렬 로딩 최적화
+ *
+ * @example
+ * ```ts
+ * // vite.config.ts
+ * import { createManualChunks } from '@soundblue/config/vite';
+ *
+ * export default defineConfig({
+ *   build: {
+ *     rollupOptions: {
+ *       output: { manualChunks: createManualChunks },
+ *     },
+ *   },
+ * });
+ * ```
+ */
+export function createManualChunks(id: string): string | undefined {
+  if (!id.includes('node_modules')) return undefined;
+
+  // React core (필수, 장기 캐시)
+  if (id.includes('react-dom') || id.includes('/react/')) {
+    return 'vendor-react';
+  }
+
+  // TanStack 라이브러리 (Router, Query, Virtual, Table)
+  if (id.includes('@tanstack')) {
+    return 'vendor-tanstack';
+  }
+
+  // 아이콘 라이브러리
+  if (id.includes('lucide-react')) {
+    return 'vendor-icons';
+  }
+
+  // 애니메이션 라이브러리
+  if (id.includes('framer-motion')) {
+    return 'vendor-animation';
+  }
+
+  // 상태 관리
+  if (id.includes('zustand')) {
+    return 'vendor-state';
+  }
+
+  // IndexedDB 라이브러리
+  if (id.includes('dexie')) {
+    return 'vendor-storage';
+  }
+
+  // 검색 라이브러리
+  if (id.includes('minisearch')) {
+    return 'vendor-search';
+  }
+
+  // Radix UI 컴포넌트
+  if (id.includes('@radix-ui')) {
+    return 'vendor-radix';
+  }
+
+  return undefined;
+}
+
+/**
  * Production build settings (terser minification)
  * Removes console.log and debugger statements in production
  */

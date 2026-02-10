@@ -80,8 +80,7 @@ function seedCategories(): void {
 
   const batches = chunk(categories, BATCH_SIZE);
 
-  for (let i = 0; i < batches.length; i++) {
-    const batch = batches[i]!;
+  for (const [i, batch] of batches.entries()) {
     const statements = batch.map((cat) => {
       const values = [
         toSQLValue(cat.id),
@@ -128,8 +127,7 @@ function seedEntries(): void {
 
     const batches = chunk(entries, BATCH_SIZE);
 
-    for (let i = 0; i < batches.length; i++) {
-      const batch = batches[i]!;
+    for (const [i, batch] of batches.entries()) {
       const statements = batch.map((entry) => {
         const values = [
           toSQLValue(entry.id),
@@ -175,8 +173,7 @@ function seedConversations(): void {
 
   const batches = chunk(conversations, BATCH_SIZE);
 
-  for (let i = 0; i < batches.length; i++) {
-    const batch = batches[i]!;
+  for (const [i, batch] of batches.entries()) {
     const statements = batch.map((conv) => {
       const values = [
         toSQLValue(conv.id),

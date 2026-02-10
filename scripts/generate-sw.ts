@@ -77,11 +77,48 @@ async function generateServiceWorker(): Promise<void> {
           },
         },
         {
-          // Static resources (JS, CSS)
-          urlPattern: /\.(?:js|css)$/i,
+          // Vendor chunks (react, tanstack, icons, animation, state, storage, search, radix)
+          // 장기 캐시 - 거의 변경되지 않음
+          urlPattern: /\/assets\/vendor-.*\.js$/i,
+          handler: 'CacheFirst',
+          options: {
+            cacheName: 'vendor-chunks',
+            expiration: {
+              maxEntries: 20,
+              maxAgeSeconds: 60 * 60 * 24 * 365, // 1 year
+            },
+          },
+        },
+        {
+          // Main chunks (앱 코드) - 자주 변경됨
+          urlPattern: /\/assets\/main-.*\.js$/i,
           handler: 'StaleWhileRevalidate',
           options: {
-            cacheName: 'static-resources',
+            cacheName: 'main-chunks',
+            expiration: {
+              maxEntries: 10,
+              maxAgeSeconds: 60 * 60 * 24 * 7, // 7 days
+            },
+          },
+        },
+        {
+          // CSS 파일
+          urlPattern: /\.css$/i,
+          handler: 'StaleWhileRevalidate',
+          options: {
+            cacheName: 'stylesheets',
+            expiration: {
+              maxEntries: 20,
+              maxAgeSeconds: 60 * 60 * 24 * 7, // 7 days
+            },
+          },
+        },
+        {
+          // 기타 JS 파일 (라우트 청크 등)
+          urlPattern: /\.js$/i,
+          handler: 'StaleWhileRevalidate',
+          options: {
+            cacheName: 'other-scripts',
             expiration: {
               maxEntries: 50,
               maxAgeSeconds: 60 * 60 * 24 * 7, // 7 days

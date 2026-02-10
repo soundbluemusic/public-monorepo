@@ -1,5 +1,6 @@
 import { cloudflare } from '@cloudflare/vite-plugin';
 import { paraglideVitePlugin as paraglide } from '@inlang/paraglide-js';
+import { createManualChunks } from '@soundblue/config/vite';
 import tailwindcss from '@tailwindcss/vite';
 import { tanstackStart } from '@tanstack/react-start/plugin/vite';
 import { visualizer } from 'rollup-plugin-visualizer';
@@ -19,20 +20,7 @@ export default defineConfig({
     },
     rollupOptions: {
       output: {
-        manualChunks: (id: string) => {
-          if (id.includes('node_modules')) {
-            if (id.includes('react-dom') || id.includes('/react/')) {
-              return 'vendor-react';
-            }
-            if (id.includes('@tanstack')) {
-              return 'vendor-tanstack';
-            }
-            if (id.includes('lucide-react')) {
-              return 'vendor-icons';
-            }
-          }
-          return undefined;
-        },
+        manualChunks: createManualChunks,
       },
     },
   },
