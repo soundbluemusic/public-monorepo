@@ -40,24 +40,67 @@ html, body {
 `;
 
 /**
- * JSON-LD WebSite Schema
+ * JSON-LD Structured Data Schemas
  */
-const WEBSITE_SCHEMA = JSON.stringify({
-  '@context': 'https://schema.org',
-  '@type': 'WebSite',
-  name: 'Permissive - Free Web Dev Resources',
-  url: 'https://permissive.soundbluemusic.com',
-  description: 'Discover free and open-source web development tools, libraries, and resources',
-  inLanguage: ['ko', 'en'],
-  potentialAction: {
-    '@type': 'SearchAction',
-    target: {
-      '@type': 'EntryPoint',
-      urlTemplate: 'https://permissive.soundbluemusic.com/libraries?q={search_term_string}',
+const PERMISSIVE_BASE_URL = 'https://permissive.soundbluemusic.com';
+
+const STRUCTURED_DATA = JSON.stringify([
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'Permissive - Free Web Dev Resources',
+    url: PERMISSIVE_BASE_URL,
+    description: 'Discover free and open-source web development tools, libraries, and resources',
+    inLanguage: ['ko', 'en'],
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: {
+        '@type': 'EntryPoint',
+        urlTemplate: `${PERMISSIVE_BASE_URL}/libraries?q={search_term_string}`,
+      },
+      'query-input': 'required name=search_term_string',
     },
-    'query-input': 'required name=search_term_string',
   },
-});
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'SoundBlue Music',
+    url: 'https://soundbluemusic.com',
+    logo: `${PERMISSIVE_BASE_URL}/logo.png`,
+    sameAs: [
+      'https://www.youtube.com/@SoundBlueMusic',
+      'https://x.com/SoundBlueMusic',
+      'https://www.instagram.com/soundbluemusic/',
+      'https://www.threads.com/@soundbluemusic',
+    ],
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'Main Navigation',
+    url: PERMISSIVE_BASE_URL,
+    itemListElement: [
+      {
+        '@type': 'SiteNavigationElement',
+        position: 1,
+        name: 'Home',
+        url: `${PERMISSIVE_BASE_URL}/`,
+      },
+      {
+        '@type': 'SiteNavigationElement',
+        position: 2,
+        name: 'Libraries',
+        url: `${PERMISSIVE_BASE_URL}/libraries`,
+      },
+      {
+        '@type': 'SiteNavigationElement',
+        position: 3,
+        name: 'Web API',
+        url: `${PERMISSIVE_BASE_URL}/web-api`,
+      },
+    ],
+  },
+]);
 
 export const Route = createRootRoute({
   head: () => ({
@@ -98,7 +141,7 @@ function RootComponent() {
         <script
           type="application/ld+json"
           // biome-ignore lint/security/noDangerouslySetInnerHtml: Required for Schema.org JSON-LD
-          dangerouslySetInnerHTML={{ __html: WEBSITE_SCHEMA }}
+          dangerouslySetInnerHTML={{ __html: STRUCTURED_DATA }}
         />
       </head>
       <body>

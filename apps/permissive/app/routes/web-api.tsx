@@ -1,8 +1,9 @@
 import { headFactoryEn } from '@soundblue/seo/meta';
+import { generateItemListSchema, serializeSchema } from '@soundblue/seo/structured-data';
 import { createFileRoute } from '@tanstack/react-router';
 import DocsLayout from '../components/layout/DocsLayout';
 import { ApiGrid, QuickFilters, SearchAndSort, useWebApiFilters } from '../components/web-api';
-import { webApiCategories, webApis } from '../data/web-apis';
+import { getWebApiSlug, webApiCategories, webApis } from '../data/web-apis';
 
 const localizedMeta = {
   ko: { title: 'Web API - Permissive', description: '브라우저에 내장된 웹 표준 API' },
@@ -20,9 +21,22 @@ export const Route = createFileRoute('/web-api')({
   component: WebApiPage,
 });
 
+const PERMISSIVE_BASE_URL = 'https://permissive.soundbluemusic.com';
+
 function WebApiPage() {
   const { webApis: apis, categories: cats } = Route.useLoaderData();
   const locale = 'en';
+
+  const webApiListSchema = generateItemListSchema({
+    name: 'Browser Web Standard APIs',
+    description: 'Browser built-in APIs - Free to use, no installation required',
+    url: `${PERMISSIVE_BASE_URL}/web-api`,
+    items: apis.map((api) => ({
+      name: api.name,
+      url: `${PERMISSIVE_BASE_URL}/web-api/${getWebApiSlug(api.name)}`,
+      description: api.description,
+    })),
+  });
 
   const {
     search,
@@ -40,6 +54,11 @@ function WebApiPage() {
 
   return (
     <DocsLayout>
+      <script
+        type="application/ld+json"
+        // biome-ignore lint/security/noDangerouslySetInnerHtml: Required for Schema.org JSON-LD
+        dangerouslySetInnerHTML={{ __html: serializeSchema(webApiListSchema) }}
+      />
       {/* Header */}
       <div className="mb-6">
         <h1 className="text-2xl font-bold text-(--text-primary) mb-2">Web API</h1>

@@ -3,6 +3,7 @@
  */
 
 import { headFactory } from '@soundblue/seo/meta';
+import { generateItemListSchema, serializeSchema } from '@soundblue/seo/structured-data';
 import { ProgressBar } from '@soundblue/ui/primitives';
 import { createFileRoute, Link } from '@tanstack/react-router';
 import { FolderOpen, Sparkles, TrendingUp } from 'lucide-react';
@@ -84,9 +85,25 @@ export const Route = createFileRoute('/')({
   component: HomePage,
 });
 
+const CONTEXT_BASE_URL = 'https://context.soundbluemusic.com';
+
 function HomePage() {
   const { categories: cats, categoryCounts, totalEntries } = Route.useLoaderData();
   const { locale, t, localePath } = useI18n();
+
+  const categoryListSchema = generateItemListSchema({
+    name: locale === 'ko' ? '한국어 사전 카테고리' : 'Korean Dictionary Categories',
+    description:
+      locale === 'ko'
+        ? '52개 카테고리의 한국어 단어'
+        : '52 categories of Korean vocabulary',
+    url: CONTEXT_BASE_URL,
+    items: cats.map((cat) => ({
+      name: cat.name[locale],
+      url: `${CONTEXT_BASE_URL}${locale === 'ko' ? '/ko' : ''}/category/${cat.id}`,
+      description: cat.description[locale],
+    })),
+  });
 
   // 오늘의 단어: 클라이언트에서만 로드 (SSR 시에는 null)
   const [dailyWord, setDailyWord] = useState<MeaningEntry | null>(null);
@@ -132,6 +149,11 @@ function HomePage() {
 
   return (
     <Layout>
+      <script
+        type="application/ld+json"
+        // biome-ignore lint/security/noDangerouslySetInnerHtml: Required for Schema.org JSON-LD
+        dangerouslySetInnerHTML={{ __html: serializeSchema(categoryListSchema) }}
+      />
       {/* Hero Section */}
       <div className="mb-8 animate-fade-in">
         <h1 className="text-2xl sm:text-3xl font-bold text-(--text-primary) mb-2">

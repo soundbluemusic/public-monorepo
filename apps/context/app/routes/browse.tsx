@@ -4,6 +4,7 @@
 
 import { dehydrate, HydrationBoundary, QueryClient, queryKeys } from '@soundblue/features/query';
 import { headFactory } from '@soundblue/seo/meta';
+import { generateItemListSchema, serializeSchema } from '@soundblue/seo/structured-data';
 import { createFileRoute } from '@tanstack/react-router';
 import { useCallback } from 'react';
 import {
@@ -96,6 +97,18 @@ function BrowseContent({
   categories: typeof categories;
 }) {
   const { locale, localePath, t } = useI18n();
+  const baseUrl = APP_CONFIG.baseUrl;
+  const localePrefix = locale === 'ko' ? '/ko' : '';
+
+  const categoryListSchema = generateItemListSchema({
+    name: locale === 'ko' ? '카테고리별 한국어 단어' : 'Korean Words by Category',
+    url: `${baseUrl}${localePrefix}/browse`,
+    items: cats.map((cat) => ({
+      name: cat.name[locale],
+      url: `${baseUrl}${localePrefix}/category/${cat.id}`,
+    })),
+    numberOfItems: meta.totalEntries,
+  });
 
   const { studiedIds, favoriteIds, overallProgress, todayStudied, bookmarkCount, isLoading } =
     useStudyData({ totalEntries: meta.totalEntries });
@@ -168,6 +181,11 @@ function BrowseContent({
 
   return (
     <Layout>
+      <script
+        type="application/ld+json"
+        // biome-ignore lint/security/noDangerouslySetInnerHtml: Required for Schema.org JSON-LD
+        dangerouslySetInnerHTML={{ __html: serializeSchema(categoryListSchema) }}
+      />
       <div className="mb-6">
         <h1 className="text-2xl sm:text-3xl font-bold text-(--text-primary) mb-2">
           {t('browseAllWords')}

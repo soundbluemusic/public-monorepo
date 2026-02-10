@@ -5,6 +5,7 @@
  * 라우트 파일에서는 이 컴포넌트만 import하여 사용합니다.
  */
 
+import { generateItemListSchema, serializeSchema } from '@soundblue/seo/structured-data';
 import { useAutoAnimate } from '@soundblue/ui/hooks';
 import { Pagination } from '@soundblue/ui/patterns';
 import { Link, useNavigate } from '@tanstack/react-router';
@@ -15,6 +16,8 @@ import { fields } from '../../data/fields';
 import { getSubfieldsByParent } from '../../data/subfields';
 import { useI18n } from '../../i18n';
 import { Layout } from '../layout/Layout';
+
+const ROOTS_BASE_URL = 'https://roots.soundbluemusic.com';
 import { BrowseTabs } from './BrowseTabs';
 import { ConceptFilters } from './ConceptFilters';
 import { LightConceptCard } from './LightConceptCard';
@@ -26,6 +29,22 @@ const ConceptGraph = lazy(() => import('../graph').then((m) => ({ default: m.Con
 export function BrowsePage() {
   const { locale, t, localePath } = useI18n();
   const navigate = useNavigate();
+  const localePrefix = locale === 'ko' ? '/ko' : '';
+
+  const fieldListSchema = generateItemListSchema({
+    name: locale === 'ko' ? '수학 분야' : 'Math Fields',
+    description:
+      locale === 'ko'
+        ? '분야별로 수학 개념 찾아보기'
+        : 'Browse math concepts by field',
+    url: `${ROOTS_BASE_URL}${localePrefix}/browse`,
+    items: fields.map((field) => ({
+      name: field.name[locale] || field.name.en,
+      url: `${ROOTS_BASE_URL}${localePrefix}/field/${field.id}`,
+      description: field.description[locale] || field.description.en,
+    })),
+    numberOfItems: 438,
+  });
 
   const {
     viewMode,
@@ -68,6 +87,11 @@ export function BrowsePage() {
 
   return (
     <Layout>
+      <script
+        type="application/ld+json"
+        // biome-ignore lint/security/noDangerouslySetInnerHtml: Required for Schema.org JSON-LD
+        dangerouslySetInnerHTML={{ __html: serializeSchema(fieldListSchema) }}
+      />
       <h1 className="text-2xl font-bold text-(--text-primary) mb-6">{t('browse')}</h1>
 
       {/* 탭 */}
