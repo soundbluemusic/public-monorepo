@@ -1,7 +1,14 @@
 import { QueryProvider } from '@soundblue/features/query';
+import { ToastContainer } from '@soundblue/features/toast';
 import { OfflineIndicator } from '@soundblue/pwa/react';
 import { MotionProvider } from '@soundblue/ui/animation';
-import { ErrorBoundary, ToastContainer } from '@soundblue/ui/feedback';
+import { ErrorBoundary } from '@soundblue/ui/feedback';
+import {
+  createCriticalCss,
+  createHeadMeta,
+  createStructuredData,
+  detectLanguage,
+} from '@soundblue/ui/shell';
 import {
   DARK_MODE_INIT_SCRIPT,
   DARK_MODE_TOGGLE_SCRIPT,
@@ -9,107 +16,24 @@ import {
   SIDEBAR_COLLAPSE_INIT_SCRIPT,
   SIDEBAR_COLLAPSE_SCRIPT,
 } from '@soundblue/ui/utils';
-import { createRootRoute, HeadContent, Outlet, Scripts } from '@tanstack/react-router';
+import {
+  createRootRoute,
+  HeadContent,
+  Outlet,
+  Scripts,
+  useRouterState,
+} from '@tanstack/react-router';
 import { I18nProvider } from '../i18n';
+import { shellConfig } from '../shell.config';
 import '../styles/global.css';
 
-/**
- * Critical CSS for FOUC prevention
- */
-const CRITICAL_THEME_CSS = `
-:root {
-  --bg-primary: #f7fafa;
-  --bg-secondary: #eff5f4;
-  --bg-tertiary: #e5efec;
-  --bg-elevated: #ffffff;
-  --text-primary: #2a3836;
-  --text-secondary: #4a5e5a;
-}
-.dark {
-  --bg-primary: #0f1716;
-  --bg-secondary: #161f1e;
-  --bg-tertiary: #1e2928;
-  --bg-elevated: #253332;
-  --text-primary: #e5f0ee;
-  --text-secondary: #b0c5c2;
-}
-html, body {
-  background-color: var(--bg-primary);
-  color: var(--text-primary);
-}
-`;
-
-/**
- * JSON-LD Structured Data Schemas
- */
-const PERMISSIVE_BASE_URL = 'https://permissive.soundbluemusic.com';
-
-const STRUCTURED_DATA = JSON.stringify([
-  {
-    '@context': 'https://schema.org',
-    '@type': 'WebSite',
-    name: 'Permissive - Free Web Dev Resources',
-    url: PERMISSIVE_BASE_URL,
-    description: 'Discover free and open-source web development tools, libraries, and resources',
-    inLanguage: ['ko', 'en'],
-    potentialAction: {
-      '@type': 'SearchAction',
-      target: {
-        '@type': 'EntryPoint',
-        urlTemplate: `${PERMISSIVE_BASE_URL}/libraries?q={search_term_string}`,
-      },
-      'query-input': 'required name=search_term_string',
-    },
-  },
-  {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    name: 'SoundBlue Music',
-    url: 'https://soundbluemusic.com',
-    logo: `${PERMISSIVE_BASE_URL}/logo.png`,
-    sameAs: [
-      'https://www.youtube.com/@SoundBlueMusic',
-      'https://x.com/SoundBlueMusic',
-      'https://www.instagram.com/soundbluemusic/',
-      'https://www.threads.com/@soundbluemusic',
-    ],
-  },
-  {
-    '@context': 'https://schema.org',
-    '@type': 'ItemList',
-    name: 'Main Navigation',
-    url: PERMISSIVE_BASE_URL,
-    itemListElement: [
-      {
-        '@type': 'SiteNavigationElement',
-        position: 1,
-        name: 'Home',
-        url: `${PERMISSIVE_BASE_URL}/`,
-      },
-      {
-        '@type': 'SiteNavigationElement',
-        position: 2,
-        name: 'Libraries',
-        url: `${PERMISSIVE_BASE_URL}/libraries`,
-      },
-      {
-        '@type': 'SiteNavigationElement',
-        position: 3,
-        name: 'Web API',
-        url: `${PERMISSIVE_BASE_URL}/web-api`,
-      },
-    ],
-  },
-]);
+// Pre-computed values from config
+const CRITICAL_THEME_CSS = createCriticalCss(shellConfig.themeColors);
+const STRUCTURED_DATA = createStructuredData(shellConfig);
 
 export const Route = createRootRoute({
   head: () => ({
-    meta: [
-      { charSet: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { name: 'color-scheme', content: 'light dark' },
-      { name: 'theme-color', content: '#4a9e95' },
-    ],
+    meta: createHeadMeta(shellConfig),
     links: [
       { rel: 'icon', href: '/favicon.ico' },
       { rel: 'manifest', href: '/manifest.json' },
@@ -119,8 +43,12 @@ export const Route = createRootRoute({
 });
 
 function RootComponent() {
+  const routerState = useRouterState();
+  const pathname = routerState.location.pathname;
+  const lang = detectLanguage(pathname);
+
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang={lang} suppressHydrationWarning>
       <head>
         {/* Critical theme CSS - MUST be first for FOUC prevention */}
         <style

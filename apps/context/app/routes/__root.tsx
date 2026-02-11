@@ -1,7 +1,14 @@
 import { QueryProvider } from '@soundblue/features/query';
+import { ToastContainer } from '@soundblue/features/toast';
 import { OfflineIndicator } from '@soundblue/pwa/react';
 import { MotionProvider } from '@soundblue/ui/animation';
-import { ErrorBoundary, ToastContainer } from '@soundblue/ui/feedback';
+import { ErrorBoundary } from '@soundblue/ui/feedback';
+import {
+  createCriticalCss,
+  createHeadMeta,
+  createStructuredData,
+  detectLanguage,
+} from '@soundblue/ui/shell';
 import {
   DARK_MODE_INIT_SCRIPT,
   DARK_MODE_TOGGLE_SCRIPT,
@@ -12,110 +19,16 @@ import {
 import { createRootRoute, HeadContent, Scripts, useRouterState } from '@tanstack/react-router';
 import type * as React from 'react';
 import { I18nProvider } from '../i18n';
+import { shellConfig } from '../shell.config';
 import '../styles/global.css';
 
-/**
- * Critical CSS for FOUC prevention
- */
-const CRITICAL_THEME_CSS = `
-:root {
-  --bg-primary: #faf9fc;
-  --bg-secondary: #f3f1f8;
-  --bg-tertiary: #ebe8f2;
-  --bg-elevated: #ffffff;
-  --text-primary: #2d2640;
-  --text-secondary: #5c5470;
-}
-.dark {
-  --bg-primary: #14121c;
-  --bg-secondary: #1c1926;
-  --bg-tertiary: #252230;
-  --bg-elevated: #2a2638;
-  --text-primary: #f0eef5;
-  --text-secondary: #b8b3c8;
-}
-html, body {
-  background-color: var(--bg-primary);
-  color: var(--text-primary);
-}
-`;
-
-/**
- * JSON-LD Structured Data Schemas
- */
-const CONTEXT_BASE_URL = 'https://context.soundbluemusic.com';
-
-const STRUCTURED_DATA = JSON.stringify([
-  {
-    '@context': 'https://schema.org',
-    '@type': 'WebSite',
-    name: 'Context - Korean Meaning Dictionary',
-    url: CONTEXT_BASE_URL,
-    description:
-      'Korean meaning dictionary for learners - Understand Korean words and contexts easily',
-    inLanguage: ['ko', 'en'],
-    potentialAction: {
-      '@type': 'SearchAction',
-      target: {
-        '@type': 'EntryPoint',
-        urlTemplate: `${CONTEXT_BASE_URL}/browse?q={search_term_string}`,
-      },
-      'query-input': 'required name=search_term_string',
-    },
-  },
-  {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    name: 'SoundBlue Music',
-    url: 'https://soundbluemusic.com',
-    logo: `${CONTEXT_BASE_URL}/logo.png`,
-    sameAs: [
-      'https://www.youtube.com/@SoundBlueMusic',
-      'https://x.com/SoundBlueMusic',
-      'https://www.instagram.com/soundbluemusic/',
-      'https://www.threads.com/@soundbluemusic',
-    ],
-  },
-  {
-    '@context': 'https://schema.org',
-    '@type': 'ItemList',
-    name: 'Main Navigation',
-    url: CONTEXT_BASE_URL,
-    itemListElement: [
-      { '@type': 'SiteNavigationElement', position: 1, name: 'Home', url: `${CONTEXT_BASE_URL}/` },
-      {
-        '@type': 'SiteNavigationElement',
-        position: 2,
-        name: 'Browse',
-        url: `${CONTEXT_BASE_URL}/browse`,
-      },
-      {
-        '@type': 'SiteNavigationElement',
-        position: 3,
-        name: 'Categories',
-        url: `${CONTEXT_BASE_URL}/categories`,
-      },
-      {
-        '@type': 'SiteNavigationElement',
-        position: 4,
-        name: 'Conversations',
-        url: `${CONTEXT_BASE_URL}/conversations`,
-      },
-    ],
-  },
-]);
+// Pre-computed values from config
+const CRITICAL_THEME_CSS = createCriticalCss(shellConfig.themeColors);
+const STRUCTURED_DATA = createStructuredData(shellConfig);
 
 export const Route = createRootRoute({
   head: () => ({
-    meta: [
-      { charSet: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { name: 'color-scheme', content: 'light dark' },
-      { name: 'theme-color', content: '#7c5cff' },
-      { name: 'naver-site-verification', content: '08c5e0c0cc564309e1781214f8a6e300536c9a69' },
-      { name: 'google-site-verification', content: 'mw0M1q-2K63FX-NZCL5AetN7V6VI6cXY5ItnMXyl85A' },
-      { name: 'msvalidate.01', content: '2555E807B2875180F8DAC1EB5D284D3D' },
-    ],
+    meta: createHeadMeta(shellConfig),
     links: [
       { rel: 'icon', href: '/favicon.ico' },
       { rel: 'manifest', href: '/manifest.json' },
@@ -125,14 +38,12 @@ export const Route = createRootRoute({
 });
 
 /**
- * Root Document Shell (TanStack Start 공식 패턴)
- *
- * shellComponent는 HTML 문서 구조를 정의하고, children으로 라우트 콘텐츠를 받습니다.
+ * Root Document Shell (TanStack Start pattern)
  */
 function RootDocument({ children }: { children: React.ReactNode }) {
   const routerState = useRouterState();
   const pathname = routerState.location.pathname;
-  const lang = pathname.startsWith('/ko') ? 'ko' : 'en';
+  const lang = detectLanguage(pathname);
 
   return (
     <html lang={lang} suppressHydrationWarning>

@@ -1,45 +1,27 @@
 import { cloudflare } from '@cloudflare/vite-plugin';
 import { paraglideVitePlugin as paraglide } from '@inlang/paraglide-js';
-import { createManualChunks } from '@soundblue/config/vite';
+import { appPorts, getTanStackCloudflareConfig } from '@soundblue/config/vite';
 import tailwindcss from '@tailwindcss/vite';
 import { tanstackStart } from '@tanstack/react-start/plugin/vite';
 import { visualizer } from 'rollup-plugin-visualizer';
 import { defineConfig, type PluginOption } from 'vite';
 import { VitePWA } from 'vite-plugin-pwa';
 
+const config = getTanStackCloudflareConfig({ appName: 'roots' });
+
 export default defineConfig({
-  server: { port: 3005 },
-  preview: { port: 3005 },
-  resolve: {
-    alias: { '@': '/app', '~': '/app' },
-  },
-  build: {
-    minify: 'terser',
-    terserOptions: {
-      compress: { drop_console: true, drop_debugger: true },
-    },
-    rollupOptions: {
-      output: {
-        manualChunks: createManualChunks,
-      },
-    },
-  },
-  define: {
-    'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'production'),
-  },
+  server: { port: appPorts.roots },
+  preview: { port: appPorts.roots },
+  ...config,
   plugins: [
     cloudflare({ viteEnvironment: { name: 'ssr' } }),
-    tanstackStart({
-      srcDirectory: 'app',
-    }),
+    tanstackStart({ srcDirectory: 'app' }),
     tailwindcss(),
     paraglide({
       project: './project.inlang',
       outdir: './app/paraglide',
       outputStructure: 'message-modules',
     }),
-    // VitePWA disabled - using workbox-build via postbuild script instead
-    // (VitePWA doesn't work well with SSR frameworks and causes deprecated warnings)
     VitePWA({ disable: true }),
     visualizer({
       filename: './dist/stats.html',

@@ -42,6 +42,8 @@ export {
   FloatingFeedback,
   type FloatingFeedbackProps,
 } from './FeedbackButton';
+// Footer
+export { BaseFooter, type BaseFooterProps, type FooterLink } from './Footer';
 export { type Language, LanguageToggle, type LanguageToggleProps } from './LanguageToggle';
 // Last Updated
 export {

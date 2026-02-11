@@ -1,11 +1,15 @@
 /**
  * @fileoverview Toast Notification Components
- * @environment universal
+ * @environment client-only
  */
 
-import { removeToast, type Toast, useToast } from '@soundblue/features/toast';
 import { memo, useEffect, useState } from 'react';
-import { cn } from '../utils/cn';
+import { removeToast, type Toast, useToast } from './hooks';
+
+/** cn utility (inline to avoid circular dependency) */
+function cn(...classes: (string | boolean | undefined | null)[]): string {
+  return classes.filter(Boolean).join(' ');
+}
 
 /** Toast 아이콘 */
 const ToastIcon = memo(function ToastIcon({ type }: { type: Toast['type'] }) {
@@ -165,5 +169,3 @@ export const ToastContainer = memo(function ToastContainer() {
     </div>
   );
 });
-
-export type { Toast };

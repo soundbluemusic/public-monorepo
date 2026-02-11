@@ -233,12 +233,13 @@ Layer 3 (Apps + UI)     ┌─────────────────�
                                             ▼
 Layer 2 (Domain)        ┌─────────────────────────────────────────────┐
                         │  @soundblue/i18n     @soundblue/search      │
-                        │  @soundblue/seo      @soundblue/pwa         │
+                        │  @soundblue/pwa                             │
                         └─────────────────────────────────────────────┘
                                             │
                                             ▼
-Layer 1 (Data)          ┌─────────────────────────────────────────────┐
+Layer 1 (Data + SEO)    ┌─────────────────────────────────────────────┐
                         │  @soundblue/data     @soundblue/platform    │
+                        │  @soundblue/seo                             │
                         └─────────────────────────────────────────────┘
                                             │
                                             ▼
@@ -541,11 +542,11 @@ apps/permissive ──────┘    @soundblue/pwa
                            ▼
                       @soundblue/i18n
                       @soundblue/search
-                      @soundblue/seo
                            │
                            ▼
                       @soundblue/data
                       @soundblue/platform
+                      @soundblue/seo
                            │
                            ▼
                       @soundblue/core

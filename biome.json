@@ -74,7 +74,6 @@
       "!**/apps/*/app/paraglide.d.ts",
       "!**/apps/**/*/.inlang-plugins",
       "!**/apps/roots/app/routes/+types",
-      "!**/packages/shared/src/styles/tailwind.css",
       "!**/packages/config/src/styles/tailwind.css",
       "!**/.lighthouseci",
       "!**/coverage",

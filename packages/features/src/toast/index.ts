@@ -11,3 +11,5 @@ export {
   toast,
   useToast,
 } from './hooks';
+
+export { ToastContainer } from './Toast';

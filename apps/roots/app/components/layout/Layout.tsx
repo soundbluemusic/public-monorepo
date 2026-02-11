@@ -1,23 +1,13 @@
-import { LIMITS } from '@soundblue/core/validation';
 import { useSettingsStore } from '@soundblue/features/settings';
-import { stripLocaleFromPath } from '@soundblue/i18n';
-import { useSearchWorker } from '@soundblue/search/react';
-import {
-  DarkModeToggle,
-  FamilySites,
-  LanguageToggle,
-  ServicesDropdown,
-} from '@soundblue/ui/components';
-import { SearchDropdown } from '@soundblue/ui/patterns';
 import { cn } from '@soundblue/ui/utils';
-import { Link, useNavigate, useRouterState } from '@tanstack/react-router';
-import { ArrowUp, BookOpen, ChevronRight, Github, Heart, Menu, Star } from 'lucide-react';
-import { type ReactNode, useCallback, useEffect, useState } from 'react';
+import { Link } from '@tanstack/react-router';
+import { ArrowUp, ChevronRight } from 'lucide-react';
+import { type ReactNode, useEffect, useRef, useState } from 'react';
 import { useI18n } from '@/i18n';
+import { BottomNav } from './BottomNav';
+import { Footer } from './Footer';
+import { Header } from './Header';
 import { Sidebar } from './Sidebar';
-
-// Use shared utility for locale stripping
-const stripLocale = stripLocaleFromPath;
 
 interface BreadcrumbItem {
   label: string;
@@ -30,54 +20,33 @@ interface LayoutProps {
 }
 
 export function Layout({ children, breadcrumbs }: LayoutProps) {
-  const { locale, t, localePath } = useI18n();
-  const routerState = useRouterState();
-  const pathname = routerState.location?.pathname ?? '/';
-  const navigate = useNavigate();
-
+  const { t, localePath } = useI18n();
   const [showBackToTop, setShowBackToTop] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const { sidebarCollapsed, toggleSidebarCollapse } = useSettingsStore();
 
-  // Real-time search with Fuse.js
-  const { query, setQuery, results, isLoading } = useSearchWorker({
-    indexUrl: '/search-index.json',
-    locale,
-    debounceMs: 150,
-    maxResults: LIMITS.SEARCH_MAX_RESULTS,
-  });
-
-  const handleSelectResult = useCallback(
-    (result: { item: { id: string } }) => {
-      navigate({ to: localePath(`/concept/${result.item.id}`) });
-    },
-    [navigate, localePath],
-  );
-
   // Back to top visibility with RAF throttling
+  const rafIdRef = useRef<number | null>(null);
+
   useEffect(() => {
-    let rafId: number | null = null;
     const handleScroll = () => {
-      if (rafId !== null) return;
-      rafId = requestAnimationFrame(() => {
+      if (rafIdRef.current !== null) return;
+      rafIdRef.current = requestAnimationFrame(() => {
         setShowBackToTop(window.scrollY > 300);
-        rafId = null;
+        rafIdRef.current = null;
       });
     };
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => {
       window.removeEventListener('scroll', handleScroll);
-      if (rafId !== null) cancelAnimationFrame(rafId);
+      if (rafIdRef.current !== null) {
+        cancelAnimationFrame(rafIdRef.current);
+      }
     };
   }, []);
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
-  const isActive = (basePath: string) => {
-    const currentPath = stripLocale(pathname);
-    return currentPath === basePath || currentPath.startsWith(`${basePath}/`);
   };
 
   return (
@@ -88,101 +57,7 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
       </a>
 
       {/* Header */}
-      <header className="fixed top-0 left-0 right-0 z-30 h-(--header-height) backdrop-blur-sm bg-(--bg-primary)/80 border-b border-(--border-primary)">
-        <div
-          className={cn(
-            'h-full px-4 flex items-center gap-4 transition-[padding] duration-200',
-            // Desktop: offset for fixed sidebar
-            sidebarCollapsed
-              ? 'lg:pl-[calc(var(--sidebar-collapsed-width)+1rem)]'
-              : 'lg:pl-[calc(var(--sidebar-width)+1rem)]',
-          )}
-        >
-          {/* Mobile menu button */}
-          <button
-            type="button"
-            onClick={() => setSidebarOpen(true)}
-            className="lg:hidden min-h-11 min-w-11 flex items-center justify-center rounded-lg text-(--text-secondary) hover:bg-(--bg-tertiary) transition-colors cursor-pointer"
-            aria-label={locale === 'ko' ? '메뉴 열기' : 'Open menu'}
-          >
-            <Menu size={20} aria-hidden="true" />
-          </button>
-
-          {/* Logo */}
-          <Link
-            to={localePath('/')}
-            className="font-semibold shrink-0 flex items-center gap-2 text-(--text-primary) no-underline"
-          >
-            <span className="text-xl">π</span>
-            <span>Roots</span>
-          </Link>
-
-          {/* Real-time Search Dropdown */}
-          <div className="relative flex-1 max-w-80 max-lg:max-w-64 max-sm:max-w-48">
-            <SearchDropdown
-              query={query}
-              onQueryChange={setQuery}
-              results={results}
-              isLoading={isLoading}
-              onSelect={handleSelectResult}
-              locale={locale}
-            />
-          </div>
-
-          {/* Spacer */}
-          <div className="flex-1" />
-
-          {/* Right Actions - Desktop */}
-          <div className="hidden sm:flex items-center gap-1">
-            <Link
-              to={localePath('/browse')}
-              className={cn(
-                'min-h-11 flex items-center px-3 py-2 text-sm rounded-lg transition-colors no-underline',
-                isActive('/browse')
-                  ? 'text-(--accent-primary) bg-(--bg-tertiary)'
-                  : 'text-(--text-secondary) hover:bg-(--bg-tertiary)',
-              )}
-            >
-              {t('browse')}
-            </Link>
-
-            <Link
-              to={localePath('/favorites')}
-              className={cn(
-                'min-h-11 flex items-center px-3 py-2 text-sm rounded-lg transition-colors no-underline',
-                isActive('/favorites')
-                  ? 'text-(--accent-primary) bg-(--bg-tertiary)'
-                  : 'text-(--text-secondary) hover:bg-(--bg-tertiary)',
-              )}
-            >
-              {t('favorites')}
-            </Link>
-
-            <Link
-              to={localePath('/constants')}
-              className={cn(
-                'min-h-11 flex items-center px-3 py-2 text-sm rounded-lg transition-colors no-underline',
-                isActive('/constants')
-                  ? 'text-(--accent-primary) bg-(--bg-tertiary)'
-                  : 'text-(--text-secondary) hover:bg-(--bg-tertiary)',
-              )}
-            >
-              {t('constants')}
-            </Link>
-
-            <ServicesDropdown currentAppId="roots" locale={locale} />
-            <LanguageToggle locale={locale} currentPath={stripLocale(pathname)} />
-            <DarkModeToggle />
-          </div>
-
-          {/* Right Actions - Mobile */}
-          <div className="flex sm:hidden items-center gap-1">
-            <ServicesDropdown currentAppId="roots" locale={locale} />
-            <LanguageToggle locale={locale} currentPath={stripLocale(pathname)} />
-            <DarkModeToggle />
-          </div>
-        </div>
-      </header>
+      <Header onMenuClick={() => setSidebarOpen(true)} sidebarCollapsed={sidebarCollapsed} />
 
       {/* Sidebar */}
       <Sidebar
@@ -199,7 +74,6 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
         className={cn(
           'flex-1 w-full px-4 py-8 pb-20 lg:pb-8',
           'pt-(--header-height)',
-          // Desktop: offset for fixed sidebar (collapsed: 56px + 1rem, expanded: 256px + 1rem)
           sidebarCollapsed
             ? 'lg:pl-[calc(var(--sidebar-collapsed-width)+1rem)]'
             : 'lg:pl-[calc(var(--sidebar-width)+1rem)]',
@@ -241,41 +115,7 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
       </main>
 
       {/* Mobile Bottom Navigation */}
-      <nav
-        aria-label="Mobile navigation"
-        className="fixed bottom-0 left-0 right-0 z-50 bg-(--bg-elevated) border-t border-(--border-primary) flex items-center justify-around h-16 pb-[env(safe-area-inset-bottom,0px)] lg:hidden"
-      >
-        <Link
-          to={localePath('/browse')}
-          className={cn(
-            'flex flex-col items-center justify-center gap-1 min-h-11 min-w-11 px-4 py-2 no-underline transition-colors',
-            isActive('/browse') ? 'text-(--accent-primary)' : 'text-(--text-secondary)',
-          )}
-        >
-          <BookOpen size={20} aria-hidden="true" />
-          <span className="text-xs">{t('browse')}</span>
-        </Link>
-        <Link
-          to={localePath('/favorites')}
-          className={cn(
-            'flex flex-col items-center justify-center gap-1 min-h-11 min-w-11 px-4 py-2 no-underline transition-colors',
-            isActive('/favorites') ? 'text-(--accent-primary)' : 'text-(--text-secondary)',
-          )}
-        >
-          <Heart size={20} aria-hidden="true" />
-          <span className="text-xs">{t('favorites')}</span>
-        </Link>
-        <Link
-          to={localePath('/constants')}
-          className={cn(
-            'flex flex-col items-center justify-center gap-1 min-h-11 min-w-11 px-4 py-2 no-underline transition-colors',
-            isActive('/constants') ? 'text-(--accent-primary)' : 'text-(--text-secondary)',
-          )}
-        >
-          <Star size={20} aria-hidden="true" />
-          <span className="text-xs">{t('constants')}</span>
-        </Link>
-      </nav>
+      <BottomNav />
 
       {/* Back to Top Button */}
       {showBackToTop && (
@@ -289,55 +129,8 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
         </button>
       )}
 
-      {/* Footer - Hidden on mobile */}
-      <footer
-        className={cn(
-          'hidden lg:block mt-auto py-8 bg-(--bg-secondary) border-t border-(--border-primary)',
-          'transition-[padding] duration-200',
-          // Desktop: offset for fixed sidebar (same as main content)
-          sidebarCollapsed
-            ? 'lg:pl-[calc(var(--sidebar-collapsed-width)+1rem)]'
-            : 'lg:pl-[calc(var(--sidebar-width)+1rem)]',
-        )}
-      >
-        <div className="max-w-4xl mx-auto px-4">
-          <nav
-            aria-label="Footer links"
-            className="flex items-center justify-center gap-6 mb-4 text-sm text-(--text-secondary)"
-          >
-            <Link to={localePath('/about')} className="no-underline hover:underline text-inherit">
-              {t('about')}
-            </Link>
-            <Link
-              to={localePath('/built-with')}
-              className="no-underline hover:underline text-inherit"
-            >
-              {locale === 'ko' ? '오픈소스' : 'Open source'}
-            </Link>
-            <Link to={localePath('/sitemap')} className="no-underline hover:underline text-inherit">
-              {t('sitemap')}
-            </Link>
-          </nav>
-
-          {/* More from Us */}
-          <div className="flex justify-center mb-4">
-            <FamilySites currentAppId="roots" variant="footer" locale={locale} />
-          </div>
-
-          <div className="flex items-center justify-center gap-4 text-sm text-(--text-tertiary)">
-            <p>{t('footerText')}</p>
-            <a
-              href="https://github.com/soundbluemusic/public-monorepo"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-1.5 text-(--accent-primary) no-underline hover:underline"
-            >
-              <Github size={16} aria-hidden="true" />
-              {t('github')}
-            </a>
-          </div>
-        </div>
-      </footer>
+      {/* Footer */}
+      <Footer sidebarCollapsed={sidebarCollapsed} />
     </div>
   );
 }

@@ -259,3 +259,73 @@ export function createAppViteConfig(options: AppViteConfigOptions) {
     ],
   });
 }
+
+/**
+ * TanStack Start + Cloudflare Workers 앱 설정 옵션
+ */
+export interface TanStackCloudflareConfigOptions {
+  /** 앱 이름 (context, roots, permissive) */
+  appName: 'context' | 'roots' | 'permissive';
+  /** SQLite alias 추가 (context만 필요) */
+  sqliteAlias?: boolean;
+}
+
+/**
+ * TanStack Start + Cloudflare Workers 앱 공통 설정 생성
+ *
+ * 모든 SSR 앱에서 공통으로 사용하는 build, resolve, define 설정을 반환합니다.
+ * 플러그인은 앱에서 직접 설정해야 합니다 (import 순서가 중요하기 때문).
+ *
+ * @example
+ * ```ts
+ * // apps/context/vite.config.ts
+ * import { cloudflare } from '@cloudflare/vite-plugin';
+ * import { getTanStackCloudflareConfig, appPorts } from '@soundblue/config/vite';
+ *
+ * const config = getTanStackCloudflareConfig({
+ *   appName: 'context',
+ *   sqliteAlias: true,
+ * });
+ *
+ * export default defineConfig({
+ *   server: { port: appPorts.context },
+ *   preview: { port: appPorts.context },
+ *   ...config,
+ *   plugins: [
+ *     cloudflare({ viteEnvironment: { name: 'ssr' } }),
+ *     // ... other plugins
+ *   ],
+ * });
+ * ```
+ */
+export function getTanStackCloudflareConfig(options: TanStackCloudflareConfigOptions) {
+  const { sqliteAlias = false } = options;
+
+  // Alias 설정
+  const alias: Record<string, string> = {
+    '@': '/app',
+    '~': '/app',
+  };
+
+  // Context 앱의 SQLite alias
+  if (sqliteAlias) {
+    alias['@soundblue/platform/sqlite/types'] = '../../packages/platform/src/sqlite/types.ts';
+    alias['@soundblue/platform/sqlite'] = '../../packages/platform/src/sqlite/index.browser.ts';
+  }
+
+  return {
+    resolve: { alias },
+    build: {
+      minify: 'terser' as const,
+      terserOptions: {
+        compress: { drop_console: true, drop_debugger: true },
+      },
+      rollupOptions: {
+        output: { manualChunks: createManualChunks },
+      },
+    },
+    define: {
+      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'production'),
+    },
+  };
+}

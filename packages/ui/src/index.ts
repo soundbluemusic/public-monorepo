@@ -21,13 +21,12 @@ export {
 } from './animation';
 
 // Feedback
+// Note: Toast and ToastContainer moved to @soundblue/features/toast
 export {
   ErrorBoundary,
   type ErrorBoundaryProps,
   ErrorFallbackUI,
   RouteErrorFallback,
-  type Toast,
-  ToastContainer,
 } from './feedback';
 
 // Patterns

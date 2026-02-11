@@ -1,7 +1,14 @@
 import { QueryProvider } from '@soundblue/features/query';
+import { ToastContainer } from '@soundblue/features/toast';
 import { OfflineIndicator } from '@soundblue/pwa/react';
 import { MotionProvider } from '@soundblue/ui/animation';
-import { ErrorBoundary, ToastContainer } from '@soundblue/ui/feedback';
+import { ErrorBoundary } from '@soundblue/ui/feedback';
+import {
+  createCriticalCss,
+  createHeadMeta,
+  createStructuredData,
+  detectLanguage,
+} from '@soundblue/ui/shell';
 import {
   DARK_MODE_INIT_SCRIPT,
   DARK_MODE_TOGGLE_SCRIPT,
@@ -16,46 +23,19 @@ import {
   useRouterState,
 } from '@tanstack/react-router';
 import { I18nProvider } from '../i18n';
+import { shellConfig } from '../shell.config';
 import '../styles/global.css';
 
-/**
- * Critical CSS for FOUC prevention
- */
-const CRITICAL_THEME_CSS = `
-:root {
-  --bg-primary: #f8fafc;
-  --bg-secondary: #f1f5f9;
-  --bg-tertiary: #e2e8f0;
-  --bg-elevated: #ffffff;
-  --text-primary: #0f172a;
-  --text-secondary: #475569;
-}
-.dark {
-  --bg-primary: #0f172a;
-  --bg-secondary: #1e293b;
-  --bg-tertiary: #334155;
-  --bg-elevated: #1e293b;
-  --text-primary: #f8fafc;
-  --text-secondary: #cbd5e1;
-}
-html, body {
-  background-color: var(--bg-primary);
-  color: var(--text-primary);
-}
-`;
+// Pre-computed values from config
+const CRITICAL_THEME_CSS = createCriticalCss(shellConfig.themeColors);
+const STRUCTURED_DATA = createStructuredData(shellConfig);
 
 export const Route = createRootRoute({
   head: () => ({
     meta: [
-      { charSet: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { name: 'color-scheme', content: 'light dark' },
-      { name: 'theme-color', content: '#a5b4fc' },
-      { title: 'Roots - Math Documentation' },
-      {
-        name: 'description',
-        content: 'Learn math concepts easily - From basic arithmetic to advanced calculus',
-      },
+      ...createHeadMeta(shellConfig),
+      { title: shellConfig.appName },
+      { name: 'description', content: shellConfig.description },
     ],
     links: [
       { rel: 'icon', href: '/favicon.svg', type: 'image/svg+xml' },
@@ -65,59 +45,7 @@ export const Route = createRootRoute({
     scripts: [
       {
         type: 'application/ld+json',
-        children: JSON.stringify([
-          {
-            '@context': 'https://schema.org',
-            '@type': 'WebSite',
-            name: 'Roots - Math Documentation',
-            url: 'https://roots.soundbluemusic.com',
-            description:
-              'Learn math concepts easily - From basic arithmetic to advanced calculus',
-            inLanguage: ['ko', 'en'],
-            potentialAction: {
-              '@type': 'SearchAction',
-              target: {
-                '@type': 'EntryPoint',
-                urlTemplate:
-                  'https://roots.soundbluemusic.com/search?q={search_term_string}',
-              },
-              'query-input': 'required name=search_term_string',
-            },
-          },
-          {
-            '@context': 'https://schema.org',
-            '@type': 'Organization',
-            name: 'SoundBlue Music',
-            url: 'https://soundbluemusic.com',
-            logo: 'https://roots.soundbluemusic.com/logo.png',
-            sameAs: [
-              'https://www.youtube.com/@SoundBlueMusic',
-              'https://x.com/SoundBlueMusic',
-              'https://www.instagram.com/soundbluemusic/',
-              'https://www.threads.com/@soundbluemusic',
-            ],
-          },
-          {
-            '@context': 'https://schema.org',
-            '@type': 'ItemList',
-            name: 'Main Navigation',
-            url: 'https://roots.soundbluemusic.com',
-            itemListElement: [
-              {
-                '@type': 'SiteNavigationElement',
-                position: 1,
-                name: 'Home',
-                url: 'https://roots.soundbluemusic.com/',
-              },
-              {
-                '@type': 'SiteNavigationElement',
-                position: 2,
-                name: 'Browse',
-                url: 'https://roots.soundbluemusic.com/browse',
-              },
-            ],
-          },
-        ]),
+        children: STRUCTURED_DATA,
       },
     ],
   }),
@@ -127,7 +55,7 @@ export const Route = createRootRoute({
 function RootComponent() {
   const routerState = useRouterState();
   const pathname = routerState.location.pathname;
-  const lang = pathname.startsWith('/ko') ? 'ko' : 'en';
+  const lang = detectLanguage(pathname);
 
   return (
     <html lang={lang} suppressHydrationWarning>
