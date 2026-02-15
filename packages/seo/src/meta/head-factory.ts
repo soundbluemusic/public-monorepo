@@ -72,13 +72,27 @@ function requireLoaderData<T>(ctx: DynamicHeadFunctionArgs<T>): T {
 
 /**
  * SEO URL 계산 (canonical, en, ko)
+ *
+ * @param pathname - 현재 경로
+ * @param baseUrl - 기본 URL (trailing slash 없이)
+ * @param trailingSlash - trailing slash 추가 여부 (Cloudflare Workers Assets 호환)
  */
 function computeSeoUrls(
   pathname: string,
   baseUrl: string,
+  trailingSlash = false,
 ): { canonical: string; en: string; ko: string } {
   const cleanBaseUrl = baseUrl.replace(/\/$/, '');
-  const cleanPath = pathname.startsWith('/') ? pathname : `/${pathname}`;
+  let cleanPath = pathname.startsWith('/') ? pathname : `/${pathname}`;
+
+  // Trailing slash 정규화 (루트 경로 제외)
+  if (cleanPath !== '/' && cleanPath !== '/ko') {
+    if (trailingSlash && !cleanPath.endsWith('/')) {
+      cleanPath = `${cleanPath}/`;
+    } else if (!trailingSlash && cleanPath.endsWith('/')) {
+      cleanPath = cleanPath.slice(0, -1);
+    }
+  }
 
   const isKorean = cleanPath.startsWith('/ko');
   const pathWithoutLocale = isKorean ? cleanPath.replace(/^\/ko/, '') || '/' : cleanPath;
@@ -93,8 +107,8 @@ function computeSeoUrls(
 /**
  * SEO 링크 태그 생성 (canonical + hreflang)
  */
-function generateSeoLinks(pathname: string, baseUrl: string): HeadLink[] {
-  const urls = computeSeoUrls(pathname, baseUrl);
+function generateSeoLinks(pathname: string, baseUrl: string, trailingSlash = false): HeadLink[] {
+  const urls = computeSeoUrls(pathname, baseUrl, trailingSlash);
 
   return [
     { rel: 'canonical', href: urls.canonical },
@@ -102,6 +116,18 @@ function generateSeoLinks(pathname: string, baseUrl: string): HeadLink[] {
     { rel: 'alternate', hrefLang: 'ko', href: urls.ko },
     { rel: 'alternate', hrefLang: 'x-default', href: urls.en },
   ];
+}
+
+/**
+ * Head Factory 공통 옵션
+ */
+export interface HeadFactoryOptions {
+  /**
+   * URL에 trailing slash 추가 여부
+   * - true: /concept/addition/ (Cloudflare Workers Assets 호환)
+   * - false: /concept/addition (기본값)
+   */
+  trailingSlash?: boolean;
 }
 
 /**
@@ -174,19 +200,21 @@ function metaDataToHeadMeta(meta: MetaData, options?: OgMetaOptions): HeadMeta[]
 export function headFactory(
   localizedMeta: LocalizedMeta,
   baseUrl: string,
+  options?: HeadFactoryOptions,
 ): (args: HeadFunctionArgs) => HeadConfig {
+  const trailingSlash = options?.trailingSlash ?? false;
   return ({ location }: HeadFunctionArgs): HeadConfig => {
     const pathname = location?.pathname ?? '/';
     const isKorean = pathname.startsWith('/ko');
     const meta = isKorean ? localizedMeta.ko : localizedMeta.en;
-    const urls = computeSeoUrls(pathname, baseUrl);
+    const urls = computeSeoUrls(pathname, baseUrl, trailingSlash);
 
     return {
       meta: metaDataToHeadMeta(meta, {
         url: urls.canonical,
         locale: isKorean ? 'ko' : 'en',
       }),
-      links: generateSeoLinks(pathname, baseUrl),
+      links: generateSeoLinks(pathname, baseUrl, trailingSlash),
     };
   };
 }
@@ -215,21 +243,23 @@ export function headFactory(
 export function dynamicHeadFactory<T>(
   getLocalizedMeta: (data: T) => LocalizedMeta,
   baseUrl: string,
+  options?: HeadFactoryOptions,
 ): (args: DynamicHeadFunctionArgs<T>) => HeadConfig {
+  const trailingSlash = options?.trailingSlash ?? false;
   return (ctx: DynamicHeadFunctionArgs<T>): HeadConfig => {
     const loaderData = requireLoaderData(ctx);
     const pathname = ctx.location?.pathname ?? '/';
     const isKorean = pathname.startsWith('/ko');
     const localizedMeta = getLocalizedMeta(loaderData);
     const meta = isKorean ? localizedMeta.ko : localizedMeta.en;
-    const urls = computeSeoUrls(pathname, baseUrl);
+    const urls = computeSeoUrls(pathname, baseUrl, trailingSlash);
 
     return {
       meta: metaDataToHeadMeta(meta, {
         url: urls.canonical,
         locale: isKorean ? 'ko' : 'en',
       }),
-      links: generateSeoLinks(pathname, baseUrl),
+      links: generateSeoLinks(pathname, baseUrl, trailingSlash),
     };
   };
 }
@@ -238,15 +268,20 @@ export function dynamicHeadFactory<T>(
  * 한글 경로용 head 팩토리 (locale이 고정된 경우)
  * /ko 접두사가 항상 붙는 라우트에서 사용
  */
-export function headFactoryKo(localizedMeta: LocalizedMeta, baseUrl: string): () => HeadConfig {
+export function headFactoryKo(
+  localizedMeta: LocalizedMeta,
+  baseUrl: string,
+  options?: HeadFactoryOptions,
+): () => HeadConfig {
+  const trailingSlash = options?.trailingSlash ?? false;
   return (): HeadConfig => {
     const meta = localizedMeta.ko;
     const pathname = '/ko'; // 한글 페이지는 /ko 기준
-    const urls = computeSeoUrls(pathname, baseUrl);
+    const urls = computeSeoUrls(pathname, baseUrl, trailingSlash);
 
     return {
       meta: metaDataToHeadMeta(meta, { url: urls.canonical, locale: 'ko' }),
-      links: generateSeoLinks(pathname, baseUrl),
+      links: generateSeoLinks(pathname, baseUrl, trailingSlash),
     };
   };
 }
@@ -255,15 +290,20 @@ export function headFactoryKo(localizedMeta: LocalizedMeta, baseUrl: string): ()
  * 영어 경로용 head 팩토리 (locale이 고정된 경우)
  * /ko 접두사가 없는 라우트에서 사용
  */
-export function headFactoryEn(localizedMeta: LocalizedMeta, baseUrl: string): () => HeadConfig {
+export function headFactoryEn(
+  localizedMeta: LocalizedMeta,
+  baseUrl: string,
+  options?: HeadFactoryOptions,
+): () => HeadConfig {
+  const trailingSlash = options?.trailingSlash ?? false;
   return (): HeadConfig => {
     const meta = localizedMeta.en;
     const pathname = '/'; // 영어 페이지는 / 기준
-    const urls = computeSeoUrls(pathname, baseUrl);
+    const urls = computeSeoUrls(pathname, baseUrl, trailingSlash);
 
     return {
       meta: metaDataToHeadMeta(meta, { url: urls.canonical, locale: 'en' }),
-      links: generateSeoLinks(pathname, baseUrl),
+      links: generateSeoLinks(pathname, baseUrl, trailingSlash),
     };
   };
 }
@@ -275,7 +315,9 @@ export function dynamicHeadFactoryKo<T>(
   getLocalizedMeta: (data: T) => LocalizedMeta,
   baseUrl: string,
   getPathname?: (data: T) => string,
+  options?: HeadFactoryOptions,
 ): (ctx: DynamicHeadFunctionArgs<T>) => HeadConfig {
+  const trailingSlash = options?.trailingSlash ?? false;
   return (ctx): HeadConfig => {
     const loaderData = requireLoaderData(ctx);
     const localizedMeta = getLocalizedMeta(loaderData);
@@ -283,11 +325,11 @@ export function dynamicHeadFactoryKo<T>(
     const pathname = getPathname
       ? `/ko${getPathname(loaderData)}`
       : (ctx.location?.pathname ?? '/ko');
-    const urls = computeSeoUrls(pathname, baseUrl);
+    const urls = computeSeoUrls(pathname, baseUrl, trailingSlash);
 
     return {
       meta: metaDataToHeadMeta(meta, { url: urls.canonical, locale: 'ko' }),
-      links: generateSeoLinks(pathname, baseUrl),
+      links: generateSeoLinks(pathname, baseUrl, trailingSlash),
     };
   };
 }
@@ -299,17 +341,19 @@ export function dynamicHeadFactoryEn<T>(
   getLocalizedMeta: (data: T) => LocalizedMeta,
   baseUrl: string,
   getPathname?: (data: T) => string,
+  options?: HeadFactoryOptions,
 ): (ctx: DynamicHeadFunctionArgs<T>) => HeadConfig {
+  const trailingSlash = options?.trailingSlash ?? false;
   return (ctx): HeadConfig => {
     const loaderData = requireLoaderData(ctx);
     const localizedMeta = getLocalizedMeta(loaderData);
     const meta = localizedMeta.en;
     const pathname = getPathname ? getPathname(loaderData) : (ctx.location?.pathname ?? '/');
-    const urls = computeSeoUrls(pathname, baseUrl);
+    const urls = computeSeoUrls(pathname, baseUrl, trailingSlash);
 
     return {
       meta: metaDataToHeadMeta(meta, { url: urls.canonical, locale: 'en' }),
-      links: generateSeoLinks(pathname, baseUrl),
+      links: generateSeoLinks(pathname, baseUrl, trailingSlash),
     };
   };
 }

@@ -71,7 +71,8 @@ export const Route = createFileRoute('/ko/tag/$tagId')({
       };
     },
     'https://roots.soundbluemusic.com',
-    (data) => `/ko/tag/${encodeURIComponent(data.tag)}`,
+    (data) => `/tag/${encodeURIComponent(data.tag)}`,
+    { trailingSlash: true },
   ),
   component: TagPage,
 });

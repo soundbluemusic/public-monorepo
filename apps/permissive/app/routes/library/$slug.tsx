@@ -44,44 +44,49 @@ export const Route = createFileRoute('/library/$slug')({
     const related = getRelatedLibraries(library);
     return { library, related };
   },
-  head: dynamicHeadFactoryEn<LoaderData>((data) => {
-    if (!data?.library) {
+  head: dynamicHeadFactoryEn<LoaderData>(
+    (data) => {
+      if (!data?.library) {
+        return {
+          ko: { title: 'Not Found - Permissive' },
+          en: { title: 'Not Found - Permissive' },
+        };
+      }
+      const lib = data.library;
+      const tags = lib.tags || [];
       return {
-        ko: { title: 'Not Found - Permissive' },
-        en: { title: 'Not Found - Permissive' },
+        ko: {
+          title: `${lib.name} - Permissive`,
+          description: lib.descriptionKo,
+          keywords: [
+            lib.name,
+            `${lib.name} 라이브러리`,
+            lib.license,
+            lib.category,
+            '오픈소스',
+            '무료 라이브러리',
+            ...tags.slice(0, 3),
+          ],
+        },
+        en: {
+          title: `${lib.name} - Permissive`,
+          description: lib.description,
+          keywords: [
+            lib.name,
+            `${lib.name} library`,
+            lib.license,
+            lib.category,
+            'open source',
+            'free library',
+            ...tags.slice(0, 3),
+          ],
+        },
       };
-    }
-    const lib = data.library;
-    const tags = lib.tags || [];
-    return {
-      ko: {
-        title: `${lib.name} - Permissive`,
-        description: lib.descriptionKo,
-        keywords: [
-          lib.name,
-          `${lib.name} 라이브러리`,
-          lib.license,
-          lib.category,
-          '오픈소스',
-          '무료 라이브러리',
-          ...tags.slice(0, 3),
-        ],
-      },
-      en: {
-        title: `${lib.name} - Permissive`,
-        description: lib.description,
-        keywords: [
-          lib.name,
-          `${lib.name} library`,
-          lib.license,
-          lib.category,
-          'open source',
-          'free library',
-          ...tags.slice(0, 3),
-        ],
-      },
-    };
-  }, 'https://permissive.soundbluemusic.com'),
+    },
+    'https://permissive.soundbluemusic.com',
+    (data) => `/library/${getLibrarySlug(data.library.name)}`,
+    { trailingSlash: true },
+  ),
   component: LibraryDetailPage,
 });
 

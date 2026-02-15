@@ -333,3 +333,103 @@ describe('dynamicHeadFactoryEn', () => {
     });
   });
 });
+
+describe('trailingSlash option', () => {
+  it('should add trailing slash to canonical URL when enabled', () => {
+    const head = headFactory(mockLocalizedMeta, baseUrl, { trailingSlash: true });
+    const result = head({ location: { pathname: '/about' } });
+
+    expect(result.links).toContainEqual({
+      rel: 'canonical',
+      href: 'https://test.example.com/about/',
+    });
+  });
+
+  it('should add trailing slash to hreflang URLs when enabled', () => {
+    const head = headFactory(mockLocalizedMeta, baseUrl, { trailingSlash: true });
+    const result = head({ location: { pathname: '/about' } });
+
+    expect(result.links).toContainEqual({
+      rel: 'alternate',
+      hrefLang: 'en',
+      href: 'https://test.example.com/about/',
+    });
+    expect(result.links).toContainEqual({
+      rel: 'alternate',
+      hrefLang: 'ko',
+      href: 'https://test.example.com/ko/about/',
+    });
+  });
+
+  it('should NOT add trailing slash to root path', () => {
+    const head = headFactory(mockLocalizedMeta, baseUrl, { trailingSlash: true });
+    const result = head({ location: { pathname: '/' } });
+
+    expect(result.links).toContainEqual({
+      rel: 'canonical',
+      href: 'https://test.example.com',
+    });
+  });
+
+  it('should NOT add trailing slash to /ko root path', () => {
+    const head = headFactory(mockLocalizedMeta, baseUrl, { trailingSlash: true });
+    const result = head({ location: { pathname: '/ko' } });
+
+    expect(result.links).toContainEqual({
+      rel: 'canonical',
+      href: 'https://test.example.com/ko',
+    });
+  });
+
+  it('should work with dynamicHeadFactoryEn', () => {
+    interface TestData {
+      id: string;
+    }
+    const getMeta = () => ({
+      ko: { title: 'Title' },
+      en: { title: 'Title' },
+    });
+    const getPathname = (data: TestData) => `/concept/${data.id}`;
+    const head = dynamicHeadFactoryEn(getMeta, baseUrl, getPathname, { trailingSlash: true });
+    const result = head({
+      loaderData: { id: 'addition' },
+      location: { pathname: '/concept/addition' },
+    });
+
+    expect(result.links).toContainEqual({
+      rel: 'canonical',
+      href: 'https://test.example.com/concept/addition/',
+    });
+  });
+
+  it('should work with dynamicHeadFactoryKo', () => {
+    interface TestData {
+      id: string;
+    }
+    const getMeta = () => ({
+      ko: { title: 'Title' },
+      en: { title: 'Title' },
+    });
+    const getPathname = (data: TestData) => `/concept/${data.id}`;
+    const head = dynamicHeadFactoryKo(getMeta, baseUrl, getPathname, { trailingSlash: true });
+    const result = head({
+      loaderData: { id: 'addition' },
+      location: { pathname: '/ko/concept/addition' },
+    });
+
+    expect(result.links).toContainEqual({
+      rel: 'canonical',
+      href: 'https://test.example.com/ko/concept/addition/',
+    });
+  });
+
+  it('should normalize existing trailing slash when trailingSlash is false', () => {
+    const head = headFactory(mockLocalizedMeta, baseUrl, { trailingSlash: false });
+    const result = head({ location: { pathname: '/about/' } });
+
+    expect(result.links).toContainEqual({
+      rel: 'canonical',
+      href: 'https://test.example.com/about',
+    });
+  });
+});

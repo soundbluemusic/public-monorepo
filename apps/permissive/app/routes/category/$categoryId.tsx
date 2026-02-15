@@ -10,7 +10,7 @@ import {
   type Library,
 } from '../../data/libraries';
 
-type LoaderData = { category: CategoryMeta; libraries: Library[] };
+type LoaderData = { category: CategoryMeta; libraries: Library[]; categoryId: string };
 
 export const Route = createFileRoute('/category/$categoryId')({
   loader: async ({ params }) => {
@@ -19,27 +19,32 @@ export const Route = createFileRoute('/category/$categoryId')({
       throw new Response('Not Found', { status: 404 });
     }
     const libraries = getLibrariesByCategorySlug(params.categoryId);
-    return { category, libraries };
+    return { category, libraries, categoryId: params.categoryId };
   },
-  head: dynamicHeadFactoryEn<LoaderData>((data) => {
-    if (!data?.category) {
+  head: dynamicHeadFactoryEn<LoaderData>(
+    (data) => {
+      if (!data?.category) {
+        return {
+          ko: { title: 'Not Found - Permissive' },
+          en: { title: 'Not Found - Permissive' },
+        };
+      }
+      const cat = data.category;
       return {
-        ko: { title: 'Not Found - Permissive' },
-        en: { title: 'Not Found - Permissive' },
+        ko: {
+          title: `${cat.name.ko} 라이브러리 - Permissive`,
+          description: cat.description.ko,
+        },
+        en: {
+          title: `${cat.name.en} Libraries - Permissive`,
+          description: cat.description.en,
+        },
       };
-    }
-    const cat = data.category;
-    return {
-      ko: {
-        title: `${cat.name.ko} 라이브러리 - Permissive`,
-        description: cat.description.ko,
-      },
-      en: {
-        title: `${cat.name.en} Libraries - Permissive`,
-        description: cat.description.en,
-      },
-    };
-  }, 'https://permissive.soundbluemusic.com'),
+    },
+    'https://permissive.soundbluemusic.com',
+    (data) => `/category/${data.categoryId}`,
+    { trailingSlash: true },
+  ),
   component: CategoryPage,
 });
 

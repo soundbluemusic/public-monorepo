@@ -48,6 +48,7 @@ export const Route = createFileRoute('/ko/field/$fieldId')({
     },
     'https://roots.soundbluemusic.com',
     (data) => `/field/${data.field?.id ?? ''}`,
+    { trailingSlash: true },
   ),
   component: FieldPageWrapper,
 });

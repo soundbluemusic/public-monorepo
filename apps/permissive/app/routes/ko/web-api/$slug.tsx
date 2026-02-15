@@ -26,43 +26,48 @@ export const Route = createFileRoute('/ko/web-api/$slug')({
     const related = getRelatedWebApis(api);
     return { api, related };
   },
-  head: dynamicHeadFactoryKo<LoaderData>((data) => {
-    if (!data?.api) {
+  head: dynamicHeadFactoryKo<LoaderData>(
+    (data) => {
+      if (!data?.api) {
+        return {
+          ko: { title: 'Not Found - Permissive' },
+          en: { title: 'Not Found - Permissive' },
+        };
+      }
+      const api = data.api;
       return {
-        ko: { title: 'Not Found - Permissive' },
-        en: { title: 'Not Found - Permissive' },
+        ko: {
+          title: `${api.name} - Permissive`,
+          description: api.descriptionKo,
+          keywords: [
+            api.name,
+            `${api.name} API`,
+            'Web API',
+            api.category,
+            '브라우저 API',
+            'JavaScript API',
+            'MDN',
+          ],
+        },
+        en: {
+          title: `${api.name} - Permissive`,
+          description: api.description,
+          keywords: [
+            api.name,
+            `${api.name} API`,
+            'Web API',
+            api.category,
+            'browser API',
+            'JavaScript API',
+            'MDN',
+          ],
+        },
       };
-    }
-    const api = data.api;
-    return {
-      ko: {
-        title: `${api.name} - Permissive`,
-        description: api.descriptionKo,
-        keywords: [
-          api.name,
-          `${api.name} API`,
-          'Web API',
-          api.category,
-          '브라우저 API',
-          'JavaScript API',
-          'MDN',
-        ],
-      },
-      en: {
-        title: `${api.name} - Permissive`,
-        description: api.description,
-        keywords: [
-          api.name,
-          `${api.name} API`,
-          'Web API',
-          api.category,
-          'browser API',
-          'JavaScript API',
-          'MDN',
-        ],
-      },
-    };
-  }, 'https://permissive.soundbluemusic.com'),
+    },
+    'https://permissive.soundbluemusic.com',
+    (data) => `/web-api/${getWebApiSlug(data.api.name)}`,
+    { trailingSlash: true },
+  ),
   component: WebApiDetailPageKo,
 });
 

@@ -46,27 +46,32 @@ export const Route = createFileRoute('/ko/tag/$tagId')({
 
     return { tag, libraries, relatedTags };
   },
-  head: dynamicHeadFactoryKo<LoaderData>((data) => {
-    if (!data?.tag) {
+  head: dynamicHeadFactoryKo<LoaderData>(
+    (data) => {
+      if (!data?.tag) {
+        return {
+          ko: { title: 'Not Found - Permissive' },
+          en: { title: 'Not Found - Permissive' },
+        };
+      }
+      const { tag, libraries } = data;
       return {
-        ko: { title: 'Not Found - Permissive' },
-        en: { title: 'Not Found - Permissive' },
+        ko: {
+          title: `#${tag} 태그 | Permissive`,
+          description: `"${tag}" 태그가 붙은 ${libraries.length}개의 라이브러리`,
+          keywords: [tag, '라이브러리 태그', '오픈소스', 'library tag'],
+        },
+        en: {
+          title: `#${tag} Tag | Permissive`,
+          description: `${libraries.length} libraries tagged with "${tag}"`,
+          keywords: [tag, 'library tag', 'open source', 'free libraries'],
+        },
       };
-    }
-    const { tag, libraries } = data;
-    return {
-      ko: {
-        title: `#${tag} 태그 | Permissive`,
-        description: `"${tag}" 태그가 붙은 ${libraries.length}개의 라이브러리`,
-        keywords: [tag, '라이브러리 태그', '오픈소스', 'library tag'],
-      },
-      en: {
-        title: `#${tag} Tag | Permissive`,
-        description: `${libraries.length} libraries tagged with "${tag}"`,
-        keywords: [tag, 'library tag', 'open source', 'free libraries'],
-      },
-    };
-  }, 'https://permissive.soundbluemusic.com'),
+    },
+    'https://permissive.soundbluemusic.com',
+    (data) => `/tag/${encodeURIComponent(data.tag)}`,
+    { trailingSlash: true },
+  ),
   component: TagPage,
 });
 

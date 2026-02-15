@@ -67,6 +67,7 @@ export const Route = createFileRoute('/ko/concept/$conceptId')({
     },
     'https://roots.soundbluemusic.com',
     (data) => `/concept/${data.concept.id}`,
+    { trailingSlash: true },
   ),
   component: ConceptPageWrapper,
 });
