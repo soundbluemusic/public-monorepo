@@ -27,6 +27,7 @@ export const LibraryCard = memo(function LibraryCard({
         <div className="flex items-center flex-wrap gap-2 min-w-0">
           <Link
             to={localePath(`/library/${getLibrarySlug(lib.name)}`)}
+            preload="intent"
             className="font-medium text-(--text-primary) truncate max-w-[150px] sm:max-w-none hover:text-(--accent-primary) transition-colors"
           >
             {lib.name}

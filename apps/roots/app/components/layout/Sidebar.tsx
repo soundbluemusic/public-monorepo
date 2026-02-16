@@ -87,6 +87,7 @@ export function Sidebar({ isOpen, isCollapsed, onClose, onToggleCollapse }: Side
             key={field.id}
             to={localePath(`/field/${field.id}`)}
             onClick={onClose}
+            preload="intent"
             className={cn(
               'flex items-center gap-3 px-3 py-3 rounded-lg min-h-11 transition-all no-underline',
               isActive(`/field/${field.id}`)

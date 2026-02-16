@@ -28,6 +28,7 @@ export const NavLink = memo(function NavLink({
     <Link
       to={to}
       onClick={onClick}
+      preload="intent"
       className={cn(
         'flex items-center gap-3 px-3 py-2.5 rounded-lg transition-colors min-h-11',
         'text-(--text-secondary) hover:bg-(--bg-tertiary) hover:text-(--text-primary)',

@@ -78,6 +78,7 @@ export const EntryListItem = memo(function EntryListItem({
   return (
     <Link
       to={localePath(`/entry/${entryId}`)}
+      preload="intent"
       className="flex items-center justify-between py-3 px-2 rounded-lg border-b border-(--border-primary) transition-colors no-underline hover:bg-(--bg-tertiary)"
     >
       <div className="flex items-center gap-3 flex-1 min-w-0">

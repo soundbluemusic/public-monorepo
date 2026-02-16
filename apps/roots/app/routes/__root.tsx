@@ -10,8 +10,10 @@ import {
   detectLanguage,
 } from '@soundblue/ui/shell';
 import {
+  COMMON_PRECONNECTS,
   DARK_MODE_INIT_SCRIPT,
   DARK_MODE_TOGGLE_SCRIPT,
+  preloadFont,
   SIDEBAR_COLLAPSE_INIT_SCRIPT,
   SIDEBAR_COLLAPSE_SCRIPT,
 } from '@soundblue/ui/utils';
@@ -41,6 +43,13 @@ export const Route = createRootRoute({
       { rel: 'icon', href: '/favicon.svg', type: 'image/svg+xml' },
       { rel: 'apple-touch-icon', href: '/apple-touch-icon.svg' },
       { rel: 'manifest', href: '/manifest.json' },
+      // Font preloading for LCP optimization
+      preloadFont(
+        'https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css',
+        'text/css',
+      ),
+      // Preconnects for external resources
+      ...COMMON_PRECONNECTS.jsdelivr(),
     ],
     scripts: [
       {

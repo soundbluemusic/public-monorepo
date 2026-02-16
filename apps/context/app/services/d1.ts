@@ -3,9 +3,12 @@
  *
  * SSR 모드에서 Cloudflare D1을 통해 엔트리 데이터를 조회합니다.
  * JSON 파일 기반 로딩을 대체합니다.
+ *
+ * 메모리 캐싱이 적용되어 DB 쿼리 횟수를 줄입니다.
  */
 
 import type { Language, LocaleEntry } from '@/data/types';
+import { cacheKeys, cacheTTL, getCached, setCached } from './cache';
 import { type D1EntryRow, rowToLocaleEntry } from './entry-converter';
 
 /** D1 쿼리 에러를 로깅하고 null/빈 배열 반환 */
@@ -14,13 +17,18 @@ function logD1Error(operation: string, error: unknown): void {
 }
 
 /**
- * D1에서 ID로 엔트리 조회
+ * D1에서 ID로 엔트리 조회 (캐싱 적용)
  */
 export async function getEntryByIdFromD1(
   db: D1Database,
   id: string,
   locale: Language,
 ): Promise<LocaleEntry | null> {
+  // 캐시 확인
+  const cacheKey = cacheKeys.entry(id, locale);
+  const cached = getCached<LocaleEntry | null>(cacheKey);
+  if (cached !== null) return cached;
+
   try {
     const row = await db
       .prepare(
@@ -30,9 +38,15 @@ export async function getEntryByIdFromD1(
       .bind(id)
       .first<D1EntryRow>();
 
-    if (!row) return null;
+    if (!row) {
+      // null도 캐시하여 없는 엔트리 반복 조회 방지
+      setCached(cacheKey, null, cacheTTL.entry);
+      return null;
+    }
 
-    return rowToLocaleEntry(row, locale);
+    const entry = rowToLocaleEntry(row, locale);
+    setCached(cacheKey, entry, cacheTTL.entry);
+    return entry;
   } catch (error) {
     logD1Error(`getEntryById(${id})`, error);
     return null;
@@ -108,10 +122,25 @@ export async function getEntriesByCategoryPaginatedFromD1(
   }
 }
 
+/** 카테고리 타입 */
+export interface Category {
+  id: string;
+  name: { ko: string; en: string };
+  description: { ko: string; en: string };
+  icon: string;
+  color: string;
+  order: number;
+}
+
 /**
- * D1에서 모든 카테고리 조회
+ * D1에서 모든 카테고리 조회 (캐싱 적용 - 1시간)
  */
-export async function getCategoriesFromD1(db: D1Database) {
+export async function getCategoriesFromD1(db: D1Database): Promise<Category[]> {
+  // 캐시 확인
+  const cacheKey = cacheKeys.categories();
+  const cached = getCached<Category[]>(cacheKey);
+  if (cached !== null) return cached;
+
   try {
     const { results } = await db
       .prepare(
@@ -129,7 +158,7 @@ export async function getCategoriesFromD1(db: D1Database) {
         sort_order: number;
       }>();
 
-    return results.map((row) => ({
+    const categories = results.map((row) => ({
       id: row.id,
       name: {
         ko: row.name_ko,
@@ -143,6 +172,9 @@ export async function getCategoriesFromD1(db: D1Database) {
       color: row.color || 'blue',
       order: row.sort_order,
     }));
+
+    setCached(cacheKey, categories, cacheTTL.categories);
+    return categories;
   } catch (error) {
     logD1Error('getCategories', error);
     return [];
@@ -213,9 +245,14 @@ export async function getEntryIdsByCategoryFromD1(
 }
 
 /**
- * D1에서 모든 카테고리별 엔트리 수 조회 (사이트맵용)
+ * D1에서 모든 카테고리별 엔트리 수 조회 (사이트맵용, 캐싱 적용 - 30분)
  */
 export async function getEntryCounts(db: D1Database): Promise<Map<string, number>> {
+  // 캐시 확인 (Map은 직접 캐시 불가하므로 배열로 변환)
+  const cacheKey = cacheKeys.entryCounts();
+  const cached = getCached<[string, number][]>(cacheKey);
+  if (cached !== null) return new Map(cached);
+
   try {
     const { results } = await db
       .prepare('SELECT category_id, COUNT(*) as count FROM entries GROUP BY category_id')
@@ -225,6 +262,9 @@ export async function getEntryCounts(db: D1Database): Promise<Map<string, number
     for (const row of results) {
       counts.set(row.category_id, row.count);
     }
+
+    // Map을 배열로 변환하여 캐시
+    setCached(cacheKey, Array.from(counts.entries()), cacheTTL.entryCounts);
     return counts;
   } catch (error) {
     logD1Error('getEntryCounts', error);
@@ -327,9 +367,14 @@ export async function getEntriesByTagFromD1(
 }
 
 /**
- * D1에서 모든 태그와 개수 조회
+ * D1에서 모든 태그와 개수 조회 (캐싱 적용 - 30분)
  */
 export async function getAllTagsFromD1(db: D1Database): Promise<TagWithCount[]> {
+  // 캐시 확인
+  const cacheKey = cacheKeys.tags();
+  const cached = getCached<TagWithCount[]>(cacheKey);
+  if (cached !== null) return cached;
+
   try {
     // 모든 엔트리의 tags 컬럼을 가져와서 JavaScript에서 집계
     const { results } = await db
@@ -349,9 +394,12 @@ export async function getAllTagsFromD1(db: D1Database): Promise<TagWithCount[]> 
       }
     }
 
-    return Array.from(tagCounts.entries())
+    const tagList = Array.from(tagCounts.entries())
       .map(([tag, count]) => ({ tag, count }))
       .sort((a, b) => b.count - a.count);
+
+    setCached(cacheKey, tagList, cacheTTL.tags);
+    return tagList;
   } catch (error) {
     logD1Error('getAllTags', error);
     return [];

@@ -10,9 +10,11 @@ import {
   detectLanguage,
 } from '@soundblue/ui/shell';
 import {
+  COMMON_PRECONNECTS,
   DARK_MODE_INIT_SCRIPT,
   DARK_MODE_TOGGLE_SCRIPT,
   MOBILE_SIDEBAR_TOGGLE_SCRIPT,
+  preloadFont,
   SIDEBAR_COLLAPSE_INIT_SCRIPT,
   SIDEBAR_COLLAPSE_SCRIPT,
 } from '@soundblue/ui/utils';
@@ -32,6 +34,13 @@ export const Route = createRootRoute({
     links: [
       { rel: 'icon', href: '/favicon.ico' },
       { rel: 'manifest', href: '/manifest.json' },
+      // Font preloading for LCP optimization
+      preloadFont(
+        'https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css',
+        'text/css',
+      ),
+      // Preconnects for external resources
+      ...COMMON_PRECONNECTS.jsdelivr(),
     ],
   }),
   shellComponent: RootDocument,

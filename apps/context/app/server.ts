@@ -301,9 +301,7 @@ async function handleSitemapTags(env: CloudflareEnv): Promise<Response> {
     const sortedTags = Array.from(uniqueTags).sort();
 
     const urls = sortedTags
-      .map((tag) =>
-        generateBilingualUrl(`/tag/${tag}`, '0.5', 'monthly', CONTENT_LAST_MODIFIED),
-      )
+      .map((tag) => generateBilingualUrl(`/tag/${tag}`, '0.5', 'monthly', CONTENT_LAST_MODIFIED))
       .join('\n');
 
     const xml = `<?xml version="1.0" encoding="UTF-8"?>
@@ -447,27 +445,92 @@ const SECURITY_HEADERS: Record<string, string> = {
   'Referrer-Policy': 'strict-origin-when-cross-origin',
 };
 
+/**
+ * Last-Modified 날짜를 HTTP 형식으로 변환
+ * @example "2026-01-25" → "Sat, 25 Jan 2026 00:00:00 GMT"
+ */
+function getLastModifiedHeader(): string {
+  const date = new Date(CONTENT_LAST_MODIFIED);
+  return date.toUTCString();
+}
+
+/**
+ * ETag 생성 (콘텐츠 버전 기반)
+ * 빌드 버전과 콘텐츠 수정일을 조합하여 ETag 생성
+ */
+function generateETag(pathname: string): string {
+  // 경로 + 수정일 조합으로 ETag 생성
+  const etag = `"${CONTENT_LAST_MODIFIED}-${pathname.length}"`;
+  return etag;
+}
+
+/**
+ * If-Modified-Since 헤더 확인
+ * 클라이언트 캐시가 유효하면 304 응답 반환
+ */
+function shouldReturn304(request: Request): boolean {
+  const ifModifiedSince = request.headers.get('If-Modified-Since');
+  if (!ifModifiedSince) return false;
+
+  const clientDate = new Date(ifModifiedSince);
+  const lastModified = new Date(CONTENT_LAST_MODIFIED);
+
+  // 클라이언트 캐시가 최신이면 304
+  return clientDate >= lastModified;
+}
+
+/**
+ * If-None-Match 헤더 확인
+ */
+function etagMatches(request: Request, etag: string): boolean {
+  const ifNoneMatch = request.headers.get('If-None-Match');
+  if (!ifNoneMatch) return false;
+
+  return ifNoneMatch === etag || ifNoneMatch === `W/${etag}`;
+}
+
 // ============================================================================
 // Server Handler
 // ============================================================================
 
 export default {
   async fetch(request: Request, env: CloudflareEnv, ctx: ExecutionContext): Promise<Response> {
+    const url = new URL(request.url);
+    const pathname = url.pathname;
+
     // Check for API routes first
     const apiResponse = await handleApiRoute(request, env);
     if (apiResponse) {
       return apiResponse;
     }
 
+    // HTML 요청에 대해 304 응답 가능 여부 확인
+    const etag = generateETag(pathname);
+    if (request.method === 'GET') {
+      // If-None-Match 또는 If-Modified-Since 확인
+      if (etagMatches(request, etag) || shouldReturn304(request)) {
+        return new Response(null, {
+          status: 304,
+          headers: {
+            ETag: etag,
+            'Last-Modified': getLastModifiedHeader(),
+            'Cache-Control': 'public, max-age=0, must-revalidate',
+          },
+        });
+      }
+    }
+
     // Pass to TanStack Start for page routes
     // @ts-expect-error - TanStack Start internal handler
     const response = await tanstackHandler.fetch(request, env, ctx);
 
-    // HTML 응답에 Cache-Control + 보안 헤더 추가
+    // HTML 응답에 Cache-Control + 보안 헤더 + ETag + Last-Modified 추가
     const contentType = response.headers.get('Content-Type');
     if (contentType?.includes('text/html')) {
       const newResponse = new Response(response.body, response);
       newResponse.headers.set('Cache-Control', 'public, max-age=0, must-revalidate');
+      newResponse.headers.set('Last-Modified', getLastModifiedHeader());
+      newResponse.headers.set('ETag', etag);
       for (const [key, value] of Object.entries(SECURITY_HEADERS)) {
         newResponse.headers.set(key, value);
       }

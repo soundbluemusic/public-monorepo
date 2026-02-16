@@ -15,6 +15,7 @@ export const ApiCard = memo(function ApiCard({ api, locale }: ApiCardProps) {
   return (
     <Link
       to={localePath(`/web-api/${getWebApiSlug(api.name)}`)}
+      preload="intent"
       className="p-4 rounded-xl bg-(--bg-elevated) border border-(--border-primary) no-underline transition-all hover:border-(--border-focus) hover:shadow-sm group"
     >
       <div className="flex items-start justify-between gap-2 mb-2">

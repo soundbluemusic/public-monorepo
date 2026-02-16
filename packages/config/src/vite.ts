@@ -94,6 +94,11 @@ export function createManualChunks(id: string): string | undefined {
     return 'vendor-radix';
   }
 
+  // D3 시각화 라이브러리 (Roots ConceptGraph에서만 사용)
+  if (id.includes('d3-')) {
+    return 'vendor-d3';
+  }
+
   return undefined;
 }
 

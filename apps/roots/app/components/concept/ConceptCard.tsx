@@ -31,6 +31,7 @@ export const ConceptCard = memo(function ConceptCard({ concept }: ConceptCardPro
   return (
     <Link
       to={localePath(`/concept/${concept.id}`)}
+      preload="intent"
       className="block p-4 rounded-xl bg-(--bg-elevated) border border-(--border-primary) no-underline transition-all hover:-translate-y-0.5 hover:shadow-md hover:border-(--border-focus)"
     >
       {/* 헤더 */}
