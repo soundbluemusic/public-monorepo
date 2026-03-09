@@ -3,6 +3,7 @@
  * @environment universal
  */
 
+export { BottomSheet, type BottomSheetProps } from './BottomSheet';
 export {
   type CommandGroup,
   type CommandItem,
