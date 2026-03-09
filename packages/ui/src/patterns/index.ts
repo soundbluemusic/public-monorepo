@@ -2,6 +2,15 @@
  * @fileoverview UI Patterns
  * @environment universal
  */
+
+export { BottomSheet, type BottomSheetProps } from './BottomSheet';
+export {
+  type CommandGroup,
+  type CommandItem,
+  CommandPalette,
+  type CommandPaletteProps,
+  useCommandPalette,
+} from './CommandPalette';
 export {
   LazyLoad,
   type LazyLoadProps,

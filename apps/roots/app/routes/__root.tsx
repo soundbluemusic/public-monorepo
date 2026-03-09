@@ -1,7 +1,6 @@
 import { QueryProvider } from '@soundblue/features/query';
 import { ToastContainer } from '@soundblue/features/toast';
 import { OfflineIndicator } from '@soundblue/pwa/react';
-import { MotionProvider } from '@soundblue/ui/animation';
 import { ErrorBoundary } from '@soundblue/ui/feedback';
 import {
   createCriticalCss,
@@ -88,15 +87,13 @@ function RootComponent() {
       </head>
       <body>
         <QueryProvider>
-          <MotionProvider>
-            <I18nProvider>
-              <ErrorBoundary>
-                <OfflineIndicator />
-                <Outlet />
-                <ToastContainer />
-              </ErrorBoundary>
-            </I18nProvider>
-          </MotionProvider>
+          <I18nProvider>
+            <ErrorBoundary>
+              <OfflineIndicator />
+              <Outlet />
+              <ToastContainer />
+            </ErrorBoundary>
+          </I18nProvider>
         </QueryProvider>
         <Scripts />
         {/* Dark mode toggle script - handles clicks via event delegation */}

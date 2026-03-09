@@ -59,6 +59,19 @@
      ============================================ */
   --spacing-touch-min: 2.75rem; /* 44px WCAG minimum */
   --spacing-touch-comfortable: 3rem; /* 48px */
+
+  /* ============================================
+     Content Width Scale
+     ============================================ */
+  --container-prose: 38rem; /* 608px - 읽기 최적 (한글 기준 ~30자/줄) */
+  --container-content: 48rem; /* 768px - 콘텐츠 영역 */
+  --container-wide: 64rem; /* 1024px - 넓은 레이아웃 */
+
+  /* ============================================
+     Spacing Scale (8px base)
+     ============================================ */
+  --spacing-section: 3rem; /* 48px - 섹션 간 간격 */
+  --spacing-card-gap: 1.5rem; /* 24px - 카드 간 간격 */
 }
 
 /* ============================================
@@ -171,12 +184,15 @@
     background-color: var(--bg-elevated);
     border: 1px solid var(--border-primary);
     cursor: pointer;
-    transition: all 150ms;
+    transition: transform 150ms, box-shadow 150ms, border-color 150ms;
   }
   .card-interactive:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     border-color: var(--border-focus);
+  }
+  .card-interactive:active {
+    transform: translateY(0) scale(0.99);
   }
 
   /* Skeleton Loading */
@@ -537,6 +553,60 @@
     @bottom-center {
       content: counter(page) " / " counter(pages);
     }
+  }
+}
+
+/* ============================================
+   Semantic Status Colors
+   ============================================ */
+@utility text-success {
+  color: var(--status-success, #16a34a);
+}
+
+@utility text-warning {
+  color: var(--status-warning, #d97706);
+}
+
+@utility text-error {
+  color: var(--status-error, #dc2626);
+}
+
+@utility text-info {
+  color: var(--status-info, var(--accent-primary));
+}
+
+@utility bg-success-subtle {
+  background-color: color-mix(in srgb, var(--status-success, #16a34a) 10%, transparent);
+}
+
+@utility bg-warning-subtle {
+  background-color: color-mix(in srgb, var(--status-warning, #d97706) 10%, transparent);
+}
+
+@utility bg-error-subtle {
+  background-color: color-mix(in srgb, var(--status-error, #dc2626) 10%, transparent);
+}
+
+@utility bg-info-subtle {
+  background-color: color-mix(in srgb, var(--accent-primary) 10%, transparent);
+}
+
+/* ============================================
+   Interactive State Utilities
+   ============================================ */
+@utility interactive {
+  cursor: pointer;
+  transition: color 150ms, background-color 150ms, transform 150ms, box-shadow 150ms;
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
+@utility pressable {
+  cursor: pointer;
+  transition: transform 100ms ease-out;
+  &:active {
+    transform: scale(0.95);
   }
 }
 
