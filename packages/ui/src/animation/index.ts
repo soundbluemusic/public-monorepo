@@ -1,15 +1,16 @@
 /**
- * @fileoverview UI Animation Components with LazyMotion optimization
+ * @fileoverview CSS-based Animation Components
  * @environment universal
  *
- * 번들 사이즈 최적화: LazyMotion + m 컴포넌트 사용 (32KB → 4.6KB)
+ * Framer Motion → 순수 CSS 애니메이션으로 전환.
+ * 동일한 export API를 유지하여 하위 호환성 보장.
  */
 
-// LazyMotion Provider (앱 루트에서 사용)
-// Core Framer Motion (m = optimized, motion = backward compat alias)
+// Provider (no-op passthrough)
+// Core (호환성 shim)
 // Animation Variants (Presets)
-// Gesture Props
-// Motion Components
+// Gesture Props (CSS로 대체)
+// Motion Components (CSS-based)
 // Interactive Components
 // Layout Components
 export {
