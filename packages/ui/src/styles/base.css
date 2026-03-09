@@ -53,18 +53,37 @@
 }
 
 /* ============================================
-   Typography - Text Wrapping
+   Typography - Text Wrapping & Korean Optimization
    ============================================ */
 h1,
 h2,
 h3,
 h4 {
   text-wrap: balance;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
 }
 
 p,
 li {
   text-wrap: pretty;
+  line-height: 1.7;
+}
+
+/* 한글 줄바꿈 최적화: 단어 중간에서 끊기지 않도록 */
+:lang(ko) {
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+/* 본문 텍스트 크기: 데스크톱에서 더 큰 본문 */
+@media (min-width: 1024px) {
+  article p,
+  article li,
+  .prose p,
+  .prose li {
+    font-size: 1.0625rem; /* 17px */
+  }
 }
 
 /* ============================================

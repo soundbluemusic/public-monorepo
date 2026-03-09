@@ -59,6 +59,19 @@
      ============================================ */
   --spacing-touch-min: 2.75rem; /* 44px WCAG minimum */
   --spacing-touch-comfortable: 3rem; /* 48px */
+
+  /* ============================================
+     Content Width Scale
+     ============================================ */
+  --container-prose: 38rem; /* 608px - 읽기 최적 (한글 기준 ~30자/줄) */
+  --container-content: 48rem; /* 768px - 콘텐츠 영역 */
+  --container-wide: 64rem; /* 1024px - 넓은 레이아웃 */
+
+  /* ============================================
+     Spacing Scale (8px base)
+     ============================================ */
+  --spacing-section: 3rem; /* 48px - 섹션 간 간격 */
+  --spacing-card-gap: 1.5rem; /* 24px - 카드 간 간격 */
 }
 
 /* ============================================
@@ -171,12 +184,15 @@
     background-color: var(--bg-elevated);
     border: 1px solid var(--border-primary);
     cursor: pointer;
-    transition: all 150ms;
+    transition: transform 150ms, box-shadow 150ms, border-color 150ms;
   }
   .card-interactive:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     border-color: var(--border-focus);
+  }
+  .card-interactive:active {
+    transform: translateY(0) scale(0.99);
   }
 
   /* Skeleton Loading */
