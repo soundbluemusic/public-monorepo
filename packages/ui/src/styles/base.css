@@ -37,6 +37,12 @@
 *:focus-visible {
   outline: 2px solid var(--accent-primary);
   outline-offset: 2px;
+  box-shadow: 0 0 0 4px rgba(var(--accent-primary-rgb, 59, 130, 246), 0.2);
+}
+
+/* 다크모드에서 포커스 링 가시성 강화 */
+.dark *:focus-visible {
+  box-shadow: 0 0 0 4px rgba(var(--accent-primary-rgb, 59, 130, 246), 0.35);
 }
 
 /* ============================================
@@ -99,6 +105,25 @@ li {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
+}
+
+/* ============================================
+   High Contrast Mode (강제 대비 모드)
+   ============================================ */
+@media (prefers-contrast: more) {
+  *:focus-visible {
+    outline-width: 3px;
+    outline-offset: 3px;
+  }
+
+  .card,
+  .card-interactive {
+    border-width: 2px;
+  }
+
+  .badge {
+    border: 1px solid currentColor;
+  }
 }
 
 /* ============================================

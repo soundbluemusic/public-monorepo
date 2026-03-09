@@ -66,6 +66,19 @@ export function BottomSheet({ isOpen, onClose, title, children, className }: Bot
     return;
   }, [isOpen]);
 
+  // 포커스 트랩: 열릴 때 시트 내부로 포커스 이동
+  useEffect(() => {
+    if (!isOpen || !sheetRef.current) return;
+    const focusable = sheetRef.current.querySelectorAll<HTMLElement>(
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])',
+    );
+    const firstFocusable = focusable[0];
+    if (firstFocusable) {
+      requestAnimationFrame(() => firstFocusable.focus());
+    }
+    return;
+  }, [isOpen]);
+
   const handleDragStart = useCallback((clientY: number) => {
     dragStartY.current = clientY;
     setIsDragging(true);

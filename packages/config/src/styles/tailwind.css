@@ -556,6 +556,60 @@
   }
 }
 
+/* ============================================
+   Semantic Status Colors
+   ============================================ */
+@utility text-success {
+  color: var(--status-success, #16a34a);
+}
+
+@utility text-warning {
+  color: var(--status-warning, #d97706);
+}
+
+@utility text-error {
+  color: var(--status-error, #dc2626);
+}
+
+@utility text-info {
+  color: var(--status-info, var(--accent-primary));
+}
+
+@utility bg-success-subtle {
+  background-color: color-mix(in srgb, var(--status-success, #16a34a) 10%, transparent);
+}
+
+@utility bg-warning-subtle {
+  background-color: color-mix(in srgb, var(--status-warning, #d97706) 10%, transparent);
+}
+
+@utility bg-error-subtle {
+  background-color: color-mix(in srgb, var(--status-error, #dc2626) 10%, transparent);
+}
+
+@utility bg-info-subtle {
+  background-color: color-mix(in srgb, var(--accent-primary) 10%, transparent);
+}
+
+/* ============================================
+   Interactive State Utilities
+   ============================================ */
+@utility interactive {
+  cursor: pointer;
+  transition: color 150ms, background-color 150ms, transform 150ms, box-shadow 150ms;
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
+@utility pressable {
+  cursor: pointer;
+  transition: transform 100ms ease-out;
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
 /* Print-specific utility classes */
 @utility print-show {
   @media screen {
