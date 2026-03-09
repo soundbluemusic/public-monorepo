@@ -2,6 +2,14 @@
  * @fileoverview UI Patterns
  * @environment universal
  */
+
+export {
+  type CommandGroup,
+  type CommandItem,
+  CommandPalette,
+  type CommandPaletteProps,
+  useCommandPalette,
+} from './CommandPalette';
 export {
   LazyLoad,
   type LazyLoadProps,
