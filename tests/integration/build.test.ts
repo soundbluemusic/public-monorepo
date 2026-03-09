@@ -9,7 +9,7 @@ import * as fs from 'node:fs';
 import * as path from 'node:path';
 import { describe, expect, it } from 'vitest';
 
-const buildDir = path.join(process.cwd(), 'apps/roots/build/client');
+const buildDir = path.join(process.cwd(), 'apps/roots/dist/client');
 const hasBuild = fs.existsSync(buildDir);
 
 describe.skipIf(!hasBuild)('HTML Build Verification', () => {

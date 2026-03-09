@@ -9,8 +9,6 @@ export interface LanguageToggleProps {
   locale: Language;
   /** Current path without locale prefix for building the toggle href */
   currentPath?: string;
-  /** @deprecated Use currentPath instead - kept for backward compatibility */
-  onLocaleChange?: (lang: Language) => void;
 }
 
 /**

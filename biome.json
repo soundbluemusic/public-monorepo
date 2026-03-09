@@ -55,7 +55,6 @@
       "!**/.turbo",
       "!**/.wrangler",
       "!**/node_modules",
-      "!**/.react-router",
       "!**/.vinxi",
       "!**/.output",
       "!**/dist",

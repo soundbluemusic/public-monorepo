@@ -192,8 +192,6 @@ export function getConceptsByDifficulty(level: number): MathConcept[] {
   return allConcepts.filter((c) => c.difficulty === level);
 }
 
-/** @deprecated Use conceptsById instead */
-export const conceptsMap = conceptsById;
 
 // ============================================================================
 // 경량 버전 (LightConcept) - browse 페이지 최적화용

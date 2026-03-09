@@ -275,28 +275,3 @@ export function RouteErrorUI({
   );
 }
 
-// ========================================
-// Legacy Alias (Backward Compatibility)
-// ========================================
-
-/** @deprecated Use RouteErrorUI instead */
-export function RouteErrorFallback() {
-  return (
-    <div
-      role="alert"
-      className="flex min-h-screen flex-col items-center justify-center bg-(--bg-primary) p-8 text-center"
-    >
-      <div className="mb-6 text-6xl" aria-hidden="true">
-        🔍
-      </div>
-      <h1 className="mb-2 text-2xl font-bold text-(--text-primary)">페이지를 찾을 수 없습니다</h1>
-      <p className="mb-6 text-(--text-secondary)">Page not found</p>
-      <a
-        href="/"
-        className="inline-block rounded-lg bg-(--accent-primary) px-6 py-3 text-white transition-colors hover:brightness-110"
-      >
-        홈으로 돌아가기
-      </a>
-    </div>
-  );
-}

@@ -10,7 +10,7 @@ import { describe, expect, it } from 'vitest';
 
 describe('Sensitive Data Protection', () => {
   it('should not expose API keys in built JavaScript files', () => {
-    const jsFiles = glob.sync('apps/roots/build/client/**/*.js', {
+    const jsFiles = glob.sync('apps/roots/dist/client/**/*.js', {
       ignore: ['**/node_modules/**'],
     });
 
@@ -37,7 +37,7 @@ describe('Sensitive Data Protection', () => {
   });
 
   it('should not expose environment variables in built files', () => {
-    const jsFiles = glob.sync('apps/roots/build/client/**/*.js', {
+    const jsFiles = glob.sync('apps/roots/dist/client/**/*.js', {
       ignore: ['**/node_modules/**'],
     });
 
@@ -65,7 +65,7 @@ describe('Sensitive Data Protection', () => {
 
 describe('Source Map Protection', () => {
   it('should not include source maps in production build', () => {
-    const mapFiles = glob.sync('apps/roots/build/client/**/*.map', {
+    const mapFiles = glob.sync('apps/roots/dist/client/**/*.map', {
       ignore: ['**/node_modules/**'],
     });
 
@@ -73,7 +73,7 @@ describe('Source Map Protection', () => {
   });
 
   it('should not reference source maps in JS files', () => {
-    const jsFiles = glob.sync('apps/roots/build/client/**/*.js', {
+    const jsFiles = glob.sync('apps/roots/dist/client/**/*.js', {
       ignore: ['**/node_modules/**'],
     });
 
@@ -89,7 +89,7 @@ describe('Source Map Protection', () => {
 
 describe('Development Files Protection', () => {
   it('should not include .env files in build', () => {
-    const envFiles = glob.sync('apps/roots/build/client/**/.env*', {
+    const envFiles = glob.sync('apps/roots/dist/client/**/.env*', {
       ignore: ['**/node_modules/**'],
     });
 
@@ -97,7 +97,7 @@ describe('Development Files Protection', () => {
   });
 
   it('should not include test files in build', () => {
-    const testFiles = glob.sync('apps/roots/build/client/**/*.{test,spec}.{ts,tsx,js,jsx}', {
+    const testFiles = glob.sync('apps/roots/dist/client/**/*.{test,spec}.{ts,tsx,js,jsx}', {
       ignore: ['**/node_modules/**'],
     });
 
@@ -105,7 +105,7 @@ describe('Development Files Protection', () => {
   });
 
   it('should not include TypeScript source files in build', () => {
-    const tsFiles = glob.sync('apps/roots/build/client/**/*.{ts,tsx}', {
+    const tsFiles = glob.sync('apps/roots/dist/client/**/*.{ts,tsx}', {
       ignore: ['**/node_modules/**', '**/*.d.ts'],
     });
 
@@ -113,7 +113,7 @@ describe('Development Files Protection', () => {
   });
 
   it('should not include config files in build', () => {
-    const buildDir = 'apps/roots/build/client';
+    const buildDir = 'apps/roots/dist/client';
 
     const configFiles = [
       'tsconfig.json',
@@ -133,7 +133,7 @@ describe('Development Files Protection', () => {
 
 describe('Security Headers Files', () => {
   it('_headers file should contain security directives', () => {
-    const headersPath = 'apps/roots/build/client/_headers';
+    const headersPath = 'apps/roots/dist/client/_headers';
 
     if (fs.existsSync(headersPath)) {
       const content = fs.readFileSync(headersPath, 'utf-8');
@@ -145,7 +145,7 @@ describe('Security Headers Files', () => {
   });
 
   it('robots.txt should allow crawlers', () => {
-    const robotsPath = 'apps/roots/build/client/robots.txt';
+    const robotsPath = 'apps/roots/dist/client/robots.txt';
 
     if (fs.existsSync(robotsPath)) {
       const content = fs.readFileSync(robotsPath, 'utf-8');
@@ -159,7 +159,7 @@ describe('Security Headers Files', () => {
 
 describe('Code Quality', () => {
   it('should not contain console.log in production code', () => {
-    const jsFiles = glob.sync('apps/roots/build/client/**/*.js', {
+    const jsFiles = glob.sync('apps/roots/dist/client/**/*.js', {
       ignore: ['**/node_modules/**'],
     });
 
@@ -178,7 +178,7 @@ describe('Code Quality', () => {
   });
 
   it('should not contain debugger statements', () => {
-    const jsFiles = glob.sync('apps/roots/build/client/**/*.js', {
+    const jsFiles = glob.sync('apps/roots/dist/client/**/*.js', {
       ignore: ['**/node_modules/**'],
     });
 

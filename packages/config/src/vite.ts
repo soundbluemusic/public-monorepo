@@ -157,11 +157,6 @@ export const staticOptimizations = {
   ],
 } as const;
 
-/**
- * @deprecated Use staticOptimizations instead
- */
-export const ssgOptimizations = staticOptimizations;
-
 import type { RuntimeCaching } from 'workbox-build';
 
 /**
@@ -256,7 +251,7 @@ export function createAppViteConfig(options: AppViteConfigOptions) {
         },
       }),
       visualizer({
-        filename: './build/stats.html',
+        filename: './dist/stats.html',
         open: false,
         gzipSize: true,
         brotliSize: true,

@@ -9,7 +9,6 @@ import {
   generateSitemapIndex,
   generateSitemaps,
   generateUrlEntries,
-  generateUrlEntry,
   generateXslStylesheet,
   getLocalizedUrl,
 } from '@soundblue/seo/sitemap';
@@ -61,27 +60,29 @@ describe('generateHreflangLinks', () => {
   });
 });
 
-describe('generateUrlEntry', () => {
+describe('generateUrlEntries', () => {
   const siteUrl = 'https://example.com';
   const languages = ['en', 'ko'] as const;
 
-  it('should generate complete URL entry', () => {
-    const entry = generateUrlEntry(siteUrl, '/about', '0.8', 'weekly', languages, '2024-01-01');
+  it('should generate complete URL entries', () => {
+    const entries = generateUrlEntries(siteUrl, '/about', '0.8', 'weekly', languages, '2024-01-01');
+    const joined = entries.join('\n');
 
-    expect(entry).toContain('<url>');
-    expect(entry).toContain('</url>');
-    expect(entry).toContain('<loc>https://example.com/about</loc>');
-    expect(entry).toContain('<lastmod>2024-01-01</lastmod>');
-    expect(entry).toContain('<changefreq>weekly</changefreq>');
-    expect(entry).toContain('<priority>0.8</priority>');
+    expect(joined).toContain('<url>');
+    expect(joined).toContain('</url>');
+    expect(joined).toContain('<loc>https://example.com/about</loc>');
+    expect(joined).toContain('<lastmod>2024-01-01</lastmod>');
+    expect(joined).toContain('<changefreq>weekly</changefreq>');
+    expect(joined).toContain('<priority>0.8</priority>');
   });
 
   it('should include hreflang links', () => {
-    const entry = generateUrlEntry(siteUrl, '/about', '0.8', 'weekly', languages, '2024-01-01');
+    const entries = generateUrlEntries(siteUrl, '/about', '0.8', 'weekly', languages, '2024-01-01');
+    const joined = entries.join('\n');
 
-    expect(entry).toContain('hreflang="en"');
-    expect(entry).toContain('hreflang="ko"');
-    expect(entry).toContain('hreflang="x-default"');
+    expect(joined).toContain('hreflang="en"');
+    expect(joined).toContain('hreflang="ko"');
+    expect(joined).toContain('hreflang="x-default"');
   });
 });
 

@@ -22,7 +22,7 @@ const CONFIG = {
   appName: 'Roots',
   appSubtitle: 'Roots - Math Documentation for Learners',
   outputDir: join(__dirname, '../public'),
-  buildOutputDir: join(__dirname, '../build/client'),
+  buildOutputDir: join(__dirname, '../dist/client'),
 };
 
 const STATIC_PAGES: StaticPage[] = [

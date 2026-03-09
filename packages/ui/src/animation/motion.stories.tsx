@@ -6,7 +6,7 @@ import {
   Pressable,
   ScaleIn,
   SlideUp,
-  Stagger,
+  StaggerContainer,
   StaggerItem,
 } from './motion';
 
@@ -84,7 +84,7 @@ export const StaggerDemo: StoryObj = {
   render: () => {
     const items = ['First item', 'Second item', 'Third item', 'Fourth item'];
     return (
-      <Stagger className="space-y-2" staggerDelay={0.1}>
+      <StaggerContainer className="space-y-2" staggerDelay={0.1}>
         {items.map((item) => (
           <StaggerItem
             key={item}
@@ -93,7 +93,7 @@ export const StaggerDemo: StoryObj = {
             <p className="text-(--text-primary)">{item}</p>
           </StaggerItem>
         ))}
-      </Stagger>
+      </StaggerContainer>
     );
   },
 };

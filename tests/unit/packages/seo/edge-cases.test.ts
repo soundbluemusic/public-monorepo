@@ -21,7 +21,7 @@ import {
   createDynamicUrls,
   generateSitemap,
   generateSitemapIndex,
-  generateUrlEntry,
+  generateUrlEntries,
 } from '@soundblue/seo/sitemap';
 import { generateHreflangLinks, generateSEOMeta, sanitizeSEOString } from '@soundblue/seo/meta';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
@@ -83,7 +83,7 @@ describe('HTML/XML Special Character Escaping', () => {
     const languages = ['en', 'ko'] as const;
 
     it('should escape ampersand in URL path', () => {
-      const entry = generateUrlEntry(
+      const entries = generateUrlEntries(
         siteUrl,
         '/search?q=tom&jerry',
         '0.8',
@@ -91,6 +91,7 @@ describe('HTML/XML Special Character Escaping', () => {
         languages,
         '2024-01-01',
       );
+      const entry = entries.join('\n');
 
       // XML에서 &는 &amp;로 이스케이프되어야 함
       expect(entry).toContain('&amp;');
@@ -417,9 +418,9 @@ describe('URL Validation and Edge Cases', () => {
     const languages = ['en', 'ko'] as const;
 
     it('should generate valid absolute URLs in sitemap', () => {
-      const sitemap = generateSitemap([
-        generateUrlEntry(siteUrl, '/', '1.0', 'daily', languages, '2024-01-01'),
-      ]);
+      const sitemap = generateSitemap(
+        generateUrlEntries(siteUrl, '/', '1.0', 'daily', languages, '2024-01-01'),
+      );
 
       expect(sitemap).toContain('https://');
       expect(sitemap).not.toContain('localhost');
@@ -429,20 +430,20 @@ describe('URL Validation and Edge Cases', () => {
 
     it('should handle very long URLs', () => {
       const longPath = '/category/' + 'a'.repeat(500);
-      const entry = generateUrlEntry(siteUrl, longPath, '0.5', 'monthly', languages);
+      const entry = generateUrlEntries(siteUrl, longPath, '0.5', 'monthly', languages).join('\n');
 
       expect(entry).toContain('<loc>');
       expect(entry).toContain('</loc>');
     });
 
     it('should handle URL with query parameters', () => {
-      const entry = generateUrlEntry(
+      const entry = generateUrlEntries(
         siteUrl,
         '/search?q=test&page=1',
         '0.5',
         'daily',
         languages,
-      );
+      ).join('\n');
 
       // Query parameters should be XML-escaped
       expect(entry).toContain('&amp;');

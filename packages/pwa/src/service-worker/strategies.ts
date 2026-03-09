@@ -149,11 +149,6 @@ export function getDefaultCachingRules(): RuntimeCaching[] {
 }
 
 /**
- * @deprecated Use getDefaultCachingRules instead
- */
-export const getSSGCachingRules = getDefaultCachingRules;
-
-/**
  * Create service worker config for a static app
  */
 export function createDefaultServiceWorkerConfig(
@@ -170,7 +165,3 @@ export function createDefaultServiceWorkerConfig(
   };
 }
 
-/**
- * @deprecated Use createDefaultServiceWorkerConfig instead
- */
-export const createSSGServiceWorkerConfig = createDefaultServiceWorkerConfig;

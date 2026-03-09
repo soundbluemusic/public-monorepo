@@ -29,12 +29,6 @@ import type { Language, LocaleEntry, MeaningEntry } from '../types';
 // Re-export 타입과 카운트
 export { type LightEntry, jsonEntriesCount };
 
-/**
- * @deprecated lightEntries는 더 이상 번들에 포함되지 않습니다.
- * SSR loader에서 loadLightEntriesForSSR()을 사용하세요.
- */
-export const lightEntries: LightEntry[] = [];
-
 // ============================================================================
 // 카테고리별 청크 캐시 (런타임에서 재사용)
 // ============================================================================
@@ -134,9 +128,10 @@ export async function getEntriesByCategoryForLocale(
 // ============================================================================
 
 /**
- * @deprecated Use getEntryByIdForLocale instead for better performance
  * ID로 엔트리 조회 (양쪽 locale 데이터 포함)
  * 두 locale을 모두 로드해서 MeaningEntry 형태로 반환
+ *
+ * 참고: locale별 데이터만 필요한 경우 getEntryByIdForLocale 사용 권장
  */
 export async function getEntryById(id: string): Promise<MeaningEntry | undefined> {
   const categoryId = entryToCategory[id];
@@ -177,8 +172,9 @@ export async function getEntryById(id: string): Promise<MeaningEntry | undefined
 }
 
 /**
- * @deprecated Use getEntriesByCategoryForLocale instead for better performance
  * 카테고리 ID로 엔트리 필터링 (양쪽 locale 데이터 포함)
+ *
+ * 참고: locale별 데이터만 필요한 경우 getEntriesByCategoryForLocale 사용 권장
  */
 export async function getEntriesByCategory(categoryId: string): Promise<MeaningEntry[]> {
   // 양쪽 locale 데이터 로드
@@ -394,58 +390,6 @@ async function loadLightEntriesChunkForSSRByFetch(
     console.error(`Failed to load chunk ${sortType}/${chunkIndex} via ASSETS:`, error);
     return [];
   }
-}
-
-// ============================================================================
-// 경량 버전 (LightEntry) - browse 페이지 최적화용
-// ============================================================================
-
-/**
- * @deprecated 정적 배열은 더 이상 사용하지 않습니다.
- * SSR loader에서 loadLightEntriesChunkForSSR()을 사용하세요.
- */
-export const lightEntriesSortedAlphabetically: LightEntry[] = [];
-export const lightEntriesSortedByCategory: LightEntry[] = [];
-export const lightEntriesSortedRecent: LightEntry[] = [];
-
-/**
- * @deprecated 정적 인덱스는 더 이상 사용하지 않습니다.
- */
-export const alphabeticalIndex = new Map<string, number>();
-export const categoryIndex = new Map<string, number>();
-export const recentIndex = new Map<string, number>();
-
-// ============================================================================
-// 검색 (MiniSearch 인덱스 사용 권장)
-// ============================================================================
-
-/**
- * @deprecated MiniSearch 인덱스를 사용하세요 (/data/search-index.json)
- */
-export function searchLightEntries(_query: string, _locale: Language = 'ko'): LightEntry[] {
-  console.warn('searchLightEntries is deprecated. Use MiniSearch index instead.');
-  return [];
-}
-
-/**
- * @deprecated SSR loader에서 직접 로드하세요
- */
-export function getFeaturedLightEntries(_count = 6): LightEntry[] {
-  console.warn('getFeaturedLightEntries is deprecated. Use loadLightEntriesChunkForSSR instead.');
-  return [];
-}
-
-// ============================================================================
-// Deprecated: 동기 함수들 (하위 호환성)
-// ============================================================================
-
-/**
- * @deprecated Use getEntryById (async) instead
- * 동기 조회는 더 이상 지원하지 않습니다.
- */
-export function getEntryByIdSync(_id: string): MeaningEntry | undefined {
-  console.warn('getEntryByIdSync is deprecated. Use getEntryById (async) instead.');
-  return undefined;
 }
 
 export type { EntryInput, EntryMap } from './helpers';

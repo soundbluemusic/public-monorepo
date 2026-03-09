@@ -8,10 +8,8 @@ import {
   BUNDLE_STRATEGY,
   type CacheStrategy,
   createDefaultServiceWorkerConfig,
-  createSSGServiceWorkerConfig, // deprecated alias
   DATA_STRATEGY,
   getDefaultCachingRules,
-  getSSGCachingRules, // deprecated alias
   PAGE_STRATEGY,
   type RuntimeCaching,
   STATIC_ASSETS_STRATEGY,
@@ -171,20 +169,17 @@ describe('@soundblue/pwa/service-worker', () => {
       expect(rules).toHaveLength(4);
     });
 
-    it('should have deprecated alias getSSGCachingRules', () => {
-      expect(getSSGCachingRules).toBe(getDefaultCachingRules);
-    });
   });
 
   describe('createDefaultServiceWorkerConfig', () => {
     it('should create config with correct globDirectory', () => {
-      const config = createDefaultServiceWorkerConfig('./build/client', './build/sw.js');
-      expect(config.globDirectory).toBe('./build/client');
+      const config = createDefaultServiceWorkerConfig('./dist/client', './dist/sw.js');
+      expect(config.globDirectory).toBe('./dist/client');
     });
 
     it('should create config with correct swDest', () => {
-      const config = createDefaultServiceWorkerConfig('./build/client', './build/sw.js');
-      expect(config.swDest).toBe('./build/sw.js');
+      const config = createDefaultServiceWorkerConfig('./dist/client', './dist/sw.js');
+      expect(config.swDest).toBe('./dist/sw.js');
     });
 
     it('should include comprehensive glob patterns', () => {
@@ -210,9 +205,6 @@ describe('@soundblue/pwa/service-worker', () => {
       expect(config.clientsClaim).toBe(true);
     });
 
-    it('should have deprecated alias createSSGServiceWorkerConfig', () => {
-      expect(createSSGServiceWorkerConfig).toBe(createDefaultServiceWorkerConfig);
-    });
   });
 
   describe('CacheStrategy type', () => {

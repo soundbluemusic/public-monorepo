@@ -3,7 +3,7 @@
  * @environment build-only
  *
  * 100% build-only package for SEO-related functionality:
- * - Meta tag generation for React Router v7
+ * - TanStack Start head 팩토리
  * - Sitemap generation with hreflang
  * - Robots.txt generation
  * - JSON-LD structured data
@@ -11,13 +11,11 @@
  * This package uses Node.js fs and should never be imported in client code.
  */
 
-// Meta tag utilities (React Router v7)
-// TanStack Start head 팩토리 (신규)
+// Meta tag utilities (TanStack Start head 팩토리)
 export {
   dynamicHeadFactory,
   dynamicHeadFactoryEn,
   dynamicHeadFactoryKo,
-  dynamicMetaFactory,
   generateHreflangLinks,
   generateSEOMeta,
   type HeadConfig,
@@ -30,7 +28,6 @@ export {
   type LocalizedMeta,
   type MetaData,
   type MetaDescriptor,
-  metaFactory,
   type SEOMetaOptions,
   sanitizeSEOString,
 } from './meta';
@@ -49,7 +46,7 @@ export {
   generateSitemap,
   generateSitemapIndex,
   generateSitemaps,
-  generateUrlEntry,
+  generateUrlEntries,
   generateXslStylesheet,
   getLocalizedUrl,
   type SitemapConfig,
