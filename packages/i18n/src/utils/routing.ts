@@ -21,7 +21,7 @@
  * - clientLoader: `getLocaleFromPath(window.location.pathname)`
  *
  * @module @soundblue/i18n/utils/routing
- * @see {@link https://reactrouter.com/start/framework/routing} React Router v7 Routing
+ * @see {@link https://tanstack.com/router/latest/docs/framework/react/routing/file-based-routing} TanStack Router File-Based Routing
  */
 import { DEFAULT_LANGUAGE, type Language } from '../core/config';
 
@@ -75,12 +75,6 @@ export function getLocaleFromPath(pathname: string): Language {
   if (pathname.startsWith('/ko/') || pathname === '/ko') return 'ko';
   return DEFAULT_LANGUAGE;
 }
-
-/**
- * @deprecated `getLocaleFromPath`를 사용하세요. 동일한 기능이며 이름이 더 명확합니다.
- * @see {@link getLocaleFromPath}
- */
-export const getLanguageFromPath = getLocaleFromPath;
 
 /**
  * 주어진 URL 경로가 한국어 경로인지 확인합니다.
@@ -154,12 +148,6 @@ export function stripLocaleFromPath(pathname: string): string {
   if (pathname === '/ko') return '/';
   return pathname;
 }
-
-/**
- * @deprecated `stripLocaleFromPath`를 사용하세요. 동일한 기능이며 이름이 더 명확합니다.
- * @see {@link stripLocaleFromPath}
- */
-export const stripLocalePrefix = stripLocaleFromPath;
 
 /**
  * 주어진 로케일에 맞는 URL 경로를 생성합니다.
@@ -323,7 +311,7 @@ export function getLanguageFromParams(params: { lang?: string }): Language {
  * routes.ts에서 정의하는 라우트 설정 객체의 구조입니다.
  * `extractStaticRoutes()` 함수가 이 구조를 파싱합니다.
  *
- * @see {@link https://reactrouter.com/start/framework/routing} React Router v7 Routing
+ * @see {@link https://tanstack.com/router/latest/docs/framework/react/routing/file-based-routing} TanStack Router File-Based Routing
  * @internal 외부에서 직접 사용하지 않습니다
  */
 interface RouteConfigEntry {

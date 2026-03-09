@@ -8,8 +8,7 @@
 // Confirm Dialog
 export { ConfirmDialog, type ConfirmDialogProps, type ConfirmDialogVariant } from './ConfirmDialog';
 // Error Boundary (React Class Component)
-// Route Error UI (React Router용)
-// Legacy alias
+// Route Error UI
 export {
   classifyError,
   ErrorBoundary,
@@ -17,7 +16,6 @@ export {
   ErrorFallbackUI,
   type ErrorType,
   isRouteErrorResponse,
-  RouteErrorFallback,
   type RouteErrorResponse,
   RouteErrorUI,
 } from './ErrorBoundary';

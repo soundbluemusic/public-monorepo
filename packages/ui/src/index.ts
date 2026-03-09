@@ -16,7 +16,7 @@ export {
   Pressable,
   ScaleIn,
   SlideUp,
-  Stagger,
+  StaggerContainer,
   StaggerItem,
 } from './animation';
 
@@ -26,7 +26,7 @@ export {
   ErrorBoundary,
   type ErrorBoundaryProps,
   ErrorFallbackUI,
-  RouteErrorFallback,
+  RouteErrorUI,
 } from './feedback';
 
 // Patterns

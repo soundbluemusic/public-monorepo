@@ -30,7 +30,6 @@ export {
   ScaleIn,
   SlideDown,
   SlideUp,
-  Stagger, // Legacy alias
   StaggerContainer,
   StaggerItem,
   scaleIn,

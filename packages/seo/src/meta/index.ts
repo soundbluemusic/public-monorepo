@@ -3,15 +3,7 @@
  * @environment build-only
  */
 
-// React Router v7 meta 팩토리 (기존)
-export {
-  dynamicMetaFactory,
-  type LocalizedMeta,
-  type MetaData,
-  metaFactory,
-} from './factory';
-
-// TanStack Start head 팩토리 (신규)
+// TanStack Start head 팩토리
 export {
   dynamicHeadFactory,
   dynamicHeadFactoryEn,
@@ -22,6 +14,8 @@ export {
   headFactory,
   headFactoryEn,
   headFactoryKo,
+  type LocalizedMeta,
+  type MetaData,
 } from './head-factory';
 
 // SEO 유틸리티

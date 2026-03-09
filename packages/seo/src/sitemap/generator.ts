@@ -51,7 +51,7 @@ export interface SitemapConfig {
   appSubtitle: string;
   /** Output directory for generated files (public/) */
   outputDir: string;
-  /** Build output directory (build/client/) - if exists, files are written here too */
+  /** Build output directory (dist/client/) - if exists, files are written here too */
   buildOutputDir?: string;
   /**
    * Whether to add trailing slash to dynamic URLs
@@ -133,22 +133,6 @@ ${generateHreflangLinks(siteUrl, path, languages, defaultLang)}
     <priority>${priority}</priority>
   </url>`;
   });
-}
-
-/**
- * @deprecated Use generateUrlEntries instead
- * Generate a single URL entry for sitemap (only default language)
- */
-export function generateUrlEntry(
-  siteUrl: string,
-  path: string,
-  priority: string,
-  changefreq: string,
-  languages: readonly string[],
-  today: string,
-): string {
-  // For backward compatibility, return joined entries
-  return generateUrlEntries(siteUrl, path, priority, changefreq, languages, today).join('\n');
 }
 
 /**
@@ -308,7 +292,7 @@ function writeToDirectories(
   // Always write to public/
   writeFileSync(join(outputDir, filename), content, 'utf-8');
 
-  // Also write to build/client/ if it exists
+  // Also write to dist/client/ if it exists
   if (buildOutputDir && existsSync(buildOutputDir)) {
     writeFileSync(join(buildOutputDir, filename), content, 'utf-8');
   }

@@ -6,7 +6,19 @@
  * React Router v7의 meta 함수와 유사하지만 TanStack Start 형식에 맞게 변환합니다.
  */
 
-import type { LocalizedMeta, MetaData } from './factory';
+/** Meta 데이터 타입 */
+export interface MetaData {
+  title: string;
+  description?: string;
+  /** 키워드 (Google은 무시하지만 Bing/Yandex 등에서 참고 가능) */
+  keywords?: string[];
+}
+
+/** 다국어 Meta 데이터 타입 */
+export interface LocalizedMeta {
+  ko: MetaData;
+  en: MetaData;
+}
 
 /**
  * TanStack Start head meta 타입

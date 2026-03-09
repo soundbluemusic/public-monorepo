@@ -100,7 +100,7 @@ export async function loadConceptsByField(field: string): Promise<MathConcept[]>
 
 /**
  * 전체 개념 데이터 로드 (하위 호환성 - 모든 필드 로드)
- * @deprecated 가능하면 loadConceptsByField 또는 getConceptById 사용
+ * 참고: 가능하면 loadConceptsByField 또는 getConceptById 사용 권장
  */
 export async function loadConcepts(): Promise<MathConcept[]> {
   if (conceptsData) {

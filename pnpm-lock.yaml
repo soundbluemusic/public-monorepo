@@ -616,9 +616,6 @@ importers:
       '@soundblue/core':
         specifier: workspace:*
         version: link:../core
-      '@soundblue/seo':
-        specifier: workspace:*
-        version: link:../seo
       '@tanstack/react-router':
         specifier: ^1.157.2
         version: 1.157.14(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
@@ -698,9 +695,6 @@ importers:
       '@soundblue/core':
         specifier: workspace:*
         version: link:../core
-      '@soundblue/features':
-        specifier: workspace:*
-        version: link:../features
       '@tanstack/react-table':
         specifier: ^8.21.3
         version: 8.21.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)

@@ -9,7 +9,6 @@ export {
   generateSitemapIndex,
   generateSitemaps,
   generateUrlEntries,
-  generateUrlEntry,
   generateXslStylesheet,
   getLocalizedUrl,
   type SitemapConfig,

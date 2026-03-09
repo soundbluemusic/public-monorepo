@@ -378,9 +378,3 @@ export const Collapsible = forwardRef<HTMLDivElement, CollapsibleProps>(
 );
 Collapsible.displayName = 'Collapsible';
 
-// ========================================
-// Legacy Aliases (Backward Compatibility)
-// ========================================
-
-/** @deprecated Use StaggerContainer instead */
-export const Stagger = StaggerContainer;

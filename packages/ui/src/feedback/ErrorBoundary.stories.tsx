@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import { ErrorFallbackUI, RouteErrorFallback } from './ErrorBoundary';
+import { ErrorFallbackUI, RouteErrorUI } from './ErrorBoundary';
 
 const meta = {
   title: 'Feedback/ErrorBoundary',
@@ -25,5 +25,5 @@ export const ErrorFallbackNoError: StoryObj = {
 };
 
 export const RouteNotFound: StoryObj = {
-  render: () => <RouteErrorFallback />,
+  render: () => <RouteErrorUI error={{ status: 404, statusText: 'Not Found' }} />,
 };

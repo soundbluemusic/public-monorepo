@@ -16,14 +16,6 @@ export {
   type TranslationParams,
 } from './core/config';
 
-// Meta
-export {
-  dynamicMetaFactory,
-  type LocalizedMeta,
-  type MetaData,
-  metaFactory,
-} from './meta';
-
 // React
 export { getLanguageFromParams, I18nProvider, useI18n } from './react';
 
@@ -33,9 +25,7 @@ export {
   extractStaticRoutes,
   generateI18nRoutes,
   generateLocalizedPaths,
-  getLanguageFromPath,
   getLocaleFromPath,
   isKoreanPath,
   stripLocaleFromPath,
-  stripLocalePrefix,
 } from './utils/routing';

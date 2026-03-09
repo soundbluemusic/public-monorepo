@@ -27,10 +27,8 @@ export {
   BUNDLE_STRATEGY,
   type CacheStrategy,
   createDefaultServiceWorkerConfig,
-  createSSGServiceWorkerConfig, // deprecated alias
   DATA_STRATEGY,
   getDefaultCachingRules,
-  getSSGCachingRules, // deprecated alias
   PAGE_STRATEGY,
   type RuntimeCaching,
   type ServiceWorkerConfig,
