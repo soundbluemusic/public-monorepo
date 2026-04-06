@@ -36,18 +36,21 @@ export const Route = createFileRoute('/category/$categoryId')({
     }
 
     const searchParams = new URLSearchParams(location.search);
-    const page = Math.max(1, Number.parseInt(searchParams.get('page') || '1', 10) || 1);
+    const rawPage = Math.max(1, Number.parseInt(searchParams.get('page') || '1', 10) || 1);
 
     const { entries, totalCount } = await fetchEntriesByCategoryPaginated({
-      data: { categoryId: params.categoryId, locale: 'en', page, pageSize: PAGE_SIZE },
+      data: { categoryId: params.categoryId, locale: 'en', page: rawPage, pageSize: PAGE_SIZE },
     });
+
+    const totalPages = Math.ceil(totalCount / PAGE_SIZE);
+    const page = Math.min(rawPage, Math.max(1, totalPages));
 
     return {
       category,
       entries,
       currentPage: page,
       totalCount,
-      totalPages: Math.ceil(totalCount / PAGE_SIZE),
+      totalPages,
     };
   },
   head: dynamicHeadFactoryEn<LoaderData>(
