@@ -11,6 +11,7 @@
  */
 
 import { createServerFn } from '@tanstack/react-start';
+import { z } from 'zod';
 import type { LocaleEntry } from '../data/types';
 import {
   getAllTagsFromD1,
@@ -27,27 +28,56 @@ import {
   type TagWithCount,
 } from './d1';
 
+// ============================================================================
+// 커스텀 에러
+// ============================================================================
+
+/** D1 데이터베이스 접근 불가 시 발생하는 에러 */
+export class D1UnavailableError extends Error {
+  constructor(message = 'D1 database is not available') {
+    super(message);
+    this.name = 'D1UnavailableError';
+  }
+}
+
 /**
  * 서버에서 D1 데이터베이스에 접근 (cloudflare:workers env 사용)
  * 주의: 이 import는 빌드 시점에 external로 처리되어 런타임에서만 resolve됩니다.
+ * @throws {D1UnavailableError} D1 바인딩에 접근할 수 없을 때
  */
-function getD1Database(): D1Database | null {
+function getD1Database(): D1Database {
   try {
     // Dynamic import to defer resolution to runtime
     // eslint-disable-next-line @typescript-eslint/no-require-imports
     const { env } = require('cloudflare:workers') as { env: { DB?: D1Database } };
-    return env.DB ?? null;
+    if (!env.DB) {
+      throw new D1UnavailableError('D1 database binding (DB) is not configured');
+    }
+    return env.DB;
   } catch (error) {
-    console.error('[D1Server] Failed to access Cloudflare env:', error);
-    return null;
+    if (error instanceof D1UnavailableError) {
+      throw error;
+    }
+    throw new D1UnavailableError(
+      `Failed to access Cloudflare env: ${error instanceof Error ? error.message : String(error)}`,
+    );
   }
 }
 
-/** Entry 조회 입력 타입 */
-type FetchEntryInput = { entryId: string; locale: 'en' | 'ko' };
+// ============================================================================
+// Zod 입력 스키마
+// ============================================================================
 
-/** 카테고리별 Entry ID 조회 입력 타입 */
-type FetchEntryIdsByCategoryInput = { categoryId: string };
+/** Entry 조회 입력 스키마 */
+const FetchEntryInputSchema = z.object({
+  entryId: z.string().min(1).max(200),
+  locale: z.enum(['en', 'ko']),
+});
+
+/** 카테고리별 Entry ID 조회 입력 스키마 */
+const FetchEntryIdsByCategoryInputSchema = z.object({
+  categoryId: z.string().min(1).max(100),
+});
 
 /**
  * Entry를 D1에서 로드하는 서버 함수
@@ -56,16 +86,10 @@ type FetchEntryIdsByCategoryInput = { categoryId: string };
  * const entry = await fetchEntryFromD1({ data: { entryId: 'hello', locale: 'ko' } });
  */
 export const fetchEntryFromD1 = createServerFn({ method: 'POST' })
-  .inputValidator((data: FetchEntryInput) => data)
+  .inputValidator(FetchEntryInputSchema)
   .handler(async ({ data }): Promise<LocaleEntry | null> => {
     const { entryId, locale } = data;
     const db = getD1Database();
-
-    if (!db) {
-      console.error('[fetchEntryFromD1] D1 database not available');
-      return null;
-    }
-
     return await getEntryByIdFromD1(db, entryId, locale);
   });
 
@@ -78,12 +102,6 @@ export const fetchEntryFromD1 = createServerFn({ method: 'POST' })
 export const fetchEntryCountsFromD1 = createServerFn().handler(
   async (): Promise<Map<string, number>> => {
     const db = getD1Database();
-
-    if (!db) {
-      console.error('[fetchEntryCountsFromD1] D1 database not available');
-      return new Map();
-    }
-
     return await getEntryCountsFromD1(db);
   },
 );
@@ -96,12 +114,6 @@ export const fetchEntryCountsFromD1 = createServerFn().handler(
  */
 export const fetchCategoriesFromD1 = createServerFn().handler(async () => {
   const db = getD1Database();
-
-  if (!db) {
-    console.error('[fetchCategoriesFromD1] D1 database not available');
-    return [];
-  }
-
   return await getCategoriesFromD1(db);
 });
 
@@ -112,29 +124,26 @@ export const fetchCategoriesFromD1 = createServerFn().handler(async () => {
  * const ids = await fetchEntryIdsByCategoryFromD1({ data: { categoryId: 'greetings' } });
  */
 export const fetchEntryIdsByCategoryFromD1 = createServerFn({ method: 'POST' })
-  .inputValidator((data: FetchEntryIdsByCategoryInput) => data)
+  .inputValidator(FetchEntryIdsByCategoryInputSchema)
   .handler(async ({ data }): Promise<string[]> => {
     const { categoryId } = data;
     const db = getD1Database();
-
-    if (!db) {
-      console.error('[fetchEntryIdsByCategoryFromD1] D1 database not available');
-      return [];
-    }
-
     return await getEntryIdsByCategoryFromD1(db, categoryId);
   });
 
-/** 카테고리별 Entry 조회 입력 타입 */
-type FetchEntriesByCategoryInput = { categoryId: string; locale: 'en' | 'ko' };
+/** 카테고리별 Entry 조회 입력 스키마 */
+const FetchEntriesByCategoryInputSchema = z.object({
+  categoryId: z.string().min(1).max(100),
+  locale: z.enum(['en', 'ko']),
+});
 
-/** 카테고리별 Entry 페이지네이션 조회 입력 타입 */
-type FetchEntriesByCategoryPaginatedInput = {
-  categoryId: string;
-  locale: 'en' | 'ko';
-  page: number;
-  pageSize: number;
-};
+/** 카테고리별 Entry 페이지네이션 조회 입력 스키마 */
+const FetchEntriesByCategoryPaginatedInputSchema = z.object({
+  categoryId: z.string().min(1).max(100),
+  locale: z.enum(['en', 'ko']),
+  page: z.number().int().min(1).max(10000),
+  pageSize: z.number().int().min(1).max(100),
+});
 
 /**
  * 카테고리별 Entry 목록을 D1에서 로드하는 서버 함수
@@ -143,16 +152,10 @@ type FetchEntriesByCategoryPaginatedInput = {
  * const entries = await fetchEntriesByCategoryFromD1({ data: { categoryId: 'greetings', locale: 'ko' } });
  */
 export const fetchEntriesByCategoryFromD1 = createServerFn({ method: 'POST' })
-  .inputValidator((data: FetchEntriesByCategoryInput) => data)
+  .inputValidator(FetchEntriesByCategoryInputSchema)
   .handler(async ({ data }): Promise<LocaleEntry[]> => {
     const { categoryId, locale } = data;
     const db = getD1Database();
-
-    if (!db) {
-      console.error('[fetchEntriesByCategoryFromD1] D1 database not available');
-      return [];
-    }
-
     return await getEntriesByCategoryFromD1(db, categoryId, locale);
   });
 
@@ -160,21 +163,17 @@ export const fetchEntriesByCategoryFromD1 = createServerFn({ method: 'POST' })
  * 카테고리별 Entry 목록을 페이지네이션하여 D1에서 로드하는 서버 함수
  */
 export const fetchEntriesByCategoryPaginated = createServerFn({ method: 'POST' })
-  .inputValidator((data: FetchEntriesByCategoryPaginatedInput) => data)
+  .inputValidator(FetchEntriesByCategoryPaginatedInputSchema)
   .handler(async ({ data }): Promise<PaginatedEntries> => {
     const { categoryId, locale, page, pageSize } = data;
     const db = getD1Database();
-
-    if (!db) {
-      console.error('[fetchEntriesByCategoryPaginated] D1 database not available');
-      return { entries: [], totalCount: 0 };
-    }
-
     return await getEntriesByCategoryPaginatedFromD1(db, categoryId, locale, page, pageSize);
   });
 
-/** 동음이의어 조회 입력 타입 */
-type FetchHomonymsInput = { korean: string };
+/** 동음이의어 조회 입력 스키마 */
+const FetchHomonymsInputSchema = z.object({
+  korean: z.string().min(1).max(200),
+});
 
 /**
  * 동음이의어(같은 한글, 다른 ID)를 D1에서 로드하는 서버 함수
@@ -183,16 +182,10 @@ type FetchHomonymsInput = { korean: string };
  * const homonyms = await fetchHomonyms({ data: { korean: '안녕' } });
  */
 export const fetchHomonyms = createServerFn({ method: 'POST' })
-  .inputValidator((data: FetchHomonymsInput) => data)
+  .inputValidator(FetchHomonymsInputSchema)
   .handler(async ({ data }): Promise<HomonymEntryFromD1[]> => {
     const { korean } = data;
     const db = getD1Database();
-
-    if (!db) {
-      console.error('[fetchHomonyms] D1 database not available');
-      return [];
-    }
-
     return await getHomonymsByKoreanFromD1(db, korean);
   });
 
@@ -200,23 +193,20 @@ export const fetchHomonyms = createServerFn({ method: 'POST' })
 // 태그 관련 서버 함수
 // ============================================================================
 
-/** 태그별 Entry 조회 입력 타입 */
-type FetchEntriesByTagInput = { tag: string; locale: 'en' | 'ko' };
+/** 태그별 Entry 조회 입력 스키마 */
+const FetchEntriesByTagInputSchema = z.object({
+  tag: z.string().min(1).max(200),
+  locale: z.enum(['en', 'ko']),
+});
 
 /**
  * 태그별 Entry 목록을 D1에서 로드하는 서버 함수
  */
 export const fetchEntriesByTagFromD1 = createServerFn({ method: 'POST' })
-  .inputValidator((data: FetchEntriesByTagInput) => data)
+  .inputValidator(FetchEntriesByTagInputSchema)
   .handler(async ({ data }): Promise<LocaleEntry[]> => {
     const { tag, locale } = data;
     const db = getD1Database();
-
-    if (!db) {
-      console.error('[fetchEntriesByTagFromD1] D1 database not available');
-      return [];
-    }
-
     return await getEntriesByTagFromD1(db, tag, locale);
   });
 
@@ -225,11 +215,5 @@ export const fetchEntriesByTagFromD1 = createServerFn({ method: 'POST' })
  */
 export const fetchAllTagsFromD1 = createServerFn().handler(async (): Promise<TagWithCount[]> => {
   const db = getD1Database();
-
-  if (!db) {
-    console.error('[fetchAllTagsFromD1] D1 database not available');
-    return [];
-  }
-
   return await getAllTagsFromD1(db);
 });
