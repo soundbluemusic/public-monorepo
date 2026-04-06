@@ -6,16 +6,14 @@ import { headFactory } from '@soundblue/seo/meta';
 import { ProgressBar } from '@soundblue/ui/primitives';
 import { createFileRoute, Link } from '@tanstack/react-router';
 import { FolderOpen, Sparkles, TrendingUp } from 'lucide-react';
-import { useEffect, useState } from 'react';
 import { Layout } from '@/components/layout';
 import { categories as allCategories } from '@/data/categories';
-import { getEntryById, type LightEntry } from '@/data/entries';
-import type { Category, MeaningEntry } from '@/data/types';
+import type { Category, LocaleEntry } from '@/data/types';
 import { useStudyData } from '@/hooks';
 import { type Language, useI18n } from '@/i18n';
-import { fetchEntryCountsFromD1 } from '@/services/d1-server';
+import { fetchDailyWordFromD1, fetchEntryCountsFromD1 } from '@/services/d1-server';
 
-const getPronunciation = (entry: MeaningEntry, locale: Language): string | undefined => {
+const getPronunciation = (entry: LocaleEntry, locale: Language): string | undefined => {
   switch (locale) {
     case 'en':
       return entry.romanization;
@@ -28,6 +26,8 @@ interface LoaderData {
   categories: Category[];
   categoryCounts: Record<string, number>;
   totalEntries: number;
+  dbError: boolean;
+  dailyWord: LocaleEntry | null;
 }
 
 export const Route = createFileRoute('/ko/')({
@@ -35,6 +35,7 @@ export const Route = createFileRoute('/ko/')({
     // TanStack Start: createServerFn을 통해 D1에서 카테고리별 엔트리 수 로드
     const categoryCounts: Record<string, number> = {};
     let totalEntries = 0;
+    let dbError = false;
 
     try {
       const countsMap = await fetchEntryCountsFromD1();
@@ -46,18 +47,28 @@ export const Route = createFileRoute('/ko/')({
       console.error('[HomePageKo] fetchEntryCountsFromD1 failed:', error);
     }
 
-    // D1에서 데이터가 없으면 fallback
+    // D1에서 데이터가 없으면 dbError 플래그 설정 (하드코딩 폴백 대신)
     if (totalEntries === 0) {
+      dbError = true;
       for (const cat of allCategories) {
         categoryCounts[cat.id] = 0;
       }
-      totalEntries = 16394;
+    }
+
+    // 오늘의 단어를 D1에서 서버 사이드 로드
+    let dailyWord: LocaleEntry | null = null;
+    try {
+      dailyWord = await fetchDailyWordFromD1({ data: { locale: 'ko' } });
+    } catch (error) {
+      console.error('[HomePageKo] fetchDailyWordFromD1 failed:', error);
     }
 
     return {
       categories: allCategories,
       categoryCounts,
       totalEntries,
+      dbError,
+      dailyWord,
     };
   },
   head: headFactory(
@@ -85,43 +96,9 @@ export const Route = createFileRoute('/ko/')({
 });
 
 function HomePageKo() {
-  const { categories: cats, categoryCounts, totalEntries } = Route.useLoaderData();
+  const { categories: cats, categoryCounts, totalEntries, dbError, dailyWord } =
+    Route.useLoaderData();
   const { locale, t, localePath } = useI18n();
-
-  const [dailyWord, setDailyWord] = useState<MeaningEntry | null>(null);
-  const [isClient, setIsClient] = useState(false);
-
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
-
-  useEffect(() => {
-    if (!isClient) return;
-
-    const loadDailyWord = async () => {
-      try {
-        const today = new Date();
-        const dayOfYear = Math.floor(
-          (today.getTime() - new Date(today.getFullYear(), 0, 0).getTime()) / 86400000,
-        );
-
-        const response = await fetch('/data/browse/alphabetical/chunk-0.json');
-        const chunk = (await response.json()) as { entries: LightEntry[] };
-        const lightEntries: LightEntry[] = chunk.entries;
-        const randomIndex = dayOfYear % lightEntries.length;
-        const dailyWordLight = lightEntries[randomIndex];
-
-        if (dailyWordLight) {
-          const entry = await getEntryById(dailyWordLight.id);
-          setDailyWord(entry ?? null);
-        }
-      } catch (error) {
-        console.error('[HomePage] Failed to load daily word:', error);
-      }
-    };
-
-    loadDailyWord();
-  }, [isClient]);
 
   const { overallProgress, categoryProgress } = useStudyData({
     totalEntries,
@@ -138,6 +115,15 @@ function HomePageKo() {
         </h1>
         <p className="text-(--text-secondary)">{t('heroSubtitle')}</p>
       </div>
+
+      {/* DB Error Banner */}
+      {dbError && (
+        <div className="mb-4 p-3 rounded-lg bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 text-sm text-amber-800 dark:text-amber-200" role="alert">
+          {locale === 'ko'
+            ? '데이터를 불러오는 중 문제가 발생했습니다. 잠시 후 다시 시도해주세요.'
+            : 'There was a problem loading data. Please try again later.'}
+        </div>
+      )}
 
       {/* Overall Progress */}
       <div
@@ -176,7 +162,7 @@ function HomePageKo() {
                 {getPronunciation(dailyWord, locale)}
               </p>
               <p className="text-xl text-(--accent-primary)">
-                {dailyWord.translations[locale].word}
+                {dailyWord.translation.word}
               </p>
             </div>
           </Link>

@@ -27,6 +27,7 @@ import {
   type PaginatedEntries,
   type TagWithCount,
 } from './d1';
+import { type D1EntryRow, rowToLocaleEntry } from './entry-converter';
 
 // ============================================================================
 // 커스텀 에러
@@ -217,3 +218,39 @@ export const fetchAllTagsFromD1 = createServerFn().handler(async (): Promise<Tag
   const db = getD1Database();
   return await getAllTagsFromD1(db);
 });
+
+/**
+ * 오늘의 단어를 D1에서 로드하는 서버 함수
+ * dayOfYear를 시드로 사용하여 매일 다른 단어 선택
+ */
+export const fetchDailyWordFromD1 = createServerFn({ method: 'POST' })
+  .inputValidator(z.object({ locale: z.enum(['en', 'ko']) }))
+  .handler(async ({ data }): Promise<LocaleEntry | null> => {
+    const db = getD1Database();
+
+    try {
+      const countResult = await db
+        .prepare('SELECT COUNT(*) as count FROM entries')
+        .first<{ count: number }>();
+      const totalCount = countResult?.count ?? 0;
+      if (totalCount === 0) return null;
+
+      const today = new Date();
+      const dayOfYear = Math.floor(
+        (today.getTime() - new Date(today.getFullYear(), 0, 0).getTime()) / 86400000,
+      );
+      const offset = dayOfYear % totalCount;
+
+      const row = await db
+        .prepare('SELECT * FROM entries LIMIT 1 OFFSET ?')
+        .bind(offset)
+        .first<D1EntryRow>();
+
+      if (!row) return null;
+
+      return rowToLocaleEntry(row, data.locale);
+    } catch (error) {
+      console.error('[fetchDailyWordFromD1] Failed:', error);
+      return null;
+    }
+  });
