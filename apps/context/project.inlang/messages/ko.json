@@ -256,5 +256,9 @@
   "toast.offlineDataDeleted": "오프라인 데이터가 삭제되었습니다",
   "toast.deleteFailed": "삭제에 실패했습니다",
   "toast.colorCodeCopied": "색상 코드가 복사되었습니다",
-  "toast.copyFailed": "복사에 실패했습니다"
+  "toast.copyFailed": "복사에 실패했습니다",
+  "myProgress": "내 학습 현황",
+  "wordOfTheDay": "오늘의 단어",
+  "learnByCategory": "카테고리별 학습",
+  "dbErrorMessage": "데이터를 불러오는 중 문제가 발생했습니다. 잠시 후 다시 시도해주세요."
 }
