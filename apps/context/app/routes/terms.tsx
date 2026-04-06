@@ -1,12 +1,11 @@
 /**
- * @fileoverview 이용약관 페이지 (TanStack Start)
+ * @fileoverview 이용약관 페이지 - 영어 버전 (TanStack Start)
  */
 
 import { headFactory } from '@soundblue/seo/meta';
 import { createFileRoute } from '@tanstack/react-router';
-import { Layout } from '@/components/layout';
+import { LegalPageContent } from '@/components/pages/LegalPageContent';
 import { APP_CONFIG } from '@/config';
-import { useI18n } from '@/i18n';
 
 export const Route = createFileRoute('/terms')({
   head: headFactory(
@@ -16,20 +15,5 @@ export const Route = createFileRoute('/terms')({
     },
     APP_CONFIG.baseUrl,
   ),
-  component: TermsPage,
+  component: () => <LegalPageContent titleKey="termsTitle" contentKey="termsContent" />,
 });
-
-function TermsPage() {
-  const { t } = useI18n();
-
-  return (
-    <Layout>
-      <h1 className="text-2xl sm:text-3xl font-bold text-(--text-primary) mb-6">
-        {t('termsTitle')}
-      </h1>
-      <div className="text-(--text-secondary)">
-        <p>{t('termsContent')}</p>
-      </div>
-    </Layout>
-  );
-}
