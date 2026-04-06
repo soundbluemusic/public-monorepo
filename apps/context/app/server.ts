@@ -13,8 +13,12 @@ import tanstackHandler from '@tanstack/react-start/server-entry';
 
 const SITE_URL = 'https://context.soundbluemusic.com';
 
-/** 콘텐츠 최종 수정일 (실제 데이터 변경 시 업데이트) */
-const CONTENT_LAST_MODIFIED = '2026-01-25';
+/** 콘텐츠 최종 수정일 (빌드 타임스탬프에서 자동 생성) */
+declare const __BUILD_DATE__: string;
+const CONTENT_LAST_MODIFIED =
+  typeof __BUILD_DATE__ !== 'undefined'
+    ? __BUILD_DATE__
+    : new Date().toISOString().split('T')[0];
 
 /**
  * URL 경로의 각 세그먼트를 퍼센트 인코딩합니다.

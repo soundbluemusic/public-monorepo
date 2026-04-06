@@ -14,6 +14,9 @@ export default defineConfig({
   server: { port: appPorts.context },
   preview: { port: appPorts.context },
   ...config,
+  define: {
+    __BUILD_DATE__: JSON.stringify(new Date().toISOString().split('T')[0]),
+  },
   plugins: [
     tailwindcss(),
     cloudflare({ viteEnvironment: { name: 'ssr' } }),
