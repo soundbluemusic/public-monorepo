@@ -3,14 +3,12 @@
  */
 
 import { headFactory } from '@soundblue/seo/meta';
-import { createFileRoute, Link } from '@tanstack/react-router';
-import { MessageCircle } from 'lucide-react';
-import { Layout } from '@/components/layout';
+import { createFileRoute } from '@tanstack/react-router';
+import { ConversationsIndexContent } from '@/components/pages/ConversationsIndexContent';
 import { APP_CONFIG } from '@/config';
 import { getCategoryById } from '@/data/categories';
 import { getCategoriesWithConversations, getConversationsByCategory } from '@/data/conversations';
 import type { Category } from '@/data/types';
-import { useI18n } from '@/i18n';
 
 interface LoaderData {
   categoriesWithCount: { category: Category; count: number }[];
@@ -47,45 +45,6 @@ export const Route = createFileRoute('/conversations/')({
 });
 
 function ConversationsIndexPage() {
-  const { categoriesWithCount } = Route.useLoaderData();
-  const { locale, t, localePath } = useI18n();
-
-  return (
-    <Layout>
-      <div className="mb-8">
-        <h1 className="text-2xl sm:text-3xl font-bold text-(--text-primary) mb-2 flex items-center gap-3">
-          <MessageCircle size={28} />
-          {t('conversationExamples')}
-        </h1>
-        <p className="text-(--text-secondary)">{t('conversationDescription')}</p>
-      </div>
-
-      <div className="grid gap-4 sm:grid-cols-2">
-        {categoriesWithCount.map(({ category, count }) => (
-          <Link
-            key={category.id}
-            to={localePath(`/conversations/${category.id}`)}
-            className="block p-4 rounded-xl bg-(--bg-elevated) border border-(--border-primary) no-underline cursor-pointer transition-all duration-150 hover:-translate-y-0.5 hover:shadow-md hover:border-(--border-focus)"
-          >
-            <div className="flex items-center gap-3 mb-2">
-              <span className="text-2xl">{category.icon}</span>
-              <div className="flex-1">
-                <h3 className="font-semibold text-(--text-primary)">{category.name[locale]}</h3>
-                <p className="text-xs text-(--text-tertiary)">
-                  {count} {t('conversationCount')}
-                </p>
-              </div>
-            </div>
-            <p className="text-sm text-(--text-secondary) line-clamp-2">
-              {category.description[locale]}
-            </p>
-          </Link>
-        ))}
-      </div>
-
-      {categoriesWithCount.length === 0 && (
-        <p className="text-center py-12 px-4 text-(--text-tertiary)">{t('noConversationsYet')}</p>
-      )}
-    </Layout>
-  );
+  const loaderData = Route.useLoaderData();
+  return <ConversationsIndexContent {...loaderData} />;
 }
