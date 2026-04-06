@@ -293,8 +293,8 @@ async function handleSitemapTags(env: CloudflareEnv): Promise<Response> {
         for (const tag of tags) {
           uniqueTags.add(tag);
         }
-      } catch {
-        // Skip invalid JSON
+      } catch (error) {
+        console.warn(`[Sitemap] Invalid JSON in tags: ${JSON.stringify(row.tags).slice(0, 100)}`, error);
       }
     }
 
@@ -456,12 +456,16 @@ function getLastModifiedHeader(): string {
 
 /**
  * ETag 생성 (콘텐츠 버전 기반)
- * 빌드 버전과 콘텐츠 수정일을 조합하여 ETag 생성
+ * FNV-1a 32-bit hash로 pathname을 해싱하여 경로별 고유 ETag 생성
  */
 function generateETag(pathname: string): string {
-  // 경로 + 수정일 조합으로 ETag 생성
-  const etag = `"${CONTENT_LAST_MODIFIED}-${pathname.length}"`;
-  return etag;
+  let hash = 0x811c9dc5;
+  for (let i = 0; i < pathname.length; i++) {
+    hash ^= pathname.charCodeAt(i);
+    hash = Math.imul(hash, 0x01000193);
+  }
+  const hashHex = (hash >>> 0).toString(16);
+  return `"${CONTENT_LAST_MODIFIED}-${hashHex}"`;
 }
 
 /**
