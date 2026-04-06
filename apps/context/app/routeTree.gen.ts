@@ -42,6 +42,7 @@ import { Route as KoConversationsIndexRouteImport } from './routes/ko/conversati
 import { Route as KoTagTagIdRouteImport } from './routes/ko/tag/$tagId'
 import { Route as KoEntryEntryIdRouteImport } from './routes/ko/entry/$entryId'
 import { Route as KoConversationsCategoryIdRouteImport } from './routes/ko/conversations/$categoryId'
+import { Route as KoSitemapRouteImport } from './routes/ko/sitemap'
 import { Route as KoCategoryCategoryIdRouteImport } from './routes/ko/category/$categoryId'
 
 const TermsRoute = TermsRouteImport.update({
@@ -169,6 +170,11 @@ const KoBookmarksRoute = KoBookmarksRouteImport.update({
   path: '/ko/bookmarks',
   getParentRoute: () => rootRouteImport,
 } as any)
+const KoSitemapRoute = KoSitemapRouteImport.update({
+  id: '/ko/sitemap',
+  path: '/ko/sitemap',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const KoAboutRoute = KoAboutRouteImport.update({
   id: '/ko/about',
   path: '/ko/about',
@@ -241,6 +247,7 @@ export interface FileRoutesByFullPath {
   '/ko/license': typeof KoLicenseRoute
   '/ko/my-learning': typeof KoMyLearningRoute
   '/ko/privacy': typeof KoPrivacyRoute
+  '/ko/sitemap': typeof KoSitemapRoute
   '/ko/tags': typeof KoTagsRoute
   '/ko/terms': typeof KoTermsRoute
   '/tag/$tagId': typeof TagTagIdRoute
@@ -277,6 +284,7 @@ export interface FileRoutesByTo {
   '/ko/license': typeof KoLicenseRoute
   '/ko/my-learning': typeof KoMyLearningRoute
   '/ko/privacy': typeof KoPrivacyRoute
+  '/ko/sitemap': typeof KoSitemapRoute
   '/ko/tags': typeof KoTagsRoute
   '/ko/terms': typeof KoTermsRoute
   '/tag/$tagId': typeof TagTagIdRoute
@@ -314,6 +322,7 @@ export interface FileRoutesById {
   '/ko/license': typeof KoLicenseRoute
   '/ko/my-learning': typeof KoMyLearningRoute
   '/ko/privacy': typeof KoPrivacyRoute
+  '/ko/sitemap': typeof KoSitemapRoute
   '/ko/tags': typeof KoTagsRoute
   '/ko/terms': typeof KoTermsRoute
   '/tag/$tagId': typeof TagTagIdRoute
@@ -352,6 +361,7 @@ export interface FileRouteTypes {
     | '/ko/license'
     | '/ko/my-learning'
     | '/ko/privacy'
+    | '/ko/sitemap'
     | '/ko/tags'
     | '/ko/terms'
     | '/tag/$tagId'
@@ -388,6 +398,7 @@ export interface FileRouteTypes {
     | '/ko/license'
     | '/ko/my-learning'
     | '/ko/privacy'
+    | '/ko/sitemap'
     | '/ko/tags'
     | '/ko/terms'
     | '/tag/$tagId'
@@ -424,6 +435,7 @@ export interface FileRouteTypes {
     | '/ko/license'
     | '/ko/my-learning'
     | '/ko/privacy'
+    | '/ko/sitemap'
     | '/ko/tags'
     | '/ko/terms'
     | '/tag/$tagId'
@@ -461,6 +473,7 @@ export interface RootRouteChildren {
   KoLicenseRoute: typeof KoLicenseRoute
   KoMyLearningRoute: typeof KoMyLearningRoute
   KoPrivacyRoute: typeof KoPrivacyRoute
+  KoSitemapRoute: typeof KoSitemapRoute
   KoTagsRoute: typeof KoTagsRoute
   KoTermsRoute: typeof KoTermsRoute
   TagTagIdRoute: typeof TagTagIdRoute
@@ -608,6 +621,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof KoPrivacyRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/ko/sitemap': {
+      id: '/ko/sitemap'
+      path: '/ko/sitemap'
+      fullPath: '/ko/sitemap'
+      preLoaderRoute: typeof KoSitemapRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/ko/my-learning': {
       id: '/ko/my-learning'
       path: '/ko/my-learning'
@@ -741,6 +761,7 @@ const rootRouteChildren: RootRouteChildren = {
   KoLicenseRoute: KoLicenseRoute,
   KoMyLearningRoute: KoMyLearningRoute,
   KoPrivacyRoute: KoPrivacyRoute,
+  KoSitemapRoute: KoSitemapRoute,
   KoTagsRoute: KoTagsRoute,
   KoTermsRoute: KoTermsRoute,
   TagTagIdRoute: TagTagIdRoute,

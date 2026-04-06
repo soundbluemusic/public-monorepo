@@ -4,9 +4,8 @@
 
 import { headFactory } from '@soundblue/seo/meta';
 import { createFileRoute } from '@tanstack/react-router';
-import { Layout } from '@/components/layout';
+import { AboutPageContent } from '@/components/pages/AboutPageContent';
 import { APP_CONFIG } from '@/config';
-import { useI18n } from '@/i18n';
 
 export const Route = createFileRoute('/ko/about')({
   head: headFactory(
@@ -16,24 +15,5 @@ export const Route = createFileRoute('/ko/about')({
     },
     APP_CONFIG.baseUrl,
   ),
-  component: AboutPage,
+  component: AboutPageContent,
 });
-
-function AboutPage() {
-  const { t } = useI18n();
-
-  return (
-    <Layout>
-      <div>
-        <h1 className="text-2xl sm:text-3xl font-bold text-(--text-primary) mb-4">
-          {t('aboutTitle')}
-        </h1>
-        <p className="text-(--text-secondary) mb-6">{t('aboutDescription')}</p>
-        <div className="space-y-3 text-(--text-secondary)">
-          <p>{t('aboutContent')}</p>
-          <p>{t('aboutContentExtra')}</p>
-        </div>
-      </div>
-    </Layout>
-  );
-}
