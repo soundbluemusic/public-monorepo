@@ -256,5 +256,9 @@
   "toast.offlineDataDeleted": "Offline data deleted",
   "toast.deleteFailed": "Delete failed",
   "toast.colorCodeCopied": "Color code copied",
-  "toast.copyFailed": "Failed to copy"
+  "toast.copyFailed": "Failed to copy",
+  "myProgress": "My Progress",
+  "wordOfTheDay": "Word of the Day",
+  "learnByCategory": "Learn by Category",
+  "dbErrorMessage": "There was a problem loading data. Please try again later."
 }
