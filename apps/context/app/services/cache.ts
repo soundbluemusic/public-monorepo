@@ -11,6 +11,7 @@
 interface CacheEntry<T> {
   value: T;
   expiry: number;
+  lastAccessed: number;
 }
 
 /** 캐시 설정 */
@@ -41,6 +42,8 @@ export function getCached<T>(key: string): T | null {
     return null;
   }
 
+  // LRU: 접근 시간 갱신
+  entry.lastAccessed = Date.now();
   return entry.value as T;
 }
 
@@ -48,19 +51,28 @@ export function getCached<T>(key: string): T | null {
  * 캐시에 값 저장
  */
 export function setCached<T>(key: string, value: T, ttlMs = CACHE_CONFIG.DEFAULT_TTL_MS): void {
-  // 최대 항목 수 초과 시 오래된 항목 정리
+  // 최대 항목 수 초과 시 만료 항목 정리
   if (cache.size >= CACHE_CONFIG.MAX_ENTRIES) {
     cleanupExpired();
-    // 그래도 가득 차면 가장 오래된 항목 제거
+    // LRU: 가장 오래 접근되지 않은 항목 제거
     if (cache.size >= CACHE_CONFIG.MAX_ENTRIES) {
-      const firstKey = cache.keys().next().value;
-      if (firstKey) cache.delete(firstKey);
+      let oldestKey: string | undefined;
+      let oldestTime = Number.POSITIVE_INFINITY;
+      for (const [entryKey, entry] of cache.entries()) {
+        if (entry.lastAccessed < oldestTime) {
+          oldestTime = entry.lastAccessed;
+          oldestKey = entryKey;
+        }
+      }
+      if (oldestKey) cache.delete(oldestKey);
     }
   }
 
+  const now = Date.now();
   cache.set(key, {
     value,
-    expiry: Date.now() + ttlMs,
+    expiry: now + ttlMs,
+    lastAccessed: now,
   });
 }
 
