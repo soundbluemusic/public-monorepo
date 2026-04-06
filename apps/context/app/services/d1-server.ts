@@ -242,7 +242,7 @@ export const fetchDailyWordFromD1 = createServerFn({ method: 'POST' })
       const offset = dayOfYear % totalCount;
 
       const row = await db
-        .prepare('SELECT * FROM entries LIMIT 1 OFFSET ?')
+        .prepare('SELECT * FROM entries ORDER BY id LIMIT 1 OFFSET ?')
         .bind(offset)
         .first<D1EntryRow>();
 

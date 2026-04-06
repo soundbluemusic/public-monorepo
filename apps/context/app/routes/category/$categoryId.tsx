@@ -38,18 +38,25 @@ export const Route = createFileRoute('/category/$categoryId')({
     const searchParams = new URLSearchParams(location.search);
     const rawPage = Math.max(1, Number.parseInt(searchParams.get('page') || '1', 10) || 1);
 
-    const { entries, totalCount } = await fetchEntriesByCategoryPaginated({
+    let result = await fetchEntriesByCategoryPaginated({
       data: { categoryId: params.categoryId, locale: 'en', page: rawPage, pageSize: PAGE_SIZE },
     });
 
-    const totalPages = Math.ceil(totalCount / PAGE_SIZE);
+    const totalPages = Math.ceil(result.totalCount / PAGE_SIZE);
     const page = Math.min(rawPage, Math.max(1, totalPages));
+
+    // 요청 페이지가 범위 초과 시 마지막 페이지 데이터 재조회
+    if (page !== rawPage && totalPages > 0) {
+      result = await fetchEntriesByCategoryPaginated({
+        data: { categoryId: params.categoryId, locale: 'en', page, pageSize: PAGE_SIZE },
+      });
+    }
 
     return {
       category,
-      entries,
+      entries: result.entries,
       currentPage: page,
-      totalCount,
+      totalCount: result.totalCount,
       totalPages,
     };
   },

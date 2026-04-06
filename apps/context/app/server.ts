@@ -298,7 +298,7 @@ async function handleSitemapTags(env: CloudflareEnv): Promise<Response> {
           uniqueTags.add(tag);
         }
       } catch (error) {
-        console.warn(`[Sitemap] Invalid JSON in tags: ${JSON.stringify(row.tags).slice(0, 100)}`, error);
+        console.warn(`[Sitemap] Invalid JSON in tags: ${String(row.tags).slice(0, 100)}`, error);
       }
     }
 
