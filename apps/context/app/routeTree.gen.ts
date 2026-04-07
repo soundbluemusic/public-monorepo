@@ -27,6 +27,7 @@ import { Route as ConversationsIndexRouteImport } from './routes/conversations/i
 import { Route as TagTagIdRouteImport } from './routes/tag/$tagId'
 import { Route as KoTermsRouteImport } from './routes/ko/terms'
 import { Route as KoTagsRouteImport } from './routes/ko/tags'
+import { Route as KoSitemapRouteImport } from './routes/ko/sitemap'
 import { Route as KoPrivacyRouteImport } from './routes/ko/privacy'
 import { Route as KoMyLearningRouteImport } from './routes/ko/my-learning'
 import { Route as KoLicenseRouteImport } from './routes/ko/license'
@@ -42,7 +43,6 @@ import { Route as KoConversationsIndexRouteImport } from './routes/ko/conversati
 import { Route as KoTagTagIdRouteImport } from './routes/ko/tag/$tagId'
 import { Route as KoEntryEntryIdRouteImport } from './routes/ko/entry/$entryId'
 import { Route as KoConversationsCategoryIdRouteImport } from './routes/ko/conversations/$categoryId'
-import { Route as KoSitemapRouteImport } from './routes/ko/sitemap'
 import { Route as KoCategoryCategoryIdRouteImport } from './routes/ko/category/$categoryId'
 
 const TermsRoute = TermsRouteImport.update({
@@ -135,6 +135,11 @@ const KoTagsRoute = KoTagsRouteImport.update({
   path: '/ko/tags',
   getParentRoute: () => rootRouteImport,
 } as any)
+const KoSitemapRoute = KoSitemapRouteImport.update({
+  id: '/ko/sitemap',
+  path: '/ko/sitemap',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const KoPrivacyRoute = KoPrivacyRouteImport.update({
   id: '/ko/privacy',
   path: '/ko/privacy',
@@ -168,11 +173,6 @@ const KoBrowseRoute = KoBrowseRouteImport.update({
 const KoBookmarksRoute = KoBookmarksRouteImport.update({
   id: '/ko/bookmarks',
   path: '/ko/bookmarks',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const KoSitemapRoute = KoSitemapRouteImport.update({
-  id: '/ko/sitemap',
-  path: '/ko/sitemap',
   getParentRoute: () => rootRouteImport,
 } as any)
 const KoAboutRoute = KoAboutRouteImport.update({
@@ -614,18 +614,18 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof KoTagsRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/ko/privacy': {
-      id: '/ko/privacy'
-      path: '/ko/privacy'
-      fullPath: '/ko/privacy'
-      preLoaderRoute: typeof KoPrivacyRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/ko/sitemap': {
       id: '/ko/sitemap'
       path: '/ko/sitemap'
       fullPath: '/ko/sitemap'
       preLoaderRoute: typeof KoSitemapRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ko/privacy': {
+      id: '/ko/privacy'
+      path: '/ko/privacy'
+      fullPath: '/ko/privacy'
+      preLoaderRoute: typeof KoPrivacyRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/ko/my-learning': {
