@@ -1,0 +1,132 @@
+---
+name: cost-check
+description: R2 비용 최적화 규칙 검사. Turborepo Remote Cache 비활성화 상태 확인
+---
+
+# Cost Check 스킬
+
+R2 비용 최적화 규칙 준수 여부를 검사하는 스킬입니다.
+
+## 자동 실행 지시
+
+**이 스킬이 호출되면 즉시 다음을 수행하세요:**
+
+1. `turbo.json` 파일 읽기 → `remoteCache.enabled` 값 확인
+2. `.github/workflows/deploy-context-r2.yml` 확인 → rclone 사용 여부
+3. 결과 출력
+
+```bash
+# 1. turbo.json에서 remoteCache 설정 확인
+grep -A 2 '"remoteCache"' turbo.json
+
+# 2. R2 동기화 워크플로우에서 rclone 사용 확인
+grep -E "(rclone|wrangler r2)" .github/workflows/deploy-context-r2.yml
+```
+
+## 검사 규칙
+
+| 항목 | 기대값 | 위반 시 조치 |
+| ---- | ------ | ------------ |
+| `remoteCache.enabled` | `false` | 즉시 `false`로 수정 |
+| 환경변수 `TURBO_REMOTE_ONLY` | 미설정 | 제거 권고 |
+| R2 동기화 도구 | `rclone` | Wrangler 코드 제거 후 rclone으로 교체 |
+
+## 위반 발견 시 자동 처리
+
+### 1. Turborepo Remote Cache 위반
+
+`turbo.json`에서 `remoteCache.enabled: true` 발견 시:
+
+- 즉시 `false`로 수정
+- 사용자에게 수정 사실 알림
+
+### 2. Wrangler R2 사용 위반
+
+`wrangler r2 object` 명령어 발견 시:
+
+- **절대 사용 금지** - 단일 스레드로 34,676개 파일 처리 불가
+- rclone으로 교체 제안
+
+```bash
+# ❌ 금지
+wrangler r2 object put ...
+wrangler r2 object sync ...
+
+# ✅ 필수
+rclone sync dist/client/entry r2:bucket/path \
+  --checksum \
+  --transfers 32 \
+  --checkers 32 \
+  --fast-list
+```
+
+### 3. 환경변수 확인 (선택)
+
+```bash
+# .env 파일에서 TURBO 관련 변수 확인
+grep -r "TURBO_REMOTE" .env* 2>/dev/null || echo "No TURBO_REMOTE variables found"
+```
+
+## 배경
+
+### Turborepo Remote Cache
+
+- **문제**: 활성화 시 빌드마다 R2 Class A 요청 발생
+- **비용**: Class A 요청 (LIST, PUT) → 과금 대상
+- **대안**: 로컬 캐시 `.turbo/` 폴더 (무료, 1인 개발에 충분)
+
+### R2 동기화 도구
+
+- **문제**: Wrangler는 단일 스레드로 대용량 파일 처리에 부적합
+- **비교**:
+
+| 항목 | Wrangler | rclone |
+| ---- | -------- | ------ |
+| 병렬 처리 | ❌ 단일 스레드 | ✅ 32개 동시 |
+| 대용량 | ❌ 느림 | ✅ 최적화 |
+| 동기화 | ❌ 수동 | ✅ `sync` (삭제 포함) |
+
+### rclone sync 자동 삭제 동작 (중요!)
+
+> **`rclone sync`는 완전 동기화입니다. 소스에 없는 파일은 목적지에서 자동 삭제됩니다.**
+>
+> 출처: [rclone 공식 문서](https://rclone.org/commands/rclone_sync/)
+
+| 동작 | 결과 |
+| ---- | ---- |
+| 소스에 새 파일 | R2에 업로드 |
+| 소스 파일 변경 | R2 업데이트 |
+| **소스에서 삭제** | **R2에서도 자동 삭제** |
+
+**GitHub에 푸시 → GitHub Actions 실행 → `rclone sync` → 삭제된 파일도 R2에서 자동 제거**
+
+**수동 작업 불필요. R2 정리를 위한 추가 설정(KV, Cache API 등) 불필요.**
+
+## FAQ
+
+### Q: 파일 삭제하면 R2에서도 삭제되나요?
+
+**A: 예, 자동으로 삭제됩니다.**
+
+`rclone sync`의 기본 동작이 완전 동기화이므로, 소스(빌드 결과)에 없는 파일은 목적지(R2)에서 자동 삭제됩니다.
+
+### Q: KV나 Cache API 설정이 필요한가요?
+
+**A: 아니요, 불필요합니다.**
+
+- KV: 34,676개 파일 저장에 부적합
+- Cache API: 빌드/배포 시 R2 요청 감소 불가 (런타임 캐싱만)
+
+현재 구조(rclone sync + Cloudflare CDN)가 최적입니다.
+
+## 관련 파일
+
+- `turbo.json` - Remote Cache 설정
+- `.github/workflows/deploy-context-r2.yml` - R2 배포 워크플로우 (rclone 사용)
+- `.env*` - 환경변수 파일들
+- `AGENTS.md` - 규칙 문서 (섹션 7, 8)
+
+## 참고 링크
+
+- [rclone sync 공식 문서](https://rclone.org/commands/rclone_sync/)
+- [rclone forum - sync delete behavior](https://forum.rclone.org/t/does-rclone-sync-only-delete-files-at-destination-and-never-source/785)
