@@ -35,7 +35,7 @@
   },
   "peerDependencies": {
     "@tanstack/react-table": "^8.21.3",
-    "react": "^19.2.3",
+    "react": "^19.2.5",
     "react-dom": "^19.2.3"
   },
   "dependencies": {
@@ -51,9 +51,9 @@
     "@storybook/addon-a11y": "^10.1.11",
     "@storybook/react-vite": "^10.1.11",
     "@tailwindcss/postcss": "^4.1.18",
-    "@types/react": "^19.0.2",
+    "@types/react": "^19.2.14",
     "@types/react-dom": "^19.0.2",
-    "react": "^19.2.3",
+    "react": "^19.2.5",
     "react-dom": "^19.2.3",
     "storybook": "^10.1.11",
     "typescript": "^5.9.3",
