@@ -1,5 +1,5 @@
 /**
- * @fileoverview 공유 ConceptPage 컴포넌트
+ * @fileoverview 공유 ConceptPage 컴포넌트 + 라우트 헬퍼 (loader / head builder / canonical)
  */
 
 import { toast } from '@soundblue/features/toast';
@@ -9,10 +9,11 @@ import {
   generateBreadcrumbSchema,
 } from '@soundblue/seo/structured-data';
 import { Breadcrumb, FeedbackButton, ShareButton, TagList } from '@soundblue/ui/components';
-import { Link } from '@tanstack/react-router';
+import { Link, notFound } from '@tanstack/react-router';
 import { BookOpen, Heart, History, Zap } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { APP_CONFIG } from '../../config';
+import { getConceptById as getConceptByIdStatic } from '../../data/concepts/index';
 import { getFieldById } from '../../data/fields';
 import { getSubfieldById } from '../../data/subfields';
 import type { MathConcept } from '../../data/types';
@@ -27,6 +28,73 @@ import { DifficultyBadge } from '../ui/DifficultyBadge';
 export interface ConceptPageProps {
   concept: MathConcept;
   conceptId: string;
+}
+
+export type ConceptLoaderData = { concept: MathConcept };
+
+/** `concept/$conceptId` 라우트 쌍이 공유하는 loader. */
+export async function conceptRouteLoader({
+  params,
+}: {
+  params: { conceptId: string };
+}): Promise<ConceptLoaderData> {
+  if (!params.conceptId) {
+    throw notFound();
+  }
+  const concept = getConceptByIdStatic(params.conceptId);
+  if (!concept) {
+    throw notFound();
+  }
+  return { concept };
+}
+
+/** `dynamicHeadFactoryEn/Ko`에 전달되는 head builder. */
+export function buildConceptRouteHead(data: ConceptLoaderData | undefined) {
+  if (!data?.concept) {
+    return {
+      ko: { title: '찾을 수 없음 | Roots' },
+      en: { title: 'Not Found | Roots' },
+    };
+  }
+  const { concept } = data;
+  const nameKo = concept.name.ko || concept.name.en;
+  const nameEn = concept.name.en;
+  const contentKo = concept.content.ko;
+  const contentEn = concept.content.en;
+  const defKo = typeof contentKo === 'string' ? contentKo : contentKo.definition;
+  const defEn = typeof contentEn === 'string' ? contentEn : contentEn.definition;
+  const field = getFieldById(concept.field);
+  return {
+    ko: {
+      title: `${nameKo} | Roots`,
+      description: defKo,
+      keywords: [
+        nameKo,
+        `${nameKo} 공식`,
+        `${nameKo} 정의`,
+        field?.name.ko || concept.field,
+        '수학 개념',
+        '수학 공식',
+      ],
+    },
+    en: {
+      title: `${nameEn} | Roots`,
+      description: defEn,
+      keywords: [
+        nameEn,
+        `${nameEn} formula`,
+        `${nameEn} definition`,
+        field?.name.en || concept.field,
+        'math concept',
+        'math formula',
+      ],
+    },
+  };
+}
+
+/** canonical URL 생성기 (en/ko 쌍이 공유). */
+export function conceptCanonicalPath(data: ConceptLoaderData): string {
+  return `/concept/${data.concept.id}`;
 }
 
 export function ConceptPage({ concept, conceptId }: ConceptPageProps) {

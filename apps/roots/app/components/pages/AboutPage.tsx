@@ -1,9 +1,14 @@
 /**
- * @fileoverview 공유 AboutPage 컴포넌트
+ * @fileoverview 공유 AboutPage 컴포넌트 + 공유 SEO 메타
  */
 
 import { useI18n } from '../../i18n';
 import { Layout } from '../layout/Layout';
+
+export const aboutMeta = {
+  ko: { title: '소개 - 수리', description: '수리 소개 - 학습자를 위한 수학 문서' },
+  en: { title: 'About - Roots', description: 'About Roots - Math documentation for learners' },
+};
 
 export function AboutPage() {
   const { t } = useI18n();

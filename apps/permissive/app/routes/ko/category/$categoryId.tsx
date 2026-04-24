@@ -2,47 +2,21 @@ import { dynamicHeadFactoryKo } from '@soundblue/seo/meta';
 import { createFileRoute, Link } from '@tanstack/react-router';
 import { ArrowLeft, Package, Scale, Star } from 'lucide-react';
 import DocsLayout from '../../../components/layout/DocsLayout';
+import { APP_CONFIG } from '../../../config';
+import { getLibrarySlug } from '../../../data/libraries';
 import {
-  type CategoryMeta,
-  getCategoryBySlug,
-  getLibrariesByCategorySlug,
-  getLibrarySlug,
-  type Library,
-} from '../../../data/libraries';
-
-type LoaderData = { category: CategoryMeta; libraries: Library[]; categoryId: string };
+  buildCategoryRouteHead,
+  type CategoryRouteLoaderData,
+  categoryCanonicalPath,
+  categoryRouteLoader,
+} from '../../../routes-meta';
 
 export const Route = createFileRoute('/ko/category/$categoryId')({
-  loader: async ({ params }) => {
-    const category = getCategoryBySlug(params.categoryId);
-    if (!category) {
-      throw new Response('Not Found', { status: 404 });
-    }
-    const libraries = getLibrariesByCategorySlug(params.categoryId);
-    return { category, libraries, categoryId: params.categoryId };
-  },
-  head: dynamicHeadFactoryKo<LoaderData>(
-    (data) => {
-      if (!data?.category) {
-        return {
-          ko: { title: 'Not Found - Permissive' },
-          en: { title: 'Not Found - Permissive' },
-        };
-      }
-      const cat = data.category;
-      return {
-        ko: {
-          title: `${cat.name.ko} 라이브러리 - Permissive`,
-          description: cat.description.ko,
-        },
-        en: {
-          title: `${cat.name.en} Libraries - Permissive`,
-          description: cat.description.en,
-        },
-      };
-    },
-    'https://permissive.soundbluemusic.com',
-    (data) => `/category/${data.categoryId}`,
+  loader: categoryRouteLoader,
+  head: dynamicHeadFactoryKo<CategoryRouteLoaderData>(
+    buildCategoryRouteHead,
+    APP_CONFIG.baseUrl,
+    categoryCanonicalPath,
     { trailingSlash: true },
   ),
   component: CategoryPageKo,

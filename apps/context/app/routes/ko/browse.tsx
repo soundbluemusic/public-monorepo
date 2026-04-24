@@ -6,7 +6,11 @@ import { dehydrate, HydrationBoundary, QueryClient, queryKeys } from '@soundblue
 import { headFactory } from '@soundblue/seo/meta';
 import type { DehydratedState } from '@tanstack/react-query';
 import { createFileRoute } from '@tanstack/react-router';
-import { type BrowseMetadata, BrowsePageContent } from '@/components/pages/BrowsePageContent';
+import {
+  type BrowseMetadata,
+  BrowsePageContent,
+  browseMeta,
+} from '@/components/pages/BrowsePageContent';
 import { APP_CONFIG } from '@/config';
 import { BROWSE_CHUNK_SIZE } from '@/constants';
 import { categories } from '@/data/categories';
@@ -44,13 +48,7 @@ export const Route = createFileRoute('/ko/browse')({
       categories,
     };
   },
-  head: headFactory(
-    {
-      ko: { title: '찾아보기 - Context', description: '모든 한국어 단어 찾아보기 및 필터링' },
-      en: { title: 'Browse - Context', description: 'Browse and filter all Korean words' },
-    },
-    APP_CONFIG.baseUrl,
-  ),
+  head: headFactory(browseMeta, APP_CONFIG.baseUrl),
   component: BrowsePage,
 });
 

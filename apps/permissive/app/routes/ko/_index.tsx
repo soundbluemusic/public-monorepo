@@ -9,38 +9,11 @@ import {
   TrendingSection,
 } from '../../components/home';
 import DocsLayout from '../../components/layout/DocsLayout';
-
-const localizedMeta = {
-  ko: {
-    title: 'Permissive - 무료 웹개발 도구 모음',
-    description: '웹표준 API와 MIT 라이센스 라이브러리를 한눈에 보세요',
-    keywords: [
-      '웹개발 도구',
-      '오픈소스 라이브러리',
-      'MIT 라이선스',
-      'Web API',
-      '무료 라이브러리',
-      'JavaScript 라이브러리',
-      'permissive',
-    ],
-  },
-  en: {
-    title: 'Permissive - Free Web Dev Tools',
-    description: 'Web Standard APIs and MIT licensed libraries at a glance',
-    keywords: [
-      'web development tools',
-      'open source libraries',
-      'MIT license',
-      'Web API',
-      'free libraries',
-      'JavaScript libraries',
-      'permissive',
-    ],
-  },
-};
+import { APP_CONFIG } from '../../config';
+import { homeMeta } from '../../routes-meta';
 
 export const Route = createFileRoute('/ko/_index')({
-  head: headFactoryKo(localizedMeta, 'https://permissive.soundbluemusic.com'),
+  head: headFactoryKo(homeMeta, APP_CONFIG.baseUrl),
   component: HomePageKo,
 });
 

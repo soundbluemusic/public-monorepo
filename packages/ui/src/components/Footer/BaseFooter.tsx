@@ -6,9 +6,9 @@
  */
 
 import { Link } from '@tanstack/react-router';
-import { Github } from 'lucide-react';
 import type { ReactNode } from 'react';
 import { cn } from '../../utils';
+import { Github } from '../brand-icons';
 import { FamilySites } from '../FamilySites';
 
 export interface FooterLink {

@@ -29,6 +29,8 @@ export {
   LinkButton,
   type LinkButtonProps,
 } from './Button';
+// Brand Icons (lucide-react v1+ 상표권 이슈로 제거된 브랜드 아이콘 대체)
+export { type BrandIcon, Facebook, Github, Instagram, Twitter, X, Youtube } from './brand-icons';
 // Copy Button
 export { CodeBlock, type CodeBlockProps, CopyButton, type CopyButtonProps } from './CopyButton';
 // Simple Components

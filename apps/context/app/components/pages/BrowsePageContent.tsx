@@ -24,6 +24,11 @@ import type { Category } from '@/data/types';
 import { useStudyData } from '@/hooks';
 import { useI18n } from '@/i18n';
 
+export const browseMeta = {
+  ko: { title: '찾아보기 - Context', description: '모든 한국어 단어 찾아보기 및 필터링' },
+  en: { title: 'Browse - Context', description: 'Browse and filter all Korean words' },
+};
+
 /** Browse 메타데이터 */
 export interface BrowseMetadata {
   totalEntries: number;

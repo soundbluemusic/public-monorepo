@@ -1,14 +1,18 @@
 /**
- * @fileoverview 공유 FieldPage 컴포넌트
+ * @fileoverview 공유 FieldPage 컴포넌트 + 라우트 헬퍼 (loader / head builder / canonical)
+ *
+ * en/ko 라우트 쌍은 `field/$fieldId.tsx` + `ko/field/$fieldId.tsx` 형태로 2개 파일이지만,
+ * loader 로직, head builder, canonical path 는 모두 동일하므로 여기서 단일 export 합니다.
  */
 
 import { type BreadcrumbItem, generateBreadcrumbSchema } from '@soundblue/seo/structured-data';
 import { useAutoAnimate } from '@soundblue/ui/hooks';
 import { Link } from '@tanstack/react-router';
 import { APP_CONFIG } from '../../config';
+import { getConceptsByField as getConceptsByFieldStatic } from '../../data/concepts/index';
 import { getFieldById } from '../../data/fields';
 import { getSubfieldsByParent } from '../../data/subfields';
-import type { MathConcept } from '../../data/types';
+import type { MathConcept, MathFieldInfo } from '../../data/types';
 import { useI18n } from '../../i18n';
 import { ConceptCard } from '../concept/ConceptCard';
 import { Layout } from '../layout/Layout';
@@ -16,6 +20,54 @@ import { Layout } from '../layout/Layout';
 export interface FieldPageProps {
   concepts: MathConcept[];
   fieldId: string;
+}
+
+export type FieldLoaderData = { concepts: MathConcept[]; field: MathFieldInfo | null };
+
+/** `field/$fieldId` 라우트 쌍이 공유하는 loader. */
+export async function fieldRouteLoader({
+  params,
+}: {
+  params: { fieldId: string };
+}): Promise<FieldLoaderData> {
+  if (!params.fieldId) {
+    return { concepts: [], field: null };
+  }
+  const concepts = getConceptsByFieldStatic(params.fieldId);
+  const field = getFieldById(params.fieldId);
+  return { concepts, field: field ?? null };
+}
+
+/** `dynamicHeadFactoryEn/Ko`에 전달되는 head builder. */
+export function buildFieldRouteHead(data: FieldLoaderData | undefined) {
+  if (!data?.field) {
+    return {
+      ko: { title: '분야를 찾을 수 없습니다 | Roots' },
+      en: { title: 'Field Not Found | Roots' },
+    };
+  }
+  const { field } = data;
+  const nameKo = field.name.ko || field.name.en;
+  const nameEn = field.name.en;
+  const descKo = field.description?.ko || `${nameKo} 분야의 수학 개념`;
+  const descEn = field.description?.en || `Math concepts in ${nameEn}`;
+  return {
+    ko: {
+      title: `${nameKo} | Roots`,
+      description: descKo,
+      keywords: [nameKo, `${nameKo} 수학`, '수학 분야', '수학 개념', '수학 공식'],
+    },
+    en: {
+      title: `${nameEn} | Roots`,
+      description: descEn,
+      keywords: [nameEn, `${nameEn} math`, 'math field', 'math concepts', 'math formulas'],
+    },
+  };
+}
+
+/** canonical URL 생성기 (en/ko 쌍이 공유). */
+export function fieldCanonicalPath(data: FieldLoaderData): string {
+  return `/field/${data.field?.id ?? ''}`;
 }
 
 export function FieldPage({ concepts, fieldId }: FieldPageProps) {

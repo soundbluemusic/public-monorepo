@@ -1,8 +1,17 @@
 /**
- * @fileoverview 공유 SitemapPage 컴포넌트
+ * @fileoverview 공유 SitemapPage 컴포넌트 + 공유 SEO 메타
  */
 
 import { Link } from '@tanstack/react-router';
+
+export const sitemapMeta = {
+  ko: { title: '사이트맵 - Roots', description: 'Roots 사이트의 모든 페이지와 수학 분야 목록' },
+  en: {
+    title: 'Sitemap - Roots',
+    description: 'Complete list of all pages and math fields on Roots',
+  },
+};
+
 import {
   BookOpen,
   ExternalLink,

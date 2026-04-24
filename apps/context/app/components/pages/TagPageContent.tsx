@@ -1,17 +1,82 @@
 /**
- * @fileoverview 개별 태그 페이지 공유 컴포넌트
- *
- * 영어/한국어 라우트 파일에서 공통으로 사용하는 UI 컴포넌트입니다.
- * useI18n()을 통해 locale에 따라 자동으로 번역된 텍스트를 표시합니다.
+ * @fileoverview 개별 태그 페이지 공유 컴포넌트 + 라우트 헬퍼
  */
 
 import { Breadcrumb, TagCloud } from '@soundblue/ui/components';
-import { Link } from '@tanstack/react-router';
+import { Link, notFound } from '@tanstack/react-router';
 import { Tags } from 'lucide-react';
 import { Layout } from '@/components/layout';
 import { getCategoryById } from '@/data/categories';
 import type { LocaleEntry } from '@/data/types';
 import { useI18n } from '@/i18n';
+import { fetchEntriesByTagFromD1 } from '@/services/d1-server';
+
+export type TagLoaderData = {
+  tag: string;
+  entries: LocaleEntry[];
+  relatedTags: { tag: string; count: number }[];
+};
+
+/** `tag/$tagId` 라우트 쌍이 공유하는 loader. */
+export async function tagRouteLoader({
+  params,
+  location,
+}: {
+  params: { tagId: string };
+  location: { pathname: string };
+}): Promise<TagLoaderData> {
+  const locale = location.pathname.startsWith('/ko') ? 'ko' : 'en';
+  const tag = decodeURIComponent(params.tagId);
+  const entries = await fetchEntriesByTagFromD1({ data: { tag, locale } });
+
+  if (entries.length === 0) {
+    throw notFound();
+  }
+
+  const relatedTagCounts = new Map<string, number>();
+  for (const entry of entries) {
+    for (const t of entry.tags || []) {
+      if (t !== tag) {
+        relatedTagCounts.set(t, (relatedTagCounts.get(t) || 0) + 1);
+      }
+    }
+  }
+
+  const relatedTags = Array.from(relatedTagCounts.entries())
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, 10)
+    .map(([t, count]) => ({ tag: t, count }));
+
+  return { tag, entries, relatedTags };
+}
+
+/** `dynamicHeadFactoryEn/Ko`에 전달되는 head builder. */
+export function buildTagRouteHead(data: TagLoaderData | undefined) {
+  if (!data?.tag) {
+    return {
+      ko: { title: '찾을 수 없음 | Context' },
+      en: { title: 'Not Found | Context' },
+    };
+  }
+  const { tag, entries } = data;
+  return {
+    ko: {
+      title: `#${tag} 태그 | Context`,
+      description: `"${tag}" 태그가 붙은 ${entries.length}개의 한국어 단어`,
+      keywords: [tag, '한국어 단어', '한국어 태그', 'Korean vocabulary'],
+    },
+    en: {
+      title: `#${tag} Tag | Context Korean Dictionary`,
+      description: `${entries.length} Korean words tagged with "${tag}"`,
+      keywords: [tag, 'Korean vocabulary', 'Korean tag', 'learn Korean'],
+    },
+  };
+}
+
+/** canonical path — `dynamicHeadFactoryKo`가 `/ko` 자동 prefix. */
+export function tagCanonicalPath(data: TagLoaderData): string {
+  return `/tag/${encodeURIComponent(data.tag)}`;
+}
 
 interface TagPageContentProps {
   tag: string;

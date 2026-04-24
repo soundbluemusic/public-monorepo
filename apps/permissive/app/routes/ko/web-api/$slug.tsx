@@ -8,64 +8,20 @@ import { createFileRoute, Link } from '@tanstack/react-router';
 import { ArrowLeft, Calendar, CheckCircle, ExternalLink, Globe } from 'lucide-react';
 import DocsLayout from '../../../components/layout/DocsLayout';
 import { APP_CONFIG } from '../../../config';
+import { getWebApiSlug } from '../../../data/web-apis';
 import {
-  getRelatedWebApis,
-  getWebApiBySlug,
-  getWebApiSlug,
-  type WebAPI,
-} from '../../../data/web-apis';
-
-type LoaderData = { api: WebAPI; related: WebAPI[] };
+  buildWebApiRouteHead,
+  type WebApiRouteLoaderData,
+  webApiCanonicalPath,
+  webApiRouteLoader,
+} from '../../../routes-meta';
 
 export const Route = createFileRoute('/ko/web-api/$slug')({
-  loader: async ({ params }) => {
-    const api = getWebApiBySlug(params.slug);
-    if (!api) {
-      throw new Response('Not Found', { status: 404 });
-    }
-    const related = getRelatedWebApis(api);
-    return { api, related };
-  },
-  head: dynamicHeadFactoryKo<LoaderData>(
-    (data) => {
-      if (!data?.api) {
-        return {
-          ko: { title: 'Not Found - Permissive' },
-          en: { title: 'Not Found - Permissive' },
-        };
-      }
-      const api = data.api;
-      return {
-        ko: {
-          title: `${api.name} - Permissive`,
-          description: api.descriptionKo,
-          keywords: [
-            api.name,
-            `${api.name} API`,
-            'Web API',
-            api.category,
-            '브라우저 API',
-            'JavaScript API',
-            'MDN',
-          ],
-        },
-        en: {
-          title: `${api.name} - Permissive`,
-          description: api.description,
-          keywords: [
-            api.name,
-            `${api.name} API`,
-            'Web API',
-            api.category,
-            'browser API',
-            'JavaScript API',
-            'MDN',
-          ],
-        },
-      };
-    },
-    'https://permissive.soundbluemusic.com',
-    (data) => `/web-api/${getWebApiSlug(data.api.name)}`,
+  loader: webApiRouteLoader,
+  head: dynamicHeadFactoryKo<WebApiRouteLoaderData>(
+    buildWebApiRouteHead,
+    APP_CONFIG.baseUrl,
+    webApiCanonicalPath,
     { trailingSlash: true },
   ),
   component: WebApiDetailPageKo,

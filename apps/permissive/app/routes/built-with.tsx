@@ -2,20 +2,11 @@ import { getOpenSourceGrouped } from '@soundblue/core';
 import { headFactoryEn } from '@soundblue/seo/meta';
 import { createFileRoute } from '@tanstack/react-router';
 import DocsLayout from '../components/layout/DocsLayout';
-
-const localizedMeta = {
-  ko: {
-    title: '오픈소스 - Permissive',
-    description: '이 사이트를 만드는 데 사용된 오픈소스 프로젝트 목록',
-  },
-  en: {
-    title: 'Open source - Permissive',
-    description: 'Open source projects used to build this site',
-  },
-};
+import { APP_CONFIG } from '../config';
+import { builtWithMeta } from '../routes-meta';
 
 export const Route = createFileRoute('/built-with')({
-  head: headFactoryEn(localizedMeta, 'https://permissive.soundbluemusic.com'),
+  head: headFactoryEn(builtWithMeta, APP_CONFIG.baseUrl),
   component: BuiltWithPage,
 });
 

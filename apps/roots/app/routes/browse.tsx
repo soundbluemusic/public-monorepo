@@ -4,15 +4,10 @@
 
 import { headFactoryEn } from '@soundblue/seo/meta';
 import { createFileRoute } from '@tanstack/react-router';
-import { BrowsePage } from '../components/browse';
+import { BrowsePage, browseMeta } from '../components/browse';
+import { APP_CONFIG } from '../config';
 
 export const Route = createFileRoute('/browse')({
-  head: headFactoryEn(
-    {
-      ko: { title: '찾아보기 - 수리', description: '분야별로 수학 개념 찾아보기' },
-      en: { title: 'Browse - Roots', description: 'Browse math concepts by field' },
-    },
-    'https://roots.soundbluemusic.com',
-  ),
+  head: headFactoryEn(browseMeta, APP_CONFIG.baseUrl),
   component: BrowsePage,
 });

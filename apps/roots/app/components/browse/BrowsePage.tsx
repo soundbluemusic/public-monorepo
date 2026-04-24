@@ -18,6 +18,12 @@ import { useI18n } from '../../i18n';
 import { Layout } from '../layout/Layout';
 
 const ROOTS_BASE_URL = 'https://roots.soundbluemusic.com';
+
+export const browseMeta = {
+  ko: { title: '찾아보기 - 수리', description: '분야별로 수학 개념 찾아보기' },
+  en: { title: 'Browse - Roots', description: 'Browse math concepts by field' },
+};
+
 import { BrowseTabs } from './BrowseTabs';
 import { ConceptFilters } from './ConceptFilters';
 import { LightConceptCard } from './LightConceptCard';
@@ -33,10 +39,7 @@ export function BrowsePage() {
 
   const fieldListSchema = generateItemListSchema({
     name: locale === 'ko' ? '수학 분야' : 'Math Fields',
-    description:
-      locale === 'ko'
-        ? '분야별로 수학 개념 찾아보기'
-        : 'Browse math concepts by field',
+    description: locale === 'ko' ? '분야별로 수학 개념 찾아보기' : 'Browse math concepts by field',
     url: `${ROOTS_BASE_URL}${localePrefix}/browse`,
     items: fields.map((field) => ({
       name: field.name[locale] || field.name.en,

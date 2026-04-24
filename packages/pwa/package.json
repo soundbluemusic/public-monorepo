@@ -14,7 +14,9 @@
   "publishConfig": {
     "access": "public"
   },
-  "files": ["src"],
+  "files": [
+    "src"
+  ],
   "exports": {
     ".": "./src/index.ts",
     "./manifest": "./src/manifest/index.ts",
@@ -25,8 +27,8 @@
     "react": "^19.2.3"
   },
   "devDependencies": {
-    "@types/node": "^25.0.3",
-    "@types/react": "^19.0.2",
-    "typescript": "^5.9.3"
+    "@types/node": "^25.6.0",
+    "@types/react": "^19.2.14",
+    "typescript": "^6.0.3"
   }
 }

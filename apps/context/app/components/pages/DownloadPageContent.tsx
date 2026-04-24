@@ -8,6 +8,18 @@
 import { toast } from '@soundblue/features/toast';
 import type { DownloadProgress } from '@soundblue/platform/sqlite/types';
 import { cn } from '@soundblue/ui/utils';
+
+export const downloadMeta = {
+  ko: {
+    title: '어휘 다운로드 - Context',
+    description: '모든 한국어 어휘 매핑을 다운로드하세요',
+  },
+  en: {
+    title: 'Download Vocabulary - Context',
+    description: 'Download all Korean vocabulary mappings',
+  },
+};
+
 import {
   Archive,
   BookOpen,

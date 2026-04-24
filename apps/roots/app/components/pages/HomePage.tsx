@@ -17,6 +17,25 @@ import { Layout } from '../layout/Layout';
 
 const ROOTS_BASE_URL = 'https://roots.soundbluemusic.com';
 
+export const homeMeta = {
+  ko: {
+    title: '수리 - 수학 문서',
+    description: '누구나 쉽게 배우는 수학 개념 사전',
+    keywords: ['수학 개념', '수학 공식', '수학 용어', '수학 사전', '수학 문서'],
+  },
+  en: {
+    title: 'Roots - Math Documentation',
+    description: 'Learn math concepts easily',
+    keywords: [
+      'math concepts',
+      'math formulas',
+      'math dictionary',
+      'math documentation',
+      'learn math',
+    ],
+  },
+};
+
 export function HomePage() {
   const { locale, localePath, t } = useI18n();
   const navigate = useNavigate();
@@ -24,10 +43,7 @@ export function HomePage() {
 
   const featuredListSchema = generateItemListSchema({
     name: locale === 'ko' ? '추천 수학 개념' : 'Featured Math Concepts',
-    description:
-      locale === 'ko'
-        ? '누구나 쉽게 배우는 수학 개념'
-        : 'Learn math concepts easily',
+    description: locale === 'ko' ? '누구나 쉽게 배우는 수학 개념' : 'Learn math concepts easily',
     url: `${ROOTS_BASE_URL}${localePrefix}`,
     items: FEATURED_CONCEPTS.map((concept) => ({
       name: locale === 'ko' ? concept.nameKo : concept.nameEn,

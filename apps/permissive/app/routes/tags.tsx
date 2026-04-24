@@ -7,31 +7,21 @@ import { Breadcrumb, TagCloud } from '@soundblue/ui/components';
 import { createFileRoute, Link } from '@tanstack/react-router';
 import { Tags } from 'lucide-react';
 import DocsLayout from '../components/layout/DocsLayout';
+import { APP_CONFIG } from '../config';
 import { allLibraryTags, totalLibraryTagCount } from '../data/libraries';
+import { useI18n } from '../i18n';
+import { tagsMeta } from '../routes-meta';
 
 export const Route = createFileRoute('/tags')({
-  head: headFactoryEn(
-    {
-      ko: {
-        title: '태그 목록 | Permissive',
-        description: `${totalLibraryTagCount}개의 태그로 라이브러리 탐색하기`,
-        keywords: ['라이브러리 태그', '태그 목록', '오픈소스', 'library tags'],
-      },
-      en: {
-        title: 'All Tags | Permissive',
-        description: `Browse ${totalLibraryTagCount} tags to explore libraries`,
-        keywords: ['library tags', 'tag list', 'open source', 'free libraries'],
-      },
-    },
-    'https://permissive.soundbluemusic.com',
-  ),
+  head: headFactoryEn(tagsMeta, APP_CONFIG.baseUrl),
   component: TagsPage,
 });
 
 function TagsPage() {
+  const { localePath } = useI18n();
   const tagsWithHref = allLibraryTags.map((t) => ({
     ...t,
-    href: `/tag/${encodeURIComponent(t.tag)}`,
+    href: localePath(`/tag/${encodeURIComponent(t.tag)}`),
   }));
 
   return (

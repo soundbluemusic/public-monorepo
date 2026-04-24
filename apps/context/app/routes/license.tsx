@@ -4,16 +4,10 @@
 
 import { headFactory } from '@soundblue/seo/meta';
 import { createFileRoute } from '@tanstack/react-router';
-import { LegalPageContent } from '@/components/pages/LegalPageContent';
+import { LegalPageContent, licenseMeta } from '@/components/pages/LegalPageContent';
 import { APP_CONFIG } from '@/config';
 
 export const Route = createFileRoute('/license')({
-  head: headFactory(
-    {
-      ko: { title: '라이선스 - Context' },
-      en: { title: 'License - Context' },
-    },
-    APP_CONFIG.baseUrl,
-  ),
+  head: headFactory(licenseMeta, APP_CONFIG.baseUrl),
   component: () => <LegalPageContent titleKey="licenseTitle" contentKey="licenseContent" />,
 });

@@ -27,16 +27,14 @@ import {
   ExternalLink,
   Grid,
   Home,
-  Instagram,
   type LucideIcon,
   MessageCircle,
   Music,
   PiSquare,
-  Twitter,
   Wrench,
-  Youtube,
 } from 'lucide-react';
 import { useCallback, useEffect, useRef, useState } from 'react';
+import { Instagram, Twitter, Youtube } from './brand-icons';
 
 export interface ServicesDropdownProps {
   currentAppId: AppId;

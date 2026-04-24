@@ -14,7 +14,10 @@
   "publishConfig": {
     "access": "public"
   },
-  "files": ["dist", "src/styles"],
+  "files": [
+    "dist",
+    "src/styles"
+  ],
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -51,16 +54,16 @@
     }
   },
   "devDependencies": {
-    "@inlang/paraglide-js": "^2.9.1",
-    "@tailwindcss/vite": "^4.1.18",
-    "@types/react": "^19.0.2",
-    "@types/react-dom": "^19.0.2",
-    "react": "^19.2.3",
-    "react-dom": "^19.2.3",
-    "rollup-plugin-visualizer": "^6.0.5",
-    "tailwindcss": "^4.1.18",
-    "typescript": "^5.9.3",
-    "vite": "8.0.0-beta.9",
+    "@inlang/paraglide-js": "^2.16.0",
+    "@tailwindcss/vite": "^4.2.4",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5",
+    "rollup-plugin-visualizer": "^7.0.1",
+    "tailwindcss": "^4.2.4",
+    "typescript": "^6.0.3",
+    "vite": "^8.0.10",
     "vite-plugin-pwa": "^1.2.0",
     "workbox-build": "^7.4.0"
   }

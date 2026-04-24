@@ -7,25 +7,12 @@ import { TagCloud } from '@soundblue/ui/components';
 import { createFileRoute } from '@tanstack/react-router';
 import { Tags } from 'lucide-react';
 import { Layout } from '../../components/layout/Layout';
-import { allTags, totalTagCount } from '../../data/concepts';
+import { allTags, tagsMeta, totalTagCount } from '../../components/pages';
+import { APP_CONFIG } from '../../config';
 import { useI18n } from '../../i18n';
 
 export const Route = createFileRoute('/ko/tags')({
-  head: headFactoryKo(
-    {
-      ko: {
-        title: '태그 목록 | Roots',
-        description: `${totalTagCount}개의 태그로 수학 개념 탐색하기`,
-        keywords: ['수학 태그', '태그 목록', '수학 개념', 'math tags'],
-      },
-      en: {
-        title: 'All Tags | Roots',
-        description: `Browse ${totalTagCount} tags to explore math concepts`,
-        keywords: ['math tags', 'tag list', 'math concepts', 'mathematics'],
-      },
-    },
-    'https://roots.soundbluemusic.com',
-  ),
+  head: headFactoryKo(tagsMeta, APP_CONFIG.baseUrl),
   component: TagsPage,
 });
 

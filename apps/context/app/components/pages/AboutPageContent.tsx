@@ -8,6 +8,11 @@
 import { Layout } from '@/components/layout';
 import { useI18n } from '@/i18n';
 
+export const aboutMeta = {
+  ko: { title: '소개 - Context', description: 'Context 한국어 사전 소개' },
+  en: { title: 'About - Context', description: 'About Context Korean Dictionary' },
+};
+
 export function AboutPageContent() {
   const { t } = useI18n();
 

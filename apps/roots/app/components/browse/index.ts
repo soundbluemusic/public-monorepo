@@ -4,7 +4,7 @@
 
 // Re-export from shared UI package
 export { Pagination, type PaginationLabels, type PaginationProps } from '@soundblue/ui/patterns';
-export { BrowsePage } from './BrowsePage';
+export { BrowsePage, browseMeta } from './BrowsePage';
 export { BrowseTabs } from './BrowseTabs';
 export { ConceptFilters } from './ConceptFilters';
 export { ConceptTable } from './ConceptTable';

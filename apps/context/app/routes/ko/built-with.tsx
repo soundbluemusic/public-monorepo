@@ -4,22 +4,10 @@
 
 import { headFactory } from '@soundblue/seo/meta';
 import { createFileRoute } from '@tanstack/react-router';
-import { BuiltWithPageContent } from '@/components/pages/BuiltWithPageContent';
+import { BuiltWithPageContent, builtWithMeta } from '@/components/pages/BuiltWithPageContent';
 import { APP_CONFIG } from '@/config';
 
 export const Route = createFileRoute('/ko/built-with')({
-  head: headFactory(
-    {
-      ko: {
-        title: '오픈소스 - Context',
-        description: '이 프로젝트에서 사용된 오픈소스 라이브러리',
-      },
-      en: {
-        title: 'Open Source - Context',
-        description: 'Open source libraries used in this project',
-      },
-    },
-    APP_CONFIG.baseUrl,
-  ),
+  head: headFactory(builtWithMeta, APP_CONFIG.baseUrl),
   component: BuiltWithPageContent,
 });

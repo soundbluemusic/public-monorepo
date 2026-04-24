@@ -4,7 +4,8 @@
 
 import { headFactory } from '@soundblue/seo/meta';
 import { createFileRoute } from '@tanstack/react-router';
-import { IndexPageContent } from '@/components/pages/IndexPageContent';
+import { homeMeta, IndexPageContent } from '@/components/pages/IndexPageContent';
+import { APP_CONFIG } from '@/config';
 import { categories as allCategories } from '@/data/categories';
 import type { Category, LocaleEntry } from '@/data/types';
 import { fetchDailyWordFromD1, fetchEntryCountsFromD1 } from '@/services/d1-server';
@@ -55,27 +56,7 @@ export const Route = createFileRoute('/')({
       dailyWord,
     };
   },
-  head: headFactory(
-    {
-      ko: {
-        title: 'Context - 한국어 사전',
-        description: '한국어 학습자를 위한 의미 사전',
-        keywords: ['한국어 사전', '한국어 학습', '한국어 뜻', '한국어 예문', '한국어 단어'],
-      },
-      en: {
-        title: 'Context - Korean Dictionary',
-        description: 'Meaning dictionary for Korean learners',
-        keywords: [
-          'Korean dictionary',
-          'learn Korean',
-          'Korean meaning',
-          'Korean words',
-          'Korean vocabulary',
-        ],
-      },
-    },
-    'https://context.soundbluemusic.com',
-  ),
+  head: headFactory(homeMeta, APP_CONFIG.baseUrl),
   component: HomePage,
 });
 

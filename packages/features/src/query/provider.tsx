@@ -38,8 +38,7 @@ interface QueryProviderProps {
 export function QueryProvider({ children, showDevtools }: QueryProviderProps) {
   const queryClient = getQueryClient();
 
-  const shouldShowDevtools =
-    showDevtools ?? (typeof window !== 'undefined' && process.env.NODE_ENV === 'development');
+  const shouldShowDevtools = showDevtools ?? (typeof window !== 'undefined' && import.meta.env.DEV);
 
   return (
     <QueryClientProvider client={queryClient}>

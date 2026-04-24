@@ -4,9 +4,10 @@
  * @environment client-only
  */
 
-import { Check, Facebook, Link as LinkIcon, Share2, Twitter } from 'lucide-react';
+import { Check, Link as LinkIcon, Share2 } from 'lucide-react';
 import { memo, useCallback, useEffect, useRef, useState } from 'react';
 import { cn } from '../utils/cn';
+import { Facebook, Twitter } from './brand-icons';
 
 export interface ShareButtonProps {
   /** 공유할 URL */

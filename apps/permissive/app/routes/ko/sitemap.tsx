@@ -3,14 +3,11 @@ import { createFileRoute, Link } from '@tanstack/react-router';
 import { ExternalLink, FileText, Globe, Home, Package, Search } from 'lucide-react';
 import type { ReactNode } from 'react';
 import DocsLayout from '../../components/layout/DocsLayout';
-
-const localizedMeta = {
-  ko: { title: '사이트맵 - Permissive', description: 'Permissive 사이트의 모든 페이지 목록' },
-  en: { title: 'Sitemap - Permissive', description: 'Complete list of all pages on Permissive' },
-};
+import { APP_CONFIG } from '../../config';
+import { sitemapMeta } from '../../routes-meta';
 
 export const Route = createFileRoute('/ko/sitemap')({
-  head: headFactoryKo(localizedMeta, 'https://permissive.soundbluemusic.com'),
+  head: headFactoryKo(sitemapMeta, APP_CONFIG.baseUrl),
   component: SitemapPageKo,
 });
 

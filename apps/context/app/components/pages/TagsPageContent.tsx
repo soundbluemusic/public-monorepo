@@ -1,16 +1,42 @@
 /**
- * @fileoverview Tags 목록 페이지 공유 컴포넌트
- *
- * 영어/한국어 라우트 파일에서 공통으로 사용하는 UI 컴포넌트입니다.
- * useI18n()을 통해 locale에 따라 자동으로 번역된 텍스트를 표시합니다.
+ * @fileoverview Tags 목록 페이지 공유 컴포넌트 + 라우트 헬퍼
  */
 
 import { Breadcrumb, TagCloud } from '@soundblue/ui/components';
 import { Link } from '@tanstack/react-router';
 import { Tags } from 'lucide-react';
 import { Layout } from '@/components/layout';
-import type { TagWithCount } from '@/services/d1';
 import { useI18n } from '@/i18n';
+import type { TagWithCount } from '@/services/d1';
+import { fetchAllTagsFromD1 } from '@/services/d1-server';
+
+export type TagsLoaderData = {
+  tags: TagWithCount[];
+  totalCount: number;
+};
+
+/** `tags` 라우트 쌍이 공유하는 loader. locale 무관. */
+export async function tagsRouteLoader(): Promise<TagsLoaderData> {
+  const tags = await fetchAllTagsFromD1();
+  return { tags, totalCount: tags.length };
+}
+
+/** `dynamicHeadFactoryEn/Ko`에 전달되는 head builder. */
+export function buildTagsRouteHead(data: TagsLoaderData | undefined) {
+  const count = data?.totalCount || 0;
+  return {
+    ko: {
+      title: '태그 목록 | Context',
+      description: `${count}개의 태그로 한국어 단어 탐색하기`,
+      keywords: ['한국어 태그', '태그 목록', '한국어 단어', 'Korean tags'],
+    },
+    en: {
+      title: 'All Tags | Context Korean Dictionary',
+      description: `Browse ${count} tags to explore Korean vocabulary`,
+      keywords: ['Korean tags', 'tag list', 'Korean vocabulary', 'learn Korean'],
+    },
+  };
+}
 
 interface TagsPageContentProps {
   tags: TagWithCount[];

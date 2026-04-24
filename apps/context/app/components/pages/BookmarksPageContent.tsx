@@ -14,6 +14,11 @@ import type { MeaningEntry } from '@/data/types';
 import { useI18n } from '@/i18n';
 import { useIsHydrated, useUserDataStore } from '@/stores/user-data-store';
 
+export const bookmarksMeta = {
+  ko: { title: '북마크 - Context', description: '북마크한 단어 모아보기' },
+  en: { title: 'Bookmarks - Context', description: 'View your bookmarked words' },
+};
+
 export function BookmarksPageContent() {
   const { locale, t, localePath } = useI18n();
   const isHydrated = useIsHydrated();

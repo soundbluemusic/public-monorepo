@@ -9,12 +9,9 @@ import {
   SearchAndSort,
   useLibraryFilters,
 } from '../components/libraries';
+import { APP_CONFIG } from '../config';
 import { categories, getLibrarySlug, libraries } from '../data/libraries';
-
-const localizedMeta = {
-  ko: { title: 'Libraries - Permissive', description: 'MIT 라이센스 오픈소스 라이브러리' },
-  en: { title: 'Libraries - Permissive', description: 'MIT licensed open source libraries' },
-};
+import { librariesMeta } from '../routes-meta';
 
 export const Route = createFileRoute('/libraries')({
   loader: async () => {
@@ -23,11 +20,11 @@ export const Route = createFileRoute('/libraries')({
       categories,
     };
   },
-  head: headFactoryEn(localizedMeta, 'https://permissive.soundbluemusic.com'),
+  head: headFactoryEn(librariesMeta, APP_CONFIG.baseUrl),
   component: LibrariesPage,
 });
 
-const PERMISSIVE_BASE_URL = 'https://permissive.soundbluemusic.com';
+const PERMISSIVE_BASE_URL = APP_CONFIG.baseUrl;
 
 function LibrariesPage() {
   const { libraries: libs } = Route.useLoaderData();

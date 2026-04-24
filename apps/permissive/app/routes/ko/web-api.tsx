@@ -2,12 +2,9 @@ import { headFactoryKo } from '@soundblue/seo/meta';
 import { createFileRoute } from '@tanstack/react-router';
 import DocsLayout from '../../components/layout/DocsLayout';
 import { ApiGrid, QuickFilters, SearchAndSort, useWebApiFilters } from '../../components/web-api';
+import { APP_CONFIG } from '../../config';
 import { webApiCategories, webApis } from '../../data/web-apis';
-
-const localizedMeta = {
-  ko: { title: 'Web API - Permissive', description: '브라우저에 내장된 웹 표준 API' },
-  en: { title: 'Web API - Permissive', description: 'Browser built-in Web Standard APIs' },
-};
+import { webApiMeta } from '../../routes-meta';
 
 export const Route = createFileRoute('/ko/web-api')({
   loader: async () => {
@@ -16,7 +13,7 @@ export const Route = createFileRoute('/ko/web-api')({
       categories: webApiCategories,
     };
   },
-  head: headFactoryKo(localizedMeta, 'https://permissive.soundbluemusic.com'),
+  head: headFactoryKo(webApiMeta, APP_CONFIG.baseUrl),
   component: WebApiPageKo,
 });
 

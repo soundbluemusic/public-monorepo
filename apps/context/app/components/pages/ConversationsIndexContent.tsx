@@ -11,13 +11,22 @@ import { Layout } from '@/components/layout';
 import type { Category } from '@/data/types';
 import { useI18n } from '@/i18n';
 
+export const conversationsIndexMeta = {
+  ko: {
+    title: '대화 예문 | Context',
+    description: '일상 상황별 한국어 대화 예문으로 자연스러운 한국어를 배워보세요',
+  },
+  en: {
+    title: 'Conversations | Context',
+    description: 'Learn natural Korean with conversation examples for everyday situations',
+  },
+};
+
 interface ConversationsIndexContentProps {
   categoriesWithCount: { category: Category; count: number }[];
 }
 
-export function ConversationsIndexContent({
-  categoriesWithCount,
-}: ConversationsIndexContentProps) {
+export function ConversationsIndexContent({ categoriesWithCount }: ConversationsIndexContentProps) {
   const { locale, t, localePath } = useI18n();
 
   return (

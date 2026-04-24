@@ -15,9 +15,9 @@
 
 | App | Mode | 데이터 소스 | D1 바인딩 | 설정 파일 |
 | :-- | :--- | :---------- | :-------- | :-------- |
-| Context | **SSR** | Cloudflare D1 | `DB` (context-db) | `wrangler.toml` |
-| Permissive | SSR | In-memory (JSON) | - | `wrangler.toml` |
-| Roots | SSR | TypeScript (JSON) | - | `wrangler.toml` |
+| Context | **SSR** | Cloudflare D1 | `DB` (context-db), `PRIVATE_DB` (private) | `wrangler.toml` |
+| Permissive | SSR | Cloudflare D1 | `KNOWLEDGE_DB` (knowledge), `PRIVATE_DB` (private) | `wrangler.toml` |
+| Roots | SSR | Cloudflare D1 | `KNOWLEDGE_DB` (knowledge), `PRIVATE_DB` (private) | `wrangler.toml` |
 
 **금지 사항:**
 
@@ -306,6 +306,34 @@ pnpm deploy
 3. 하드코딩 값 없는가?
 4. 모든 유사 케이스에 작동하는가?
 
+### en/ko 라우트 쌍 공통화 규칙 (중요)
+
+TanStack Start 파일 기반 라우팅 때문에 `routes/xxx.tsx` + `routes/ko/xxx.tsx` 쌍은 **파일 구조상 필수**입니다.
+하지만 **내용은 단일 소스**여야 합니다. 새 동적/정적 라우트 추가 시 아래 패턴을 따르세요:
+
+**정적 라우트 (head 콘텐츠가 data에 의존하지 않음):**
+
+- 메타는 페이지 컴포넌트 파일에 `xxxMeta` 로 export
+  - Roots: `apps/roots/app/components/pages/*.tsx` 의 `export const xxxMeta = { ko, en }`
+  - Context: `apps/context/app/components/pages/*Content.tsx` 동일
+  - Permissive: `apps/permissive/app/routes-meta.ts` 단일 파일
+- 라우트 파일은 `headFactoryEn/Ko(xxxMeta, APP_CONFIG.baseUrl)` 만 호출
+
+**동적 라우트 (loader + dynamicHeadFactoryEn/Ko):**
+
+- 페이지 컴포넌트 파일에 4가지 export:
+  - `xxxRouteLoader` — 쌍이 공유하는 loader. `location.pathname.startsWith('/ko')`로 locale 감지
+  - `buildXxxRouteHead` — `dynamicHeadFactoryEn/Ko`에 전달할 head builder
+  - `xxxCanonicalPath` — **locale prefix 없이** `/xxx/{id}` 만 반환 (`dynamicHeadFactoryKo`가 `/ko` 자동 prefix)
+  - `type XxxLoaderData` — loader 반환 타입
+- 라우트 파일은 15줄 이내 boilerplate만 유지
+
+**canonical path 주의:**
+
+- `dynamicHeadFactoryKo`는 `getPathname` 반환값에 `/ko` 를 **자동 prefix** 합니다 ([packages/seo/src/meta/head-factory.ts:338](packages/seo/src/meta/head-factory.ts#L338)).
+- ko 라우트 파일에서 canonical에 `/ko/xxx` 를 반환하면 `/ko/ko/xxx` 이중 prefix 버그.
+- 공유 canonical 함수는 반드시 locale-agnostic (`/xxx/{id}` 만).
+
 ---
 
 ## 📦 Import 레이어 규칙
@@ -526,20 +554,23 @@ export const Route = createFileRoute('/entry/$entryId')({
 
 ---
 
-## 🛠 기술 스택 버전 (2026-01-25 기준)
+## 🛠 기술 스택 버전 (2026-04-24 기준)
 
 > ⚠️ **AI 어시스턴트 참고용**: 이 버전들은 실제 사용 중인 버전입니다. 코드 작성 시 참고하세요.
 
 | 기술 | 버전 | 비고 |
 | ---- | ---- | ---- |
-| **React** | ^19.2.3 | React 19 Stable |
-| **TanStack Start** | ^1.157.2 | SSR 프레임워크 |
-| **TanStack Router** | ^1.157.2 | 파일 기반 라우팅 |
-| **Vite** | 8.0.0-beta.9 | Rolldown 번들러 (7x 빠른 빌드) |
-| **TypeScript** | ^5.7.2 | 타입 체크 |
-| **Tailwind CSS** | ^4.1.18 | v4 사용 중 |
-| **Zod** | ^4.3.5 | 스키마 검증 |
-| **Zustand** | ^5.0.9 | 상태 관리 |
+| **React** | ^19.2.5 | React 19 Stable |
+| **TanStack Start** | ^1.167.43 | SSR 프레임워크 |
+| **TanStack Router** | ^1.168.23 | 파일 기반 라우팅 |
+| **Vite** | ^8.0.10 | Rolldown 번들러 (7x 빠른 빌드), Stable |
+| **TypeScript** | ^5.9.3 | 타입 체크 |
+| **Tailwind CSS** | ^4.2.4 | v4 사용 중 |
+| **Zod** | ^4.3.6 (Context), ^3.25.76 (root, astro 호환) | 스키마 검증 |
+| **Zustand** | ^5.0.12 | 상태 관리 |
+| **Cloudflare Wrangler** | ^4.84.1 | Workers 배포 |
+| **@cloudflare/vite-plugin** | ^1.33.1 | Vite 통합 |
+| **@inlang/paraglide-js** | ^2.16.0 | i18n 컴파일러 |
 | **Node.js** | >=20 | 런타임 |
 | **pnpm** | 10.11.0 | 패키지 매니저 |
 

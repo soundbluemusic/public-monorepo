@@ -1,5 +1,5 @@
 /**
- * @fileoverview 공유 FavoritesPage 컴포넌트
+ * @fileoverview 공유 FavoritesPage 컴포넌트 + 공유 SEO 메타
  */
 
 import { Link } from '@tanstack/react-router';
@@ -10,6 +10,11 @@ import { getConceptById } from '../../lib/concepts';
 import { favorites } from '../../lib/db';
 import { ConceptCard } from '../concept/ConceptCard';
 import { Layout } from '../layout/Layout';
+
+export const favoritesMeta = {
+  ko: { title: '즐겨찾기 - 수리', description: '즐겨찾는 수학 개념' },
+  en: { title: 'Favorites - Roots', description: 'Your favorite math concepts' },
+};
 
 export function FavoritesPage() {
   const { t, localePath } = useI18n();

@@ -4,17 +4,12 @@
 
 import { headFactoryKo } from '@soundblue/seo/meta';
 import { createFileRoute } from '@tanstack/react-router';
-import { FavoritesPage } from '../../components/pages';
+import { FavoritesPage, favoritesMeta } from '../../components/pages';
+import { APP_CONFIG } from '../../config';
 
 export const Route = createFileRoute('/ko/favorites')({
   head: () => {
-    const config = headFactoryKo(
-      {
-        ko: { title: '즐겨찾기 - 수리', description: '즐겨찾는 수학 개념' },
-        en: { title: 'Favorites - Roots', description: 'Your favorite math concepts' },
-      },
-      'https://roots.soundbluemusic.com',
-    )();
+    const config = headFactoryKo(favoritesMeta, APP_CONFIG.baseUrl)();
     return {
       ...config,
       meta: [...(config.meta ?? []), { name: 'robots', content: 'noindex' }],

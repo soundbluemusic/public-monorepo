@@ -1,4 +1,5 @@
 import { OPEN_SOURCE_PROJECTS } from '@soundblue/core';
+import { buildLocalePath } from '@soundblue/i18n';
 import { Link } from '@tanstack/react-router';
 
 interface BuiltWithSectionProps {
@@ -32,7 +33,7 @@ export function BuiltWithSection({ locale }: BuiltWithSectionProps) {
         ))}
       </div>
       <Link
-        to={locale === 'ko' ? '/ko/built-with' : '/built-with'}
+        to={buildLocalePath('/built-with', locale) as '/built-with'}
         className="text-sm text-(--accent-primary) hover:underline"
       >
         {locale === 'ko'

@@ -6,11 +6,13 @@
 
 'use client';
 
+import { buildLocalePath } from '@soundblue/i18n';
+import { Github } from '@soundblue/ui/components';
 import { DataTable, TableFilter } from '@soundblue/ui/table';
 import { cn } from '@soundblue/ui/utils';
 import { Link } from '@tanstack/react-router';
 import type { ColumnDef } from '@tanstack/react-table';
-import { ExternalLink, Github, Star } from 'lucide-react';
+import { ExternalLink, Star } from 'lucide-react';
 import { useMemo, useState } from 'react';
 import { getLibrarySlug, type Library } from '../../data/libraries';
 
@@ -32,7 +34,7 @@ export function LibraryTable({ locale, libraries, selectedTag, onTagClick }: Lib
         cell: ({ row }) => {
           const lib = row.original;
           const slug = getLibrarySlug(lib.name);
-          const path = locale === 'ko' ? `/ko/library/${slug}` : `/library/${slug}`;
+          const path = buildLocalePath(`/library/${slug}`, locale);
           return (
             <Link to={path} className="font-medium text-(--accent-primary) hover:underline">
               {lib.name}
@@ -167,7 +169,7 @@ export function LibraryTable({ locale, libraries, selectedTag, onTagClick }: Lib
         emptyMessage={locale === 'ko' ? '결과 없음' : 'No results found'}
         onRowClick={(lib) => {
           const slug = getLibrarySlug(lib.name);
-          window.location.href = locale === 'ko' ? `/ko/library/${slug}` : `/library/${slug}`;
+          window.location.href = buildLocalePath(`/library/${slug}`, locale);
         }}
       />
     </div>

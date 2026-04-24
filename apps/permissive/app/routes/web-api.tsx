@@ -3,12 +3,9 @@ import { generateItemListSchema, serializeSchema } from '@soundblue/seo/structur
 import { createFileRoute } from '@tanstack/react-router';
 import DocsLayout from '../components/layout/DocsLayout';
 import { ApiGrid, QuickFilters, SearchAndSort, useWebApiFilters } from '../components/web-api';
+import { APP_CONFIG } from '../config';
 import { getWebApiSlug, webApiCategories, webApis } from '../data/web-apis';
-
-const localizedMeta = {
-  ko: { title: 'Web API - Permissive', description: '브라우저에 내장된 웹 표준 API' },
-  en: { title: 'Web API - Permissive', description: 'Browser built-in Web Standard APIs' },
-};
+import { webApiMeta } from '../routes-meta';
 
 export const Route = createFileRoute('/web-api')({
   loader: async () => {
@@ -17,11 +14,11 @@ export const Route = createFileRoute('/web-api')({
       categories: webApiCategories,
     };
   },
-  head: headFactoryEn(localizedMeta, 'https://permissive.soundbluemusic.com'),
+  head: headFactoryEn(webApiMeta, APP_CONFIG.baseUrl),
   component: WebApiPage,
 });
 
-const PERMISSIVE_BASE_URL = 'https://permissive.soundbluemusic.com';
+const PERMISSIVE_BASE_URL = APP_CONFIG.baseUrl;
 
 function WebApiPage() {
   const { webApis: apis, categories: cats } = Route.useLoaderData();

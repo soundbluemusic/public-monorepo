@@ -1,10 +1,21 @@
 /**
- * @fileoverview 공유 BuiltWithPage 컴포넌트
+ * @fileoverview 공유 BuiltWithPage 컴포넌트 + 공유 SEO 메타
  */
 
 import { getOpenSourceGrouped } from '@soundblue/core';
 import { useI18n } from '../../i18n';
 import { Layout } from '../layout/Layout';
+
+export const builtWithMeta = {
+  ko: {
+    title: '오픈소스 - Roots',
+    description: '이 사이트를 만드는 데 사용된 오픈소스 프로젝트 목록',
+  },
+  en: {
+    title: 'Open source - Roots',
+    description: 'Open source projects used to build this site',
+  },
+};
 
 export function BuiltWithPage() {
   const { locale } = useI18n();

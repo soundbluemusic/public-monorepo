@@ -15,6 +15,25 @@ import type { Category, LocaleEntry } from '@/data/types';
 import { useStudyData } from '@/hooks';
 import { type Language, useI18n } from '@/i18n';
 
+export const homeMeta = {
+  ko: {
+    title: 'Context - 한국어 사전',
+    description: '한국어 학습자를 위한 의미 사전',
+    keywords: ['한국어 사전', '한국어 학습', '한국어 뜻', '한국어 예문', '한국어 단어'],
+  },
+  en: {
+    title: 'Context - Korean Dictionary',
+    description: 'Meaning dictionary for Korean learners',
+    keywords: [
+      'Korean dictionary',
+      'learn Korean',
+      'Korean meaning',
+      'Korean words',
+      'Korean vocabulary',
+    ],
+  },
+};
+
 const getPronunciation = (entry: LocaleEntry, locale: Language): string | undefined => {
   switch (locale) {
     case 'en':
@@ -46,9 +65,7 @@ export function IndexPageContent({
   const categoryListSchema = generateItemListSchema({
     name: locale === 'ko' ? '한국어 사전 카테고리' : 'Korean Dictionary Categories',
     description:
-      locale === 'ko'
-        ? '52개 카테고리의 한국어 단어'
-        : '52 categories of Korean vocabulary',
+      locale === 'ko' ? '52개 카테고리의 한국어 단어' : '52 categories of Korean vocabulary',
     url: baseUrl,
     items: cats.map((cat) => ({
       name: cat.name[locale],
@@ -81,7 +98,10 @@ export function IndexPageContent({
 
       {/* DB Error Banner */}
       {dbError && (
-        <div className="mb-4 p-3 rounded-lg bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 text-sm text-amber-800 dark:text-amber-200" role="alert">
+        <div
+          className="mb-4 p-3 rounded-lg bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 text-sm text-amber-800 dark:text-amber-200"
+          role="alert"
+        >
           {t('dbErrorMessage')}
         </div>
       )}
@@ -123,9 +143,7 @@ export function IndexPageContent({
               <p className="text-lg text-(--text-tertiary) mb-3">
                 {getPronunciation(dailyWord, locale)}
               </p>
-              <p className="text-xl text-(--accent-primary)">
-                {dailyWord.translation.word}
-              </p>
+              <p className="text-xl text-(--accent-primary)">{dailyWord.translation.word}</p>
             </div>
           </Link>
         </div>

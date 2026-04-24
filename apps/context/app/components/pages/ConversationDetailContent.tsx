@@ -1,17 +1,63 @@
 /**
- * @fileoverview 대화 예문 카테고리 상세 페이지 공유 컴포넌트
- *
- * 영어/한국어 라우트 파일에서 공통으로 사용하는 UI 컴포넌트입니다.
- * useI18n()을 통해 locale에 따라 자동으로 번역된 텍스트를 표시합니다.
+ * @fileoverview 대화 예문 카테고리 상세 페이지 공유 컴포넌트 + 라우트 헬퍼
  */
 
 import { cn } from '@soundblue/ui/utils';
-import { Link } from '@tanstack/react-router';
+import { Link, notFound } from '@tanstack/react-router';
 import { ArrowLeft, MessageCircle } from 'lucide-react';
 import { LinkedExample } from '@/components/entry';
 import { Layout } from '@/components/layout';
+import { getCategoryById } from '@/data/categories';
+import { getConversationsByCategory } from '@/data/conversations';
 import type { Category, Conversation } from '@/data/types';
 import { useI18n } from '@/i18n';
+
+export interface ConversationDetailLoaderData {
+  category: Category;
+  conversations: Conversation[];
+}
+
+/** `conversations/$categoryId` 라우트 쌍이 공유하는 loader. */
+export async function conversationDetailRouteLoader({
+  params,
+}: {
+  params: { categoryId: string };
+}): Promise<ConversationDetailLoaderData> {
+  const category = getCategoryById(params.categoryId);
+
+  if (!category) {
+    throw notFound();
+  }
+
+  const conversations = getConversationsByCategory(params.categoryId);
+  return { category, conversations };
+}
+
+/** `dynamicHeadFactoryEn/Ko`에 전달되는 head builder. */
+export function buildConversationDetailRouteHead(data: ConversationDetailLoaderData | undefined) {
+  if (!data?.category) {
+    return {
+      ko: { title: 'Not Found | Context' },
+      en: { title: 'Not Found | Context' },
+    };
+  }
+  const { category, conversations } = data;
+  return {
+    ko: {
+      title: `${category.name.ko} 대화 | Context`,
+      description: `${category.name.ko} 상황의 ${conversations.length}개 한국어 대화 예문`,
+    },
+    en: {
+      title: `${category.name.en} Conversations | Context`,
+      description: `${conversations.length} Korean conversation examples for ${category.name.en} situations`,
+    },
+  };
+}
+
+/** canonical path — `dynamicHeadFactoryKo`가 `/ko` 자동 prefix. */
+export function conversationDetailCanonicalPath(data: ConversationDetailLoaderData): string {
+  return `/conversations/${data.category.id}`;
+}
 
 interface ConversationDetailContentProps {
   category: Category;

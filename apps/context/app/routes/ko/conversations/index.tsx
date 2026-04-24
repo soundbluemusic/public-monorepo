@@ -4,7 +4,10 @@
 
 import { headFactory } from '@soundblue/seo/meta';
 import { createFileRoute } from '@tanstack/react-router';
-import { ConversationsIndexContent } from '@/components/pages/ConversationsIndexContent';
+import {
+  ConversationsIndexContent,
+  conversationsIndexMeta,
+} from '@/components/pages/ConversationsIndexContent';
 import { APP_CONFIG } from '@/config';
 import { getCategoryById } from '@/data/categories';
 import { getCategoriesWithConversations, getConversationsByCategory } from '@/data/conversations';
@@ -28,19 +31,7 @@ export const Route = createFileRoute('/ko/conversations/')({
 
     return { categoriesWithCount };
   },
-  head: headFactory(
-    {
-      ko: {
-        title: '대화 예문 | Context',
-        description: '일상 상황별 한국어 대화 예문으로 자연스러운 한국어를 배워보세요',
-      },
-      en: {
-        title: 'Conversations | Context',
-        description: 'Learn natural Korean with conversation examples for everyday situations',
-      },
-    },
-    APP_CONFIG.baseUrl,
-  ),
+  head: headFactory(conversationsIndexMeta, APP_CONFIG.baseUrl),
   component: ConversationsIndexPage,
 });
 

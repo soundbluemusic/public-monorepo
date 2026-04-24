@@ -4,13 +4,13 @@ import {
   generateBreadcrumbSchema,
   generateSoftwareApplicationSchema,
 } from '@soundblue/seo/structured-data';
+import { Github } from '@soundblue/ui/components';
 import { createFileRoute, Link } from '@tanstack/react-router';
 import {
   ArrowLeft,
   Calendar,
   Code,
   ExternalLink,
-  Github,
   Lightbulb,
   Package,
   Scale,
@@ -18,66 +18,20 @@ import {
 } from 'lucide-react';
 import DocsLayout from '../../../components/layout/DocsLayout';
 import { APP_CONFIG } from '../../../config';
+import { getCategorySlug, getLibrarySlug } from '../../../data/libraries';
 import {
-  getCategorySlug,
-  getLibraryBySlug,
-  getLibrarySlug,
-  getRelatedLibraries,
-  type Library,
-} from '../../../data/libraries';
-
-type LoaderData = { library: Library; related: Library[] };
+  buildLibraryRouteHead,
+  type LibraryRouteLoaderData,
+  libraryCanonicalPath,
+  libraryRouteLoader,
+} from '../../../routes-meta';
 
 export const Route = createFileRoute('/ko/library/$slug')({
-  loader: async ({ params }) => {
-    const library = getLibraryBySlug(params.slug);
-    if (!library) {
-      throw new Response('Not Found', { status: 404 });
-    }
-    const related = getRelatedLibraries(library);
-    return { library, related };
-  },
-  head: dynamicHeadFactoryKo<LoaderData>(
-    (data) => {
-      if (!data?.library) {
-        return {
-          ko: { title: 'Not Found - Permissive' },
-          en: { title: 'Not Found - Permissive' },
-        };
-      }
-      const lib = data.library;
-      const tags = lib.tags || [];
-      return {
-        ko: {
-          title: `${lib.name} - Permissive`,
-          description: lib.descriptionKo,
-          keywords: [
-            lib.name,
-            `${lib.name} 라이브러리`,
-            lib.license,
-            lib.category,
-            '오픈소스',
-            '무료 라이브러리',
-            ...tags.slice(0, 3),
-          ],
-        },
-        en: {
-          title: `${lib.name} - Permissive`,
-          description: lib.description,
-          keywords: [
-            lib.name,
-            `${lib.name} library`,
-            lib.license,
-            lib.category,
-            'open source',
-            'free library',
-            ...tags.slice(0, 3),
-          ],
-        },
-      };
-    },
-    'https://permissive.soundbluemusic.com',
-    (data) => `/library/${getLibrarySlug(data.library.name)}`,
+  loader: libraryRouteLoader,
+  head: dynamicHeadFactoryKo<LibraryRouteLoaderData>(
+    buildLibraryRouteHead,
+    APP_CONFIG.baseUrl,
+    libraryCanonicalPath,
     { trailingSlash: true },
   ),
   component: LibraryDetailPageKo,

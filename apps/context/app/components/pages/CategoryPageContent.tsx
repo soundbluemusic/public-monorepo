@@ -1,20 +1,110 @@
 /**
- * @fileoverview Category 페이지 공유 컴포넌트
- *
- * 영어/한국어 라우트 파일에서 공통으로 사용하는 UI 컴포넌트입니다.
- * useI18n()을 통해 locale에 따라 자동으로 번역된 텍스트를 표시합니다.
+ * @fileoverview Category 페이지 공유 컴포넌트 + 라우트 헬퍼 (loader / head builder / canonical)
  */
 
 import { type BreadcrumbItem, generateBreadcrumbSchema } from '@soundblue/seo/structured-data';
 import { useAutoAnimate } from '@soundblue/ui/hooks';
 import { Pagination } from '@soundblue/ui/patterns';
 import { ProgressBar } from '@soundblue/ui/primitives';
-import { useRouterState } from '@tanstack/react-router';
+import { notFound, useRouterState } from '@tanstack/react-router';
 import { useCallback } from 'react';
 import { EntryListItem } from '@/components/entry/EntryListItem';
 import { Layout } from '@/components/layout';
-import { APP_CONFIG } from '@/config';
+import { PAGE_SIZE } from '@/constants';
+import { getCategoryById } from '@/data/categories';
 import type { Category, LocaleEntry } from '@/data/types';
+import { fetchEntriesByCategoryPaginated } from '@/services/d1-server';
+
+export interface CategoryLoaderData {
+  category: Category;
+  entries: LocaleEntry[];
+  currentPage: number;
+  totalCount: number;
+  totalPages: number;
+}
+
+/** `category/$categoryId` 라우트 쌍이 공유하는 loader. locale은 pathname으로 감지. */
+export async function categoryRouteLoader({
+  params,
+  location,
+}: {
+  params: { categoryId: string };
+  location: { pathname: string; search: Record<string, unknown> };
+}): Promise<CategoryLoaderData> {
+  const category = getCategoryById(params.categoryId);
+
+  if (!category) {
+    throw notFound();
+  }
+
+  const locale = location.pathname.startsWith('/ko') ? 'ko' : 'en';
+  const pageValue = location.search.page;
+  const pageStr = typeof pageValue === 'string' ? pageValue : '1';
+  const rawPage = Math.max(1, Number.parseInt(pageStr, 10) || 1);
+
+  let result = await fetchEntriesByCategoryPaginated({
+    data: { categoryId: params.categoryId, locale, page: rawPage, pageSize: PAGE_SIZE },
+  });
+
+  const totalPages = Math.ceil(result.totalCount / PAGE_SIZE);
+  const page = Math.min(rawPage, Math.max(1, totalPages));
+
+  if (page !== rawPage && totalPages > 0) {
+    result = await fetchEntriesByCategoryPaginated({
+      data: { categoryId: params.categoryId, locale, page, pageSize: PAGE_SIZE },
+    });
+  }
+
+  return {
+    category,
+    entries: result.entries,
+    currentPage: page,
+    totalCount: result.totalCount,
+    totalPages,
+  };
+}
+
+/** `dynamicHeadFactoryEn/Ko`에 전달되는 head builder. */
+export function buildCategoryRouteHead(data: CategoryLoaderData | undefined) {
+  if (!data?.category) {
+    return {
+      ko: { title: 'Not Found | Context' },
+      en: { title: 'Not Found | Context' },
+    };
+  }
+  const { category, totalCount } = data;
+  return {
+    ko: {
+      title: `${category.name.ko} | Context`,
+      description: `${category.name.ko} 카테고리의 ${totalCount}개 한국어 단어 학습`,
+      keywords: [
+        category.name.ko,
+        `${category.name.ko} 단어`,
+        '한국어 단어 목록',
+        '한국어 학습',
+        '한국어 어휘',
+      ],
+    },
+    en: {
+      title: `${category.name.en} | Context`,
+      description: `Learn ${totalCount} Korean words in the ${category.name.en} category`,
+      keywords: [
+        category.name.en,
+        `${category.name.en} words`,
+        'Korean vocabulary list',
+        'learn Korean',
+        'Korean words',
+      ],
+    },
+  };
+}
+
+/** canonical path — `dynamicHeadFactoryKo`가 `/ko`를 자동 prefix 하므로 locale-agnostic. */
+export function categoryCanonicalPath(data: CategoryLoaderData): string {
+  return `/category/${data.category.id}`;
+}
+
+import { APP_CONFIG } from '@/config';
 import { useStudyData } from '@/hooks';
 import { useI18n } from '@/i18n';
 

@@ -14,7 +14,9 @@
   "publishConfig": {
     "access": "public"
   },
-  "files": ["src"],
+  "files": [
+    "src"
+  ],
   "exports": {
     ".": "./src/index.ts",
     "./storage": {
@@ -30,10 +32,18 @@
   },
   "typesVersions": {
     "*": {
-      "sqlite": ["./src/sqlite/index.browser.ts"],
-      "sqlite/types": ["./src/sqlite/types.ts"],
-      "storage": ["./src/storage/types.ts"],
-      "db": ["./src/db/index.ts"]
+      "sqlite": [
+        "./src/sqlite/index.browser.ts"
+      ],
+      "sqlite/types": [
+        "./src/sqlite/types.ts"
+      ],
+      "storage": [
+        "./src/storage/types.ts"
+      ],
+      "db": [
+        "./src/db/index.ts"
+      ]
     }
   },
   "scripts": {
@@ -41,9 +51,9 @@
   },
   "dependencies": {
     "@soundblue/core": "workspace:*",
-    "dexie": "^4.0.10"
+    "dexie": "^4.4.2"
   },
   "devDependencies": {
-    "typescript": "^5.9.3"
+    "typescript": "^6.0.3"
   }
 }

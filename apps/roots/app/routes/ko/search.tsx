@@ -4,20 +4,15 @@
 
 import { headFactoryKo } from '@soundblue/seo/meta';
 import { createFileRoute, useSearch } from '@tanstack/react-router';
-import { SearchPage } from '../../components/pages';
+import { SearchPage, searchMeta } from '../../components/pages';
+import { APP_CONFIG } from '../../config';
 
 export const Route = createFileRoute('/ko/search')({
   validateSearch: (search: Record<string, unknown>) => ({
     q: typeof search.q === 'string' ? search.q : '',
   }),
   head: () => {
-    const config = headFactoryKo(
-      {
-        ko: { title: '검색 - 수리', description: '수학 개념 검색' },
-        en: { title: 'Search - Roots', description: 'Search math concepts' },
-      },
-      'https://roots.soundbluemusic.com',
-    )();
+    const config = headFactoryKo(searchMeta, APP_CONFIG.baseUrl)();
     return {
       ...config,
       meta: [...(config.meta ?? []), { name: 'robots', content: 'noindex' }],

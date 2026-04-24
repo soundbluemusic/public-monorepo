@@ -1,5 +1,5 @@
 /**
- * @fileoverview 공유 SearchPage 컴포넌트
+ * @fileoverview 공유 SearchPage 컴포넌트 + 공유 SEO 메타
  */
 
 import { toast } from '@soundblue/features/toast';
@@ -9,6 +9,11 @@ import { useI18n } from '../../i18n';
 import { type MiniSearchResult, searchConcepts } from '../../lib/search';
 import { Layout } from '../layout/Layout';
 import { DifficultyBadge } from '../ui/DifficultyBadge';
+
+export const searchMeta = {
+  ko: { title: '검색 - 수리', description: '수학 개념 검색' },
+  en: { title: 'Search - Roots', description: 'Search math concepts' },
+};
 
 /** 검색 결과 카드 */
 function SearchResultCard({ result }: { result: MiniSearchResult }) {

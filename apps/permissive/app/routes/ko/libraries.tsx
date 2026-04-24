@@ -8,12 +8,9 @@ import {
   SearchAndSort,
   useLibraryFilters,
 } from '../../components/libraries';
+import { APP_CONFIG } from '../../config';
 import { categories, libraries } from '../../data/libraries';
-
-const localizedMeta = {
-  ko: { title: 'Libraries - Permissive', description: 'MIT 라이센스 오픈소스 라이브러리' },
-  en: { title: 'Libraries - Permissive', description: 'MIT licensed open source libraries' },
-};
+import { librariesMeta } from '../../routes-meta';
 
 export const Route = createFileRoute('/ko/libraries')({
   loader: async () => {
@@ -22,7 +19,7 @@ export const Route = createFileRoute('/ko/libraries')({
       categories,
     };
   },
-  head: headFactoryKo(localizedMeta, 'https://permissive.soundbluemusic.com'),
+  head: headFactoryKo(librariesMeta, APP_CONFIG.baseUrl),
   component: LibrariesPageKo,
 });
 

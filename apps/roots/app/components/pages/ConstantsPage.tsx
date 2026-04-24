@@ -1,9 +1,14 @@
 /**
- * @fileoverview 공유 ConstantsPage 컴포넌트
+ * @fileoverview 공유 ConstantsPage 컴포넌트 + 공유 SEO 메타
  */
 
 import { useI18n } from '../../i18n';
 import { Layout } from '../layout/Layout';
+
+export const constantsMeta = {
+  ko: { title: '수학 상수 - 수리', description: '수학 상수' },
+  en: { title: 'Constants - Roots', description: 'Mathematical constants' },
+};
 
 const mathConstants = [
   {

@@ -9,6 +9,15 @@ import { LIMITS } from '@soundblue/core/validation';
 import { Link } from '@tanstack/react-router';
 import { TrendingUp } from 'lucide-react';
 import { Layout } from '@/components/layout';
+
+export const myLearningMeta = {
+  ko: { title: '내 학습 현황 - Context', description: '학습 진행도와 북마크한 단어 확인' },
+  en: {
+    title: 'My Learning - Context',
+    description: 'Track your learning progress and bookmarks',
+  },
+};
+
 import {
   CategoryProgressList,
   EntryList,

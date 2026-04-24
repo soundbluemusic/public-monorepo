@@ -1,5 +1,6 @@
+import { Github } from '@soundblue/ui/components';
 import { cn } from '@soundblue/ui/utils';
-import { ChevronLeft, Github } from 'lucide-react';
+import { ChevronLeft } from 'lucide-react';
 import type { Language, MessageKey } from '../../../i18n';
 
 interface SidebarFooterProps {

@@ -4,29 +4,10 @@
 
 import { headFactoryKo } from '@soundblue/seo/meta';
 import { createFileRoute } from '@tanstack/react-router';
-import { HomePage } from '../../components/pages';
+import { HomePage, homeMeta } from '../../components/pages';
+import { APP_CONFIG } from '../../config';
 
 export const Route = createFileRoute('/ko/_index')({
-  head: headFactoryKo(
-    {
-      ko: {
-        title: '수리 - 수학 문서',
-        description: '누구나 쉽게 배우는 수학 개념 사전',
-        keywords: ['수학 개념', '수학 공식', '수학 용어', '수학 사전', '수학 문서'],
-      },
-      en: {
-        title: 'Roots - Math Documentation',
-        description: 'Learn math concepts easily',
-        keywords: [
-          'math concepts',
-          'math formulas',
-          'math dictionary',
-          'math documentation',
-          'learn math',
-        ],
-      },
-    },
-    'https://roots.soundbluemusic.com',
-  ),
+  head: headFactoryKo(homeMeta, APP_CONFIG.baseUrl),
   component: HomePage,
 });

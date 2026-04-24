@@ -4,72 +4,25 @@
 
 import { dynamicHeadFactoryKo } from '@soundblue/seo/meta';
 import { Breadcrumb, TagCloud } from '@soundblue/ui/components';
-import { createFileRoute, Link, notFound } from '@tanstack/react-router';
+import { createFileRoute, Link } from '@tanstack/react-router';
 import { Star, Tags } from 'lucide-react';
 import DocsLayout from '../../../components/layout/DocsLayout';
-import { getLibrariesByTag, getLibrarySlug, type Library } from '../../../data/libraries';
+import { APP_CONFIG } from '../../../config';
+import { getLibrarySlug } from '../../../data/libraries';
 import { useI18n } from '../../../i18n';
-
-type LoaderData = {
-  tag: string;
-  libraries: Library[];
-  relatedTags: { tag: string; count: number; href: string }[];
-};
+import {
+  buildTagRouteHead,
+  type TagRouteLoaderData,
+  tagCanonicalPath,
+  tagRouteLoader,
+} from '../../../routes-meta';
 
 export const Route = createFileRoute('/ko/tag/$tagId')({
-  loader: async ({ params }) => {
-    const tag = decodeURIComponent(params.tagId);
-    const libraries = getLibrariesByTag(tag);
-
-    if (libraries.length === 0) {
-      throw notFound();
-    }
-
-    // 관련 태그 찾기
-    const relatedTagCounts = new Map<string, number>();
-    for (const lib of libraries) {
-      for (const t of lib.tags || []) {
-        if (t !== tag) {
-          relatedTagCounts.set(t, (relatedTagCounts.get(t) || 0) + 1);
-        }
-      }
-    }
-
-    const relatedTags = Array.from(relatedTagCounts.entries())
-      .sort((a, b) => b[1] - a[1])
-      .slice(0, 10)
-      .map(([t, count]) => ({
-        tag: t,
-        count,
-        href: `/ko/tag/${encodeURIComponent(t)}`,
-      }));
-
-    return { tag, libraries, relatedTags };
-  },
-  head: dynamicHeadFactoryKo<LoaderData>(
-    (data) => {
-      if (!data?.tag) {
-        return {
-          ko: { title: 'Not Found - Permissive' },
-          en: { title: 'Not Found - Permissive' },
-        };
-      }
-      const { tag, libraries } = data;
-      return {
-        ko: {
-          title: `#${tag} 태그 | Permissive`,
-          description: `"${tag}" 태그가 붙은 ${libraries.length}개의 라이브러리`,
-          keywords: [tag, '라이브러리 태그', '오픈소스', 'library tag'],
-        },
-        en: {
-          title: `#${tag} Tag | Permissive`,
-          description: `${libraries.length} libraries tagged with "${tag}"`,
-          keywords: [tag, 'library tag', 'open source', 'free libraries'],
-        },
-      };
-    },
-    'https://permissive.soundbluemusic.com',
-    (data) => `/tag/${encodeURIComponent(data.tag)}`,
+  loader: tagRouteLoader,
+  head: dynamicHeadFactoryKo<TagRouteLoaderData>(
+    buildTagRouteHead,
+    APP_CONFIG.baseUrl,
+    tagCanonicalPath,
     { trailingSlash: true },
   ),
   component: TagPage,
@@ -78,6 +31,11 @@ export const Route = createFileRoute('/ko/tag/$tagId')({
 function TagPage() {
   const { tag, libraries, relatedTags } = Route.useLoaderData();
   const { localePath } = useI18n();
+
+  const relatedTagsWithHref = relatedTags.map((t) => ({
+    ...t,
+    href: localePath(`/tag/${encodeURIComponent(t.tag)}`),
+  }));
 
   return (
     <DocsLayout>
@@ -102,9 +60,9 @@ function TagPage() {
         </header>
 
         {/* Related Tags */}
-        {relatedTags.length > 0 && (
+        {relatedTagsWithHref.length > 0 && (
           <section className="mb-8">
-            <TagCloud tags={relatedTags} title="관련 태그" showCounts size="sm" />
+            <TagCloud tags={relatedTagsWithHref} title="관련 태그" showCounts size="sm" />
           </section>
         )}
 

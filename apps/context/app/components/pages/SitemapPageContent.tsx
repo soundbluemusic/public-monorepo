@@ -21,6 +21,17 @@ import type { ReactNode } from 'react';
 import { Layout } from '@/components/layout';
 import { useI18n } from '@/i18n';
 
+export const sitemapMeta = {
+  ko: {
+    title: '사이트맵 - Context',
+    description: 'Context 사이트의 모든 페이지 목록',
+  },
+  en: {
+    title: 'Sitemap - Context',
+    description: 'Complete list of all pages on Context',
+  },
+};
+
 const pages: { path: string; labelEn: string; labelKo: string; icon: ReactNode }[] = [
   { path: '/', labelEn: 'Home', labelKo: '홈', icon: <Home size={18} aria-hidden="true" /> },
   {

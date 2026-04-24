@@ -8,6 +8,21 @@
 import { Layout } from '@/components/layout';
 import { type MessageKey, useI18n } from '@/i18n';
 
+export const licenseMeta = {
+  ko: { title: '라이선스 - Context' },
+  en: { title: 'License - Context' },
+};
+
+export const privacyMeta = {
+  ko: { title: '개인정보처리방침 - Context' },
+  en: { title: 'Privacy Policy - Context' },
+};
+
+export const termsMeta = {
+  ko: { title: '이용약관 - Context' },
+  en: { title: 'Terms of Service - Context' },
+};
+
 interface LegalPageContentProps {
   titleKey: MessageKey;
   contentKey: MessageKey;
@@ -18,9 +33,7 @@ export function LegalPageContent({ titleKey, contentKey }: LegalPageContentProps
 
   return (
     <Layout>
-      <h1 className="text-2xl sm:text-3xl font-bold text-(--text-primary) mb-6">
-        {t(titleKey)}
-      </h1>
+      <h1 className="text-2xl sm:text-3xl font-bold text-(--text-primary) mb-6">{t(titleKey)}</h1>
       <div className="text-(--text-secondary)">
         <p>{t(contentKey)}</p>
       </div>

@@ -9,6 +9,17 @@ import { getOpenSourceGrouped } from '@soundblue/core';
 import { Layout } from '@/components/layout';
 import { useI18n } from '@/i18n';
 
+export const builtWithMeta = {
+  ko: {
+    title: '오픈소스 - Context',
+    description: '이 프로젝트에서 사용된 오픈소스 라이브러리',
+  },
+  en: {
+    title: 'Open Source - Context',
+    description: 'Open source libraries used in this project',
+  },
+};
+
 export function BuiltWithPageContent() {
   const { locale } = useI18n();
   const groups = getOpenSourceGrouped();

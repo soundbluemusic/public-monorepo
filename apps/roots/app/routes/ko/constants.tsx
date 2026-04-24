@@ -4,15 +4,10 @@
 
 import { headFactoryKo } from '@soundblue/seo/meta';
 import { createFileRoute } from '@tanstack/react-router';
-import { ConstantsPage } from '../../components/pages';
+import { ConstantsPage, constantsMeta } from '../../components/pages';
+import { APP_CONFIG } from '../../config';
 
 export const Route = createFileRoute('/ko/constants')({
-  head: headFactoryKo(
-    {
-      ko: { title: '수학 상수 - 수리', description: '수학 상수' },
-      en: { title: 'Constants - Roots', description: 'Mathematical constants' },
-    },
-    'https://roots.soundbluemusic.com',
-  ),
+  head: headFactoryKo(constantsMeta, APP_CONFIG.baseUrl),
   component: ConstantsPage,
 });
