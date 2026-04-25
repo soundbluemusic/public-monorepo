@@ -81,11 +81,15 @@ export default defineConfig({
         src: './src/assets/logo.svg',
         replacesTitle: false,
       },
-      social: {
-        github: 'https://github.com/soundbluemusic/public-monorepo',
-        youtube: 'https://www.youtube.com/@SoundBlueMusic',
-        'x.com': 'https://x.com/SoundBlueMusic',
-      },
+      social: [
+        {
+          icon: 'github',
+          label: 'GitHub',
+          href: 'https://github.com/soundbluemusic/public-monorepo',
+        },
+        { icon: 'youtube', label: 'YouTube', href: 'https://www.youtube.com/@SoundBlueMusic' },
+        { icon: 'x.com', label: 'X', href: 'https://x.com/SoundBlueMusic' },
+      ],
       locales: {
         root: { label: 'English', lang: 'en' },
         ko: { label: '한국어', lang: 'ko' },
