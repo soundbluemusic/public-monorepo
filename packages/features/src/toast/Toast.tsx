@@ -102,7 +102,6 @@ const ToastItem = memo(function ToastItem({
   };
 
   return (
-    // biome-ignore lint/a11y/useSemanticElements: role="status" with aria-live is correct for toast notifications
     <div
       role="status"
       aria-live="polite"

@@ -108,6 +108,7 @@ export function CommandPalette({
   }, [displayItems.length, selectedIndex]);
 
   // 선택된 아이템 스크롤
+  // biome-ignore lint/correctness/useExhaustiveDependencies: selectedIndex is intentionally a trigger; effect body queries DOM rather than reading the value
   useEffect(() => {
     if (!listRef.current) return;
     const selected = listRef.current.querySelector('[data-selected="true"]');
@@ -179,6 +180,7 @@ export function CommandPalette({
   let globalIndex = 0;
 
   return (
+    // biome-ignore lint/a11y/noStaticElementInteractions: Modal overlay click-to-close, role="presentation" + Escape key handler cover keyboard a11y
     <div
       ref={overlayRef}
       className="fixed inset-0 z-[var(--z-index-modal,60)] flex items-start justify-center pt-[15vh] motion-fade-in"

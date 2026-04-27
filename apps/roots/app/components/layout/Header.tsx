@@ -3,7 +3,7 @@ import { stripLocaleFromPath } from '@soundblue/i18n';
 import { useSearchWorker } from '@soundblue/search/react';
 import { DarkModeToggle, LanguageToggle, ServicesDropdown } from '@soundblue/ui/components';
 import type { CommandGroup, CommandItem } from '@soundblue/ui/patterns';
-import { CommandPalette, SearchDropdown, useCommandPalette } from '@soundblue/ui/patterns';
+import { CommandPalette, useCommandPalette } from '@soundblue/ui/patterns';
 import { cn } from '@soundblue/ui/utils';
 import { Link, useNavigate, useRouterState } from '@tanstack/react-router';
 import { Menu, Search } from 'lucide-react';
@@ -28,13 +28,6 @@ export function Header({ sidebarCollapsed, onMenuClick }: HeaderProps) {
     debounceMs: 150,
     maxResults: LIMITS.SEARCH_MAX_RESULTS,
   });
-
-  const handleSelectResult = useCallback(
-    (result: { item: { id: string } }) => {
-      navigate({ to: localePath(`/concept/${result.item.id}`) });
-    },
-    [navigate, localePath],
-  );
 
   const isActive = (basePath: string) => {
     const currentPath = stripLocaleFromPath(pathname);

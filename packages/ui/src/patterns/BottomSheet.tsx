@@ -127,6 +127,7 @@ export function BottomSheet({ isOpen, onClose, title, children, className }: Bot
   if (!shouldRender) return null;
 
   return (
+    // biome-ignore lint/a11y/noStaticElementInteractions: Modal overlay click-to-close, role="presentation" + Escape key handler in inner dialog cover keyboard a11y
     <div
       className={cn(
         'fixed inset-0 z-[var(--z-index-modal,60)] transition-colors duration-300',
@@ -154,6 +155,7 @@ export function BottomSheet({ isOpen, onClose, title, children, className }: Bot
         aria-label={title}
       >
         {/* 드래그 핸들 */}
+        {/* biome-ignore lint/a11y/noStaticElementInteractions: Touch-only drag-to-dismiss, keyboard close handled by ARIA dialog Escape key */}
         <div
           className="flex justify-center pt-3 pb-2 cursor-grab active:cursor-grabbing touch-none"
           onTouchStart={handleTouchStart}
