@@ -68,44 +68,48 @@ jobs:
           # Test 1: Homepage has SSR content
           echo ""
           echo "📄 Test 1: Homepage SSR"
-          HOME_HTML=$(curl -sL "$BASE_URL/")
-          if echo "$HOME_HTML" | grep -q '<title>.*Permissive'; then
+          HOME_STATUS=$(curl -sL -o /tmp/permissive-home.html -w "%{http_code}" "$BASE_URL/")
+          if [ "$HOME_STATUS" = "200" ] && grep -q '<title>.*Permissive' /tmp/permissive-home.html; then
             echo "✅ Homepage has title tag"
           else
             echo "❌ Homepage missing title tag (SSR failed)"
+            echo "HTTP status: $HOME_STATUS"
             FAILED=1
           fi
 
           # Test 2: Library page renders
           echo ""
           echo "📄 Test 2: Library page"
-          LIB_HTML=$(curl -sL "$BASE_URL/library/react")
-          if echo "$LIB_HTML" | grep -qi 'react'; then
+          LIB_STATUS=$(curl -sL -o /tmp/permissive-library.html -w "%{http_code}" "$BASE_URL/library/react")
+          if [ "$LIB_STATUS" = "200" ] && grep -qi 'react' /tmp/permissive-library.html; then
             echo "✅ Library page renders"
           else
             echo "❌ Library page failed"
+            echo "HTTP status: $LIB_STATUS"
             FAILED=1
           fi
 
           # Test 3: Korean version works
           echo ""
           echo "📄 Test 3: Korean version"
-          KO_HTML=$(curl -sL "$BASE_URL/ko/")
-          if echo "$KO_HTML" | grep -q 'Permissive'; then
+          KO_STATUS=$(curl -sL -o /tmp/permissive-ko.html -w "%{http_code}" "$BASE_URL/ko/")
+          if [ "$KO_STATUS" = "200" ] && grep -q 'Permissive' /tmp/permissive-ko.html; then
             echo "✅ Korean version renders"
           else
             echo "❌ Korean version failed"
+            echo "HTTP status: $KO_STATUS"
             FAILED=1
           fi
 
           # Test 4: Web API page
           echo ""
           echo "📄 Test 4: Web API page"
-          API_HTML=$(curl -sL "$BASE_URL/web-api/fetch")
-          if echo "$API_HTML" | grep -qi 'fetch'; then
+          API_STATUS=$(curl -sL -o /tmp/permissive-api.html -w "%{http_code}" "$BASE_URL/web-api/fetch-api")
+          if [ "$API_STATUS" = "200" ] && grep -qi 'fetch' /tmp/permissive-api.html; then
             echo "✅ Web API page renders"
           else
             echo "❌ Web API page failed"
+            echo "HTTP status: $API_STATUS"
             FAILED=1
           fi
 

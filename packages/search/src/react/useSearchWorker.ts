@@ -161,6 +161,16 @@ interface UseSearchWorkerOptions {
    * Increase for full search result pages (20-50).
    */
   maxResults?: number;
+
+  /**
+   * Whether to load and initialize the search index.
+   *
+   * @default true
+   *
+   * Set to false for UI that should not pay the search-index cost until the
+   * user opens or focuses search.
+   */
+  enabled?: boolean;
 }
 
 /**
@@ -211,6 +221,130 @@ interface UseSearchWorkerReturn {
    * Common errors: network failure, invalid JSON, 404.
    */
   error: string | null;
+}
+
+interface LoadedSearchIndex {
+  items: SearchIndexItem[];
+  itemsById: Map<string, SearchIndexItem>;
+}
+
+const searchIndexCache = new Map<string, Promise<LoadedSearchIndex>>();
+const miniSearchCache = new Map<string, Promise<MiniSearch<SearchIndexItem>>>();
+
+/** @internal Test helper for module-level search caches. */
+export function __clearSearchWorkerCacheForTests() {
+  searchIndexCache.clear();
+  miniSearchCache.clear();
+}
+
+async function loadSearchIndex(indexUrl: string): Promise<LoadedSearchIndex> {
+  const cached = searchIndexCache.get(indexUrl);
+  if (cached) {
+    return cached;
+  }
+
+  const loadPromise = fetch(indexUrl)
+    .then(async (response) => {
+      if (!response.ok) {
+        throw new Error(`Failed to load search index: ${response.status}`);
+      }
+
+      const items: SearchIndexItem[] = await response.json();
+      return {
+        items,
+        itemsById: new Map(items.map((item) => [item.id, item])),
+      };
+    })
+    .catch((error: unknown) => {
+      searchIndexCache.delete(indexUrl);
+      throw error;
+    });
+
+  searchIndexCache.set(indexUrl, loadPromise);
+  return loadPromise;
+}
+
+function createMiniSearch(locale: 'en' | 'ko'): MiniSearch<SearchIndexItem> {
+  return new MiniSearch<SearchIndexItem>({
+    // Searchable fields - order doesn't affect search, boost does
+    fields: [
+      `name.${locale}`, // Primary: current locale name
+      'name.en', // Fallback: English name (always indexed)
+      `description.${locale}`, // Secondary: current locale description
+      'description.en', // Fallback: English description
+      'field', // Category/domain field
+      'tags', // Additional keywords
+    ],
+    // Fields to store in search results (for display without lookup)
+    storeFields: ['id', 'type', 'name', 'description', 'field', 'tags'],
+
+    // Custom field extractor for nested objects (name.ko, description.en)
+    // MiniSearch only handles flat objects by default
+    extractField: (document, fieldName) => {
+      // Split field path: "name.ko" -> ["name", "ko"]
+      const parts = fieldName.split('.');
+      let value: unknown = document;
+
+      // Traverse the object path
+      for (const part of parts) {
+        if (value && typeof value === 'object' && part in value) {
+          value = (value as Record<string, unknown>)[part];
+        } else {
+          return undefined;
+        }
+      }
+
+      // Join arrays (tags) into space-separated string for indexing
+      if (Array.isArray(value)) {
+        return value.join(' ');
+      }
+
+      return typeof value === 'string' ? value : undefined;
+    },
+
+    // Default search options applied to all queries
+    searchOptions: {
+      // Boost multipliers for field relevance ranking
+      boost: {
+        [`name.${locale}`]: 3, // Primary language name: highest priority
+        'name.en': 2, // English name: high priority (fallback)
+        [`description.${locale}`]: 1.5, // Primary language desc: medium
+        'description.en': 1, // English description: base relevance
+        field: 1, // Category: base relevance
+        tags: 0.5, // Tags: lower (auxiliary keywords)
+      },
+      // Fuzzy matching: 0.2 = allow 20% character differences
+      // "hello" matches "helo" (1 char diff in 5 chars = 20%)
+      fuzzy: 0.2,
+      // Prefix matching: "hel" matches "hello"
+      prefix: true,
+    },
+  });
+}
+
+async function loadMiniSearch(
+  indexUrl: string,
+  locale: 'en' | 'ko',
+): Promise<MiniSearch<SearchIndexItem>> {
+  const cacheKey = `${indexUrl}::${locale}`;
+  const cached = miniSearchCache.get(cacheKey);
+  if (cached) {
+    return cached;
+  }
+
+  const loadPromise = loadSearchIndex(indexUrl)
+    .then((index) => {
+      const miniSearch = createMiniSearch(locale);
+      miniSearch.addAll(index.items);
+      return miniSearch;
+    })
+    .catch((error: unknown) => {
+      miniSearchCache.delete(cacheKey);
+      throw error;
+    });
+
+  miniSearchCache.set(cacheKey, loadPromise);
+  return loadPromise;
 }
 
 /**
@@ -339,6 +473,7 @@ export function useSearchWorker({
   locale,
   debounceMs = 150,
   maxResults = 8,
+  enabled = true,
 }: UseSearchWorkerOptions): UseSearchWorkerReturn {
   const [query, setQueryState] = useState('');
   const [results, setResults] = useState<SearchResult[]>([]);
@@ -349,13 +484,22 @@ export function useSearchWorker({
   // Refs for mutable values that don't trigger re-renders
   const miniSearchRef = useRef<MiniSearch<SearchIndexItem> | null>(null);
   const debounceTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const indexRef = useRef<SearchIndexItem[] | null>(null);
+  const indexRef = useRef<LoadedSearchIndex | null>(null);
 
   // Load and initialize search index on mount
   // Re-initializes if indexUrl or locale changes
   useEffect(() => {
     // Skip on server-side (SSR)
     if (typeof window === 'undefined') {
+      return;
+    }
+
+    if (!enabled) {
+      setIsLoading(false);
+      setIsReady(false);
+      setResults([]);
+      miniSearchRef.current = null;
+      indexRef.current = null;
       return;
     }
 
@@ -366,81 +510,20 @@ export function useSearchWorker({
 
     const loadIndex = async () => {
       try {
+        setError(null);
+        setIsReady(false);
         setIsLoading(true);
 
-        // Fetch the search index JSON from public directory
-        const response = await fetch(indexUrl);
-        if (!response.ok) {
-          throw new Error(`Failed to load search index: ${response.status}`);
-        }
-        const index: SearchIndexItem[] = await response.json();
+        const indexPromise = loadSearchIndex(indexUrl);
+        const miniSearchPromise = loadMiniSearch(indexUrl, locale);
+        const [index, miniSearch] = await Promise.all([indexPromise, miniSearchPromise]);
 
         // Check cancellation after async operation
         if (cancelled) return;
 
-        // Store raw index for result mapping later
+        // Store raw index for result mapping later.
         indexRef.current = index;
-
-        // Create MiniSearch instance with locale-aware configuration
-        // Fields are ordered by priority (locale-specific first)
-        miniSearchRef.current = new MiniSearch<SearchIndexItem>({
-          // Searchable fields - order doesn't affect search, boost does
-          fields: [
-            `name.${locale}`, // Primary: current locale name
-            'name.en', // Fallback: English name (always indexed)
-            `description.${locale}`, // Secondary: current locale description
-            'description.en', // Fallback: English description
-            'field', // Category/domain field
-            'tags', // Additional keywords
-          ],
-          // Fields to store in search results (for display without lookup)
-          storeFields: ['id', 'type', 'name', 'description', 'field', 'tags'],
-
-          // Custom field extractor for nested objects (name.ko, description.en)
-          // MiniSearch only handles flat objects by default
-          extractField: (document, fieldName) => {
-            // Split field path: "name.ko" → ["name", "ko"]
-            const parts = fieldName.split('.');
-            let value: unknown = document;
-
-            // Traverse the object path
-            for (const part of parts) {
-              if (value && typeof value === 'object' && part in value) {
-                value = (value as Record<string, unknown>)[part];
-              } else {
-                return undefined;
-              }
-            }
-
-            // Join arrays (tags) into space-separated string for indexing
-            if (Array.isArray(value)) {
-              return value.join(' ');
-            }
-
-            return typeof value === 'string' ? value : undefined;
-          },
-
-          // Default search options applied to all queries
-          searchOptions: {
-            // Boost multipliers for field relevance ranking
-            boost: {
-              [`name.${locale}`]: 3, // Primary language name: highest priority
-              'name.en': 2, // English name: high priority (fallback)
-              [`description.${locale}`]: 1.5, // Primary language desc: medium
-              'description.en': 1, // English description: base relevance
-              field: 1, // Category: base relevance
-              tags: 0.5, // Tags: lower (auxiliary keywords)
-            },
-            // Fuzzy matching: 0.2 = allow 20% character differences
-            // "hello" matches "helo" (1 char diff in 5 chars = 20%)
-            fuzzy: 0.2,
-            // Prefix matching: "hel" matches "hello"
-            prefix: true,
-          },
-        });
-
-        // Index all documents (synchronous, fast for <1000 items)
-        miniSearchRef.current.addAll(index);
+        miniSearchRef.current = miniSearch;
 
         setIsReady(true);
         setIsLoading(false);
@@ -461,7 +544,7 @@ export function useSearchWorker({
         clearTimeout(debounceTimerRef.current);
       }
     };
-  }, [indexUrl, locale]); // Re-initialize if URL or locale changes
+  }, [enabled, indexUrl, locale]); // Re-initialize if URL, locale, or enabled state changes
 
   /**
    * Execute search and update results state.
@@ -488,7 +571,7 @@ export function useSearchWorker({
       const mappedResults: SearchResult[] = searchResults.map((result) => {
         // Look up original item for complete, typed data
         // MiniSearch's stored fields may have type issues
-        const originalItem = indexRef.current?.find((item) => item.id === result.id);
+        const originalItem = indexRef.current?.itemsById.get(String(result.id));
         return {
           item: originalItem || {
             // Fallback: construct from MiniSearch's stored fields

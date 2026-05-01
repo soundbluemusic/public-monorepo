@@ -12,7 +12,6 @@ import { BookOpen, Search } from 'lucide-react';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { FEATURED_CONCEPTS, featuredCardColors } from '../../data/featuredConcepts';
 import { useI18n } from '../../i18n';
-import { preloadSearchIndex } from '../../lib/search';
 import { Layout } from '../layout/Layout';
 
 const ROOTS_BASE_URL = 'https://roots.soundbluemusic.com';
@@ -66,6 +65,7 @@ export function HomePage() {
     locale,
     debounceMs: 150,
     maxResults: LIMITS.SEARCH_MAX_RESULTS,
+    enabled: showResults,
   });
 
   const handleResultClick = useCallback(
@@ -124,11 +124,6 @@ export function HomePage() {
     };
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, []);
-
-  // 검색 인덱스 프리로드
-  useEffect(() => {
-    preloadSearchIndex();
   }, []);
 
   // Auto-animate for featured concepts grid

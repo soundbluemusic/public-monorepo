@@ -19,6 +19,10 @@ export function useGlobalSearch({ locale, localePath }: UseGlobalSearchOptions) 
   const inputRef = useRef<HTMLInputElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
 
+  // UI state
+  const [isOpen, setIsOpen] = useState(false);
+  const [selectedIndex, setSelectedIndex] = useState(-1);
+
   // Fuzzy search with debouncing via useSearchWorker
   const {
     query,
@@ -30,6 +34,7 @@ export function useGlobalSearch({ locale, localePath }: UseGlobalSearchOptions) 
     locale,
     debounceMs: 150,
     maxResults: LIMITS.SEARCH_MAX_RESULTS,
+    enabled: isOpen,
   });
 
   // Map search results to simple format for rendering
@@ -41,10 +46,6 @@ export function useGlobalSearch({ locale, localePath }: UseGlobalSearchOptions) 
       })),
     [searchResults],
   );
-
-  // UI state
-  const [isOpen, setIsOpen] = useState(false);
-  const [selectedIndex, setSelectedIndex] = useState(-1);
 
   // Global keyboard shortcuts
   const handleGlobalKeyDown = useCallback((e: KeyboardEvent) => {
@@ -118,8 +119,8 @@ export function useGlobalSearch({ locale, localePath }: UseGlobalSearchOptions) 
   );
 
   const handleFocus = useCallback(() => {
-    if (query.trim()) setIsOpen(true);
-  }, [query]);
+    setIsOpen(true);
+  }, []);
 
   const handleClear = useCallback(() => {
     setQuery('');

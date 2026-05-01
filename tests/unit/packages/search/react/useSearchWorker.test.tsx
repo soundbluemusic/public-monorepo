@@ -4,8 +4,11 @@
  * MiniSearch 기반 검색 훅 테스트
  */
 
-import type { SearchIndexItem } from '@soundblue/search/react';
-import { useSearchWorker } from '@soundblue/search/react';
+import {
+  __clearSearchWorkerCacheForTests,
+  type SearchIndexItem,
+  useSearchWorker,
+} from '../../../../../packages/search/src/react/useSearchWorker';
 import { act, renderHook, waitFor } from '@testing-library/react';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
@@ -35,6 +38,8 @@ const mockSearchIndex: SearchIndexItem[] = [
 
 describe('@soundblue/search/react - useSearchWorker', () => {
   beforeEach(() => {
+    __clearSearchWorkerCacheForTests();
+
     // Mock fetch to return our test data
     global.fetch = vi.fn().mockResolvedValue({
       ok: true,
@@ -119,6 +124,17 @@ describe('@soundblue/search/react - useSearchWorker', () => {
       await waitFor(() => {
         expect(result.current.error).toBe('Network error');
       });
+    });
+
+    it('should not fetch while disabled', async () => {
+      const { result } = renderHook(() =>
+        useSearchWorker({ indexUrl: '/search-index.json', locale: 'en', enabled: false }),
+      );
+
+      await act(async () => {});
+
+      expect(global.fetch).not.toHaveBeenCalled();
+      expect(result.current.isReady).toBe(false);
     });
   });
 
@@ -250,9 +266,10 @@ describe('@soundblue/search/react - useSearchWorker', () => {
   });
 
   describe('locale handling', () => {
-    it('should re-initialize when locale changes', async () => {
+    it('should re-initialize when locale changes without refetching the index', async () => {
       const { result, rerender } = renderHook(
-        ({ locale }) => useSearchWorker({ indexUrl: '/search-index.json', locale }),
+        ({ locale }) =>
+          useSearchWorker({ indexUrl: '/search-index.json', locale, debounceMs: 10 }),
         { initialProps: { locale: 'en' as const } },
       );
 
@@ -263,11 +280,16 @@ describe('@soundblue/search/react - useSearchWorker', () => {
       // Change locale
       rerender({ locale: 'ko' });
 
-      await waitFor(() => {
-        expect((global.fetch as ReturnType<typeof vi.fn>).mock.calls.length).toBeGreaterThan(
-          initialFetchCount,
-        );
+      await waitFor(() => expect(result.current.isReady).toBe(true));
+
+      act(() => {
+        result.current.setQuery('피타고라스');
       });
+
+      await waitFor(() => {
+        expect(result.current.results[0]?.item.id).toBe('pythagorean');
+      });
+      expect((global.fetch as ReturnType<typeof vi.fn>).mock.calls.length).toBe(initialFetchCount);
     });
   });
 });

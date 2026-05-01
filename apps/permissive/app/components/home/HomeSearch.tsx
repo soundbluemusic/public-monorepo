@@ -23,6 +23,7 @@ export function HomeSearch({ locale, localePath }: HomeSearchProps) {
     locale,
     debounceMs: 150,
     maxResults: LIMITS.SEARCH_MAX_RESULTS,
+    enabled: showResults,
   });
 
   const handleResultClick = useCallback(

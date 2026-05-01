@@ -27,6 +27,7 @@ export function Header({ sidebarCollapsed, onMenuClick }: HeaderProps) {
     locale,
     debounceMs: 150,
     maxResults: LIMITS.SEARCH_MAX_RESULTS,
+    enabled: commandPalette.isOpen,
   });
 
   const isActive = (basePath: string) => {
