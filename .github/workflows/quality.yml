@@ -13,6 +13,10 @@ on:
       - 'turbo.json'
       - 'biome.json'
       - 'vitest*.ts'
+      - 'playwright.config.ts'
+      - '.size-limit.json'
+      - '.github/workflows/quality.yml'
+      - 'tests/**'
   pull_request:
     branches: [main]
 
@@ -217,7 +221,7 @@ jobs:
 
       # 프로덕션 URL로 E2E 테스트 실행 (SSR 앱은 로컬 서버 불가)
       - name: Run E2E tests against production
-        run: pnpm exec playwright test --project=context-prod --project=permissive-prod --project=roots-prod
+        run: pnpm exec playwright test --project=production-smoke
         env:
           PLAYWRIGHT_BASE_URL_CONTEXT: https://context.soundbluemusic.com
           PLAYWRIGHT_BASE_URL_PERMISSIVE: https://permissive.soundbluemusic.com

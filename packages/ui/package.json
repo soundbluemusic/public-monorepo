@@ -37,8 +37,8 @@
   },
   "peerDependencies": {
     "@tanstack/react-table": "^8.21.3",
-    "react": "^19.2.3",
-    "react-dom": "^19.2.3"
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5"
   },
   "dependencies": {
     "@formkit/auto-animate": "^0.9.0",

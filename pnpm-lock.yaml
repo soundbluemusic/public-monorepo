@@ -592,13 +592,13 @@ importers:
   packages/features:
     dependencies:
       '@tanstack/react-query':
-        specifier: ^5.90.20
+        specifier: ^5.100.1
         version: 5.100.1(react@19.2.5)
       '@tanstack/react-query-devtools':
-        specifier: ^5.91.2
+        specifier: ^5.100.1
         version: 5.100.1(@tanstack/react-query@5.100.1(react@19.2.5))(react@19.2.5)
       react:
-        specifier: ^19.2.3
+        specifier: ^19.2.5
         version: 19.2.5
       zustand:
         specifier: ^5.0.12
@@ -617,10 +617,10 @@ importers:
         specifier: workspace:*
         version: link:../core
       '@tanstack/react-router':
-        specifier: ^1.157.2
+        specifier: ^1.168.23
         version: 1.168.23(react-dom@19.2.5(react@19.2.5))(react@19.2.5)
       react:
-        specifier: ^19.2.3
+        specifier: ^19.2.5
         version: 19.2.5
     devDependencies:
       '@types/node':
@@ -649,7 +649,7 @@ importers:
   packages/pwa:
     dependencies:
       react:
-        specifier: ^19.2.3
+        specifier: ^19.2.5
         version: 19.2.5
     devDependencies:
       '@types/node':
@@ -671,7 +671,7 @@ importers:
         specifier: ^7.2.0
         version: 7.2.0
       react:
-        specifier: ^19.2.3
+        specifier: ^19.2.5
         version: 19.2.5
     devDependencies:
       '@types/react':

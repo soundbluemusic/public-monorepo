@@ -7,10 +7,10 @@
       "pinVersion": "workspace:*"
     },
     {
-      "label": "Pin zod to 3.x for Astro/Starlight compatibility",
+      "label": "Pin zod to current project major",
       "dependencies": ["zod"],
       "dependencyTypes": ["dev", "prod"],
-      "pinVersion": "^3.25.0"
+      "pinVersion": "^4.3.6"
     }
   ],
   "semverGroups": [

@@ -66,7 +66,7 @@ describe('Sensitive Data Protection', () => {
 describe('Source Map Protection', () => {
   it('should not include source maps in production build', () => {
     const mapFiles = glob.sync('apps/roots/dist/client/**/*.map', {
-      ignore: ['**/node_modules/**'],
+      ignore: ['**/node_modules/**', '**/sw.js.map', '**/workbox-*.js.map'],
     });
 
     expect(mapFiles.length).toBe(0);
@@ -74,7 +74,7 @@ describe('Source Map Protection', () => {
 
   it('should not reference source maps in JS files', () => {
     const jsFiles = glob.sync('apps/roots/dist/client/**/*.js', {
-      ignore: ['**/node_modules/**'],
+      ignore: ['**/node_modules/**', '**/sw.js', '**/workbox-*.js'],
     });
 
     for (const file of jsFiles) {

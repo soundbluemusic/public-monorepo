@@ -31,7 +31,7 @@
     "test:coverage": "vitest run --coverage",
     "test:e2e": "playwright test",
     "check:circular": "skott --displayMode=raw --showCircularDependencies --fileExtensions=.ts,.tsx --ignorePattern='**/build/**' --ignorePattern='**/node_modules/**' --ignorePattern='**/routeTree.gen.ts' --cwd=apps && skott --displayMode=raw --showCircularDependencies --fileExtensions=.ts,.tsx --ignorePattern='**/build/**' --ignorePattern='**/node_modules/**' --cwd=packages",
-    "check:versions": "syncpack list-mismatches",
+    "check:versions": "syncpack lint",
     "check:size": "size-limit",
     "check:links": "tsx scripts/check-links.ts",
     "check:links:prod": "./scripts/check-links-prod.sh",

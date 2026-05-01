@@ -3,10 +3,20 @@
  */
 
 import { Accordion } from '@soundblue/ui/components';
-import { fireEvent, render, screen } from '@testing-library/react';
-import { describe, expect, it, vi } from 'vitest';
+import { act, fireEvent, render, screen } from '@testing-library/react';
+import { afterEach, describe, expect, it, vi } from 'vitest';
+
+function finishCollapseAnimation() {
+  act(() => {
+    vi.advanceTimersByTime(300);
+  });
+}
 
 describe('Accordion', () => {
+  afterEach(() => {
+    vi.useRealTimers();
+  });
+
   describe('single mode', () => {
     it('should render accordion with items', () => {
       render(
@@ -43,6 +53,8 @@ describe('Accordion', () => {
     });
 
     it('should close previous item when opening new item in single mode', () => {
+      vi.useFakeTimers();
+
       render(
         <Accordion type="single">
           <Accordion.Item value="item-1">
@@ -63,6 +75,7 @@ describe('Accordion', () => {
       // Open second item (first should close)
       fireEvent.click(screen.getByText('Section 2'));
       expect(screen.getByText('Content 2')).toBeInTheDocument();
+      finishCollapseAnimation();
       // Verify first item is closed
       expect(screen.queryByText('Content 1')).not.toBeInTheDocument();
     });
@@ -89,6 +102,8 @@ describe('Accordion', () => {
     });
 
     it('should collapse item when clicking same item with collapsible', () => {
+      vi.useFakeTimers();
+
       render(
         <Accordion type="single" collapsible>
           <Accordion.Item value="item-1">
@@ -106,6 +121,7 @@ describe('Accordion', () => {
 
       // Click again with collapsible - should close
       fireEvent.click(trigger);
+      finishCollapseAnimation();
       // Verify content is hidden (collapsed)
       expect(screen.queryByText('Content 1')).not.toBeInTheDocument();
     });
@@ -145,6 +161,8 @@ describe('Accordion', () => {
     });
 
     it('should work in controlled mode', () => {
+      vi.useFakeTimers();
+
       const onValueChange = vi.fn();
 
       const { rerender } = render(
@@ -182,6 +200,7 @@ describe('Accordion', () => {
 
       // Verify item 2 is now open and item 1 is closed
       expect(screen.getByText('Content 2')).toBeInTheDocument();
+      finishCollapseAnimation();
       expect(screen.queryByText('Content 1')).not.toBeInTheDocument();
     });
   });
@@ -211,6 +230,8 @@ describe('Accordion', () => {
     });
 
     it('should toggle individual items in multiple mode', () => {
+      vi.useFakeTimers();
+
       render(
         <Accordion type="multiple">
           <Accordion.Item value="item-1">
@@ -230,6 +251,7 @@ describe('Accordion', () => {
 
       // Close first
       fireEvent.click(screen.getByText('Section 1'));
+      finishCollapseAnimation();
 
       // Only second should be visible
       expect(screen.queryByText('Content 1')).not.toBeInTheDocument();

@@ -1,17 +1,17 @@
 [
   {
     "name": "context-js",
-    "path": "apps/context/dist/client/assets/main-*.js",
+    "path": "apps/context/dist/client/assets/*.js",
     "limit": "500 KB"
   },
   {
     "name": "permissive-js",
-    "path": "apps/permissive/dist/client/assets/main-*.js",
+    "path": "apps/permissive/dist/client/assets/*.js",
     "limit": "500 KB"
   },
   {
     "name": "roots-js",
-    "path": "apps/roots/dist/client/assets/main-*.js",
+    "path": "apps/roots/dist/client/assets/*.js",
     "limit": "500 KB"
   }
 ]

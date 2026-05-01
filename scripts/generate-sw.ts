@@ -35,6 +35,7 @@ async function generateServiceWorker(): Promise<void> {
       globPatterns: ['**/*.{js,css,ico,svg,woff2,png,jpg,jpeg,webp}'],
       globIgnores: ['**/sw.js', '**/workbox-*.js', '**/sitemap*.xml', '**/*.map'],
       swDest: path.join(distDir, 'sw.js'),
+      sourcemap: false,
       skipWaiting: true,
       clientsClaim: true,
       cleanupOutdatedCaches: true,

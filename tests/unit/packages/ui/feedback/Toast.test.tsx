@@ -2,36 +2,18 @@
  * @fileoverview Tests for Toast component
  */
 
-import { ToastContainer } from '@soundblue/ui/feedback';
-import { act, fireEvent, render, screen, waitFor } from '@testing-library/react';
+import { clearToasts, ToastContainer, toast as addToast } from '@soundblue/features/toast';
+import { act, fireEvent, render, screen } from '@testing-library/react';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
-
-// Toast item type for mocking
-interface MockToast {
-  id: string;
-  type: 'success' | 'error' | 'warning' | 'info';
-  message: string;
-}
-
-// Mock @soundblue/features/toast
-const mockToasts: MockToast[] = [];
-const mockRemoveToast = vi.fn<(id: string) => void>();
-
-vi.mock('@soundblue/features/toast', () => ({
-  useToast: () => ({
-    toasts: mockToasts,
-  }),
-  removeToast: (id: string) => mockRemoveToast(id),
-}));
 
 describe('ToastContainer', () => {
   beforeEach(() => {
     vi.useFakeTimers();
-    mockToasts.length = 0;
-    mockRemoveToast.mockClear();
+    clearToasts();
   });
 
   afterEach(() => {
+    clearToasts();
     vi.useRealTimers();
   });
 
@@ -41,7 +23,7 @@ describe('ToastContainer', () => {
   });
 
   it('should render toast messages', () => {
-    mockToasts.push({ id: '1', type: 'success', message: 'Success message' });
+    addToast({ message: 'Success message', type: 'success', duration: 0 });
 
     render(<ToastContainer />);
 
@@ -49,10 +31,8 @@ describe('ToastContainer', () => {
   });
 
   it('should render multiple toasts', () => {
-    mockToasts.push(
-      { id: '1', type: 'success', message: 'Success message' },
-      { id: '2', type: 'error', message: 'Error message' },
-    );
+    addToast({ message: 'Success message', type: 'success', duration: 0 });
+    addToast({ message: 'Error message', type: 'error', duration: 0 });
 
     render(<ToastContainer />);
 
@@ -62,7 +42,7 @@ describe('ToastContainer', () => {
 
   describe('toast variants', () => {
     it('should render success toast with green icon', () => {
-      mockToasts.push({ id: '1', type: 'success', message: 'Success' });
+      addToast({ message: 'Success', type: 'success', duration: 0 });
 
       render(<ToastContainer />);
 
@@ -71,7 +51,7 @@ describe('ToastContainer', () => {
     });
 
     it('should render error toast with red icon', () => {
-      mockToasts.push({ id: '1', type: 'error', message: 'Error' });
+      addToast({ message: 'Error', type: 'error', duration: 0 });
 
       render(<ToastContainer />);
 
@@ -80,7 +60,7 @@ describe('ToastContainer', () => {
     });
 
     it('should render warning toast with amber icon', () => {
-      mockToasts.push({ id: '1', type: 'warning', message: 'Warning' });
+      addToast({ message: 'Warning', type: 'warning', duration: 0 });
 
       render(<ToastContainer />);
 
@@ -89,7 +69,7 @@ describe('ToastContainer', () => {
     });
 
     it('should render info toast with blue icon', () => {
-      mockToasts.push({ id: '1', type: 'info', message: 'Info' });
+      addToast({ message: 'Info', type: 'info', duration: 0 });
 
       render(<ToastContainer />);
 
@@ -99,35 +79,32 @@ describe('ToastContainer', () => {
   });
 
   describe('close button', () => {
-    it('should call removeToast when close button is clicked', async () => {
-      mockToasts.push({ id: '1', type: 'success', message: 'Success' });
+    it('should remove toast when close button is clicked', () => {
+      addToast({ message: 'Success', type: 'success', duration: 0 });
 
       render(<ToastContainer />);
 
       const closeButton = screen.getByRole('button', { name: '닫기' });
       fireEvent.click(closeButton);
 
-      // Wait for animation delay
       act(() => {
         vi.advanceTimersByTime(200);
       });
 
-      expect(mockRemoveToast).toHaveBeenCalledWith('1');
+      expect(screen.queryByText('Success')).not.toBeInTheDocument();
     });
   });
 
   describe('animation', () => {
     it('should animate in after mount', () => {
-      mockToasts.push({ id: '1', type: 'success', message: 'Success' });
+      addToast({ message: 'Success', type: 'success', duration: 0 });
 
       render(<ToastContainer />);
 
       const toastElement = screen.getByText('Success').closest('[role="status"]');
 
-      // Initially not visible
       expect(toastElement).toHaveClass('opacity-0');
 
-      // After animation timer
       act(() => {
         vi.advanceTimersByTime(20);
       });
@@ -135,12 +112,11 @@ describe('ToastContainer', () => {
       expect(toastElement).toHaveClass('opacity-100');
     });
 
-    it('should animate out when closing', async () => {
-      mockToasts.push({ id: '1', type: 'success', message: 'Success' });
+    it('should animate out when closing', () => {
+      addToast({ message: 'Success', type: 'success', duration: 0 });
 
       render(<ToastContainer />);
 
-      // Wait for enter animation
       act(() => {
         vi.advanceTimersByTime(20);
       });
@@ -155,7 +131,7 @@ describe('ToastContainer', () => {
 
   describe('accessibility', () => {
     it('should have role="status" on toast items', () => {
-      mockToasts.push({ id: '1', type: 'success', message: 'Success' });
+      addToast({ message: 'Success', type: 'success', duration: 0 });
 
       render(<ToastContainer />);
 
@@ -163,16 +139,16 @@ describe('ToastContainer', () => {
     });
 
     it('should have aria-live="polite" on toast items', () => {
-      mockToasts.push({ id: '1', type: 'success', message: 'Success' });
+      addToast({ message: 'Success', type: 'success', duration: 0 });
 
       render(<ToastContainer />);
 
-      const toast = screen.getByRole('status');
-      expect(toast).toHaveAttribute('aria-live', 'polite');
+      const toastElement = screen.getByRole('status');
+      expect(toastElement).toHaveAttribute('aria-live', 'polite');
     });
 
     it('should have role="region" on container', () => {
-      mockToasts.push({ id: '1', type: 'success', message: 'Success' });
+      addToast({ message: 'Success', type: 'success', duration: 0 });
 
       render(<ToastContainer />);
 
@@ -180,7 +156,7 @@ describe('ToastContainer', () => {
     });
 
     it('should have aria-label on container', () => {
-      mockToasts.push({ id: '1', type: 'success', message: 'Success' });
+      addToast({ message: 'Success', type: 'success', duration: 0 });
 
       render(<ToastContainer />);
 
@@ -189,7 +165,7 @@ describe('ToastContainer', () => {
     });
 
     it('should have aria-hidden on icons', () => {
-      mockToasts.push({ id: '1', type: 'success', message: 'Success' });
+      addToast({ message: 'Success', type: 'success', duration: 0 });
 
       render(<ToastContainer />);
 
@@ -200,7 +176,7 @@ describe('ToastContainer', () => {
     });
 
     it('should have accessible close button', () => {
-      mockToasts.push({ id: '1', type: 'success', message: 'Success' });
+      addToast({ message: 'Success', type: 'success', duration: 0 });
 
       render(<ToastContainer />);
 
@@ -210,7 +186,7 @@ describe('ToastContainer', () => {
 
   describe('styling', () => {
     it('should have fixed positioning', () => {
-      mockToasts.push({ id: '1', type: 'success', message: 'Success' });
+      addToast({ message: 'Success', type: 'success', duration: 0 });
 
       render(<ToastContainer />);
 

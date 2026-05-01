@@ -88,6 +88,13 @@ export default defineConfig({
       },
       testMatch: /roots|seo|accessibility/,
     },
+    {
+      name: 'production-smoke',
+      use: {
+        ...devices['Desktop Chrome'],
+      },
+      testMatch: /production-smoke\.spec\.ts/,
+    },
   ],
 
   /* 빌드된 앱을 서빙하는 preview 서버 (로컬 테스트용, 프로덕션 테스트 시 불필요) */
