@@ -1,0 +1,67 @@
+# 외부 CLAUDE.md 동기화 워크플로우
+# forrestchang/andrej-karpathy-skills 의 CLAUDE.md 원문을
+# 우리 CLAUDE.md 의 BEGIN/END 마커 사이에 verbatim 으로 mirror 한다.
+#
+# 변경이 감지되면 PR 을 자동 생성한다 (직접 main 커밋 금지).
+# 동기화 로직: scripts/sync-external-claude.sh (idempotent, post-write SHA verify)
+
+name: Sync External CLAUDE.md
+
+on:
+  schedule:
+    # 매일 06:00 UTC (한국 15:00)
+    - cron: '0 6 * * *'
+  workflow_dispatch: {}
+
+# 동시 실행 방지: 동일 브랜치에 중복 PR 시도가 겹치지 않도록.
+concurrency:
+  group: sync-external-claude
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Run sync script
+        id: sync
+        run: |
+          bash scripts/sync-external-claude.sh CLAUDE.md
+          if git diff --quiet -- CLAUDE.md; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "✓ Mirror already up to date."
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            echo "→ Upstream drift detected. Will open PR."
+          fi
+
+      - name: Create Pull Request
+        if: steps.sync.outputs.changed == 'true'
+        uses: peter-evans/create-pull-request@v7
+        with:
+          commit-message: "docs(claude): sync external CLAUDE.md from upstream"
+          title: "docs(claude): sync external CLAUDE.md from upstream"
+          body: |
+            업스트림이 변경되어 임베드 블록을 자동 동기화합니다.
+
+            **Source:** https://github.com/forrestchang/andrej-karpathy-skills/blob/main/CLAUDE.md
+            **Raw:**    https://raw.githubusercontent.com/forrestchang/andrej-karpathy-skills/main/CLAUDE.md
+
+            ## 검토 체크리스트
+            - [ ] diff 가 BEGIN/END 마커 사이만 변경했는지 확인
+            - [ ] 업스트림 변경이 의도된 것인지 (악의적 변경/계정 탈취 가능성 검토)
+            - [ ] 새 내용이 프로젝트 가이드라인과 충돌하지 않는지
+
+            > 자동 생성: `.github/workflows/sync-external-claude.yml`
+            > 동기화 스크립트: `scripts/sync-external-claude.sh`
+          branch: chore/sync-external-claude-md
+          delete-branch: true
+          base: main
+          labels: |
+            documentation
+            automated
