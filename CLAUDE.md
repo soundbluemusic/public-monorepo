@@ -1,14 +1,3 @@
-<!--
-================================================================================
-[EXTERNAL SOURCE - DO NOT MODIFY BY HAND]
-Source: https://github.com/forrestchang/andrej-karpathy-skills/blob/main/CLAUDE.md
-Raw:    https://raw.githubusercontent.com/forrestchang/andrej-karpathy-skills/main/CLAUDE.md
-Policy: 원문 그대로 유지 (verbatim). 어떤 수정도 금지.
-        BEGIN/END 마커 사이는 scripts/sync-external-claude.sh가 자동 교체.
-        업스트림 변경은 .github/workflows/sync-external-claude.yml이 매일 PR 생성.
-================================================================================
--->
-<!-- BEGIN-EXTERNAL-CLAUDE-MD -->
 # CLAUDE.md
 
 Behavioral guidelines to reduce common LLM coding mistakes. Merge with project-specific instructions as needed.
@@ -75,6 +64,16 @@ Strong success criteria let you loop independently. Weak criteria ("make it work
 
 **These guidelines are working if:** fewer unnecessary changes in diffs, fewer rewrites due to overcomplication, and clarifying questions come before implementation rather than after mistakes.
 <!-- END-EXTERNAL-CLAUDE-MD -->
+
+<!--
+================================================================================
+[EXTERNAL SOURCE - 위 영역 (1번 줄 ~ END 마커 직전) 은 verbatim 유지]
+Source: https://github.com/forrestchang/andrej-karpathy-skills/blob/main/CLAUDE.md
+Raw:    https://raw.githubusercontent.com/forrestchang/andrej-karpathy-skills/main/CLAUDE.md
+Policy: 위 영역은 scripts/sync-external-claude.sh 가 자동 교체. 수동 편집 금지.
+        업스트림 변경은 .github/workflows/sync-external-claude.yml 이 매일 PR 생성.
+================================================================================
+-->
 
 ---
 
