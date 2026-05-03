@@ -1,0 +1,52 @@
+# 외부 CLAUDE.md 임베드 무결성 검증 워크플로우
+# CLAUDE.md 의 1번 줄 ~ <!-- END-EXTERNAL-CLAUDE-MD --> 직전 영역이
+# upstream raw (forrestchang/andrej-karpathy-skills) 와 byte-for-byte 일치하는지
+# PR / main push 시점에 즉시 검증한다.
+#
+# drift 발견 시 워크플로우 fail → PR 머지 차단 / main 푸시 즉시 알림.
+# (sync-external-claude.yml 의 일일 cron 보다 빠른 1차 방어선)
+
+name: Verify External CLAUDE.md
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'CLAUDE.md'
+      - 'scripts/sync-external-claude.sh'
+      - '.github/workflows/verify-external-claude.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'CLAUDE.md'
+      - 'scripts/sync-external-claude.sh'
+      - '.github/workflows/verify-external-claude.yml'
+  workflow_dispatch: {}
+
+concurrency:
+  group: verify-external-claude-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Run sync script (must be idempotent)
+        run: bash scripts/sync-external-claude.sh CLAUDE.md
+
+      - name: Assert no diff (embedded == upstream)
+        run: |
+          if ! git diff --quiet -- CLAUDE.md; then
+            echo "::error file=CLAUDE.md::Embedded external block diverges from upstream raw."
+            echo "Run 'bash scripts/sync-external-claude.sh CLAUDE.md' locally and commit the result."
+            echo ""
+            echo "--- diff ---"
+            git --no-pager diff -- CLAUDE.md
+            exit 1
+          fi
+          echo "OK: CLAUDE.md embedded block matches upstream raw byte-for-byte."
