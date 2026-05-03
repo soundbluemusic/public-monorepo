@@ -42,6 +42,7 @@ Monorepo with 3 SSR apps (TanStack Start + Cloudflare Workers). **SPA mode is fo
 
 ## Critical rules
 
+- **Always reference `CLAUDE.md`** — read and follow `CLAUDE.md` alongside this file before making changes or decisions.
 - **No SPA mode** — SSR is mandatory for SEO.
 - **No package downgrades** — fix issues with upgrades or code changes.
 - **No Turborepo Remote Cache** — use local cache only (R2 cost optimization).
