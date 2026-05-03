@@ -3,21 +3,24 @@ import { createFileRoute, Link, notFound } from '@tanstack/react-router';
 import { Layout } from '../components/layout/Layout';
 import { useI18n } from '../i18n';
 
+const buildHead = headFactory(
+  {
+    ko: { title: '404 - 수리', description: '페이지를 찾을 수 없습니다' },
+    en: { title: '404 - Roots', description: 'Page not found' },
+  },
+  'https://roots.soundbluemusic.com',
+);
+
 export const Route = createFileRoute('/$')({
   loader: () => {
     throw notFound();
   },
-  head: () => {
-    const config = headFactory(
-      {
-        ko: { title: '404 - 수리', description: '페이지를 찾을 수 없습니다' },
-        en: { title: '404 - Roots', description: 'Page not found' },
-      },
-      'https://roots.soundbluemusic.com',
-    )({});
-    // 검색 엔진 인덱싱 차단
+  // ctx에는 location이 포함되어 있어 한/영 메타가 올바르게 분기됨
+  head: (ctx) => {
+    const config = buildHead(ctx);
     return {
       ...config,
+      // 검색 엔진 인덱싱 차단
       meta: [...(config.meta ?? []), { name: 'robots', content: 'noindex, nofollow' }],
     };
   },

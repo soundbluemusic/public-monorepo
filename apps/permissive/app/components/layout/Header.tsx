@@ -85,12 +85,12 @@ export default function Header({ onMenuClick, isSidebarOpen }: HeaderProps) {
             onSelect:
               (locale === 'ko'
                 ? stripLocale(location.pathname)
-                : `/ko${stripLocale(location.pathname)}`) + (location.search || ''),
+                : `/ko${stripLocale(location.pathname)}`) + (location.searchStr || ''),
           },
         ],
       },
     ],
-    [locale, location.pathname, location.search],
+    [locale, location.pathname, location.searchStr],
   );
 
   const handleCommandNavigate = useCallback(

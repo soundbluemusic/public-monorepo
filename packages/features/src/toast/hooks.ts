@@ -28,8 +28,11 @@ export interface ToastOptions {
 
 /** Toast 타이머 메타데이터 */
 interface ToastTimer {
-  id: ReturnType<typeof setTimeout>;
+  /** 활성 타이머 ID. null이면 일시정지 상태. */
+  id: ReturnType<typeof setTimeout> | null;
+  /** 현재 타이머 시작 시각 (Date.now()) */
   startedAt: number;
+  /** 시작 시각 기준 남은 시간(ms) */
   remaining: number;
 }
 
@@ -110,7 +113,9 @@ export function addToast(options: ToastOptions): string {
 export function removeToast(id: string): void {
   const timer = store.timers.get(id);
   if (timer) {
-    clearTimeout(timer.id);
+    if (timer.id !== null) {
+      clearTimeout(timer.id);
+    }
     store.timers.delete(id);
   }
   store.toasts = store.toasts.filter((t) => t.id !== id);
@@ -129,20 +134,30 @@ export function removeToast(id: string): void {
   emitChange();
 }
 
-/** Toast 자동 닫힘 타이머 일시정지 (마우스 호버 시) */
+/**
+ * Toast 자동 닫힘 타이머 일시정지 (마우스 호버 / 포커스 시)
+ *
+ * 이미 일시정지 상태(timer.id === null)인 경우 noop이므로
+ * onMouseEnter + onFocus가 연달아 호출되어도 remaining이 중복 차감되지 않습니다.
+ */
 export function pauseToastTimer(id: string): void {
   const timer = store.timers.get(id);
-  if (!timer) return;
+  if (!timer || timer.id === null) return;
   clearTimeout(timer.id);
   const elapsed = Date.now() - timer.startedAt;
   const remaining = Math.max(0, timer.remaining - elapsed);
-  store.timers.set(id, { id: timer.id, startedAt: timer.startedAt, remaining });
+  store.timers.set(id, { id: null, startedAt: timer.startedAt, remaining });
 }
 
-/** Toast 자동 닫힘 타이머 재개 (마우스 떠날 때) */
+/**
+ * Toast 자동 닫힘 타이머 재개 (마우스 떠남 / 포커스 해제 시)
+ *
+ * 일시정지 상태(timer.id === null)일 때만 재개합니다. 활성 상태에서 호출되면
+ * 중복 스케줄링을 방지하기 위해 noop입니다.
+ */
 export function resumeToastTimer(id: string): void {
   const timer = store.timers.get(id);
-  if (!timer) return;
+  if (!timer || timer.id !== null) return;
   const toast = store.toasts.find((t) => t.id === id);
   if (!toast) return;
   scheduleRemoval(toast, timer.remaining);
@@ -151,7 +166,9 @@ export function resumeToastTimer(id: string): void {
 /** 모든 Toast 제거 */
 export function clearToasts(): void {
   for (const timer of store.timers.values()) {
-    clearTimeout(timer.id);
+    if (timer.id !== null) {
+      clearTimeout(timer.id);
+    }
   }
   store.timers.clear();
   store.toasts = [];

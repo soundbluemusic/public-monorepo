@@ -8,7 +8,7 @@
  * `useSyncExternalStore` 기반으로 hydration mismatch를 자동 처리합니다.
  */
 
-import { useSyncExternalStore } from 'react';
+import { useCallback, useSyncExternalStore } from 'react';
 
 /**
  * matchMedia 객체 캐싱 — query별로 1번만 생성
@@ -25,6 +25,11 @@ function getMediaQueryList(query: string): MediaQueryList | null {
     mediaQueryCache.set(query, mql);
   }
   return mql;
+}
+
+/** SSR 스냅샷 (모든 query에 대해 동일) — 참조 동일성 유지 */
+function getServerSnapshot(): boolean {
+  return false;
 }
 
 /**
@@ -46,19 +51,22 @@ function getMediaQueryList(query: string): MediaQueryList | null {
  * ```
  */
 export function useMediaQuery(query: string): boolean {
-  const subscribe = (callback: () => void): (() => void) => {
-    const mql = getMediaQueryList(query);
-    if (!mql) return () => {};
-    mql.addEventListener('change', callback);
-    return () => mql.removeEventListener('change', callback);
-  };
+  // useCallback으로 메모이즈하여 query가 동일하면 동일 함수 참조 유지
+  // → useSyncExternalStore가 매 렌더마다 unsubscribe/resubscribe하지 않음
+  const subscribe = useCallback(
+    (callback: () => void): (() => void) => {
+      const mql = getMediaQueryList(query);
+      if (!mql) return () => {};
+      mql.addEventListener('change', callback);
+      return () => mql.removeEventListener('change', callback);
+    },
+    [query],
+  );
 
-  const getSnapshot = (): boolean => {
+  const getSnapshot = useCallback((): boolean => {
     const mql = getMediaQueryList(query);
     return mql ? mql.matches : false;
-  };
-
-  const getServerSnapshot = (): boolean => false;
+  }, [query]);
 
   return useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
 }
