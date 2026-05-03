@@ -83,14 +83,14 @@ export default function Header({ onMenuClick, isSidebarOpen }: HeaderProps) {
             label: { en: 'Switch Language', ko: '언어 변경' },
             keywords: ['language', '영어', '한국어'],
             onSelect:
-              locale === 'ko'
+              (locale === 'ko'
                 ? stripLocale(location.pathname)
-                : `/ko${stripLocale(location.pathname)}`,
+                : `/ko${stripLocale(location.pathname)}`) + (location.search || ''),
           },
         ],
       },
     ],
-    [locale, location.pathname],
+    [locale, location.pathname, location.search],
   );
 
   const handleCommandNavigate = useCallback(
@@ -163,7 +163,7 @@ export default function Header({ onMenuClick, isSidebarOpen }: HeaderProps) {
           </button>
           <ServicesDropdown currentAppId="permissive" locale={locale} />
           <LanguageToggle locale={locale} currentPath={stripLocale(location.pathname)} />
-          <DarkModeToggle />
+          <DarkModeToggle locale={locale} />
         </div>
       </header>
 

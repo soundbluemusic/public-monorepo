@@ -1,10 +1,11 @@
-import { forwardRef, useEffect, useState } from 'react';
+import { forwardRef, useEffect, useRef, useState } from 'react';
 
 interface SearchInputProps {
   query: string;
   placeholder: string;
   clearLabel: string;
   searchLabel: string;
+  /** 한 글자 이상 입력 시 호출 — IME 조합 중에는 호출되지 않음 */
   onChange: (value: string) => void;
   onFocus: () => void;
   onBlur: () => void;
@@ -32,6 +33,7 @@ export const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(functi
 ) {
   const [isFocused, setIsFocused] = useState(false);
   const [isMac, setIsMac] = useState(false);
+  const isComposingRef = useRef(false);
 
   // Detect Mac platform after mount to avoid hydration mismatch
   useEffect(() => {
@@ -54,10 +56,25 @@ export const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(functi
       <input
         ref={ref}
         type="search"
-        className="w-full h-9 max-md:h-10 pl-8.5 pr-8 text-sm font-inherit text-(--text-primary) bg-(--bg-tertiary) border border-(--border-primary) rounded-xl outline-hidden transition-[border-color,background-color] duration-150 placeholder:text-(--text-tertiary) focus:border-(--border-focus) focus:bg-(--bg-secondary) [&::-webkit-search-cancel-button]:hidden"
+        autoComplete="off"
+        autoCorrect="off"
+        autoCapitalize="off"
+        spellCheck={false}
+        className="w-full h-11 pl-8.5 pr-12 text-sm font-inherit text-(--text-primary) bg-(--bg-tertiary) border border-(--border-primary) rounded-xl outline-hidden transition-[border-color,background-color] duration-150 placeholder:text-(--text-tertiary) focus:border-(--border-focus) focus:bg-(--bg-secondary) [&::-webkit-search-cancel-button]:hidden"
         placeholder={placeholder}
         value={query}
-        onChange={(e) => onChange(e.target.value)}
+        onChange={(e) => {
+          // IME 조합 중에는 onChange를 호출하지 않음 (한국어 자모 분리 검색 방지)
+          if (isComposingRef.current) return;
+          onChange(e.target.value);
+        }}
+        onCompositionStart={() => {
+          isComposingRef.current = true;
+        }}
+        onCompositionEnd={(e) => {
+          isComposingRef.current = false;
+          onChange((e.target as HTMLInputElement).value);
+        }}
         onFocus={() => {
           setIsFocused(true);
           onFocus();
@@ -73,7 +90,7 @@ export const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(functi
       {query && (
         <button
           type="button"
-          className="absolute right-1.5 flex items-center justify-center w-6 h-6 p-0 bg-transparent border-none rounded text-(--text-tertiary) cursor-pointer transition-all duration-150 hover:text-(--text-primary) active:scale-90"
+          className="absolute right-1 flex items-center justify-center min-h-11 min-w-11 p-0 bg-transparent border-none rounded text-(--text-tertiary) cursor-pointer transition-all duration-150 hover:text-(--text-primary) active:scale-90"
           onClick={onClear}
           aria-label={clearLabel}
         >

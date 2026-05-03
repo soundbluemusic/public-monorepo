@@ -338,6 +338,9 @@ export function LaTeX({ math, display, className }: LaTeXProps) {
 
   return (
     <span
+      role="math"
+      // 스크린 리더에 원본 LaTeX 소스를 노출 (보조기술이 더 정확하게 해석 가능)
+      aria-label={math}
       className={cn(
         "font-['STIX_Two_Math','Cambria_Math',serif] text-(--math-formula)",
         display ? 'block text-center text-[1.2em] leading-8' : 'inline',

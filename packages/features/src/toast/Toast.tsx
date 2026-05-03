@@ -4,7 +4,13 @@
  */
 
 import { memo, useEffect, useState } from 'react';
-import { removeToast, type Toast, useToast } from './hooks';
+import {
+  pauseToastTimer,
+  removeToast,
+  resumeToastTimer,
+  type Toast,
+  useToast,
+} from './hooks';
 
 /** cn utility (inline to avoid circular dependency) */
 function cn(...classes: (string | boolean | undefined | null)[]): string {
@@ -83,9 +89,11 @@ const ToastIcon = memo(function ToastIcon({ type }: { type: Toast['type'] }) {
 /** 개별 Toast 아이템 */
 const ToastItem = memo(function ToastItem({
   toast,
+  locale,
   onClose,
 }: {
   toast: Toast;
+  locale: 'en' | 'ko';
   onClose: (id: string) => void;
 }) {
   const [isVisible, setIsVisible] = useState(false);
@@ -101,10 +109,24 @@ const ToastItem = memo(function ToastItem({
     setTimeout(() => onClose(toast.id), 150);
   };
 
+  const handleMouseEnter = () => {
+    pauseToastTimer(toast.id);
+  };
+
+  const handleMouseLeave = () => {
+    resumeToastTimer(toast.id);
+  };
+
+  const closeLabel = locale === 'ko' ? '닫기' : 'Close';
+
   return (
     <div
       role="status"
       aria-live="polite"
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      onFocus={handleMouseEnter}
+      onBlur={handleMouseLeave}
       className={cn(
         'flex items-center gap-3 px-4 py-3 rounded-lg shadow-lg border',
         'bg-(--bg-elevated) border-(--border-primary)',
@@ -117,8 +139,8 @@ const ToastItem = memo(function ToastItem({
       <button
         type="button"
         onClick={handleClose}
-        className="p-1 rounded hover:bg-(--bg-tertiary) transition-colors"
-        aria-label="닫기"
+        className="flex items-center justify-center min-h-11 min-w-11 p-1 rounded hover:bg-(--bg-tertiary) transition-colors"
+        aria-label={closeLabel}
       >
         <svg
           className="w-4 h-4 text-(--text-tertiary)"
@@ -143,13 +165,21 @@ const ToastItem = memo(function ToastItem({
  * Toast 컨테이너 컴포넌트
  *
  * 앱의 root.tsx에 한 번만 추가하면 됩니다.
+ *
+ * @param locale - 닫기 버튼 aria-label과 region 라벨 언어 (기본 'en')
  */
-export const ToastContainer = memo(function ToastContainer() {
+export const ToastContainer = memo(function ToastContainer({
+  locale = 'en',
+}: {
+  locale?: 'en' | 'ko';
+} = {}) {
   const { toasts } = useToast();
 
   if (toasts.length === 0) {
     return null;
   }
+
+  const regionLabel = locale === 'ko' ? '알림' : 'Notifications';
 
   return (
     // biome-ignore lint/a11y/useSemanticElements: role="region" with aria-label is correct for toast container
@@ -160,10 +190,10 @@ export const ToastContainer = memo(function ToastContainer() {
         'lg:bottom-8',
       )}
       role="region"
-      aria-label="알림"
+      aria-label={regionLabel}
     >
       {toasts.map((toast) => (
-        <ToastItem key={toast.id} toast={toast} onClose={removeToast} />
+        <ToastItem key={toast.id} toast={toast} locale={locale} onClose={removeToast} />
       ))}
     </div>
   );

@@ -10,11 +10,43 @@ import { Component, type ErrorInfo, type ReactNode } from 'react';
 // Types
 // ========================================
 
+export type ErrorBoundaryLocale = 'en' | 'ko';
+
+interface ErrorBoundaryMessages {
+  title: string;
+  subtitle: string;
+  retry: string;
+  reload: string;
+  errorDetails: string;
+}
+
+const ERROR_MESSAGES: Record<ErrorBoundaryLocale, ErrorBoundaryMessages> = {
+  en: {
+    title: 'Something went wrong',
+    subtitle: 'An unexpected error occurred',
+    retry: 'Try again',
+    reload: 'Reload page',
+    errorDetails: 'Error details',
+  },
+  ko: {
+    title: '문제가 발생했습니다',
+    subtitle: '예기치 않은 오류가 발생했습니다',
+    retry: '다시 시도',
+    reload: '페이지 새로고침',
+    errorDetails: '오류 상세 정보',
+  },
+};
+
 export interface ErrorBoundaryProps {
   children: ReactNode;
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
   onReset?: () => void;
+  /**
+   * 기본 fallback UI 언어 (커스텀 fallback 미지정 시).
+   * @default 'en'
+   */
+  locale?: ErrorBoundaryLocale;
 }
 
 interface ErrorBoundaryState {
@@ -100,7 +132,13 @@ export class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundarySt
       if (this.props.fallback) {
         return this.props.fallback;
       }
-      return <ErrorFallbackUI error={this.state.error} onReset={this.handleReset} />;
+      return (
+        <ErrorFallbackUI
+          error={this.state.error}
+          onReset={this.handleReset}
+          locale={this.props.locale ?? 'en'}
+        />
+      );
     }
     return this.props.children;
   }
@@ -113,11 +151,13 @@ export class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundarySt
 interface ErrorFallbackUIProps {
   error: Error | null;
   onReset: () => void;
+  locale?: ErrorBoundaryLocale;
 }
 
 /** Default error fallback UI component (React Error Boundary용) */
-export function ErrorFallbackUI({ error, onReset }: ErrorFallbackUIProps) {
+export function ErrorFallbackUI({ error, onReset, locale = 'en' }: ErrorFallbackUIProps) {
   const isDev = typeof process !== 'undefined' && process.env?.NODE_ENV === 'development';
+  const messages = ERROR_MESSAGES[locale];
 
   return (
     <div
@@ -127,13 +167,13 @@ export function ErrorFallbackUI({ error, onReset }: ErrorFallbackUIProps) {
       <div className="mb-6 text-6xl" aria-hidden="true">
         ⚠️
       </div>
-      <h2 className="mb-2 text-xl font-semibold text-(--text-primary)">문제가 발생했습니다</h2>
-      <p className="mb-6 text-(--text-secondary)">Something went wrong</p>
+      <h2 className="mb-2 text-xl font-semibold text-(--text-primary)">{messages.title}</h2>
+      <p className="mb-6 text-(--text-secondary)">{messages.subtitle}</p>
 
       {error && isDev && (
         <details className="mb-6 max-w-lg text-left">
           <summary className="cursor-pointer text-sm text-(--text-tertiary) hover:text-(--text-secondary)">
-            Error details
+            {messages.errorDetails}
           </summary>
           <pre className="mt-2 overflow-auto rounded-lg bg-(--bg-secondary) p-4 text-xs text-(--text-primary)">
             {error.message}
@@ -147,17 +187,15 @@ export function ErrorFallbackUI({ error, onReset }: ErrorFallbackUIProps) {
           type="button"
           onClick={onReset}
           className="min-h-11 px-6 py-2 rounded-lg font-medium bg-(--accent-primary) text-white hover:brightness-110 active:scale-[0.98] transition-all cursor-pointer"
-          aria-label="Try again"
         >
-          다시 시도
+          {messages.retry}
         </button>
         <button
           type="button"
           onClick={() => window.location.reload()}
           className="min-h-11 px-6 py-2 rounded-lg font-medium bg-(--bg-tertiary) text-(--text-primary) hover:bg-(--border-primary) transition-colors cursor-pointer"
-          aria-label="Reload page"
         >
-          페이지 새로고침
+          {messages.reload}
         </button>
       </div>
     </div>

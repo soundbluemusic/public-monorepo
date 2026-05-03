@@ -60,7 +60,7 @@ export function ProgressBar({
       <div
         className={cn(
           'h-full bg-(--accent-primary)',
-          !noAnimation && 'transition-all duration-300',
+          !noAnimation && 'motion-safe:transition-all motion-safe:duration-300',
         )}
         style={{ width: `${percentage}%` }}
       />

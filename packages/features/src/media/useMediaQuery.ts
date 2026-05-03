@@ -1,11 +1,31 @@
 /**
  * @fileoverview Media Query Hooks
- * @environment client-only
+ * @environment universal
  *
  * React hooks for responsive design and media query detection.
+ *
+ * SSR 환경에서 안전하며, 클라이언트 첫 렌더링부터 실제 매칭 결과를 반환합니다.
+ * `useSyncExternalStore` 기반으로 hydration mismatch를 자동 처리합니다.
  */
 
-import { useEffect, useState } from 'react';
+import { useSyncExternalStore } from 'react';
+
+/**
+ * matchMedia 객체 캐싱 — query별로 1번만 생성
+ */
+const mediaQueryCache = new Map<string, MediaQueryList>();
+
+function getMediaQueryList(query: string): MediaQueryList | null {
+  if (typeof window === 'undefined' || typeof window.matchMedia !== 'function') {
+    return null;
+  }
+  let mql = mediaQueryCache.get(query);
+  if (!mql) {
+    mql = window.matchMedia(query);
+    mediaQueryCache.set(query, mql);
+  }
+  return mql;
+}
 
 /**
  * Hook to detect if a CSS media query matches
@@ -26,23 +46,21 @@ import { useEffect, useState } from 'react';
  * ```
  */
 export function useMediaQuery(query: string): boolean {
-  const [matches, setMatches] = useState(false);
-  const [mounted, setMounted] = useState(false);
+  const subscribe = (callback: () => void): (() => void) => {
+    const mql = getMediaQueryList(query);
+    if (!mql) return () => {};
+    mql.addEventListener('change', callback);
+    return () => mql.removeEventListener('change', callback);
+  };
 
-  useEffect(() => {
-    setMounted(true);
-    const mediaQuery = window.matchMedia(query);
-    setMatches(mediaQuery.matches);
+  const getSnapshot = (): boolean => {
+    const mql = getMediaQueryList(query);
+    return mql ? mql.matches : false;
+  };
 
-    const handler = (event: MediaQueryListEvent) => {
-      setMatches(event.matches);
-    };
+  const getServerSnapshot = (): boolean => false;
 
-    mediaQuery.addEventListener('change', handler);
-    return () => mediaQuery.removeEventListener('change', handler);
-  }, [query]);
-
-  return mounted ? matches : false;
+  return useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
 }
 
 /**

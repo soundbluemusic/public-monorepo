@@ -141,6 +141,15 @@ export interface VirtualListProps<T> {
    * @default 0
    */
   gap?: number;
+
+  /**
+   * 스크롤 위치 리셋 트리거 키.
+   *
+   * 이 값이 바뀔 때만 스크롤이 0으로 리셋됩니다. 검색 쿼리처럼
+   * 결과 컨텍스트가 완전히 바뀌는 경우에 사용하세요. 미제공 시 기본 동작은
+   * `items.length` 변경 시 항상 리셋입니다.
+   */
+  resetScrollKey?: string | number;
 }
 
 /**
@@ -210,8 +219,11 @@ export function VirtualList<T>({
   className,
   overscan = 3,
   gap = 0,
+  resetScrollKey,
 }: VirtualListProps<T>) {
   const parentRef = useRef<HTMLDivElement>(null);
+  const prevResetKeyRef = useRef(resetScrollKey);
+  const prevItemsLengthRef = useRef(items.length);
 
   const virtualizer = useVirtualizer({
     count: items.length,
@@ -221,13 +233,21 @@ export function VirtualList<T>({
     gap,
   });
 
-  // biome-ignore lint/correctness/useExhaustiveDependencies: items.length 변경 감지 의도적
   useEffect(() => {
     virtualizer.measure();
-    if (parentRef.current) {
+
+    const shouldReset =
+      resetScrollKey !== undefined
+        ? prevResetKeyRef.current !== resetScrollKey
+        : prevItemsLengthRef.current !== items.length;
+
+    if (shouldReset && parentRef.current) {
       parentRef.current.scrollTop = 0;
     }
-  }, [items.length, virtualizer]);
+
+    prevResetKeyRef.current = resetScrollKey;
+    prevItemsLengthRef.current = items.length;
+  }, [items.length, virtualizer, resetScrollKey]);
 
   const virtualItems = virtualizer.getVirtualItems();
 
@@ -330,6 +350,15 @@ export interface VirtualGridProps<T> {
    * @default 8
    */
   gap?: number;
+
+  /**
+   * 스크롤 위치 리셋 트리거 키.
+   *
+   * 이 값이 바뀔 때만 스크롤이 0으로 리셋됩니다. 검색 쿼리처럼
+   * 결과 컨텍스트가 완전히 바뀌는 경우에 사용하세요. 미제공 시 기본 동작은
+   * `items.length` 또는 `columns` 변경 시 항상 리셋입니다.
+   */
+  resetScrollKey?: string | number;
 }
 
 /**
@@ -427,8 +456,12 @@ export function VirtualGrid<T>({
   className,
   overscan = 2,
   gap = 8,
+  resetScrollKey,
 }: VirtualGridProps<T>) {
   const parentRef = useRef<HTMLDivElement>(null);
+  const prevResetKeyRef = useRef(resetScrollKey);
+  const prevItemsLengthRef = useRef(items.length);
+  const prevColumnsRef = useRef(columns);
 
   // 행(row) 단위로 가상화
   const rowCount = Math.ceil(items.length / columns);
@@ -440,13 +473,22 @@ export function VirtualGrid<T>({
     overscan,
   });
 
-  // biome-ignore lint/correctness/useExhaustiveDependencies: items.length 변경 감지 의도적
   useEffect(() => {
     virtualizer.measure();
-    if (parentRef.current) {
+
+    const shouldReset =
+      resetScrollKey !== undefined
+        ? prevResetKeyRef.current !== resetScrollKey
+        : prevItemsLengthRef.current !== items.length || prevColumnsRef.current !== columns;
+
+    if (shouldReset && parentRef.current) {
       parentRef.current.scrollTop = 0;
     }
-  }, [items.length, columns, virtualizer]);
+
+    prevResetKeyRef.current = resetScrollKey;
+    prevItemsLengthRef.current = items.length;
+    prevColumnsRef.current = columns;
+  }, [items.length, columns, virtualizer, resetScrollKey]);
 
   const virtualRows = virtualizer.getVirtualItems();
 

@@ -26,16 +26,30 @@ export interface ToastOptions {
   duration?: number;
 }
 
+/** Toast 타이머 메타데이터 */
+interface ToastTimer {
+  id: ReturnType<typeof setTimeout>;
+  startedAt: number;
+  remaining: number;
+}
+
 /** Toast 스토어 상태 */
 interface ToastStore {
   toasts: Toast[];
+  queue: Toast[];
   listeners: Set<() => void>;
-  timers: Map<string, ReturnType<typeof setTimeout>>;
+  timers: Map<string, ToastTimer>;
 }
+
+/** 동시에 표시할 수 있는 최대 Toast 개수 */
+const MAX_VISIBLE_TOASTS = 3;
+/** 큐 대기열 최대 길이 */
+const MAX_QUEUE_SIZE = 10;
 
 // 전역 스토어 (모든 컴포넌트에서 공유)
 const store: ToastStore = {
   toasts: [],
+  queue: [],
   listeners: new Set(),
   timers: new Map(),
 };
@@ -52,6 +66,17 @@ function generateId(): string {
   return `toast-${Date.now()}-${Math.random().toString(36).slice(2, 9)}`;
 }
 
+/** 자동 제거 타이머 시작 */
+function scheduleRemoval(toast: Toast, remaining: number): void {
+  if (remaining <= 0) return;
+  const timerId = setTimeout(() => removeToast(toast.id), remaining);
+  store.timers.set(toast.id, {
+    id: timerId,
+    startedAt: Date.now(),
+    remaining,
+  });
+}
+
 /** Toast 추가 */
 export function addToast(options: ToastOptions): string {
   const id = generateId();
@@ -62,15 +87,20 @@ export function addToast(options: ToastOptions): string {
     duration: options.duration ?? 3000,
   };
 
+  if (store.toasts.length >= MAX_VISIBLE_TOASTS) {
+    if (store.queue.length >= MAX_QUEUE_SIZE) {
+      store.queue.shift();
+    }
+    store.queue = [...store.queue, toast];
+    emitChange();
+    return id;
+  }
+
   store.toasts = [...store.toasts, toast];
   emitChange();
 
-  // 자동 제거 (타이머 ID 저장)
   if (toast.duration > 0) {
-    const timerId = setTimeout(() => {
-      removeToast(id);
-    }, toast.duration);
-    store.timers.set(id, timerId);
+    scheduleRemoval(toast, toast.duration);
   }
 
   return id;
@@ -78,24 +108,54 @@ export function addToast(options: ToastOptions): string {
 
 /** Toast 제거 */
 export function removeToast(id: string): void {
-  // Clear timer if exists
-  const timerId = store.timers.get(id);
-  if (timerId) {
-    clearTimeout(timerId);
+  const timer = store.timers.get(id);
+  if (timer) {
+    clearTimeout(timer.id);
     store.timers.delete(id);
   }
   store.toasts = store.toasts.filter((t) => t.id !== id);
+
+  if (store.queue.length > 0 && store.toasts.length < MAX_VISIBLE_TOASTS) {
+    const next = store.queue[0];
+    store.queue = store.queue.slice(1);
+    if (next) {
+      store.toasts = [...store.toasts, next];
+      if (next.duration > 0) {
+        scheduleRemoval(next, next.duration);
+      }
+    }
+  }
+
   emitChange();
+}
+
+/** Toast 자동 닫힘 타이머 일시정지 (마우스 호버 시) */
+export function pauseToastTimer(id: string): void {
+  const timer = store.timers.get(id);
+  if (!timer) return;
+  clearTimeout(timer.id);
+  const elapsed = Date.now() - timer.startedAt;
+  const remaining = Math.max(0, timer.remaining - elapsed);
+  store.timers.set(id, { id: timer.id, startedAt: timer.startedAt, remaining });
+}
+
+/** Toast 자동 닫힘 타이머 재개 (마우스 떠날 때) */
+export function resumeToastTimer(id: string): void {
+  const timer = store.timers.get(id);
+  if (!timer) return;
+  const toast = store.toasts.find((t) => t.id === id);
+  if (!toast) return;
+  scheduleRemoval(toast, timer.remaining);
 }
 
 /** 모든 Toast 제거 */
 export function clearToasts(): void {
-  // Clear all timers
-  for (const timerId of store.timers.values()) {
-    clearTimeout(timerId);
+  for (const timer of store.timers.values()) {
+    clearTimeout(timer.id);
   }
   store.timers.clear();
   store.toasts = [];
+  store.queue = [];
   emitChange();
 }
 

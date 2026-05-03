@@ -28,7 +28,8 @@ export const shellConfig: RootShellConfig = {
       bgTertiary: '#252230',
       bgElevated: '#2a2638',
       textPrimary: '#f0eef5',
-      textSecondary: '#b8b3c8',
+      // 다크 모드 보조 텍스트 색을 약간 밝게 조정 — bgSecondary(#1c1926) 대비 WCAG AA 충족
+      textSecondary: '#cbc5dc',
     },
   },
   navigationItems: [

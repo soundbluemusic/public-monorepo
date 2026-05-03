@@ -3,12 +3,41 @@
  * @environment client-only
  */
 import { Moon, Sun } from 'lucide-react';
-import { type CSSProperties, useEffect, useState } from 'react';
+import { type CSSProperties, useCallback, useEffect, useState } from 'react';
 import { cn } from '../utils/cn';
+
+export type DarkModeToggleLocale = 'en' | 'ko';
+
+interface DarkModeLabels {
+  switchToLight: string;
+  switchToDark: string;
+  lightMode: string;
+  darkMode: string;
+}
+
+const DARK_MODE_LABELS: Record<DarkModeToggleLocale, DarkModeLabels> = {
+  en: {
+    switchToLight: 'Switch to light mode',
+    switchToDark: 'Switch to dark mode',
+    lightMode: 'Light mode',
+    darkMode: 'Dark mode',
+  },
+  ko: {
+    switchToLight: '라이트 모드로 전환',
+    switchToDark: '다크 모드로 전환',
+    lightMode: '라이트 모드',
+    darkMode: '다크 모드',
+  },
+};
 
 export interface DarkModeToggleProps {
   className?: string;
   style?: CSSProperties;
+  /**
+   * 버튼 라벨 언어. 기본값 'en'.
+   * @default 'en'
+   */
+  locale?: DarkModeToggleLocale;
 }
 
 /**
@@ -23,26 +52,31 @@ export interface DarkModeToggleProps {
  *
  * The script handles: classList toggle, localStorage update, innerHTML replacement
  */
-export function DarkModeToggle({ className = '', style }: DarkModeToggleProps) {
+export function DarkModeToggle({ className = '', style, locale = 'en' }: DarkModeToggleProps) {
   const [mounted, setMounted] = useState(false);
   const [isDark, setIsDark] = useState(false);
 
+  const updateDarkState = useCallback(() => {
+    const next = document.documentElement.classList.contains('dark');
+    // setState는 동일 값이면 리렌더링하지 않지만, 명시적으로 비교하여 의도 명확화
+    setIsDark((prev) => (prev === next ? prev : next));
+  }, []);
+
   useEffect(() => {
     setMounted(true);
-    setIsDark(document.documentElement.classList.contains('dark'));
+    updateDarkState();
 
     // Listen for class changes (triggered by DARK_MODE_TOGGLE_SCRIPT)
-    const observer = new MutationObserver(() => {
-      setIsDark(document.documentElement.classList.contains('dark'));
-    });
+    const observer = new MutationObserver(updateDarkState);
     observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
 
     return () => {
       observer.disconnect();
     };
-  }, []);
+  }, [updateDarkState]);
 
   const showDark = mounted ? isDark : false;
+  const labels = DARK_MODE_LABELS[locale];
 
   return (
     <button
@@ -53,8 +87,8 @@ export function DarkModeToggle({ className = '', style }: DarkModeToggleProps) {
         className,
       )}
       style={style}
-      aria-label={showDark ? 'Switch to light mode' : 'Switch to dark mode'}
-      title={showDark ? 'Light mode' : 'Dark mode'}
+      aria-label={showDark ? labels.switchToLight : labels.switchToDark}
+      title={showDark ? labels.lightMode : labels.darkMode}
     >
       {showDark ? <Sun size={20} aria-hidden="true" /> : <Moon size={20} aria-hidden="true" />}
     </button>

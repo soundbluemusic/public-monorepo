@@ -72,6 +72,9 @@ import { DEFAULT_LANGUAGE, type Language } from '../core/config';
  * @see {@link stripLocaleFromPath} 로케일 prefix 제거
  */
 export function getLocaleFromPath(pathname: string): Language {
+  if (typeof pathname !== 'string' || pathname.length === 0) {
+    return DEFAULT_LANGUAGE;
+  }
   if (pathname.startsWith('/ko/') || pathname === '/ko') return 'ko';
   return DEFAULT_LANGUAGE;
 }
@@ -104,6 +107,9 @@ export function getLocaleFromPath(pathname: string): Language {
  * @see {@link getLocaleFromPath} 로케일 값이 필요한 경우
  */
 export function isKoreanPath(pathname: string): boolean {
+  if (typeof pathname !== 'string' || pathname.length === 0) {
+    return false;
+  }
   return pathname.startsWith('/ko/') || pathname === '/ko';
 }
 
@@ -144,6 +150,9 @@ export function isKoreanPath(pathname: string): boolean {
  * @see {@link getLocaleFromPath} 로케일 값 추출
  */
 export function stripLocaleFromPath(pathname: string): string {
+  if (typeof pathname !== 'string' || pathname.length === 0) {
+    return '/';
+  }
   if (pathname.startsWith('/ko/')) return pathname.slice(3) || '/';
   if (pathname === '/ko') return '/';
   return pathname;

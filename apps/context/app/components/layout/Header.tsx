@@ -157,6 +157,8 @@ export function Header({ onMenuClick, sidebarCollapsed = false }: HeaderProps) {
                   <SearchDropdown
                     results={results}
                     selectedIndex={selectedIndex}
+                    query={query}
+                    ariaLabel={locale === 'ko' ? '검색 결과' : 'Search results'}
                     localePath={localePath}
                     onResultClick={() => {
                       handleResultClick();
@@ -226,6 +228,7 @@ export function Header({ onMenuClick, sidebarCollapsed = false }: HeaderProps) {
               <div className="flex items-center gap-1 shrink-0">
                 <Link
                   to={localePath('/browse')}
+                  aria-current={isActive('/browse') ? 'page' : undefined}
                   className={cn(
                     'hidden lg:flex px-3 py-2 text-sm rounded-lg transition-colors min-h-11 items-center justify-center',
                     'text-(--text-secondary) hover:bg-(--bg-tertiary)',
@@ -236,6 +239,7 @@ export function Header({ onMenuClick, sidebarCollapsed = false }: HeaderProps) {
                 </Link>
                 <Link
                   to={localePath('/conversations')}
+                  aria-current={isActive('/conversations') ? 'page' : undefined}
                   className={cn(
                     'hidden lg:flex px-3 py-2 text-sm rounded-lg transition-colors min-h-11 items-center justify-center',
                     'text-(--text-secondary) hover:bg-(--bg-tertiary)',
@@ -246,7 +250,7 @@ export function Header({ onMenuClick, sidebarCollapsed = false }: HeaderProps) {
                 </Link>
                 <ServicesDropdown currentAppId="context" locale={locale} />
                 <LanguageToggle locale={locale} currentPath={currentPath} />
-                <DarkModeToggle />
+                <DarkModeToggle locale={locale} />
               </div>
             </>
           )}

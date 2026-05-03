@@ -52,6 +52,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
   const routerState = useRouterState();
   const pathname = routerState.location.pathname;
   const lang = detectLanguage(pathname);
+  const locale: 'en' | 'ko' = lang === 'ko' ? 'ko' : 'en';
 
   return (
     <html lang={lang} suppressHydrationWarning>
@@ -81,10 +82,10 @@ function RootDocument({ children }: { children: React.ReactNode }) {
       <body>
         <QueryProvider>
           <I18nProvider>
-            <ErrorBoundary>
-              <OfflineIndicator />
+            <ErrorBoundary locale={locale}>
+              <OfflineIndicator locale={locale} />
               {children}
-              <ToastContainer />
+              <ToastContainer locale={locale} />
             </ErrorBoundary>
           </I18nProvider>
         </QueryProvider>

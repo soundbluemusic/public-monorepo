@@ -321,7 +321,28 @@ export function headFactoryEn(
 }
 
 /**
+ * 한글 locale prefix 정규화 (이중 prefix 방지)
+ *
+ * 호출자가 locale-agnostic 경로(`/concept/addition`)를 반환하든
+ * locale-prefixed 경로(`/ko/concept/addition`)를 반환하든 안전하게 처리.
+ */
+function prefixKoreanLocale(path: string): string {
+  if (typeof path !== 'string' || path.length === 0) {
+    return '/ko';
+  }
+  if (path === '/ko' || path.startsWith('/ko/')) {
+    return path;
+  }
+  const withSlash = path.startsWith('/') ? path : `/${path}`;
+  return withSlash === '/' ? '/ko' : `/ko${withSlash}`;
+}
+
+/**
  * 동적 한글 경로용 head 팩토리
+ *
+ * `getPathname`은 locale-agnostic 경로(`/concept/{id}`)를 반환하는 것을 권장하나,
+ * `/ko/concept/{id}`와 같이 prefix가 포함된 경로를 반환해도 이중 prefix를
+ * 발생시키지 않습니다.
  */
 export function dynamicHeadFactoryKo<T>(
   getLocalizedMeta: (data: T) => LocalizedMeta,
@@ -335,7 +356,7 @@ export function dynamicHeadFactoryKo<T>(
     const localizedMeta = getLocalizedMeta(loaderData);
     const meta = localizedMeta.ko;
     const pathname = getPathname
-      ? `/ko${getPathname(loaderData)}`
+      ? prefixKoreanLocale(getPathname(loaderData))
       : (ctx.location?.pathname ?? '/ko');
     const urls = computeSeoUrls(pathname, baseUrl, trailingSlash);
 
