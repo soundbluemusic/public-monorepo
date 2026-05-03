@@ -279,3 +279,156 @@ export function highlightMatch(text: string, query: string): string {
 function escapeRegex(str: string): string {
   return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }
+
+/* ============================================================
+ *  Hangul (한글) decomposition for jamo-level search matching
+ * ============================================================ */
+
+/** 한글 음절 시작 코드 포인트 (가) */
+const HANGUL_SYLLABLE_START = 0xac00;
+/** 한글 음절 끝 코드 포인트 (힣) */
+const HANGUL_SYLLABLE_END = 0xd7a3;
+
+/** 초성 19자 (Choseong) */
+const CHOSEONG_TABLE = [
+  'ㄱ',
+  'ㄲ',
+  'ㄴ',
+  'ㄷ',
+  'ㄸ',
+  'ㄹ',
+  'ㅁ',
+  'ㅂ',
+  'ㅃ',
+  'ㅅ',
+  'ㅆ',
+  'ㅇ',
+  'ㅈ',
+  'ㅉ',
+  'ㅊ',
+  'ㅋ',
+  'ㅌ',
+  'ㅍ',
+  'ㅎ',
+] as const;
+
+/** 중성 21자 (Jungseong) */
+const JUNGSEONG_TABLE = [
+  'ㅏ',
+  'ㅐ',
+  'ㅑ',
+  'ㅒ',
+  'ㅓ',
+  'ㅔ',
+  'ㅕ',
+  'ㅖ',
+  'ㅗ',
+  'ㅘ',
+  'ㅙ',
+  'ㅚ',
+  'ㅛ',
+  'ㅜ',
+  'ㅝ',
+  'ㅞ',
+  'ㅟ',
+  'ㅠ',
+  'ㅡ',
+  'ㅢ',
+  'ㅣ',
+] as const;
+
+/** 종성 28자 (첫 번째는 종성 없음) */
+const JONGSEONG_TABLE = [
+  '',
+  'ㄱ',
+  'ㄲ',
+  'ㄳ',
+  'ㄴ',
+  'ㄵ',
+  'ㄶ',
+  'ㄷ',
+  'ㄹ',
+  'ㄺ',
+  'ㄻ',
+  'ㄼ',
+  'ㄽ',
+  'ㄾ',
+  'ㄿ',
+  'ㅀ',
+  'ㅁ',
+  'ㅂ',
+  'ㅄ',
+  'ㅅ',
+  'ㅆ',
+  'ㅇ',
+  'ㅈ',
+  'ㅊ',
+  'ㅋ',
+  'ㅌ',
+  'ㅍ',
+  'ㅎ',
+] as const;
+
+const JUNGSEONG_COUNT = 21;
+const JONGSEONG_COUNT = 28;
+const SYLLABLE_BLOCK = JUNGSEONG_COUNT * JONGSEONG_COUNT;
+
+/**
+ * 한글 음절을 자모(자음/모음)로 분해합니다.
+ *
+ * 음절이 아닌 문자(영문, 숫자, 호환 자모 등)는 그대로 유지됩니다.
+ * 자모 단위 부분 검색을 가능하게 합니다 (예: "ㄱㅏㅁ" → "감자" 매칭 보조).
+ *
+ * @param text - 분해할 텍스트
+ * @returns 자모로 분해된 텍스트
+ *
+ * @example
+ * ```typescript
+ * decomposeHangul('안녕');     // → 'ㅇㅏㄴㄴㅕㅇ'
+ * decomposeHangul('한글날');   // → 'ㅎㅏㄴㄱㅡㄹㄴㅏㄹ'
+ * decomposeHangul('Hello 안녕'); // → 'Hello ㅇㅏㄴㄴㅕㅇ'
+ * decomposeHangul('가');       // → 'ㄱㅏ' (종성 없음)
+ * ```
+ */
+export function decomposeHangul(text: string): string {
+  if (typeof text !== 'string' || text.length === 0) return '';
+
+  let result = '';
+  for (const ch of text) {
+    const code = ch.codePointAt(0);
+    if (code === undefined) continue;
+
+    if (code >= HANGUL_SYLLABLE_START && code <= HANGUL_SYLLABLE_END) {
+      const offset = code - HANGUL_SYLLABLE_START;
+      const choseongIdx = Math.floor(offset / SYLLABLE_BLOCK);
+      const jungseongIdx = Math.floor((offset % SYLLABLE_BLOCK) / JONGSEONG_COUNT);
+      const jongseongIdx = offset % JONGSEONG_COUNT;
+
+      result += CHOSEONG_TABLE[choseongIdx] ?? '';
+      result += JUNGSEONG_TABLE[jungseongIdx] ?? '';
+      if (jongseongIdx > 0) {
+        result += JONGSEONG_TABLE[jongseongIdx] ?? '';
+      }
+    } else {
+      result += ch;
+    }
+  }
+  return result;
+}
+
+/**
+ * 한글 텍스트가 포함되었는지 빠르게 확인합니다.
+ *
+ * 한글이 없는 텍스트(순수 영문)에는 자모 분해 비용을 들이지 않기 위한 가드입니다.
+ */
+export function containsHangul(text: string): boolean {
+  if (typeof text !== 'string' || text.length === 0) return false;
+  for (const ch of text) {
+    const code = ch.codePointAt(0);
+    if (code === undefined) continue;
+    if (code >= HANGUL_SYLLABLE_START && code <= HANGUL_SYLLABLE_END) {
+      return true;
+    }
+  }
+  return false;
+}

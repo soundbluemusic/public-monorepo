@@ -6,7 +6,7 @@ import { type BreadcrumbItem, generateBreadcrumbSchema } from '@soundblue/seo/st
 import { useAutoAnimate } from '@soundblue/ui/hooks';
 import { Pagination } from '@soundblue/ui/patterns';
 import { ProgressBar } from '@soundblue/ui/primitives';
-import { notFound, useRouterState } from '@tanstack/react-router';
+import { notFound, useNavigate, useRouterState } from '@tanstack/react-router';
 import { useCallback } from 'react';
 import { EntryListItem } from '@/components/entry/EntryListItem';
 import { Layout } from '@/components/layout';
@@ -125,6 +125,7 @@ export function CategoryPageContent({
 }: CategoryPageContentProps) {
   const { locale, t, localePath } = useI18n();
   const routerState = useRouterState();
+  const navigate = useNavigate();
 
   const { studiedIds } = useStudyData({ totalEntries: totalCount });
   const [listRef] = useAutoAnimate<HTMLDivElement>();
@@ -142,19 +143,26 @@ export function CategoryPageContent({
 
   const handlePageChange = useCallback(
     (page: number) => {
-      const params = new URLSearchParams(routerState.location.search);
-      if (page === 1) {
-        params.delete('page');
-      } else {
-        params.set('page', String(page));
+      // SPA 라우팅으로 페이지 전환 — 전체 새로고침 없이 search 객체 갱신
+      // 기존 search params를 유지하면서 page만 변경 (page === 1이면 제거)
+      navigate({
+        to: routerState.location.pathname,
+        search: (prev) => {
+          const next = { ...(prev as Record<string, unknown>) };
+          if (page === 1) {
+            delete next.page;
+          } else {
+            next.page = String(page);
+          }
+          return next;
+        },
+      });
+      // 페이지 전환 시 콘텐츠 영역 최상단으로 스크롤 (스크롤 위치 보존 방지)
+      if (typeof window !== 'undefined') {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
       }
-      const search = params.toString();
-      const newUrl = search
-        ? `${routerState.location.pathname}?${search}`
-        : routerState.location.pathname;
-      window.location.href = newUrl;
     },
-    [routerState.location.search, routerState.location.pathname],
+    [navigate, routerState.location.pathname],
   );
 
   return (

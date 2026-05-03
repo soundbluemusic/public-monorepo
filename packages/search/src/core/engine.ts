@@ -30,6 +30,25 @@
  */
 import MiniSearch from 'minisearch';
 import type { SearchableItem, SearchConfig, SearchResult } from './types';
+import { containsHangul, decomposeHangul } from './utils';
+
+/**
+ * 한글 자모 분해 옵션 활성화 시 사용하는 processTerm 함수.
+ *
+ * - 한글이 없는 토큰: 소문자 변환만 (영문/숫자 일반 처리)
+ * - 한글이 포함된 토큰: 원본(소문자)과 자모 분해 형태 모두 인덱싱
+ *
+ * MiniSearch는 processTerm이 string[] 반환 시 각 항목을 별개 토큰으로 인덱싱합니다.
+ */
+function buildHangulProcessTerm(): (term: string) => string | string[] | null | undefined {
+  return (term: string) => {
+    if (typeof term !== 'string' || term.length === 0) return null;
+    const lower = term.toLowerCase();
+    if (!containsHangul(lower)) return lower;
+    const decomposed = decomposeHangul(lower);
+    return decomposed === lower ? lower : [lower, decomposed];
+  };
+}
 
 /**
  * 타입 안전 전문 검색 엔진
@@ -88,13 +107,16 @@ export class SearchEngine<T extends SearchableItem> {
    */
   constructor(config: SearchConfig) {
     this.config = config;
+    const processTerm = config.enableHangulDecomposition ? buildHangulProcessTerm() : undefined;
     this.index = new MiniSearch<T>({
       fields: config.fields,
       storeFields: config.storeFields,
+      ...(processTerm ? { processTerm } : {}),
       searchOptions: {
         boost: config.searchOptions?.boost ?? {},
         fuzzy: config.searchOptions?.fuzzy ?? 0.2,
         prefix: config.searchOptions?.prefix ?? true,
+        ...(processTerm ? { processTerm } : {}),
       },
     });
   }
@@ -155,9 +177,19 @@ export class SearchEngine<T extends SearchableItem> {
    * ```
    */
   loadIndex(json: string): void {
+    const processTerm = this.config.enableHangulDecomposition
+      ? buildHangulProcessTerm()
+      : undefined;
     this.index = MiniSearch.loadJSON<T>(json, {
       fields: this.config.fields,
       storeFields: this.config.storeFields,
+      ...(processTerm ? { processTerm } : {}),
+      searchOptions: {
+        boost: this.config.searchOptions?.boost ?? {},
+        fuzzy: this.config.searchOptions?.fuzzy ?? 0.2,
+        prefix: this.config.searchOptions?.prefix ?? true,
+        ...(processTerm ? { processTerm } : {}),
+      },
     });
   }
 
