@@ -95,8 +95,8 @@ Policy: 위 영역은 scripts/sync-external-claude.sh 가 자동 교체. 수동 
 | App | Mode | 데이터 소스 | D1 바인딩 | 설정 파일 |
 | :-- | :--- | :---------- | :-------- | :-------- |
 | Context | **SSR** | Cloudflare D1 | `DB` (context-db), `PRIVATE_DB` (private) | `wrangler.toml` |
-| Permissive | SSR | Cloudflare D1 | `KNOWLEDGE_DB` (knowledge), `PRIVATE_DB` (private) | `wrangler.toml` |
-| Roots | SSR | Cloudflare D1 | `KNOWLEDGE_DB` (knowledge), `PRIVATE_DB` (private) | `wrangler.toml` |
+| Permissive | SSR | TypeScript (in-memory) | _없음_ | `wrangler.toml` |
+| Roots | SSR | TypeScript (in-memory) | _없음_ | `wrangler.toml` |
 
 **금지 사항:**
 
@@ -321,7 +321,7 @@ endpoint = https://${{ secrets.CLOUDFLARE_ACCOUNT_ID }}.r2.cloudflarestorage.com
 | -------- | ---- |
 | 렌더링 모드 | **SSR 전용** (Cloudflare Workers) |
 | 데이터베이스 | Cloudflare D1 (`context-db`) |
-| 엔트리 수 | 16,394 entries + 52 categories |
+| 엔트리 수 | 16,944 entries + 65 categories (`data/context/entries/*.json`, `data/context/categories.json` 기준) |
 | 사이트맵 | D1에서 동적 생성 |
 
 **배포 명령어:**
@@ -337,7 +337,7 @@ pnpm deploy
 
 | 바인딩 | 데이터베이스 | 용도 |
 | :----- | :----------- | :--- |
-| `DB` | context-db | 한국어 사전 엔트리 (16,394개) |
+| `DB` | context-db | 한국어 사전 엔트리 (16,944개) |
 | `PRIVATE_DB` | private | 저작권 자료 (공개 레포에 넣을 수 없는 콘텐츠) |
 
 **사이트맵 구조 (D1에서 동적 생성):**
@@ -633,9 +633,9 @@ export const Route = createFileRoute('/entry/$entryId')({
 
 ---
 
-## 🛠 기술 스택 버전 (2026-04-24 기준)
+## 🛠 기술 스택 버전 (2026-05-12 기준)
 
-> ⚠️ **AI 어시스턴트 참고용**: 이 버전들은 실제 사용 중인 버전입니다. 코드 작성 시 참고하세요.
+> ⚠️ **AI 어시스턴트 참고용**: 이 버전들은 실제 사용 중인 버전입니다. 변경 시 `package.json`을 단일 출처(SSoT)로 보고 이 표는 동기화하세요.
 
 | 기술 | 버전 | 비고 |
 | ---- | ---- | ---- |
@@ -643,15 +643,16 @@ export const Route = createFileRoute('/entry/$entryId')({
 | **TanStack Start** | ^1.167.43 | SSR 프레임워크 |
 | **TanStack Router** | ^1.168.23 | 파일 기반 라우팅 |
 | **Vite** | ^8.0.10 | Rolldown 번들러 (7x 빠른 빌드), Stable |
-| **TypeScript** | ^5.9.3 | 타입 체크 |
+| **TypeScript** | ^6.0.3 | 타입 체크 |
 | **Tailwind CSS** | ^4.2.4 | v4 사용 중 |
-| **Zod** | ^4.3.6 (Context), ^3.25.76 (root, astro 호환) | 스키마 검증 |
+| **Zod** | ^4.3.6 | 모든 워크스페이스 동일 |
 | **Zustand** | ^5.0.12 | 상태 관리 |
 | **Cloudflare Wrangler** | ^4.84.1 | Workers 배포 |
 | **@cloudflare/vite-plugin** | ^1.33.1 | Vite 통합 |
+| **@cloudflare/workers-types** | ^4.20260424.1 | Workers TypeScript 타입 |
 | **@inlang/paraglide-js** | ^2.16.0 | i18n 컴파일러 |
-| **Node.js** | >=20 | 런타임 |
-| **pnpm** | 10.11.0 | 패키지 매니저 |
+| **Node.js** | >=20 | 런타임 (`package.json#engines`) |
+| **pnpm** | 10.11.0 | `package.json#packageManager` |
 
 ---
 
@@ -685,9 +686,9 @@ directory = "dist/client"
 
 | 앱 | 바인딩 | 데이터베이스 | 용도 |
 | :- | :----- | :----------- | :--- |
-| **Context** | `DB` | context-db | 한국어 사전 (16,394 entries) |
+| **Context** | `DB` | context-db | 한국어 사전 (16,944 entries, 65 categories, 53 conversations) |
 | **Context** | `PRIVATE_DB` | private | 저작권 자료 |
-| **Permissive** | `KNOWLEDGE_DB` | knowledge | 웹개발 자료 (88 libraries, 56 APIs) |
-| **Permissive** | `PRIVATE_DB` | private | 저작권 자료 |
-| **Roots** | `KNOWLEDGE_DB` | knowledge | 수학 개념 (438 concepts, 18 fields) |
-| **Roots** | `PRIVATE_DB` | private | 저작권 자료 |
+| **Permissive** | _없음_ | — | 데이터 소스: TypeScript in-memory (`data/permissive/libraries.json` 110개, `web-apis.json` 56개) |
+| **Roots** | _없음_ | — | 데이터 소스: TypeScript in-memory (`apps/roots/app/data/concepts/*.ts` 438 concepts, `fields.ts` 18 fields) |
+
+> ⚠️ **Permissive/Roots에 D1 바인딩 없음을 확인했습니다.** `wrangler.toml`에 어떠한 `[[d1_databases]]` 섹션도 두지 마세요. 코드에서 `env.KNOWLEDGE_DB` 등을 참조하는 부분이 0건임을 `grep -rn 'KNOWLEDGE_DB' apps/permissive apps/roots`로 검증할 수 있습니다.
