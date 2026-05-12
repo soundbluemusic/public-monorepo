@@ -6,6 +6,13 @@
  */
 
 import tanstackHandler from '@tanstack/react-start/server-entry';
+import staticPagesJson from './data/sitemap-static-pages.json';
+
+interface SitemapStaticPage {
+  path: string;
+  priority: string;
+  changefreq: string;
+}
 
 // ============================================================================
 // Helpers
@@ -88,19 +95,7 @@ const jsonHeaders = {
 // API Route Handlers
 // ============================================================================
 
-const STATIC_PAGES = [
-  { path: '/', priority: '1.0', changefreq: 'weekly' },
-  { path: '/browse', priority: '0.9', changefreq: 'weekly' },
-  { path: '/about', priority: '0.8', changefreq: 'monthly' },
-  { path: '/conversations', priority: '0.8', changefreq: 'weekly' },
-  { path: '/tags', priority: '0.7', changefreq: 'weekly' },
-  { path: '/download', priority: '0.5', changefreq: 'monthly' },
-  { path: '/sitemap', priority: '0.3', changefreq: 'monthly' },
-  { path: '/built-with', priority: '0.3', changefreq: 'monthly' },
-  { path: '/license', priority: '0.1', changefreq: 'yearly' },
-  { path: '/privacy', priority: '0.1', changefreq: 'yearly' },
-  { path: '/terms', priority: '0.1', changefreq: 'yearly' },
-];
+const STATIC_PAGES: readonly SitemapStaticPage[] = staticPagesJson;
 
 async function handleSitemapIndex(env: CloudflareEnv): Promise<Response> {
   const db = getD1Database(env);

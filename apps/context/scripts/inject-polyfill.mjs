@@ -3,12 +3,38 @@
  *
  * Strategy (Vite 7): Patch worker-entry-*.js in assets/
  * Strategy (Vite 8+): Patch index.js directly (all-in-one bundle)
+ *
+ * Failure policy: ANY regex/pattern miss MUST abort the build (process.exit(1)).
+ * Silent fallbacks were removed after a sitemap drift incident caused 3 static
+ * page URLs to be missing in production.
  */
 import fs from 'node:fs';
 import path from 'node:path';
 
 const distDir = path.resolve(process.cwd(), 'dist/server');
 const assetsDir = path.join(distDir, 'assets');
+
+// Single source of truth for static sitemap pages, read from app/data/sitemap-static-pages.json
+// so that this script and apps/context/app/server.ts cannot drift.
+const staticPagesJsonPath = path.resolve(process.cwd(), 'app/data/sitemap-static-pages.json');
+if (!fs.existsSync(staticPagesJsonPath)) {
+  console.error('❌ FATAL: sitemap-static-pages.json not found.');
+  console.error(`   Expected at: ${staticPagesJsonPath}`);
+  console.error('   This file is the single source of truth for static sitemap entries.');
+  process.exit(1);
+}
+const staticPagesData = JSON.parse(fs.readFileSync(staticPagesJsonPath, 'utf8'));
+if (!Array.isArray(staticPagesData) || staticPagesData.length === 0) {
+  console.error('❌ FATAL: sitemap-static-pages.json is empty or not an array.');
+  process.exit(1);
+}
+for (const page of staticPagesData) {
+  if (!page || typeof page.path !== 'string' || typeof page.priority !== 'string' || typeof page.changefreq !== 'string') {
+    console.error('❌ FATAL: sitemap-static-pages.json contains an invalid entry:', page);
+    process.exit(1);
+  }
+}
+console.log(`ℹ️  Loaded ${staticPagesData.length} static sitemap pages from JSON SSoT`);
 
 // Polyfill to inject at the very start of the bundle
 // This includes:
@@ -30,16 +56,7 @@ const apiHandlers = `
 // Injected API Handlers
 // ============================================================================
 const API_SITE_URL = 'https://context.soundbluemusic.com';
-const API_STATIC_PAGES = [
-  { path: '/', priority: '1.0', changefreq: 'weekly' },
-  { path: '/about', priority: '0.8', changefreq: 'monthly' },
-  { path: '/browse', priority: '0.9', changefreq: 'weekly' },
-  { path: '/download', priority: '0.7', changefreq: 'monthly' },
-  { path: '/built-with', priority: '0.5', changefreq: 'monthly' },
-  { path: '/license', priority: '0.3', changefreq: 'yearly' },
-  { path: '/privacy', priority: '0.3', changefreq: 'yearly' },
-  { path: '/terms', priority: '0.3', changefreq: 'yearly' },
-];
+const API_STATIC_PAGES = ${JSON.stringify(staticPagesData)};
 function apiGetDateString(){return new Date().toISOString().slice(0, 10);}
 function apiBilingualUrl(p,pr,cf,now){const e=\`\${API_SITE_URL}\${p}\`,k=\`\${API_SITE_URL}/ko\${p==='/'?'':p}\`;return \`  <url>\\n    <loc>\${e}</loc>\\n    <lastmod>\${now}</lastmod>\\n    <changefreq>\${cf}</changefreq>\\n    <priority>\${pr}</priority>\\n    <xhtml:link rel="alternate" hreflang="en" href="\${e}"/>\\n    <xhtml:link rel="alternate" hreflang="ko" href="\${k}"/>\\n    <xhtml:link rel="alternate" hreflang="x-default" href="\${e}"/>\\n  </url>\\n  <url>\\n    <loc>\${k}</loc>\\n    <lastmod>\${now}</lastmod>\\n    <changefreq>\${cf}</changefreq>\\n    <priority>\${pr}</priority>\\n    <xhtml:link rel="alternate" hreflang="en" href="\${e}"/>\\n    <xhtml:link rel="alternate" hreflang="ko" href="\${k}"/>\\n    <xhtml:link rel="alternate" hreflang="x-default" href="\${e}"/>\\n  </url>\`;}
 const xmlH={'Content-Type':'application/xml; charset=utf-8','Cache-Control':'public, max-age=3600, s-maxage=86400'};
@@ -98,13 +115,22 @@ if (!targetPath) {
 let content = fs.readFileSync(targetPath, 'utf8');
 
 // Patch 1: Handle undefined 'e' in TanStack Router's URL class
+// NOTE: This pattern matches MINIFIED private field names. If a future TanStack
+// Router upgrade renames the minified fields, the regex will not match and we
+// MUST fail the build loudly rather than ship a silently broken bundle.
 const urlClassPattern = /\(this\.#f=e\.protocol,this\.#m=e\.host,this\.#g=e\.pathname,this\.#y=e\.search\)/g;
 const urlClassReplacement = "(this.#f=(e||{}).protocol||'https:',this.#m=(e||{}).host||'',this.#g=(e||{}).pathname||'/',this.#y=(e||{}).search||'')";
 
-if (urlClassPattern.test(content)) {
-  content = content.replace(urlClassPattern, urlClassReplacement);
-  console.log('✅ Patched TanStack Router URL class');
+if (!urlClassPattern.test(content)) {
+  console.error('❌ FATAL: TanStack Router URL class pattern not found in bundle.');
+  console.error('   Expected minified pattern: (this.#f=e.protocol,this.#m=e.host,...)');
+  console.error('   This likely means TanStack Router was upgraded and changed its');
+  console.error('   internal minified field names. The polyfill cannot be applied safely.');
+  console.error('   Update urlClassPattern in this script to match the new bundle.');
+  process.exit(1);
 }
+content = content.replace(urlClassPattern, urlClassReplacement);
+console.log('✅ Patched TanStack Router URL class');
 
 // Add polyfill at start if not already present
 if (!content.startsWith('// CF Workers Polyfill')) {
@@ -114,17 +140,33 @@ if (!content.startsWith('// CF Workers Polyfill')) {
 
 // Inject API handlers after polyfill
 if (!content.includes('handleApiRoute')) {
-  const polyfillEndIndex = content.indexOf('import{') > 0 ? content.indexOf('import{') : (content.indexOf('import ') > 0 ? content.indexOf('import ') : content.length);
+  const importCurlyIdx = content.indexOf('import{');
+  const importSpaceIdx = content.indexOf('import ');
+  let polyfillEndIndex;
+  if (importCurlyIdx > 0) {
+    polyfillEndIndex = importCurlyIdx;
+  } else if (importSpaceIdx > 0) {
+    polyfillEndIndex = importSpaceIdx;
+  } else {
+    console.error('❌ FATAL: No top-level import statement found in bundle.');
+    console.error('   Cannot determine a safe location to inject API handlers.');
+    console.error('   The bundle structure has changed unexpectedly.');
+    process.exit(1);
+  }
   content = content.slice(0, polyfillEndIndex) + apiHandlers + content.slice(polyfillEndIndex);
   console.log('✅ Injected API handlers');
 }
 
-// Find original handler name for wrapping
+// Find original handler name for wrapping.
+// NO fallback guessing: if neither the default-export pattern nor the pl()
+// pattern matches, we abort. Previously the script fell back to the literal
+// string "gl", which would silently wrap the wrong variable (or nothing) and
+// cause every static asset to 404 in production.
 function findOriginalHandlerName(content) {
   // Priority 1: Find the default export variable name directly
   // Pattern: export{...,xxx as default} or export{xxx as default,...}
   const defaultExportMatch = content.match(/export\{[^}]*?(\w+) as default[,}]/);
-  if (defaultExportMatch) {
+  if (defaultExportMatch?.[1]) {
     console.log(`ℹ️  Found default export variable: ${defaultExportMatch[1]}`);
     return defaultExportMatch[1];
   }
@@ -132,21 +174,16 @@ function findOriginalHandlerName(content) {
   // Priority 2: Look for createServerEntry pattern (pl function result)
   // Pattern: var gl=pl({fetch:...})
   const serverEntryMatch = content.match(/var\s+(\w+)\s*=\s*pl\s*\(/);
-  if (serverEntryMatch) {
+  if (serverEntryMatch?.[1]) {
     console.log(`ℹ️  Found server entry variable: ${serverEntryMatch[1]}`);
     return serverEntryMatch[1];
   }
 
-  // Fallback: common handler patterns
-  const patterns = ['gl', 'ad', 'gd', 'Mx', 'w'];
-  for (const p of patterns) {
-    if (content.includes(`var ${p}=pl(`) || content.includes(`const ${p}=pl(`)) {
-      return p;
-    }
-  }
-
-  console.warn('⚠️  Could not find handler variable, using fallback "gl"');
-  return 'gl';
+  console.error('❌ FATAL: Could not find the original handler variable in the bundle.');
+  console.error('   Neither the "as default" export pattern nor the "pl(" server-entry');
+  console.error('   pattern matched. This likely means TanStack Start changed its');
+  console.error('   bundle structure. Update findOriginalHandlerName in this script.');
+  process.exit(1);
 }
 
 const originalHandlerName = findOriginalHandlerName(content);
@@ -195,10 +232,13 @@ const __wrappedHandler__ = __originalHandler__ ? {
 // Check if we already have the wrapper
 if (!content.includes('__wrappedHandler__')) {
   const exportIndex = content.lastIndexOf('export{');
-  if (exportIndex > 0) {
-    content = content.slice(0, exportIndex) + fetchWrapperCode + content.slice(exportIndex);
-    console.log('✅ Wrapped fetch handler for API routes');
+  if (exportIndex <= 0) {
+    console.error('❌ FATAL: No "export{" statement found at the end of the bundle.');
+    console.error('   Cannot insert the fetch handler wrapper. Bundle layout changed.');
+    process.exit(1);
   }
+  content = content.slice(0, exportIndex) + fetchWrapperCode + content.slice(exportIndex);
+  console.log('✅ Wrapped fetch handler for API routes');
 }
 
 // Replace or add default export with __wrappedHandler__
