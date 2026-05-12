@@ -1,6 +1,7 @@
 import { headFactory } from '@soundblue/seo/meta';
 import { createFileRoute, Link, notFound } from '@tanstack/react-router';
 import { Layout } from '@/components/layout';
+import { APP_CONFIG } from '@/config';
 import { useI18n } from '@/i18n';
 
 export const Route = createFileRoute('/$')({
@@ -15,7 +16,7 @@ export const Route = createFileRoute('/$')({
       },
       en: { title: '404 - Page Not Found | Context', description: 'Page not found' },
     },
-    'https://context.soundbluemusic.com',
+    APP_CONFIG.baseUrl,
   ),
   component: NotFound,
 });

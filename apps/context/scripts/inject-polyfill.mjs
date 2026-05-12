@@ -36,13 +36,36 @@ for (const page of staticPagesData) {
 }
 console.log(`ℹ️  Loaded ${staticPagesData.length} static sitemap pages from JSON SSoT`);
 
+// Single source of truth for the app's site URL, read from app/data/site.json so
+// this script, app/config.ts, and the runtime location polyfill cannot drift.
+const siteJsonPath = path.resolve(process.cwd(), 'app/data/site.json');
+if (!fs.existsSync(siteJsonPath)) {
+  console.error('❌ FATAL: site.json not found.');
+  console.error(`   Expected at: ${siteJsonPath}`);
+  console.error('   This file is the single source of truth for the app base URL.');
+  process.exit(1);
+}
+const siteData = JSON.parse(fs.readFileSync(siteJsonPath, 'utf8'));
+if (!siteData || typeof siteData.baseUrl !== 'string' || !/^https?:\/\//.test(siteData.baseUrl)) {
+  console.error('❌ FATAL: site.json must export { "baseUrl": "https://..." }');
+  console.error('   Got:', siteData);
+  process.exit(1);
+}
+const SITE_BASE_URL = siteData.baseUrl.replace(/\/$/, '');
+const siteUrlObj = new URL(SITE_BASE_URL);
+const SITE_HOSTNAME = siteUrlObj.hostname;
+const SITE_HOST = siteUrlObj.host;
+const SITE_PROTOCOL = siteUrlObj.protocol;
+const SITE_ORIGIN = siteUrlObj.origin;
+console.log(`ℹ️  Loaded base URL from JSON SSoT: ${SITE_BASE_URL}`);
+
 // Polyfill to inject at the very start of the bundle
 // This includes:
 // 1. Location polyfill for Workers
 // 2. Global __cfEnv__ for passing env to createServerFn handlers
 // 3. Require polyfill for 'cloudflare:workers' module
 const polyfill = `// CF Workers Polyfill
-if(typeof globalThis.location==='undefined'){globalThis.location={protocol:'https:',host:'context.soundbluemusic.com',hostname:'context.soundbluemusic.com',port:'',pathname:'/',search:'',hash:'',href:'https://context.soundbluemusic.com/',origin:'https://context.soundbluemusic.com'};}
+if(typeof globalThis.location==='undefined'){globalThis.location={protocol:${JSON.stringify(SITE_PROTOCOL)},host:${JSON.stringify(SITE_HOST)},hostname:${JSON.stringify(SITE_HOSTNAME)},port:'',pathname:'/',search:'',hash:'',href:${JSON.stringify(`${SITE_ORIGIN}/`)},origin:${JSON.stringify(SITE_ORIGIN)}};}
 // Global env for SSR - will be set by fetch handler wrapper
 globalThis.__cfEnv__=null;
 // Polyfill require for cloudflare:workers to use global env
@@ -55,7 +78,7 @@ const apiHandlers = `
 // ============================================================================
 // Injected API Handlers
 // ============================================================================
-const API_SITE_URL = 'https://context.soundbluemusic.com';
+const API_SITE_URL = ${JSON.stringify(SITE_BASE_URL)};
 const API_STATIC_PAGES = ${JSON.stringify(staticPagesData)};
 function apiGetDateString(){return new Date().toISOString().slice(0, 10);}
 function apiBilingualUrl(p,pr,cf,now){const e=\`\${API_SITE_URL}\${p}\`,k=\`\${API_SITE_URL}/ko\${p==='/'?'':p}\`;return \`  <url>\\n    <loc>\${e}</loc>\\n    <lastmod>\${now}</lastmod>\\n    <changefreq>\${cf}</changefreq>\\n    <priority>\${pr}</priority>\\n    <xhtml:link rel="alternate" hreflang="en" href="\${e}"/>\\n    <xhtml:link rel="alternate" hreflang="ko" href="\${k}"/>\\n    <xhtml:link rel="alternate" hreflang="x-default" href="\${e}"/>\\n  </url>\\n  <url>\\n    <loc>\${k}</loc>\\n    <lastmod>\${now}</lastmod>\\n    <changefreq>\${cf}</changefreq>\\n    <priority>\${pr}</priority>\\n    <xhtml:link rel="alternate" hreflang="en" href="\${e}"/>\\n    <xhtml:link rel="alternate" hreflang="ko" href="\${k}"/>\\n    <xhtml:link rel="alternate" hreflang="x-default" href="\${e}"/>\\n  </url>\`;}

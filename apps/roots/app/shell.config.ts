@@ -4,14 +4,15 @@
  */
 
 import type { RootShellConfig } from '@soundblue/ui/shell';
+import { APP_CONFIG } from './config';
 
 export const shellConfig: RootShellConfig = {
   appName: 'Roots - Math Documentation',
-  baseUrl: 'https://roots.soundbluemusic.com',
+  baseUrl: APP_CONFIG.baseUrl,
   themeColor: '#a5b4fc',
   description: 'Learn math concepts easily - From basic arithmetic to advanced calculus',
   languages: ['ko', 'en'],
-  searchUrlTemplate: 'https://roots.soundbluemusic.com/search?q={search_term}',
+  searchUrlTemplate: `${APP_CONFIG.baseUrl}/search?q={search_term}`,
   themeColors: {
     light: {
       bgPrimary: '#f8fafc',

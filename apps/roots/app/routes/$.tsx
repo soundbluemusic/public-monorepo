@@ -1,6 +1,7 @@
 import { headFactory } from '@soundblue/seo/meta';
 import { createFileRoute, Link, notFound } from '@tanstack/react-router';
 import { Layout } from '../components/layout/Layout';
+import { APP_CONFIG } from '../config';
 import { useI18n } from '../i18n';
 
 const buildHead = headFactory(
@@ -8,7 +9,7 @@ const buildHead = headFactory(
     ko: { title: '404 - 수리', description: '페이지를 찾을 수 없습니다' },
     en: { title: '404 - Roots', description: 'Page not found' },
   },
-  'https://roots.soundbluemusic.com',
+  APP_CONFIG.baseUrl,
 );
 
 export const Route = createFileRoute('/$')({

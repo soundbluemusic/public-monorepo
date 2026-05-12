@@ -1,6 +1,7 @@
 import { headFactoryEn } from '@soundblue/seo/meta';
 import { createFileRoute, Link } from '@tanstack/react-router';
 import DocsLayout from '../components/layout/DocsLayout';
+import { APP_CONFIG } from '../config';
 import { useI18n } from '../i18n';
 
 const localizedMeta = {
@@ -12,7 +13,7 @@ export const Route = createFileRoute('/$')({
   loader: () => {
     throw new Response('Not Found', { status: 404 });
   },
-  head: headFactoryEn(localizedMeta, 'https://permissive.soundbluemusic.com'),
+  head: headFactoryEn(localizedMeta, APP_CONFIG.baseUrl),
   component: NotFound,
 });
 

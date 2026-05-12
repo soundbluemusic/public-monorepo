@@ -6,6 +6,7 @@
  */
 
 import tanstackHandler from '@tanstack/react-start/server-entry';
+import { APP_CONFIG } from './config';
 import staticPagesJson from './data/sitemap-static-pages.json';
 
 interface SitemapStaticPage {
@@ -18,7 +19,7 @@ interface SitemapStaticPage {
 // Helpers
 // ============================================================================
 
-const SITE_URL = 'https://context.soundbluemusic.com';
+const SITE_URL = APP_CONFIG.baseUrl;
 
 /**
  * 콘텐츠 최종 수정일 (빌드 타임스탬프에서 자동 생성)

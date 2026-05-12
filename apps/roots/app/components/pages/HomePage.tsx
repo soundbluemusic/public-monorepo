@@ -10,11 +10,12 @@ import { cn } from '@soundblue/ui/utils';
 import { Link, useNavigate } from '@tanstack/react-router';
 import { BookOpen, Search } from 'lucide-react';
 import { useCallback, useEffect, useRef, useState } from 'react';
+import { APP_CONFIG } from '../../config';
 import { FEATURED_CONCEPTS, featuredCardColors } from '../../data/featuredConcepts';
 import { useI18n } from '../../i18n';
 import { Layout } from '../layout/Layout';
 
-const ROOTS_BASE_URL = 'https://roots.soundbluemusic.com';
+const ROOTS_BASE_URL = APP_CONFIG.baseUrl;
 
 export const homeMeta = {
   ko: {
