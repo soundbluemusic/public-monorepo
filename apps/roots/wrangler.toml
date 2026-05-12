@@ -9,15 +9,7 @@ directory = "dist/client"
 [observability]
 enabled = true
 
-# D1 Databases
-# Knowledge DB: 학문/참고자료 데이터 (수학 개념, 라이브러리, API)
-[[d1_databases]]
-binding = "KNOWLEDGE_DB"
-database_name = "knowledge"
-database_id = "6f93ae7e-84ab-4d0a-9ba7-d392b2d00034"
-
-# Private DB: 저작권 자료 (공개 레포에 넣을 수 없는 콘텐츠)
-[[d1_databases]]
-binding = "PRIVATE_DB"
-database_name = "private"
-database_id = "de05bd43-f2be-41c5-8e4e-8d04fa4f4534"
+# 데이터 소스: TypeScript in-memory (`apps/roots/app/data/concepts/*.ts`
+# 438 concepts, `fields.ts` 18 fields). D1 바인딩은 사용하지 않습니다
+# (코드에서 D1 env 바인딩 참조가 0건임을 확인하고 제거함). 미래에 추가하려면
+# d1_databases 섹션을 다시 두면 됩니다.
