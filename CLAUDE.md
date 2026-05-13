@@ -344,15 +344,31 @@ pnpm deploy
 
 | Route | 설명 |
 | ----- | ---- |
-| `/sitemap.xml` | 인덱스 (52개 카테고리 사이트맵 링크) |
-| `/sitemap-pages.xml` | 정적 페이지 |
+| `/sitemap.xml` | 인덱스 (정적·카테고리·conversations·tags + 카테고리별 entries 링크) |
+| `/sitemap-pages.xml` | 정적 페이지 (`app/data/sitemap-static-pages.json` SSoT) |
 | `/sitemap-categories.xml` | 카테고리 목록 |
+| `/sitemap-conversations.xml` | conversations 카테고리 |
+| `/sitemap-tags.xml` | tags 목록 |
 | `/sitemaps/entries/{categoryId}.xml` | 카테고리별 엔트리 |
+| `/sitemap-entry-{categoryId}.xml` | 레거시 경로 → 위 경로로 301 redirect |
 
 **참고 파일:**
 
 - `apps/context/wrangler.toml` - Workers + D1 바인딩 설정
-- `apps/context/app/server.ts` - 동적 사이트맵 생성
+- `apps/context/scripts/inject-polyfill.mjs` - **프로덕션의 실제 fetch handler를 생성하는 파일**
+- `apps/context/app/server.ts` - dev 모드용 참조 구현 (프로덕션 번들에 포함되지 않음, 아래 경고 참조)
+
+> ⚠️ **Context 빌드 진입점 함정**
+>
+> Permissive와 Roots는 `app/server.tsx` + `createStartHandler` 형태의 TanStack Start 정식 server entry 패턴을 사용하므로 빌드가 자동으로 그 핸들러를 default export합니다. 반면 **Context는 `app/server.ts`(다른 확장자)에 raw fetch handler를 두고 있어 TanStack의 자동 발견 대상이 아닙니다.** Cloudflare에 배포된 1.7MB worker 번들에서 `apps/context/app/server.ts`의 어떤 식별자도 0건 검출됨을 grep으로 확인했습니다.
+>
+> 결과적으로:
+> - 프로덕션 fetch handler / API 라우트(`/sitemap*.xml`, `/api/offline-db`, `/search-index.json`, `/data/browse/*`) 모든 로직은 **`scripts/inject-polyfill.mjs`가 빌드 후 inject한 코드**가 수행합니다.
+> - HTML 응답의 보안 헤더(`X-Frame-Options`, `X-XSS-Protection`, `Referrer-Policy`)·ETag·Last-Modified·304 처리도 모두 inject-polyfill.mjs 책임입니다.
+> - `app/server.ts`를 수정해도 dev 모드에서만 반영됩니다. **프로덕션에 반영하려면 `scripts/inject-polyfill.mjs`의 inject 코드도 같이 갱신해야 합니다.**
+> - 사이트맵 데이터(`app/data/sitemap-static-pages.json`)와 도메인(`app/data/site.json`)은 양쪽이 같은 JSON을 참조하도록 SSoT 처리되어 있어 데이터 드리프트는 차단되었으나, **핸들러 로직 자체는 두 곳에 따로 작성되어 있습니다.**
+>
+> 향후 권장 작업(별도 PR로 검증 후): Context를 `app/server.tsx` + `createStartHandler` 패턴으로 마이그레이션하여 inject-polyfill.mjs 의존을 폐기.
 
 ---
 
