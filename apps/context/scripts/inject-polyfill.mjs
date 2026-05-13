@@ -81,17 +81,22 @@ const apiHandlers = `
 const API_SITE_URL = ${JSON.stringify(SITE_BASE_URL)};
 const API_STATIC_PAGES = ${JSON.stringify(staticPagesData)};
 function apiGetDateString(){return new Date().toISOString().slice(0, 10);}
-function apiBilingualUrl(p,pr,cf,now){const e=\`\${API_SITE_URL}\${p}\`,k=\`\${API_SITE_URL}/ko\${p==='/'?'':p}\`;return \`  <url>\\n    <loc>\${e}</loc>\\n    <lastmod>\${now}</lastmod>\\n    <changefreq>\${cf}</changefreq>\\n    <priority>\${pr}</priority>\\n    <xhtml:link rel="alternate" hreflang="en" href="\${e}"/>\\n    <xhtml:link rel="alternate" hreflang="ko" href="\${k}"/>\\n    <xhtml:link rel="alternate" hreflang="x-default" href="\${e}"/>\\n  </url>\\n  <url>\\n    <loc>\${k}</loc>\\n    <lastmod>\${now}</lastmod>\\n    <changefreq>\${cf}</changefreq>\\n    <priority>\${pr}</priority>\\n    <xhtml:link rel="alternate" hreflang="en" href="\${e}"/>\\n    <xhtml:link rel="alternate" hreflang="ko" href="\${k}"/>\\n    <xhtml:link rel="alternate" hreflang="x-default" href="\${e}"/>\\n  </url>\`;}
+function apiEncodePath(p){return p.split('/').map(s=>s?encodeURIComponent(s):'').join('/');}
+function apiBilingualUrl(p,pr,cf,now){const ep=apiEncodePath(p);const e=\`\${API_SITE_URL}\${ep}\`,k=\`\${API_SITE_URL}/ko\${ep==='/'?'':ep}\`;return \`  <url>\\n    <loc>\${e}</loc>\\n    <lastmod>\${now}</lastmod>\\n    <changefreq>\${cf}</changefreq>\\n    <priority>\${pr}</priority>\\n    <xhtml:link rel="alternate" hreflang="en" href="\${e}"/>\\n    <xhtml:link rel="alternate" hreflang="ko" href="\${k}"/>\\n    <xhtml:link rel="alternate" hreflang="x-default" href="\${e}"/>\\n  </url>\\n  <url>\\n    <loc>\${k}</loc>\\n    <lastmod>\${now}</lastmod>\\n    <changefreq>\${cf}</changefreq>\\n    <priority>\${pr}</priority>\\n    <xhtml:link rel="alternate" hreflang="en" href="\${e}"/>\\n    <xhtml:link rel="alternate" hreflang="ko" href="\${k}"/>\\n    <xhtml:link rel="alternate" hreflang="x-default" href="\${e}"/>\\n  </url>\`;}
 const xmlH={'Content-Type':'application/xml; charset=utf-8','Cache-Control':'public, max-age=3600, s-maxage=86400'};
 const jsonH={'Content-Type':'application/json','Cache-Control':'public, max-age=3600'};
 
-async function apiHandleSitemapIndex(db){if(!db)return new Response('Database not available',{status:503,headers:{'Content-Type':'text/plain'}});try{const{results:cats}=await db.prepare('SELECT id FROM categories ORDER BY sort_order').all();const now=apiGetDateString();const sitemaps=[{loc:\`\${API_SITE_URL}/sitemap-pages.xml\`,lastmod:now},{loc:\`\${API_SITE_URL}/sitemap-categories.xml\`,lastmod:now},...cats.map(c=>({loc:\`\${API_SITE_URL}/sitemaps/entries/\${c.id}.xml\`,lastmod:now}))];const xml=\`<?xml version="1.0" encoding="UTF-8"?>\\n<?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>\\n<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\\n\${sitemaps.map(s=>\`  <sitemap>\\n    <loc>\${s.loc}</loc>\\n    <lastmod>\${s.lastmod}</lastmod>\\n  </sitemap>\`).join('\\n')}\\n</sitemapindex>\`;return new Response(xml,{headers:xmlH});}catch(e){console.error('Sitemap index error:',e);return new Response('Failed',{status:500});}}
+async function apiHandleSitemapIndex(db){if(!db)return new Response('Database not available',{status:503,headers:{'Content-Type':'text/plain'}});try{const{results:cats}=await db.prepare('SELECT id FROM categories ORDER BY sort_order').all();const now=apiGetDateString();const sitemaps=[{loc:\`\${API_SITE_URL}/sitemap-pages.xml\`,lastmod:now},{loc:\`\${API_SITE_URL}/sitemap-categories.xml\`,lastmod:now},{loc:\`\${API_SITE_URL}/sitemap-conversations.xml\`,lastmod:now},{loc:\`\${API_SITE_URL}/sitemap-tags.xml\`,lastmod:now},...cats.map(c=>({loc:\`\${API_SITE_URL}/sitemaps/entries/\${c.id}.xml\`,lastmod:now}))];const xml=\`<?xml version="1.0" encoding="UTF-8"?>\\n<?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>\\n<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\\n\${sitemaps.map(s=>\`  <sitemap>\\n    <loc>\${s.loc}</loc>\\n    <lastmod>\${s.lastmod}</lastmod>\\n  </sitemap>\`).join('\\n')}\\n</sitemapindex>\`;return new Response(xml,{headers:xmlH});}catch(e){console.error('Sitemap index error:',e);return new Response('Failed',{status:500});}}
 
 function apiHandleSitemapPages(){const now=apiGetDateString();const urls=API_STATIC_PAGES.map(p=>apiBilingualUrl(p.path,p.priority,p.changefreq,now)).join('\\n');const xml=\`<?xml version="1.0" encoding="UTF-8"?>\\n<?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>\\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\\n\${urls}\\n</urlset>\`;return new Response(xml,{headers:xmlH});}
 
 async function apiHandleSitemapCategories(db){if(!db)return new Response('Database not available',{status:503,headers:{'Content-Type':'text/plain'}});try{const{results:cats}=await db.prepare('SELECT id FROM categories ORDER BY sort_order').all();const now=apiGetDateString();const urls=cats.map(c=>apiBilingualUrl(\`/category/\${c.id}\`,'0.8','weekly',now)).join('\\n');const xml=\`<?xml version="1.0" encoding="UTF-8"?>\\n<?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>\\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\\n\${urls}\\n</urlset>\`;return new Response(xml,{headers:xmlH});}catch(e){console.error('Categories sitemap error:',e);return new Response('Failed',{status:500});}}
 
-async function apiHandleSitemapEntries(db,catId){if(!db)return new Response('Database not available',{status:503,headers:{'Content-Type':'text/plain'}});try{const{results:entries}=await db.prepare('SELECT id FROM entries WHERE category_id=?').bind(catId).all();if(entries.length===0)return new Response('Not found',{status:404});const now=apiGetDateString();const urls=entries.map(e=>apiBilingualUrl(\`/entry/\${e.id}\`,'0.6','monthly',now)).join('\\n');const xml=\`<?xml version="1.0" encoding="UTF-8"?>\\n<?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>\\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\\n\${urls}\\n</urlset>\`;return new Response(xml,{headers:xmlH});}catch(e){console.error('Entries sitemap error:',e);return new Response('Failed',{status:500});}}
+async function apiHandleSitemapEntries(db,catId){if(!db)return new Response('Database not available',{status:503,headers:{'Content-Type':'text/plain'}});try{const{results:entries}=await db.prepare('SELECT id FROM entries WHERE category_id=?').bind(catId).all();if(entries.length===0)return new Response('Not found',{status:404});const now=apiGetDateString();const urls=entries.map(e=>apiBilingualUrl(\`/entry/\${e.id}\`,'0.8','monthly',now)).join('\\n');const xml=\`<?xml version="1.0" encoding="UTF-8"?>\\n<?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>\\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\\n\${urls}\\n</urlset>\`;return new Response(xml,{headers:xmlH});}catch(e){console.error('Entries sitemap error:',e);return new Response('Failed',{status:500});}}
+
+async function apiHandleSitemapConversations(db){if(!db)return new Response('Database not available',{status:503,headers:{'Content-Type':'text/plain'}});try{const{results:cats}=await db.prepare('SELECT DISTINCT category_id FROM conversations ORDER BY category_id').all();const now=apiGetDateString();const urls=cats.map(c=>apiBilingualUrl(\`/conversations/\${c.category_id}\`,'0.7','monthly',now)).join('\\n');const xml=\`<?xml version="1.0" encoding="UTF-8"?>\\n<?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>\\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\\n\${urls}\\n</urlset>\`;return new Response(xml,{headers:xmlH});}catch(e){console.error('Conversations sitemap error:',e);return new Response('Failed',{status:500});}}
+
+async function apiHandleSitemapTags(db){if(!db)return new Response('Database not available',{status:503,headers:{'Content-Type':'text/plain'}});try{const{results}=await db.prepare("SELECT tags FROM entries WHERE tags IS NOT NULL AND tags != '[]'").all();const uniqueTags=new Set();for(const row of results){try{const tags=JSON.parse(row.tags);for(const tag of tags){uniqueTags.add(tag);}}catch(err){console.warn('[Sitemap] Invalid JSON in tags:',String(row.tags).slice(0,100),err);}}const sortedTags=Array.from(uniqueTags).sort();const now=apiGetDateString();const urls=sortedTags.map(tag=>apiBilingualUrl(\`/tag/\${tag}\`,'0.5','monthly',now)).join('\\n');const xml=\`<?xml version="1.0" encoding="UTF-8"?>\\n<?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>\\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\\n\${urls}\\n</urlset>\`;return new Response(xml,{headers:xmlH});}catch(e){console.error('Tags sitemap error:',e);return new Response('Failed',{status:500});}}
 
 async function apiHandleOfflineDb(db){if(!db)return new Response(JSON.stringify({error:'Database not available'}),{status:503,headers:jsonH});try{const[entries,cats,convs]=await Promise.all([db.prepare('SELECT id,korean,romanization,part_of_speech,category_id,difficulty,frequency,tags,translations FROM entries').all(),db.prepare('SELECT id,name_ko,name_en,description_ko,description_en,icon,color,sort_order FROM categories').all(),db.prepare('SELECT id,category_id,title_ko,title_en,dialogue FROM conversations').all()]);const data={version:Date.now(),tables:{entries:entries.results,categories:cats.results,conversations:convs.results},meta:{entriesCount:entries.results.length,categoriesCount:cats.results.length,conversationsCount:convs.results.length}};return new Response(JSON.stringify(data),{headers:{...jsonH,'X-Data-Version':String(data.version)}});}catch(e){console.error('Offline DB error:',e);return new Response(JSON.stringify({error:'Failed',message:e?.message||'Unknown'}),{status:500,headers:jsonH});}}
 
@@ -99,7 +104,7 @@ async function apiHandleBrowseChunk(db,sortType,chunkNum){if(!db)return new Resp
 
 async function apiHandleSearchIndex(db){if(!db)return new Response(JSON.stringify([]),{headers:jsonH});try{const{results}=await db.prepare('SELECT id,korean,romanization,part_of_speech,category_id FROM entries ORDER BY frequency DESC LIMIT 5000').all();const index=results.map(e=>({id:e.id,k:e.korean,r:e.romanization||'',p:e.part_of_speech||'',c:e.category_id}));return new Response(JSON.stringify(index),{headers:{...jsonH,'Cache-Control':'public, max-age=86400'}});}catch(e){console.error('Search index error:',e);return new Response(JSON.stringify([]),{status:500,headers:jsonH});}}
 
-async function handleApiRoute(request,env){const url=new URL(request.url);const pathname=url.pathname;const db=env?.DB;if(pathname==='/sitemap.xml')return apiHandleSitemapIndex(db);if(pathname==='/sitemap-pages.xml')return apiHandleSitemapPages();if(pathname==='/sitemap-categories.xml')return apiHandleSitemapCategories(db);const entryMatch=pathname.match(/^\\/sitemaps\\/entries\\/([^/]+)\\.xml$/);if(entryMatch?.[1])return apiHandleSitemapEntries(db,entryMatch[1]);if(pathname==='/api/offline-db')return apiHandleOfflineDb(db);if(pathname==='/search-index.json')return apiHandleSearchIndex(db);const browseMatch=pathname.match(/^\\/data\\/browse\\/(alphabetical|category|recent)\\/chunk-(\\d+)\\.json$/);if(browseMatch)return apiHandleBrowseChunk(db,browseMatch[1],parseInt(browseMatch[2],10));return null;}
+async function handleApiRoute(request,env){const url=new URL(request.url);const pathname=url.pathname;const db=env?.DB;if(pathname==='/sitemap.xml')return apiHandleSitemapIndex(db);if(pathname==='/sitemap-pages.xml')return apiHandleSitemapPages();if(pathname==='/sitemap-categories.xml')return apiHandleSitemapCategories(db);if(pathname==='/sitemap-conversations.xml')return apiHandleSitemapConversations(db);if(pathname==='/sitemap-tags.xml')return apiHandleSitemapTags(db);const entryMatch=pathname.match(/^\\/sitemaps\\/entries\\/([^/]+)\\.xml$/);if(entryMatch?.[1])return apiHandleSitemapEntries(db,entryMatch[1]);const legacyMatch=pathname.match(/^\\/sitemap-entry-([^/]+)\\.xml$/);if(legacyMatch?.[1])return new Response(null,{status:301,headers:{Location:\`\${API_SITE_URL}/sitemaps/entries/\${legacyMatch[1]}.xml\`}});if(pathname==='/api/offline-db')return apiHandleOfflineDb(db);if(pathname==='/search-index.json')return apiHandleSearchIndex(db);const browseMatch=pathname.match(/^\\/data\\/browse\\/(alphabetical|category|recent)\\/chunk-(\\d+)\\.json$/);if(browseMatch)return apiHandleBrowseChunk(db,browseMatch[1],parseInt(browseMatch[2],10));return null;}
 // ============================================================================
 `;
 
@@ -212,9 +217,49 @@ function findOriginalHandlerName(content) {
 const originalHandlerName = findOriginalHandlerName(content);
 console.log(`ℹ️  Found handler variable: ${originalHandlerName}`);
 
+// Build timestamp used by ETag / Last-Modified. Computed at inject time so that
+// every deploy produces a stable identifier across the lifetime of the bundle.
+const __CONTENT_LAST_MODIFIED__ = new Date().toISOString().slice(0, 10);
+
 const fetchWrapperCode = `
 // Wrap original fetch to handle API routes first and set global env for SSR
 const __originalHandler__ = typeof ${originalHandlerName} !== 'undefined' ? ${originalHandlerName} : null;
+
+// Security headers applied to every HTML response (Workers does not honour
+// the _headers file). Mirrors apps/context/app/server.ts SECURITY_HEADERS.
+const __SEC_HEADERS__ = {
+  'X-Content-Type-Options': 'nosniff',
+  'X-Frame-Options': 'DENY',
+  'X-XSS-Protection': '1; mode=block',
+  'Referrer-Policy': 'strict-origin-when-cross-origin',
+};
+
+const __CONTENT_LAST_MODIFIED__ = ${JSON.stringify(__CONTENT_LAST_MODIFIED__)};
+function __getLastModifiedHeader__() {
+  return new Date(__CONTENT_LAST_MODIFIED__).toUTCString();
+}
+function __generateETag__(pathname) {
+  let hash = 0x811c9dc5;
+  for (let i = 0; i < pathname.length; i++) {
+    hash ^= pathname.charCodeAt(i);
+    hash = Math.imul(hash, 0x01000193);
+  }
+  const hashHex = (hash >>> 0).toString(16);
+  return '"' + __CONTENT_LAST_MODIFIED__ + '-' + hashHex + '"';
+}
+function __shouldReturn304__(request) {
+  const ifModifiedSince = request.headers.get('If-Modified-Since');
+  if (!ifModifiedSince) return false;
+  const clientDate = new Date(ifModifiedSince);
+  const lastModified = new Date(__CONTENT_LAST_MODIFIED__);
+  return clientDate >= lastModified;
+}
+function __etagMatches__(request, etag) {
+  const ifNoneMatch = request.headers.get('If-None-Match');
+  if (!ifNoneMatch) return false;
+  return ifNoneMatch === etag || ifNoneMatch === 'W/' + etag;
+}
+
 // Static asset paths that should be served by Workers Assets
 const __isStaticAsset__ = (pathname) => {
   return pathname.startsWith('/assets/') ||
@@ -246,8 +291,37 @@ const __wrappedHandler__ = __originalHandler__ ? {
     // Handle API routes
     const apiResponse = await handleApiRoute(request, env);
     if (apiResponse) return apiResponse;
+
+    // Conditional GET: return 304 when the client's cached HTML is still fresh.
+    const etag = __generateETag__(pathname);
+    if (request.method === 'GET' && (__etagMatches__(request, etag) || __shouldReturn304__(request))) {
+      return new Response(null, {
+        status: 304,
+        headers: {
+          ETag: etag,
+          'Last-Modified': __getLastModifiedHeader__(),
+          'Cache-Control': 'public, max-age=0, must-revalidate',
+        },
+      });
+    }
+
     // Pass to TanStack Start handler for SSR
-    return __originalHandler__.fetch(request, env, ctx);
+    const response = await __originalHandler__.fetch(request, env, ctx);
+
+    // Attach cache + security headers to HTML responses (Workers has no _headers).
+    const contentType = response.headers.get('Content-Type');
+    if (contentType && contentType.includes('text/html')) {
+      const newResponse = new Response(response.body, response);
+      newResponse.headers.set('Cache-Control', 'public, max-age=0, must-revalidate');
+      newResponse.headers.set('Last-Modified', __getLastModifiedHeader__());
+      newResponse.headers.set('ETag', etag);
+      for (const [key, value] of Object.entries(__SEC_HEADERS__)) {
+        newResponse.headers.set(key, value);
+      }
+      return newResponse;
+    }
+
+    return response;
   }
 } : null;
 `;
