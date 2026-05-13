@@ -100,13 +100,13 @@ describe('ErrorBoundary', () => {
     expect(screen.getByText('Normal content')).toBeInTheDocument();
   });
 
-  it('should render default fallback when child throws', () => {
+  it('should render default fallback when child throws (Korean locale)', () => {
     function ThrowingComponent(): never {
       throw new Error('Test error');
     }
 
     render(
-      <ErrorBoundary>
+      <ErrorBoundary locale="ko">
         <ThrowingComponent />
       </ErrorBoundary>,
     );
@@ -154,10 +154,14 @@ describe('ErrorFallbackUI', () => {
     expect(screen.getByRole('alert')).toBeInTheDocument();
   });
 
-  it('should display error message', () => {
+  it('should display localized error message (default English)', () => {
     render(<ErrorFallbackUI error={null} onReset={() => {}} />);
-    expect(screen.getByText('문제가 발생했습니다')).toBeInTheDocument();
     expect(screen.getByText('Something went wrong')).toBeInTheDocument();
+  });
+
+  it('should display Korean error message when locale="ko"', () => {
+    render(<ErrorFallbackUI error={null} onReset={() => {}} locale="ko" />);
+    expect(screen.getByText('문제가 발생했습니다')).toBeInTheDocument();
   });
 
   it('should call onReset when retry button clicked', async () => {
@@ -166,13 +170,13 @@ describe('ErrorFallbackUI', () => {
 
     render(<ErrorFallbackUI error={null} onReset={onReset} />);
 
-    await user.click(screen.getByLabelText('Try again'));
+    await user.click(screen.getByRole('button', { name: 'Try again' }));
     expect(onReset).toHaveBeenCalledTimes(1);
   });
 
   it('should have reload page button', () => {
     render(<ErrorFallbackUI error={null} onReset={() => {}} />);
-    expect(screen.getByLabelText('Reload page')).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: 'Reload page' })).toBeInTheDocument();
   });
 });
 

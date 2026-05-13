@@ -182,6 +182,7 @@ export function BaseSidebar({
       )}
 
       {/* Sidebar */}
+      {/* biome-ignore lint/a11y/useAriaPropsSupportedByRole: aria-modal is applied only when role becomes 'dialog' on mobile open; biome's static analysis cannot follow the conditional role assignment below */}
       <aside
         ref={sidebarRef}
         className={cn(

@@ -104,8 +104,8 @@ describe('stripLocaleFromPath', () => {
     expect(stripLocaleFromPath('/ko-kr/about')).toBe('/ko-kr/about');
   });
 
-  it('should handle empty string', () => {
-    expect(stripLocaleFromPath('')).toBe('');
+  it('should treat empty string as root path', () => {
+    expect(stripLocaleFromPath('')).toBe('/');
   });
 
   it('should handle path with query string', () => {

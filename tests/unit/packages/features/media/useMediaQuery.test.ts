@@ -2,7 +2,11 @@
  * @fileoverview Unit tests for useMediaQuery and useIsMobile hooks
  */
 
-import { useIsMobile, useMediaQuery } from '@soundblue/features/media';
+import {
+  __INTERNAL_RESET_MEDIA_QUERY_CACHE_FOR_TESTS__,
+  useIsMobile,
+  useMediaQuery,
+} from '@soundblue/features/media';
 import { act, renderHook } from '@testing-library/react';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
@@ -11,24 +15,34 @@ describe('useMediaQuery', () => {
   let listeners: ((event: MediaQueryListEvent) => void)[] = [];
 
   beforeEach(() => {
+    // Hook caches `MediaQueryList` instances by query for performance; clear
+    // the cache so each test sees a fresh `window.matchMedia` mock instead of
+    // a `MediaQueryList` from a previous case.
+    __INTERNAL_RESET_MEDIA_QUERY_CACHE_FOR_TESTS__();
     listeners = [];
 
     mockMatchMedia = vi.fn((query: string) => {
+      // Mutable `matches`: the hook reads it on every snapshot, so when a test
+      // fires a 'change' event with { matches: true }, the wrapped handler
+      // first updates this flag, then forwards to the registered listener.
+      let matches = false;
       const mediaQuery = {
-        matches: false,
+        get matches() {
+          return matches;
+        },
         media: query,
         addEventListener: vi.fn((event: string, handler: (event: MediaQueryListEvent) => void) => {
           if (event === 'change') {
-            listeners.push(handler);
+            listeners.push((e: MediaQueryListEvent) => {
+              matches = e.matches;
+              handler(e);
+            });
           }
         }),
         removeEventListener: vi.fn(
-          (event: string, handler: (event: MediaQueryListEvent) => void) => {
+          (event: string, _handler: (event: MediaQueryListEvent) => void) => {
             if (event === 'change') {
-              const index = listeners.indexOf(handler);
-              if (index !== -1) {
-                listeners.splice(index, 1);
-              }
+              listeners.length = 0;
             }
           },
         ),
@@ -119,6 +133,7 @@ describe('useIsMobile', () => {
   let mockMatchMedia: ReturnType<typeof vi.fn>;
 
   beforeEach(() => {
+    __INTERNAL_RESET_MEDIA_QUERY_CACHE_FOR_TESTS__();
     mockMatchMedia = vi.fn((query: string) => ({
       matches: false,
       media: query,
@@ -173,6 +188,10 @@ describe('useIsMobile', () => {
     const breakpoints = [320, 480, 640, 768, 1024];
 
     for (const bp of breakpoints) {
+      // Each breakpoint produces a unique query, but the module-level cache
+      // would otherwise hold a `MediaQueryList` from a previous breakpoint
+      // and skip re-calling `mockMatchMedia` for already-seen queries.
+      __INTERNAL_RESET_MEDIA_QUERY_CACHE_FOR_TESTS__();
       const { result } = renderHook(() => useIsMobile(bp));
       expect(mockMatchMedia).toHaveBeenCalledWith(`(max-width: ${bp - 1}px)`);
       expect(typeof result.current).toBe('boolean');
