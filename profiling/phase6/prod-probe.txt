@@ -1,0 +1,7 @@
+=== Probe production URLs from this environment ===
+--- https://roots.soundbluemusic.com ---
+HTTP 200 ssl=0 total=0.757176s tls=0.248313s
+--- https://context.soundbluemusic.com ---
+HTTP 200 ssl=0 total=0.890319s tls=0.312251s
+--- https://permissive.soundbluemusic.com ---
+HTTP 200 ssl=0 total=1.049083s tls=0.317586s

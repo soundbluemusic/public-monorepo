@@ -1,0 +1,11 @@
+=== Roots TBT contributors ===
+Score: 0.79 Value: 297.00000000000045ms
+  692.4319999999972ms https://roots.soundbluemusic.com/assets/vendor-react-B_-mAaoG.js
+  19.37199999999999ms https://roots.soundbluemusic.com/
+  2.9720000000000004ms Unattributable
+
+=== Roots opportunities ===
+
+=== Context server-response details ===
+Value: 701ms, Description: Reduce initial server response time
+  117541B https://context.soundbluemusic.com/assets/vendor-react-j1Xh8G8H.js

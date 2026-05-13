@@ -1,0 +1,22 @@
+=== Context home ===
+  1: total=0.147838s ttfb=0.146572s size=127876 code=200
+  2: total=0.031890s ttfb=0.029788s size=127876 code=200
+  3: total=0.023568s ttfb=0.022388s size=127876 code=200
+  4: total=0.023296s ttfb=0.022072s size=127876 code=200
+  5: total=0.022527s ttfb=0.022451s size=127876 code=200
+
+=== Context /entry/annyeong (D1 query path) ===
+  1: total=0.009675s ttfb=0.009416s size=11954 code=404
+  2: total=0.006120s ttfb=0.005856s size=11954 code=404
+  3: total=0.006271s ttfb=0.005588s size=11954 code=404
+
+=== Context /sitemap.xml (D1 aggregate) ===
+  1: total=0.006434s ttfb=0.006363s size=6 code=500
+  2: total=0.004557s ttfb=0.004496s size=6 code=500
+  3: total=0.006031s ttfb=0.005958s size=6 code=500
+Failed
+=== Context /sitemap-categories.xml ===
+  total=0.005791s size=6 code=500
+Failed
+=== Context /api/offline-db ===
+  total=0.009230s size=77 code=500

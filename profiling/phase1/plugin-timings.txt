@@ -1,0 +1,31 @@
+=== Plugin timings warning (Roots build) ===
+permissive:build: [33m[PLUGIN_TIMINGS] Warning:[0m Your build spent significant time in plugins. Here is a breakdown:
+permissive:build:   - tanstack-start-core:import-protection (77%)
+permissive:build:   - tanstack-start-core:import-protection-transform-cache (19%)
+permissive:build:   - vite:terser (2%)
+permissive:build: See https://rolldown.rs/options/checks#plugintimings for more details.
+permissive:build: 
+--
+context:build: [33m[PLUGIN_TIMINGS] Warning:[0m Your build spent significant time in plugins. Here is a breakdown:
+context:build:   - tanstack-start-core:import-protection (65%)
+context:build:   - tanstack-start-core:import-protection-transform-cache (29%)
+context:build:   - vite:terser (3%)
+context:build: See https://rolldown.rs/options/checks#plugintimings for more details.
+context:build: 
+--
+permissive:build: [33m[PLUGIN_TIMINGS] Warning:[0m Your build spent significant time in plugins. Here is a breakdown:
+permissive:build:   - tanstack-start-core:import-protection (76%)
+permissive:build:   - tanstack-start-core:import-protection-transform-cache (15%)
+permissive:build:   - vite:terser (8%)
+permissive:build: See https://rolldown.rs/options/checks#plugintimings for more details.
+permissive:build: 
+--
+roots:build: [33m[PLUGIN_TIMINGS] Warning:[0m Your build spent significant time in plugins. Here is a breakdown:
+roots:build:   - tanstack-start-core:import-protection (77%)
+roots:build:   - tanstack-start-core:import-protection-transform-cache (21%)
+roots:build: See https://rolldown.rs/options/checks#plugintimings for more details.
+roots:build: 
+roots:build: ✓ built in 34.87s
+--
+context:build: [33m[PLUGIN_TIMINGS] Warning:[0m Your build spent significant time in plugins. Here is a breakdown:
+context:build:   - tanstack-start-core:import-protection (82%)

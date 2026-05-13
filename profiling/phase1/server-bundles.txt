@@ -1,0 +1,35 @@
+=== Roots build output ===
+18048 apps/roots/dist/server/assets/vendor-icons-stDzcDXu.js
+22199 apps/roots/dist/server/assets/router-Do84CJek.js
+29780 apps/roots/dist/server/assets/browse-CYpiuocr.js
+61394 apps/roots/dist/server/assets/vendor-d3-W5XKpU6J.js
+74385 apps/roots/dist/server/assets/Layout-4hDQ0msr.js
+91578 apps/roots/dist/server/assets/vendor-tanstack-Ek29vU-c.js
+95322 apps/roots/dist/server/assets/vendor-storage-lfCw2y8R.js
+284034 apps/roots/dist/server/assets/vendor-react-DLWUI59M.js
+385800 apps/roots/dist/server/assets/pages-CCPWDT8S.js
+727928 apps/roots/dist/server/assets/useAutoAnimate-CPTLYVYF.js
+
+=== Context build output ===
+23742 apps/context/dist/server/assets/entry-Cf31GmDG.js
+23753 apps/context/dist/server/index.js
+27323 apps/context/dist/server/assets/router-CBE8WiDj.js
+33629 apps/context/dist/server/assets/conversations-BkFzhg-l.js
+62736 apps/context/dist/server/assets/schemas-Dh6rMSVK.js
+95322 apps/context/dist/server/assets/vendor-storage-B_JsULqC.js
+108468 apps/context/dist/server/assets/vendor-tanstack-DDOkrM0m.js
+108938 apps/context/dist/server/assets/layout-No6uMwdw.js
+284111 apps/context/dist/server/assets/vendor-react-Bt7a4R8Q.js
+842933 apps/context/dist/server/assets/entry-index-BWpEiaQo.js
+
+=== Permissive build output ===
+14242 apps/permissive/dist/server/assets/web-apis-D9SykThr.js
+15781 apps/permissive/dist/server/assets/home-DW6DwlO5.js
+17907 apps/permissive/dist/server/assets/vendor-search-_XExTUN0.js
+21183 apps/permissive/dist/server/assets/vendor-icons-kYCBIqQf.js
+24633 apps/permissive/dist/server/assets/_slug-CBGW2RiP.js
+25763 apps/permissive/dist/server/assets/router-iYwjCjue.js
+67329 apps/permissive/dist/server/assets/DocsLayout-BIVKlD53.js
+68367 apps/permissive/dist/server/assets/libraries-CGGMrsP8.js
+91574 apps/permissive/dist/server/assets/vendor-tanstack-B1m3I6_Y.js
+284136 apps/permissive/dist/server/assets/vendor-react-BpI_Oe3P.js

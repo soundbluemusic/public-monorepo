@@ -1,0 +1,25 @@
+=== HEAD /
+HTTP 200, total=0.168639s, connect=0.000958s, ttfb=0.168569s
+
+=== Home (5 sequential requests) ===
+  1: total=0.019543s ttfb=0.018437s size=47248
+  2: total=0.019979s ttfb=0.019051s size=47248
+  3: total=0.021363s ttfb=0.020379s size=47248
+  4: total=0.014659s ttfb=0.013567s size=47248
+  5: total=0.013974s ttfb=0.012738s size=47248
+
+=== concept/addition (loader page) ===
+  1: total=0.009053s ttfb=0.008761s size=7832
+  2: total=0.006942s ttfb=0.006670s size=7832
+  3: total=0.007027s ttfb=0.006802s size=7832
+
+=== fields page ===
+  1: total=0.007195s ttfb=0.006900s size=8389
+  2: total=0.006491s ttfb=0.006188s size=8389
+  3: total=0.007477s ttfb=0.007222s size=8389
+
+=== sitemap.xml ===
+  total=0.008750s ttfb=0.008646s size=555
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">

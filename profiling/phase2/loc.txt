@@ -1,0 +1,15 @@
+=== LOC per package/app ===
+36087 apps/roots
+15281 apps/context
+10369 packages/ui
+9076 apps/permissive
+2451 packages/seo
+2245 packages/search
+1612 packages/platform
+1231 packages/core
+1188 packages/data
+1050 packages/i18n
+998 packages/features
+627 packages/pwa
+500 packages/config
+10 apps/docs

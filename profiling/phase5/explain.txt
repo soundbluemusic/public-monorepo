@@ -1,0 +1,44 @@
+=== EXPLAIN QUERY PLAN for each runtime query ===
+
+--- Q1: SELECT id FROM categories ORDER BY sort_order
+        "detail": "SCAN categories"
+        "detail": "USE TEMP B-TREE FOR ORDER BY"
+
+--- Q2: SELECT id FROM entries WHERE category_id='x'
+        "detail": "SEARCH entries USING INDEX idx_entries_category (category_id=?)"
+
+--- Q3: SELECT DISTINCT category_id FROM conversations ORDER BY category_id
+        "detail": "SCAN conversations USING COVERING INDEX idx_conversations_category"
+
+--- Q4: SELECT tags FROM entries WHERE tags IS NOT NULL AND tags != '[]'
+        "detail": "SCAN entries"
+
+--- Q5: SELECT id,korean,romanization,part_of_speech,category_id,difficulty,frequency,tags,translations FROM entries
+        "detail": "SCAN entries"
+
+--- Q6: SELECT id,name_ko,name_en,description_ko,description_en,icon,color,sort_order FROM categories
+        "detail": "SCAN categories"
+
+--- Q7: SELECT id,category_id,title_ko,title_en,dialogue FROM conversations
+        "detail": "SCAN conversations"
+
+--- Q8a: SELECT id,korean,romanization,part_of_speech,category_id FROM entries ORDER BY korean COLLATE NOCASE LIMIT 100 OFFSET 0
+        "detail": "SCAN entries"
+        "detail": "USE TEMP B-TREE FOR ORDER BY"
+
+--- Q8b: SELECT id,korean,romanization,part_of_speech,category_id FROM entries ORDER BY category_id,korean LIMIT 100 OFFSET 0
+        "detail": "SCAN entries USING INDEX idx_entries_category"
+        "detail": "USE TEMP B-TREE FOR LAST TERM OF ORDER BY"
+
+--- Q8c: SELECT id,korean,romanization,part_of_speech,category_id FROM entries ORDER BY rowid DESC LIMIT 100 OFFSET 0
+        "detail": "SCAN entries"
+
+--- Q9: SELECT id,korean,romanization,part_of_speech,category_id FROM entries ORDER BY frequency DESC LIMIT 5000
+        "detail": "SCAN entries"
+        "detail": "USE TEMP B-TREE FOR ORDER BY"
+
+--- Q10: SELECT COUNT(*) as count FROM entries
+        "detail": "SCAN entries USING COVERING INDEX idx_entries_difficulty"
+
+--- Q11: SELECT * FROM entries ORDER BY id LIMIT 1 OFFSET 100
+        "detail": "SCAN entries USING INDEX sqlite_autoindex_entries_1"
