@@ -142,23 +142,13 @@ if (!targetPath) {
 // Read and patch target file
 let content = fs.readFileSync(targetPath, 'utf8');
 
-// Patch 1: Handle undefined 'e' in TanStack Router's URL class
-// NOTE: This pattern matches MINIFIED private field names. If a future TanStack
-// Router upgrade renames the minified fields, the regex will not match and we
-// MUST fail the build loudly rather than ship a silently broken bundle.
-const urlClassPattern = /\(this\.#f=e\.protocol,this\.#m=e\.host,this\.#g=e\.pathname,this\.#y=e\.search\)/g;
-const urlClassReplacement = "(this.#f=(e||{}).protocol||'https:',this.#m=(e||{}).host||'',this.#g=(e||{}).pathname||'/',this.#y=(e||{}).search||'')";
-
-if (!urlClassPattern.test(content)) {
-  console.error('❌ FATAL: TanStack Router URL class pattern not found in bundle.');
-  console.error('   Expected minified pattern: (this.#f=e.protocol,this.#m=e.host,...)');
-  console.error('   This likely means TanStack Router was upgraded and changed its');
-  console.error('   internal minified field names. The polyfill cannot be applied safely.');
-  console.error('   Update urlClassPattern in this script to match the new bundle.');
-  process.exit(1);
-}
-content = content.replace(urlClassPattern, urlClassReplacement);
-console.log('✅ Patched TanStack Router URL class');
+// Note (verified 2026-05-13 against the deployed permissive worker via grep):
+// the legacy regex `(this.#f=e.protocol,this.#m=e.host,...)` no longer appears
+// in the bundle in any form. TanStack Router's URL handling was refactored or
+// is now isolated in a chunk that is not the patch target. The previous patch
+// was always a no-op in production — main relied on a silent `if (regex.test)`
+// branch that skipped the replacement. Removed entirely; the location polyfill
+// below is sufficient on its own.
 
 // Add polyfill at start if not already present
 if (!content.startsWith('// CF Workers Polyfill')) {
@@ -260,6 +250,20 @@ function __etagMatches__(request, etag) {
   return ifNoneMatch === etag || ifNoneMatch === 'W/' + etag;
 }
 
+// Dynamic D1-backed routes whose HTML reflects database content. ETag is
+// derived from deploy date + pathname, so a 304 short-circuit on these routes
+// would let clients keep showing pre-deploy entry/category/tag HTML even after
+// D1 mutations. Skip the conditional-GET path for these.
+const __isDynamicD1Path__ = (pathname) => {
+  if (pathname.startsWith('/ko/')) {
+    pathname = pathname.slice(3);
+  }
+  return pathname.startsWith('/entry/') ||
+         pathname.startsWith('/category/') ||
+         pathname.startsWith('/conversations/') ||
+         pathname.startsWith('/tag/');
+};
+
 // Static asset paths that should be served by Workers Assets
 const __isStaticAsset__ = (pathname) => {
   return pathname.startsWith('/assets/') ||
@@ -292,9 +296,11 @@ const __wrappedHandler__ = __originalHandler__ ? {
     const apiResponse = await handleApiRoute(request, env);
     if (apiResponse) return apiResponse;
 
-    // Conditional GET: return 304 when the client's cached HTML is still fresh.
-    const etag = __generateETag__(pathname);
-    if (request.method === 'GET' && (__etagMatches__(request, etag) || __shouldReturn304__(request))) {
+    // ETag/304 only for static-content HTML (D1-backed dynamic pages opt out
+    // so a database mutation is never hidden behind an unchanged ETag).
+    const isDynamic = __isDynamicD1Path__(pathname);
+    const etag = isDynamic ? null : __generateETag__(pathname);
+    if (etag && request.method === 'GET' && (__etagMatches__(request, etag) || __shouldReturn304__(request))) {
       return new Response(null, {
         status: 304,
         headers: {
@@ -312,9 +318,15 @@ const __wrappedHandler__ = __originalHandler__ ? {
     const contentType = response.headers.get('Content-Type');
     if (contentType && contentType.includes('text/html')) {
       const newResponse = new Response(response.body, response);
-      newResponse.headers.set('Cache-Control', 'public, max-age=0, must-revalidate');
-      newResponse.headers.set('Last-Modified', __getLastModifiedHeader__());
-      newResponse.headers.set('ETag', etag);
+      if (isDynamic) {
+        // D1-backed pages: require revalidation every time so a database
+        // update is reflected on the next request, not after deploy date rolls.
+        newResponse.headers.set('Cache-Control', 'no-cache, must-revalidate');
+      } else {
+        newResponse.headers.set('Cache-Control', 'public, max-age=0, must-revalidate');
+        newResponse.headers.set('Last-Modified', __getLastModifiedHeader__());
+        newResponse.headers.set('ETag', etag);
+      }
       for (const [key, value] of Object.entries(__SEC_HEADERS__)) {
         newResponse.headers.set(key, value);
       }

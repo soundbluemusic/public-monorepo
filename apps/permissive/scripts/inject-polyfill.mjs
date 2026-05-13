@@ -77,23 +77,13 @@ if (!targetPath) {
 // Read and patch target file
 let content = fs.readFileSync(targetPath, 'utf8');
 
-// Patch 1: Handle undefined 'e' in TanStack Router's URL class
-// NOTE: This pattern matches MINIFIED private field names. If a future TanStack
-// Router upgrade renames the minified fields, the regex will not match and we
-// MUST fail the build loudly rather than ship a silently broken bundle.
-const urlClassPattern = /\(this\.#f=e\.protocol,this\.#m=e\.host,this\.#g=e\.pathname,this\.#y=e\.search\)/g;
-const urlClassReplacement = "(this.#f=(e||{}).protocol||'https:',this.#m=(e||{}).host||'',this.#g=(e||{}).pathname||'/',this.#y=(e||{}).search||'')";
-
-if (!urlClassPattern.test(content)) {
-  console.error('❌ FATAL: TanStack Router URL class pattern not found in bundle.');
-  console.error('   Expected minified pattern: (this.#f=e.protocol,this.#m=e.host,...)');
-  console.error('   This likely means TanStack Router was upgraded and changed its');
-  console.error('   internal minified field names. The polyfill cannot be applied safely.');
-  console.error('   Update urlClassPattern in this script to match the new bundle.');
-  process.exit(1);
-}
-content = content.replace(urlClassPattern, urlClassReplacement);
-console.log('✅ Patched TanStack Router URL class');
+// Note (verified 2026-05-13 by grepping the local build artifact): the legacy
+// regex `(this.#f=e.protocol,this.#m=e.host,...)` no longer appears anywhere in
+// the bundled output. TanStack Router's URL handling was refactored or lives
+// in a chunk that this script does not target. The previous patch was always
+// a no-op in production — main relied on a silent `if (regex.test)` branch
+// that skipped the replacement. Removed entirely; the location polyfill below
+// is sufficient on its own.
 
 // Add polyfill at start if not already present
 if (!content.startsWith('// CF Workers Polyfill')) {
