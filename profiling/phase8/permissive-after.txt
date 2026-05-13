@@ -1,0 +1,17 @@
+=== Permissive canonical check after fix ===
+/  →  
+/libraries  →  rel="canonical" href="https://permissive.soundbluemusic.com"
+/web-api  →  rel="canonical" href="https://permissive.soundbluemusic.com"
+/tags  →  rel="canonical" href="https://permissive.soundbluemusic.com"
+/built-with  →  rel="canonical" href="https://permissive.soundbluemusic.com"
+/sitemap  →  rel="canonical" href="https://permissive.soundbluemusic.com"
+
+=== Permissive /web-apis (was 500) ===
+  status=404 time=0.006328s
+  status=404 time=0.005413s
+  status=404 time=0.006047s
+
+=== Permissive 404 noindex ===
+
+=== Permissive /ko/libraries canonical ===
+rel="canonical" href="https://permissive.soundbluemusic.com/ko"

@@ -1,0 +1,23 @@
+=== Permissive home ===
+  1: total=0.084514s ttfb=0.083123s size=67936 code=200
+  2: total=0.023518s ttfb=0.022777s size=67936 code=200
+  3: total=0.022123s ttfb=0.020590s size=67936 code=200
+  4: total=0.022278s ttfb=0.022213s size=67936 code=200
+  5: total=0.019376s ttfb=0.018549s size=67936 code=200
+
+=== Permissive /libraries ===
+  1: total=0.103583s ttfb=0.098366s size=705901 code=200
+  2: total=0.075266s ttfb=0.074773s size=705901 code=200
+  3: total=0.106045s ttfb=0.089770s size=705901 code=200
+
+=== Permissive /web-apis ===
+  1: total=0.012537s ttfb=0.011941s size=11833 code=500
+  2: total=0.007992s ttfb=0.007586s size=11833 code=500
+  3: total=0.007282s ttfb=0.006764s size=11833 code=500
+
+=== SSR HTML check (libraries) ===
+  size: 705897
+  title:
+<title>Libraries - Permissive</title>
+<title>Github</title>
+  has h1: 1

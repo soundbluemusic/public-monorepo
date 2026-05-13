@@ -1,0 +1,14 @@
+=== Server entry sizes (the worker bundle) ===
+context: 23753 bytes (23 KB)
+permissive: 7617 bytes (7 KB)
+roots: 7597 bytes (7 KB)
+
+=== Total server dir size ===
+2.2M	apps/context/dist/server
+992K	apps/permissive/dist/server
+3.3M	apps/roots/dist/server
+
+=== Total client dir size ===
+51M	apps/context/dist/client
+1.5M	apps/permissive/dist/client
+4.7M	apps/roots/dist/client

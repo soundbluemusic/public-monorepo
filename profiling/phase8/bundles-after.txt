@@ -1,0 +1,48 @@
+=== Top server chunks after fix (per app) ===
+--- context ---
+   823.2 KB  entry-index-BWpEiaQo.js
+   192.3 KB  vendor-react-D4Sl6WR1.js
+   191.4 KB  vendor-tanstack-Cat-z5bf.js
+   106.4 KB  layout-D9z90E-s.js
+    93.1 KB  vendor-storage-B_JsULqC.js
+    61.3 KB  vendor-schema-BCXKLxII.js
+    32.8 KB  conversations-BkFzhg-l.js
+    26.8 KB  router-V-GUkesc.js
+--- permissive ---
+   192.3 KB  vendor-react-DOyuamiJ.js
+   174.9 KB  vendor-tanstack-D2_5VuNS.js
+    66.8 KB  libraries-CGGMrsP8.js
+    65.8 KB  DocsLayout-DNsxdVH-.js
+    25.2 KB  router-CasqrVCM.js
+    24.1 KB  _slug-CYQH1hRh.js
+    20.7 KB  vendor-icons-kYCBIqQf.js
+    17.5 KB  vendor-search-_XExTUN0.js
+--- roots ---
+   703.0 KB  useAutoAnimate-DU5zAK2W.js
+   253.6 KB  vendor-katex-CemwEGqJ.js
+   192.3 KB  vendor-react-OavwUZDN.js
+   174.8 KB  vendor-tanstack-DTYTR5c6.js
+    93.1 KB  vendor-storage-lfCw2y8R.js
+    72.7 KB  Layout-1bQIjKk3.js
+    66.6 KB  pages-CkblJdPu.js
+    60.0 KB  vendor-d3-W5XKpU6J.js
+
+=== Top client chunks after fix ===
+--- context ---
+  1280.0 KB  vendor-tanstack-Bvu4Eb42.js
+   177.5 KB  vendor-react-2FvKRjmY.js
+    93.1 KB  vendor-storage-S_iZrfC3.js
+    61.2 KB  vendor-schema-mq6BVWel.js
+    21.2 KB  vendor-icons-Bznag3N1.js
+--- permissive ---
+   267.6 KB  vendor-tanstack-CbnPzTNT.js
+   177.5 KB  vendor-react-Bxj7M5H6.js
+    65.8 KB  DocsLayout-C_L0Blxt.js
+    24.0 KB  _slug-CY7U_kLz.js
+    20.7 KB  vendor-icons-rbVaYNem.js
+--- roots ---
+  1052.0 KB  vendor-tanstack-Cc3wxy-5.js
+   253.6 KB  vendor-katex-pxHJLaLl.js
+   177.5 KB  vendor-react-CA3rQgTC.js
+    93.1 KB  vendor-storage-BfMPRdZp.js
+    60.0 KB  vendor-d3-BT-Hg7jv.js

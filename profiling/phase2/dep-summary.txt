@@ -1,0 +1,9 @@
+=== Workspace packages count ===
+10
+
+=== Total root devDeps ===
+63
+5
+
+=== node_modules .pnpm (resolved package count) ===
+1310

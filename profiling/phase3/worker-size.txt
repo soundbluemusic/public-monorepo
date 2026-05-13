@@ -1,0 +1,12 @@
+=== Worker bundle (server entry only) ===
+  context: raw=23753 (23KB) gz=6968
+  permissive: raw=7617 (7KB) gz=2622
+  roots: raw=7597 (7KB) gz=2619
+
+=== Cloudflare Worker 1MB limit check (compressed) ===
+Workers free: 1 MB after compression; paid: 10 MB
+(Note: actual bundle includes lazy-loaded dist/server/assets/*.js via dynamic imports)
+
+  context server total: 1930060 bytes (1884KB)
+  permissive server total: 847830 bytes (827KB)
+  roots server total: 3065129 bytes (2993KB)

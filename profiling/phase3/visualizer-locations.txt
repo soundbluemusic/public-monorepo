@@ -1,0 +1,4 @@
+=== visualizer outputs ===
+-rw-r--r-- 1 root root 1029487 May 13 06:35 apps/context/dist/stats.html
+-rw-r--r-- 1 root root  959516 May 13 06:35 apps/permissive/dist/stats.html
+-rw-r--r-- 1 root root 1079691 May 13 06:34 apps/roots/dist/stats.html

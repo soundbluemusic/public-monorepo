@@ -1,0 +1,5 @@
+=== Q8a new plan (was SCAN + TEMP B-TREE) ===
+        "detail": "SCAN entries USING INDEX idx_entries_korean_nocase"
+
+=== Q9 new plan (was SCAN + TEMP B-TREE) ===
+        "detail": "SCAN entries USING INDEX idx_entries_frequency"

@@ -1,0 +1,57 @@
+=== Permissive /web-apis 500 error body ===
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="/assets/vendor-react-BrKqPO-f.css" type="text/css" data-precedence="default"/><title>404 - Page Not Found | Permissive</title><meta name="color-scheme" content="light dark"/><meta name="theme-color" content="#4a9e95"/><meta property="og:site_name" content="Permissive - Free Web Dev Resources"/><meta property="og:title" content="404 - Page Not Found | Permissive"/><meta property="og:type" content="website"/><meta property="og:url" content="https://permissive.soundbluemusic.com"/><meta property="og:locale" content="en_US"/><meta property="og:locale:alternate" content="ko_KR"/><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="404 - Page Not Found | Permissive"/><link rel="modulepreload" href="/assets/index-QlICUKHO.js"/><link rel="modulepreload" href="/assets/vendor-react-CzOBo3ai.js"/><link rel="modulepreload" href="/assets/_-CN_0Fw42.js"/><link rel="modulepreload" href="/assets/DocsLayout-B_xxJKN5.js"/><link rel="icon" href="/favicon.ico"/><link rel="manifest" href="/manifest.json"/><link rel="preload" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" as="font" type="text/css" crossorigin="anonymous"/><link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous"/><link rel="canonical" href="https://permissive.soundbluemusic.com"/><link rel="alternate" hrefLang="en" href="https://permissive.soundbluemusic.com"/><link rel="alternate" hrefLang="ko" href="https://permissive.soundbluemusic.com/ko"/><link rel="alternate" hrefLang="x-default" href="https://permissive.soundbluemusic.com"/><style>
+:root {
+  --bg-primary: #f7fafa;
+  --bg-secondary: #eff5f4;
+  --bg-tertiary: #e5efec;
+  --bg-elevated: #ffffff;
+  --text-primary: #2a3836;
+  --text-secondary: #4a5e5a;
+}
+.dark {
+  --bg-primary: #0f1716;
+  --bg-secondary: #161f1e;
+  --bg-tertiary: #1e2928;
+  --bg-elevated: #253332;
+  --text-primary: #e5f0ee;
+  --text-secondary: #b0c5c2;
+}
+html, body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+</style><script>(function() {
+  try {
+    var stored = localStorage.getItem('settings-storage');
+    if (stored) {
+      var parsed = JSON.parse(stored);
+      var theme = parsed.state?.theme;
+      if (theme === 'dark' || (theme === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      }
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      document.documentElement.classList.add('dark');
+    }
+  } catch (e) {
+    console.error('[Theme] Failed to load theme preference:', e);
+  }
+})();</script><script>(function() {
+  try {
+    var stored = localStorage.getItem('settings-storage');
+    if (stored) {
+      var parsed = JSON.parse(stored);
+      var collapsed = parsed.state?.sidebarCollapsed;
+      if (collapsed) {
+        document.documentElement.classList.add('sidebar-collapsed');
+      }
+    }
+  } catch (e) {
+    console.error('[Sidebar] Failed to load sidebar preference:', e);
+  }
+})();</script><script type="application/ld+json">[{"@context":"https://schema.org","@type":"WebSite","name":"Permissive - Free Web Dev Resources","url":"https://permissive.soundbluemusic.com","description":"Discover free and open-source web development tools, libraries, and resources","inLanguage":["ko","en"],"potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://permissive.soundbluemusic.com/libraries?q={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"https://schema.org","@type":"Organization","name":"SoundBlue Music","url":"https://soundbluemusic.com","logo":"https://permissive.soundbluemusic.com/logo.png","sameAs":["https://www.youtube.com/@SoundBlueMusic","https://x.com/SoundBlueMusic","https://www.instagram.com/soundbluemusic/","https://www.threads.com/@soundbluemusic"]},{"@context":"https://schema.org","@type":"ItemList","name":"Main Navigation","url":"https://permissive.soundbluemusic.com","itemListElement":[{"@type":"SiteNavigationElement","position":1,"name":"Home","url":"https://permissive.soundbluemusic.com/"},{"@type":"SiteNavigationElement","position":2,"name":"Libraries","url":"https://permissive.soundbluemusic.com/libraries"},{"@type":"SiteNavigationElement","position":3,"name":"Web API","url":"https://permissive.soundbluemusic.com/web-api"}]}]</script></head><body><!--$--><div style="padding:.5rem;max-width:100%"><div style="display:flex;align-items:center;gap:.5rem"><strong style="font-size:1rem">Something went wrong!</strong><button style="appearance:none;font-size:.6em;border:1px solid currentColor;padding:.1rem .2rem;font-weight:bold;border-radius:.25rem">Show Error</button></div><div style="height:.25rem"></div></div><!--/$--><script class="$tsr" id="$tsr-stream-barrier">(self.$R=self.$R||{})["tsr"]=[];self.$_TSR={h(){this.hydrated=!0,this.c()},e(){this.streamEnded=!0,this.c()},c(){this.hydrated&&this.streamEnded&&(delete self.$_TSR,delete self.$R.tsr)},p(e){this.initialized?e():this.buffer.push(e)},buffer:[]};document.currentScript.remove()</script><script type="module" async="">import("/assets/index-QlICUKHO.js")</script><script>(function() {
+
+=== Permissive /libraries duplicate title context ===
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="/assets/vendor-react-BrKqPO-f.css" type="text/css" data-precedence="default"/><title>Libraries - Permissive</title><meta name="color-scheme" content="light dark"/><meta name="theme-color" content="#4a9e95"/><meta property="og:site_name" content="Permissive - Free Web Dev Resources"/><meta name="description" content="MIT licensed open source libraries"/><meta property="og:title" content="Libraries - Permissive"/><meta property="og:description" content="MIT licensed open source libraries"/><meta property="og:type" content="website"/><meta property="og:url" content="https://permissive.soundbluemusic.com"/><meta property="og:locale" content="en_US"/><meta property="og:locale:alternate" content="ko_KR"/><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Libraries - Permissive"/><meta name="twitter:description" content="MIT licensed open source libraries"/><link rel="modulepreload" href="/assets/index-QlICUKHO.js"/><link rel="modulepreload" href="/assets/vendor-react-CzOBo3ai.js"/><link rel="modulepreload" href="/assets/libraries-FvrULTfW.js"/><link rel="modulepreload" href="/assets/DocsLayout-B_xxJKN5.js"/><link rel="modulepreload" href="/assets/libraries-DSwiJzfV.js"/><link rel="modulepreload" href="/assets/schemas-CdS5d3Pi.js"/><link rel="icon" href="/favicon.ico"/><link rel="manifest" href="/manifest.json"/><link rel="preload" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" as="font" type="text/css" crossorigin="anonymous"/><link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous"/><link rel="canonical" href="https://permissive.soundbluemusic.com"/><link rel="alternate" hrefLang="en" href="https://permissive.soundbluemusic.com"/><link rel="alternate" hrefLang="ko" href="https://permissive.soundbluemusic.com/ko"/><link rel="alternate" hrefLang="x-default" href="https://permissive.soundbluemusic.com"/><style>
+:root {
+--
+  }
