@@ -84,7 +84,7 @@ describe('ToastContainer', () => {
 
       render(<ToastContainer />);
 
-      const closeButton = screen.getByRole('button', { name: '닫기' });
+      const closeButton = screen.getByRole('button', { name: 'Close' });
       fireEvent.click(closeButton);
 
       act(() => {
@@ -121,7 +121,7 @@ describe('ToastContainer', () => {
         vi.advanceTimersByTime(20);
       });
 
-      const closeButton = screen.getByRole('button', { name: '닫기' });
+      const closeButton = screen.getByRole('button', { name: 'Close' });
       fireEvent.click(closeButton);
 
       const toastElement = screen.getByText('Success').closest('[role="status"]');
@@ -161,7 +161,7 @@ describe('ToastContainer', () => {
       render(<ToastContainer />);
 
       const container = screen.getByRole('region');
-      expect(container).toHaveAttribute('aria-label', '알림');
+      expect(container).toHaveAttribute('aria-label', 'Notifications');
     });
 
     it('should have aria-hidden on icons', () => {
@@ -180,6 +180,15 @@ describe('ToastContainer', () => {
 
       render(<ToastContainer />);
 
+      expect(screen.getByRole('button', { name: 'Close' })).toBeInTheDocument();
+    });
+
+    it('should use Korean labels when locale="ko"', () => {
+      addToast({ message: 'Success', type: 'success', duration: 0 });
+
+      render(<ToastContainer locale="ko" />);
+
+      expect(screen.getByRole('region')).toHaveAttribute('aria-label', '알림');
       expect(screen.getByRole('button', { name: '닫기' })).toBeInTheDocument();
     });
   });

@@ -16,8 +16,18 @@ type ConceptNamesJson = Record<string, { ko: string; en: string }>;
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
+// Single source of truth: read base URL from app/data/site.json so this script,
+// app/config.ts, and scripts/inject-polyfill.mjs all pull from the same file.
+const SITE_JSON_PATH = join(__dirname, '../app/data/site.json');
+const siteConfig = JSON.parse(readFileSync(SITE_JSON_PATH, 'utf8')) as { baseUrl?: unknown };
+if (typeof siteConfig.baseUrl !== 'string' || !/^https?:\/\//.test(siteConfig.baseUrl)) {
+  throw new Error(
+    `[generate-sitemaps] Invalid baseUrl in ${SITE_JSON_PATH}: ${JSON.stringify(siteConfig.baseUrl)}`,
+  );
+}
+
 const CONFIG = {
-  siteUrl: 'https://roots.soundbluemusic.com',
+  siteUrl: siteConfig.baseUrl.replace(/\/$/, ''),
   languages: ['en', 'ko'] as const,
   appName: 'Roots',
   appSubtitle: 'Roots - Math Documentation for Learners',

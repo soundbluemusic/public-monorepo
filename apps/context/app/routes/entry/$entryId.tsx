@@ -7,6 +7,7 @@
 import { dynamicHeadFactoryEn } from '@soundblue/seo/meta';
 import { createFileRoute, notFound } from '@tanstack/react-router';
 import { EntryPageContent } from '@/components/pages/EntryPageContent';
+import { APP_CONFIG } from '@/config';
 import { getCategoryById } from '@/data/categories';
 import type { LocaleEntry } from '@/data/types';
 import { fetchEntryFromD1 } from '@/services/d1-server';
@@ -61,7 +62,7 @@ export const Route = createFileRoute('/entry/$entryId')({
         },
       };
     },
-    'https://context.soundbluemusic.com',
+    APP_CONFIG.baseUrl,
     (data) => `/entry/${data.entry.id}`,
   ),
   component: function EntryPage() {

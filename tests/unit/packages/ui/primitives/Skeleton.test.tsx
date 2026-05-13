@@ -19,9 +19,9 @@ describe('Skeleton', () => {
     expect(container.querySelector('div')).toBeInTheDocument();
   });
 
-  it('should have animate-pulse class', () => {
+  it('should have motion-safe:animate-pulse class', () => {
     const { container } = render(<Skeleton />);
-    expect(container.firstChild).toHaveClass('animate-pulse');
+    expect(container.firstChild).toHaveClass('motion-safe:animate-pulse');
   });
 
   it('should apply custom className', () => {

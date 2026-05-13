@@ -10,6 +10,7 @@ import { useAutoAnimate } from '@soundblue/ui/hooks';
 import { Pagination } from '@soundblue/ui/patterns';
 import { Link, useNavigate } from '@tanstack/react-router';
 import { lazy, Suspense, useMemo, useState } from 'react';
+import { APP_CONFIG } from '../../config';
 import { buildConceptGraph, type GraphNode } from '../../data/algorithms';
 import { allConcepts, lightConcepts } from '../../data/concepts';
 import { fields } from '../../data/fields';
@@ -17,7 +18,7 @@ import { getSubfieldsByParent } from '../../data/subfields';
 import { useI18n } from '../../i18n';
 import { Layout } from '../layout/Layout';
 
-const ROOTS_BASE_URL = 'https://roots.soundbluemusic.com';
+const ROOTS_BASE_URL = APP_CONFIG.baseUrl;
 
 export const browseMeta = {
   ko: { title: '찾아보기 - 수리', description: '분야별로 수학 개념 찾아보기' },

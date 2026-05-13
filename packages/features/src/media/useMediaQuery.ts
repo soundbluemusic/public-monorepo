@@ -86,3 +86,15 @@ export function useMediaQuery(query: string): boolean {
 export function useIsMobile(breakpoint: number = 768): boolean {
   return useMediaQuery(`(max-width: ${breakpoint - 1}px)`);
 }
+
+/**
+ * @internal
+ * Test-only helper that clears the module-level `mediaQueryCache` so unit
+ * tests can swap `window.matchMedia` mocks between cases without seeing
+ * stale `MediaQueryList` instances from previous tests. **Do not call from
+ * production code** — the cache exists specifically to avoid creating a new
+ * `MediaQueryList` per render.
+ */
+export function __INTERNAL_RESET_MEDIA_QUERY_CACHE_FOR_TESTS__(): void {
+  mediaQueryCache.clear();
+}

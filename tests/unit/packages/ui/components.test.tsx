@@ -89,7 +89,7 @@ describe('@soundblue/ui/primitives - Skeleton', () => {
     it('should render with default classes', () => {
       const { container } = render(<Skeleton />);
       const skeleton = container.firstChild as HTMLElement;
-      expect(skeleton).toHaveClass('animate-pulse');
+      expect(skeleton).toHaveClass('motion-safe:animate-pulse');
     });
 
     it('should apply custom className', () => {
@@ -108,19 +108,19 @@ describe('@soundblue/ui/primitives - Skeleton', () => {
   describe('SkeletonText', () => {
     it('should render 3 lines by default', () => {
       const { container } = render(<SkeletonText />);
-      const lines = container.querySelectorAll('.animate-pulse');
+      const lines = container.querySelectorAll('[class*="motion-safe:animate-pulse"]');
       expect(lines).toHaveLength(3);
     });
 
     it('should render specified number of lines', () => {
       const { container } = render(<SkeletonText lines={5} />);
-      const lines = container.querySelectorAll('.animate-pulse');
+      const lines = container.querySelectorAll('[class*="motion-safe:animate-pulse"]');
       expect(lines).toHaveLength(5);
     });
 
     it('should render 1 line when lines=1', () => {
       const { container } = render(<SkeletonText lines={1} />);
-      const lines = container.querySelectorAll('.animate-pulse');
+      const lines = container.querySelectorAll('[class*="motion-safe:animate-pulse"]');
       expect(lines).toHaveLength(1);
     });
   });

@@ -73,10 +73,10 @@ describe('ProgressBar', () => {
     });
   });
 
-  it('should have transition by default', () => {
+  it('should have motion-safe transition by default', () => {
     const { container } = render(<ProgressBar value={50} />);
     const innerBar = container.querySelector('[role="progressbar"] > div');
-    expect(innerBar).toHaveClass('duration-300');
+    expect(innerBar).toHaveClass('motion-safe:duration-300');
   });
 
   it('should disable animation when noAnimation is true', () => {
