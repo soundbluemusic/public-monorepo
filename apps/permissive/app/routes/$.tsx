@@ -1,5 +1,5 @@
 import { headFactoryEn } from '@soundblue/seo/meta';
-import { createFileRoute, Link } from '@tanstack/react-router';
+import { createFileRoute, Link, notFound } from '@tanstack/react-router';
 import DocsLayout from '../components/layout/DocsLayout';
 import { APP_CONFIG } from '../config';
 import { useI18n } from '../i18n';
@@ -9,11 +9,20 @@ const localizedMeta = {
   en: { title: '404 - Page Not Found | Permissive' },
 };
 
+const buildNotFoundHead = headFactoryEn(localizedMeta, APP_CONFIG.baseUrl);
+
 export const Route = createFileRoute('/$')({
   loader: () => {
-    throw new Response('Not Found', { status: 404 });
+    throw notFound();
   },
-  head: headFactoryEn(localizedMeta, APP_CONFIG.baseUrl),
+  head: (ctx) => {
+    const config = buildNotFoundHead(ctx);
+    return {
+      ...config,
+      // 404는 검색 엔진 인덱싱 차단
+      meta: [...(config.meta ?? []), { name: 'robots', content: 'noindex, nofollow' }],
+    };
+  },
   component: NotFound,
 });
 

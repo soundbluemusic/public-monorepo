@@ -1,0 +1,13 @@
+=== Canonical re-verify ===
+/  →  rel="canonical" href="https://permissive.soundbluemusic.com"
+/libraries  →  rel="canonical" href="https://permissive.soundbluemusic.com/libraries"
+/web-api  →  rel="canonical" href="https://permissive.soundbluemusic.com/web-api"
+/tags  →  rel="canonical" href="https://permissive.soundbluemusic.com/tags"
+/built-with  →  rel="canonical" href="https://permissive.soundbluemusic.com/built-with"
+/sitemap  →  
+/ko  →  rel="canonical" href="https://permissive.soundbluemusic.com/ko"
+/ko/libraries  →  rel="canonical" href="https://permissive.soundbluemusic.com/ko/libraries"
+/ko/web-api  →  
+
+=== /web-apis 404 + noindex ===
+  status: 404

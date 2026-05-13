@@ -4,20 +4,29 @@ import { Layout } from '@/components/layout';
 import { APP_CONFIG } from '@/config';
 import { useI18n } from '@/i18n';
 
+const buildNotFoundHead = headFactory(
+  {
+    ko: {
+      title: '404 - 페이지를 찾을 수 없습니다 | Context',
+      description: '페이지를 찾을 수 없습니다',
+    },
+    en: { title: '404 - Page Not Found | Context', description: 'Page not found' },
+  },
+  APP_CONFIG.baseUrl,
+);
+
 export const Route = createFileRoute('/$')({
   loader: () => {
     throw notFound();
   },
-  head: headFactory(
-    {
-      ko: {
-        title: '404 - 페이지를 찾을 수 없습니다 | Context',
-        description: '페이지를 찾을 수 없습니다',
-      },
-      en: { title: '404 - Page Not Found | Context', description: 'Page not found' },
-    },
-    APP_CONFIG.baseUrl,
-  ),
+  head: (ctx) => {
+    const config = buildNotFoundHead(ctx);
+    return {
+      ...config,
+      // 404는 검색 엔진 인덱싱 차단
+      meta: [...(config.meta ?? []), { name: 'robots', content: 'noindex, nofollow' }],
+    };
+  },
   component: NotFound,
 });
 
