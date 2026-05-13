@@ -1,0 +1,9 @@
+=== Roots regression test ===
+  /                              200  47578B    
+  /fields                        404   8754B    
+  /tags                          200 537661B  <title>All Tags | Roots</title>  rel="canonical" href="https://roots.soundbluemusic.com/tags"
+  /sitemap.xml                   200    555B    
+  /concept/derivative            200  79866B    
+  /ko                            200  47878B    
+  /ko/fields                     404   8835B    
+  /ko/concept/derivative         200  80536B    
