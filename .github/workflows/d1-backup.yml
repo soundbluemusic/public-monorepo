@@ -51,9 +51,9 @@ jobs:
           echo "📦 Exporting context-db..."
           mkdir -p backups
 
-          pnpm exec wrangler d1 export context-db \
-            --config d1-backup.wrangler.toml \
-            --output backups/context-db.sql \
+          pnpm --filter context exec wrangler d1 export context-db \
+            --config "$GITHUB_WORKSPACE/d1-backup.wrangler.toml" \
+            --output "$GITHUB_WORKSPACE/backups/context-db.sql" \
             --remote \
             --skip-confirmation
 
@@ -68,9 +68,9 @@ jobs:
         run: |
           echo "📦 Exporting knowledge db..."
 
-          pnpm exec wrangler d1 export knowledge \
-            --config d1-backup.wrangler.toml \
-            --output backups/knowledge.sql \
+          pnpm --filter context exec wrangler d1 export knowledge \
+            --config "$GITHUB_WORKSPACE/d1-backup.wrangler.toml" \
+            --output "$GITHUB_WORKSPACE/backups/knowledge.sql" \
             --remote \
             --skip-confirmation
 
