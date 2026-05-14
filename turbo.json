@@ -29,7 +29,10 @@
       "inputs": [
         "scripts/**/*.ts",
         "app/data/**/*.ts",
+        "app/data/**/*.js",
+        "app/data/**/*.json",
         "!app/data/generated/**",
+        "public/data/**/*.json",
         "project.inlang/**"
       ],
       "outputs": [
@@ -37,7 +40,10 @@
         "app/paraglide/**",
         "public/search-index.json",
         "public/concepts.json",
-        "public/concept-names.json"
+        "public/concept-names.json",
+        "public/data/browse/**",
+        "public/data/by-category-full/**",
+        "public/data/compressed/**"
       ]
     }
   }

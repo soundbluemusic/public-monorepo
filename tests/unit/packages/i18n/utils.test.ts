@@ -85,8 +85,8 @@ describe('stripLocaleFromPath', () => {
   });
 
   // Edge cases
-  it('should handle empty string', () => {
-    expect(stripLocaleFromPath('')).toBe('');
+  it('should treat empty string as root path', () => {
+    expect(stripLocaleFromPath('')).toBe('/');
   });
 
   it('should handle paths with query strings', () => {

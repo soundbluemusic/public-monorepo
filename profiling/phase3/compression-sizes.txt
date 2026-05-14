@@ -1,0 +1,116 @@
+=== gzip + brotli sizes for top JS chunks per app ===
+
+--- context ---
+  raw=  21681  gz=  7939  br=     0  vendor-icons-Bznag3N1.js
+  raw=  18947  gz=  5057  br=     0  EntryPageContent-ELgTcFAY.js
+  raw=   1422  gz=   595  br=     0  _-8FyDddzv.js
+  raw=   1116  gz=   623  br=     0  rolldown-runtime-BgQAZz4g.js
+  raw=    793  gz=   463  br=     0  vendor-tanstack-D8tcpfvf.js
+  raw=    586  gz=   342  br=     0  index-BTwApqEi.js
+  raw=    294  gz=   217  br=     0  browse-BUYV_Ln2.js
+  raw=    294  gz=   216  br=     0  browse-Butvw99q.js
+  raw=    243  gz=   195  br=     0  _entryId-F-YP6aIE.js
+  raw=    215  gz=   184  br=     0  _entryId-COa6i24D.js
+  raw=    215  gz=   175  br=     0  _tagId-B9VE209l.js
+  raw=    215  gz=   174  br=     0  _tagId-CEj5e_iO.js
+  raw=    195  gz=   167  br=     0  tags-DcCumMud.js
+  raw=    195  gz=   166  br=     0  tags-CElNtLsj.js
+  raw=    170  gz=   157  br=     0  download-Dd84dtoZ.js
+  raw=    170  gz=   157  br=     0  download-C2-eOTz-.js
+  raw=    161  gz=   150  br=     0  privacy-DpYjo197.js
+  raw=    161  gz=   150  br=     0  privacy-DXtSgEQy.js
+  raw=    161  gz=   150  br=     0  license-Z5KmiIZE.js
+  raw=    161  gz=   150  br=     0  license-DkTXs4gX.js
+  raw=    157  gz=   150  br=     0  terms-DfLrQ3L0.js
+  raw=    157  gz=   150  br=     0  terms-Bg8R1NS-.js
+  raw=    150  gz=   148  br=     0  routes-DCiSezRz.js
+  raw=    150  gz=   147  br=     0  ko-BBPMLu-f.js
+  raw=    150  gz=   147  br=     0  conversations-DyFyMGY2.js
+  raw=    150  gz=   147  br=     0  conversations-Dq6CA3t3.js
+  raw=    150  gz=   147  br=     0  _categoryId-UBvgm-p_.js
+  raw=    150  gz=   147  br=     0  _categoryId-C2S-xf_M.js
+  raw=    150  gz=   147  br=     0  _categoryId-BMALAy4Z.js
+  raw=    145  gz=   145  br=     0  _categoryId-DD9n8ptb.js
+  raw=    123  gz=   130  br=     0  bookmarks-ppncaQB2.js
+  raw=    123  gz=   130  br=     0  bookmarks-D1Ncxtgm.js
+  raw=    123  gz=   129  br=     0  my-learning-DNyylcL_.js
+  raw=    123  gz=   129  br=     0  my-learning-DFk4VpNn.js
+  raw=    101  gz=   114  br=     0  __vite-browser-external-BcUQC_EZ.js
+  raw=     78  gz=    92  br=     0  sitemap-BZ4m99zY.js
+  raw=     78  gz=    92  br=     0  sitemap-BYlcnEcf.js
+  raw=     78  gz=    92  br=     0  built-with-wXn2mvRw.js
+  raw=     78  gz=    92  br=     0  built-with-DJOff3BV.js
+  raw=     78  gz=    92  br=     0  about-DFqjlWzK.js
+  raw=     78  gz=    92  br=     0  about-Cnm8zRNp.js
+  raw=1677007  gz=440333  br=     0  vendor-react-j1Xh8G8H.js
+
+--- permissive ---
+  raw= 455341  gz=137239  br=     0  vendor-react-CzOBo3ai.js
+  raw=  67307  gz= 20015  br=     0  DocsLayout-B_xxJKN5.js
+  raw=  24524  gz=  5853  br=     0  _slug-DyrR_0Hd.js
+  raw=  21183  gz=  8063  br=     0  vendor-icons-rbVaYNem.js
+  raw=  17907  gz=  5813  br=     0  vendor-search-BuT_wTci.js
+  raw=  15676  gz=  4864  br=     0  home-UWPf_iwJ.js
+  raw=  10942  gz=  3459  br=     0  libraries-DSwiJzfV.js
+  raw=   8505  gz=  3268  br=     0  constants-Bl74Kn5H.js
+  raw=   7554  gz=  1833  br=     0  _slug-0OoATzCM.js
+  raw=   7396  gz=  2575  br=     0  web-api-CGKGM9Fx.js
+  raw=   6092  gz=  2135  br=     0  TagCloud-C0nBEZWD.js
+  raw=   5889  gz=  2329  br=     0  open-source-aW_Gt6XC.js
+  raw=   4980  gz=  1525  br=     0  _slug-hwAahYu9.js
+  raw=   4933  gz=  1430  br=     0  _slug-DW_Jyago.js
+  raw=   3350  gz=  1145  br=     0  _categoryId-DgYkYXoR.js
+  raw=   3315  gz=  1074  br=     0  _categoryId-o6cUszPt.js
+  raw=   2692  gz=  1051  br=     0  sitemap-DLVqcHPa.js
+  raw=   2612  gz=  1001  br=     0  sitemap-Zf_TprdU.js
+  raw=   2539  gz=  1197  br=     0  vendor-state-Ci-D_7Va.js
+  raw=   2345  gz=  1011  br=     0  _tagId-UxmV2JJd.js
+  raw=   2334  gz=   949  br=     0  _tagId-CjshodqM.js
+  raw=   1897  gz=   652  br=     0  schemas-CdS5d3Pi.js
+  raw=   1783  gz=   811  br=     0  tags-DCzXrMX6.js
+  raw=   1781  gz=   832  br=     0  libraries-FvrULTfW.js
+  raw=   1751  gz=   734  br=     0  tags-BjLjmqvH.js
+  raw=   1746  gz=   809  br=     0  _-CN_0Fw42.js
+  raw=   1662  gz=   779  br=     0  web-api-D_dCUgE7.js
+  raw=   1434  gz=   714  br=     0  libraries-ovZ9K30M.js
+  raw=   1306  gz=   681  br=     0  web-api-Bso-lU2D.js
+  raw=   1015  gz=   520  br=     0  built-with-Dk7usqSd.js
+  raw=   1014  gz=   502  br=     0  built-with-BkyB2dG_.js
+  raw=    585  gz=   341  br=     0  index-QlICUKHO.js
+  raw=    563  gz=   359  br=     0  rolldown-runtime-FPZURlb5.js
+  raw=    478  gz=   269  br=     0  _index-B_1BRFx6.js
+  raw=    470  gz=   261  br=     0  _index-CWea7cCy.js
+  raw=    144  gz=   137  br=     0  limits-CmQZYctB.js
+
+--- roots ---
+  raw=  61394  gz= 20611  br=     0  vendor-d3-DIPhl2iK.js
+  raw=  18048  gz=  6856  br=     0  vendor-icons-BhyFLPL5.js
+  raw=   5946  gz=  2413  br=     0  graph-BhRh8XAj.js
+  raw=   1720  gz=   777  br=     0  tags-CWVr-1L_.js
+  raw=   1720  gz=   777  br=     0  tags-B_0jAcTr.js
+  raw=   1133  gz=   565  br=     0  _-DWw-pAcw.js
+  raw=    585  gz=   341  br=     0  index-CZVkPG6D.js
+  raw=    563  gz=   359  br=     0  rolldown-runtime-FPZURlb5.js
+  raw=    215  gz=   172  br=     0  _tagId-DMlxaDpy.js
+  raw=    215  gz=   172  br=     0  _tagId-BWvVEbtd.js
+  raw=    213  gz=   172  br=     0  _conceptId-qeqOAzsw.js
+  raw=    213  gz=   172  br=     0  _conceptId-BQ__RWMd.js
+  raw=    211  gz=   176  br=     0  _fieldId-dXMiG_0N.js
+  raw=    211  gz=   176  br=     0  _fieldId-ct54Ck5i.js
+  raw=    170  gz=   159  br=     0  search-sogj4qlp.js
+  raw=    167  gz=   157  br=     0  search-zklmrlwA.js
+  raw=     78  gz=    92  br=     0  sitemap-DUpgMEzj.js
+  raw=     78  gz=    92  br=     0  sitemap-BCeqBkCD.js
+  raw=     78  gz=    92  br=     0  favorites-C_HzABfA.js
+  raw=     78  gz=    92  br=     0  favorites-C4l5okvX.js
+  raw=     78  gz=    92  br=     0  constants-DSftUHmF.js
+  raw=     78  gz=    92  br=     0  constants-CEZXbqXF.js
+  raw=     78  gz=    92  br=     0  built-with-Ckzx2DOB.js
+  raw=     78  gz=    92  br=     0  built-with-BKHb4xty.js
+  raw=     78  gz=    92  br=     0  browse-DSu9OuFh.js
+  raw=     78  gz=    92  br=     0  browse-BDMIBKym.js
+  raw=     78  gz=    92  br=     0  about-xbBHcPiI.js
+  raw=     78  gz=    92  br=     0  about-BbPpI1mU.js
+  raw=     78  gz=    92  br=     0  _index-DUPtWVjM.js
+  raw=     78  gz=    92  br=     0  _index-CXl2LVii.js
+  raw=1699828  gz=493924  br=     0  vendor-react-B_-mAaoG.js

@@ -110,10 +110,48 @@ SSR 모드에서 사이트맵은 D1에서 실시간 생성됩니다:
 | Route | 설명 | 데이터 소스 |
 |:------|:-----|:-----------|
 | `/sitemap.xml` | 인덱스 | D1 categories 테이블 |
-| `/sitemap-pages.xml` | 정적 페이지 | 하드코딩 |
+| `/sitemap-pages.xml` | 정적 페이지 | `apps/context/app/data/sitemap-static-pages.json` SSoT |
 | `/sitemap-categories.xml` | 카테고리 목록 | D1 categories |
+| `/sitemap-conversations.xml` | conversations 카테고리 | D1 conversations |
+| `/sitemap-tags.xml` | tags 목록 | D1 entries (JSON tags 파싱) |
 | `/sitemaps/entries/{categoryId}.xml` | 카테고리별 엔트리 | D1 entries |
+| `/sitemap-entry-{categoryId}.xml` | 레거시 경로 | 위 경로로 301 redirect |
 | `/api/offline-db` | 오프라인 DB 덤프 | D1 전체 테이블 |
+
+### Build Entry Disambiguation (빌드 진입점 구분)
+
+세 앱은 같은 vite 플러그인(`tanstackStart({ srcDirectory: 'app' })`)을 쓰지만 server entry 발견 메커니즘이 다릅니다:
+
+```text
+Permissive / Roots
+  app/server.tsx  ──┐
+                    │  TanStack Start가 자동 발견 (createStartHandler 패턴)
+                    ▼
+  dist/server/index.js  default export = TanStack handler
+                    │
+                    ▼
+  scripts/inject-polyfill.mjs (107줄): location 폴리필 + URL class regex 패치만
+
+Context
+  app/server.ts  ──×  TanStack이 자동 발견하지 않음 (확장자 .ts, raw fetch handler)
+                       └ 1.7MB worker 번들에 server.ts 식별자 0건 (검증 완료)
+                    ▼
+  dist/server/index.js  default export = TanStack handler (server.ts 내용 없음)
+                    │
+                    ▼
+  scripts/inject-polyfill.mjs (350+줄):
+    1) location 폴리필
+    2) URL class regex 패치
+    3) API 핸들러 7개 inject (apiHandleSitemap*, apiHandleOfflineDb 등)
+    4) HTML 응답에 보안 헤더 + ETag + Last-Modified + 304 처리 wrapper
+    5) default export를 __wrappedHandler__로 교체
+```
+
+**SSoT 분리 정책** (드리프트 방지):
+- `apps/context/app/data/sitemap-static-pages.json` — server.ts와 inject-polyfill.mjs가 양쪽에서 import
+- `apps/context/app/data/site.json` — APP_CONFIG.baseUrl과 inject-polyfill.mjs의 location 폴리필이 양쪽에서 import
+
+> ⚠️ Context 디버깅 함정: `app/server.ts`를 수정해도 프로덕션 동작이 바뀌지 않습니다. 핸들러 로직 변경 시 `scripts/inject-polyfill.mjs`도 같이 갱신해야 합니다. 장기 해결책은 Context를 `app/server.tsx` + `createStartHandler` 패턴으로 마이그레이션하여 inject-polyfill.mjs를 단순한 location 폴리필 수준(permissive/roots와 동일)으로 축소하는 것입니다.
 
 ---
 

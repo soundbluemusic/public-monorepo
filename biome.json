@@ -81,7 +81,8 @@
       "!**/docs-site/.astro",
       "!**/docs-site/**/*.astro",
       "!**/apps/docs/.astro",
-      "!**/tests"
+      "!**/tests",
+      "!**/profiling"
     ]
   }
 }

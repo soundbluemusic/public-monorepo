@@ -146,6 +146,20 @@ export function createHeadMeta(config: RootShellConfig): Array<Record<string, st
     { name: 'theme-color', content: config.themeColor },
   ];
 
+  // Open Graph 기본 태그 (페이지별 og:title/description은 head-factory에서 생성)
+  meta.push({ property: 'og:type', content: 'website' });
+  meta.push({ property: 'og:site_name', content: config.appName });
+  if (config.ogImage) {
+    meta.push({ property: 'og:image', content: config.ogImage });
+    meta.push({ name: 'twitter:image', content: config.ogImage });
+    meta.push({ name: 'twitter:card', content: 'summary_large_image' });
+  } else {
+    meta.push({ name: 'twitter:card', content: 'summary' });
+  }
+  if (config.twitterSite) {
+    meta.push({ name: 'twitter:site', content: config.twitterSite });
+  }
+
   if (config.siteVerification?.naver) {
     meta.push({ name: 'naver-site-verification', content: config.siteVerification.naver });
   }

@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Sitemap (D1에서 동적 생성)
+Sitemap: https://context.soundbluemusic.com/sitemap.xml
+
+# Crawl-delay: 검색엔진 부하 완화 (선택)
+# Google/Bing은 무시; 다른 봇용
+Crawl-delay: 1

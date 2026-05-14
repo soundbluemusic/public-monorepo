@@ -1,0 +1,52 @@
+=== Client assets breakdown (top 15 per app) ===
+
+--- context ---
+  1637.7 KB  apps/context/dist/client/assets/vendor-react-j1Xh8G8H.js
+    74.5 KB  apps/context/dist/client/assets/vendor-react-CEVHnsnd.css
+    21.2 KB  apps/context/dist/client/assets/vendor-icons-Bznag3N1.js
+    18.5 KB  apps/context/dist/client/assets/EntryPageContent-ELgTcFAY.js
+     1.4 KB  apps/context/dist/client/assets/_-8FyDddzv.js
+     1.1 KB  apps/context/dist/client/assets/rolldown-runtime-BgQAZz4g.js
+     0.8 KB  apps/context/dist/client/assets/vendor-tanstack-D8tcpfvf.js
+     0.6 KB  apps/context/dist/client/assets/index-BTwApqEi.js
+     0.3 KB  apps/context/dist/client/assets/browse-Butvw99q.js
+     0.3 KB  apps/context/dist/client/assets/browse-BUYV_Ln2.js
+     0.2 KB  apps/context/dist/client/assets/_entryId-F-YP6aIE.js
+     0.2 KB  apps/context/dist/client/assets/_tagId-CEj5e_iO.js
+     0.2 KB  apps/context/dist/client/assets/_tagId-B9VE209l.js
+     0.2 KB  apps/context/dist/client/assets/_entryId-COa6i24D.js
+     0.2 KB  apps/context/dist/client/assets/tags-DcCumMud.js
+
+--- permissive ---
+   444.7 KB  apps/permissive/dist/client/assets/vendor-react-CzOBo3ai.js
+    72.7 KB  apps/permissive/dist/client/assets/vendor-react-BrKqPO-f.css
+    65.7 KB  apps/permissive/dist/client/assets/DocsLayout-B_xxJKN5.js
+    23.9 KB  apps/permissive/dist/client/assets/_slug-DyrR_0Hd.js
+    20.7 KB  apps/permissive/dist/client/assets/vendor-icons-rbVaYNem.js
+    17.5 KB  apps/permissive/dist/client/assets/vendor-search-BuT_wTci.js
+    15.3 KB  apps/permissive/dist/client/assets/home-UWPf_iwJ.js
+    10.7 KB  apps/permissive/dist/client/assets/libraries-DSwiJzfV.js
+     8.3 KB  apps/permissive/dist/client/assets/constants-Bl74Kn5H.js
+     7.4 KB  apps/permissive/dist/client/assets/_slug-0OoATzCM.js
+     7.2 KB  apps/permissive/dist/client/assets/web-api-CGKGM9Fx.js
+     5.9 KB  apps/permissive/dist/client/assets/TagCloud-C0nBEZWD.js
+     5.8 KB  apps/permissive/dist/client/assets/open-source-aW_Gt6XC.js
+     4.9 KB  apps/permissive/dist/client/assets/_slug-hwAahYu9.js
+     4.8 KB  apps/permissive/dist/client/assets/_slug-DW_Jyago.js
+
+--- roots ---
+  1660.0 KB  apps/roots/dist/client/assets/vendor-react-B_-mAaoG.js
+   101.0 KB  apps/roots/dist/client/assets/vendor-react-Dkqj6B0G.css
+    62.1 KB  apps/roots/dist/client/assets/KaTeX_AMS-Regular-DRggAlZN.ttf
+    60.0 KB  apps/roots/dist/client/assets/vendor-d3-DIPhl2iK.js
+    52.3 KB  apps/roots/dist/client/assets/KaTeX_Main-Regular-ypZvNtVU.ttf
+    50.1 KB  apps/roots/dist/client/assets/KaTeX_Main-Bold-waoOVXN0.ttf
+    32.8 KB  apps/roots/dist/client/assets/KaTeX_Main-Italic-3WenGoN9.ttf
+    32.7 KB  apps/roots/dist/client/assets/KaTeX_AMS-Regular-DMm9YOAa.woff
+    32.2 KB  apps/roots/dist/client/assets/KaTeX_Main-BoldItalic-DzxPMmG6.ttf
+    30.6 KB  apps/roots/dist/client/assets/KaTeX_Math-Italic-flOr_0UB.ttf
+    30.5 KB  apps/roots/dist/client/assets/KaTeX_Math-BoldItalic-B3XSjfu4.ttf
+    30.1 KB  apps/roots/dist/client/assets/KaTeX_Main-Regular-Dr94JaBh.woff
+    29.2 KB  apps/roots/dist/client/assets/KaTeX_Main-Bold-Jm3AIy58.woff
+    27.4 KB  apps/roots/dist/client/assets/KaTeX_AMS-Regular-BQhdFMY1.woff2
+    26.9 KB  apps/roots/dist/client/assets/KaTeX_Typewriter-Regular-D3Ib7_Hf.ttf

@@ -1,0 +1,13 @@
+=== Check second <title> tag context (libraries page) ===
+<title>Libraries - Permissive</title>
+<title>Github</title>
+
+=== Canonical URL check (per page) ===
+--- / ---
+rel="canonical" href="https://permissive.soundbluemusic.com"
+--- /libraries ---
+rel="canonical" href="https://permissive.soundbluemusic.com"
+--- /web-api ---
+rel="canonical" href="https://permissive.soundbluemusic.com"
+--- /web-apis ---
+rel="canonical" href="https://permissive.soundbluemusic.com"

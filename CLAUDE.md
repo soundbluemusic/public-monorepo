@@ -95,8 +95,8 @@ Policy: 위 영역은 scripts/sync-external-claude.sh 가 자동 교체. 수동 
 | App | Mode | 데이터 소스 | D1 바인딩 | 설정 파일 |
 | :-- | :--- | :---------- | :-------- | :-------- |
 | Context | **SSR** | Cloudflare D1 | `DB` (context-db), `PRIVATE_DB` (private) | `wrangler.toml` |
-| Permissive | SSR | Cloudflare D1 | `KNOWLEDGE_DB` (knowledge), `PRIVATE_DB` (private) | `wrangler.toml` |
-| Roots | SSR | Cloudflare D1 | `KNOWLEDGE_DB` (knowledge), `PRIVATE_DB` (private) | `wrangler.toml` |
+| Permissive | SSR | TypeScript (in-memory) | _없음_ | `wrangler.toml` |
+| Roots | SSR | TypeScript (in-memory) | _없음_ | `wrangler.toml` |
 
 **금지 사항:**
 
@@ -321,7 +321,7 @@ endpoint = https://${{ secrets.CLOUDFLARE_ACCOUNT_ID }}.r2.cloudflarestorage.com
 | -------- | ---- |
 | 렌더링 모드 | **SSR 전용** (Cloudflare Workers) |
 | 데이터베이스 | Cloudflare D1 (`context-db`) |
-| 엔트리 수 | 16,394 entries + 52 categories |
+| 엔트리 수 | 16,944 entries + 65 categories (`data/context/entries/*.json`, `data/context/categories.json` 기준) |
 | 사이트맵 | D1에서 동적 생성 |
 
 **배포 명령어:**
@@ -337,22 +337,38 @@ pnpm deploy
 
 | 바인딩 | 데이터베이스 | 용도 |
 | :----- | :----------- | :--- |
-| `DB` | context-db | 한국어 사전 엔트리 (16,394개) |
+| `DB` | context-db | 한국어 사전 엔트리 (16,944개) |
 | `PRIVATE_DB` | private | 저작권 자료 (공개 레포에 넣을 수 없는 콘텐츠) |
 
 **사이트맵 구조 (D1에서 동적 생성):**
 
 | Route | 설명 |
 | ----- | ---- |
-| `/sitemap.xml` | 인덱스 (52개 카테고리 사이트맵 링크) |
-| `/sitemap-pages.xml` | 정적 페이지 |
+| `/sitemap.xml` | 인덱스 (정적·카테고리·conversations·tags + 카테고리별 entries 링크) |
+| `/sitemap-pages.xml` | 정적 페이지 (`app/data/sitemap-static-pages.json` SSoT) |
 | `/sitemap-categories.xml` | 카테고리 목록 |
+| `/sitemap-conversations.xml` | conversations 카테고리 |
+| `/sitemap-tags.xml` | tags 목록 |
 | `/sitemaps/entries/{categoryId}.xml` | 카테고리별 엔트리 |
+| `/sitemap-entry-{categoryId}.xml` | 레거시 경로 → 위 경로로 301 redirect |
 
 **참고 파일:**
 
 - `apps/context/wrangler.toml` - Workers + D1 바인딩 설정
-- `apps/context/app/server.ts` - 동적 사이트맵 생성
+- `apps/context/scripts/inject-polyfill.mjs` - **프로덕션의 실제 fetch handler를 생성하는 파일**
+- `apps/context/app/server.ts` - dev 모드용 참조 구현 (프로덕션 번들에 포함되지 않음, 아래 경고 참조)
+
+> ⚠️ **Context 빌드 진입점 함정**
+>
+> Permissive와 Roots는 `app/server.tsx` + `createStartHandler` 형태의 TanStack Start 정식 server entry 패턴을 사용하므로 빌드가 자동으로 그 핸들러를 default export합니다. 반면 **Context는 `app/server.ts`(다른 확장자)에 raw fetch handler를 두고 있어 TanStack의 자동 발견 대상이 아닙니다.** Cloudflare에 배포된 1.7MB worker 번들에서 `apps/context/app/server.ts`의 어떤 식별자도 0건 검출됨을 grep으로 확인했습니다.
+>
+> 결과적으로:
+> - 프로덕션 fetch handler / API 라우트(`/sitemap*.xml`, `/api/offline-db`, `/search-index.json`, `/data/browse/*`) 모든 로직은 **`scripts/inject-polyfill.mjs`가 빌드 후 inject한 코드**가 수행합니다.
+> - HTML 응답의 보안 헤더(`X-Frame-Options`, `X-XSS-Protection`, `Referrer-Policy`)·ETag·Last-Modified·304 처리도 모두 inject-polyfill.mjs 책임입니다.
+> - `app/server.ts`를 수정해도 dev 모드에서만 반영됩니다. **프로덕션에 반영하려면 `scripts/inject-polyfill.mjs`의 inject 코드도 같이 갱신해야 합니다.**
+> - 사이트맵 데이터(`app/data/sitemap-static-pages.json`)와 도메인(`app/data/site.json`)은 양쪽이 같은 JSON을 참조하도록 SSoT 처리되어 있어 데이터 드리프트는 차단되었으나, **핸들러 로직 자체는 두 곳에 따로 작성되어 있습니다.**
+>
+> 향후 권장 작업(별도 PR로 검증 후): Context를 `app/server.tsx` + `createStartHandler` 패턴으로 마이그레이션하여 inject-polyfill.mjs 의존을 폐기.
 
 ---
 
@@ -633,9 +649,9 @@ export const Route = createFileRoute('/entry/$entryId')({
 
 ---
 
-## 🛠 기술 스택 버전 (2026-04-24 기준)
+## 🛠 기술 스택 버전 (2026-05-12 기준)
 
-> ⚠️ **AI 어시스턴트 참고용**: 이 버전들은 실제 사용 중인 버전입니다. 코드 작성 시 참고하세요.
+> ⚠️ **AI 어시스턴트 참고용**: 이 버전들은 실제 사용 중인 버전입니다. 변경 시 `package.json`을 단일 출처(SSoT)로 보고 이 표는 동기화하세요.
 
 | 기술 | 버전 | 비고 |
 | ---- | ---- | ---- |
@@ -643,15 +659,16 @@ export const Route = createFileRoute('/entry/$entryId')({
 | **TanStack Start** | ^1.167.43 | SSR 프레임워크 |
 | **TanStack Router** | ^1.168.23 | 파일 기반 라우팅 |
 | **Vite** | ^8.0.10 | Rolldown 번들러 (7x 빠른 빌드), Stable |
-| **TypeScript** | ^5.9.3 | 타입 체크 |
+| **TypeScript** | ^6.0.3 | 타입 체크 |
 | **Tailwind CSS** | ^4.2.4 | v4 사용 중 |
-| **Zod** | ^4.3.6 (Context), ^3.25.76 (root, astro 호환) | 스키마 검증 |
+| **Zod** | ^4.3.6 | 모든 워크스페이스 동일 |
 | **Zustand** | ^5.0.12 | 상태 관리 |
 | **Cloudflare Wrangler** | ^4.84.1 | Workers 배포 |
 | **@cloudflare/vite-plugin** | ^1.33.1 | Vite 통합 |
+| **@cloudflare/workers-types** | ^4.20260424.1 | Workers TypeScript 타입 |
 | **@inlang/paraglide-js** | ^2.16.0 | i18n 컴파일러 |
-| **Node.js** | >=20 | 런타임 |
-| **pnpm** | 10.11.0 | 패키지 매니저 |
+| **Node.js** | >=20 | 런타임 (`package.json#engines`) |
+| **pnpm** | 10.11.0 | `package.json#packageManager` |
 
 ---
 
@@ -685,9 +702,9 @@ directory = "dist/client"
 
 | 앱 | 바인딩 | 데이터베이스 | 용도 |
 | :- | :----- | :----------- | :--- |
-| **Context** | `DB` | context-db | 한국어 사전 (16,394 entries) |
+| **Context** | `DB` | context-db | 한국어 사전 (16,944 entries, 65 categories, 53 conversations) |
 | **Context** | `PRIVATE_DB` | private | 저작권 자료 |
-| **Permissive** | `KNOWLEDGE_DB` | knowledge | 웹개발 자료 (88 libraries, 56 APIs) |
-| **Permissive** | `PRIVATE_DB` | private | 저작권 자료 |
-| **Roots** | `KNOWLEDGE_DB` | knowledge | 수학 개념 (438 concepts, 18 fields) |
-| **Roots** | `PRIVATE_DB` | private | 저작권 자료 |
+| **Permissive** | _없음_ | — | 데이터 소스: TypeScript in-memory (`data/permissive/libraries.json` 110개, `web-apis.json` 56개) |
+| **Roots** | _없음_ | — | 데이터 소스: TypeScript in-memory (`apps/roots/app/data/concepts/*.ts` 438 concepts, `fields.ts` 18 fields) |
+
+> ⚠️ **Permissive/Roots에 D1 바인딩 없음을 확인했습니다.** `wrangler.toml`에 어떠한 `[[d1_databases]]` 섹션도 두지 마세요. 코드에서 `env.KNOWLEDGE_DB` 등을 참조하는 부분이 0건임을 `grep -rn 'KNOWLEDGE_DB' apps/permissive apps/roots`로 검증할 수 있습니다.

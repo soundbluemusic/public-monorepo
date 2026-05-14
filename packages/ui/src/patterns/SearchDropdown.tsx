@@ -53,6 +53,7 @@ export function SearchDropdown<T extends SearchResultItem = SearchResultItem>({
   const [isFocused, setIsFocused] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
+  const listboxRef = useRef<HTMLDivElement>(null);
   const listboxId = useRef(`search-listbox-${Math.random().toString(36).slice(2, 9)}`).current;
 
   const isMac =
@@ -69,6 +70,17 @@ export function SearchDropdown<T extends SearchResultItem = SearchResultItem>({
       }
     }
   }, [results.length, selectedIndex]);
+
+  // 키보드 네비게이션 시 선택된 옵션이 화면 밖이면 스크롤
+  useEffect(() => {
+    if (selectedIndex < 0 || !listboxRef.current) return;
+    const optionEl = listboxRef.current.querySelector<HTMLElement>(
+      `#search-option-${selectedIndex}`,
+    );
+    if (optionEl) {
+      optionEl.scrollIntoView({ block: 'nearest', inline: 'nearest' });
+    }
+  }, [selectedIndex]);
 
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
@@ -228,7 +240,7 @@ export function SearchDropdown<T extends SearchResultItem = SearchResultItem>({
           <button
             type="button"
             onClick={handleClear}
-            className="absolute right-2 top-1/2 -translate-y-1/2 flex items-center justify-center w-6 h-6 p-0 bg-transparent border-none rounded cursor-pointer transition-all duration-150 text-(--text-tertiary) hover:text-(--text-primary) active:scale-90"
+            className="absolute right-1 top-1/2 -translate-y-1/2 flex items-center justify-center min-h-11 min-w-11 p-0 bg-transparent border-none rounded cursor-pointer transition-all duration-150 text-(--text-tertiary) hover:text-(--text-primary) active:scale-90"
             aria-label={locale === 'ko' ? '검색어 지우기' : 'Clear search'}
           >
             <svg
@@ -247,9 +259,12 @@ export function SearchDropdown<T extends SearchResultItem = SearchResultItem>({
 
       {isOpen && results.length > 0 && (
         <div
+          ref={listboxRef}
           id={listboxId}
           role="listbox"
           tabIndex={-1}
+          aria-label={locale === 'ko' ? '검색 결과' : 'Search results'}
+          aria-busy={isLoading}
           className="absolute top-[calc(100%+4px)] left-0 right-0 z-60 max-h-[300px] overflow-y-auto rounded-xl shadow-lg m-0 p-1 bg-(--bg-secondary) border border-(--border-primary)"
         >
           {isLoading ? (
@@ -282,7 +297,11 @@ export function SearchDropdown<T extends SearchResultItem = SearchResultItem>({
       )}
 
       {isOpen && query.trim() && results.length === 0 && !isLoading && (
-        <div className="absolute top-[calc(100%+4px)] left-0 right-0 z-60 rounded-xl shadow-lg p-4 text-center text-sm bg-(--bg-secondary) border border-(--border-primary) text-(--text-tertiary)">
+        <div
+          role="status"
+          aria-live="polite"
+          className="absolute top-[calc(100%+4px)] left-0 right-0 z-60 rounded-xl shadow-lg p-4 text-center text-sm bg-(--bg-secondary) border border-(--border-primary) text-(--text-tertiary)"
+        >
           {locale === 'ko' ? '검색 결과 없음' : 'No results found'}
         </div>
       )}

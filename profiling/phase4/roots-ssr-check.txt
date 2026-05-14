@@ -1,0 +1,7 @@
+=== Roots SSR HTML validation ===
+  size: 7824 bytes
+  has <title>: 1
+  has h1: 0
+  empty root div: 0
+  title content:
+<title>Roots - Math Documentation</title>

@@ -7,7 +7,7 @@
 
 import type { Language } from '@soundblue/i18n';
 import { getLocaleFromPath, stripLocaleFromPath } from '@soundblue/i18n';
-import { useRouterState } from '@tanstack/react-router';
+import { useNavigate, useRouterState } from '@tanstack/react-router';
 import { createContext, type ReactNode, useContext, useMemo } from 'react';
 
 import enMessages from '../../project.inlang/messages/en.json';
@@ -67,6 +67,7 @@ function isMessageKey(key: string): key is MessageKey {
  */
 export function I18nProvider({ children }: { children: ReactNode }) {
   const routerState = useRouterState();
+  const navigate = useNavigate();
   const pathname = routerState.location.pathname;
   const locale = getLocaleFromPath(pathname);
 
@@ -74,7 +75,8 @@ export function I18nProvider({ children }: { children: ReactNode }) {
     const setLocale = (lang: Language) => {
       const currentPath = stripLocaleFromPath(pathname);
       const newPath = lang === 'en' ? currentPath : `/ko${currentPath === '/' ? '' : currentPath}`;
-      window.location.href = newPath;
+      // 클라이언트 라우팅으로 전환하여 스크롤/상태/번들 캐시 보존
+      navigate({ to: newPath });
     };
 
     const t = (key: MessageKey, params?: Record<string, string | number>): string => {
@@ -116,7 +118,7 @@ export function I18nProvider({ children }: { children: ReactNode }) {
       isKorean: locale === 'ko',
       localePath,
     };
-  }, [locale, pathname]);
+  }, [locale, pathname, navigate]);
 
   return <I18nContext.Provider value={value}>{children}</I18nContext.Provider>;
 }

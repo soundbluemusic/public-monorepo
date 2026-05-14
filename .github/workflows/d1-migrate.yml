@@ -1,0 +1,149 @@
+name: Apply D1 Migrations
+
+# Cloudflare D1 마이그레이션 자동 적용 워크플로
+#
+# 트리거:
+#   1. apps/context/migrations/ 변경이 main에 머지되면 자동 실행
+#   2. workflow_dispatch로 수동 실행 (특정 마이그레이션만 적용 가능)
+#
+# 안전성:
+#   - 모든 마이그레이션 파일은 CREATE INDEX IF NOT EXISTS / CREATE TABLE IF NOT EXISTS
+#     등 멱등(idempotent) 명령으로 작성되어야 함
+#   - 0000_reset.sql은 DROP을 포함하므로 자동 적용 대상에서 제외
+#   - 적용은 파일명 순서대로 (0001, 0002, ...)
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'apps/context/migrations/**/*.sql'
+      - 'apps/context/migrations/*.sql'
+  workflow_dispatch:
+    inputs:
+      database:
+        description: 'D1 데이터베이스 이름'
+        required: true
+        default: 'context-db'
+        type: choice
+        options:
+          - context-db
+          - private
+      migration_file:
+        description: '특정 마이그레이션 파일만 적용 (비우면 0001_* 이후 모두 적용)'
+        required: false
+        type: string
+      dry_run:
+        description: 'Dry run (변경 없이 적용 계획만 출력)'
+        required: false
+        default: false
+        type: boolean
+
+concurrency:
+  group: d1-migrate-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  migrate:
+    name: Apply D1 migrations
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Resolve target migrations
+        id: resolve
+        working-directory: apps/context
+        run: |
+          DB="${{ github.event.inputs.database || 'context-db' }}"
+          SPECIFIC="${{ github.event.inputs.migration_file }}"
+
+          echo "database=$DB" >> "$GITHUB_OUTPUT"
+
+          if [ -n "$SPECIFIC" ]; then
+            # workflow_dispatch에서 특정 파일 지정
+            if [ ! -f "migrations/$SPECIFIC" ]; then
+              echo "❌ migrations/$SPECIFIC 파일을 찾을 수 없습니다."
+              exit 1
+            fi
+            echo "files<<EOF" >> "$GITHUB_OUTPUT"
+            echo "$SPECIFIC" >> "$GITHUB_OUTPUT"
+            echo "EOF" >> "$GITHUB_OUTPUT"
+            echo "📄 단일 마이그레이션: $SPECIFIC"
+          else
+            # 0000_reset.sql 제외, 0001_* 이상만 자동 적용 대상
+            FILES=$(ls migrations/ | grep -E '^0[0-9]{3}_.*\.sql$' | grep -v '^0000_' | sort)
+            if [ -z "$FILES" ]; then
+              echo "ℹ️ 적용할 마이그레이션이 없습니다."
+              exit 0
+            fi
+            echo "files<<EOF" >> "$GITHUB_OUTPUT"
+            echo "$FILES" >> "$GITHUB_OUTPUT"
+            echo "EOF" >> "$GITHUB_OUTPUT"
+            echo "📄 자동 검출된 마이그레이션:"
+            echo "$FILES"
+          fi
+
+      - name: Apply migrations
+        if: ${{ github.event.inputs.dry_run != 'true' }}
+        working-directory: apps/context
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          DB_NAME: ${{ steps.resolve.outputs.database }}
+          FILES: ${{ steps.resolve.outputs.files }}
+        run: |
+          set -e
+          echo "🎯 대상 데이터베이스: $DB_NAME (remote)"
+          echo ""
+
+          # 파일별 순차 적용 (멱등 SQL 가정: CREATE * IF NOT EXISTS)
+          while IFS= read -r file; do
+            [ -z "$file" ] && continue
+            echo "▶ migrations/$file 적용 중..."
+            pnpm exec wrangler d1 execute "$DB_NAME" \
+              --remote \
+              --file="migrations/$file"
+            echo "✅ migrations/$file 적용 완료"
+            echo ""
+          done <<< "$FILES"
+
+          echo "🎉 모든 마이그레이션 적용 완료"
+
+      - name: Dry run (plan only)
+        if: ${{ github.event.inputs.dry_run == 'true' }}
+        working-directory: apps/context
+        env:
+          DB_NAME: ${{ steps.resolve.outputs.database }}
+          FILES: ${{ steps.resolve.outputs.files }}
+        run: |
+          echo "🔍 Dry run — 실제 적용 없이 계획만 출력"
+          echo "대상 데이터베이스: $DB_NAME"
+          echo ""
+          while IFS= read -r file; do
+            [ -z "$file" ] && continue
+            echo "--- migrations/$file ---"
+            cat "migrations/$file"
+            echo ""
+          done <<< "$FILES"
+
+      - name: Verify (post-apply EXPLAIN sample for context-db)
+        if: ${{ github.event.inputs.dry_run != 'true' && steps.resolve.outputs.database == 'context-db' }}
+        working-directory: apps/context
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          echo "🔍 적용 검증 — 인덱스 목록 조회"
+          pnpm exec wrangler d1 execute context-db --remote \
+            --command "SELECT name, tbl_name FROM sqlite_master WHERE type='index' AND name NOT LIKE 'sqlite_%' ORDER BY tbl_name, name"

@@ -8,8 +8,18 @@
 import { Link as TanStackLink } from '@tanstack/react-router';
 import { PanelLeftClose, PanelLeftOpen, X } from 'lucide-react';
 import type { ComponentType, ReactNode } from 'react';
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { cn } from '../../utils/cn';
+
+/** Tab 가능한 요소 셀렉터 (focus trap용) */
+const FOCUSABLE_SELECTOR = [
+  'a[href]:not([tabindex="-1"])',
+  'button:not([disabled]):not([tabindex="-1"])',
+  'input:not([disabled]):not([tabindex="-1"])',
+  'select:not([disabled]):not([tabindex="-1"])',
+  'textarea:not([disabled]):not([tabindex="-1"])',
+  '[tabindex]:not([tabindex="-1"])',
+].join(',');
 
 export interface SidebarNavItem {
   path: string;
@@ -73,6 +83,9 @@ export function BaseSidebar({
 }: BaseSidebarProps) {
   // Use the provided Link component (React Router or TanStack Router)
   const Link = LinkComponent;
+  const sidebarRef = useRef<HTMLElement>(null);
+  const previouslyFocusedRef = useRef<HTMLElement | null>(null);
+
   // Escape key handling
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -96,6 +109,59 @@ export function BaseSidebar({
     };
   }, [isOpen]);
 
+  // Focus trap (모바일 사이드바 오픈 시) - 데스크톱(lg)에서는 미디어 쿼리로 비활성화
+  useEffect(() => {
+    if (!isOpen) return;
+
+    // 데스크톱(lg breakpoint, ≥1024px)에서는 사이드바가 정적 레이아웃이므로 trap 불필요
+    const isDesktop =
+      typeof window !== 'undefined' && window.matchMedia('(min-width: 1024px)').matches;
+    if (isDesktop) return;
+
+    const sidebar = sidebarRef.current;
+    if (!sidebar) return;
+
+    // 트리거 요소(보통 햄버거 버튼) 저장 → 닫힐 때 포커스 복귀
+    previouslyFocusedRef.current =
+      document.activeElement instanceof HTMLElement ? document.activeElement : null;
+
+    // 사이드바 내부 첫 focusable 요소로 포커스 이동
+    const focusables = Array.from(sidebar.querySelectorAll<HTMLElement>(FOCUSABLE_SELECTOR));
+    focusables[0]?.focus();
+
+    const handleTabKey = (e: KeyboardEvent) => {
+      if (e.key !== 'Tab') return;
+      // 매번 다시 쿼리 — 동적으로 추가/제거되는 요소 대응
+      const current = Array.from(sidebar.querySelectorAll<HTMLElement>(FOCUSABLE_SELECTOR));
+      if (current.length === 0) {
+        e.preventDefault();
+        return;
+      }
+      const first = current[0];
+      const last = current[current.length - 1];
+      const active = document.activeElement;
+
+      if (e.shiftKey && active === first) {
+        e.preventDefault();
+        last?.focus();
+      } else if (!e.shiftKey && active === last) {
+        e.preventDefault();
+        first?.focus();
+      }
+    };
+
+    document.addEventListener('keydown', handleTabKey);
+    return () => {
+      document.removeEventListener('keydown', handleTabKey);
+      // 닫힐 때 트리거로 포커스 복귀 (트리거가 여전히 DOM에 있는 경우)
+      const trigger = previouslyFocusedRef.current;
+      if (trigger && document.body.contains(trigger)) {
+        trigger.focus();
+      }
+      previouslyFocusedRef.current = null;
+    };
+  }, [isOpen]);
+
   const collapseLabel = isCollapsed
     ? locale === 'ko'
       ? '사이드바 펼치기'
@@ -116,7 +182,9 @@ export function BaseSidebar({
       )}
 
       {/* Sidebar */}
+      {/* biome-ignore lint/a11y/useAriaPropsSupportedByRole: aria-modal is applied only when role becomes 'dialog' on mobile open; biome's static analysis cannot follow the conditional role assignment below */}
       <aside
+        ref={sidebarRef}
         className={cn(
           'fixed left-0 z-50 bg-elevated border-r border-primary',
           // Mobile: full height from top, Desktop: below header
@@ -132,6 +200,9 @@ export function BaseSidebar({
         )}
         data-collapsed={isCollapsed ? 'true' : undefined}
         aria-label={ariaLabel}
+        // 모바일에서 열렸을 때만 dialog로 동작 (데스크톱은 정적 nav)
+        role={isOpen ? 'dialog' : undefined}
+        aria-modal={isOpen ? true : undefined}
       >
         {/* Header (mobile only) */}
         <div className="lg:hidden h-14 flex items-center justify-between px-4 shrink-0 border-b border-(--border-primary)">

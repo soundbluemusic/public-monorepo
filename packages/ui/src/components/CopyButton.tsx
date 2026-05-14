@@ -174,13 +174,14 @@ export const CodeBlock = memo(function CodeBlock({
         )}
 
         {/* 복사 버튼 */}
+        {/* 모바일에서는 항상 표시(터치 환경에 hover 없음), 데스크톱에서는 hover/focus 시 표시 */}
         <CopyButton
           text={code}
           variant="overlay"
           size="sm"
           className={cn(
             'absolute top-2 right-2',
-            'opacity-0 group-hover:opacity-100 transition-opacity',
+            'opacity-100 md:opacity-0 md:group-hover:opacity-100 md:group-focus-within:opacity-100 transition-opacity',
           )}
         />
       </div>

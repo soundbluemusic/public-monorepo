@@ -4,15 +4,16 @@
  */
 
 import type { RootShellConfig } from '@soundblue/ui/shell';
+import { APP_CONFIG } from './config';
 
 export const shellConfig: RootShellConfig = {
   appName: 'Context - Korean Meaning Dictionary',
-  baseUrl: 'https://context.soundbluemusic.com',
+  baseUrl: APP_CONFIG.baseUrl,
   themeColor: '#7c5cff',
   description:
     'Korean meaning dictionary for learners - Understand Korean words and contexts easily',
   languages: ['ko', 'en'],
-  searchUrlTemplate: 'https://context.soundbluemusic.com/browse?q={search_term}',
+  searchUrlTemplate: `${APP_CONFIG.baseUrl}/browse?q={search_term}`,
   themeColors: {
     light: {
       bgPrimary: '#faf9fc',
@@ -28,7 +29,8 @@ export const shellConfig: RootShellConfig = {
       bgTertiary: '#252230',
       bgElevated: '#2a2638',
       textPrimary: '#f0eef5',
-      textSecondary: '#b8b3c8',
+      // 다크 모드 보조 텍스트 색을 약간 밝게 조정 — bgSecondary(#1c1926) 대비 WCAG AA 충족
+      textSecondary: '#cbc5dc',
     },
   },
   navigationItems: [

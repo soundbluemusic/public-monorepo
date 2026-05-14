@@ -1,0 +1,4 @@
+=== D1 query inventory (runtime) ===
+--- apps/context/app/services/d1-server.ts ---
+233:        .prepare('SELECT COUNT(*) as count FROM entries')
+245:        .prepare('SELECT * FROM entries ORDER BY id LIMIT 1 OFFSET ?')

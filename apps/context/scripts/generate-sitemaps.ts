@@ -17,7 +17,16 @@ const ROOT_DIR = path.resolve(__dirname, '..');
 const OUTPUT_DIR = path.join(ROOT_DIR, 'dist', 'client');
 const PUBLIC_DIR = path.join(ROOT_DIR, 'public');
 
-const BASE_URL = 'https://context.soundbluemusic.com';
+// Single source of truth: read base URL from app/data/site.json so this script,
+// app/config.ts, and scripts/inject-polyfill.mjs all pull from the same file.
+const SITE_JSON_PATH = path.join(ROOT_DIR, 'app', 'data', 'site.json');
+const siteConfig = JSON.parse(fs.readFileSync(SITE_JSON_PATH, 'utf8')) as { baseUrl?: unknown };
+if (typeof siteConfig.baseUrl !== 'string' || !/^https?:\/\//.test(siteConfig.baseUrl)) {
+  throw new Error(
+    `[generate-sitemaps] Invalid baseUrl in ${SITE_JSON_PATH}: ${JSON.stringify(siteConfig.baseUrl)}`,
+  );
+}
+const BASE_URL = siteConfig.baseUrl.replace(/\/$/, '');
 const DATABASE_NAME = 'context-db';
 
 // Static pages for sitemap-pages.xml

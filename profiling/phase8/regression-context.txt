@@ -1,0 +1,15 @@
+=== Context regression ===
+  /  200  127990B
+  /browse  200  264571B
+  /categories  404  12818B
+  /conversations  200  52731B
+  /search  404  12790B
+  /sitemap.xml  503  42B
+  /api/offline-db  503  89B
+
+=== Context canonical / robots checks ===
+  /                              200    
+  /browse                        200    
+  /categories                    404    
+  /entry/some-random-404         404    
+  /some-404                      404    

@@ -19,6 +19,7 @@ export {
   SUN_ICON_SVG,
 } from './dark-mode';
 export { DOWNLOAD_PAGE_SCRIPT } from './download-handler';
+export { highlightMatches } from './highlight';
 export {
   COMMON_PRECONNECTS,
   createNavigationPreloads,

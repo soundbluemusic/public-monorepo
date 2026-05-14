@@ -4,15 +4,16 @@
  */
 
 import type { RootShellConfig } from '@soundblue/ui/shell';
+import { APP_CONFIG } from './config';
 
 export const shellConfig: RootShellConfig = {
   appName: 'Permissive - Open Web Dev Resources',
-  baseUrl: 'https://permissive.soundbluemusic.com',
+  baseUrl: APP_CONFIG.baseUrl,
   themeColor: '#4a9e95',
   description:
     'Discover web standards and open-source web development libraries with license metadata',
   languages: ['ko', 'en'],
-  searchUrlTemplate: 'https://permissive.soundbluemusic.com/libraries?q={search_term}',
+  searchUrlTemplate: `${APP_CONFIG.baseUrl}/libraries?q={search_term}`,
   themeColors: {
     light: {
       bgPrimary: '#f7fafa',

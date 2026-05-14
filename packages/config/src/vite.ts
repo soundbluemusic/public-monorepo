@@ -54,49 +54,68 @@ export const buildOptimizations = {
 export function createManualChunks(id: string): string | undefined {
   if (!id.includes('node_modules')) return undefined;
 
-  // React core (필수, 장기 캐시)
-  if (id.includes('react-dom') || id.includes('/react/')) {
-    return 'vendor-react';
-  }
+  // 경로 구분자를 슬래시로 통일 (Windows 대비)
+  const normalized = id.replace(/\\/g, '/');
 
   // TanStack 라이브러리 (Router, Query, Virtual, Table)
-  if (id.includes('@tanstack')) {
+  // → React 매칭보다 우선 (react-router/react-query 등 react 문자열 포함)
+  if (normalized.includes('/@tanstack/')) {
     return 'vendor-tanstack';
   }
 
+  // Radix UI 컴포넌트 (react 문자열 포함 가능 → react보다 먼저)
+  if (normalized.includes('/@radix-ui/')) {
+    return 'vendor-radix';
+  }
+
+  // React core: 정확한 패키지 경로만 매칭
+  // /node_modules/react/, /node_modules/react-dom/, scheduler, react-is
+  if (
+    /\/node_modules\/(\.pnpm\/[^/]+\/node_modules\/)?(react|react-dom|scheduler|react-is)\//.test(
+      normalized,
+    )
+  ) {
+    return 'vendor-react';
+  }
+
   // 아이콘 라이브러리
-  if (id.includes('lucide-react')) {
+  if (normalized.includes('/lucide-react/')) {
     return 'vendor-icons';
   }
 
   // 애니메이션 라이브러리
-  if (id.includes('framer-motion')) {
+  if (normalized.includes('/framer-motion/') || normalized.includes('/@formkit/auto-animate/')) {
     return 'vendor-animation';
   }
 
-  // 상태 관리
-  if (id.includes('zustand')) {
+  // 상태 관리 (immer 포함 - zustand/redux가 사용)
+  if (normalized.includes('/zustand/') || normalized.includes('/immer/')) {
     return 'vendor-state';
   }
 
   // IndexedDB 라이브러리
-  if (id.includes('dexie')) {
+  if (normalized.includes('/dexie/')) {
     return 'vendor-storage';
   }
 
   // 검색 라이브러리
-  if (id.includes('minisearch')) {
+  if (normalized.includes('/minisearch/')) {
     return 'vendor-search';
   }
 
-  // Radix UI 컴포넌트
-  if (id.includes('@radix-ui')) {
-    return 'vendor-radix';
+  // Zod 스키마
+  if (normalized.includes('/zod/')) {
+    return 'vendor-schema';
   }
 
-  // D3 시각화 라이브러리 (Roots ConceptGraph에서만 사용)
-  if (id.includes('d3-')) {
+  // D3 시각화 라이브러리 (Roots ConceptGraph)
+  if (/\/d3-[a-z-]+\//.test(normalized)) {
     return 'vendor-d3';
+  }
+
+  // KaTeX 수식 렌더링 (Roots)
+  if (normalized.includes('/katex/')) {
+    return 'vendor-katex';
   }
 
   return undefined;

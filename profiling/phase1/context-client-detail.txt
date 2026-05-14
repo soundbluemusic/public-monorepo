@@ -1,0 +1,38 @@
+=== Context client breakdown ===
+49M	apps/context/dist/client/data
+1.9M	apps/context/dist/client/assets
+244K	apps/context/dist/client/icons
+24K	apps/context/dist/client/workbox-47ccb362.js
+20K	apps/context/dist/client/apple-touch-icon.png
+16K	apps/context/dist/client/fonts
+12K	apps/context/dist/client/sitemap.xsl
+8.0K	apps/context/dist/client/sw.js
+8.0K	apps/context/dist/client/_headers
+4.0K	apps/context/dist/client/search-index.json
+4.0K	apps/context/dist/client/robots.txt
+4.0K	apps/context/dist/client/naverbf16f01e7d9109858b1a487654c1ad18.html
+4.0K	apps/context/dist/client/manifest.json
+4.0K	apps/context/dist/client/google1a466304e3e8657f.html
+4.0K	apps/context/dist/client/favicon.ico
+4.0K	apps/context/dist/client/apple-touch-icon.webp
+4.0K	apps/context/dist/client/apple-touch-icon.svg
+4.0K	apps/context/dist/client/_redirects
+4.0K	apps/context/dist/client/BingSiteAuth.xml
+4.0K	apps/context/dist/client/404.html
+
+=== Largest individual files in context/client ===
+  1892.4 KB  apps/context/dist/client/data/by-category-full/ko/food.json
+  1789.4 KB  apps/context/dist/client/data/by-category-full/en/food.json
+  1637.7 KB  apps/context/dist/client/assets/vendor-react-j1Xh8G8H.js
+  1286.6 KB  apps/context/dist/client/data/compressed/ko/food.json
+  1213.7 KB  apps/context/dist/client/data/by-category-full/ko/coding.json
+  1183.6 KB  apps/context/dist/client/data/compressed/en/food.json
+  1143.2 KB  apps/context/dist/client/data/by-category-full/ko/daily-misc.json
+  1132.4 KB  apps/context/dist/client/data/by-category-full/en/coding.json
+  1076.7 KB  apps/context/dist/client/data/by-category-full/en/daily-misc.json
+  1052.6 KB  apps/context/dist/client/data/by-category-full/ko/nouns-common.json
+   986.1 KB  apps/context/dist/client/data/by-category-full/en/nouns-common.json
+   977.5 KB  apps/context/dist/client/data/by-category-full/ko/body-misc.json
+   937.7 KB  apps/context/dist/client/data/by-category-full/en/body-misc.json
+   837.6 KB  apps/context/dist/client/data/compressed/ko/coding.json
+   795.1 KB  apps/context/dist/client/data/by-category-full/ko/medical.json

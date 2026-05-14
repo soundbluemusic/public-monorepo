@@ -48,22 +48,56 @@ export interface HeadConfig {
 }
 
 /**
- * head 함수 인자 타입
+ * RouteMatch 부분 타입 (router-core RouteMatch.pathname 사용)
+ */
+interface MinimalRouteMatch {
+  pathname: string;
+}
+
+/**
+ * head 함수 인자 타입 (TanStack Start AssetFnContextOptions 호환)
+ *
+ * 주의: TanStack Start의 head ctx에는 `location`이 없고 `match`/`matches`만 있음.
+ * 이전 버전에서 location.pathname을 가정하던 코드가 모두 home pathname으로
+ * 폴백되는 버그가 있어, match.pathname을 사용하도록 수정.
  */
 interface HeadFunctionArgs {
   loaderData?: unknown;
+  match?: MinimalRouteMatch;
+  matches?: ReadonlyArray<MinimalRouteMatch>;
   location?: { pathname: string };
 }
 
 /**
  * 동적 head 함수 인자 타입
- *
- * TanStack Start의 AssetFnContextOptions에서 loaderData는 optional이므로
- * 여기서도 optional로 정의합니다.
  */
 interface DynamicHeadFunctionArgs<T> {
   loaderData?: T;
+  match?: MinimalRouteMatch;
+  matches?: ReadonlyArray<MinimalRouteMatch>;
   location?: { pathname: string };
+}
+
+/**
+ * head ctx에서 현재 pathname을 안전하게 추출.
+ * 우선순위: match.pathname → matches 마지막 → location.pathname → '/'
+ */
+function resolvePathname(
+  ctx?: {
+    match?: MinimalRouteMatch;
+    matches?: ReadonlyArray<MinimalRouteMatch>;
+    location?: { pathname: string };
+  },
+  fallback = '/',
+): string {
+  if (!ctx) return fallback;
+  if (ctx.match?.pathname) return ctx.match.pathname;
+  if (ctx.matches && ctx.matches.length > 0) {
+    const last = ctx.matches[ctx.matches.length - 1];
+    if (last?.pathname) return last.pathname;
+  }
+  if (ctx.location?.pathname) return ctx.location.pathname;
+  return fallback;
 }
 
 /**
@@ -215,8 +249,8 @@ export function headFactory(
   options?: HeadFactoryOptions,
 ): (args: HeadFunctionArgs) => HeadConfig {
   const trailingSlash = options?.trailingSlash ?? false;
-  return ({ location }: HeadFunctionArgs): HeadConfig => {
-    const pathname = location?.pathname ?? '/';
+  return (args: HeadFunctionArgs): HeadConfig => {
+    const pathname = resolvePathname(args, '/');
     const isKorean = pathname.startsWith('/ko');
     const meta = isKorean ? localizedMeta.ko : localizedMeta.en;
     const urls = computeSeoUrls(pathname, baseUrl, trailingSlash);
@@ -260,7 +294,7 @@ export function dynamicHeadFactory<T>(
   const trailingSlash = options?.trailingSlash ?? false;
   return (ctx: DynamicHeadFunctionArgs<T>): HeadConfig => {
     const loaderData = requireLoaderData(ctx);
-    const pathname = ctx.location?.pathname ?? '/';
+    const pathname = resolvePathname(ctx, '/');
     const isKorean = pathname.startsWith('/ko');
     const localizedMeta = getLocalizedMeta(loaderData);
     const meta = isKorean ? localizedMeta.ko : localizedMeta.en;
@@ -279,16 +313,18 @@ export function dynamicHeadFactory<T>(
 /**
  * 한글 경로용 head 팩토리 (locale이 고정된 경우)
  * /ko 접두사가 항상 붙는 라우트에서 사용
+ *
+ * canonical/og:url은 ctx.location.pathname을 기반으로 페이지별로 계산됨.
  */
 export function headFactoryKo(
   localizedMeta: LocalizedMeta,
   baseUrl: string,
   options?: HeadFactoryOptions,
-): () => HeadConfig {
+): (args?: HeadFunctionArgs) => HeadConfig {
   const trailingSlash = options?.trailingSlash ?? false;
-  return (): HeadConfig => {
+  return (args?: HeadFunctionArgs): HeadConfig => {
     const meta = localizedMeta.ko;
-    const pathname = '/ko'; // 한글 페이지는 /ko 기준
+    const pathname = resolvePathname(args, '/ko');
     const urls = computeSeoUrls(pathname, baseUrl, trailingSlash);
 
     return {
@@ -301,16 +337,18 @@ export function headFactoryKo(
 /**
  * 영어 경로용 head 팩토리 (locale이 고정된 경우)
  * /ko 접두사가 없는 라우트에서 사용
+ *
+ * canonical/og:url은 ctx.location.pathname을 기반으로 페이지별로 계산됨.
  */
 export function headFactoryEn(
   localizedMeta: LocalizedMeta,
   baseUrl: string,
   options?: HeadFactoryOptions,
-): () => HeadConfig {
+): (args?: HeadFunctionArgs) => HeadConfig {
   const trailingSlash = options?.trailingSlash ?? false;
-  return (): HeadConfig => {
+  return (args?: HeadFunctionArgs): HeadConfig => {
     const meta = localizedMeta.en;
-    const pathname = '/'; // 영어 페이지는 / 기준
+    const pathname = resolvePathname(args, '/');
     const urls = computeSeoUrls(pathname, baseUrl, trailingSlash);
 
     return {
@@ -321,7 +359,28 @@ export function headFactoryEn(
 }
 
 /**
+ * 한글 locale prefix 정규화 (이중 prefix 방지)
+ *
+ * 호출자가 locale-agnostic 경로(`/concept/addition`)를 반환하든
+ * locale-prefixed 경로(`/ko/concept/addition`)를 반환하든 안전하게 처리.
+ */
+function prefixKoreanLocale(path: string): string {
+  if (typeof path !== 'string' || path.length === 0) {
+    return '/ko';
+  }
+  if (path === '/ko' || path.startsWith('/ko/')) {
+    return path;
+  }
+  const withSlash = path.startsWith('/') ? path : `/${path}`;
+  return withSlash === '/' ? '/ko' : `/ko${withSlash}`;
+}
+
+/**
  * 동적 한글 경로용 head 팩토리
+ *
+ * `getPathname`은 locale-agnostic 경로(`/concept/{id}`)를 반환하는 것을 권장하나,
+ * `/ko/concept/{id}`와 같이 prefix가 포함된 경로를 반환해도 이중 prefix를
+ * 발생시키지 않습니다.
  */
 export function dynamicHeadFactoryKo<T>(
   getLocalizedMeta: (data: T) => LocalizedMeta,
@@ -335,8 +394,8 @@ export function dynamicHeadFactoryKo<T>(
     const localizedMeta = getLocalizedMeta(loaderData);
     const meta = localizedMeta.ko;
     const pathname = getPathname
-      ? `/ko${getPathname(loaderData)}`
-      : (ctx.location?.pathname ?? '/ko');
+      ? prefixKoreanLocale(getPathname(loaderData))
+      : resolvePathname(ctx, '/ko');
     const urls = computeSeoUrls(pathname, baseUrl, trailingSlash);
 
     return {
@@ -360,7 +419,7 @@ export function dynamicHeadFactoryEn<T>(
     const loaderData = requireLoaderData(ctx);
     const localizedMeta = getLocalizedMeta(loaderData);
     const meta = localizedMeta.en;
-    const pathname = getPathname ? getPathname(loaderData) : (ctx.location?.pathname ?? '/');
+    const pathname = getPathname ? getPathname(loaderData) : resolvePathname(ctx, '/');
     const urls = computeSeoUrls(pathname, baseUrl, trailingSlash);
 
     return {

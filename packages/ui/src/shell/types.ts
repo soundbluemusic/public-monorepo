@@ -66,6 +66,10 @@ export interface RootShellConfig {
   navigationItems: NavigationItem[];
   /** Site verification codes */
   siteVerification?: SiteVerification;
+  /** Open Graph 이미지 절대 URL (소셜 공유용) */
+  ogImage?: string;
+  /** Twitter handle (예: '@SoundBlueMusic'). 'twitter:site' 메타 태그에 사용 */
+  twitterSite?: string;
   /** Feature flags */
   features?: {
     /** Enable mobile sidebar toggle script */

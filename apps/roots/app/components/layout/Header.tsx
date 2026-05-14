@@ -165,6 +165,7 @@ export function Header({ sidebarCollapsed, onMenuClick }: HeaderProps) {
           <div className="hidden sm:flex items-center gap-1">
             <Link
               to={localePath('/browse')}
+              aria-current={isActive('/browse') ? 'page' : undefined}
               className={cn(
                 'min-h-11 flex items-center px-3 py-2 text-sm rounded-lg transition-colors no-underline',
                 isActive('/browse')
@@ -177,6 +178,7 @@ export function Header({ sidebarCollapsed, onMenuClick }: HeaderProps) {
 
             <Link
               to={localePath('/favorites')}
+              aria-current={isActive('/favorites') ? 'page' : undefined}
               className={cn(
                 'min-h-11 flex items-center px-3 py-2 text-sm rounded-lg transition-colors no-underline',
                 isActive('/favorites')
@@ -189,6 +191,7 @@ export function Header({ sidebarCollapsed, onMenuClick }: HeaderProps) {
 
             <Link
               to={localePath('/constants')}
+              aria-current={isActive('/constants') ? 'page' : undefined}
               className={cn(
                 'min-h-11 flex items-center px-3 py-2 text-sm rounded-lg transition-colors no-underline',
                 isActive('/constants')
@@ -201,14 +204,14 @@ export function Header({ sidebarCollapsed, onMenuClick }: HeaderProps) {
 
             <ServicesDropdown currentAppId="roots" locale={locale} />
             <LanguageToggle locale={locale} currentPath={stripLocaleFromPath(pathname)} />
-            <DarkModeToggle />
+            <DarkModeToggle locale={locale} />
           </div>
 
           {/* Right Actions - Mobile */}
           <div className="flex sm:hidden items-center gap-1">
             <ServicesDropdown currentAppId="roots" locale={locale} />
             <LanguageToggle locale={locale} currentPath={stripLocaleFromPath(pathname)} />
-            <DarkModeToggle />
+            <DarkModeToggle locale={locale} />
           </div>
         </div>
       </header>

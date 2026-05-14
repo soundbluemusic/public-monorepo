@@ -1,0 +1,18 @@
+=== Wrangler whoami ===
+
+ ⛅️ wrangler 4.84.1 (update available 4.90.1)
+─────────────────────────────────────────────
+Getting User settings...
+You are not authenticated. Please run `wrangler login`.
+
+=== Apply schema locally ===
+    }
+  },
+  {
+    "results": [],
+    "success": true,
+    "meta": {
+      "duration": 1
+    }
+  }
+]

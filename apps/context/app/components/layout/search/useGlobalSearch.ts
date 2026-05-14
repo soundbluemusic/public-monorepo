@@ -24,6 +24,7 @@ export function useGlobalSearch({ locale, localePath }: UseGlobalSearchOptions) 
   const [selectedIndex, setSelectedIndex] = useState(-1);
 
   // Fuzzy search with debouncing via useSearchWorker
+  // 한국어 IME 조합 완료 + 사용자 타이핑 정착을 고려해 300ms 사용
   const {
     query,
     setQuery,
@@ -32,7 +33,7 @@ export function useGlobalSearch({ locale, localePath }: UseGlobalSearchOptions) 
   } = useSearchWorker({
     indexUrl: '/search-index.json',
     locale,
-    debounceMs: 150,
+    debounceMs: 300,
     maxResults: LIMITS.SEARCH_MAX_RESULTS,
     enabled: isOpen,
   });
@@ -91,8 +92,10 @@ export function useGlobalSearch({ locale, localePath }: UseGlobalSearchOptions) 
           break;
         case 'Enter': {
           e.preventDefault();
-          const selectedResult = results[selectedIndex];
-          if (selectedIndex >= 0 && selectedResult) {
+          // selectedIndex가 -1이면 첫 번째 항목으로 자동 이동
+          const targetIndex = selectedIndex >= 0 ? selectedIndex : 0;
+          const selectedResult = results[targetIndex];
+          if (selectedResult) {
             navigate({ to: localePath(`/entry/${selectedResult.id}`) });
             setIsOpen(false);
             setQuery('');

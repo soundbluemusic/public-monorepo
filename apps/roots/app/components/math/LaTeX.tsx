@@ -1,356 +1,98 @@
 /**
- * @fileoverview 수학 표현 렌더러 (MathML 네이티브)
- * KaTeX 제거 - 브라우저 내장 MathML 사용
- * 메모이제이션으로 파싱 성능 최적화
+ * @fileoverview 수학 표현 렌더러 (KaTeX 기반)
+ *
+ * KaTeX로 LaTeX 수식을 SSR 안전한 HTML+MathML로 렌더링합니다.
+ * - 시각: 정밀하게 조판된 HTML
+ * - 보조기술: MathML(`output: 'htmlAndMathml'`)로 의미 전달
+ * - 잘못된 LaTeX는 throwOnError: false 옵션으로 빨간색 표기 (페이지 깨짐 방지)
+ *
+ * 자체 메모이제이션 캐시로 동일 수식 반복 렌더링을 방지합니다.
  */
 
+import 'katex/dist/katex.min.css';
 import { cn } from '@soundblue/ui/utils';
+import katex from 'katex';
 import { useMemo } from 'react';
 
 interface LaTeXProps {
-  /** 수식 문자열 (간단한 LaTeX 또는 유니코드) */
+  /** LaTeX 수식 소스 (예: '\\frac{1}{2}', 'x^2 + y^2 = r^2') */
   math: string;
-  /** block (display) 모드 여부, 기본값 false (inline) */
+  /** block(display) 모드 여부, 기본값 false (inline) */
   display?: boolean;
   /** 추가 CSS 클래스 */
   className?: string;
 }
 
-/**
- * 파싱 결과 캐시 (동일 수식 재파싱 방지)
- * 메모리 사용 제한을 위해 최대 1000개 항목만 보관
- */
-const parseCache = new Map<string, string>();
+/** 렌더링 결과 캐시 — display 여부와 math 소스의 조합으로 키를 구성 */
+const renderCache = new Map<string, string>();
 const MAX_CACHE_SIZE = 1000;
 
-/**
- * LaTeX 문자열을 MathML로 변환하는 파서
- * 복잡한 LaTeX는 지원하지 않음 - 간단한 수식만 처리
- * 캐시를 사용하여 동일 수식 재파싱 방지 (50-70% 성능 향상)
- */
-function latexToMathML(latex: string): string {
-  // 캐시 확인
-  const cached = parseCache.get(latex);
-  if (cached !== undefined) {
-    return cached;
-  }
+/** KaTeX 렌더링 + 캐싱 */
+function renderLatex(math: string, display: boolean): string {
+  const key = `${display ? 'd' : 'i'}:${math}`;
+  const cached = renderCache.get(key);
+  if (cached !== undefined) return cached;
 
-  let result = latex;
-
-  // 기본 LaTeX 명령어를 유니코드/MathML로 변환
-  const replacements: [RegExp, string][] = [
-    // Greek letters
-    [/\\alpha/g, 'α'],
-    [/\\beta/g, 'β'],
-    [/\\gamma/g, 'γ'],
-    [/\\delta/g, 'δ'],
-    [/\\epsilon/g, 'ε'],
-    [/\\zeta/g, 'ζ'],
-    [/\\eta/g, 'η'],
-    [/\\theta/g, 'θ'],
-    [/\\iota/g, 'ι'],
-    [/\\kappa/g, 'κ'],
-    [/\\lambda/g, 'λ'],
-    [/\\mu/g, 'μ'],
-    [/\\nu/g, 'ν'],
-    [/\\xi/g, 'ξ'],
-    [/\\pi/g, 'π'],
-    [/\\rho/g, 'ρ'],
-    [/\\sigma/g, 'σ'],
-    [/\\tau/g, 'τ'],
-    [/\\upsilon/g, 'υ'],
-    [/\\phi/g, 'φ'],
-    [/\\chi/g, 'χ'],
-    [/\\psi/g, 'ψ'],
-    [/\\omega/g, 'ω'],
-    [/\\Gamma/g, 'Γ'],
-    [/\\Delta/g, 'Δ'],
-    [/\\Theta/g, 'Θ'],
-    [/\\Lambda/g, 'Λ'],
-    [/\\Xi/g, 'Ξ'],
-    [/\\Pi/g, 'Π'],
-    [/\\Sigma/g, 'Σ'],
-    [/\\Phi/g, 'Φ'],
-    [/\\Psi/g, 'Ψ'],
-    [/\\Omega/g, 'Ω'],
-
-    // Math operators
-    [/\\times/g, '×'],
-    [/\\div/g, '÷'],
-    [/\\pm/g, '±'],
-    [/\\mp/g, '∓'],
-    [/\\cdot/g, '·'],
-    [/\\ast/g, '∗'],
-    [/\\star/g, '⋆'],
-    [/\\circ/g, '∘'],
-    [/\\bullet/g, '•'],
-
-    // Relations
-    [/\\leq/g, '≤'],
-    [/\\geq/g, '≥'],
-    [/\\neq/g, '≠'],
-    [/\\approx/g, '≈'],
-    [/\\equiv/g, '≡'],
-    [/\\sim/g, '∼'],
-    [/\\simeq/g, '≃'],
-    [/\\cong/g, '≅'],
-    [/\\propto/g, '∝'],
-    [/\\ll/g, '≪'],
-    [/\\gg/g, '≫'],
-    [/\\prec/g, '≺'],
-    [/\\succ/g, '≻'],
-    [/\\subset/g, '⊂'],
-    [/\\supset/g, '⊃'],
-    [/\\subseteq/g, '⊆'],
-    [/\\supseteq/g, '⊇'],
-    [/\\in/g, '∈'],
-    [/\\notin/g, '∉'],
-    [/\\ni/g, '∋'],
-
-    // Set operators
-    [/\\cup/g, '∪'],
-    [/\\cap/g, '∩'],
-    [/\\setminus/g, '∖'],
-    [/\\emptyset/g, '∅'],
-
-    // Logic
-    [/\\land/g, '∧'],
-    [/\\lor/g, '∨'],
-    [/\\lnot/g, '¬'],
-    [/\\neg/g, '¬'],
-    [/\\forall/g, '∀'],
-    [/\\exists/g, '∃'],
-    [/\\nexists/g, '∄'],
-    [/\\Rightarrow/g, '⇒'],
-    [/\\Leftarrow/g, '⇐'],
-    [/\\Leftrightarrow/g, '⇔'],
-    [/\\rightarrow/g, '→'],
-    [/\\leftarrow/g, '←'],
-    [/\\leftrightarrow/g, '↔'],
-    [/\\to/g, '→'],
-    [/\\mapsto/g, '↦'],
-
-    // Calculus
-    [/\\infty/g, '∞'],
-    [/\\partial/g, '∂'],
-    [/\\nabla/g, '∇'],
-    [/\\int/g, '∫'],
-    [/\\iint/g, '∬'],
-    [/\\iiint/g, '∭'],
-    [/\\oint/g, '∮'],
-    [/\\sum/g, '∑'],
-    [/\\prod/g, '∏'],
-    [/\\coprod/g, '∐'],
-    [/\\lim/g, 'lim'],
-
-    // Misc
-    [/\\sqrt/g, '√'],
-    [/\\angle/g, '∠'],
-    [/\\perp/g, '⊥'],
-    [/\\parallel/g, '∥'],
-    [/\\triangle/g, '△'],
-    [/\\square/g, '□'],
-    [/\\diamond/g, '◇'],
-    [/\\prime/g, '′'],
-    [/\\ldots/g, '…'],
-    [/\\cdots/g, '⋯'],
-    [/\\vdots/g, '⋮'],
-    [/\\ddots/g, '⋱'],
-
-    // Brackets
-    [/\\{/g, '{'],
-    [/\\}/g, '}'],
-    [/\\langle/g, '⟨'],
-    [/\\rangle/g, '⟩'],
-    [/\\lfloor/g, '⌊'],
-    [/\\rfloor/g, '⌋'],
-    [/\\lceil/g, '⌈'],
-    [/\\rceil/g, '⌉'],
-
-    // Functions (keep as text)
-    [/\\sin/g, 'sin'],
-    [/\\cos/g, 'cos'],
-    [/\\tan/g, 'tan'],
-    [/\\sec/g, 'sec'],
-    [/\\csc/g, 'csc'],
-    [/\\cot/g, 'cot'],
-    [/\\arcsin/g, 'arcsin'],
-    [/\\arccos/g, 'arccos'],
-    [/\\arctan/g, 'arctan'],
-    [/\\sinh/g, 'sinh'],
-    [/\\cosh/g, 'cosh'],
-    [/\\tanh/g, 'tanh'],
-    [/\\log/g, 'log'],
-    [/\\ln/g, 'ln'],
-    [/\\exp/g, 'exp'],
-    [/\\det/g, 'det'],
-    [/\\dim/g, 'dim'],
-    [/\\ker/g, 'ker'],
-    [/\\max/g, 'max'],
-    [/\\min/g, 'min'],
-    [/\\sup/g, 'sup'],
-    [/\\inf/g, 'inf'],
-    [/\\arg/g, 'arg'],
-    [/\\gcd/g, 'gcd'],
-    [/\\lcm/g, 'lcm'],
-    [/\\mod/g, 'mod'],
-
-    // Special
-    [/\\mathbb\{R\}/g, 'ℝ'],
-    [/\\mathbb\{N\}/g, 'ℕ'],
-    [/\\mathbb\{Z\}/g, 'ℤ'],
-    [/\\mathbb\{Q\}/g, 'ℚ'],
-    [/\\mathbb\{C\}/g, 'ℂ'],
-    [/\\mathbb\{P\}/g, 'ℙ'],
-    // Remove remaining backslashes for simple commands
-    [/\\text\{([^}]*)\}/g, '$1'],
-    [/\\mathrm\{([^}]*)\}/g, '$1'],
-    [/\\mathbf\{([^}]*)\}/g, '$1'],
-    [/\\textbf\{([^}]*)\}/g, '$1'],
-    [/\\textit\{([^}]*)\}/g, '$1'],
-    [/\\left/g, ''],
-    [/\\right/g, ''],
-    [/\\,/g, ' '],
-    [/\\;/g, ' '],
-    [/\\!/g, ''],
-    [/\\quad/g, '  '],
-    [/\\qquad/g, '    '],
-  ];
-
-  for (const [pattern, replacement] of replacements) {
-    result = result.replace(pattern, replacement);
-  }
-
-  // mathcal 변환 (함수 교체라 별도 처리)
-  result = result.replace(/\\mathcal\{([A-Z])\}/g, (_: string, c: string) =>
-    String.fromCodePoint(0x1d49c + c.charCodeAt(0) - 65),
-  );
-
-  // 위첨자 ^{...} → 유니코드 위첨자 (간단한 경우만)
-  result = result.replace(/\^(\d)/g, (_, d) => {
-    const superscripts = '⁰¹²³⁴⁵⁶⁷⁸⁹';
-    return superscripts[Number.parseInt(d, 10)] || `^${d}`;
-  });
-  result = result.replace(/\^\{(\d+)\}/g, (_, digits) => {
-    const superscripts = '⁰¹²³⁴⁵⁶⁷⁸⁹';
-    return [...digits].map((d: string) => superscripts[Number.parseInt(d, 10)] || d).join('');
-  });
-  result = result.replace(/\^\{([a-z])\}/g, (_, c) => {
-    const map: Record<string, string> = { n: 'ⁿ', i: 'ⁱ' };
-    return map[c] || `^${c}`;
-  });
-  result = result.replace(/\^n/g, 'ⁿ');
-  result = result.replace(/\^i/g, 'ⁱ');
-  result = result.replace(/\^T/g, 'ᵀ');
-  result = result.replace(/\^\{T\}/g, 'ᵀ');
-  result = result.replace(/\^\{-1\}/g, '⁻¹');
-  result = result.replace(/\^\{\\prime\}/g, '′');
-  result = result.replace(/\^\\prime/g, '′');
-
-  // 아래첨자 _{...} → 유니코드 아래첨자 (간단한 경우만)
-  result = result.replace(/_(\d)/g, (_, d) => {
-    const subscripts = '₀₁₂₃₄₅₆₇₈₉';
-    return subscripts[Number.parseInt(d, 10)] || `_${d}`;
-  });
-  result = result.replace(/_\{(\d+)\}/g, (_, digits) => {
-    const subscripts = '₀₁₂₃₄₅₆₇₈₉';
-    return [...digits].map((d: string) => subscripts[Number.parseInt(d, 10)] || d).join('');
-  });
-  result = result.replace(/_\{([a-z])\}/g, (_, c) => {
-    const map: Record<string, string> = {
-      a: 'ₐ',
-      e: 'ₑ',
-      h: 'ₕ',
-      i: 'ᵢ',
-      j: 'ⱼ',
-      k: 'ₖ',
-      l: 'ₗ',
-      m: 'ₘ',
-      n: 'ₙ',
-      o: 'ₒ',
-      p: 'ₚ',
-      r: 'ᵣ',
-      s: 'ₛ',
-      t: 'ₜ',
-      u: 'ᵤ',
-      v: 'ᵥ',
-      x: 'ₓ',
-    };
-    return map[c] || `_${c}`;
-  });
-  result = result.replace(/_([a-z])/g, (_, c) => {
-    const map: Record<string, string> = {
-      a: 'ₐ',
-      e: 'ₑ',
-      i: 'ᵢ',
-      j: 'ⱼ',
-      k: 'ₖ',
-      n: 'ₙ',
-      o: 'ₒ',
-      p: 'ₚ',
-      r: 'ᵣ',
-      s: 'ₛ',
-      t: 'ₜ',
-      u: 'ᵤ',
-      v: 'ᵥ',
-      x: 'ₓ',
-    };
-    return map[c] || `_${c}`;
+  const html = katex.renderToString(math, {
+    displayMode: display,
+    // 잘못된 LaTeX도 빨간색 fallback으로 렌더링 (페이지 전체가 깨지는 것 방지)
+    throwOnError: false,
+    errorColor: 'var(--color-error, #cc0000)',
+    // HTML(시각) + MathML(보조기술) 양쪽 모두 출력
+    output: 'htmlAndMathml',
+    // 비표준/비호환 명령어 경고는 무시 (콘솔 노이즈 감소)
+    strict: 'ignore',
+    // SSR 안전: trust=false 로 외부 URL/href 매크로 차단
+    trust: false,
   });
 
-  // 분수 \frac{a}{b} → a/b (간단하게)
-  result = result.replace(/\\frac\{([^}]*)\}\{([^}]*)\}/g, '($1)/($2)');
-  result = result.replace(/\\dfrac\{([^}]*)\}\{([^}]*)\}/g, '($1)/($2)');
-  result = result.replace(/\\tfrac\{([^}]*)\}\{([^}]*)\}/g, '($1)/($2)');
-
-  // 루트 \sqrt{x} → √x, \sqrt[n]{x} → ⁿ√x
-  result = result.replace(/\\sqrt\[(\d+)\]\{([^}]*)\}/g, (_, n, x) => {
-    const superscripts = '⁰¹²³⁴⁵⁶⁷⁸⁹';
-    const sup = [...n].map((d: string) => superscripts[Number.parseInt(d, 10)] || d).join('');
-    return `${sup}√(${x})`;
-  });
-  result = result.replace(/\\sqrt\{([^}]*)\}/g, '√($1)');
-
-  // 남은 중괄호 제거
-  result = result.replace(/\{([^{}]*)\}/g, '$1');
-  result = result.replace(/\{([^{}]*)\}/g, '$1'); // 중첩 처리
-
-  // 캐시에 저장 (LRU 방식: 캐시가 가득 차면 가장 오래된 항목 삭제)
-  if (parseCache.size >= MAX_CACHE_SIZE) {
-    const firstKey = parseCache.keys().next().value;
+  // 캐시 크기 제한 (LRU에 가깝게 — 가장 오래된 항목부터 제거)
+  if (renderCache.size >= MAX_CACHE_SIZE) {
+    const firstKey = renderCache.keys().next().value;
     if (firstKey !== undefined) {
-      parseCache.delete(firstKey);
+      renderCache.delete(firstKey);
     }
   }
-  parseCache.set(latex, result);
-
-  return result;
+  renderCache.set(key, html);
+  return html;
 }
 
 /**
- * 수학 수식 렌더링 컴포넌트
- * LaTeX 문자열을 유니코드로 변환하여 표시
- * useMemo로 동일 입력에 대한 재렌더링 최적화
+ * 수학 수식 렌더링 컴포넌트 (KaTeX)
+ *
+ * @example
+ * ```tsx
+ * <LaTeX math="x^2 + y^2 = r^2" />
+ * <LaTeX math="\\int_0^\\infty e^{-x^2} dx = \\frac{\\sqrt{\\pi}}{2}" display />
+ * ```
  */
-export function LaTeX({ math, display, className }: LaTeXProps) {
-  // useMemo로 math가 변경될 때만 재파싱 (동일 컴포넌트 재렌더링 시 캐시 활용)
-  const rendered = useMemo(() => latexToMathML(math), [math]);
+export function LaTeX({ math, display = false, className }: LaTeXProps) {
+  const html = useMemo(() => renderLatex(math, display), [math, display]);
 
   return (
     <span
+      role="math"
+      // 보조기술이 KaTeX의 MathML 출력을 우선 사용하지만, 폴백으로 LaTeX 원문 노출
+      aria-label={math}
       className={cn(
-        "font-['STIX_Two_Math','Cambria_Math',serif] text-(--math-formula)",
-        display ? 'block text-center text-[1.2em] leading-8' : 'inline',
+        'text-(--math-formula)',
+        display ? 'block text-center my-2' : 'inline',
         className,
       )}
-    >
-      {rendered}
-    </span>
+      // KaTeX는 throwOnError: false + trust: false 옵션으로 안전한 HTML을 생성
+      // biome-ignore lint/security/noDangerouslySetInnerHtml: KaTeX가 자체적으로 sanitize한 출력
+      dangerouslySetInnerHTML={{ __html: html }}
+    />
   );
 }
 
 /**
  * 블록 수식용 래퍼 컴포넌트
+ *
+ * @example
+ * ```tsx
+ * <MathBlock math="\\sum_{n=1}^{\\infty} \\frac{1}{n^2} = \\frac{\\pi^2}{6}" />
+ * ```
  */
 export function MathBlock({ math, className }: { math: string; className?: string }) {
   return (

@@ -1,7 +1,7 @@
 import { LIMITS } from '@soundblue/core/validation';
 import { cn } from '@soundblue/ui/utils';
 import { Link } from '@tanstack/react-router';
-import { Flame, Star } from 'lucide-react';
+import { ExternalLink, Flame, Star } from 'lucide-react';
 import { memo } from 'react';
 import { getLibrarySlug, type Library } from '../../data/libraries';
 import { useI18n } from '../../i18n';
@@ -60,8 +60,9 @@ export const LibraryCard = memo(function LibraryCard({
               type="button"
               key={tag}
               onClick={() => onTagClick(tag)}
+              aria-pressed={selectedTag === tag}
               className={cn(
-                'px-2 py-0.5 rounded text-xs transition-colors cursor-pointer whitespace-nowrap shrink-0',
+                'px-2.5 min-h-9 inline-flex items-center rounded text-xs transition-colors cursor-pointer whitespace-nowrap shrink-0',
                 selectedTag === tag
                   ? 'bg-(--accent-primary) text-white'
                   : 'bg-(--bg-tertiary) text-(--text-tertiary) hover:text-(--text-primary)',
@@ -84,27 +85,45 @@ export const LibraryCard = memo(function LibraryCard({
             href={lib.website}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-(--accent-primary) hover:underline font-medium"
+            aria-label={
+              locale === 'ko'
+                ? `${lib.name} 공식 웹사이트 (새 탭에서 열림)`
+                : `${lib.name} official website (opens in new tab)`
+            }
+            className="inline-flex items-center gap-0.5 text-(--accent-primary) hover:underline font-medium"
           >
             Website
+            <ExternalLink size={11} aria-hidden="true" />
           </a>
         )}
         <a
           href={lib.github}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-(--accent-primary) hover:underline"
+          aria-label={
+            locale === 'ko'
+              ? `${lib.name} GitHub 저장소 (새 탭에서 열림)`
+              : `${lib.name} GitHub repository (opens in new tab)`
+          }
+          className="inline-flex items-center gap-0.5 text-(--accent-primary) hover:underline"
         >
           GitHub
+          <ExternalLink size={11} aria-hidden="true" />
         </a>
         {lib.npm && (
           <a
             href={`https://www.npmjs.com/package/${lib.npm}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-(--accent-primary) hover:underline"
+            aria-label={
+              locale === 'ko'
+                ? `${lib.name} npm 패키지 (새 탭에서 열림)`
+                : `${lib.name} npm package (opens in new tab)`
+            }
+            className="inline-flex items-center gap-0.5 text-(--accent-primary) hover:underline"
           >
             npm
+            <ExternalLink size={11} aria-hidden="true" />
           </a>
         )}
       </div>

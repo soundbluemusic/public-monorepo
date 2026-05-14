@@ -1,0 +1,11 @@
+=== Permissive regression ===
+  /                         200  68050B  canonical=
+  /libraries                200 706065B  canonical=https://permissive.soundbluemusic.com/libraries
+  /web-api                  200 120971B  canonical=
+  /tags                     200 124302B  canonical=
+  /built-with               200  55864B  canonical=
+  /sitemap.xml              200    571B  canonical=
+  /ko                       200  68421B  canonical=
+  /ko/libraries             200 687284B  canonical=https://permissive.soundbluemusic.com/ko/libraries
+  /ko/web-api               200 111700B  canonical=
+  /web-apis                 404  12395B  canonical=

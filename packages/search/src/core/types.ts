@@ -164,6 +164,18 @@ export interface SearchConfig {
      */
     prefix?: boolean;
   };
+
+  /**
+   * 한글 자모 분해 인덱싱 활성화
+   *
+   * 활성화 시 한글 음절을 자모(자음/모음)로 분해한 토큰도 함께 인덱싱하여,
+   * 자모 단위 부분 매칭이 가능해집니다. 예를 들어 "ㄱㅏㅁ"으로 "감자" 매칭.
+   * 한국어 사전/검색에서 권장합니다.
+   *
+   * @example true
+   * @default false
+   */
+  enableHangulDecomposition?: boolean;
 }
 
 /**

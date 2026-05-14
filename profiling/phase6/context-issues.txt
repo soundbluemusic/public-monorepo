@@ -1,0 +1,13 @@
+=== Context audit details (perf failures) ===
+0 forced-reflow-insight :: Forced reflow
+0 network-dependency-tree-insight :: Network dependency tree
+0 valid-source-maps :: Missing source maps for large first-party JavaScript
+0.25 max-potential-fid :: Max Potential First Input Delay
+0.41 first-contentful-paint :: First Contentful Paint
+0.71 largest-contentful-paint :: Largest Contentful Paint
+0.79 total-blocking-time :: Total Blocking Time
+0.85 interactive :: Time to Interactive
+
+=== Context biggest opportunities ===
+601ms server-response-time: Reduce initial server response time
+600ms unused-javascript: Reduce unused JavaScript
