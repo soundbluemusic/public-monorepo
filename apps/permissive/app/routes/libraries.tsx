@@ -31,8 +31,8 @@ function LibrariesPage() {
   const locale = 'en';
 
   const libraryListSchema = generateItemListSchema({
-    name: 'MIT Licensed Open Source Libraries',
-    description: 'Free open-source libraries for web development',
+    name: 'Open Source Web Libraries',
+    description: 'Open-source libraries for web development with license details',
     url: `${PERMISSIVE_BASE_URL}/libraries`,
     items: libs.map((lib) => ({
       name: lib.name,
@@ -68,7 +68,9 @@ function LibrariesPage() {
       {/* Header */}
       <div className="mb-6">
         <h1 className="text-2xl font-bold text-(--text-primary) mb-2">Libraries</h1>
-        <p className="text-(--text-secondary)">MIT licensed open source. Free for commercial use</p>
+        <p className="text-(--text-secondary)">
+          Open-source libraries with license details from npm and GitHub
+        </p>
       </div>
 
       <QuickFilters

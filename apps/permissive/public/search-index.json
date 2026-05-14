@@ -332,14 +332,14 @@
       "ko": "Turbopack"
     },
     "description": {
-      "en": "Incremental bundler for web",
-      "ko": "웹을 위한 증분 번들러"
+      "en": "Incremental bundler integrated with Next.js",
+      "ko": "Next.js에 통합된 증분 번들러"
     },
     "field": "Build Tools",
     "tags": [
       "Build",
-      "Rust",
-      "Fast"
+      "Next.js",
+      "Rust"
     ]
   },
   {
@@ -564,24 +564,6 @@
     "description": {
       "en": "Primitive and flexible state",
       "ko": "원시적이고 유연한 상태 관리"
-    },
-    "field": "State Management",
-    "tags": [
-      "React",
-      "Atomic",
-      "TypeScript"
-    ]
-  },
-  {
-    "id": "lib-recoil",
-    "type": "library",
-    "name": {
-      "en": "Recoil",
-      "ko": "Recoil"
-    },
-    "description": {
-      "en": "State management for React",
-      "ko": "React를 위한 상태 관리"
     },
     "field": "State Management",
     "tags": [
@@ -1148,40 +1130,6 @@
     ]
   },
   {
-    "id": "lib-framer-motion",
-    "type": "library",
-    "name": {
-      "en": "Framer Motion",
-      "ko": "Framer Motion"
-    },
-    "description": {
-      "en": "Production-ready motion library",
-      "ko": "프로덕션 준비된 모션 라이브러리"
-    },
-    "field": "Animation",
-    "tags": [
-      "React",
-      "Animation"
-    ]
-  },
-  {
-    "id": "lib-gsap",
-    "type": "library",
-    "name": {
-      "en": "GSAP",
-      "ko": "GSAP"
-    },
-    "description": {
-      "en": "Professional-grade animation",
-      "ko": "전문가급 애니메이션"
-    },
-    "field": "Animation",
-    "tags": [
-      "Animation",
-      "Professional"
-    ]
-  },
-  {
     "id": "lib-react-spring",
     "type": "library",
     "name": {
@@ -1216,20 +1164,21 @@
     ]
   },
   {
-    "id": "lib-motion-one",
+    "id": "lib-motion",
     "type": "library",
     "name": {
-      "en": "Motion One",
-      "ko": "Motion One"
+      "en": "Motion",
+      "ko": "Motion"
     },
     "description": {
-      "en": "Smallest animation library",
-      "ko": "가장 작은 애니메이션 라이브러리"
+      "en": "Modern animation library for JavaScript and React",
+      "ko": "JavaScript와 React를 위한 모던 애니메이션 라이브러리"
     },
     "field": "Animation",
     "tags": [
       "Animation",
-      "Minimal"
+      "React",
+      "JavaScript"
     ]
   },
   {
@@ -1534,42 +1483,6 @@
     ]
   },
   {
-    "id": "lib-tracking-js",
-    "type": "library",
-    "name": {
-      "en": "tracking.js",
-      "ko": "tracking.js"
-    },
-    "description": {
-      "en": "JavaScript library for real-time color and face tracking",
-      "ko": "실시간 색상 및 얼굴 추적을 위한 JavaScript 라이브러리"
-    },
-    "field": "Computer Vision",
-    "tags": [
-      "Vision",
-      "Tracking",
-      "Face"
-    ]
-  },
-  {
-    "id": "lib-face-api-js",
-    "type": "library",
-    "name": {
-      "en": "face-api.js",
-      "ko": "face-api.js"
-    },
-    "description": {
-      "en": "JavaScript face detection and recognition API",
-      "ko": "JavaScript 얼굴 감지 및 인식 API"
-    },
-    "field": "Computer Vision",
-    "tags": [
-      "ML",
-      "Face",
-      "Recognition"
-    ]
-  },
-  {
     "id": "lib-mediapipe",
     "type": "library",
     "name": {
@@ -1862,42 +1775,6 @@
     ]
   },
   {
-    "id": "lib-pako",
-    "type": "library",
-    "name": {
-      "en": "pako",
-      "ko": "pako"
-    },
-    "description": {
-      "en": "zlib port to JavaScript - fast, modular, with streams",
-      "ko": "JavaScript로 포팅된 zlib - 빠르고 모듈식, 스트림 지원"
-    },
-    "field": "Compression",
-    "tags": [
-      "Compression",
-      "Zlib",
-      "Deflate"
-    ]
-  },
-  {
-    "id": "lib-lz-string",
-    "type": "library",
-    "name": {
-      "en": "lz-string",
-      "ko": "lz-string"
-    },
-    "description": {
-      "en": "LZ-based compression for JavaScript strings",
-      "ko": "JavaScript 문자열용 LZ 기반 압축"
-    },
-    "field": "Compression",
-    "tags": [
-      "Compression",
-      "String",
-      "localStorage"
-    ]
-  },
-  {
     "id": "lib-brotli-wasm",
     "type": "library",
     "name": {
@@ -1931,24 +1808,6 @@
       "WASM",
       "Compression",
       "Zstandard"
-    ]
-  },
-  {
-    "id": "lib-tweetnacl-js",
-    "type": "library",
-    "name": {
-      "en": "TweetNaCl.js",
-      "ko": "TweetNaCl.js"
-    },
-    "description": {
-      "en": "Port of TweetNaCl cryptographic library",
-      "ko": "TweetNaCl 암호화 라이브러리 포팅"
-    },
-    "field": "Cryptography",
-    "tags": [
-      "Crypto",
-      "Encryption",
-      "Signing"
     ]
   },
   {
@@ -2115,42 +1974,6 @@
     ]
   },
   {
-    "id": "lib-pica",
-    "type": "library",
-    "name": {
-      "en": "Pica",
-      "ko": "Pica"
-    },
-    "description": {
-      "en": "High quality image resize in browser",
-      "ko": "브라우저에서 고품질 이미지 리사이즈"
-    },
-    "field": "Image Processing",
-    "tags": [
-      "Image",
-      "Resize",
-      "Browser"
-    ]
-  },
-  {
-    "id": "lib-upng-js",
-    "type": "library",
-    "name": {
-      "en": "UPNG.js",
-      "ko": "UPNG.js"
-    },
-    "description": {
-      "en": "Fast PNG encoder/decoder",
-      "ko": "빠른 PNG 인코더/디코더"
-    },
-    "field": "Image Processing",
-    "tags": [
-      "PNG",
-      "APNG",
-      "Image"
-    ]
-  },
-  {
     "id": "lib-tone-js",
     "type": "library",
     "name": {
@@ -2223,24 +2046,6 @@
     ]
   },
   {
-    "id": "lib-pdf-lib",
-    "type": "library",
-    "name": {
-      "en": "pdf-lib",
-      "ko": "pdf-lib"
-    },
-    "description": {
-      "en": "Create and modify PDF documents",
-      "ko": "PDF 문서 생성 및 수정"
-    },
-    "field": "PDF/Documents",
-    "tags": [
-      "PDF",
-      "Document",
-      "Pure JS"
-    ]
-  },
-  {
     "id": "lib-pdf-js",
     "type": "library",
     "name": {
@@ -2292,24 +2097,6 @@
       "Math",
       "Algebra",
       "Expression"
-    ]
-  },
-  {
-    "id": "lib-numeric-js",
-    "type": "library",
-    "name": {
-      "en": "Numeric.js",
-      "ko": "Numeric.js"
-    },
-    "description": {
-      "en": "Numerical analysis in JavaScript",
-      "ko": "JavaScript에서 수치 분석"
-    },
-    "field": "Math/Science",
-    "tags": [
-      "Math",
-      "Matrix",
-      "Linear Algebra"
     ]
   },
   {

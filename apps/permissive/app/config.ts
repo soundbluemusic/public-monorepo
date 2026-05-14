@@ -11,7 +11,7 @@ export const APP_CONFIG = {
   /** 앱 이름 */
   name: 'Permissive',
   /** 앱 설명 */
-  description: 'Free Web Dev Resources',
+  description: 'Open Web Dev Resources',
 } as const;
 
 export type AppConfig = typeof APP_CONFIG;

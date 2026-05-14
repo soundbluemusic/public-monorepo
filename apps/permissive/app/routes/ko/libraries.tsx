@@ -49,7 +49,9 @@ function LibrariesPageKo() {
       {/* Header */}
       <div className="mb-6">
         <h1 className="text-2xl font-bold text-(--text-primary) mb-2">Libraries</h1>
-        <p className="text-(--text-secondary)">MIT 라이센스 오픈소스. 상업적 사용 가능</p>
+        <p className="text-(--text-secondary)">
+          npm과 GitHub 기준 라이선스가 명시된 오픈소스 라이브러리
+        </p>
       </div>
 
       <QuickFilters

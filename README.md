@@ -36,14 +36,14 @@
 | **Features** | 16394 entries, 52 categories, 53 conversations |
 
 ### 🔧 Permissive — Web Dev Resources
-> **무료 웹개발 자료 모음** | SSR
+> **오픈 웹개발 리소스** | SSR
 
 | | |
 |---|---|
 | **Live** | [permissive.soundbluemusic.com](https://permissive.soundbluemusic.com) |
 | **Source** | [apps/permissive/](apps/permissive) · [README](apps/permissive/README.md) · [config](apps/permissive/vite.config.ts) |
-| **Data** | [data/permissive/](data/permissive) |
-| **Features** | 110 libraries, 56 Web APIs |
+| **Data** | [apps/permissive/app/data/](apps/permissive/app/data) |
+| **Features** | 120 libraries, 56 Web APIs |
 
 ### 📐 Roots — Math Documentation
 > **학습자를 위한 수학 문서** | SSR

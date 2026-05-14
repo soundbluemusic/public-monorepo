@@ -22,27 +22,27 @@ import { getRelatedWebApis, getWebApiBySlug, getWebApiSlug, type WebAPI } from '
 
 export const homeMeta = {
   ko: {
-    title: 'Permissive - 무료 웹개발 도구 모음',
-    description: '웹표준 API와 MIT 라이센스 라이브러리를 한눈에 보세요',
+    title: 'Permissive - 오픈 웹개발 리소스',
+    description: '웹표준 API와 오픈소스 웹개발 라이브러리를 한눈에 보세요',
     keywords: [
       '웹개발 도구',
       '오픈소스 라이브러리',
-      'MIT 라이선스',
+      '오픈소스 라이선스',
       'Web API',
-      '무료 라이브러리',
+      '라이선스 메타데이터',
       'JavaScript 라이브러리',
       'permissive',
     ],
   },
   en: {
-    title: 'Permissive - Free Web Dev Tools',
-    description: 'Web Standard APIs and MIT licensed libraries at a glance',
+    title: 'Permissive - Open Web Dev Resources',
+    description: 'Web Standard APIs and open-source web development libraries at a glance',
     keywords: [
       'web development tools',
       'open source libraries',
-      'MIT license',
+      'open source license',
       'Web API',
-      'free libraries',
+      'license metadata',
       'JavaScript libraries',
       'permissive',
     ],
@@ -61,8 +61,8 @@ export const builtWithMeta = {
 };
 
 export const librariesMeta = {
-  ko: { title: 'Libraries - Permissive', description: 'MIT 라이센스 오픈소스 라이브러리' },
-  en: { title: 'Libraries - Permissive', description: 'MIT licensed open source libraries' },
+  ko: { title: 'Libraries - Permissive', description: '라이선스가 명시된 오픈소스 라이브러리' },
+  en: { title: 'Libraries - Permissive', description: 'Open-source libraries with license details' },
 };
 
 export const sitemapMeta = {
@@ -79,7 +79,7 @@ export const tagsMeta = {
   en: {
     title: 'All Tags | Permissive',
     description: `Browse ${totalLibraryTagCount} tags to explore libraries`,
-    keywords: ['library tags', 'tag list', 'open source', 'free libraries'],
+    keywords: ['library tags', 'tag list', 'open source', 'license metadata'],
   },
 };
 
@@ -175,7 +175,7 @@ export function buildLibraryRouteHead(data: LibraryRouteLoaderData | undefined) 
         lib.license,
         lib.category,
         '오픈소스',
-        '무료 라이브러리',
+        '라이선스 메타데이터',
         ...tags.slice(0, 3),
       ],
     },
@@ -188,7 +188,7 @@ export function buildLibraryRouteHead(data: LibraryRouteLoaderData | undefined) 
         lib.license,
         lib.category,
         'open source',
-        'free library',
+        'license metadata',
         ...tags.slice(0, 3),
       ],
     },
@@ -253,7 +253,7 @@ export function buildTagRouteHead(data: TagRouteLoaderData | undefined) {
     en: {
       title: `#${tag} Tag | Permissive`,
       description: `${libraries.length} libraries tagged with "${tag}"`,
-      keywords: [tag, 'library tag', 'open source', 'free libraries'],
+      keywords: [tag, 'library tag', 'open source', 'license metadata'],
     },
   };
 }

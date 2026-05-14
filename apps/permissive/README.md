@@ -1,6 +1,6 @@
 # Permissive
 
-> **Free Web Dev Tools Collection (무료 웹개발 도구 모음)**
+> **Open Web Dev Resources (오픈 웹개발 리소스)**
 
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue)](LICENSE)
 [![TanStack Start](https://img.shields.io/badge/TanStack_Start-v1-FF4154?logo=react)](https://tanstack.com/start)
@@ -12,9 +12,9 @@
 
 ## What is this? (이게 뭔가요?)
 
-A comprehensive collection of free web development resources:
+A comprehensive collection of web standards and open-source web development resources:
 
-- **110 Libraries** - MIT/OSS licensed libraries with detail pages
+- **120 Libraries** - open-source libraries with license details
 - **56 Web APIs** - Browser built-in APIs
 - **Search** - MiniSearch-based instant search
 
@@ -38,13 +38,12 @@ Cloudflare Workers:
 ### Data Architecture
 
 ```
-data/permissive/          # Centralized JSON (SSoT)
-├── libraries.json        # 88 libraries
-└── web-apis.json         # 56 Web APIs
+app/data/                 # Runtime data (SSoT)
+├── libraries.ts          # 120 libraries with license metadata
+└── web-apis.ts           # 56 Web APIs
 
-app/data/
-├── libraries.ts          # TypeScript wrapper with types
-└── web-apis.ts           # TypeScript wrapper with types
+public/
+└── search-index.json     # Generated search index
 ```
 
 ---
@@ -55,7 +54,7 @@ app/data/
 |:------|:--:|:--:|:----:|:------------|
 | `/` | ✓ | ✓ | SSR | Home with search |
 | `/libraries` | ✓ | ✓ | SSR | Libraries list |
-| `/library/:slug` | ✓ | ✓ | SSR | Library detail page (88) |
+| `/library/:slug` | ✓ | ✓ | SSR | Library detail page (120) |
 | `/sitemap` | ✓ | ✓ | SSR | Sitemap |
 
 **Mode:** SSR (Cloudflare Workers)

@@ -1,5 +1,10 @@
 import { Link } from '@tanstack/react-router';
 import { ChevronRight, Globe, Package } from 'lucide-react';
+import { libraries } from '../../data/libraries';
+import { webApis } from '../../data/web-apis';
+
+const libraryCount = libraries.length;
+const webApiCount = webApis.length;
 
 interface MainCardsProps {
   locale: 'en' | 'ko';
@@ -24,7 +29,7 @@ export function MainCards({ locale, localePath }: MainCardsProps) {
             : 'Browser built-in APIs. Free to use, no installation'}
         </p>
         <div className="flex items-center justify-between">
-          <div className="text-2xl font-bold text-(--accent-primary)">58</div>
+          <div className="text-2xl font-bold text-(--accent-primary)">{webApiCount}</div>
           <div className="flex items-center gap-1 text-sm text-(--accent-primary) font-medium">
             {locale === 'ko' ? '둘러보기' : 'Browse'}
             <ChevronRight
@@ -47,11 +52,11 @@ export function MainCards({ locale, localePath }: MainCardsProps) {
         <h2 className="text-xl font-semibold text-(--text-primary) mb-2">Libraries</h2>
         <p className="text-sm text-(--text-secondary) mb-4">
           {locale === 'ko'
-            ? 'MIT 라이센스 오픈소스. 상업적 사용 가능'
-            : 'MIT licensed open source. Free for commercial use'}
+            ? '라이선스가 명시된 오픈소스 라이브러리'
+            : 'Open-source libraries with license details'}
         </p>
         <div className="flex items-center justify-between">
-          <div className="text-2xl font-bold text-(--accent-primary)">100+</div>
+          <div className="text-2xl font-bold text-(--accent-primary)">{libraryCount}</div>
           <div className="flex items-center gap-1 text-sm text-(--accent-primary) font-medium">
             {locale === 'ko' ? '둘러보기' : 'Browse'}
             <ChevronRight

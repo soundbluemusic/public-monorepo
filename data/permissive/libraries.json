@@ -1,8 +1,8 @@
 [
   {
-    "name": "React Router v7",
-    "description": "Full-stack React framework with SSG/SSR",
-    "descriptionKo": "SSG/SSR 지원 풀스택 React 프레임워크",
+    "name": "React Router",
+    "description": "Declarative routing for React",
+    "descriptionKo": "React를 위한 선언적 라우팅",
     "category": "Routing",
     "license": "MIT",
     "github": "https://github.com/remix-run/react-router",
@@ -11,13 +11,12 @@
     "stars": "53k",
     "usedHere": true,
     "trending": true,
-    "yearReleased": 2024,
+    "yearReleased": 2014,
     "tags": [
       "React",
       "SSG",
       "SSR",
-      "TypeScript",
-      "Framework"
+      "TypeScript"
     ]
   },
   {
@@ -27,7 +26,7 @@
     "category": "Routing",
     "license": "MIT",
     "github": "https://github.com/TanStack/router",
-    "website": "https://tanstack.com/router",
+    "website": "https://tanstack.com/router/latest",
     "npm": "@tanstack/react-router",
     "stars": "8k",
     "trending": true,
@@ -134,7 +133,7 @@
     "category": "Meta-frameworks",
     "license": "MIT",
     "github": "https://github.com/sveltejs/kit",
-    "website": "https://kit.svelte.dev",
+    "website": "https://svelte.dev/docs/kit/introduction",
     "npm": "@sveltejs/kit",
     "stars": "18k",
     "trending": true,
@@ -178,8 +177,7 @@
     "tags": [
       "React",
       "SSG",
-      "GraphQL",
-      "Legacy"
+      "GraphQL"
     ]
   },
   {
@@ -323,20 +321,19 @@
   },
   {
     "name": "Turbopack",
-    "description": "Incremental bundler for web",
-    "descriptionKo": "웹을 위한 증분 번들러",
+    "description": "Incremental bundler integrated with Next.js",
+    "descriptionKo": "Next.js에 통합된 증분 번들러",
     "category": "Build Tools",
-    "license": "MPL-2.0",
-    "github": "https://github.com/vercel/turbo",
-    "website": "https://turbo.build/pack",
-    "npm": "turbopack",
-    "stars": "27k",
+    "license": "MIT",
+    "github": "https://github.com/vercel/next.js",
+    "website": "https://nextjs.org/docs/app/api-reference/turbopack",
+    "stars": "139k",
     "trending": true,
     "yearReleased": 2022,
     "tags": [
       "Build",
-      "Rust",
-      "Fast"
+      "Next.js",
+      "Rust"
     ]
   },
   {
@@ -346,7 +343,7 @@
     "category": "Build Tools",
     "license": "MIT",
     "github": "https://github.com/web-infra-dev/rspack",
-    "website": "https://rspack.dev",
+    "website": "https://rspack.rs",
     "npm": "@rspack/core",
     "stars": "10k",
     "trending": true,
@@ -388,7 +385,7 @@
     "yearReleased": 2012,
     "tags": [
       "Build",
-      "Legacy"
+      "Classic"
     ]
   },
   {
@@ -502,8 +499,7 @@
     "category": "Runtime",
     "license": "MIT",
     "github": "https://github.com/nodejs/node",
-    "website": "https://nodejs.org",
-    "npm": "node",
+    "website": "https://nodejs.org/en",
     "stars": "108k",
     "yearReleased": 2009,
     "tags": [
@@ -566,24 +562,6 @@
     ]
   },
   {
-    "name": "Recoil",
-    "description": "State management for React",
-    "descriptionKo": "React를 위한 상태 관리",
-    "category": "State Management",
-    "license": "MIT",
-    "github": "https://github.com/facebookexperimental/Recoil",
-    "website": "https://recoiljs.org",
-    "npm": "recoil",
-    "stars": "20k",
-    "yearReleased": 2020,
-    "tags": [
-      "React",
-      "Atomic",
-      "TypeScript",
-      "Legacy"
-    ]
-  },
-  {
     "name": "MobX",
     "description": "Simple, scalable state management",
     "descriptionKo": "간단하고 확장 가능한 상태 관리",
@@ -606,7 +584,7 @@
     "category": "State Management",
     "license": "MIT",
     "github": "https://github.com/pmndrs/valtio",
-    "website": "https://valtio.pmnd.rs",
+    "website": "https://valtio.dev",
     "npm": "valtio",
     "stars": "9k",
     "trending": true,
@@ -624,7 +602,7 @@
     "category": "State Management",
     "license": "MIT",
     "github": "https://github.com/statelyai/xstate",
-    "website": "https://xstate.js.org",
+    "website": "https://stately.ai/docs",
     "npm": "xstate",
     "stars": "27k",
     "yearReleased": 2015,
@@ -658,7 +636,7 @@
     "category": "Data Fetching",
     "license": "MIT",
     "github": "https://github.com/TanStack/query",
-    "website": "https://tanstack.com/query",
+    "website": "https://tanstack.com/query/latest",
     "npm": "@tanstack/react-query",
     "stars": "43k",
     "trending": true,
@@ -729,7 +707,7 @@
     "category": "Data Fetching",
     "license": "MIT",
     "github": "https://github.com/axios/axios",
-    "website": "https://axios-http.com",
+    "website": "https://axios.rest",
     "npm": "axios",
     "stars": "106k",
     "yearReleased": 2014,
@@ -778,7 +756,7 @@
     "descriptionKo": "모듈식 타입 안전 스키마 라이브러리",
     "category": "Type Safety",
     "license": "MIT",
-    "github": "https://github.com/fabian-hiller/valibot",
+    "github": "https://github.com/open-circle/valibot",
     "website": "https://valibot.dev",
     "npm": "valibot",
     "stars": "7k",
@@ -871,8 +849,7 @@
     "yearReleased": 2016,
     "tags": [
       "CSS-in-JS",
-      "React",
-      "Legacy"
+      "React"
     ]
   },
   {
@@ -882,14 +859,13 @@
     "category": "Styling",
     "license": "MIT",
     "github": "https://github.com/emotion-js/emotion",
-    "website": "https://emotion.sh",
+    "website": "https://emotion.sh/docs/introduction",
     "npm": "@emotion/react",
     "stars": "17k",
     "yearReleased": 2017,
     "tags": [
       "CSS-in-JS",
-      "React",
-      "Legacy"
+      "React"
     ]
   },
   {
@@ -898,15 +874,14 @@
     "descriptionKo": "슈퍼파워가 있는 CSS",
     "category": "Styling",
     "license": "MIT",
-    "github": "https://github.com/sass/sass",
+    "github": "https://github.com/sass/dart-sass",
     "website": "https://sass-lang.com",
     "npm": "sass",
     "stars": "15k",
     "yearReleased": 2006,
     "tags": [
       "CSS",
-      "Preprocessor",
-      "Legacy"
+      "Preprocessor"
     ]
   },
   {
@@ -1003,7 +978,7 @@
     "category": "UI Components",
     "license": "Apache-2.0",
     "github": "https://github.com/adobe/react-spectrum",
-    "website": "https://react-spectrum.adobe.com/react-aria",
+    "website": "https://react-aria.adobe.com/",
     "npm": "react-aria",
     "stars": "13k",
     "trending": true,
@@ -1120,48 +1095,14 @@
     "descriptionKo": "아름답게 디자인된 컴포넌트",
     "category": "UI Components",
     "license": "MIT",
-    "github": "https://github.com/cschroeter/park-ui",
+    "github": "https://github.com/chakra-ui/park-ui",
     "website": "https://park-ui.com",
-    "npm": "@park-ui/react",
     "stars": "2k",
     "trending": true,
     "yearReleased": 2023,
     "tags": [
       "React",
       "Panda CSS"
-    ]
-  },
-  {
-    "name": "Framer Motion",
-    "description": "Production-ready motion library",
-    "descriptionKo": "프로덕션 준비된 모션 라이브러리",
-    "category": "Animation",
-    "license": "MIT",
-    "github": "https://github.com/framer/motion",
-    "website": "https://www.framer.com/motion",
-    "npm": "framer-motion",
-    "stars": "25k",
-    "trending": true,
-    "yearReleased": 2018,
-    "tags": [
-      "React",
-      "Animation"
-    ]
-  },
-  {
-    "name": "GSAP",
-    "description": "Professional-grade animation",
-    "descriptionKo": "전문가급 애니메이션",
-    "category": "Animation",
-    "license": "Custom",
-    "github": "https://github.com/greensock/GSAP",
-    "website": "https://gsap.com",
-    "npm": "gsap",
-    "stars": "20k",
-    "yearReleased": 2006,
-    "tags": [
-      "Animation",
-      "Professional"
     ]
   },
   {
@@ -1198,20 +1139,21 @@
     ]
   },
   {
-    "name": "Motion One",
-    "description": "Smallest animation library",
-    "descriptionKo": "가장 작은 애니메이션 라이브러리",
+    "name": "Motion",
+    "description": "Modern animation library for JavaScript and React",
+    "descriptionKo": "JavaScript와 React를 위한 모던 애니메이션 라이브러리",
     "category": "Animation",
     "license": "MIT",
-    "github": "https://github.com/motiondivision/motionone",
+    "github": "https://github.com/motiondivision/motion",
     "website": "https://motion.dev",
     "npm": "motion",
-    "stars": "6k",
+    "stars": "32k",
     "trending": true,
     "yearReleased": 2021,
     "tags": [
       "Animation",
-      "Minimal"
+      "React",
+      "JavaScript"
     ]
   },
   {
@@ -1239,7 +1181,7 @@
     "category": "Forms",
     "license": "MIT",
     "github": "https://github.com/TanStack/form",
-    "website": "https://tanstack.com/form",
+    "website": "https://tanstack.com/form/latest",
     "npm": "@tanstack/react-form",
     "stars": "4k",
     "trending": true,
@@ -1263,8 +1205,7 @@
     "yearReleased": 2017,
     "tags": [
       "React",
-      "Forms",
-      "Legacy"
+      "Forms"
     ]
   },
   {
@@ -1280,8 +1221,7 @@
     "yearReleased": 2017,
     "tags": [
       "React",
-      "Forms",
-      "Legacy"
+      "Forms"
     ]
   },
   {
@@ -1386,545 +1326,979 @@
     ]
   },
   {
-    "name": "Paraglide",
-    "description": "Compile-time i18n with type safety",
-    "descriptionKo": "타입 안전 컴파일타임 국제화",
-    "category": "i18n",
-    "license": "Apache-2.0",
-    "github": "https://github.com/opral/inlang-paraglide-js",
-    "website": "https://inlang.com/m/gerre34r/library-inlang-paraglideJs",
-    "npm": "@inlang/paraglide-js",
-    "stars": "3k",
-    "usedHere": true,
-    "trending": true,
-    "yearReleased": 2023,
-    "tags": [
-      "i18n",
-      "TypeScript",
-      "Compile-time"
-    ]
-  },
-  {
-    "name": "Lucide",
-    "description": "Beautiful & consistent icons",
-    "descriptionKo": "아름답고 일관된 아이콘",
-    "category": "Icons",
-    "license": "ISC",
-    "github": "https://github.com/lucide-icons/lucide",
-    "website": "https://lucide.dev",
-    "npm": "lucide-react",
-    "stars": "12k",
-    "usedHere": true,
-    "trending": true,
-    "yearReleased": 2020,
-    "tags": [
-      "Icons",
-      "React",
-      "SVG"
-    ]
-  },
-  {
-    "name": "pnpm",
-    "description": "Fast, disk space efficient package manager",
-    "descriptionKo": "빠르고 디스크 효율적인 패키지 매니저",
-    "category": "Package Manager",
+    "name": "FFmpeg.wasm",
+    "description": "FFmpeg compiled to WebAssembly for browser video/audio processing",
+    "descriptionKo": "브라우저에서 비디오/오디오 처리를 위해 WebAssembly로 컴파일된 FFmpeg",
+    "category": "WASM Runtime",
     "license": "MIT",
-    "github": "https://github.com/pnpm/pnpm",
-    "website": "https://pnpm.io",
-    "npm": "pnpm",
-    "stars": "30k",
-    "usedHere": true,
-    "trending": true,
-    "yearReleased": 2016,
-    "tags": [
-      "Package Manager",
-      "Monorepo",
-      "Fast"
-    ]
-  },
-  {
-    "name": "date-fns",
-    "description": "Modern JavaScript date utility library",
-    "descriptionKo": "모던 자바스크립트 날짜 유틸리티",
-    "category": "Utilities",
-    "license": "MIT",
-    "github": "https://github.com/date-fns/date-fns",
-    "website": "https://date-fns.org",
-    "npm": "date-fns",
-    "stars": "35k",
-    "trending": true,
-    "yearReleased": 2014,
-    "tags": [
-      "Date",
-      "TypeScript",
-      "Tree-shakable"
-    ]
-  },
-  {
-    "name": "Prisma",
-    "description": "Next-generation TypeScript ORM",
-    "descriptionKo": "차세대 TypeScript ORM",
-    "category": "ORM",
-    "license": "Apache-2.0",
-    "github": "https://github.com/prisma/prisma",
-    "website": "https://www.prisma.io",
-    "npm": "@prisma/client",
-    "stars": "40k",
+    "github": "https://github.com/ffmpegwasm/ffmpeg.wasm",
+    "website": "https://ffmpegwasm.netlify.app",
+    "npm": "@ffmpeg/ffmpeg",
+    "stars": "14k",
     "trending": true,
     "yearReleased": 2019,
+    "wasmBased": true,
     "tags": [
-      "ORM",
-      "TypeScript",
-      "Database"
-    ]
+      "WASM",
+      "Video",
+      "Audio",
+      "Codec"
+    ],
+    "useCases": {
+      "en": "Video editing, format conversion, thumbnail extraction, audio processing in the browser without server",
+      "ko": "서버 없이 브라우저에서 비디오 편집, 포맷 변환, 썸네일 추출, 오디오 처리"
+    },
+    "codeExample": "import { FFmpeg } from '@ffmpeg/ffmpeg';\nconst ffmpeg = new FFmpeg();\nawait ffmpeg.load();\nawait ffmpeg.exec(['-i', 'input.mp4', 'output.gif']);"
   },
   {
-    "name": "Drizzle",
-    "description": "TypeScript ORM with SQL-like syntax",
-    "descriptionKo": "SQL 문법의 TypeScript ORM",
-    "category": "ORM",
-    "license": "Apache-2.0",
-    "github": "https://github.com/drizzle-team/drizzle-orm",
-    "website": "https://orm.drizzle.team",
-    "npm": "drizzle-orm",
-    "stars": "26k",
-    "trending": true,
-    "yearReleased": 2022,
-    "tags": [
-      "ORM",
-      "TypeScript",
-      "SQL"
-    ]
-  },
-  {
-    "name": "TanStack Table",
-    "description": "Headless UI for building tables",
-    "descriptionKo": "테이블 구축을 위한 Headless UI",
-    "category": "Data Display",
+    "name": "sql.js",
+    "description": "SQLite compiled to JavaScript via Emscripten",
+    "descriptionKo": "Emscripten을 통해 JavaScript로 컴파일된 SQLite",
+    "category": "WASM Runtime",
     "license": "MIT",
-    "github": "https://github.com/TanStack/table",
-    "website": "https://tanstack.com/table",
-    "npm": "@tanstack/react-table",
-    "stars": "25k",
+    "github": "https://github.com/sql-js/sql.js",
+    "website": "https://sql.js.org",
+    "npm": "sql.js",
+    "stars": "13k",
+    "trending": true,
+    "yearReleased": 2014,
+    "wasmBased": true,
+    "tags": [
+      "WASM",
+      "Database",
+      "SQLite"
+    ],
+    "useCases": {
+      "en": "Client-side databases, offline-first apps, data analysis in browser, educational SQL tools",
+      "ko": "클라이언트 측 데이터베이스, 오프라인 우선 앱, 브라우저 데이터 분석, SQL 학습 도구"
+    },
+    "codeExample": "import initSqlJs from 'sql.js';\nconst SQL = await initSqlJs();\nconst db = new SQL.Database();\ndb.run('CREATE TABLE users (id, name)');\ndb.run('INSERT INTO users VALUES (1, \"Alice\")');"
+  },
+  {
+    "name": "Pyodide",
+    "description": "Python runtime for the browser via WebAssembly",
+    "descriptionKo": "WebAssembly를 통한 브라우저용 Python 런타임",
+    "category": "WASM Runtime",
+    "license": "MPL-2.0",
+    "github": "https://github.com/pyodide/pyodide",
+    "website": "https://pyodide.org/en/stable/",
+    "npm": "pyodide",
+    "stars": "12k",
+    "trending": true,
+    "yearReleased": 2019,
+    "wasmBased": true,
+    "tags": [
+      "WASM",
+      "Python",
+      "Scientific"
+    ],
+    "useCases": {
+      "en": "Run Python in browser, data science notebooks, NumPy/Pandas in web apps, Python education",
+      "ko": "브라우저에서 Python 실행, 데이터 과학 노트북, 웹 앱에서 NumPy/Pandas, Python 교육"
+    },
+    "codeExample": "import { loadPyodide } from 'pyodide';\nconst pyodide = await loadPyodide();\nawait pyodide.loadPackage('numpy');\nconst result = pyodide.runPython('import numpy; numpy.array([1, 2, 3])');"
+  },
+  {
+    "name": "AssemblyScript",
+    "description": "TypeScript-like language that compiles to WebAssembly",
+    "descriptionKo": "WebAssembly로 컴파일되는 TypeScript 유사 언어",
+    "category": "WASM Runtime",
+    "license": "Apache-2.0",
+    "github": "https://github.com/AssemblyScript/assemblyscript",
+    "website": "https://www.assemblyscript.org",
+    "npm": "assemblyscript",
+    "stars": "17k",
+    "trending": true,
+    "yearReleased": 2017,
+    "wasmBased": true,
+    "tags": [
+      "WASM",
+      "TypeScript",
+      "Compiler"
+    ],
+    "useCases": {
+      "en": "Write performant WASM modules in TypeScript syntax, game engines, crypto algorithms",
+      "ko": "TypeScript 문법으로 고성능 WASM 모듈 작성, 게임 엔진, 암호화 알고리즘"
+    },
+    "codeExample": "// add.ts (AssemblyScript)\nexport function add(a: i32, b: i32): i32 {\n  return a + b;\n}\n// Compile: asc add.ts -o add.wasm"
+  },
+  {
+    "name": "wasm-bindgen",
+    "description": "Facilitates communication between Rust and JavaScript",
+    "descriptionKo": "Rust와 JavaScript 간 통신을 용이하게 하는 도구",
+    "category": "WASM Runtime",
+    "license": "MIT OR Apache-2.0",
+    "github": "https://github.com/wasm-bindgen/wasm-bindgen",
+    "website": "https://rustwasm.github.io/docs/wasm-bindgen/",
+    "stars": "9k",
+    "yearReleased": 2018,
+    "wasmBased": true,
+    "tags": [
+      "WASM",
+      "Rust",
+      "Binding"
+    ],
+    "useCases": {
+      "en": "Build Rust libraries for web, call JavaScript from Rust, expose Rust APIs to JavaScript",
+      "ko": "웹용 Rust 라이브러리 빌드, Rust에서 JavaScript 호출, JavaScript에 Rust API 노출"
+    },
+    "codeExample": "// Rust code\nuse wasm_bindgen::prelude::*;\n#[wasm_bindgen]\npub fn greet(name: &str) -> String {\n    format!(\"Hello, {}!\", name)\n}"
+  },
+  {
+    "name": "Emscripten",
+    "description": "LLVM-to-WebAssembly compiler toolchain",
+    "descriptionKo": "LLVM에서 WebAssembly로 컴파일하는 툴체인",
+    "category": "WASM Runtime",
+    "license": "MIT",
+    "github": "https://github.com/emscripten-core/emscripten",
+    "website": "https://emscripten.org",
+    "stars": "26k",
+    "yearReleased": 2011,
+    "wasmBased": true,
+    "tags": [
+      "WASM",
+      "C",
+      "C++",
+      "Compiler"
+    ],
+    "useCases": {
+      "en": "Port C/C++ libraries to web, compile games to browser, bring native code to JavaScript",
+      "ko": "C/C++ 라이브러리를 웹으로 포팅, 게임을 브라우저로 컴파일, 네이티브 코드를 JavaScript로"
+    },
+    "codeExample": "// Compile C code to WASM\n// emcc hello.c -o hello.js -s WASM=1\n#include <stdio.h>\nint main() {\n  printf(\"Hello from WASM!\\n\");\n  return 0;\n}"
+  },
+  {
+    "name": "OpenCV.js",
+    "description": "OpenCV compiled to JavaScript for browser-based computer vision",
+    "descriptionKo": "브라우저 기반 컴퓨터 비전을 위해 JavaScript로 컴파일된 OpenCV",
+    "category": "Computer Vision",
+    "license": "Apache-2.0",
+    "github": "https://github.com/opencv/opencv",
+    "website": "https://docs.opencv.org/4.x/d5/d10/tutorial_js_root.html",
+    "npm": "@techstark/opencv-js",
+    "stars": "79k",
+    "trending": true,
+    "yearReleased": 2017,
+    "wasmBased": true,
+    "tags": [
+      "WASM",
+      "Vision",
+      "Image"
+    ],
+    "useCases": {
+      "en": "Face detection, object tracking, image filtering, edge detection, feature matching",
+      "ko": "얼굴 감지, 객체 추적, 이미지 필터링, 에지 감지, 특징점 매칭"
+    },
+    "codeExample": "const cv = await import('@techstark/opencv-js');\nconst src = cv.imread('image');\nconst dst = new cv.Mat();\ncv.cvtColor(src, dst, cv.COLOR_RGBA2GRAY);\ncv.imshow('output', dst);"
+  },
+  {
+    "name": "MediaPipe",
+    "description": "Google ML solutions for face, hand, and pose detection",
+    "descriptionKo": "얼굴, 손, 자세 감지를 위한 Google ML 솔루션",
+    "category": "Computer Vision",
+    "license": "Apache-2.0",
+    "github": "https://github.com/google-ai-edge/mediapipe",
+    "website": "https://ai.google.dev/edge/mediapipe/solutions/guide",
+    "npm": "@mediapipe/tasks-vision",
+    "stars": "28k",
+    "trending": true,
+    "yearReleased": 2019,
+    "wasmBased": true,
+    "tags": [
+      "ML",
+      "Google",
+      "Pose",
+      "Hand"
+    ],
+    "useCases": {
+      "en": "Hand tracking, pose estimation, face mesh, gesture recognition, AR filters",
+      "ko": "손 추적, 자세 추정, 얼굴 메시, 제스처 인식, AR 필터"
+    },
+    "codeExample": "import { FaceLandmarker, FilesetResolver } from '@mediapipe/tasks-vision';\nconst vision = await FilesetResolver.forVisionTasks('...');\nconst landmarker = await FaceLandmarker.createFromOptions(vision, { ... });\nconst results = landmarker.detect(image);"
+  },
+  {
+    "name": "TensorFlow.js",
+    "description": "Machine learning library for JavaScript",
+    "descriptionKo": "JavaScript용 머신러닝 라이브러리",
+    "category": "Machine Learning",
+    "license": "Apache-2.0",
+    "github": "https://github.com/tensorflow/tfjs",
+    "website": "https://www.tensorflow.org/js",
+    "npm": "@tensorflow/tfjs",
+    "stars": "18k",
+    "trending": true,
+    "yearReleased": 2018,
+    "wasmBased": true,
+    "tags": [
+      "ML",
+      "AI",
+      "Google",
+      "WASM"
+    ],
+    "useCases": {
+      "en": "Train ML models in browser, run pre-trained models, transfer learning, real-time predictions",
+      "ko": "브라우저에서 ML 모델 학습, 사전 학습 모델 실행, 전이 학습, 실시간 예측"
+    },
+    "codeExample": "import * as tf from '@tensorflow/tfjs';\nconst model = tf.sequential();\nmodel.add(tf.layers.dense({ units: 1, inputShape: [1] }));\nmodel.compile({ loss: 'meanSquaredError', optimizer: 'sgd' });"
+  },
+  {
+    "name": "ONNX Runtime Web",
+    "description": "Run ONNX models in browser with WebAssembly/WebGL",
+    "descriptionKo": "WebAssembly/WebGL로 브라우저에서 ONNX 모델 실행",
+    "category": "Machine Learning",
+    "license": "MIT",
+    "github": "https://github.com/microsoft/onnxruntime",
+    "website": "https://onnxruntime.ai",
+    "npm": "onnxruntime-web",
+    "stars": "15k",
+    "trending": true,
+    "yearReleased": 2019,
+    "wasmBased": true,
+    "tags": [
+      "ML",
+      "ONNX",
+      "Microsoft",
+      "WASM"
+    ],
+    "useCases": {
+      "en": "Run PyTorch/TensorFlow models in browser, cross-platform ML inference, edge AI",
+      "ko": "브라우저에서 PyTorch/TensorFlow 모델 실행, 크로스 플랫폼 ML 추론, 엣지 AI"
+    },
+    "codeExample": "import * as ort from 'onnxruntime-web';\nconst session = await ort.InferenceSession.create('model.onnx');\nconst results = await session.run({ input: tensor });"
+  },
+  {
+    "name": "Transformers.js",
+    "description": "Run Hugging Face transformers in the browser",
+    "descriptionKo": "브라우저에서 Hugging Face 트랜스포머 실행",
+    "category": "Machine Learning",
+    "license": "Apache-2.0",
+    "github": "https://github.com/huggingface/transformers.js",
+    "website": "https://huggingface.co/docs/transformers.js/index",
+    "npm": "@huggingface/transformers",
+    "stars": "16k",
+    "trending": true,
+    "yearReleased": 2023,
+    "wasmBased": true,
+    "tags": [
+      "ML",
+      "NLP",
+      "Hugging Face",
+      "WASM"
+    ],
+    "useCases": {
+      "en": "Text generation, translation, summarization, sentiment analysis, image classification",
+      "ko": "텍스트 생성, 번역, 요약, 감정 분석, 이미지 분류"
+    },
+    "codeExample": "import { pipeline } from '@huggingface/transformers';\nconst classifier = await pipeline('sentiment-analysis');\nconst result = await classifier('I love this!');\n// [{ label: 'POSITIVE', score: 0.99 }]"
+  },
+  {
+    "name": "ml5.js",
+    "description": "Friendly machine learning for the web",
+    "descriptionKo": "웹을 위한 친화적인 머신러닝",
+    "category": "Machine Learning",
+    "license": "MIT",
+    "github": "https://github.com/ml5js/ml5-next-gen",
+    "website": "https://ml5js.org",
+    "npm": "ml5",
+    "stars": "200",
+    "yearReleased": 2018,
+    "tags": [
+      "ML",
+      "Beginner",
+      "p5.js"
+    ],
+    "useCases": {
+      "en": "Creative coding with ML, beginner-friendly AI, image classification, pose detection",
+      "ko": "ML을 활용한 크리에이티브 코딩, 초보자 친화적 AI, 이미지 분류, 자세 감지"
+    },
+    "codeExample": "const classifier = ml5.imageClassifier('MobileNet', modelReady);\nfunction modelReady() {\n  classifier.classify(document.getElementById('image'), gotResult);\n}"
+  },
+  {
+    "name": "Brain.js",
+    "description": "GPU accelerated neural networks in JavaScript",
+    "descriptionKo": "JavaScript에서 GPU 가속 신경망",
+    "category": "Machine Learning",
+    "license": "MIT",
+    "github": "https://github.com/BrainJS/brain.js",
+    "website": "https://brain.js.org",
+    "npm": "brain.js",
+    "stars": "14k",
+    "yearReleased": 2010,
+    "tags": [
+      "ML",
+      "Neural Network",
+      "GPU"
+    ],
+    "useCases": {
+      "en": "Simple neural networks, pattern recognition, time series prediction, text classification",
+      "ko": "간단한 신경망, 패턴 인식, 시계열 예측, 텍스트 분류"
+    },
+    "codeExample": "const brain = require('brain.js');\nconst net = new brain.NeuralNetwork();\nnet.train([{ input: [0, 0], output: [0] }, { input: [1, 1], output: [1] }]);\nconst output = net.run([1, 0]);"
+  },
+  {
+    "name": "CanvasKit",
+    "description": "Skia graphics library compiled to WebAssembly",
+    "descriptionKo": "WebAssembly로 컴파일된 Skia 그래픽 라이브러리",
+    "category": "Graphics/Canvas",
+    "license": "BSD-3-Clause",
+    "github": "https://github.com/google/skia",
+    "website": "https://skia.org/docs/user/modules/canvaskit/",
+    "npm": "canvaskit-wasm",
+    "stars": "11k",
+    "trending": true,
+    "yearReleased": 2019,
+    "wasmBased": true,
+    "tags": [
+      "WASM",
+      "Graphics",
+      "Skia"
+    ],
+    "useCases": {
+      "en": "High-performance 2D graphics, Flutter web rendering, PDF generation, SVG rendering",
+      "ko": "고성능 2D 그래픽, Flutter 웹 렌더링, PDF 생성, SVG 렌더링"
+    },
+    "codeExample": "import CanvasKitInit from 'canvaskit-wasm';\nconst CanvasKit = await CanvasKitInit();\nconst surface = CanvasKit.MakeCanvasSurface('canvas');\nconst canvas = surface.getCanvas();"
+  },
+  {
+    "name": "Konva",
+    "description": "2D canvas library for desktop and mobile",
+    "descriptionKo": "데스크톱 및 모바일용 2D 캔버스 라이브러리",
+    "category": "Graphics/Canvas",
+    "license": "MIT",
+    "github": "https://github.com/konvajs/konva",
+    "website": "https://konvajs.org",
+    "npm": "konva",
+    "stars": "11k",
     "trending": true,
     "yearReleased": 2015,
     "tags": [
-      "React",
-      "Headless",
-      "TypeScript"
-    ]
+      "Canvas",
+      "2D",
+      "Interactive"
+    ],
+    "useCases": {
+      "en": "Interactive graphics, drag-and-drop editors, data visualization, image annotation",
+      "ko": "인터랙티브 그래픽, 드래그 앤 드롭 에디터, 데이터 시각화, 이미지 주석"
+    },
+    "codeExample": "import Konva from 'konva';\nconst stage = new Konva.Stage({ container: 'container', width: 500, height: 500 });\nconst layer = new Konva.Layer();\nconst circle = new Konva.Circle({ x: 100, y: 100, radius: 50, fill: 'red' });\nlayer.add(circle); stage.add(layer);"
   },
   {
-    "name": "Hono",
-    "description": "Ultrafast web framework for the Edge",
-    "descriptionKo": "Edge를 위한 초고속 웹 프레임워크",
-    "category": "Server",
+    "name": "Fabric.js",
+    "description": "Powerful canvas library with interactive object model",
+    "descriptionKo": "인터랙티브 객체 모델을 갖춘 강력한 캔버스 라이브러리",
+    "category": "Graphics/Canvas",
     "license": "MIT",
-    "github": "https://github.com/honojs/hono",
-    "website": "https://hono.dev",
-    "npm": "hono",
-    "stars": "21k",
-    "trending": true,
-    "yearReleased": 2021,
+    "github": "https://github.com/fabricjs/fabric.js",
+    "website": "https://fabricjs.com",
+    "npm": "fabric",
+    "stars": "29k",
+    "yearReleased": 2010,
     "tags": [
-      "Edge",
-      "TypeScript",
-      "Fast"
-    ]
+      "Canvas",
+      "Editor",
+      "SVG"
+    ],
+    "useCases": {
+      "en": "Image editors, design tools, whiteboard apps, canvas-based games",
+      "ko": "이미지 에디터, 디자인 도구, 화이트보드 앱, 캔버스 기반 게임"
+    },
+    "codeExample": "import { Canvas, Rect } from 'fabric';\nconst canvas = new Canvas('c');\nconst rect = new Rect({ left: 100, top: 100, fill: 'red', width: 50, height: 50 });\ncanvas.add(rect);"
   },
   {
-    "name": "Angular",
-    "description": "Platform for building web applications",
-    "descriptionKo": "웹 애플리케이션 구축 플랫폼",
-    "category": "Frameworks",
+    "name": "Paper.js",
+    "description": "Vector graphics scripting framework",
+    "descriptionKo": "벡터 그래픽 스크립팅 프레임워크",
+    "category": "Graphics/Canvas",
     "license": "MIT",
-    "github": "https://github.com/angular/angular",
-    "website": "https://angular.dev",
-    "npm": "@angular/core",
-    "stars": "98k",
-    "yearReleased": 2016,
-    "tags": [
-      "TypeScript",
-      "Google",
-      "Enterprise",
-      "Signals"
-    ]
-  },
-  {
-    "name": "Ember.js",
-    "description": "Framework for ambitious web applications",
-    "descriptionKo": "대규모 웹 애플리케이션을 위한 프레임워크",
-    "category": "Frameworks",
-    "license": "MIT",
-    "github": "https://github.com/emberjs/ember.js",
-    "website": "https://emberjs.com",
-    "npm": "ember-source",
-    "stars": "22k",
+    "github": "https://github.com/paperjs/paper.js",
+    "npm": "paper",
+    "stars": "14k",
     "yearReleased": 2011,
     "tags": [
-      "Convention",
-      "Enterprise",
-      "Classic"
-    ]
+      "Canvas",
+      "Vector",
+      "SVG"
+    ],
+    "useCases": {
+      "en": "Vector illustrations, generative art, path manipulation, interactive graphics",
+      "ko": "벡터 일러스트레이션, 제너레이티브 아트, 경로 조작, 인터랙티브 그래픽"
+    },
+    "codeExample": "import paper from 'paper';\npaper.setup('myCanvas');\nconst path = new paper.Path.Circle(new paper.Point(80, 50), 30);\npath.fillColor = 'red';"
   },
   {
-    "name": "htmx",
-    "description": "High power tools for HTML",
-    "descriptionKo": "HTML을 위한 고급 도구",
-    "category": "Frameworks",
-    "license": "BSD-2-Clause",
-    "github": "https://github.com/bigskysoftware/htmx",
-    "website": "https://htmx.org",
-    "npm": "htmx.org",
-    "stars": "42k",
-    "trending": true,
-    "yearReleased": 2020,
+    "name": "p5.js",
+    "description": "JavaScript library for creative coding",
+    "descriptionKo": "크리에이티브 코딩을 위한 JavaScript 라이브러리",
+    "category": "Graphics/Canvas",
+    "license": "LGPL-2.1",
+    "github": "https://github.com/processing/p5.js",
+    "website": "https://p5js.org",
+    "npm": "p5",
+    "stars": "22k",
+    "yearReleased": 2014,
     "tags": [
-      "HTML",
-      "Server-driven",
-      "No-build"
-    ]
+      "Creative",
+      "Art",
+      "Education"
+    ],
+    "useCases": {
+      "en": "Creative coding, generative art, interactive visualizations, educational projects",
+      "ko": "크리에이티브 코딩, 제너레이티브 아트, 인터랙티브 시각화, 교육 프로젝트"
+    },
+    "codeExample": "function setup() {\n  createCanvas(400, 400);\n}\nfunction draw() {\n  background(220);\n  ellipse(mouseX, mouseY, 50, 50);\n}"
   },
   {
-    "name": "TanStack Start",
-    "description": "Full-stack React framework powered by TanStack Router",
-    "descriptionKo": "TanStack Router 기반 풀스택 React 프레임워크",
-    "category": "Meta-frameworks",
+    "name": "Three.js",
+    "description": "3D library for creating WebGL content",
+    "descriptionKo": "WebGL 콘텐츠 생성을 위한 3D 라이브러리",
+    "category": "3D Graphics",
     "license": "MIT",
-    "github": "https://github.com/TanStack/router",
-    "website": "https://tanstack.com/start",
-    "npm": "@tanstack/react-start",
-    "stars": "8k",
-    "usedHere": true,
+    "github": "https://github.com/mrdoob/three.js",
+    "website": "https://threejs.org",
+    "npm": "three",
+    "stars": "103k",
     "trending": true,
-    "yearReleased": 2024,
-    "tags": [
-      "React",
-      "SSR",
-      "TypeScript",
-      "Full-stack"
-    ]
-  },
-  {
-    "name": "Payload",
-    "description": "Open-source headless CMS built on Next.js",
-    "descriptionKo": "Next.js 기반 오픈소스 헤드리스 CMS",
-    "category": "Meta-frameworks",
-    "license": "MIT",
-    "github": "https://github.com/payloadcms/payload",
-    "website": "https://payloadcms.com",
-    "npm": "payload",
-    "stars": "30k",
-    "trending": true,
-    "yearReleased": 2021,
-    "tags": [
-      "CMS",
-      "Next.js",
-      "TypeScript",
-      "Full-stack"
-    ]
-  },
-  {
-    "name": "Express",
-    "description": "Fast, unopinionated web framework for Node.js",
-    "descriptionKo": "Node.js를 위한 빠르고 유연한 웹 프레임워크",
-    "category": "Server",
-    "license": "MIT",
-    "github": "https://github.com/expressjs/express",
-    "website": "https://expressjs.com",
-    "npm": "express",
-    "stars": "66k",
     "yearReleased": 2010,
     "tags": [
-      "Node.js",
-      "Classic",
-      "Middleware"
-    ]
+      "3D",
+      "WebGL",
+      "Graphics"
+    ],
+    "useCases": {
+      "en": "3D games, product visualizers, architectural visualization, VR/AR experiences",
+      "ko": "3D 게임, 제품 시각화, 건축 시각화, VR/AR 경험"
+    },
+    "codeExample": "import * as THREE from 'three';\nconst scene = new THREE.Scene();\nconst camera = new THREE.PerspectiveCamera(75, w/h, 0.1, 1000);\nconst renderer = new THREE.WebGLRenderer();"
   },
   {
-    "name": "Fastify",
-    "description": "Fast and low overhead web framework for Node.js",
-    "descriptionKo": "Node.js를 위한 고성능 저오버헤드 웹 프레임워크",
-    "category": "Server",
-    "license": "MIT",
-    "github": "https://github.com/fastify/fastify",
-    "website": "https://fastify.dev",
-    "npm": "fastify",
-    "stars": "33k",
-    "trending": true,
-    "yearReleased": 2016,
-    "tags": [
-      "Node.js",
-      "Fast",
-      "TypeScript"
-    ]
-  },
-  {
-    "name": "NestJS",
-    "description": "Progressive Node.js framework for enterprise applications",
-    "descriptionKo": "엔터프라이즈 애플리케이션을 위한 프로그레시브 Node.js 프레임워크",
-    "category": "Server",
-    "license": "MIT",
-    "github": "https://github.com/nestjs/nest",
-    "website": "https://nestjs.com",
-    "npm": "@nestjs/core",
-    "stars": "69k",
-    "trending": true,
-    "yearReleased": 2017,
-    "tags": [
-      "Node.js",
-      "TypeScript",
-      "Enterprise",
-      "DI"
-    ]
-  },
-  {
-    "name": "Nitro",
-    "description": "Next generation server toolkit by UnJS",
-    "descriptionKo": "UnJS의 차세대 서버 툴킷",
-    "category": "Server",
-    "license": "MIT",
-    "github": "https://github.com/nitrojs/nitro",
-    "website": "https://nitro.build",
-    "npm": "nitro",
-    "stars": "6k",
-    "yearReleased": 2022,
-    "tags": [
-      "UnJS",
-      "TypeScript",
-      "Edge",
-      "Universal"
-    ]
-  },
-  {
-    "name": "Socket.io",
-    "description": "Bidirectional event-based real-time communication",
-    "descriptionKo": "양방향 이벤트 기반 실시간 통신 라이브러리",
-    "category": "Server",
-    "license": "MIT",
-    "github": "https://github.com/socketio/socket.io",
-    "website": "https://socket.io",
-    "npm": "socket.io",
-    "stars": "62k",
-    "yearReleased": 2010,
-    "tags": [
-      "WebSocket",
-      "Real-time",
-      "Node.js"
-    ]
-  },
-  {
-    "name": "Supabase",
-    "description": "Open source Firebase alternative with PostgreSQL",
-    "descriptionKo": "PostgreSQL 기반 오픈소스 Firebase 대안",
-    "category": "Data Fetching",
+    "name": "Babylon.js",
+    "description": "Powerful 3D game engine for the web",
+    "descriptionKo": "웹을 위한 강력한 3D 게임 엔진",
+    "category": "3D Graphics",
     "license": "Apache-2.0",
-    "github": "https://github.com/supabase/supabase",
-    "website": "https://supabase.com",
-    "npm": "@supabase/supabase-js",
-    "stars": "75k",
+    "github": "https://github.com/BabylonJS/Babylon.js",
+    "website": "https://www.babylonjs.com",
+    "npm": "@babylonjs/core",
+    "stars": "23k",
     "trending": true,
-    "yearReleased": 2020,
-    "tags": [
-      "BaaS",
-      "PostgreSQL",
-      "Auth",
-      "Real-time"
-    ]
-  },
-  {
-    "name": "Kysely",
-    "description": "Type-safe TypeScript SQL query builder",
-    "descriptionKo": "타입 안전 TypeScript SQL 쿼리 빌더",
-    "category": "ORM",
-    "license": "MIT",
-    "github": "https://github.com/kysely-org/kysely",
-    "website": "https://kysely.dev",
-    "npm": "kysely",
-    "stars": "11k",
-    "trending": true,
-    "yearReleased": 2022,
-    "tags": [
-      "TypeScript",
-      "SQL",
-      "Type-safe"
-    ]
-  },
-  {
-    "name": "Nx",
-    "description": "Smart monorepo build system for enterprise",
-    "descriptionKo": "엔터프라이즈를 위한 스마트 모노레포 빌드 시스템",
-    "category": "Build Tools",
-    "license": "MIT",
-    "github": "https://github.com/nrwl/nx",
-    "website": "https://nx.dev",
-    "npm": "nx",
-    "stars": "24k",
-    "yearReleased": 2018,
-    "tags": [
-      "Monorepo",
-      "Enterprise",
-      "CI"
-    ]
-  },
-  {
-    "name": "Turborepo",
-    "description": "High-performance build system for monorepos",
-    "descriptionKo": "모노레포를 위한 고성능 빌드 시스템",
-    "category": "Build Tools",
-    "license": "MIT",
-    "github": "https://github.com/vercel/turborepo",
-    "website": "https://turbo.build",
-    "npm": "turbo",
-    "stars": "26k",
-    "usedHere": true,
-    "yearReleased": 2021,
-    "tags": [
-      "Monorepo",
-      "Caching",
-      "Rust"
-    ]
-  },
-  {
-    "name": "Rolldown",
-    "description": "Rust-based JavaScript bundler designed for Vite",
-    "descriptionKo": "Vite를 위해 설계된 Rust 기반 JavaScript 번들러",
-    "category": "Build Tools",
-    "license": "MIT",
-    "github": "https://github.com/rolldown/rolldown",
-    "website": "https://rolldown.rs",
-    "npm": "rolldown",
-    "stars": "9k",
-    "trending": true,
-    "yearReleased": 2024,
-    "tags": [
-      "Rust",
-      "Bundler",
-      "Vite"
-    ]
-  },
-  {
-    "name": "Tauri",
-    "description": "Build smaller, faster, more secure desktop apps",
-    "descriptionKo": "더 작고 빠르고 안전한 데스크톱 앱 빌드",
-    "category": "Frameworks",
-    "license": "MIT",
-    "github": "https://github.com/tauri-apps/tauri",
-    "website": "https://tauri.app",
-    "npm": "@tauri-apps/cli",
-    "stars": "88k",
-    "trending": true,
-    "yearReleased": 2019,
-    "tags": [
-      "Desktop",
-      "Rust",
-      "Cross-platform"
-    ]
-  },
-  {
-    "name": "Electron",
-    "description": "Build cross-platform desktop apps with web technologies",
-    "descriptionKo": "웹 기술로 크로스 플랫폼 데스크톱 앱 빌드",
-    "category": "Frameworks",
-    "license": "MIT",
-    "github": "https://github.com/electron/electron",
-    "website": "https://www.electronjs.org",
-    "npm": "electron",
-    "stars": "115k",
     "yearReleased": 2013,
     "tags": [
-      "Desktop",
-      "Chromium",
-      "Cross-platform"
-    ]
+      "3D",
+      "Game Engine",
+      "WebGL"
+    ],
+    "useCases": {
+      "en": "3D games, interactive 3D experiences, product configurators, virtual showrooms",
+      "ko": "3D 게임, 인터랙티브 3D 경험, 제품 구성기, 가상 쇼룸"
+    },
+    "codeExample": "import { Engine, Scene, FreeCamera, HemisphericLight } from '@babylonjs/core';\nconst engine = new Engine(canvas, true);\nconst scene = new Scene(engine);"
   },
   {
-    "name": "Ark UI",
-    "description": "Headless UI components powered by state machines",
-    "descriptionKo": "상태 머신 기반 헤드리스 UI 컴포넌트",
-    "category": "UI Components",
+    "name": "React Three Fiber",
+    "description": "React renderer for Three.js",
+    "descriptionKo": "Three.js를 위한 React 렌더러",
+    "category": "3D Graphics",
     "license": "MIT",
-    "github": "https://github.com/chakra-ui/ark",
-    "website": "https://ark-ui.com",
-    "npm": "@ark-ui/react",
-    "stars": "4k",
+    "github": "https://github.com/pmndrs/react-three-fiber",
+    "website": "https://pmndrs.github.io/react-three-fiber/",
+    "npm": "@react-three/fiber",
+    "stars": "28k",
     "trending": true,
-    "yearReleased": 2023,
-    "tags": [
-      "Headless",
-      "React",
-      "State Machine"
-    ]
-  },
-  {
-    "name": "PocketBase",
-    "description": "Open source backend in a single file",
-    "descriptionKo": "단일 파일 오픈소스 백엔드",
-    "category": "Server",
-    "license": "MIT",
-    "github": "https://github.com/pocketbase/pocketbase",
-    "website": "https://pocketbase.io",
-    "stars": "42k",
-    "trending": true,
-    "yearReleased": 2022,
-    "tags": [
-      "BaaS",
-      "SQLite",
-      "Go",
-      "Self-hosted"
-    ]
-  },
-  {
-    "name": "Effect",
-    "description": "Powerful TypeScript library for building complex applications",
-    "descriptionKo": "복잡한 애플리케이션 구축을 위한 강력한 TypeScript 라이브러리",
-    "category": "Utilities",
-    "license": "MIT",
-    "github": "https://github.com/Effect-TS/effect",
-    "website": "https://effect.website",
-    "npm": "effect",
-    "stars": "8k",
-    "trending": true,
-    "yearReleased": 2023,
-    "tags": [
-      "TypeScript",
-      "Functional",
-      "Concurrency"
-    ]
-  },
-  {
-    "name": "Turso",
-    "description": "Distributed database built on libSQL for the edge",
-    "descriptionKo": "엣지를 위한 libSQL 기반 분산 데이터베이스",
-    "category": "ORM",
-    "license": "MIT",
-    "github": "https://github.com/tursodatabase/libsql",
-    "website": "https://turso.tech",
-    "npm": "@libsql/client",
-    "stars": "13k",
-    "trending": true,
-    "yearReleased": 2022,
-    "tags": [
-      "SQLite",
-      "Edge",
-      "Distributed"
-    ]
-  },
-  {
-    "name": "OpenTelemetry JS",
-    "description": "Observability framework for cloud-native software",
-    "descriptionKo": "클라우드 네이티브 소프트웨어를 위한 관측성 프레임워크",
-    "category": "Utilities",
-    "license": "Apache-2.0",
-    "github": "https://github.com/open-telemetry/opentelemetry-js",
-    "website": "https://opentelemetry.io",
-    "npm": "@opentelemetry/api",
-    "stars": "3k",
     "yearReleased": 2019,
     "tags": [
-      "Observability",
-      "Tracing",
-      "Metrics"
-    ]
+      "React",
+      "Three.js",
+      "3D"
+    ],
+    "useCases": {
+      "en": "Declarative 3D in React, interactive 3D components, 3D data visualization",
+      "ko": "React에서 선언적 3D, 인터랙티브 3D 컴포넌트, 3D 데이터 시각화"
+    },
+    "codeExample": "import { Canvas } from '@react-three/fiber';\nfunction App() {\n  return <Canvas><mesh><boxGeometry /><meshStandardMaterial /></mesh></Canvas>;\n}"
+  },
+  {
+    "name": "A-Frame",
+    "description": "Web framework for building VR experiences",
+    "descriptionKo": "VR 경험 구축을 위한 웹 프레임워크",
+    "category": "3D Graphics",
+    "license": "MIT",
+    "github": "https://github.com/aframevr/aframe",
+    "website": "https://aframe.io",
+    "npm": "aframe",
+    "stars": "17k",
+    "yearReleased": 2015,
+    "tags": [
+      "VR",
+      "AR",
+      "WebXR"
+    ],
+    "useCases": {
+      "en": "VR websites, AR experiences, 360 tours, immersive storytelling",
+      "ko": "VR 웹사이트, AR 경험, 360도 투어, 몰입형 스토리텔링"
+    },
+    "codeExample": "<a-scene>\n  <a-box position=\"-1 0.5 -3\" rotation=\"0 45 0\" color=\"#4CC3D9\"></a-box>\n  <a-sky color=\"#ECECEC\"></a-sky>\n</a-scene>"
+  },
+  {
+    "name": "fflate",
+    "description": "High performance (de)compression in pure JavaScript",
+    "descriptionKo": "순수 JavaScript로 구현된 고성능 (압축/해제)",
+    "category": "Compression",
+    "license": "MIT",
+    "github": "https://github.com/101arrowz/fflate",
+    "npm": "fflate",
+    "stars": "2k",
+    "trending": true,
+    "yearReleased": 2020,
+    "tags": [
+      "Compression",
+      "Zip",
+      "Gzip"
+    ],
+    "useCases": {
+      "en": "Compress/decompress files in browser, create ZIP archives, streaming compression",
+      "ko": "브라우저에서 파일 압축/해제, ZIP 아카이브 생성, 스트리밍 압축"
+    },
+    "codeExample": "import { gzip, gunzip, strToU8, strFromU8 } from 'fflate';\nconst compressed = gzip(strToU8('Hello World'));\nconst decompressed = strFromU8(gunzip(compressed));"
+  },
+  {
+    "name": "brotli-wasm",
+    "description": "Brotli compression compiled to WebAssembly",
+    "descriptionKo": "WebAssembly로 컴파일된 Brotli 압축",
+    "category": "Compression",
+    "license": "Apache-2.0",
+    "github": "https://github.com/httptoolkit/brotli-wasm",
+    "npm": "brotli-wasm",
+    "stars": "300",
+    "yearReleased": 2020,
+    "wasmBased": true,
+    "tags": [
+      "WASM",
+      "Compression",
+      "Brotli"
+    ],
+    "useCases": {
+      "en": "High-ratio compression in browser, decompress Brotli content, web performance",
+      "ko": "브라우저에서 고비율 압축, Brotli 콘텐츠 해제, 웹 성능"
+    },
+    "codeExample": "import brotli from 'brotli-wasm';\nconst compressed = brotli.compress(new TextEncoder().encode('Hello'));\nconst decompressed = brotli.decompress(compressed);"
+  },
+  {
+    "name": "zstd-codec",
+    "description": "Zstandard compression for JavaScript via WASM",
+    "descriptionKo": "WASM을 통한 JavaScript용 Zstandard 압축",
+    "category": "Compression",
+    "license": "MIT",
+    "github": "https://github.com/yoshihitoh/zstd-codec",
+    "npm": "zstd-codec",
+    "stars": "100",
+    "yearReleased": 2019,
+    "wasmBased": true,
+    "tags": [
+      "WASM",
+      "Compression",
+      "Zstandard"
+    ],
+    "useCases": {
+      "en": "Fast compression/decompression, game assets, large file handling",
+      "ko": "빠른 압축/해제, 게임 에셋, 대용량 파일 처리"
+    },
+    "codeExample": "import { ZstdCodec } from 'zstd-codec';\nZstdCodec.run(zstd => {\n  const compressed = zstd.compress(data);\n  const decompressed = zstd.decompress(compressed);\n});"
+  },
+  {
+    "name": "noble-curves",
+    "description": "Audited elliptic curve cryptography in JavaScript",
+    "descriptionKo": "감사된 JavaScript 타원 곡선 암호화",
+    "category": "Cryptography",
+    "license": "MIT",
+    "github": "https://github.com/paulmillr/noble-curves",
+    "npm": "@noble/curves",
+    "stars": "700",
+    "trending": true,
+    "yearReleased": 2022,
+    "tags": [
+      "Crypto",
+      "Elliptic Curve",
+      "Audited"
+    ],
+    "useCases": {
+      "en": "Ethereum/Bitcoin signatures, ECDSA, Ed25519, secp256k1, BLS signatures",
+      "ko": "Ethereum/Bitcoin 서명, ECDSA, Ed25519, secp256k1, BLS 서명"
+    },
+    "codeExample": "import { secp256k1 } from '@noble/curves/secp256k1';\nconst privateKey = secp256k1.utils.randomPrivateKey();\nconst publicKey = secp256k1.getPublicKey(privateKey);"
+  },
+  {
+    "name": "libsodium.js",
+    "description": "JavaScript port of libsodium cryptographic library",
+    "descriptionKo": "libsodium 암호화 라이브러리의 JavaScript 포팅",
+    "category": "Cryptography",
+    "license": "ISC",
+    "github": "https://github.com/jedisct1/libsodium.js",
+    "npm": "libsodium-wrappers",
+    "stars": "1k",
+    "yearReleased": 2016,
+    "wasmBased": true,
+    "tags": [
+      "WASM",
+      "Crypto",
+      "libsodium"
+    ],
+    "useCases": {
+      "en": "Secure encryption, password hashing, key exchange, authenticated encryption",
+      "ko": "안전한 암호화, 비밀번호 해싱, 키 교환, 인증된 암호화"
+    },
+    "codeExample": "import sodium from 'libsodium-wrappers';\nawait sodium.ready;\nconst key = sodium.crypto_secretbox_keygen();\nconst nonce = sodium.randombytes_buf(sodium.crypto_secretbox_NONCEBYTES);"
+  },
+  {
+    "name": "crypto-js",
+    "description": "JavaScript library of crypto standards",
+    "descriptionKo": "암호화 표준의 JavaScript 라이브러리",
+    "category": "Cryptography",
+    "license": "MIT",
+    "github": "https://github.com/brix/crypto-js",
+    "npm": "crypto-js",
+    "stars": "16k",
+    "yearReleased": 2009,
+    "tags": [
+      "Crypto",
+      "AES",
+      "SHA",
+      "MD5"
+    ],
+    "useCases": {
+      "en": "AES encryption, SHA hashing, HMAC, PBKDF2, simple encryption needs",
+      "ko": "AES 암호화, SHA 해싱, HMAC, PBKDF2, 간단한 암호화 요구"
+    },
+    "codeExample": "import CryptoJS from 'crypto-js';\nconst encrypted = CryptoJS.AES.encrypt('message', 'secret key').toString();\nconst decrypted = CryptoJS.AES.decrypt(encrypted, 'secret key').toString(CryptoJS.enc.Utf8);"
+  },
+  {
+    "name": "protobuf.js",
+    "description": "Protocol Buffers for JavaScript",
+    "descriptionKo": "JavaScript용 Protocol Buffers",
+    "category": "Data Serialization",
+    "license": "BSD-3-Clause",
+    "github": "https://github.com/protobufjs/protobuf.js",
+    "website": "https://protobufjs.github.io/protobuf.js/",
+    "npm": "protobufjs",
+    "stars": "10k",
+    "yearReleased": 2013,
+    "tags": [
+      "Protobuf",
+      "Binary",
+      "Google"
+    ],
+    "useCases": {
+      "en": "Efficient data serialization, gRPC communication, cross-language data exchange",
+      "ko": "효율적인 데이터 직렬화, gRPC 통신, 크로스 언어 데이터 교환"
+    },
+    "codeExample": "import protobuf from 'protobufjs';\nconst root = await protobuf.load('awesome.proto');\nconst Message = root.lookupType('package.Message');\nconst buffer = Message.encode({ field: 'value' }).finish();"
+  },
+  {
+    "name": "FlatBuffers",
+    "description": "Efficient cross-platform serialization library",
+    "descriptionKo": "효율적인 크로스 플랫폼 직렬화 라이브러리",
+    "category": "Data Serialization",
+    "license": "Apache-2.0",
+    "github": "https://github.com/google/flatbuffers",
+    "website": "https://flatbuffers.dev",
+    "npm": "flatbuffers",
+    "stars": "26k",
+    "yearReleased": 2014,
+    "tags": [
+      "Binary",
+      "Google",
+      "Gaming"
+    ],
+    "useCases": {
+      "en": "Game data serialization, zero-copy deserialization, real-time data exchange",
+      "ko": "게임 데이터 직렬화, 제로 카피 역직렬화, 실시간 데이터 교환"
+    },
+    "codeExample": "import * as flatbuffers from 'flatbuffers';\nconst builder = new flatbuffers.Builder(256);\n// Build your FlatBuffer...\nconst buf = builder.asUint8Array();"
+  },
+  {
+    "name": "msgpackr",
+    "description": "Fast MessagePack encoder/decoder",
+    "descriptionKo": "빠른 MessagePack 인코더/디코더",
+    "category": "Data Serialization",
+    "license": "MIT",
+    "github": "https://github.com/kriszyp/msgpackr",
+    "npm": "msgpackr",
+    "stars": "700",
+    "trending": true,
+    "yearReleased": 2020,
+    "tags": [
+      "MessagePack",
+      "Binary",
+      "Fast"
+    ],
+    "useCases": {
+      "en": "Compact JSON alternative, WebSocket communication, efficient storage",
+      "ko": "컴팩트한 JSON 대안, WebSocket 통신, 효율적인 저장"
+    },
+    "codeExample": "import { pack, unpack } from 'msgpackr';\nconst encoded = pack({ hello: 'world' });\nconst decoded = unpack(encoded);"
+  },
+  {
+    "name": "cbor-x",
+    "description": "Fast CBOR encoder/decoder",
+    "descriptionKo": "빠른 CBOR 인코더/디코더",
+    "category": "Data Serialization",
+    "license": "MIT",
+    "github": "https://github.com/kriszyp/cbor-x",
+    "npm": "cbor-x",
+    "stars": "200",
+    "yearReleased": 2020,
+    "tags": [
+      "CBOR",
+      "Binary",
+      "IoT"
+    ],
+    "useCases": {
+      "en": "IoT data encoding, WebAuthn, compact binary format, COSE signatures",
+      "ko": "IoT 데이터 인코딩, WebAuthn, 컴팩트 바이너리 포맷, COSE 서명"
+    },
+    "codeExample": "import { encode, decode } from 'cbor-x';\nconst encoded = encode({ hello: 'world' });\nconst decoded = decode(encoded);"
+  },
+  {
+    "name": "Sharp",
+    "description": "High performance image processing",
+    "descriptionKo": "고성능 이미지 처리",
+    "category": "Image Processing",
+    "license": "Apache-2.0",
+    "github": "https://github.com/lovell/sharp",
+    "website": "https://sharp.pixelplumbing.com",
+    "npm": "sharp",
+    "stars": "29k",
+    "trending": true,
+    "yearReleased": 2013,
+    "tags": [
+      "Image",
+      "Resize",
+      "Convert"
+    ],
+    "useCases": {
+      "en": "Image resizing, format conversion, thumbnail generation, image optimization",
+      "ko": "이미지 리사이징, 포맷 변환, 썸네일 생성, 이미지 최적화"
+    },
+    "codeExample": "import sharp from 'sharp';\nawait sharp('input.jpg')\n  .resize(300, 200)\n  .toFormat('webp')\n  .toFile('output.webp');"
+  },
+  {
+    "name": "Jimp",
+    "description": "JavaScript Image Manipulation Program",
+    "descriptionKo": "JavaScript 이미지 조작 프로그램",
+    "category": "Image Processing",
+    "license": "MIT",
+    "github": "https://github.com/jimp-dev/jimp",
+    "npm": "jimp",
+    "stars": "14k",
+    "yearReleased": 2014,
+    "tags": [
+      "Image",
+      "Pure JS",
+      "Manipulation"
+    ],
+    "useCases": {
+      "en": "Image manipulation without native dependencies, browser image editing, Node.js processing",
+      "ko": "네이티브 의존성 없는 이미지 조작, 브라우저 이미지 편집, Node.js 처리"
+    },
+    "codeExample": "import Jimp from 'jimp';\nconst image = await Jimp.read('image.png');\nimage.resize(256, 256).quality(80).write('output.jpg');"
+  },
+  {
+    "name": "Tone.js",
+    "description": "Web Audio framework for music synthesis",
+    "descriptionKo": "음악 합성을 위한 Web Audio 프레임워크",
+    "category": "Audio/Video",
+    "license": "MIT",
+    "github": "https://github.com/Tonejs/Tone.js",
+    "website": "https://tonejs.github.io",
+    "npm": "tone",
+    "stars": "14k",
+    "trending": true,
+    "yearReleased": 2014,
+    "tags": [
+      "Audio",
+      "Music",
+      "Synthesizer"
+    ],
+    "useCases": {
+      "en": "Music applications, audio synthesis, interactive sound, music education",
+      "ko": "음악 애플리케이션, 오디오 합성, 인터랙티브 사운드, 음악 교육"
+    },
+    "codeExample": "import * as Tone from 'tone';\nconst synth = new Tone.Synth().toDestination();\nsynth.triggerAttackRelease('C4', '8n');"
+  },
+  {
+    "name": "Howler.js",
+    "description": "Audio library for the modern web",
+    "descriptionKo": "모던 웹을 위한 오디오 라이브러리",
+    "category": "Audio/Video",
+    "license": "MIT",
+    "github": "https://github.com/goldfire/howler.js",
+    "website": "https://howlerjs.com",
+    "npm": "howler",
+    "stars": "25k",
+    "yearReleased": 2013,
+    "tags": [
+      "Audio",
+      "Sound",
+      "Game"
+    ],
+    "useCases": {
+      "en": "Game audio, sound effects, music players, audio sprites",
+      "ko": "게임 오디오, 사운드 효과, 음악 플레이어, 오디오 스프라이트"
+    },
+    "codeExample": "import { Howl } from 'howler';\nconst sound = new Howl({ src: ['sound.mp3'] });\nsound.play();"
+  },
+  {
+    "name": "WaveSurfer.js",
+    "description": "Audio visualization and playback",
+    "descriptionKo": "오디오 시각화 및 재생",
+    "category": "Audio/Video",
+    "license": "BSD-3-Clause",
+    "github": "https://github.com/katspaugh/wavesurfer.js",
+    "website": "https://wavesurfer.xyz",
+    "npm": "wavesurfer.js",
+    "stars": "10k",
+    "trending": true,
+    "yearReleased": 2013,
+    "tags": [
+      "Audio",
+      "Waveform",
+      "Visualization"
+    ],
+    "useCases": {
+      "en": "Audio waveform display, podcast players, audio editors, music visualization",
+      "ko": "오디오 파형 표시, 팟캐스트 플레이어, 오디오 에디터, 음악 시각화"
+    },
+    "codeExample": "import WaveSurfer from 'wavesurfer.js';\nconst wavesurfer = WaveSurfer.create({ container: '#waveform' });\nwavesurfer.load('audio.mp3');"
+  },
+  {
+    "name": "Video.js",
+    "description": "HTML5 video player framework",
+    "descriptionKo": "HTML5 비디오 플레이어 프레임워크",
+    "category": "Audio/Video",
+    "license": "Apache-2.0",
+    "github": "https://github.com/videojs/video.js",
+    "website": "https://videojs.org",
+    "npm": "video.js",
+    "stars": "38k",
+    "yearReleased": 2010,
+    "tags": [
+      "Video",
+      "Player",
+      "Streaming"
+    ],
+    "useCases": {
+      "en": "Video streaming, custom video players, HLS/DASH playback, video ads",
+      "ko": "비디오 스트리밍, 커스텀 비디오 플레이어, HLS/DASH 재생, 비디오 광고"
+    },
+    "codeExample": "import videojs from 'video.js';\nconst player = videojs('my-video', { controls: true, autoplay: false });\nplayer.src({ type: 'video/mp4', src: 'video.mp4' });"
+  },
+  {
+    "name": "PDF.js",
+    "description": "PDF reader built with JavaScript",
+    "descriptionKo": "JavaScript로 만든 PDF 리더",
+    "category": "PDF/Documents",
+    "license": "Apache-2.0",
+    "github": "https://github.com/mozilla/pdf.js",
+    "website": "https://mozilla.github.io/pdf.js/",
+    "npm": "pdfjs-dist",
+    "stars": "53k",
+    "yearReleased": 2011,
+    "tags": [
+      "PDF",
+      "Viewer",
+      "Mozilla"
+    ],
+    "useCases": {
+      "en": "PDF rendering, document viewers, PDF to canvas, text extraction",
+      "ko": "PDF 렌더링, 문서 뷰어, PDF를 캔버스로, 텍스트 추출"
+    },
+    "codeExample": "import * as pdfjsLib from 'pdfjs-dist';\nconst pdf = await pdfjsLib.getDocument('document.pdf').promise;\nconst page = await pdf.getPage(1);"
+  },
+  {
+    "name": "Mammoth",
+    "description": "Convert Word documents to HTML",
+    "descriptionKo": "Word 문서를 HTML로 변환",
+    "category": "PDF/Documents",
+    "license": "BSD-2-Clause",
+    "github": "https://github.com/mwilliamson/mammoth.js",
+    "npm": "mammoth",
+    "stars": "6k",
+    "yearReleased": 2014,
+    "tags": [
+      "Word",
+      "DOCX",
+      "HTML"
+    ],
+    "useCases": {
+      "en": "DOCX to HTML conversion, document import, content migration, CMS integration",
+      "ko": "DOCX를 HTML로 변환, 문서 가져오기, 콘텐츠 마이그레이션, CMS 통합"
+    },
+    "codeExample": "import mammoth from 'mammoth';\nconst result = await mammoth.convertToHtml({ arrayBuffer });\nconsole.log(result.value); // HTML string"
+  },
+  {
+    "name": "Math.js",
+    "description": "Extensive math library for JavaScript",
+    "descriptionKo": "JavaScript용 광범위한 수학 라이브러리",
+    "category": "Math/Science",
+    "license": "Apache-2.0",
+    "github": "https://github.com/josdejong/mathjs",
+    "website": "https://mathjs.org",
+    "npm": "mathjs",
+    "stars": "14k",
+    "trending": true,
+    "yearReleased": 2013,
+    "tags": [
+      "Math",
+      "Algebra",
+      "Expression"
+    ],
+    "useCases": {
+      "en": "Scientific calculations, matrix operations, expression parsing, unit conversions",
+      "ko": "과학 계산, 행렬 연산, 수식 파싱, 단위 변환"
+    },
+    "codeExample": "import { evaluate, matrix, multiply } from 'mathjs';\nevaluate('sqrt(3^2 + 4^2)'); // 5\nconst A = matrix([[1, 2], [3, 4]]);\nmultiply(A, 2);"
+  },
+  {
+    "name": "Simple Statistics",
+    "description": "Statistical methods in JavaScript",
+    "descriptionKo": "JavaScript 통계 메서드",
+    "category": "Math/Science",
+    "license": "ISC",
+    "github": "https://github.com/simple-statistics/simple-statistics",
+    "website": "https://simple-statistics.github.io/",
+    "npm": "simple-statistics",
+    "stars": "3k",
+    "yearReleased": 2012,
+    "tags": [
+      "Statistics",
+      "Math",
+      "Data"
+    ],
+    "useCases": {
+      "en": "Mean, median, standard deviation, regression, probability distributions",
+      "ko": "평균, 중앙값, 표준편차, 회귀분석, 확률 분포"
+    },
+    "codeExample": "import ss from 'simple-statistics';\nss.mean([1, 2, 3]); // 2\nss.standardDeviation([1, 2, 3]); // 0.816...\nss.linearRegression([[0, 0], [1, 1]]);"
+  },
+  {
+    "name": "stdlib",
+    "description": "Standard library for JavaScript numerical computing",
+    "descriptionKo": "JavaScript 수치 컴퓨팅 표준 라이브러리",
+    "category": "Math/Science",
+    "license": "Apache-2.0",
+    "github": "https://github.com/stdlib-js/stdlib",
+    "website": "https://stdlib.io",
+    "npm": "@stdlib/stdlib",
+    "stars": "4k",
+    "yearReleased": 2016,
+    "tags": [
+      "Math",
+      "Scientific",
+      "Statistics"
+    ],
+    "useCases": {
+      "en": "Scientific computing, statistical functions, special functions, random number generation",
+      "ko": "과학 계산, 통계 함수, 특수 함수, 난수 생성"
+    },
+    "codeExample": "import linspace from '@stdlib/array-base-linspace';\nimport sin from '@stdlib/math-base-special-sin';\nconst x = linspace(0, 2 * Math.PI, 100);\nconst y = x.map(sin);"
   }
 ]
