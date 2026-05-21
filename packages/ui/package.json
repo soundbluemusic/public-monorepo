@@ -37,28 +37,28 @@
   },
   "peerDependencies": {
     "@tanstack/react-table": "^8.21.3",
-    "react": "^19.2.5",
-    "react-dom": "^19.2.5"
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6"
   },
   "dependencies": {
     "@formkit/auto-animate": "^0.9.0",
     "@soundblue/core": "workspace:*",
-    "@tanstack/react-virtual": "^3.13.24",
+    "@tanstack/react-virtual": "^3.13.25",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
-    "lucide-react": "^1.9.0",
-    "tailwind-merge": "^3.5.0"
+    "lucide-react": "^1.16.0",
+    "tailwind-merge": "^3.6.0"
   },
   "devDependencies": {
-    "@storybook/addon-a11y": "^10.3.5",
-    "@storybook/react-vite": "^10.3.5",
-    "@tailwindcss/postcss": "^4.2.4",
-    "@types/react": "^19.2.14",
+    "@storybook/addon-a11y": "^10.4.0",
+    "@storybook/react-vite": "^10.4.0",
+    "@tailwindcss/postcss": "^4.3.0",
+    "@types/react": "^19.2.15",
     "@types/react-dom": "^19.2.3",
-    "react": "^19.2.5",
-    "react-dom": "^19.2.5",
-    "storybook": "^10.3.5",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6",
+    "storybook": "^10.4.0",
     "typescript": "^6.0.3",
-    "vite": "^8.0.10"
+    "vite": "^8.0.14"
   }
 }

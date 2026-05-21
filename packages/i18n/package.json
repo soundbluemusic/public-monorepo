@@ -31,8 +31,8 @@
     "@soundblue/core": "workspace:*"
   },
   "peerDependencies": {
-    "@tanstack/react-router": "^1.168.23",
-    "react": "^19.2.5"
+    "@tanstack/react-router": "^1.170.6",
+    "react": "^19.2.6"
   },
   "peerDependenciesMeta": {
     "react": {
@@ -43,8 +43,8 @@
     }
   },
   "devDependencies": {
-    "@types/node": "^25.6.0",
-    "@types/react": "^19.2.14",
+    "@types/node": "^25.9.1",
+    "@types/react": "^19.2.15",
     "typescript": "^6.0.3"
   }
 }
