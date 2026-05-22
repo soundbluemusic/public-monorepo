@@ -10,7 +10,7 @@
       "label": "Pin zod to current project major",
       "dependencies": ["zod"],
       "dependencyTypes": ["dev", "prod"],
-      "pinVersion": "^4.3.6"
+      "pinVersion": "^4.4.3"
     }
   ],
   "semverGroups": [
