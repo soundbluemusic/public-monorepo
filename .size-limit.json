@@ -5,11 +5,6 @@
     "limit": "500 KB"
   },
   {
-    "name": "permissive-js",
-    "path": "apps/permissive/dist/client/assets/*.js",
-    "limit": "500 KB"
-  },
-  {
     "name": "roots-js",
     "path": "apps/roots/dist/client/assets/*.js",
     "limit": "500 KB"
