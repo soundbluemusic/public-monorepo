@@ -1,0 +1,103 @@
+@import "@soundblue/config/styles/tailwind.css";
+@import "@soundblue/ui/styles/base.css";
+@import "katex/dist/katex.min.css";
+
+/* Tailwind v4: 외부 패키지 클래스 스캔 */
+@source "../../../../packages/ui/src/**/*.{tsx,ts}";
+@source "../../../../packages/features/src/**/*.{tsx,ts}";
+@source "../../src/**/*.astro";
+
+/* ============================================
+   Dark Mode Dual Icons CSS
+   ============================================ */
+.theme-icon--moon { display: none; }
+.theme-icon--sun { display: inline-flex; }
+.dark .theme-icon--moon { display: inline-flex; }
+.dark .theme-icon--sun { display: none; }
+
+/* ============================================
+   Midnight Slate / Indigo Theme (Roots)
+   ============================================ */
+:root {
+  --header-height: 56px;
+  --sidebar-width: 240px;
+  --sidebar-collapsed-width: 56px;
+  --bottom-nav-height: 56px;
+  --content-max-width: 900px;
+
+  --z-dropdown: 20;
+  --z-header: 30;
+  --z-sidebar: 40;
+  --z-overlay: 40;
+  --z-bottom-nav: 50;
+  --z-modal: 50;
+  --z-toast: 60;
+
+  --bg-primary: #f8fafc;
+  --bg-secondary: #f1f5f9;
+  --bg-tertiary: #e2e8f0;
+  --bg-elevated: #ffffff;
+
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-tertiary: #64748b;
+
+  --accent-primary: #4f46e5;
+  --accent-secondary: #4338ca;
+  --accent-tertiary: #3730a3;
+  --accent-hover: #4338ca;
+  --accent-mint: #c7d2fe;
+  --accent-bg: #4f46e5;
+
+  --border-primary: #cbd5e1;
+  --border-secondary: #e2e8f0;
+  --border-focus: #4f46e5;
+
+  --color-error: #dc2626;
+  --color-success: #16a34a;
+  --color-warning: #d97706;
+
+  --font-sans: "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, Roboto,
+    "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR",
+    "Malgun Gothic", sans-serif;
+  --font-mono: "JetBrains Mono", "Fira Code", ui-monospace, SFMono-Regular,
+    "SF Mono", Menlo, Consolas, monospace;
+}
+
+.dark {
+  --bg-primary: #0f172a;
+  --bg-secondary: #1e293b;
+  --bg-tertiary: #334155;
+  --bg-elevated: #1e293b;
+
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --text-tertiary: #94a3b8;
+
+  --accent-primary: #818cf8;
+  --accent-secondary: #6366f1;
+  --accent-tertiary: #a5b4fc;
+  --accent-hover: #a5b4fc;
+  --accent-mint: #312e81;
+  --accent-bg: #6366f1;
+
+  --border-primary: #334155;
+  --border-secondary: #1e293b;
+  --border-focus: #818cf8;
+}
+
+/* KaTeX display mode overrides */
+.katex-display {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0.5rem 0;
+}
+
+/* Math block styling */
+.math-formula {
+  background: var(--bg-tertiary);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin: 0.75rem 0;
+  overflow-x: auto;
+}

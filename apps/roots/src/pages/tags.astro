@@ -1,0 +1,57 @@
+---
+import { allTags, totalTagCount } from '../../app/data/concepts';
+import AppShell from '../components/AppShell.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const baseUrl = 'https://roots.soundbluemusic.com';
+const sortedTags = [...allTags].sort((a, b) => b.count - a.count);
+---
+
+<BaseLayout
+  title="All Tags | Roots"
+  description={`Browse ${totalTagCount} tags to explore math concepts`}
+  canonical={`${baseUrl}/tags`}
+>
+  <AppShell locale="en">
+    <!-- Header -->
+    <header class="mb-8">
+      <h1 class="text-2xl sm:text-3xl font-bold text-(--text-primary) mb-2">All Tags</h1>
+      <p class="text-(--text-secondary)">
+        Explore math concepts through {totalTagCount} tags
+      </p>
+    </header>
+
+    <!-- Tag cloud -->
+    <section class="mb-8" aria-labelledby="tags-heading">
+      <h2 id="tags-heading" class="sr-only">Tag list</h2>
+      <div class="flex flex-wrap gap-2">
+        {sortedTags.map((item) => (
+          <a
+            href={`/tag/${encodeURIComponent(item.tag)}`}
+            class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm bg-(--bg-elevated) border border-(--border-primary) text-(--text-secondary) hover:border-(--accent-primary) hover:text-(--text-primary) transition-colors"
+          >
+            <span>#{item.tag}</span>
+            <span class="text-xs text-(--text-tertiary)">{item.count}</span>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="p-4 rounded-xl bg-(--bg-elevated) border border-(--border-primary)">
+      <h2 class="font-medium text-(--text-primary) mb-2">Statistics</h2>
+      <div class="grid grid-cols-2 gap-4 text-sm">
+        <div>
+          <span class="text-(--text-secondary)">Total Tags</span>
+          <p class="font-semibold text-(--text-primary)">{totalTagCount}</p>
+        </div>
+        <div>
+          <span class="text-(--text-secondary)">Most Used Tag</span>
+          <p class="font-semibold text-(--text-primary)">
+            #{sortedTags[0]?.tag} ({sortedTags[0]?.count})
+          </p>
+        </div>
+      </div>
+    </section>
+  </AppShell>
+</BaseLayout>

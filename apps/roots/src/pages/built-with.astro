@@ -1,0 +1,39 @@
+---
+import { getOpenSourceGrouped } from '@soundblue/core';
+import AppShell from '../components/AppShell.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const baseUrl = 'https://roots.soundbluemusic.com';
+const groups = getOpenSourceGrouped();
+---
+
+<BaseLayout
+  title="Open source - Roots"
+  description="Open source projects used to build this site"
+  canonical={`${baseUrl}/built-with`}
+>
+  <AppShell locale="en">
+    <h1 class="text-2xl sm:text-3xl font-bold text-(--text-primary) mb-8">Open source</h1>
+
+    <div class="space-y-6">
+      {groups.map((group) => (
+        <section>
+          <h2 class="text-sm font-medium text-(--text-tertiary) mb-2">{group.label.en}</h2>
+          <div class="divide-y divide-(--border-primary) border-y border-(--border-primary)">
+            {group.projects.map((project) => (
+              <a
+                href={project.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex items-center justify-between py-3 px-1 hover:bg-(--bg-tertiary) transition-colors"
+              >
+                <span class="font-medium text-(--text-primary)">{project.name}</span>
+                <span class="text-(--text-tertiary)" aria-hidden="true">›</span>
+              </a>
+            ))}
+          </div>
+        </section>
+      ))}
+    </div>
+  </AppShell>
+</BaseLayout>

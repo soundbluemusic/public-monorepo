@@ -1,0 +1,8 @@
+---
+import ConceptPage from '../../components/pages/ConceptPage.astro';
+
+const { conceptId } = Astro.params;
+if (!conceptId) return Astro.redirect('/404', 404);
+---
+
+<ConceptPage conceptId={conceptId} locale="en" />

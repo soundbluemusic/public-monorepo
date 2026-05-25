@@ -1,5 +1,5 @@
 name = "roots"
-main = "@tanstack/react-start/server-entry"
+main = "@astrojs/cloudflare/entrypoints/server"
 compatibility_date = "2026-01-22"
 compatibility_flags = ["nodejs_compat"]
 
@@ -10,6 +10,4 @@ directory = "dist/client"
 enabled = true
 
 # 데이터 소스: TypeScript in-memory (`apps/roots/app/data/concepts/*.ts`
-# 438 concepts, `fields.ts` 18 fields). D1 바인딩은 사용하지 않습니다
-# (코드에서 D1 env 바인딩 참조가 0건임을 확인하고 제거함). 미래에 추가하려면
-# d1_databases 섹션을 다시 두면 됩니다.
+# 438 concepts, `fields.ts` 18 fields). D1 바인딩은 사용하지 않습니다.

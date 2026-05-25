@@ -1,0 +1,110 @@
+---
+import { lightConcepts } from '../../../app/data/concepts';
+import { difficultyLabels } from '../../../app/data/types';
+import AppShell from '../../components/AppShell.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const baseUrl = 'https://roots.soundbluemusic.com';
+const q = Astro.url.searchParams.get('q') ?? '';
+
+const results = q.length >= 2
+  ? lightConcepts.filter((c) => {
+      const term = q.toLowerCase();
+      return (
+        c.name.ko.toLowerCase().includes(term) ||
+        c.name.en.toLowerCase().includes(term) ||
+        c.def.ko.toLowerCase().includes(term) ||
+        c.tags.some((t) => t.toLowerCase().includes(term))
+      );
+    }).slice(0, 30)
+  : [];
+---
+
+<BaseLayout
+  title="검색 - 수리"
+  description="수학 개념 검색"
+  canonical={`${baseUrl}/ko/search`}
+  noIndex={true}
+>
+  <AppShell locale="ko">
+    <h1 class="text-2xl font-bold text-(--text-primary) mb-6">검색</h1>
+
+    <form method="get" action="/ko/search" class="mb-6 flex gap-2">
+      <div class="relative flex-1">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="18"
+          height="18"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="absolute left-3 top-1/2 -translate-y-1/2 text-(--text-tertiary)"
+          aria-hidden="true"
+        >
+          <circle cx="11" cy="11" r="8"></circle>
+          <path d="m21 21-4.3-4.3"></path>
+        </svg>
+        <input
+          type="search"
+          name="q"
+          value={q}
+          placeholder="수학 개념 검색..."
+          autofocus
+          class="w-full pl-10 pr-4 py-2.5 rounded-xl border border-(--border-primary) bg-(--bg-elevated) text-(--text-primary) placeholder:text-(--text-tertiary) focus:outline-none focus:border-(--border-focus) transition-colors"
+        />
+      </div>
+      <button
+        type="submit"
+        class="px-4 py-2.5 rounded-xl bg-(--accent-primary) text-white font-medium hover:opacity-90 transition-opacity"
+      >
+        검색
+      </button>
+    </form>
+
+    {q && q.length >= 2 && (
+      <div>
+        <p class="text-sm text-(--text-tertiary) mb-4">
+          "<strong class="text-(--text-primary)">{q}</strong>" 검색 결과 {results.length}개
+        </p>
+        {results.length === 0 ? (
+          <div class="text-center py-16">
+            <p class="text-(--text-tertiary)"><strong>"{q}"</strong>에 대한 결과가 없습니다</p>
+            <p class="text-sm text-(--text-tertiary) mt-2"><a href="/ko/browse" class="text-(--accent-primary) hover:underline">분야별 탐색</a>해 보세요</p>
+          </div>
+        ) : (
+          <div class="grid gap-3 sm:grid-cols-2">
+            {results.map((concept) => {
+              const diffLabel = difficultyLabels[concept.difficulty]?.ko ?? String(concept.difficulty);
+              return (
+                <a
+                  href={`/ko/concept/${concept.id}`}
+                  class="block p-4 rounded-xl bg-(--bg-elevated) border border-(--border-primary) hover:border-(--accent-primary) transition-colors group"
+                >
+                  <div class="flex items-start justify-between gap-2 mb-1.5">
+                    <h2 class="text-sm font-semibold text-(--text-primary) group-hover:text-(--accent-primary) transition-colors">
+                      {concept.name.ko}
+                    </h2>
+                    <span class="px-1.5 py-0.5 rounded text-xs bg-(--accent-mint) text-(--accent-primary) shrink-0">
+                      {diffLabel}
+                    </span>
+                  </div>
+                  <p class="text-xs text-(--text-secondary) line-clamp-2">{concept.def.ko}</p>
+                </a>
+              );
+            })}
+          </div>
+        )}
+      </div>
+    )}
+
+    {(!q || q.length < 2) && (
+      <div class="text-center py-16 text-(--text-tertiary)">
+        <p>검색어를 입력하면 수학 개념을 찾을 수 있습니다</p>
+        <p class="text-sm mt-2"><a href="/ko/browse" class="text-(--accent-primary) hover:underline">분야별 탐색</a>도 가능합니다</p>
+      </div>
+    )}
+  </AppShell>
+</BaseLayout>

@@ -1,11 +1,5 @@
 {
-  "extends": "../../packages/config/tsconfig.app.json",
-  "compilerOptions": {
-    "paths": {
-      "@/*": ["./app/*"],
-      "~/*": ["./app/*"]
-    }
-  },
-  "include": ["app/**/*", "scripts/**/*", "vite.config.ts"],
-  "exclude": ["node_modules", "app/paraglide"]
+  "extends": "astro/tsconfigs/strict",
+  "include": ["src/**/*", "scripts/**/*", "app/data/**/*", "app/shell.config.ts", "app/config.ts", "astro.config.mjs"],
+  "exclude": ["node_modules", "dist"]
 }
