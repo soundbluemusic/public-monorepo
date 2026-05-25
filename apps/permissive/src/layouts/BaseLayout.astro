@@ -69,7 +69,7 @@ const FONT_URL =
     {description && <meta name="twitter:description" content={description} />}
 
     <!-- JSON-LD structured data -->
-    <script type="application/ld+json" set:html={STRUCTURED_DATA} />
+    <script is:inline type="application/ld+json" set:html={STRUCTURED_DATA} />
 
     <slot name="head" />
   </head>

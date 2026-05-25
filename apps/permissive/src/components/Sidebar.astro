@@ -138,9 +138,6 @@ const navItems = [
     var html = document.documentElement;
     var sidebar = document.querySelector('aside[data-sidebar]');
     if (!sidebar) return;
-    var closeIcon = sidebar.querySelector('.sidebar-label[data-astro-source-file]');
-    var openIcon = sidebar.querySelector('.sidebar-collapsed-icon');
-
     function syncIcons() {
       var collapsed = html.classList.contains('sidebar-collapsed');
       sidebar.querySelectorAll('.sidebar-collapsed-icon').forEach(function (el) {
