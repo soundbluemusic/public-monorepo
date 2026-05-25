@@ -1,4 +1,4 @@
-import { readFileSync, writeFileSync } from 'fs';
+import { readFileSync, writeFileSync } from 'node:fs';
 
 const path = 'dist/server/wrangler.json';
 const config = JSON.parse(readFileSync(path, 'utf8'));

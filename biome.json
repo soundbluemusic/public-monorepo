@@ -80,6 +80,8 @@
       "!**/test-results",
       "!**/docs-site/.astro",
       "!**/docs-site/**/*.astro",
+      "!**/apps/permissive/.astro",
+      "!**/apps/permissive/src/**/*.astro",
       "!**/apps/docs/.astro",
       "!**/tests",
       "!**/profiling"
