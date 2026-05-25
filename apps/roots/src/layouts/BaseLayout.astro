@@ -1,0 +1,77 @@
+---
+import { createCriticalCss, createStructuredData, detectLanguage } from '@soundblue/ui/shell';
+import {
+  DARK_MODE_INIT_SCRIPT,
+  DARK_MODE_TOGGLE_SCRIPT_DUAL,
+  MOBILE_SIDEBAR_TOGGLE_SCRIPT,
+  SIDEBAR_COLLAPSE_INIT_SCRIPT,
+  SIDEBAR_COLLAPSE_SCRIPT,
+} from '@soundblue/ui/utils';
+import { shellConfig } from '../../app/shell.config';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+  canonical?: string;
+  ogTitle?: string;
+  ogImage?: string;
+  noIndex?: boolean;
+}
+
+const { title, description, canonical, ogTitle, ogImage, noIndex } = Astro.props;
+const pathname = Astro.url.pathname;
+const lang = detectLanguage(pathname);
+const baseUrl = shellConfig.baseUrl;
+const canonicalUrl = canonical ?? `${baseUrl}${pathname}`;
+
+const CRITICAL_CSS = createCriticalCss(shellConfig.themeColors);
+const STRUCTURED_DATA = createStructuredData(shellConfig);
+const FONT_URL =
+  'https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css';
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content={shellConfig.themeColor} />
+    {noIndex && <meta name="robots" content="noindex" />}
+
+    <title>{title}</title>
+    {description && <meta name="description" content={description} />}
+    <link rel="canonical" href={canonicalUrl} />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="manifest" href="/manifest.json" />
+
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+    <link rel="stylesheet" href={FONT_URL} />
+
+    <style set:html={CRITICAL_CSS} />
+    <script is:inline set:html={DARK_MODE_INIT_SCRIPT} />
+    <script is:inline set:html={SIDEBAR_COLLAPSE_INIT_SCRIPT} />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={shellConfig.appName} />
+    <meta property="og:title" content={ogTitle ?? title} />
+    {description && <meta property="og:description" content={description} />}
+    {ogImage && <meta property="og:image" content={ogImage} />}
+    <meta property="og:url" content={canonicalUrl} />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={ogTitle ?? title} />
+    {description && <meta name="twitter:description" content={description} />}
+
+    <script is:inline type="application/ld+json" set:html={STRUCTURED_DATA} />
+
+    <slot name="head" />
+  </head>
+  <body>
+    <slot />
+
+    <script is:inline set:html={DARK_MODE_TOGGLE_SCRIPT_DUAL} />
+    <script is:inline set:html={MOBILE_SIDEBAR_TOGGLE_SCRIPT} />
+    <script is:inline set:html={SIDEBAR_COLLAPSE_SCRIPT} />
+  </body>
+</html>

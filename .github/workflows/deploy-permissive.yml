@@ -26,7 +26,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           cache: 'pnpm'
 
       - name: Install dependencies
@@ -34,10 +34,6 @@ jobs:
 
       - name: Build Permissive
         run: pnpm build:permissive
-
-      - name: Inject polyfill for SSR
-        working-directory: apps/permissive
-        run: node scripts/inject-polyfill.mjs
 
       - name: Deploy to Cloudflare Workers
         working-directory: apps/permissive

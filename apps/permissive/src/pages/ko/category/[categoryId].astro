@@ -1,0 +1,59 @@
+---
+import { getCategoryBySlug, getLibrarySlug, getLibrariesByCategorySlug } from '../../../../app/data/libraries';
+import AppShell from '../../../components/AppShell.astro';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const { categoryId } = Astro.params;
+if (!categoryId) return Astro.redirect('/ko/libraries', 302);
+
+const category = getCategoryBySlug(categoryId);
+if (!category) return Astro.redirect('/ko/libraries', 302);
+
+const libs = getLibrariesByCategorySlug(categoryId);
+const baseUrl = 'https://permissive.soundbluemusic.com';
+---
+
+<BaseLayout
+  title={`${category.name.ko} 라이브러리 - Permissive`}
+  description={category.description.ko}
+  canonical={`${baseUrl}/ko/category/${categoryId}`}
+>
+  <AppShell locale="ko">
+    <div class="mb-6">
+      <nav aria-label="이동 경로" class="mb-4">
+        <ol class="flex items-center gap-1.5 text-sm text-(--text-tertiary)">
+          <li><a href="/ko" class="hover:text-(--text-primary) transition-colors">홈</a></li>
+          <li aria-hidden="true">/</li>
+          <li><a href="/ko/libraries" class="hover:text-(--text-primary) transition-colors">라이브러리</a></li>
+          <li aria-hidden="true">/</li>
+          <li class="text-(--text-primary) font-medium">{category.name.ko}</li>
+        </ol>
+      </nav>
+      <h1 class="text-2xl sm:text-3xl font-bold text-(--text-primary) mb-2">
+        {category.name.ko}
+      </h1>
+      <p class="text-(--text-secondary)">{category.description.ko}</p>
+      <p class="text-sm text-(--text-tertiary) mt-1">{libs.length}개 라이브러리</p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      {libs.map((lib) => (
+        <a
+          href={`/ko/library/${getLibrarySlug(lib.name)}`}
+          class="p-4 rounded-xl bg-(--bg-elevated) border border-(--border-primary) hover:border-(--border-focus) transition-colors group"
+        >
+          <div class="flex items-start justify-between gap-2 mb-2">
+            <h2 class="font-semibold text-(--text-primary) group-hover:text-(--accent-primary) transition-colors">
+              {lib.name}
+            </h2>
+            <span class="text-xs text-(--text-tertiary) shrink-0">★ {lib.stars}</span>
+          </div>
+          <p class="text-sm text-(--text-secondary) line-clamp-2 mb-3">{lib.descriptionKo}</p>
+          <span class="px-2 py-0.5 rounded text-xs bg-(--bg-tertiary) text-(--text-tertiary)">
+            {lib.license}
+          </span>
+        </a>
+      ))}
+    </div>
+  </AppShell>
+</BaseLayout>

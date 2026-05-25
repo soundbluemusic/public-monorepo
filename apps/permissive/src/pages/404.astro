@@ -1,0 +1,22 @@
+---
+import AppShell from '../components/AppShell.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+Astro.response.status = 404;
+---
+
+<BaseLayout title="404 Not Found - Permissive" noIndex>
+  <AppShell>
+    <div class="text-center py-20">
+      <p class="text-6xl font-bold text-(--text-tertiary) mb-4">404</p>
+      <h1 class="text-2xl font-semibold text-(--text-primary) mb-2">Page not found</h1>
+      <p class="text-(--text-secondary) mb-8">The page you're looking for doesn't exist.</p>
+      <a
+        href="/"
+        class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-(--accent-bg) text-white font-medium hover:opacity-90 transition-opacity"
+      >
+        Go home
+      </a>
+    </div>
+  </AppShell>
+</BaseLayout>

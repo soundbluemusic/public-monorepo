@@ -72,7 +72,6 @@
       "!**/apps/**/*/app/paraglide",
       "!**/apps/*/app/paraglide.d.ts",
       "!**/apps/**/*/.inlang-plugins",
-      "!**/apps/roots/app/routes/+types",
       "!**/packages/config/src/styles/tailwind.css",
       "!**/.lighthouseci",
       "!**/coverage",
@@ -80,6 +79,10 @@
       "!**/test-results",
       "!**/docs-site/.astro",
       "!**/docs-site/**/*.astro",
+      "!**/apps/permissive/.astro",
+      "!**/apps/permissive/src/**/*.astro",
+      "!**/apps/roots/.astro",
+      "!**/apps/roots/src/**/*.astro",
       "!**/apps/docs/.astro",
       "!**/tests",
       "!**/profiling"

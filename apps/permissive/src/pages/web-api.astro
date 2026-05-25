@@ -1,0 +1,59 @@
+---
+import { getWebApiSlug, webApis } from '../../app/data/web-apis';
+import AppShell from '../components/AppShell.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const baseUrl = 'https://permissive.soundbluemusic.com';
+const q = (Astro.url.searchParams.get('q') ?? '').toLowerCase();
+const filtered = q
+  ? webApis.filter(
+      (api) =>
+        api.name.toLowerCase().includes(q) || api.description.toLowerCase().includes(q),
+    )
+  : webApis;
+---
+
+<BaseLayout
+  title="Web APIs - Permissive"
+  description="Browser Web Standard APIs reference with availability and usage"
+  canonical={`${baseUrl}/web-api`}
+>
+  <AppShell>
+    <div class="mb-8">
+      <h1 class="text-2xl sm:text-3xl font-bold text-(--text-primary) mb-2">Web APIs</h1>
+      <p class="text-(--text-secondary)">{webApis.length} browser APIs</p>
+    </div>
+
+    <form method="get" action="/web-api" class="mb-6">
+      <div class="relative max-w-lg">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="absolute left-3 top-1/2 -translate-y-1/2 text-(--text-tertiary)" aria-hidden="true">
+          <circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path>
+        </svg>
+        <input
+          type="search"
+          name="q"
+          value={q}
+          placeholder="Search Web APIs..."
+          class="w-full pl-10 pr-4 py-2.5 rounded-xl border border-(--border-primary) bg-(--bg-elevated) text-(--text-primary) placeholder:text-(--text-tertiary) focus:outline-none focus:border-(--border-focus) transition-colors"
+        />
+      </div>
+    </form>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      {filtered.map((api) => (
+        <a
+          href={`/web-api/${getWebApiSlug(api.name)}`}
+          class="p-4 rounded-xl bg-(--bg-elevated) border border-(--border-primary) hover:border-(--border-focus) transition-colors group"
+        >
+          <h2 class="font-semibold text-(--text-primary) group-hover:text-(--accent-primary) transition-colors mb-1">
+            {api.name}
+          </h2>
+          <p class="text-sm text-(--text-secondary) line-clamp-2 mb-3">{api.description}</p>
+          <span class="px-2 py-0.5 rounded text-xs bg-(--bg-tertiary) text-(--text-tertiary)">
+            {api.category}
+          </span>
+        </a>
+      ))}
+    </div>
+  </AppShell>
+</BaseLayout>

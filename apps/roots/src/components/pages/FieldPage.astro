@@ -1,0 +1,118 @@
+---
+import { getConceptsByField } from '../../../app/data/concepts';
+import { fields } from '../../../app/data/fields';
+import { getSubfieldsByParent } from '../../../app/data/subfields';
+import { difficultyLabels } from '../../../app/data/types';
+import AppShell from '../AppShell.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+interface Props {
+  fieldId: string;
+  locale: 'en' | 'ko';
+}
+
+const { fieldId, locale } = Astro.props;
+const isKo = locale === 'ko';
+const prefix = isKo ? '/ko' : '';
+const baseUrl = 'https://roots.soundbluemusic.com';
+
+const field = fields.find((f) => f.id === fieldId);
+if (!field) return new Response(null, { status: 404 });
+
+const fieldName = isKo ? field.name.ko : field.name.en;
+const fieldDesc = isKo ? field.description.ko : field.description.en;
+const subfields = getSubfieldsByParent(fieldId);
+const concepts = getConceptsByField(fieldId);
+
+const canonical = `${baseUrl}${prefix}/field/${fieldId}`;
+---
+
+<BaseLayout
+  title={`${fieldName} | Roots`}
+  description={fieldDesc}
+  canonical={canonical}
+>
+  <AppShell locale={locale}>
+    <!-- Breadcrumb -->
+    <nav aria-label="Breadcrumb" class="mb-6">
+      <ol class="flex items-center gap-1.5 text-sm text-(--text-tertiary) flex-wrap">
+        <li>
+          <a href={`${prefix}/`} class="hover:text-(--text-primary) transition-colors">
+            {isKo ? '홈' : 'Home'}
+          </a>
+        </li>
+        <li aria-hidden="true">/</li>
+        <li>
+          <a href={`${prefix}/browse`} class="hover:text-(--text-primary) transition-colors">
+            {isKo ? '탐색' : 'Browse'}
+          </a>
+        </li>
+        <li aria-hidden="true">/</li>
+        <li class="text-(--text-primary) font-medium truncate max-w-48">{fieldName}</li>
+      </ol>
+    </nav>
+
+    <!-- Header -->
+    <header class="mb-8">
+      <h1 class="text-2xl sm:text-3xl font-bold text-(--text-primary) mb-2 flex items-center gap-3">
+        <span class="text-4xl" aria-hidden="true">{field.icon}</span>
+        {fieldName}
+      </h1>
+      <p class="text-lg text-(--text-secondary)">{fieldDesc}</p>
+    </header>
+
+    <!-- Subfields -->
+    {subfields.length > 0 && (
+      <section class="mb-8">
+        <h2 class="text-lg font-semibold text-(--text-primary) mb-4">
+          {isKo ? '하위 분야' : 'Subfields'}
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {subfields.map((subfield) => (
+            <div class="p-4 rounded-xl bg-(--bg-elevated) border border-(--border-primary)">
+              <h3 class="text-base font-medium text-(--text-primary) mb-1">
+                {isKo ? subfield.name.ko : subfield.name.en}
+              </h3>
+              <p class="text-sm text-(--text-secondary)">
+                {isKo ? subfield.description.ko : subfield.description.en}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+    )}
+
+    <!-- Concepts in this field -->
+    {concepts.length > 0 && (
+      <section>
+        <h2 class="text-lg font-semibold text-(--text-primary) mb-4">
+          {isKo ? `개념 (${concepts.length}개)` : `Concepts (${concepts.length})`}
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {concepts.map((concept) => {
+            const name = isKo ? concept.name.ko : concept.name.en;
+            const rawContent = isKo ? concept.content.ko : concept.content.en;
+            const def = typeof rawContent === 'string' ? rawContent : rawContent?.definition ?? '';
+            const diffLabel = difficultyLabels[concept.difficulty]?.[locale] ?? String(concept.difficulty);
+            return (
+              <a
+                href={`${prefix}/concept/${concept.id}`}
+                class="block p-4 rounded-xl bg-(--bg-elevated) border border-(--border-primary) hover:border-(--accent-primary) transition-colors group"
+              >
+                <div class="flex items-start justify-between gap-2 mb-2">
+                  <h3 class="text-sm font-medium text-(--text-primary) group-hover:text-(--accent-primary) transition-colors">
+                    {name}
+                  </h3>
+                  <span class="px-1.5 py-0.5 rounded text-xs font-medium bg-(--accent-mint) text-(--accent-primary) shrink-0">
+                    {diffLabel}
+                  </span>
+                </div>
+                <p class="text-xs text-(--text-secondary) line-clamp-2">{def}</p>
+              </a>
+            );
+          })}
+        </div>
+      </section>
+    )}
+  </AppShell>
+</BaseLayout>

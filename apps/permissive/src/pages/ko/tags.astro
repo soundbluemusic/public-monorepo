@@ -1,0 +1,32 @@
+---
+import { allLibraryTags } from '../../../app/data/libraries';
+import AppShell from '../../components/AppShell.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const baseUrl = 'https://permissive.soundbluemusic.com';
+---
+
+<BaseLayout
+  title="태그 - Permissive"
+  description="태그별로 라이브러리 탐색"
+  canonical={`${baseUrl}/ko/tags`}
+>
+  <AppShell locale="ko">
+    <h1 class="text-2xl sm:text-3xl font-bold text-(--text-primary) mb-2">태그</h1>
+    <p class="text-(--text-secondary) mb-8">{allLibraryTags.length}개 태그</p>
+
+    <div class="flex flex-wrap gap-2">
+      {allLibraryTags.map(({ tag, count }) => (
+        <a
+          href={`/ko/tag/${encodeURIComponent(tag)}`}
+          class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-(--bg-elevated) border border-(--border-primary) text-sm text-(--text-secondary) hover:border-(--border-focus) hover:text-(--text-primary) transition-colors"
+        >
+          {tag}
+          <span class="text-xs text-(--text-tertiary) bg-(--bg-tertiary) px-1.5 py-0.5 rounded-full">
+            {count}
+          </span>
+        </a>
+      ))}
+    </div>
+  </AppShell>
+</BaseLayout>

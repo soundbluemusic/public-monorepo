@@ -1,0 +1,92 @@
+---
+import { getRelatedWebApis, getWebApiBySlug, getWebApiSlug } from '../../../../app/data/web-apis';
+import AppShell from '../../../components/AppShell.astro';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const { slug } = Astro.params;
+if (!slug) return Astro.redirect('/ko/web-api', 302);
+
+const api = getWebApiBySlug(slug);
+if (!api) return Astro.redirect('/404', 404);
+
+const related = getRelatedWebApis(api, 4);
+const baseUrl = 'https://permissive.soundbluemusic.com';
+---
+
+<BaseLayout
+  title={`${api.name} - Permissive`}
+  description={api.descriptionKo}
+  canonical={`${baseUrl}/ko/web-api/${slug}`}
+>
+  <AppShell locale="ko">
+    <nav aria-label="이동 경로" class="mb-6">
+      <ol class="flex items-center gap-1.5 text-sm text-(--text-tertiary)">
+        <li><a href="/ko" class="hover:text-(--text-primary) transition-colors">홈</a></li>
+        <li aria-hidden="true">/</li>
+        <li><a href="/ko/web-api" class="hover:text-(--text-primary) transition-colors">Web API</a></li>
+        <li aria-hidden="true">/</li>
+        <li class="text-(--text-primary) font-medium">{api.name}</li>
+      </ol>
+    </nav>
+
+    <div class="mb-8">
+      <div class="flex items-start justify-between gap-4 mb-3">
+        <h1 class="text-2xl sm:text-3xl font-bold text-(--text-primary)">{api.name}</h1>
+        {api.trending && (
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-sm font-medium bg-orange-500/10 text-orange-500 shrink-0">
+            🔥 트렌딩
+          </span>
+        )}
+      </div>
+      <p class="text-lg text-(--text-secondary)">{api.descriptionKo}</p>
+    </div>
+
+    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-8">
+      <div class="p-4 rounded-xl bg-(--bg-elevated) border border-(--border-primary)">
+        <p class="text-xs text-(--text-tertiary) mb-1">카테고리</p>
+        <p class="font-semibold text-(--text-primary)">{api.category}</p>
+      </div>
+      <div class="p-4 rounded-xl bg-(--bg-elevated) border border-(--border-primary)">
+        <p class="text-xs text-(--text-tertiary) mb-1">지원 범위</p>
+        <p class="font-semibold text-(--text-primary)">{api.support}</p>
+      </div>
+      {api.yearStable && (
+        <div class="p-4 rounded-xl bg-(--bg-elevated) border border-(--border-primary)">
+          <p class="text-xs text-(--text-tertiary) mb-1">안정화 연도</p>
+          <p class="font-semibold text-(--text-primary)">{api.yearStable}</p>
+        </div>
+      )}
+    </div>
+
+    <div class="mb-8">
+      <a
+        href={api.mdnUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-(--bg-elevated) border border-(--border-primary) text-(--text-primary) hover:border-(--border-focus) transition-colors text-sm"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+        MDN 문서
+      </a>
+    </div>
+
+    {related.length > 0 && (
+      <div>
+        <h2 class="text-lg font-semibold text-(--text-primary) mb-4">관련 API</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {related.map((rel) => (
+            <a
+              href={`/ko/web-api/${getWebApiSlug(rel.name)}`}
+              class="p-4 rounded-xl bg-(--bg-elevated) border border-(--border-primary) hover:border-(--border-focus) transition-colors group"
+            >
+              <p class="font-medium text-(--text-primary) group-hover:text-(--accent-primary) transition-colors mb-1">
+                {rel.name}
+              </p>
+              <p class="text-sm text-(--text-secondary) line-clamp-2">{rel.descriptionKo}</p>
+            </a>
+          ))}
+        </div>
+      </div>
+    )}
+  </AppShell>
+</BaseLayout>

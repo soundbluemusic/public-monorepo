@@ -1,0 +1,7 @@
+---
+import LibrariesPage from '../../components/pages/LibrariesPage.astro';
+
+const q = Astro.url.searchParams.get('q') ?? undefined;
+---
+
+<LibrariesPage locale="ko" searchQuery={q} />

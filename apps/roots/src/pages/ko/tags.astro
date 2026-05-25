@@ -1,0 +1,57 @@
+---
+import { allTags, totalTagCount } from '../../../app/data/concepts';
+import AppShell from '../../components/AppShell.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const baseUrl = 'https://roots.soundbluemusic.com';
+const sortedTags = [...allTags].sort((a, b) => b.count - a.count);
+---
+
+<BaseLayout
+  title="태그 목록 | Roots"
+  description={`${totalTagCount}개의 태그로 수학 개념 탐색하기`}
+  canonical={`${baseUrl}/ko/tags`}
+>
+  <AppShell locale="ko">
+    <!-- Header -->
+    <header class="mb-8">
+      <h1 class="text-2xl sm:text-3xl font-bold text-(--text-primary) mb-2">모든 태그</h1>
+      <p class="text-(--text-secondary)">
+        {totalTagCount}개의 태그로 수학 개념을 탐색하세요
+      </p>
+    </header>
+
+    <!-- Tag cloud -->
+    <section class="mb-8" aria-labelledby="tags-heading">
+      <h2 id="tags-heading" class="sr-only">태그 목록</h2>
+      <div class="flex flex-wrap gap-2">
+        {sortedTags.map((item) => (
+          <a
+            href={`/ko/tag/${encodeURIComponent(item.tag)}`}
+            class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm bg-(--bg-elevated) border border-(--border-primary) text-(--text-secondary) hover:border-(--accent-primary) hover:text-(--text-primary) transition-colors"
+          >
+            <span>#{item.tag}</span>
+            <span class="text-xs text-(--text-tertiary)">{item.count}</span>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="p-4 rounded-xl bg-(--bg-elevated) border border-(--border-primary)">
+      <h2 class="font-medium text-(--text-primary) mb-2">통계</h2>
+      <div class="grid grid-cols-2 gap-4 text-sm">
+        <div>
+          <span class="text-(--text-secondary)">총 태그 수</span>
+          <p class="font-semibold text-(--text-primary)">{totalTagCount}</p>
+        </div>
+        <div>
+          <span class="text-(--text-secondary)">가장 많은 태그</span>
+          <p class="font-semibold text-(--text-primary)">
+            #{sortedTags[0]?.tag} ({sortedTags[0]?.count})
+          </p>
+        </div>
+      </div>
+    </section>
+  </AppShell>
+</BaseLayout>

@@ -1,0 +1,302 @@
+---
+import katex from 'katex';
+import { conceptsById, getConceptById } from '../../../app/data/concepts';
+import { difficultyLabels } from '../../../app/data/types';
+import { fields } from '../../../app/data/fields';
+import AppShell from '../AppShell.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+interface Props {
+  conceptId: string;
+  locale: 'en' | 'ko';
+}
+
+const { conceptId, locale } = Astro.props;
+const isKo = locale === 'ko';
+const prefix = isKo ? '/ko' : '';
+const baseUrl = 'https://roots.soundbluemusic.com';
+
+const concept = getConceptById(conceptId);
+if (!concept) return new Response(null, { status: 404 });
+
+const name = isKo ? concept.name.ko : concept.name.en;
+const field = fields.find((f) => f.id === concept.field);
+const fieldName = field ? (isKo ? field.name.ko : field.name.en) : concept.field;
+const diffLabel = difficultyLabels[concept.difficulty]?.[locale] ?? String(concept.difficulty);
+
+const rawContent = isKo ? concept.content.ko : concept.content.en;
+const content =
+  typeof rawContent === 'string'
+    ? { definition: rawContent, examples: [], formulas: [] }
+    : rawContent;
+
+const renderLatex = (latex: string, displayMode = false): string => {
+  try {
+    return katex.renderToString(latex, { throwOnError: false, displayMode, output: 'html' });
+  } catch {
+    return `<code>${latex}</code>`;
+  }
+};
+
+const getConceptName = (id: string): string => {
+  const c = conceptsById.get(id);
+  if (!c) return id;
+  return isKo ? c.name.ko : c.name.en;
+};
+
+const canonical = `${baseUrl}${prefix}/concept/${conceptId}`;
+---
+
+<BaseLayout
+  title={`${name} - Roots`}
+  description={content.definition}
+  canonical={canonical}
+>
+  <AppShell locale={locale}>
+    <!-- Breadcrumb -->
+    <nav aria-label="Breadcrumb" class="mb-6">
+      <ol class="flex items-center gap-1.5 text-sm text-(--text-tertiary) flex-wrap">
+        <li>
+          <a href={`${prefix}/`} class="hover:text-(--text-primary) transition-colors">
+            {isKo ? '홈' : 'Home'}
+          </a>
+        </li>
+        <li aria-hidden="true">/</li>
+        <li>
+          <a href={`${prefix}/browse`} class="hover:text-(--text-primary) transition-colors">
+            {isKo ? '탐색' : 'Browse'}
+          </a>
+        </li>
+        {field && (
+          <>
+            <li aria-hidden="true">/</li>
+            <li>
+              <a
+                href={`${prefix}/field/${field.id}`}
+                class="hover:text-(--text-primary) transition-colors"
+              >
+                {fieldName}
+              </a>
+            </li>
+          </>
+        )}
+        <li aria-hidden="true">/</li>
+        <li class="text-(--text-primary) font-medium truncate max-w-48">{name}</li>
+      </ol>
+    </nav>
+
+    <!-- Header -->
+    <div class="mb-8">
+      <div class="flex items-start justify-between gap-4 mb-3 flex-wrap">
+        <h1 class="text-2xl sm:text-3xl font-bold text-(--text-primary)">{name}</h1>
+        <span
+          class="px-2.5 py-1 rounded-full text-xs font-medium bg-(--accent-mint) text-(--accent-primary) shrink-0"
+        >
+          {diffLabel}
+        </span>
+      </div>
+
+      {field && (
+        <div class="flex items-center gap-2 mb-3">
+          <span class="text-lg">{field.icon}</span>
+          <a
+            href={`${prefix}/field/${field.id}`}
+            class="text-sm text-(--accent-primary) hover:underline"
+          >
+            {fieldName}
+          </a>
+          {concept.subfield && (
+            <span class="text-sm text-(--text-tertiary)">· {concept.subfield}</span>
+          )}
+        </div>
+      )}
+
+      <p class="text-lg text-(--text-secondary) leading-relaxed">{content.definition}</p>
+    </div>
+
+    <!-- Main LaTeX expression -->
+    {concept.latex && (
+      <div class="math-formula mb-8">
+        <div set:html={renderLatex(concept.latex, true)} />
+      </div>
+    )}
+
+    <!-- Formulas -->
+    {content.formulas && content.formulas.length > 0 && (
+      <div class="mb-8">
+        <h2 class="text-lg font-semibold text-(--text-primary) mb-4">
+          {isKo ? '공식' : 'Formulas'}
+        </h2>
+        <div class="space-y-4">
+          {content.formulas.map((f) => {
+            if (typeof f === 'string') {
+              return (
+                <div class="math-formula">
+                  <p class="text-(--text-secondary)">{f}</p>
+                </div>
+              );
+            }
+            return (
+              <div class="math-formula">
+                <div set:html={renderLatex(f.latex, true)} />
+                {f.description && (
+                  <p class="text-sm text-(--text-secondary) mt-2">{f.description}</p>
+                )}
+                {f.variables && f.variables.length > 0 && (
+                  <ul class="mt-2 space-y-1">
+                    {f.variables.map((v) => (
+                      <li class="text-sm text-(--text-tertiary)">
+                        <span set:html={renderLatex(v.symbol)} />
+                        {' '}— {v.meaning}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    )}
+
+    <!-- Examples -->
+    {content.examples && content.examples.length > 0 && (
+      <div class="mb-8">
+        <h2 class="text-lg font-semibold text-(--text-primary) mb-4">
+          {isKo ? '예제' : 'Examples'}
+        </h2>
+        <div class="space-y-4">
+          {content.examples.map((ex, i) => {
+            if (typeof ex === 'string') {
+              return (
+                <div class="p-4 rounded-xl bg-(--bg-elevated) border border-(--border-primary)">
+                  <p class="text-(--text-secondary)">{ex}</p>
+                </div>
+              );
+            }
+            return (
+              <div class="p-4 rounded-xl bg-(--bg-elevated) border border-(--border-primary)">
+                <p class="text-sm font-medium text-(--text-tertiary) mb-1">
+                  {isKo ? `예제 ${i + 1}` : `Example ${i + 1}`}
+                </p>
+                <p class="text-(--text-primary) mb-2">{ex.problem}</p>
+                {ex.latex && (
+                  <div class="math-formula">
+                    <div set:html={renderLatex(ex.latex, true)} />
+                  </div>
+                )}
+                <p class="text-sm text-(--text-secondary) mt-2">{ex.solution}</p>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    )}
+
+    <!-- History -->
+    {content.history && (content.history.discoveredBy || content.history.background) && (
+      <div class="mb-8">
+        <h2 class="text-lg font-semibold text-(--text-primary) mb-3">
+          {isKo ? '역사' : 'History'}
+        </h2>
+        <div class="p-4 rounded-xl bg-(--bg-elevated) border border-(--border-primary)">
+          {content.history.discoveredBy && (
+            <p class="text-sm text-(--text-tertiary) mb-1">
+              {isKo ? '발견자' : 'Discovered by'}: {content.history.discoveredBy}
+              {content.history.year && ` (${content.history.year})`}
+            </p>
+          )}
+          {content.history.background && (
+            <p class="text-(--text-secondary)">{content.history.background}</p>
+          )}
+        </div>
+      </div>
+    )}
+
+    <!-- Relations -->
+    {(concept.relations.prerequisites.length > 0 ||
+      concept.relations.nextTopics.length > 0 ||
+      concept.relations.related.length > 0) && (
+      <div class="mb-8">
+        <h2 class="text-lg font-semibold text-(--text-primary) mb-4">
+          {isKo ? '연관 개념' : 'Related Concepts'}
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          {concept.relations.prerequisites.length > 0 && (
+            <div>
+              <p class="text-xs font-semibold text-(--text-tertiary) uppercase tracking-wider mb-2">
+                {isKo ? '선행 개념' : 'Prerequisites'}
+              </p>
+              <ul class="space-y-1">
+                {concept.relations.prerequisites.map((id) => (
+                  <li>
+                    <a
+                      href={`${prefix}/concept/${id}`}
+                      class="text-sm text-(--accent-primary) hover:underline"
+                    >
+                      {getConceptName(id)}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+          {concept.relations.nextTopics.length > 0 && (
+            <div>
+              <p class="text-xs font-semibold text-(--text-tertiary) uppercase tracking-wider mb-2">
+                {isKo ? '다음 개념' : 'Next Topics'}
+              </p>
+              <ul class="space-y-1">
+                {concept.relations.nextTopics.map((id) => (
+                  <li>
+                    <a
+                      href={`${prefix}/concept/${id}`}
+                      class="text-sm text-(--accent-primary) hover:underline"
+                    >
+                      {getConceptName(id)}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+          {concept.relations.related.length > 0 && (
+            <div>
+              <p class="text-xs font-semibold text-(--text-tertiary) uppercase tracking-wider mb-2">
+                {isKo ? '관련 개념' : 'Related'}
+              </p>
+              <ul class="space-y-1">
+                {concept.relations.related.slice(0, 6).map((id) => (
+                  <li>
+                    <a
+                      href={`${prefix}/concept/${id}`}
+                      class="text-sm text-(--accent-primary) hover:underline"
+                    >
+                      {getConceptName(id)}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </div>
+      </div>
+    )}
+
+    <!-- Tags -->
+    {concept.tags.length > 0 && (
+      <div class="mb-8">
+        <div class="flex flex-wrap gap-2">
+          {concept.tags.map((tag) => (
+            <a
+              href={`${prefix}/tag/${encodeURIComponent(tag)}`}
+              class="px-2.5 py-1 rounded-lg text-sm bg-(--bg-tertiary) text-(--text-secondary) hover:bg-(--bg-elevated) hover:text-(--text-primary) transition-colors"
+            >
+              {tag}
+            </a>
+          ))}
+        </div>
+      </div>
+    )}
+  </AppShell>
+</BaseLayout>

@@ -1,0 +1,43 @@
+---
+import { libraries } from '../../app/data/libraries';
+import AppShell from '../components/AppShell.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const usedLibs = libraries.filter((l) => l.usedHere);
+const baseUrl = 'https://permissive.soundbluemusic.com';
+---
+
+<BaseLayout
+  title="Open source - Permissive"
+  description="Open source projects used to build this site"
+  canonical={`${baseUrl}/built-with`}
+>
+  <AppShell>
+    <h1 class="text-2xl sm:text-3xl font-bold text-(--text-primary) mb-2">Open source</h1>
+    <p class="text-(--text-secondary) mb-8">
+      This site is built with open-source tools. We believe in giving back.
+    </p>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      {usedLibs.map((lib) => (
+        <a
+          href={lib.github}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="p-4 rounded-xl bg-(--bg-elevated) border border-(--border-primary) hover:border-(--border-focus) transition-colors group"
+        >
+          <div class="flex items-start justify-between gap-2 mb-2">
+            <h2 class="font-semibold text-(--text-primary) group-hover:text-(--accent-primary) transition-colors">
+              {lib.name}
+            </h2>
+            <span class="text-xs text-(--text-tertiary) shrink-0">★ {lib.stars}</span>
+          </div>
+          <p class="text-sm text-(--text-secondary) line-clamp-2 mb-3">{lib.description}</p>
+          <span class="px-2 py-0.5 rounded text-xs bg-(--bg-tertiary) text-(--text-tertiary)">
+            {lib.license}
+          </span>
+        </a>
+      ))}
+    </div>
+  </AppShell>
+</BaseLayout>

@@ -16,15 +16,13 @@ export {
   type TranslationParams,
 } from './core/config';
 
-// React
-export { getLanguageFromParams, I18nProvider, useI18n } from './react';
-
 // Utils
 export {
   buildLocalePath,
   extractStaticRoutes,
   generateI18nRoutes,
   generateLocalizedPaths,
+  getLanguageFromParams,
   getLocaleFromPath,
   isKoreanPath,
   stripLocaleFromPath,

@@ -1,0 +1,104 @@
+---
+import { FEATURED_CONCEPTS } from '../../../app/data/featuredConcepts';
+import { fields } from '../../../app/data/fields';
+import AppShell from '../../components/AppShell.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const baseUrl = 'https://roots.soundbluemusic.com';
+---
+
+<BaseLayout
+  title="수리 - 수학 문서"
+  description="누구나 쉽게 배우는 수학 개념 사전. 438개의 수학 개념과 18개 분야를 탐색하세요."
+  canonical={`${baseUrl}/ko`}
+>
+  <AppShell locale="ko">
+    <!-- Hero -->
+    <section class="text-center py-12 mb-8">
+      <h1 class="text-4xl font-bold text-(--text-primary) mb-3">수리</h1>
+      <p class="text-lg text-(--text-secondary) mb-8">누구나 쉽게 배우는 수학 개념</p>
+
+      <!-- Search form -->
+      <form method="get" action="/ko/browse" class="max-w-md mx-auto flex gap-2">
+        <div class="relative flex-1">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="absolute left-3 top-1/2 -translate-y-1/2 text-(--text-tertiary)"
+            aria-hidden="true"
+          >
+            <circle cx="11" cy="11" r="8"></circle>
+            <path d="m21 21-4.3-4.3"></path>
+          </svg>
+          <input
+            type="search"
+            name="q"
+            placeholder="수학 개념 검색..."
+            class="w-full pl-10 pr-4 py-2.5 rounded-xl border border-(--border-primary) bg-(--bg-elevated) text-(--text-primary) placeholder:text-(--text-tertiary) focus:outline-none focus:border-(--border-focus) transition-colors"
+          />
+        </div>
+        <button
+          type="submit"
+          class="px-4 py-2.5 rounded-xl bg-(--accent-primary) text-white font-medium hover:opacity-90 transition-opacity text-sm"
+        >
+          검색
+        </button>
+      </form>
+    </section>
+
+    <!-- Featured Concepts -->
+    <section class="mb-12" aria-labelledby="featured-heading">
+      <h2 id="featured-heading" class="sr-only">추천 수학 개념</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        {FEATURED_CONCEPTS.map((concept) => (
+          <a
+            href={`/ko/concept/${concept.id}`}
+            class="block p-4 rounded-xl border transition-all hover:-translate-y-0.5 hover:shadow-md bg-(--bg-elevated) border-(--border-primary) hover:border-(--accent-primary)"
+          >
+            <div class="text-3xl mb-2">{concept.icon}</div>
+            <h3 class="text-base font-medium text-(--text-primary) mb-1">{concept.nameKo}</h3>
+            <p class="text-sm text-(--text-secondary) leading-snug">{concept.descKo}</p>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <!-- Fields Overview -->
+    <section class="mb-12" aria-labelledby="fields-heading">
+      <h2 id="fields-heading" class="text-xl font-semibold text-(--text-primary) mb-4">
+        분야별 탐색
+      </h2>
+      <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+        {fields.map((field) => (
+          <a
+            href={`/ko/field/${field.id}`}
+            class="flex items-center gap-2.5 p-3 rounded-xl bg-(--bg-elevated) border border-(--border-primary) hover:border-(--accent-primary) transition-colors group"
+          >
+            <span class="text-xl shrink-0">{field.icon}</span>
+            <span class="text-sm font-medium text-(--text-secondary) group-hover:text-(--text-primary) transition-colors truncate">
+              {field.name.ko}
+            </span>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <!-- Browse all link -->
+    <div class="text-center mt-4">
+      <a
+        href="/ko/browse"
+        class="inline-flex items-center gap-2 px-6 py-3 rounded-lg text-(--accent-primary) font-medium transition-colors hover:bg-(--bg-tertiary)"
+      >
+        438개 개념 모두 보기
+        <span aria-hidden="true">→</span>
+      </a>
+    </div>
+  </AppShell>
+</BaseLayout>

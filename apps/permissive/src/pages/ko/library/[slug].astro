@@ -1,0 +1,8 @@
+---
+import LibraryPage from '../../../components/pages/LibraryPage.astro';
+
+const { slug } = Astro.params;
+if (!slug) return Astro.redirect('/ko', 302);
+---
+
+<LibraryPage slug={slug} locale="ko" />

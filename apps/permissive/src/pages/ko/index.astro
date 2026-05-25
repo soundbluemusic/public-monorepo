@@ -1,0 +1,121 @@
+---
+import { getLibrarySlug, libraries } from '../../../app/data/libraries';
+import { webApis } from '../../../app/data/web-apis';
+import AppShell from '../../components/AppShell.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const baseUrl = 'https://permissive.soundbluemusic.com';
+const trending = libraries.filter((l) => l.trending).slice(0, 6);
+---
+
+<BaseLayout
+  title="Permissive - 오픈 웹개발 리소스"
+  description="웹표준 API와 오픈소스 웹개발 라이브러리를 한눈에 보세요"
+  canonical={`${baseUrl}/ko`}
+>
+  <AppShell locale="ko">
+    <!-- Hero -->
+    <section class="mb-12">
+      <h1 class="text-3xl sm:text-4xl font-bold text-(--text-primary) mb-4">
+        오픈 웹개발<br />
+        <span class="text-(--accent-primary)">리소스</span>
+      </h1>
+      <p class="text-lg text-(--text-secondary) mb-6 max-w-xl">
+        라이선스 메타데이터가 포함된 웹 표준 API와 오픈소스 라이브러리.
+      </p>
+      <form method="get" action="/ko/libraries" class="flex gap-2 max-w-lg">
+        <div class="relative flex-1">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="absolute left-3 top-1/2 -translate-y-1/2 text-(--text-tertiary)"
+            aria-hidden="true"
+          >
+            <circle cx="11" cy="11" r="8"></circle>
+            <path d="m21 21-4.3-4.3"></path>
+          </svg>
+          <input
+            type="search"
+            name="q"
+            placeholder="라이브러리 검색..."
+            class="w-full pl-10 pr-4 py-2.5 rounded-xl border border-(--border-primary) bg-(--bg-elevated) text-(--text-primary) placeholder:text-(--text-tertiary) focus:outline-none focus:border-(--border-focus) transition-colors"
+          />
+        </div>
+        <button
+          type="submit"
+          class="px-4 py-2.5 rounded-xl bg-(--accent-bg) text-white font-medium hover:opacity-90 transition-opacity text-sm"
+        >
+          검색
+        </button>
+      </form>
+    </section>
+
+    <!-- Quick nav -->
+    <section class="mb-12">
+      <h2 class="text-xl font-semibold text-(--text-primary) mb-4">탐색</h2>
+      <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+        <a
+          href="/ko/libraries"
+          class="p-5 rounded-xl bg-(--bg-elevated) border border-(--border-primary) hover:border-(--border-focus) transition-colors group"
+        >
+          <p class="text-2xl mb-2">📚</p>
+          <p class="font-semibold text-(--text-primary) group-hover:text-(--accent-primary) transition-colors">
+            라이브러리
+          </p>
+          <p class="text-sm text-(--text-secondary)">{libraries.length}개</p>
+        </a>
+        <a
+          href="/ko/web-api"
+          class="p-5 rounded-xl bg-(--bg-elevated) border border-(--border-primary) hover:border-(--border-focus) transition-colors group"
+        >
+          <p class="text-2xl mb-2">🌐</p>
+          <p class="font-semibold text-(--text-primary) group-hover:text-(--accent-primary) transition-colors">
+            Web API
+          </p>
+          <p class="text-sm text-(--text-secondary)">{webApis.length}개</p>
+        </a>
+        <a
+          href="/ko/tags"
+          class="p-5 rounded-xl bg-(--bg-elevated) border border-(--border-primary) hover:border-(--border-focus) transition-colors group"
+        >
+          <p class="text-2xl mb-2">🏷️</p>
+          <p class="font-semibold text-(--text-primary) group-hover:text-(--accent-primary) transition-colors">
+            태그
+          </p>
+          <p class="text-sm text-(--text-secondary)">태그별 탐색</p>
+        </a>
+      </div>
+    </section>
+
+    {trending.length > 0 && (
+      <section class="mb-12">
+        <h2 class="text-xl font-semibold text-(--text-primary) mb-4">🔥 트렌딩</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {trending.map((lib) => (
+            <a
+              href={`/ko/library/${getLibrarySlug(lib.name)}`}
+              class="flex items-start gap-3 p-4 rounded-xl bg-(--bg-elevated) border border-(--border-primary) hover:border-(--border-focus) transition-colors group"
+            >
+              <div class="flex-1 min-w-0">
+                <p class="font-medium text-(--text-primary) group-hover:text-(--accent-primary) transition-colors truncate">
+                  {lib.name}
+                </p>
+                <p class="text-sm text-(--text-secondary) line-clamp-1 mt-0.5">
+                  {lib.descriptionKo}
+                </p>
+              </div>
+              <span class="text-xs text-(--text-tertiary) shrink-0 mt-0.5">★ {lib.stars}</span>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
+  </AppShell>
+</BaseLayout>

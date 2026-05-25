@@ -1,0 +1,272 @@
+---
+import {
+  generateBreadcrumbSchema,
+  generateSoftwareApplicationSchema,
+} from '@soundblue/seo/structured-data';
+import { getCategorySlug, getLibraryBySlug, getLibrarySlug, getRelatedLibraries } from '../../../app/data/libraries';
+import AppShell from '../AppShell.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+interface Props {
+  slug: string;
+  locale: 'en' | 'ko';
+}
+
+const { slug, locale } = Astro.props;
+const isKo = locale === 'ko';
+const prefix = isKo ? '/ko' : '';
+const baseUrl = 'https://permissive.soundbluemusic.com';
+
+const lib = getLibraryBySlug(slug);
+if (!lib) {
+  return Astro.redirect('/404', 404);
+}
+
+const related = getRelatedLibraries(lib, 6);
+const libSlug = getLibrarySlug(lib.name);
+const description = isKo ? lib.descriptionKo : lib.description;
+
+const title = isKo
+  ? `${lib.name} - Permissive`
+  : `${lib.name} - Permissive`;
+
+const canonical = `${baseUrl}${prefix}/library/${libSlug}`;
+
+const breadcrumbItems = [
+  { name: isKo ? '홈' : 'Home', url: `${baseUrl}${prefix}/` },
+  { name: isKo ? '라이브러리' : 'Libraries', url: `${baseUrl}${prefix}/libraries` },
+  { name: lib.name, url: `${baseUrl}${prefix}/library/${libSlug}` },
+];
+const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbItems);
+const softwareSchema = generateSoftwareApplicationSchema({
+  name: lib.name,
+  description: lib.description,
+  url: `${baseUrl}/library/${libSlug}`,
+  applicationCategory: 'DeveloperApplication',
+  operatingSystem: 'Cross-platform',
+  license: lib.license,
+  codeRepository: lib.github,
+  programmingLanguage: 'JavaScript',
+  author: { name: lib.name, url: lib.website || lib.github },
+});
+---
+
+<BaseLayout title={title} description={description} canonical={canonical}>
+  <script
+    is:inline
+    slot="head"
+    type="application/ld+json"
+    set:html={JSON.stringify(breadcrumbSchema)}
+  />
+  <script
+    is:inline
+    slot="head"
+    type="application/ld+json"
+    set:html={JSON.stringify(softwareSchema)}
+  />
+
+  <AppShell locale={locale}>
+    <!-- Breadcrumb -->
+    <nav aria-label="Breadcrumb" class="mb-6">
+      <ol class="flex items-center gap-1.5 text-sm text-(--text-tertiary)">
+        <li>
+          <a href={`${prefix}/`} class="hover:text-(--text-primary) transition-colors">
+            {isKo ? '홈' : 'Home'}
+          </a>
+        </li>
+        <li aria-hidden="true">/</li>
+        <li>
+          <a href={`${prefix}/libraries`} class="hover:text-(--text-primary) transition-colors">
+            {isKo ? '라이브러리' : 'Libraries'}
+          </a>
+        </li>
+        <li aria-hidden="true">/</li>
+        <li class="text-(--text-primary) font-medium truncate">{lib.name}</li>
+      </ol>
+    </nav>
+
+    <!-- Header -->
+    <div class="mb-8">
+      <div class="flex items-start justify-between gap-4 mb-3">
+        <h1 class="text-2xl sm:text-3xl font-bold text-(--text-primary)">{lib.name}</h1>
+        <div class="flex items-center gap-1.5 text-(--text-secondary) shrink-0">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" aria-hidden="true" class="text-yellow-500">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+          </svg>
+          <span class="font-medium text-sm">{lib.stars}</span>
+        </div>
+      </div>
+      <p class="text-lg text-(--text-secondary)">{description}</p>
+    </div>
+
+    <!-- Badges -->
+    <div class="flex flex-wrap gap-2 mb-6">
+      {lib.wasmBased && (
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-sm font-medium bg-blue-500/10 text-blue-500">
+          ⚡ WASM
+        </span>
+      )}
+      {lib.trending && (
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-sm font-medium bg-orange-500/10 text-orange-500">
+          🔥 Trending
+        </span>
+      )}
+      {lib.usedHere && (
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-sm font-medium bg-purple-500/10 text-purple-500">
+          ✨ {isKo ? '이 사이트에 사용됨' : 'Used here'}
+        </span>
+      )}
+      <a
+        href={`${prefix}/category/${getCategorySlug(lib.category)}`}
+        class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-sm font-medium bg-(--bg-tertiary) text-(--text-secondary) hover:bg-(--bg-elevated) hover:text-(--text-primary) transition-colors"
+      >
+        {lib.category}
+      </a>
+    </div>
+
+    <!-- Stats grid -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-8">
+      <div class="p-4 rounded-xl bg-(--bg-elevated) border border-(--border-primary)">
+        <p class="text-xs text-(--text-tertiary) mb-1">{isKo ? '라이선스' : 'License'}</p>
+        <p class="font-semibold text-(--text-primary)">{lib.license}</p>
+      </div>
+      {lib.yearReleased && (
+        <div class="p-4 rounded-xl bg-(--bg-elevated) border border-(--border-primary)">
+          <p class="text-xs text-(--text-tertiary) mb-1">{isKo ? '출시연도' : 'Released'}</p>
+          <p class="font-semibold text-(--text-primary)">{lib.yearReleased}</p>
+        </div>
+      )}
+      <div class="p-4 rounded-xl bg-(--bg-elevated) border border-(--border-primary)">
+        <p class="text-xs text-(--text-tertiary) mb-1">GitHub Stars</p>
+        <p class="font-semibold text-(--text-primary)">{lib.stars}</p>
+      </div>
+    </div>
+
+    <!-- Tags -->
+    {lib.tags && lib.tags.length > 0 && (
+      <div class="mb-8">
+        <p class="text-sm font-medium text-(--text-tertiary) mb-2">{isKo ? '태그' : 'Tags'}</p>
+        <div class="flex flex-wrap gap-2">
+          {lib.tags.map((tag) => (
+            <a
+              href={`${prefix}/tag/${encodeURIComponent(tag)}`}
+              class="px-2.5 py-1 rounded-lg text-sm bg-(--bg-tertiary) text-(--text-secondary) hover:bg-(--bg-elevated) hover:text-(--text-primary) transition-colors"
+            >
+              {tag}
+            </a>
+          ))}
+        </div>
+      </div>
+    )}
+
+    <!-- Links -->
+    <div class="mb-8">
+      <p class="text-sm font-medium text-(--text-tertiary) mb-3">Links</p>
+      <div class="flex flex-wrap gap-3">
+        <a
+          href={lib.github}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-(--bg-elevated) border border-(--border-primary) text-(--text-primary) hover:border-(--border-focus) transition-colors text-sm"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+          </svg>
+          GitHub
+        </a>
+        {lib.website && (
+          <a
+            href={lib.website}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-(--bg-elevated) border border-(--border-primary) text-(--text-primary) hover:border-(--border-focus) transition-colors text-sm"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+            {isKo ? '웹사이트' : 'Website'}
+          </a>
+        )}
+        {lib.npm && (
+          <a
+            href={`https://www.npmjs.com/package/${lib.npm}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-(--bg-elevated) border border-(--border-primary) text-(--text-primary) hover:border-(--border-focus) transition-colors text-sm"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M0 0v24h24V0zm6.672 19.992H4.008V8.016h8.016v11.976H9.336V10.68H6.672zm9.336 0h-2.664V10.68h-2.664V8.016h8.016v2.664H16.008z"/>
+            </svg>
+            npm
+          </a>
+        )}
+      </div>
+    </div>
+
+    <!-- Use Cases -->
+    {lib.useCases && (
+      <div class="mb-8">
+        <h2 class="text-lg font-semibold text-(--text-primary) mb-3">
+          {isKo ? '활용 사례' : 'Use Cases'}
+        </h2>
+        <div class="p-4 rounded-xl bg-(--bg-elevated) border border-(--border-primary)">
+          <p class="text-(--text-secondary) leading-relaxed">
+            {isKo ? lib.useCases.ko : lib.useCases.en}
+          </p>
+        </div>
+      </div>
+    )}
+
+    <!-- Code Example -->
+    {lib.codeExample && (
+      <div class="mb-8">
+        <h2 class="text-lg font-semibold text-(--text-primary) mb-3">
+          {isKo ? '코드 예시' : 'Code Example'}
+        </h2>
+        <pre class="rounded-xl border border-(--border-primary) overflow-hidden"><code>{lib.codeExample}</code></pre>
+      </div>
+    )}
+
+    <!-- Related Libraries -->
+    {related.length > 0 && (
+      <div class="mb-8">
+        <h2 class="text-lg font-semibold text-(--text-primary) mb-4">
+          {isKo ? '관련 라이브러리' : 'Related Libraries'}
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {related.map((relLib) => (
+            <a
+              href={`${prefix}/library/${getLibrarySlug(relLib.name)}`}
+              class="p-4 rounded-xl bg-(--bg-elevated) border border-(--border-primary) hover:border-(--border-focus) transition-colors group"
+            >
+              <div class="flex items-start justify-between gap-2 mb-1">
+                <p class="font-medium text-(--text-primary) group-hover:text-(--accent-primary) transition-colors">
+                  {relLib.name}
+                </p>
+                <span class="text-xs text-(--text-tertiary) shrink-0">★ {relLib.stars}</span>
+              </div>
+              <p class="text-sm text-(--text-secondary) line-clamp-2">
+                {isKo ? relLib.descriptionKo : relLib.description}
+              </p>
+            </a>
+          ))}
+        </div>
+      </div>
+    )}
+
+    <!-- Divider -->
+    <div class="pt-8 border-t border-(--border-primary)">
+      <p class="text-sm text-(--text-tertiary)">
+        {isKo
+          ? '이 페이지가 도움이 되었나요?'
+          : 'Found an issue or want to contribute?'}
+        <a
+          href="https://github.com/soundbluemusic/public-monorepo/issues"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="ml-1 text-(--accent-primary) hover:underline"
+        >
+          GitHub
+        </a>
+      </p>
+    </div>
+  </AppShell>
+</BaseLayout>

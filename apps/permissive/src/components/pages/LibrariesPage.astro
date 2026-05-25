@@ -1,0 +1,152 @@
+---
+import { categoryMeta, getLibrarySlug, libraries } from '../../../app/data/libraries';
+import AppShell from '../AppShell.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+interface Props {
+  locale: 'en' | 'ko';
+  categoryFilter?: string;
+  searchQuery?: string;
+}
+
+const { locale, categoryFilter, searchQuery } = Astro.props;
+const isKo = locale === 'ko';
+const prefix = isKo ? '/ko' : '';
+const baseUrl = 'https://permissive.soundbluemusic.com';
+
+const title = isKo
+  ? 'JavaScript 라이브러리 - Permissive'
+  : 'JavaScript Libraries - Permissive';
+const description = isKo
+  ? 'MIT, Apache 2.0 등 라이선스 메타데이터와 함께 정리된 오픈소스 라이브러리 목록'
+  : 'Open-source JavaScript libraries sorted by category with license metadata';
+
+const q = searchQuery?.toLowerCase() ?? '';
+const filtered = libraries.filter((lib) => {
+  const matchesCategory = !categoryFilter || lib.category === categoryFilter;
+  const matchesSearch =
+    !q ||
+    lib.name.toLowerCase().includes(q) ||
+    lib.description.toLowerCase().includes(q) ||
+    lib.tags?.some((t) => t.toLowerCase().includes(q));
+  return matchesCategory && matchesSearch;
+});
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  canonical={`${baseUrl}${prefix}/libraries`}
+>
+  <AppShell locale={locale}>
+    <div class="mb-8">
+      <h1 class="text-2xl sm:text-3xl font-bold text-(--text-primary) mb-2">
+        {isKo ? 'JavaScript 라이브러리' : 'JavaScript Libraries'}
+      </h1>
+      <p class="text-(--text-secondary)">
+        {isKo
+          ? `${libraries.length}개 라이브러리 · 라이선스 메타데이터 포함`
+          : `${libraries.length} libraries · with license metadata`}
+      </p>
+    </div>
+
+    <!-- Search form -->
+    <form method="get" action={`${prefix}/libraries`} class="mb-6">
+      <div class="relative">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="18"
+          height="18"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="absolute left-3 top-1/2 -translate-y-1/2 text-(--text-tertiary)"
+          aria-hidden="true"
+        >
+          <circle cx="11" cy="11" r="8"></circle>
+          <path d="m21 21-4.3-4.3"></path>
+        </svg>
+        <input
+          type="search"
+          name="q"
+          value={searchQuery ?? ''}
+          placeholder={isKo ? '라이브러리 검색...' : 'Search libraries...'}
+          class="w-full pl-10 pr-4 py-2.5 rounded-xl border border-(--border-primary) bg-(--bg-elevated) text-(--text-primary) placeholder:text-(--text-tertiary) focus:outline-none focus:border-(--border-focus) transition-colors"
+        />
+      </div>
+    </form>
+
+    <!-- Category filter chips -->
+    <div class="flex flex-wrap gap-2 mb-6">
+      <a
+        href={`${prefix}/libraries`}
+        class={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${
+          !categoryFilter
+            ? 'bg-(--accent-primary) text-white'
+            : 'bg-(--bg-tertiary) text-(--text-secondary) hover:bg-(--bg-elevated)'
+        }`}
+      >
+        {isKo ? '전체' : 'All'}
+      </a>
+      {
+        categoryMeta.map((cat) => (
+          <a
+            href={`${prefix}/category/${cat.id}`}
+            class={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${
+              categoryFilter === cat.id
+                ? 'bg-(--accent-primary) text-white'
+                : 'bg-(--bg-tertiary) text-(--text-secondary) hover:bg-(--bg-elevated)'
+            }`}
+          >
+            {isKo ? cat.name.ko : cat.name.en}
+          </a>
+        ))
+      }
+    </div>
+
+    <!-- Results count -->
+    {(searchQuery || categoryFilter) && (
+      <p class="text-sm text-(--text-tertiary) mb-4">
+        {filtered.length} {isKo ? '개 결과' : 'results'}
+      </p>
+    )}
+
+    <!-- Library grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      {
+        filtered.map((lib) => (
+          <a
+            href={`${prefix}/library/${getLibrarySlug(lib.name)}`}
+            class="p-4 rounded-xl bg-(--bg-elevated) border border-(--border-primary) hover:border-(--border-focus) transition-colors group"
+          >
+            <div class="flex items-start justify-between gap-2 mb-2">
+              <h2 class="font-semibold text-(--text-primary) group-hover:text-(--accent-primary) transition-colors">
+                {lib.name}
+              </h2>
+              <span class="text-xs text-(--text-tertiary) shrink-0">★ {lib.stars}</span>
+            </div>
+            <p class="text-sm text-(--text-secondary) line-clamp-2 mb-3">
+              {isKo ? lib.descriptionKo : lib.description}
+            </p>
+            <div class="flex items-center gap-2 flex-wrap">
+              <span class="px-2 py-0.5 rounded text-xs bg-(--bg-tertiary) text-(--text-tertiary)">
+                {lib.license}
+              </span>
+              <span class="px-2 py-0.5 rounded text-xs bg-(--bg-tertiary) text-(--text-tertiary)">
+                {lib.category}
+              </span>
+              {lib.trending && (
+                <span class="px-2 py-0.5 rounded text-xs bg-orange-500/10 text-orange-500">
+                  🔥
+                </span>
+              )}
+            </div>
+          </a>
+        ))
+      }
+    </div>
+  </AppShell>
+</BaseLayout>

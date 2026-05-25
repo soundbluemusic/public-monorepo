@@ -1,0 +1,161 @@
+---
+import { lightConcepts } from '../../../app/data/concepts';
+import { difficultyLabels } from '../../../app/data/types';
+import { fields } from '../../../app/data/fields';
+import { getSubfieldsByParent } from '../../../app/data/subfields';
+import AppShell from '../../components/AppShell.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const baseUrl = 'https://roots.soundbluemusic.com';
+
+const url = Astro.url;
+const q = url.searchParams.get('q') ?? '';
+const filterField = url.searchParams.get('field') ?? '';
+
+const filtered = lightConcepts.filter((c) => {
+  const matchQ = !q || c.name.ko.toLowerCase().includes(q.toLowerCase()) || c.def.ko.toLowerCase().includes(q.toLowerCase());
+  const matchField = !filterField || c.field === filterField;
+  return matchQ && matchField;
+});
+---
+
+<BaseLayout
+  title="탐색 - 수리"
+  description="18개 분야의 438개 수학 개념 탐색"
+  canonical={`${baseUrl}/ko/browse`}
+>
+  <AppShell locale="ko">
+    <h1 class="text-2xl sm:text-3xl font-bold text-(--text-primary) mb-6">탐색</h1>
+
+    <!-- Filter bar -->
+    <form method="get" action="/ko/browse" class="mb-6 flex flex-col sm:flex-row gap-3">
+      <div class="relative flex-1">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="absolute left-3 top-1/2 -translate-y-1/2 text-(--text-tertiary)"
+          aria-hidden="true"
+        >
+          <circle cx="11" cy="11" r="8"></circle>
+          <path d="m21 21-4.3-4.3"></path>
+        </svg>
+        <input
+          type="search"
+          name="q"
+          value={q}
+          placeholder="개념 필터..."
+          class="w-full pl-9 pr-4 py-2 rounded-lg border border-(--border-primary) bg-(--bg-elevated) text-(--text-primary) placeholder:text-(--text-tertiary) focus:outline-none focus:border-(--border-focus) transition-colors text-sm"
+        />
+      </div>
+      <select
+        name="field"
+        class="px-3 py-2 rounded-lg border border-(--border-primary) bg-(--bg-elevated) text-(--text-primary) focus:outline-none focus:border-(--border-focus) transition-colors text-sm"
+      >
+        <option value="">모든 분야</option>
+        {fields.map((f) => (
+          <option value={f.id} selected={filterField === f.id}>{f.name.ko}</option>
+        ))}
+      </select>
+      <button
+        type="submit"
+        class="px-4 py-2 rounded-lg bg-(--accent-primary) text-white font-medium hover:opacity-90 transition-opacity text-sm shrink-0"
+      >
+        필터
+      </button>
+    </form>
+
+    {q || filterField ? (
+      <div>
+        <p class="text-sm text-(--text-tertiary) mb-4">
+          {filtered.length}개의 개념
+          {q && <> "<strong class="text-(--text-primary)">{q}</strong>" 검색 결과</>}
+          {filterField && <> - <strong class="text-(--text-primary)">{fields.find(f => f.id === filterField)?.name.ko}</strong> 분야</>}
+        </p>
+        {filtered.length === 0 ? (
+          <div class="text-center py-16">
+            <p class="text-(--text-tertiary)">결과가 없습니다. <a href="/ko/browse" class="text-(--accent-primary) hover:underline">필터 초기화</a></p>
+          </div>
+        ) : (
+          <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            {filtered.map((concept) => {
+              const diffLabel = difficultyLabels[concept.difficulty]?.ko ?? String(concept.difficulty);
+              return (
+                <a
+                  href={`/ko/concept/${concept.id}`}
+                  class="block p-4 rounded-xl bg-(--bg-elevated) border border-(--border-primary) hover:border-(--accent-primary) transition-colors group"
+                >
+                  <div class="flex items-start justify-between gap-2 mb-1.5">
+                    <h2 class="text-sm font-medium text-(--text-primary) group-hover:text-(--accent-primary) transition-colors">
+                      {concept.name.ko}
+                    </h2>
+                    <span class="px-1.5 py-0.5 rounded text-xs bg-(--accent-mint) text-(--accent-primary) shrink-0">
+                      {diffLabel}
+                    </span>
+                  </div>
+                  <p class="text-xs text-(--text-secondary) line-clamp-2">{concept.def.ko}</p>
+                </a>
+              );
+            })}
+          </div>
+        )}
+      </div>
+    ) : (
+      <div class="space-y-10">
+        {fields.map((field) => {
+          const fieldConcepts = lightConcepts.filter(c => c.field === field.id);
+          const subfields = getSubfieldsByParent(field.id);
+          return (
+            <section aria-labelledby={`field-${field.id}`}>
+              <div class="flex items-center gap-3 mb-4">
+                <span class="text-2xl">{field.icon}</span>
+                <div>
+                  <h2 id={`field-${field.id}`} class="text-lg font-semibold text-(--text-primary)">
+                    <a href={`/ko/field/${field.id}`} class="hover:text-(--accent-primary) transition-colors">
+                      {field.name.ko}
+                    </a>
+                  </h2>
+                  <p class="text-sm text-(--text-tertiary)">{fieldConcepts.length}개의 개념</p>
+                </div>
+              </div>
+              {subfields.length > 0 && (
+                <div class="flex flex-wrap gap-2 mb-3">
+                  {subfields.map((sf) => (
+                    <span class="px-2 py-0.5 rounded-full text-xs bg-(--bg-tertiary) text-(--text-secondary)">
+                      {sf.name.ko}
+                    </span>
+                  ))}
+                </div>
+              )}
+              <div class="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
+                {fieldConcepts.slice(0, 6).map((concept) => (
+                  <a
+                    href={`/ko/concept/${concept.id}`}
+                    class="flex items-center gap-2 p-3 rounded-lg bg-(--bg-elevated) border border-(--border-primary) hover:border-(--accent-primary) transition-colors group text-sm"
+                  >
+                    <span class="flex-1 font-medium text-(--text-primary) group-hover:text-(--accent-primary) transition-colors truncate">
+                      {concept.name.ko}
+                    </span>
+                  </a>
+                ))}
+              </div>
+              {fieldConcepts.length > 6 && (
+                <div class="mt-2">
+                  <a href={`/ko/field/${field.id}`} class="text-sm text-(--accent-primary) hover:underline">
+                    {fieldConcepts.length}개 전체 보기 →
+                  </a>
+                </div>
+              )}
+            </section>
+          );
+        })}
+      </div>
+    )}
+  </AppShell>
+</BaseLayout>
