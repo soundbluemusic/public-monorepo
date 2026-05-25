@@ -7,7 +7,7 @@ const { slug } = Astro.params;
 if (!slug) return Astro.redirect('/ko/web-api', 302);
 
 const api = getWebApiBySlug(slug);
-if (!api) return Astro.redirect('/ko/web-api', 302);
+if (!api) return Astro.redirect('/404', 404);
 
 const related = getRelatedWebApis(api, 4);
 const baseUrl = 'https://permissive.soundbluemusic.com';
@@ -16,7 +16,7 @@ const baseUrl = 'https://permissive.soundbluemusic.com';
 <BaseLayout
   title={`${api.name} - Permissive`}
   description={api.descriptionKo}
-  canonical={`${baseUrl}/web-api/${slug}`}
+  canonical={`${baseUrl}/ko/web-api/${slug}`}
 >
   <AppShell locale="ko">
     <nav aria-label="이동 경로" class="mb-6">
