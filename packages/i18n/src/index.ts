@@ -22,6 +22,7 @@ export {
   extractStaticRoutes,
   generateI18nRoutes,
   generateLocalizedPaths,
+  getLanguageFromParams,
   getLocaleFromPath,
   isKoreanPath,
   stripLocaleFromPath,
