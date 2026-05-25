@@ -21,6 +21,12 @@ const navItems = [
   { name: isKo ? '라이브러리' : 'Libraries', path: isKo ? '/ko/libraries' : '/libraries' },
   { name: 'Web API', path: isKo ? '/ko/web-api' : '/web-api' },
 ];
+const navLinkClass = (path: string) =>
+  `px-3 py-1.5 rounded-lg text-sm font-medium transition-colors ${
+    pathname === path
+      ? 'text-(--text-primary) bg-(--bg-tertiary)'
+      : 'text-(--text-secondary) hover:text-(--text-primary) hover:bg-(--bg-tertiary)'
+  }`;
 ---
 
 <header
@@ -67,7 +73,7 @@ const navItems = [
         navItems.map((item) => (
           <a
             href={item.path}
-            class="px-3 py-1.5 rounded-lg text-sm font-medium text-(--text-secondary) hover:text-(--text-primary) hover:bg-(--bg-tertiary) transition-colors"
+            class={navLinkClass(item.path)}
             aria-current={pathname === item.path ? 'page' : undefined}
           >
             {item.name}
