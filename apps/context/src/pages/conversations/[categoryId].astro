@@ -1,0 +1,59 @@
+---
+import { getCategoryById } from '../../../app/data/categories';
+import { getConversationsByCategory } from '../../../app/data/conversations';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AppShell from '../../components/AppShell.astro';
+
+const { categoryId } = Astro.params;
+if (!categoryId) return Astro.redirect('/404', 404);
+
+const category = getCategoryById(categoryId);
+if (!category) return Astro.redirect('/404', 404);
+
+const conversations = getConversationsByCategory(categoryId);
+const BASE_URL = 'https://context.soundbluemusic.com';
+---
+
+<BaseLayout
+  title={`${category.name.en} Conversations | Context`}
+  description={`${conversations.length} Korean conversation examples for ${category.name.en} situations`}
+  canonical={`${BASE_URL}/conversations/${categoryId}`}
+>
+  <AppShell locale="en">
+    <div class="mb-4">
+      <a href="/conversations" class="text-sm text-(--accent-primary) hover:underline">← All Conversations</a>
+    </div>
+
+    <header class="mb-8">
+      <div class="flex items-center gap-3 mb-2">
+        <span class="text-3xl">{category.icon}</span>
+        <h1 class="text-2xl sm:text-3xl font-bold text-(--text-primary)">{category.name.en}</h1>
+      </div>
+      <p class="text-(--text-secondary)">{conversations.length} conversations</p>
+    </header>
+
+    {conversations.length === 0 && (
+      <p class="text-(--text-tertiary) text-center py-12">No conversations yet.</p>
+    )}
+
+    <div class="space-y-6">
+      {conversations.map((conv) => (
+        <div class="p-5 rounded-xl bg-(--bg-elevated) border border-(--border-primary)">
+          <h2 class="text-base font-semibold text-(--text-primary) mb-4">{conv.title.en}</h2>
+          <div class="space-y-3">
+            {conv.dialogue.map((line) => (
+              <div class={`flex gap-3 ${line.speaker === 'B' ? 'flex-row-reverse' : ''}`}>
+                <span class="shrink-0 text-xs font-bold text-(--accent-primary) w-5 text-center pt-2">{line.speaker}</span>
+                <div class={`flex-1 max-w-[85%] p-3 rounded-xl text-sm ${line.speaker === 'A' ? 'bg-(--bg-secondary)' : 'bg-(--accent-primary) text-white'}`}>
+                  <p class="font-medium mb-1">{line.ko}</p>
+                  <p class={`text-xs ${line.speaker === 'B' ? 'text-white/80' : 'text-(--text-tertiary)'}`}>{line.romanization}</p>
+                  <p class={`text-xs mt-0.5 ${line.speaker === 'B' ? 'text-white/70' : 'text-(--text-secondary)'}`}>{line.en}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </AppShell>
+</BaseLayout>

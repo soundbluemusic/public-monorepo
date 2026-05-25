@@ -1,0 +1,66 @@
+---
+import AppShell from '../../components/AppShell.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const BASE_URL = 'https://context.soundbluemusic.com';
+---
+
+<BaseLayout
+  title="북마크 - Context"
+  description="북마크한 한국어 어휘 단어"
+  canonical={`${BASE_URL}/ko/bookmarks`}
+  noIndex={true}
+>
+  <AppShell locale="ko">
+    <h1 class="text-2xl font-bold text-(--text-primary) mb-6">북마크</h1>
+    <div id="bookmarks-content">
+      <p class="text-(--text-secondary) mb-4">북마크를 불러오는 중...</p>
+    </div>
+  </AppShell>
+</BaseLayout>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const content = document.getElementById('bookmarks-content');
+    if (!content) return;
+
+    try {
+      const favoriteData: Array<{ id: string; korean: string; english?: string }> = JSON.parse(
+        localStorage.getItem('context-favorites') ?? '[]'
+      );
+
+      if (favoriteData.length === 0) {
+        content.innerHTML = `
+          <div class="text-center py-16">
+            <p class="text-(--text-secondary) mb-4">아직 북마크가 없어요. 학습하면서 단어를 북마크해 보세요!</p>
+            <a href="/ko/browse" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-(--accent-primary) text-white text-sm font-medium hover:brightness-110 transition-all">
+              단어 탐색 →
+            </a>
+          </div>
+        `;
+      } else {
+        const items = favoriteData
+          .map(
+            (item) => `
+          <a href="/ko/entry/${item.id}" class="block p-4 rounded-xl bg-(--bg-elevated) border border-(--border-primary) hover:border-(--accent-primary) transition-colors">
+            <p class="font-semibold text-(--text-primary)">${item.korean}</p>
+            ${item.english ? `<p class="text-sm text-(--text-secondary) mt-1">${item.english}</p>` : ''}
+          </a>
+        `
+          )
+          .join('');
+
+        content.innerHTML = `
+          <div class="mb-4">
+            <p class="text-sm text-(--text-tertiary)">북마크한 단어 ${favoriteData.length}개</p>
+          </div>
+          <div class="space-y-2">
+            ${items}
+          </div>
+        `;
+      }
+    } catch {
+      content.innerHTML = '<p class="text-(--text-secondary)">북마크를 불러올 수 없습니다.</p>';
+    }
+  });
+</script>

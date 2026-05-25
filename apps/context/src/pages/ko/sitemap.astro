@@ -1,0 +1,67 @@
+---
+import AppShell from '../../components/AppShell.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const BASE_URL = 'https://context.soundbluemusic.com';
+
+const pages = [
+  { path: '/ko', labelKo: '홈' },
+  { path: '/ko/browse', labelKo: '둘러보기' },
+  { path: '/ko/conversations', labelKo: '대화 예문' },
+  { path: '/ko/tags', labelKo: '태그' },
+  { path: '/ko/download', labelKo: '다운로드' },
+  { path: '/ko/about', labelKo: '소개' },
+];
+
+const xmlSitemaps = [
+  { path: '/sitemap.xml', label: '사이트맵 인덱스' },
+  { path: '/sitemap-pages.xml', label: '페이지 사이트맵' },
+  { path: '/sitemap-categories.xml', label: '카테고리 사이트맵' },
+];
+---
+
+<BaseLayout
+  title="사이트맵 - Context"
+  description="Context 사이트의 모든 페이지 목록"
+  canonical={`${BASE_URL}/ko/sitemap`}
+>
+  <AppShell locale="ko">
+    <div class="max-w-4xl mx-auto">
+      <h1 class="text-2xl font-bold text-(--text-primary) mb-2">사이트맵</h1>
+      <p class="text-(--text-secondary) mb-8">Context의 모든 페이지를 한눈에 확인하세요.</p>
+
+      <section class="mb-8">
+        <h2 class="text-xl font-semibold text-(--text-primary) mb-4">모든 페이지</h2>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+          {pages.map((page) => (
+            <a
+              href={page.path}
+              class="flex items-center gap-3 p-3 rounded-lg bg-(--bg-elevated) border border-(--border-primary) no-underline transition-all hover:border-(--border-focus) hover:shadow-sm"
+            >
+              <span class="text-(--text-primary) font-medium">{page.labelKo}</span>
+            </a>
+          ))}
+        </div>
+      </section>
+
+      <section class="p-6 rounded-xl bg-(--bg-elevated) border border-(--border-primary)">
+        <h2 class="text-lg font-semibold text-(--text-primary) mb-2">검색 엔진 사이트맵</h2>
+        <p class="text-sm text-(--text-secondary) mb-4">검색 엔진이 이 사이트를 색인하는 데 사용하는 XML 사이트맵입니다.</p>
+        <ul class="space-y-3">
+          {xmlSitemaps.map((sitemap) => (
+            <li>
+              <a
+                href={sitemap.path}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center gap-2 text-(--accent-primary) hover:underline"
+              >
+                {sitemap.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    </div>
+  </AppShell>
+</BaseLayout>

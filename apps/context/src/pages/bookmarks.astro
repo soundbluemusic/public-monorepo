@@ -1,0 +1,66 @@
+---
+import AppShell from '../components/AppShell.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const BASE_URL = 'https://context.soundbluemusic.com';
+---
+
+<BaseLayout
+  title="Bookmarks - Context"
+  description="Your bookmarked Korean vocabulary words"
+  canonical={`${BASE_URL}/bookmarks`}
+  noIndex={true}
+>
+  <AppShell locale="en">
+    <h1 class="text-2xl font-bold text-(--text-primary) mb-6">Bookmarks</h1>
+    <div id="bookmarks-content">
+      <p class="text-(--text-secondary) mb-4">Loading your bookmarks...</p>
+    </div>
+  </AppShell>
+</BaseLayout>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const content = document.getElementById('bookmarks-content');
+    if (!content) return;
+
+    try {
+      const favoriteData: Array<{ id: string; korean: string; english?: string }> = JSON.parse(
+        localStorage.getItem('context-favorites') ?? '[]'
+      );
+
+      if (favoriteData.length === 0) {
+        content.innerHTML = `
+          <div class="text-center py-16">
+            <p class="text-(--text-secondary) mb-4">No bookmarks yet. Bookmark words while studying!</p>
+            <a href="/browse" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-(--accent-primary) text-white text-sm font-medium hover:brightness-110 transition-all">
+              Browse Words →
+            </a>
+          </div>
+        `;
+      } else {
+        const items = favoriteData
+          .map(
+            (item) => `
+          <a href="/entry/${item.id}" class="block p-4 rounded-xl bg-(--bg-elevated) border border-(--border-primary) hover:border-(--accent-primary) transition-colors">
+            <p class="font-semibold text-(--text-primary)">${item.korean}</p>
+            ${item.english ? `<p class="text-sm text-(--text-secondary) mt-1">${item.english}</p>` : ''}
+          </a>
+        `
+          )
+          .join('');
+
+        content.innerHTML = `
+          <div class="mb-4">
+            <p class="text-sm text-(--text-tertiary)">${favoriteData.length} bookmarked word${favoriteData.length !== 1 ? 's' : ''}</p>
+          </div>
+          <div class="space-y-2">
+            ${items}
+          </div>
+        `;
+      }
+    } catch {
+      content.innerHTML = '<p class="text-(--text-secondary)">Unable to load bookmarks.</p>';
+    }
+  });
+</script>

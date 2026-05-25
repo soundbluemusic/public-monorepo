@@ -1,0 +1,21 @@
+---
+import AppShell from '../../components/AppShell.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const BASE_URL = 'https://context.soundbluemusic.com';
+---
+
+<BaseLayout
+  title="소개 - Context"
+  description="한국어 학습자를 위한 의미 중심 다국어 사전입니다."
+  canonical={`${BASE_URL}/ko/about`}
+>
+  <AppShell locale="ko">
+    <h1 class="text-2xl sm:text-3xl font-bold text-(--text-primary) mb-4">Context 소개</h1>
+    <p class="text-(--text-secondary) mb-6">한국어 학습자를 위한 의미 중심 다국어 사전입니다.</p>
+    <div class="space-y-3 text-(--text-secondary)">
+      <p>Context는 한국어 학습자를 위한 의미 중심 사전입니다. 단순한 번역을 넘어 단어의 맥락과 뉘앙스를 이해할 수 있도록 돕습니다.</p>
+      <p>모든 콘텐츠는 무료로 제공되며, 오픈소스 기술로 제작되었습니다.</p>
+    </div>
+  </AppShell>
+</BaseLayout>

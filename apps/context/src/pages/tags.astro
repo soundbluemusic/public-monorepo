@@ -1,0 +1,33 @@
+---
+import { getAllTagsFromD1 } from '../../app/services/d1';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import AppShell from '../components/AppShell.astro';
+
+const db = Astro.locals.runtime.env.DB;
+const tags = await getAllTagsFromD1(db).catch(() => []);
+const BASE_URL = 'https://context.soundbluemusic.com';
+---
+
+<BaseLayout
+  title="All Tags | Context Korean Dictionary"
+  description={`Browse ${tags.length} tags to explore Korean vocabulary`}
+  canonical={`${BASE_URL}/tags`}
+>
+  <AppShell locale="en">
+    <header class="mb-8">
+      <h1 class="text-2xl sm:text-3xl font-bold text-(--text-primary) mb-2">All Tags</h1>
+      <p class="text-(--text-secondary)">{tags.length} tags</p>
+    </header>
+    <div class="flex flex-wrap gap-2">
+      {tags.map(({ tag, count }) => (
+        <a
+          href={`/tag/${encodeURIComponent(tag)}`}
+          class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm bg-(--bg-elevated) border border-(--border-primary) text-(--text-secondary) hover:border-(--accent-primary) hover:text-(--text-primary) transition-colors"
+        >
+          <span>#{tag}</span>
+          <span class="text-xs text-(--text-tertiary)">{count}</span>
+        </a>
+      ))}
+    </div>
+  </AppShell>
+</BaseLayout>

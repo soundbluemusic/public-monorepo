@@ -1,0 +1,208 @@
+@import "@soundblue/config/styles/tailwind.css";
+@import "@soundblue/ui/styles/base.css";
+
+/* ============================================
+   Tailwind v4 Source Detection
+   Include external packages for class scanning
+   ============================================ */
+@source "../../../../packages/ui/src/**/*.tsx";
+@source "../../../../packages/features/src/**/*.tsx";
+
+/* ============================================
+   Violet Dream Theme (Context)
+   ============================================ */
+:root {
+  /* Layout */
+  --header-height: 56px;
+  --bottom-nav-height: 64px;
+  --sidebar-width: 18rem; /* 288px */
+  --sidebar-collapsed-width: 56px;
+
+  /* Background */
+  --bg-primary: #faf9fc;
+  --bg-secondary: #f3f1f8;
+  --bg-tertiary: #ebe8f2;
+  --bg-elevated: #ffffff;
+
+  /* Text */
+  --text-primary: #2d2640;
+  --text-secondary: #5c5470;
+  --text-tertiary: #6b6080; /* Darkened for WCAG AA 4.5:1 contrast */
+
+  /* Accent (Violet) */
+  --accent-primary: #6b4de6; /* Darkened for WCAG AA 4.5:1 contrast */
+  --accent-secondary: #7c5cff;
+  --accent-tertiary: #9178ff;
+  --accent-hover: #5a3ed4;
+  --accent-mint: #c5b8ff; /* For selection highlight */
+  --accent-bg: #6b4de6; /* Background color for buttons with white text - WCAG AA 4.5:1 */
+
+  /* Border */
+  --border-primary: #e0dce8;
+  --border-secondary: #ebe8f2;
+  --border-focus: #6b4de6;
+
+  /* Semantic */
+  --color-error: #dc4b4b;
+  --color-success: #22a06b;
+  --color-warning: #cf9f02;
+
+  /* Fonts */
+  --font-sans: "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+}
+
+.dark {
+  /* Background */
+  --bg-primary: #14121c;
+  --bg-secondary: #1c1926;
+  --bg-tertiary: #252230;
+  --bg-elevated: #2a2638;
+
+  /* Text */
+  --text-primary: #f0eef5;
+  --text-secondary: #b8b3c8;
+  --text-tertiary: #9d94b5; /* Lightened for WCAG AA 4.5:1 contrast (was #8b82a0 = 4.04:1) */
+
+  /* Accent */
+  --accent-primary: #9b82ff;
+  --accent-secondary: #b0a0ff;
+  --accent-tertiary: #c5b8ff;
+  --accent-hover: #b0a0ff;
+  --accent-mint: #9b82ff;
+  --accent-bg: #6b4de6; /* Background color for buttons with white text - WCAG AA 4.5:1 */
+
+  /* Border */
+  --border-primary: #352f45;
+  --border-secondary: #252230;
+  --border-focus: #9b82ff;
+
+  /* Semantic */
+  --color-error: #ff8080;
+  --color-success: #57d9a3;
+  --color-warning: #ffcc00;
+}
+
+/* ============================================
+   Base Styles
+   ============================================ */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--header-height) + 1rem);
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Note: h-header, pt-header, pb-bottom-nav are defined in @soundblue/config/styles/tailwind.css as @utility */
+
+/* ============================================
+   Accessibility - Skip to content
+   ============================================ */
+.skip-to-content {
+  position: absolute;
+  left: -9999px;
+  z-index: 999;
+  padding: 0.75rem 1.5rem;
+  background: var(--accent-primary);
+  color: white;
+  border-radius: 0.5rem;
+  font-weight: 500;
+}
+
+.skip-to-content:focus {
+  left: 1rem;
+  top: 1rem;
+}
+
+/* ============================================
+   Focus visible indicators
+   ============================================ */
+:focus-visible {
+  outline: 2px solid var(--accent-primary);
+  outline-offset: 2px;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+  outline: 2px solid var(--accent-primary);
+  outline-offset: 2px;
+}
+
+/* ============================================
+   Mobile Responsive - Minimum font size
+   ============================================ */
+@media (max-width: 640px) {
+  p,
+  span,
+  a,
+  li {
+    font-size: max(12px, 1em);
+  }
+}
+
+/* ============================================
+   Prevent horizontal overflow on small screens
+   ============================================ */
+@media (max-width: 640px) {
+  main {
+    overflow-x: clip;
+  }
+}
+
+/* ============================================
+   Sidebar Responsive Layout
+   ============================================ */
+
+/* Mobile: Hide sidebar by default (hydration fix) */
+@media (max-width: 1023px) {
+  aside[aria-label] {
+    transform: translateX(-100%) !important;
+    visibility: hidden !important;
+  }
+
+  /* Show sidebar when explicitly opened via JavaScript */
+  aside[aria-label].translate-x-0 {
+    transform: translateX(0) !important;
+    visibility: visible !important;
+  }
+}
+
+/* Desktop: Sidebar collapsed state via html.sidebar-collapsed class */
+@media (min-width: 1024px) {
+  .sidebar-collapsed aside[aria-label] {
+    width: var(--sidebar-collapsed-width) !important;
+  }
+
+  .sidebar-collapsed aside[aria-label] nav {
+    padding: 0.5rem !important;
+  }
+
+  .sidebar-collapsed aside[aria-label] .shrink-0.p-4 {
+    padding: 0.5rem !important;
+  }
+
+  /* Hide children section when collapsed */
+  .sidebar-collapsed aside[aria-label] .sidebar-children-section {
+    display: none !important;
+  }
+
+  /* Sync main content padding with sidebar collapsed state */
+  .sidebar-collapsed main#main-content {
+    padding-left: calc(var(--sidebar-collapsed-width) + 1rem) !important;
+  }
+
+  /* Sync header padding with sidebar collapsed state */
+  .sidebar-collapsed header.fixed > div {
+    padding-left: calc(var(--sidebar-collapsed-width) + 1rem) !important;
+  }
+
+  /* Sync footer padding with sidebar collapsed state */
+  .sidebar-collapsed footer > div {
+    padding-left: calc(var(--sidebar-collapsed-width) + 1rem) !important;
+  }
+}

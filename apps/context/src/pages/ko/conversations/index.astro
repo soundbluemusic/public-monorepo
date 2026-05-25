@@ -1,0 +1,47 @@
+---
+import { getCategoryById } from '../../../../app/data/categories';
+import { getCategoriesWithConversations, getConversationsByCategory } from '../../../../app/data/conversations';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import AppShell from '../../../components/AppShell.astro';
+
+const categoryIds = getCategoriesWithConversations();
+const categoriesWithCount = categoryIds
+  .map((id) => {
+    const category = getCategoryById(id);
+    const count = getConversationsByCategory(id).length;
+    return category ? { category, count } : null;
+  })
+  .filter((item): item is { category: NonNullable<ReturnType<typeof getCategoryById>>; count: number } => item !== null)
+  .sort((a, b) => a.category.order - b.category.order);
+
+const BASE_URL = 'https://context.soundbluemusic.com';
+---
+
+<BaseLayout
+  title="대화 예문 | Context"
+  description="일상 상황별 대화 예문으로 자연스러운 한국어를 배우세요"
+  canonical={`${BASE_URL}/ko/conversations`}
+>
+  <AppShell locale="ko">
+    <h1 class="text-2xl sm:text-3xl font-bold text-(--text-primary) mb-2">대화 예문</h1>
+    <p class="text-(--text-secondary) mb-8">일상 대화 예문으로 자연스러운 한국어를 배우세요</p>
+
+    <div class="grid gap-4 sm:grid-cols-2">
+      {categoriesWithCount.map(({ category, count }) => (
+        <a
+          href={`/ko/conversations/${category.id}`}
+          class="block p-4 rounded-xl bg-(--bg-elevated) border border-(--border-primary) hover:border-(--accent-primary) transition-colors"
+        >
+          <div class="flex items-center gap-3 mb-2">
+            <span class="text-2xl">{category.icon}</span>
+            <div>
+              <h2 class="font-semibold text-(--text-primary)">{category.name.ko}</h2>
+              <p class="text-xs text-(--text-tertiary)">{count}개 대화</p>
+            </div>
+          </div>
+          <p class="text-sm text-(--text-secondary) line-clamp-2">{category.description.ko}</p>
+        </a>
+      ))}
+    </div>
+  </AppShell>
+</BaseLayout>

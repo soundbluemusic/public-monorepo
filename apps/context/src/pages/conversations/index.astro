@@ -1,0 +1,47 @@
+---
+import { getCategoryById } from '../../../app/data/categories';
+import { getCategoriesWithConversations, getConversationsByCategory } from '../../../app/data/conversations';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AppShell from '../../components/AppShell.astro';
+
+const categoryIds = getCategoriesWithConversations();
+const categoriesWithCount = categoryIds
+  .map((id) => {
+    const category = getCategoryById(id);
+    const count = getConversationsByCategory(id).length;
+    return category ? { category, count } : null;
+  })
+  .filter((item): item is { category: NonNullable<ReturnType<typeof getCategoryById>>; count: number } => item !== null)
+  .sort((a, b) => a.category.order - b.category.order);
+
+const BASE_URL = 'https://context.soundbluemusic.com';
+---
+
+<BaseLayout
+  title="Conversations | Context"
+  description="Learn natural Korean with conversation examples for everyday situations"
+  canonical={`${BASE_URL}/conversations`}
+>
+  <AppShell locale="en">
+    <h1 class="text-2xl sm:text-3xl font-bold text-(--text-primary) mb-2">Conversations</h1>
+    <p class="text-(--text-secondary) mb-8">Learn natural Korean with everyday conversation examples</p>
+
+    <div class="grid gap-4 sm:grid-cols-2">
+      {categoriesWithCount.map(({ category, count }) => (
+        <a
+          href={`/conversations/${category.id}`}
+          class="block p-4 rounded-xl bg-(--bg-elevated) border border-(--border-primary) hover:border-(--accent-primary) transition-colors"
+        >
+          <div class="flex items-center gap-3 mb-2">
+            <span class="text-2xl">{category.icon}</span>
+            <div>
+              <h2 class="font-semibold text-(--text-primary)">{category.name.en}</h2>
+              <p class="text-xs text-(--text-tertiary)">{count} conversations</p>
+            </div>
+          </div>
+          <p class="text-sm text-(--text-secondary) line-clamp-2">{category.description.en}</p>
+        </a>
+      ))}
+    </div>
+  </AppShell>
+</BaseLayout>

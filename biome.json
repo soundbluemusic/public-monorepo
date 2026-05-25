@@ -83,6 +83,8 @@
       "!**/apps/permissive/src/**/*.astro",
       "!**/apps/roots/.astro",
       "!**/apps/roots/src/**/*.astro",
+      "!**/apps/context/.astro",
+      "!**/apps/context/src/**/*.astro",
       "!**/apps/docs/.astro",
       "!**/tests",
       "!**/profiling"

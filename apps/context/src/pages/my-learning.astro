@@ -1,0 +1,62 @@
+---
+import AppShell from '../components/AppShell.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const BASE_URL = 'https://context.soundbluemusic.com';
+---
+
+<BaseLayout
+  title="My Learning - Context"
+  description="Track your Korean vocabulary learning progress"
+  canonical={`${BASE_URL}/my-learning`}
+  noIndex={true}
+>
+  <AppShell locale="en">
+    <h1 class="text-2xl font-bold text-(--text-primary) mb-6">My Learning</h1>
+    <div id="my-learning-content">
+      <p class="text-(--text-secondary) mb-4">Loading your learning progress...</p>
+    </div>
+  </AppShell>
+</BaseLayout>
+
+<script>
+  // Client-side: load study data from localStorage/IndexedDB
+  document.addEventListener('DOMContentLoaded', () => {
+    const content = document.getElementById('my-learning-content');
+    if (!content) return;
+
+    try {
+      const studyData = JSON.parse(localStorage.getItem('context-study-records') ?? '[]');
+      const favoriteData = JSON.parse(localStorage.getItem('context-favorites') ?? '[]');
+
+      if (studyData.length === 0 && favoriteData.length === 0) {
+        content.innerHTML = `
+          <div class="text-center py-16">
+            <p class="text-(--text-secondary) mb-4">No learning data yet. Start by studying some words!</p>
+            <a href="/browse" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-(--accent-primary) text-white text-sm font-medium hover:brightness-110 transition-all">
+              Browse Words →
+            </a>
+          </div>
+        `;
+      } else {
+        content.innerHTML = `
+          <div class="space-y-4">
+            <div class="p-4 rounded-xl bg-(--bg-elevated) border border-(--border-primary)">
+              <p class="text-sm text-(--text-tertiary) mb-1">Words Studied</p>
+              <p class="text-3xl font-bold text-(--text-primary)">${studyData.length}</p>
+            </div>
+            <div class="p-4 rounded-xl bg-(--bg-elevated) border border-(--border-primary)">
+              <p class="text-sm text-(--text-tertiary) mb-1">Bookmarks</p>
+              <p class="text-3xl font-bold text-(--text-primary)">${favoriteData.length}</p>
+            </div>
+            <a href="/browse" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-(--accent-primary) text-white text-sm font-medium hover:brightness-110 transition-all">
+              Continue Learning →
+            </a>
+          </div>
+        `;
+      }
+    } catch {
+      content.innerHTML = '<p class="text-(--text-secondary)">Unable to load learning data.</p>';
+    }
+  });
+</script>

@@ -1,0 +1,14 @@
+---
+import AppShell from '../components/AppShell.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Not Found | Context" noIndex={true}>
+  <AppShell>
+    <div class="text-center py-20">
+      <h1 class="text-6xl font-bold text-(--text-primary) mb-4">404</h1>
+      <p class="text-(--text-secondary) mb-6">Page not found</p>
+      <a href="/" class="px-4 py-2 rounded-lg bg-(--accent-primary) text-white text-sm font-medium hover:brightness-110 transition-all">Go Home</a>
+    </div>
+  </AppShell>
+</BaseLayout>

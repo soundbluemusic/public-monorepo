@@ -1,14 +1,20 @@
 {
-  "extends": "../../packages/config/tsconfig.app.json",
+  "extends": "astro/tsconfigs/strict",
   "compilerOptions": {
     "paths": {
       "@/*": ["./app/*"],
-      "~/*": ["./app/*"],
       "@soundblue/platform/sqlite": ["../../packages/platform/src/sqlite/index.browser.ts"],
       "@soundblue/platform/sqlite/types": ["../../packages/platform/src/sqlite/types.ts"]
-    },
-    "types": ["vite/client", "@cloudflare/workers-types"]
+    }
   },
-  "include": ["app/**/*", "scripts/**/*", "vite.config.ts"],
-  "exclude": ["node_modules", "app/paraglide"]
+  "include": [
+    "src/**/*",
+    "app/services/**/*",
+    "app/data/**/*",
+    "app/config.ts",
+    "app/shell.config.ts",
+    "scripts/**/*",
+    "astro.config.mjs"
+  ],
+  "exclude": ["node_modules", "dist"]
 }

@@ -1,0 +1,125 @@
+---
+import { buildLocalePath, getLocaleFromPath, stripLocaleFromPath } from '@soundblue/i18n';
+import { MOON_ICON_SVG, SUN_ICON_SVG } from '@soundblue/ui/utils';
+
+interface Props {
+  locale?: 'en' | 'ko';
+}
+
+const { locale } = Astro.props;
+const pathname = Astro.url.pathname;
+const detectedLocale = locale ?? (getLocaleFromPath(pathname) as 'en' | 'ko');
+const isKo = detectedLocale === 'ko';
+
+const basePath = stripLocaleFromPath(pathname);
+const altLocalePath = isKo ? basePath || '/' : buildLocalePath(basePath || '/', 'ko');
+const altLocaleLabel = isKo ? 'EN' : '한국어';
+const altLocaleAriaLabel = isKo ? 'View in English' : '한국어로 보기';
+
+const navItems = [
+  { name: isKo ? '홈' : 'Home', path: isKo ? '/ko' : '/' },
+  { name: isKo ? '탐색' : 'Browse', path: isKo ? '/ko/browse' : '/browse' },
+  { name: isKo ? '대화 예시' : 'Conversations', path: isKo ? '/ko/conversations' : '/conversations' },
+];
+---
+
+<header
+  class="fixed top-0 left-0 right-0 h-header bg-(--bg-elevated) border-b border-(--border-primary) z-header"
+>
+  <div
+    class="h-full flex items-center justify-between px-4 lg:pl-[calc(var(--sidebar-width)+1rem)] transition-[padding] duration-200"
+    id="header-inner"
+  >
+    <!-- Mobile: Hamburger button -->
+    <button
+      aria-label="Open Menu"
+      class="lg:hidden p-2 rounded-lg hover:bg-(--bg-tertiary) text-(--text-secondary) transition-colors mr-2"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true"
+      >
+        <line x1="4" x2="20" y1="12" y2="12"></line>
+        <line x1="4" x2="20" y1="6" y2="6"></line>
+        <line x1="4" x2="20" y1="18" y2="18"></line>
+      </svg>
+    </button>
+
+    <!-- Logo -->
+    <a
+      href={isKo ? '/ko' : '/'}
+      class="flex items-center gap-2 font-bold text-(--text-primary) text-lg shrink-0"
+    >
+      <span aria-hidden="true">📖</span>
+      <span>Context</span>
+    </a>
+
+    <!-- Desktop nav -->
+    <nav class="hidden lg:flex items-center gap-1 ml-8 flex-1" aria-label="Main navigation">
+      {
+        navItems.map((item) => (
+          <a
+            href={item.path}
+            class="px-3 py-1.5 rounded-lg text-sm font-medium text-(--text-secondary) hover:text-(--text-primary) hover:bg-(--bg-tertiary) transition-colors"
+            aria-current={pathname === item.path ? 'page' : undefined}
+          >
+            {item.name}
+          </a>
+        ))
+      }
+    </nav>
+
+    <!-- Right controls -->
+    <div class="flex items-center gap-1 ml-auto">
+      <!-- Search icon link -->
+      <a
+        href={isKo ? '/ko/browse' : '/browse'}
+        aria-label={isKo ? '검색' : 'Search'}
+        class="p-2 rounded-lg text-(--text-secondary) hover:text-(--text-primary) hover:bg-(--bg-tertiary) transition-colors"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="18"
+          height="18"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <circle cx="11" cy="11" r="8"></circle>
+          <path d="m21 21-4.3-4.3"></path>
+        </svg>
+      </a>
+
+      <!-- Language toggle -->
+      <a
+        href={altLocalePath}
+        aria-label={altLocaleAriaLabel}
+        class="px-2.5 py-1.5 rounded-lg text-sm font-medium text-(--text-secondary) hover:text-(--text-primary) hover:bg-(--bg-tertiary) transition-colors"
+      >
+        {altLocaleLabel}
+      </a>
+
+      <!-- Dark mode toggle -->
+      <button
+        aria-label="Switch to dark mode"
+        title="Toggle dark mode"
+        class="p-2 rounded-lg text-(--text-secondary) hover:text-(--text-primary) hover:bg-(--bg-tertiary) transition-colors"
+      >
+        <span class="theme-icon--sun" set:html={SUN_ICON_SVG} />
+        <span class="theme-icon--moon" set:html={MOON_ICON_SVG} />
+      </button>
+    </div>
+  </div>
+</header>

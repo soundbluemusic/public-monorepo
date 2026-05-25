@@ -1,0 +1,152 @@
+---
+import { getCategoryById } from '../../../../app/data/categories';
+import { getEntryByIdFromD1, getHomonymsByKoreanFromD1 } from '../../../../app/services/d1';
+import AppShell from '../../../components/AppShell.astro';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const { entryId } = Astro.params;
+if (!entryId) return Astro.redirect('/404', 404);
+
+const db = Astro.locals.runtime.env.DB;
+const entry = await getEntryByIdFromD1(db, entryId, 'ko');
+if (!entry) return Astro.redirect('/404', 404);
+
+const homonyms = await getHomonymsByKoreanFromD1(db, entry.korean).catch(() => []);
+
+const category = getCategoryById(entry.categoryId);
+const BASE_URL = 'https://context.soundbluemusic.com';
+const difficultyLabels: Record<string, string> = {
+  beginner: '초급',
+  intermediate: '중급',
+  advanced: '고급',
+};
+const difficultyColors: Record<string, string> = {
+  beginner: 'bg-green-100 text-green-800 dark:bg-green-900/50 dark:text-green-200',
+  intermediate: 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900/50 dark:text-yellow-200',
+  advanced: 'bg-red-100 text-red-800 dark:bg-red-900/50 dark:text-red-200',
+};
+const levelKeys = ['beginner', 'intermediate', 'advanced', 'master'] as const;
+const levelLabels: Record<string, string> = {
+  beginner: '초급',
+  intermediate: '중급',
+  advanced: '고급',
+  master: '마스터',
+};
+const otherHomonyms = homonyms.filter((h) => h.id !== entry.id);
+---
+
+<BaseLayout
+  title={`${entry.korean} (${entry.romanization}) - ${entry.translation.word} | Context 한국어 사전`}
+  description={`"${entry.korean}" (${entry.romanization})의 뜻: "${entry.translation.word}". ${entry.translation.explanation}`}
+  keywords={[entry.korean, `${entry.korean} 뜻`, entry.translation.word, '한국어 사전', '한국어 학습']}
+  canonical={`${BASE_URL}/ko/entry/${entry.id}`}
+>
+  <AppShell locale="ko">
+    <article>
+      <header class="mb-8">
+        <h1 class="text-3xl font-bold text-(--text-primary) mb-1">{entry.korean}</h1>
+        <p class="text-xl text-(--accent-primary) font-medium mb-1">"{entry.translation.word}"</p>
+        <p class="text-sm text-(--text-tertiary) mb-3">{entry.romanization}</p>
+        <div class="flex items-center gap-2 flex-wrap">
+          {category && (
+            <a
+              href={`/ko/category/${entry.categoryId}`}
+              class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-sm font-medium bg-(--bg-elevated) text-(--text-secondary) border border-(--border-primary) hover:bg-(--bg-tertiary) transition-colors"
+            >
+              {category.icon && <span>{category.icon}</span>}
+              <span>{category.name.ko}</span>
+            </a>
+          )}
+          <span class={`px-2 py-0.5 rounded-full text-xs font-medium ${difficultyColors[entry.difficulty]}`}>
+            {difficultyLabels[entry.difficulty] ?? entry.difficulty}
+          </span>
+        </div>
+      </header>
+
+      <section class="mb-6">
+        <h2 class="text-lg font-semibold text-(--text-primary) mb-2">의미 및 사용법</h2>
+        <p class="text-(--text-secondary) leading-relaxed">{entry.translation.explanation}</p>
+      </section>
+
+      {entry.translation.examples && (
+        <section class="mb-6">
+          <h2 class="text-lg font-semibold text-(--text-primary) mb-3">예문</h2>
+          <div class="space-y-3">
+            {levelKeys.map((level) => {
+              const example = entry.translation.examples?.[level];
+              if (!example) return null;
+              return (
+                <div class="p-4 rounded-xl bg-(--bg-elevated) border border-(--border-primary)">
+                  <span class="inline-block px-2.5 py-0.5 rounded-full text-xs font-medium bg-(--accent-primary) text-white mb-2">{levelLabels[level]}</span>
+                  <p class="text-(--text-secondary)">{example}</p>
+                </div>
+              );
+            })}
+          </div>
+        </section>
+      )}
+
+      {entry.tags && entry.tags.length > 0 && (
+        <section class="mb-6">
+          <h2 class="text-lg font-semibold text-(--text-primary) mb-2">태그</h2>
+          <div class="flex flex-wrap gap-2">
+            {entry.tags.map((tag) => (
+              <a
+                href={`/ko/tag/${encodeURIComponent(tag)}`}
+                class="px-2.5 py-1 rounded-full text-sm bg-(--bg-elevated) border border-(--border-primary) text-(--text-secondary) hover:border-(--accent-primary) transition-colors"
+              >
+                #{tag}
+              </a>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {entry.dialogue && (
+        <section class="mb-6">
+          <h2 class="text-lg font-semibold text-(--text-primary) mb-3">대화 예문</h2>
+          <div class="p-4 rounded-xl bg-(--bg-elevated) border border-(--border-primary)">
+            {entry.dialogue.context && (
+              <p class="text-sm text-(--text-tertiary) mb-3 italic">{entry.dialogue.context}</p>
+            )}
+            <div class="space-y-3">
+              {entry.dialogue.dialogue.map((line) => (
+                <div class={`flex gap-3 ${line.speaker === 'B' ? 'flex-row-reverse' : ''}`}>
+                  <span class="shrink-0 text-xs font-bold text-(--accent-primary) w-5 text-center pt-1">{line.speaker}</span>
+                  <div class={`flex-1 max-w-[85%] p-3 rounded-xl text-sm ${line.speaker === 'A' ? 'bg-(--bg-secondary)' : 'bg-(--accent-primary) text-white'}`}>
+                    <p class="font-medium mb-1">{line.text}</p>
+                    <p class={`text-xs ${line.speaker === 'B' ? 'text-white/80' : 'text-(--text-tertiary)'}`}>{line.romanization}</p>
+                    <p class={`text-xs mt-1 ${line.speaker === 'B' ? 'text-white/80' : 'text-(--text-secondary)'}`}>{line.translation}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {otherHomonyms.length > 0 && (
+        <section class="mb-6">
+          <h2 class="text-lg font-semibold text-(--text-primary) mb-3">"{entry.korean}"의 다른 뜻</h2>
+          <div class="space-y-2">
+            {otherHomonyms.map((h) => (
+              <a
+                href={`/ko/entry/${h.id}`}
+                class="block p-3 rounded-xl bg-(--bg-elevated) border border-(--border-primary) hover:border-(--accent-primary) transition-colors"
+              >
+                <span class="font-medium text-(--text-primary)">{h.word.ko}</span>
+                <span class="text-sm text-(--text-tertiary) ml-2">({h.romanization})</span>
+              </a>
+            ))}
+          </div>
+        </section>
+      )}
+
+      <div class="mt-8 pt-6 border-t border-(--border-primary)">
+        <a href={category ? `/ko/category/${entry.categoryId}` : '/ko'} class="text-sm text-(--accent-primary) hover:underline">
+          ← {category ? `${category.name.ko}으로 돌아가기` : '사전으로 돌아가기'}
+        </a>
+      </div>
+    </article>
+  </AppShell>
+</BaseLayout>

@@ -1,0 +1,29 @@
+---
+import AppShell from '../../components/AppShell.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const BASE_URL = 'https://context.soundbluemusic.com';
+---
+
+<BaseLayout
+  title="라이선스 | Context"
+  description="Context 한국어 사전 라이선스"
+  canonical={`${BASE_URL}/ko/license`}
+>
+  <AppShell locale="ko">
+    <h1 class="text-2xl font-bold text-(--text-primary) mb-6">라이선스</h1>
+    <div class="text-(--text-secondary) space-y-4">
+      <p>이 프로젝트는 <strong class="text-(--text-primary)">Apache License 2.0</strong>으로 배포됩니다.</p>
+      <p>
+        <a
+          href="https://github.com/soundbluemusic/public-monorepo/blob/main/LICENSE"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-(--accent-primary) hover:underline"
+        >
+          GitHub에서 전체 라이선스 보기 →
+        </a>
+      </p>
+    </div>
+  </AppShell>
+</BaseLayout>
