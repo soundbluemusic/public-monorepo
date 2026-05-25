@@ -9,7 +9,8 @@ import * as fs from 'node:fs';
 import * as path from 'node:path';
 import { describe, expect, it } from 'vitest';
 
-const APPS = ['roots', 'context', 'permissive'];
+// roots was migrated to Astro with built-in i18n (no Paraglide)
+const APPS = ['context', 'permissive'];
 const LOCALES = ['ko', 'en'];
 
 describe('i18n Completeness', () => {
