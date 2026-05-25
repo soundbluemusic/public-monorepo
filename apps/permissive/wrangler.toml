@@ -1,5 +1,5 @@
 name = "permissive"
-main = "@tanstack/react-start/server-entry"
+main = "@astrojs/cloudflare/entrypoints/server"
 compatibility_date = "2026-01-22"
 compatibility_flags = ["nodejs_compat"]
 
@@ -7,6 +7,4 @@ compatibility_flags = ["nodejs_compat"]
 directory = "dist/client"
 
 # 데이터 소스: TypeScript in-memory (`data/permissive/libraries.json` 110개,
-# `web-apis.json` 56개). D1 바인딩은 사용하지 않습니다 (코드에서 D1 env 바인딩
-# 참조가 0건임을 확인하고 제거함). 미래에 추가하려면 d1_databases 섹션을 다시
-# 두면 됩니다.
+# `web-apis.json` 56개). D1 바인딩은 사용하지 않습니다.
