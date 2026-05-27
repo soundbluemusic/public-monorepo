@@ -1,0 +1,21 @@
+---
+import AppShell from '../components/AppShell.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const BASE_URL = 'https://context.soundbluemusic.com';
+---
+
+<BaseLayout
+  title="About - Context"
+  description="About Context Korean Dictionary"
+  canonical={`${BASE_URL}/about`}
+>
+  <AppShell locale="en">
+    <h1 class="text-2xl sm:text-3xl font-bold text-(--text-primary) mb-4">About Context</h1>
+    <p class="text-(--text-secondary) mb-6">A meaning-focused multilingual dictionary for Korean learners.</p>
+    <div class="space-y-3 text-(--text-secondary)">
+      <p>Context is a meaning-focused dictionary for Korean learners. It helps you understand the context and nuances of words beyond simple translation.</p>
+      <p>All content is provided for free and built with open-source technology.</p>
+    </div>
+  </AppShell>
+</BaseLayout>

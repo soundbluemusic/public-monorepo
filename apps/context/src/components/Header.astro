@@ -18,8 +18,8 @@ const altLocaleAriaLabel = isKo ? 'View in English' : '한국어로 보기';
 
 const navItems = [
   { name: isKo ? '홈' : 'Home', path: isKo ? '/ko' : '/' },
-  { name: isKo ? '라이브러리' : 'Libraries', path: isKo ? '/ko/libraries' : '/libraries' },
-  { name: 'Web API', path: isKo ? '/ko/web-api' : '/web-api' },
+  { name: isKo ? '탐색' : 'Browse', path: isKo ? '/ko/browse' : '/browse' },
+  { name: isKo ? '대화 예시' : 'Conversations', path: isKo ? '/ko/conversations' : '/conversations' },
 ];
 const navLinkClass = (path: string) =>
   `px-3 py-1.5 rounded-lg text-sm font-medium transition-colors ${
@@ -64,7 +64,8 @@ const navLinkClass = (path: string) =>
       href={isKo ? '/ko' : '/'}
       class="flex items-center gap-2 font-bold text-(--text-primary) text-lg shrink-0"
     >
-      <span class="text-(--accent-primary)">P</span>ermissive
+      <span aria-hidden="true">📖</span>
+      <span>Context</span>
     </a>
 
     <!-- Desktop nav -->
@@ -84,6 +85,29 @@ const navLinkClass = (path: string) =>
 
     <!-- Right controls -->
     <div class="flex items-center gap-1 ml-auto">
+      <!-- Search icon link -->
+      <a
+        href={isKo ? '/ko/browse' : '/browse'}
+        aria-label={isKo ? '검색' : 'Search'}
+        class="p-2 rounded-lg text-(--text-secondary) hover:text-(--text-primary) hover:bg-(--bg-tertiary) transition-colors"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="18"
+          height="18"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <circle cx="11" cy="11" r="8"></circle>
+          <path d="m21 21-4.3-4.3"></path>
+        </svg>
+      </a>
+
       <!-- Language toggle -->
       <a
         href={altLocalePath}

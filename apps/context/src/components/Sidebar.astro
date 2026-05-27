@@ -1,0 +1,169 @@
+---
+import { getLocaleFromPath } from '@soundblue/i18n';
+import { PANEL_LEFT_CLOSE_SVG, PANEL_LEFT_OPEN_SVG } from '@soundblue/ui/utils';
+import { categories } from '../../app/data/categories';
+
+interface Props {
+  locale?: 'en' | 'ko';
+}
+
+const { locale } = Astro.props;
+const pathname = Astro.url.pathname;
+const detectedLocale = locale ?? (getLocaleFromPath(pathname) as 'en' | 'ko');
+const isKo = detectedLocale === 'ko';
+const prefix = isKo ? '/ko' : '';
+
+const navItems = [
+  {
+    name: isKo ? '홈' : 'Home',
+    path: `${prefix}/`,
+    icon: '<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>',
+  },
+  {
+    name: isKo ? '탐색' : 'Browse',
+    path: `${prefix}/browse`,
+    icon: '<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>',
+  },
+  {
+    name: isKo ? '대화 예시' : 'Conversations',
+    path: `${prefix}/conversations`,
+    icon: '<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>',
+  },
+  {
+    name: isKo ? '내 학습' : 'My Learning',
+    path: `${prefix}/my-learning`,
+    icon: '<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>',
+  },
+  {
+    name: isKo ? '북마크' : 'Bookmarks',
+    path: `${prefix}/bookmarks`,
+    icon: '<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"/></svg>',
+  },
+  {
+    name: isKo ? '소개' : 'About',
+    path: `${prefix}/about`,
+    icon: '<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>',
+  },
+  {
+    name: isKo ? '다운로드' : 'Download',
+    path: `${prefix}/download`,
+    icon: '<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>',
+  },
+];
+
+// 처음 10개 카테고리
+const topCategories = categories.slice(0, 10);
+---
+
+<!-- Sidebar backdrop (mobile) -->
+<div
+  data-sidebar-backdrop
+  class="fixed inset-0 bg-black/50 z-overlay lg:hidden hidden"
+  aria-hidden="true"
+></div>
+
+<aside
+  data-sidebar
+  aria-label="Site navigation"
+  class="fixed top-0 left-0 bottom-0 w-sidebar bg-(--bg-elevated) border-r border-(--border-primary) z-sidebar flex flex-col overflow-hidden transition-transform duration-200"
+>
+  <!-- Sidebar header: logo + collapse button -->
+  <div
+    class="h-header flex items-center justify-between px-3 border-b border-(--border-primary) shrink-0"
+  >
+    <a href={isKo ? '/ko' : '/'} class="flex items-center gap-2 font-bold text-(--text-primary)">
+      <span aria-hidden="true">📖</span>
+      <span class="sidebar-label text-base">Context</span>
+    </a>
+    <!-- Desktop collapse toggle -->
+    <button
+      aria-label="Toggle sidebar collapse"
+      title="Collapse sidebar"
+      class="hidden lg:flex p-1.5 rounded-lg text-(--text-tertiary) hover:text-(--text-primary) hover:bg-(--bg-tertiary) transition-colors"
+    >
+      <span class="sidebar-label" set:html={PANEL_LEFT_CLOSE_SVG} />
+      <span class="hidden sidebar-collapsed-icon" set:html={PANEL_LEFT_OPEN_SVG} />
+    </button>
+    <!-- Mobile close button -->
+    <button
+      aria-label="Close navigation"
+      class="lg:hidden p-1.5 rounded-lg text-(--text-tertiary) hover:text-(--text-primary) hover:bg-(--bg-tertiary) transition-colors"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="18"
+        height="18"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true"
+      >
+        <path d="M18 6 6 18"></path><path d="m6 6 12 12"></path>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Nav -->
+  <nav class="flex-1 overflow-y-auto p-2 scrollbar-none" aria-label="Sidebar navigation">
+    <ul class="space-y-0.5">
+      {
+        navItems.map((item) => (
+          <li>
+            <a
+              href={item.path}
+              class="flex items-center gap-2.5 px-2.5 py-2 rounded-lg text-sm font-medium text-(--text-secondary) hover:text-(--text-primary) hover:bg-(--bg-tertiary) transition-colors group"
+              aria-current={pathname === item.path ? 'page' : undefined}
+            >
+              <span class="shrink-0" set:html={item.icon} />
+              <span class="sidebar-label truncate">{item.name}</span>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+
+    <!-- Category section -->
+    <div class="mt-4 sidebar-label">
+      <p class="px-2.5 py-1 text-xs font-semibold text-(--text-tertiary) uppercase tracking-wider">
+        {isKo ? '카테고리' : 'Categories'}
+      </p>
+      <ul class="mt-1 space-y-0.5">
+        {
+          topCategories.map((cat) => (
+            <li>
+              <a
+                href={`${prefix}/category/${cat.id}`}
+                class="flex items-center gap-2 px-2.5 py-1.5 rounded-lg text-sm text-(--text-secondary) hover:text-(--text-primary) hover:bg-(--bg-tertiary) transition-colors"
+                aria-current={pathname === `${prefix}/category/${cat.id}` ? 'page' : undefined}
+              >
+                <span class="shrink-0 text-base" aria-hidden="true">{cat.icon}</span>
+                <span class="truncate">{isKo ? cat.name.ko : cat.name.en}</span>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </nav>
+</aside>
+
+<script is:inline>
+  // Sync sidebar-collapsed icon state on desktop
+  (function () {
+    var html = document.documentElement;
+    var sidebar = document.querySelector('aside[data-sidebar]');
+    if (!sidebar) return;
+    function syncIcons() {
+      var collapsed = html.classList.contains('sidebar-collapsed');
+      sidebar.querySelectorAll('.sidebar-collapsed-icon').forEach(function (el) {
+        el.style.display = collapsed ? 'inline-flex' : 'none';
+      });
+    }
+
+    syncIcons();
+    window.addEventListener('sidebar-collapse-change', syncIcons);
+  })();
+</script>

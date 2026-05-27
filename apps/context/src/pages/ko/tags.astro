@@ -1,0 +1,33 @@
+---
+import { getAllTagsFromD1 } from '../../../app/services/d1';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AppShell from '../../components/AppShell.astro';
+
+const db = Astro.locals.runtime.env.DB;
+const tags = await getAllTagsFromD1(db).catch(() => []);
+const BASE_URL = 'https://context.soundbluemusic.com';
+---
+
+<BaseLayout
+  title="모든 태그 | Context 한국어 사전"
+  description={`${tags.length}개 태그로 한국어 어휘를 탐색하세요`}
+  canonical={`${BASE_URL}/ko/tags`}
+>
+  <AppShell locale="ko">
+    <header class="mb-8">
+      <h1 class="text-2xl sm:text-3xl font-bold text-(--text-primary) mb-2">모든 태그</h1>
+      <p class="text-(--text-secondary)">{tags.length}개 태그</p>
+    </header>
+    <div class="flex flex-wrap gap-2">
+      {tags.map(({ tag, count }) => (
+        <a
+          href={`/ko/tag/${encodeURIComponent(tag)}`}
+          class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm bg-(--bg-elevated) border border-(--border-primary) text-(--text-secondary) hover:border-(--accent-primary) hover:text-(--text-primary) transition-colors"
+        >
+          <span>#{tag}</span>
+          <span class="text-xs text-(--text-tertiary)">{count}</span>
+        </a>
+      ))}
+    </div>
+  </AppShell>
+</BaseLayout>

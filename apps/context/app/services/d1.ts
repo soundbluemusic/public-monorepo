@@ -7,6 +7,7 @@
  * 메모리 캐싱이 적용되어 DB 쿼리 횟수를 줄입니다.
  */
 
+import type { D1Database } from '@cloudflare/workers-types';
 import type { Language, LocaleEntry } from '@/data/types';
 import { cacheKeys, cacheTTL, getCached, setCached } from './cache';
 import { type D1EntryRow, rowToLocaleEntry } from './entry-converter';

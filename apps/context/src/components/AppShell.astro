@@ -1,0 +1,61 @@
+---
+import Header from './Header.astro';
+import Sidebar from './Sidebar.astro';
+
+interface Props {
+  locale?: 'en' | 'ko';
+}
+
+const { locale } = Astro.props;
+---
+
+<a href="#main-content" class="skip-to-content">
+  {locale === 'ko' ? '본문으로 이동' : 'Skip to content'}
+</a>
+
+<Header locale={locale} />
+<Sidebar locale={locale} />
+
+<main
+  id="main-content"
+  class="pt-header min-h-screen lg:pl-[calc(var(--sidebar-width)+1rem)] pb-16 lg:pb-0 transition-[padding] duration-200"
+>
+  <div class="max-w-3xl mx-auto px-4 py-8">
+    <slot />
+  </div>
+</main>
+
+<footer
+  class="lg:pl-[calc(var(--sidebar-width)+1rem)] border-t border-(--border-primary) bg-(--bg-elevated) transition-[padding] duration-200"
+>
+  <div class="max-w-3xl mx-auto px-4 py-6 text-sm text-(--text-tertiary)">
+    <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p>
+        &copy; {new Date().getFullYear()}
+        <a
+          href="https://soundbluemusic.com"
+          class="text-(--accent-primary) hover:underline"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          SoundBlue Music
+        </a>
+        · Apache 2.0
+      </p>
+      <nav aria-label="Footer navigation" class="flex items-center gap-4">
+        <a
+          href={locale === 'ko' ? '/ko/about' : '/about'}
+          class="hover:text-(--text-primary) transition-colors"
+        >
+          {locale === 'ko' ? '소개' : 'About'}
+        </a>
+        <a
+          href="/sitemap.xml"
+          class="hover:text-(--text-primary) transition-colors"
+        >
+          Sitemap
+        </a>
+      </nav>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,66 @@
+---
+import { getCategoriesFromD1, getEntryCounts } from '../../app/services/d1';
+import AppShell from '../components/AppShell.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const BASE_URL = 'https://context.soundbluemusic.com';
+
+const db = Astro.locals.runtime.env.DB;
+
+let categories: Awaited<ReturnType<typeof getCategoriesFromD1>> = [];
+let categoryCounts: Map<string, number> = new Map();
+let totalEntries = 0;
+let dbError = false;
+
+try {
+  [categories, categoryCounts] = await Promise.all([
+    getCategoriesFromD1(db),
+    getEntryCounts(db),
+  ]);
+  for (const count of categoryCounts.values()) totalEntries += count;
+} catch (e) {
+  console.error('[HomePage] D1 error:', e);
+  dbError = true;
+}
+---
+
+<BaseLayout
+  title="Context - Korean Dictionary"
+  description="Meaning dictionary for Korean learners"
+  keywords={['Korean dictionary', 'learn Korean', 'Korean meaning', 'Korean words']}
+  canonical={BASE_URL}
+>
+  <AppShell locale="en">
+    <h1 class="text-2xl sm:text-3xl font-bold text-(--text-primary) mb-2">Korean Dictionary</h1>
+    <p class="text-(--text-secondary) mb-8">Browse {totalEntries} Korean vocabulary entries across {categories.length} categories.</p>
+
+    {dbError && (
+      <div class="mb-6 p-3 rounded-lg bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 text-sm text-amber-800 dark:text-amber-200" role="alert">
+        Database temporarily unavailable. Some data may not be shown.
+      </div>
+    )}
+
+    <div class="grid gap-4 sm:grid-cols-2">
+      {categories.map((cat) => {
+        const count = categoryCounts.get(cat.id) ?? 0;
+        return (
+          <a
+            href={`/category/${cat.id}`}
+            class="block p-4 rounded-xl bg-(--bg-elevated) border border-(--border-primary) hover:border-(--accent-primary) transition-colors"
+          >
+            <div class="flex items-center gap-3 mb-2">
+              <span class="text-2xl">{cat.icon}</span>
+              <div>
+                <h2 class="font-semibold text-(--text-primary)">{cat.name.en}</h2>
+                <p class="text-xs text-(--text-tertiary)">{count} words</p>
+              </div>
+            </div>
+            {cat.description.en && (
+              <p class="text-sm text-(--text-secondary) line-clamp-2">{cat.description.en}</p>
+            )}
+          </a>
+        );
+      })}
+    </div>
+  </AppShell>
+</BaseLayout>

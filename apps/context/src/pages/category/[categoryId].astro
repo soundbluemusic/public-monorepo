@@ -1,0 +1,94 @@
+---
+import { getCategoryById } from '../../../app/data/categories';
+import { getEntriesByCategoryPaginatedFromD1 } from '../../../app/services/d1';
+import AppShell from '../../components/AppShell.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const { categoryId } = Astro.params;
+if (!categoryId) return Astro.redirect('/404', 404);
+
+const category = getCategoryById(categoryId);
+if (!category) return Astro.redirect('/404', 404);
+
+const pageParam = Astro.url.searchParams.get('page');
+const page = Math.max(1, parseInt(pageParam ?? '1', 10) || 1);
+const PAGE_SIZE = 50;
+
+const db = Astro.locals.runtime.env.DB;
+const result = await getEntriesByCategoryPaginatedFromD1(db, categoryId, 'en', page, PAGE_SIZE);
+const totalPages = Math.ceil(result.totalCount / PAGE_SIZE);
+const currentPage = Math.min(page, Math.max(1, totalPages));
+
+const BASE_URL = 'https://context.soundbluemusic.com';
+const difficultyColors: Record<string, string> = {
+  beginner: 'bg-green-100 text-green-800 dark:bg-green-900/50 dark:text-green-200',
+  intermediate: 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900/50 dark:text-yellow-200',
+  advanced: 'bg-red-100 text-red-800 dark:bg-red-900/50 dark:text-red-200',
+};
+---
+
+<BaseLayout
+  title={`${category.name.en} | Context`}
+  description={`Learn ${result.totalCount} Korean words in the ${category.name.en} category`}
+  keywords={[category.name.en, `${category.name.en} words`, 'Korean vocabulary', 'learn Korean']}
+  canonical={`${BASE_URL}/category/${categoryId}`}
+>
+  <AppShell locale="en">
+    <header class="mb-8">
+      <div class="flex items-center gap-3 mb-2">
+        <span class="text-3xl">{category.icon}</span>
+        <div>
+          <h1 class="text-2xl sm:text-3xl font-bold text-(--text-primary)">{category.name.en}</h1>
+          <p class="text-(--text-secondary)">{result.totalCount} words</p>
+        </div>
+      </div>
+      {category.description.en && (
+        <p class="text-(--text-secondary) mt-2">{category.description.en}</p>
+      )}
+    </header>
+
+    <div class="space-y-3">
+      {result.entries.map((entry) => (
+        <a
+          href={`/entry/${entry.id}`}
+          class="block p-4 rounded-xl bg-(--bg-elevated) border border-(--border-primary) hover:border-(--accent-primary) transition-colors"
+        >
+          <div class="flex items-start justify-between gap-4">
+            <div class="flex-1 min-w-0">
+              <div class="flex items-center gap-2 mb-1">
+                <h2 class="font-semibold text-(--text-primary)">{entry.korean}</h2>
+                <span class="text-sm text-(--text-tertiary) truncate">({entry.romanization})</span>
+              </div>
+              <p class="text-sm text-(--text-secondary) truncate">{entry.translation.word}</p>
+            </div>
+            <span class={`shrink-0 px-2 py-0.5 rounded-full text-xs font-medium ${difficultyColors[entry.difficulty]}`}>
+              {entry.difficulty}
+            </span>
+          </div>
+        </a>
+      ))}
+    </div>
+
+    {totalPages > 1 && (
+      <nav class="flex items-center justify-between mt-8 pt-6 border-t border-(--border-primary)" aria-label="Pagination">
+        <a
+          href={currentPage > 1 ? `/category/${categoryId}?page=${currentPage - 1}` : '#'}
+          class={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${currentPage > 1 ? 'bg-(--bg-elevated) border border-(--border-primary) text-(--text-secondary) hover:bg-(--bg-tertiary)' : 'opacity-50 pointer-events-none bg-(--bg-elevated) border border-(--border-primary) text-(--text-tertiary)'}`}
+          aria-disabled={currentPage <= 1}
+        >
+          ← Previous
+        </a>
+        <span class="text-sm text-(--text-tertiary)">
+          Page {currentPage} of {totalPages}
+        </span>
+        <a
+          href={currentPage < totalPages ? `/category/${categoryId}?page=${currentPage + 1}` : '#'}
+          class={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${currentPage < totalPages ? 'bg-(--bg-elevated) border border-(--border-primary) text-(--text-secondary) hover:bg-(--bg-tertiary)' : 'opacity-50 pointer-events-none bg-(--bg-elevated) border border-(--border-primary) text-(--text-tertiary)'}`}
+          aria-disabled={currentPage >= totalPages}
+        >
+          Next →
+        </a>
+      </nav>
+    )}
+  </AppShell>
+</BaseLayout>

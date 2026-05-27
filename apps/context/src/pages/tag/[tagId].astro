@@ -1,0 +1,89 @@
+---
+import { getEntriesByTagFromD1 } from '../../../app/services/d1';
+import { getCategoryById } from '../../../app/data/categories';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AppShell from '../../components/AppShell.astro';
+
+const { tagId } = Astro.params;
+if (!tagId) return Astro.redirect('/404', 404);
+
+const tag = decodeURIComponent(tagId);
+const db = Astro.locals.runtime.env.DB;
+const entries = await getEntriesByTagFromD1(db, tag, 'en').catch(() => []);
+if (entries.length === 0) return Astro.redirect('/404', 404);
+
+const relatedTagCounts = new Map<string, number>();
+for (const entry of entries) {
+  for (const t of entry.tags) {
+    if (t !== tag) relatedTagCounts.set(t, (relatedTagCounts.get(t) ?? 0) + 1);
+  }
+}
+const relatedTags = Array.from(relatedTagCounts.entries())
+  .sort((a, b) => b[1] - a[1])
+  .slice(0, 10);
+
+const BASE_URL = 'https://context.soundbluemusic.com';
+---
+
+<BaseLayout
+  title={`#${tag} Tag | Context Korean Dictionary`}
+  description={`${entries.length} Korean words tagged with "${tag}"`}
+  canonical={`${BASE_URL}/tag/${encodeURIComponent(tag)}`}
+>
+  <AppShell locale="en">
+    <header class="mb-8">
+      <h1 class="text-2xl sm:text-3xl font-bold text-(--text-primary) mb-2">#{tag}</h1>
+      <p class="text-(--text-secondary)">{entries.length} words</p>
+    </header>
+
+    {relatedTags.length > 0 && (
+      <section class="mb-8">
+        <h2 class="text-sm font-semibold text-(--text-tertiary) uppercase tracking-wider mb-3">Related Tags</h2>
+        <div class="flex flex-wrap gap-2">
+          {relatedTags.map(([t, count]) => (
+            <a
+              href={`/tag/${encodeURIComponent(t)}`}
+              class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-sm bg-(--bg-elevated) border border-(--border-primary) text-(--text-secondary) hover:border-(--accent-primary) transition-colors"
+            >
+              #{t}<span class="text-xs text-(--text-tertiary) ml-1">{count}</span>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
+
+    <section>
+      <h2 class="text-lg font-semibold text-(--text-primary) mb-4">Words</h2>
+      <div class="grid gap-3">
+        {entries.map((entry) => {
+          const cat = getCategoryById(entry.categoryId);
+          return (
+            <a
+              href={`/entry/${entry.id}`}
+              class="block p-4 rounded-xl bg-(--bg-elevated) border border-(--border-primary) hover:border-(--accent-primary) transition-colors"
+            >
+              <div class="flex items-start justify-between gap-4">
+                <div class="flex-1 min-w-0">
+                  <div class="flex items-center gap-2 mb-1">
+                    <span class="font-medium text-(--text-primary)">{entry.korean}</span>
+                    <span class="text-sm text-(--text-tertiary)">({entry.romanization})</span>
+                  </div>
+                  <p class="text-sm text-(--text-secondary) truncate">{entry.translation.word}</p>
+                </div>
+                {cat && (
+                  <span class="text-xs px-2 py-0.5 rounded-full bg-(--bg-tertiary) text-(--text-tertiary) shrink-0">
+                    {cat.icon} {cat.name.en}
+                  </span>
+                )}
+              </div>
+            </a>
+          );
+        })}
+      </div>
+    </section>
+
+    <div class="mt-8 pt-6 border-t border-(--border-primary)">
+      <a href="/tags" class="text-sm text-(--accent-primary) hover:underline">← All Tags</a>
+    </div>
+  </AppShell>
+</BaseLayout>

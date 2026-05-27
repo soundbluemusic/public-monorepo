@@ -1,0 +1,43 @@
+---
+import AppShell from '../components/AppShell.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const BASE_URL = 'https://context.soundbluemusic.com';
+---
+
+<BaseLayout
+  title="Download Vocabulary - Context"
+  description="Download all Korean vocabulary mappings for offline use"
+  canonical={`${BASE_URL}/download`}
+>
+  <AppShell locale="en">
+    <h1 class="text-2xl sm:text-3xl font-bold text-(--text-primary) mb-4">Download Vocabulary</h1>
+    <p class="text-(--text-secondary) mb-8">Download Korean vocabulary data for offline use or research purposes.</p>
+
+    <div class="space-y-4">
+      <div class="p-5 rounded-xl bg-(--bg-elevated) border border-(--border-primary)">
+        <h2 class="text-base font-semibold text-(--text-primary) mb-2">Offline Database</h2>
+        <p class="text-sm text-(--text-secondary) mb-4">Download the full vocabulary database for offline access in the app.</p>
+        <a
+          href="/api/offline-db"
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-(--accent-primary) text-white text-sm font-medium hover:brightness-110 transition-all"
+        >
+          Download JSON
+        </a>
+      </div>
+
+      <div class="p-5 rounded-xl bg-(--bg-elevated) border border-(--border-primary)">
+        <h2 class="text-base font-semibold text-(--text-primary) mb-2">Raw Data (GitHub)</h2>
+        <p class="text-sm text-(--text-secondary) mb-4">Access the source data files on GitHub.</p>
+        <a
+          href="https://github.com/soundbluemusic/public-monorepo/tree/main/data/context"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-(--bg-tertiary) text-(--text-primary) text-sm font-medium hover:bg-(--bg-secondary) transition-colors border border-(--border-primary)"
+        >
+          View on GitHub
+        </a>
+      </div>
+    </div>
+  </AppShell>
+</BaseLayout>

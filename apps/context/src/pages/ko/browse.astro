@@ -1,0 +1,73 @@
+---
+import { categories } from '../../../app/data/categories';
+import AppShell from '../../components/AppShell.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const BASE_URL = 'https://context.soundbluemusic.com';
+
+const categoryParam = Astro.url.searchParams.get('category') ?? '';
+const selectedCategory = categories.find((c) => c.id === categoryParam) ?? null;
+---
+
+<BaseLayout
+  title="탐색 - Context"
+  description="모든 한국어 단어 탐색 및 필터링"
+  canonical={`${BASE_URL}/ko/browse`}
+>
+  <AppShell locale="ko">
+    <header class="mb-6">
+      <h1 class="text-2xl sm:text-3xl font-bold text-(--text-primary) mb-2">탐색</h1>
+      <p class="text-(--text-secondary)">카테고리별로 한국어 어휘 탐색하기</p>
+    </header>
+
+    <!-- Category filter -->
+    <div class="flex flex-wrap gap-2 mb-8">
+      <a
+        href="/ko/browse"
+        class={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${!selectedCategory ? 'bg-(--accent-primary) text-white' : 'bg-(--bg-elevated) border border-(--border-primary) text-(--text-secondary) hover:border-(--accent-primary)'}`}
+      >
+        전체
+      </a>
+      {categories.map((cat) => (
+        <a
+          href={`/ko/browse?category=${cat.id}`}
+          class={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${selectedCategory?.id === cat.id ? 'bg-(--accent-primary) text-white' : 'bg-(--bg-elevated) border border-(--border-primary) text-(--text-secondary) hover:border-(--accent-primary)'}`}
+        >
+          {cat.icon} {cat.name.ko}
+        </a>
+      ))}
+    </div>
+
+    <!-- Browse by category cards -->
+    {!selectedCategory ? (
+      <div class="grid gap-4 sm:grid-cols-2">
+        {categories.map((cat) => (
+          <a
+            href={`/ko/category/${cat.id}`}
+            class="block p-4 rounded-xl bg-(--bg-elevated) border border-(--border-primary) hover:border-(--accent-primary) transition-colors"
+          >
+            <div class="flex items-center gap-3 mb-2">
+              <span class="text-2xl">{cat.icon}</span>
+              <div>
+                <h2 class="font-semibold text-(--text-primary)">{cat.name.ko}</h2>
+              </div>
+            </div>
+            {cat.description.ko && (
+              <p class="text-sm text-(--text-secondary) line-clamp-2">{cat.description.ko}</p>
+            )}
+          </a>
+        ))}
+      </div>
+    ) : (
+      <div class="text-center py-8">
+        <p class="text-(--text-secondary) mb-4">{selectedCategory.name.ko} 단어 보기</p>
+        <a
+          href={`/ko/category/${selectedCategory.id}`}
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-(--accent-primary) text-white text-sm font-medium hover:brightness-110 transition-all"
+        >
+          {selectedCategory.icon} {selectedCategory.name.ko} 보기 →
+        </a>
+      </div>
+    )}
+  </AppShell>
+</BaseLayout>

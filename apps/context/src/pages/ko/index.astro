@@ -1,0 +1,66 @@
+---
+import { getCategoriesFromD1, getEntryCounts } from '../../../app/services/d1';
+import AppShell from '../../components/AppShell.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const BASE_URL = 'https://context.soundbluemusic.com';
+
+const db = Astro.locals.runtime.env.DB;
+
+let categories: Awaited<ReturnType<typeof getCategoriesFromD1>> = [];
+let categoryCounts: Map<string, number> = new Map();
+let totalEntries = 0;
+let dbError = false;
+
+try {
+  [categories, categoryCounts] = await Promise.all([
+    getCategoriesFromD1(db),
+    getEntryCounts(db),
+  ]);
+  for (const count of categoryCounts.values()) totalEntries += count;
+} catch (e) {
+  console.error('[HomePage/ko] D1 error:', e);
+  dbError = true;
+}
+---
+
+<BaseLayout
+  title="Context - 한국어 사전"
+  description="한국어 학습자를 위한 의미 사전"
+  keywords={['한국어 사전', '한국어 학습', '한국어 단어', '한국어 뜻']}
+  canonical={`${BASE_URL}/ko`}
+>
+  <AppShell locale="ko">
+    <h1 class="text-2xl sm:text-3xl font-bold text-(--text-primary) mb-2">한국어 사전</h1>
+    <p class="text-(--text-secondary) mb-8">{categories.length}개 카테고리에서 {totalEntries}개의 한국어 단어를 찾아보세요.</p>
+
+    {dbError && (
+      <div class="mb-6 p-3 rounded-lg bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 text-sm text-amber-800 dark:text-amber-200" role="alert">
+        데이터베이스에 일시적인 오류가 발생했습니다. 일부 데이터가 표시되지 않을 수 있습니다.
+      </div>
+    )}
+
+    <div class="grid gap-4 sm:grid-cols-2">
+      {categories.map((cat) => {
+        const count = categoryCounts.get(cat.id) ?? 0;
+        return (
+          <a
+            href={`/ko/category/${cat.id}`}
+            class="block p-4 rounded-xl bg-(--bg-elevated) border border-(--border-primary) hover:border-(--accent-primary) transition-colors"
+          >
+            <div class="flex items-center gap-3 mb-2">
+              <span class="text-2xl">{cat.icon}</span>
+              <div>
+                <h2 class="font-semibold text-(--text-primary)">{cat.name.ko}</h2>
+                <p class="text-xs text-(--text-tertiary)">{count}개 단어</p>
+              </div>
+            </div>
+            {cat.description.ko && (
+              <p class="text-sm text-(--text-secondary) line-clamp-2">{cat.description.ko}</p>
+            )}
+          </a>
+        );
+      })}
+    </div>
+  </AppShell>
+</BaseLayout>
