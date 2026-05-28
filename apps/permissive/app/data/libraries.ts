@@ -1,3 +1,5 @@
+import { libraryEnrichment } from './library-enrichment';
+
 export interface Library {
   name: string;
   description: string;
@@ -32,7 +34,11 @@ export interface CategoryMeta {
   description: { en: string; ko: string };
 }
 
-export const libraries: Library[] = [
+/**
+ * Raw 라이브러리 배열. `library-enrichment.ts`의 useCases/codeExample이
+ * 파일 끝에서 자동 merge되어 최종 `libraries` export로 노출됩니다.
+ */
+const RAW_LIBRARIES: Library[] = [
   // Routing
   {
     name: 'React Router',
@@ -2080,6 +2086,22 @@ const x = linspace(0, 2 * Math.PI, 100);
 const y = x.map(sin);`,
   },
 ];
+
+/**
+ * 최종 `libraries` export. `RAW_LIBRARIES`에 `library-enrichment.ts`의
+ * useCases/codeExample을 자동 merge.
+ * - 본체에 이미 채워진 필드가 있으면 그것을 우선 (덮어쓰기 방지).
+ * - enrichment에 등록되지 않은 라이브러리는 그대로 반환.
+ */
+export const libraries: Library[] = RAW_LIBRARIES.map((lib) => {
+  const enrich = libraryEnrichment[lib.name];
+  if (!enrich) return lib;
+  return {
+    ...lib,
+    useCases: lib.useCases ?? enrich.useCases,
+    codeExample: lib.codeExample ?? enrich.codeExample,
+  };
+});
 
 /**
  * 카테고리 목록 (Phase 2: 25개 → 10개로 통폐합).
