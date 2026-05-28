@@ -3,7 +3,7 @@
 > **Math Documentation for Learners (학습자를 위한 수학 문서)**
 
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue)](LICENSE)
-[![TanStack Start](https://img.shields.io/badge/TanStack_Start-v1-FF4154?logo=react)](https://tanstack.com/start)
+[![Astro](https://img.shields.io/badge/Astro-6-FF5D01?logo=astro&logoColor=white)](https://astro.build)
 [![SSR](https://img.shields.io/badge/SSR-Cloudflare_Workers-F38020?logo=cloudflare)](https://developers.cloudflare.com/workers/)
 
 **[Live Site](https://roots.soundbluemusic.com)**
@@ -16,7 +16,7 @@ A math documentation site designed for learners:
 
 - **438 Math Concepts** - From elementary to graduate level
 - **18 Math Fields** - Algebra, Calculus, Geometry, etc.
-- **MathML Rendering** - Browser-native LaTeX formulas
+- **KaTeX Rendering** - LaTeX formulas → HTML
 - **Difficulty Levels** - Elementary → Graduate+
 - **Bilingual** - Korean ↔ English
 
@@ -24,17 +24,17 @@ A math documentation site designed for learners:
 
 ## Architecture (아키텍처)
 
-### SSR with Cloudflare Workers
+### Astro 6 + Cloudflare Workers (SSR)
 
 ```
-vite.config.ts (TanStack Start + Cloudflare)
-├── tanstackStart() - SSR 프레임워크
-├── cloudflare() - Workers 어댑터
-└── loader() → 서버 사이드 데이터 로딩
+astro.config.mjs
+├── @astrojs/cloudflare (adapter)
+├── output: 'server'
+└── i18n: en (default) + ko (prefix)
 
 Deployment:
-├── dist/server/ (Workers 핸들러)
-└── dist/client/ (Workers Assets - 정적 파일)
+├── dist/_worker.js/   (Astro fetch handler)
+└── dist/              (정적 자산)
 ```
 
 ### Data Architecture
@@ -55,27 +55,27 @@ app/data/
 ### Math Rendering
 
 ```
-LaTeX input → app/components/math/LaTeX.tsx → MathML output
+LaTeX input → katex.renderToString() → HTML
 ```
 
-Browser-native MathML (no KaTeX/MathJax bundle required).
+`src/components/pages/ConceptPage.astro:2` 에서 `katex` 패키지 사용. CSS는 `src/styles/global.css:3` 에서 `katex/dist/katex.min.css` 임포트.
 
 ---
 
 ## Routes (라우트 구조)
 
-| Route | EN | KO | Dynamic | Description |
-|:------|:--:|:--:|:-------:|:------------|
-| `/` | ✓ | ✓ | - | Home |
-| `/browse` | ✓ | ✓ | - | Browse all concepts |
-| `/search` | ✓ | ✓ | - | Search with MiniSearch |
-| `/concept/:conceptId` | ✓ | ✓ | 438 | Concept page |
-| `/field/:fieldId` | ✓ | ✓ | 50 | Field page |
-| `/constants` | ✓ | ✓ | - | Math constants |
-| `/favorites` | ✓ | ✓ | - | Saved concepts |
-| `/about` | ✓ | ✓ | - | About |
+| Route | EN | KO | Description |
+|:------|:--:|:--:|:------------|
+| `/` | ✓ | ✓ | Home |
+| `/browse` | ✓ | ✓ | Browse all concepts |
+| `/search` | ✓ | ✓ | Search with MiniSearch |
+| `/concept/[conceptId]` | ✓ | ✓ | Concept page (438) |
+| `/field/[fieldId]` | ✓ | ✓ | Field page (18) |
+| `/constants` | ✓ | ✓ | Math constants |
+| `/favorites` | ✓ | ✓ | Saved concepts |
+| `/about` | ✓ | ✓ | About |
 
-**Total:** 920 routes (460 EN + 460 KO)
+**Mode:** Astro SSR via Cloudflare Workers
 
 ---
 
@@ -83,23 +83,32 @@ Browser-native MathML (no KaTeX/MathJax bundle required).
 
 | Feature | Implementation |
 |:--------|:---------------|
-| 🔍 Search | MiniSearch (useSearchWorker) |
-| 📱 PWA | vite-plugin-pwa |
+| 🔍 Search | MiniSearch via `@soundblue/search` |
 | 🌙 Dark Mode | localStorage + CSS variables |
-| 🌐 i18n | URL-based (`/ko/*`) + Paraglide |
+| 🌐 i18n | URL-based (`/ko/*`) via Astro `i18n` config |
 | 💾 Favorites | IndexedDB (Dexie) |
+| 📐 Math | KaTeX (`katex` package) |
 
 ---
 
-## Search Algorithm
+## Astro Page Pattern
 
-```typescript
-// MiniSearch-based offline search
-// Uses @soundblue/search package
-import { useSearchWorker } from '@soundblue/search/react';
+```astro
+---
+// src/pages/concept/[conceptId].astro
+import { getConceptById } from '../../../app/data/concepts';
+import BaseLayout from '../../layouts/BaseLayout.astro';
 
-// search-index.json loaded via Web Worker
-const { results, isLoading } = useSearchWorker(query);
+const { conceptId } = Astro.params;
+const concept = getConceptById(conceptId!);
+if (!concept) {
+  return Astro.redirect('/404', 404);
+}
+---
+
+<BaseLayout title={concept.name.en}>
+  <h1>{concept.name.en}</h1>
+</BaseLayout>
 ```
 
 ---
@@ -110,7 +119,7 @@ const { results, isLoading } = useSearchWorker(query);
 # From monorepo root
 pnpm dev:roots       # → http://localhost:3005
 
-# Build (outputs to dist/client)
+# Build
 pnpm build:roots
 ```
 
@@ -120,12 +129,11 @@ pnpm build:roots
 
 | Role | Technology |
 |:-----|:-----------|
-| Framework | TanStack Start |
-| UI | React |
+| Framework | Astro 6 |
 | Styling | Tailwind CSS v4 |
 | Language | TypeScript |
-| Math Rendering | Browser-native MathML |
-| Search | MiniSearch (via @soundblue/search) |
+| Math Rendering | KaTeX (server-rendered) |
+| Search | MiniSearch (via `@soundblue/search`) |
 | Storage | localStorage / IndexedDB |
 | Hosting | Cloudflare Workers |
 
@@ -144,7 +152,7 @@ return concepts.length || 438;
 export const DIFFICULTY_LEVELS = ['elementary', 'middle', 'high'] as const;
 ```
 
-See [root README](../../README.md#-code-quality-rules-코드-품질-규칙) for full guidelines.
+See [root README](../../README.md) for full guidelines.
 
 ---
 

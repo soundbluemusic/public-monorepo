@@ -3,9 +3,8 @@
 > **Korean Dictionary for Learners (학습자를 위한 한국어 사전)**
 
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue)](LICENSE)
-[![TanStack Start](https://img.shields.io/badge/TanStack_Start-v1-FF4154?logo=react)](https://tanstack.com/start)
+[![Astro](https://img.shields.io/badge/Astro-6-FF5D01?logo=astro&logoColor=white)](https://astro.build)
 [![SSR + D1](https://img.shields.io/badge/SSR-D1_Database-F38020?logo=cloudflare)](https://developers.cloudflare.com/d1/)
-[![Entries](https://img.shields.io/badge/Entries-16394-blue)](vite.config.ts)
 
 **[Live Site](https://context.soundbluemusic.com)**
 
@@ -15,42 +14,44 @@
 
 A Korean dictionary designed for language learners:
 
-- **16394 Word Entries** - Organized by category and difficulty
+- **16,394 Word Entries** - Organized by category and difficulty (D1)
 - **Bilingual Support** - Korean ↔ English translations
 - **Romanization** - Pronunciation guides
-- **Categories** - 21 topics + 7 conversation categories
+- **Categories** - 52 topics + 53 conversation categories
 - **Difficulty Levels** - Beginner → Advanced
 
 ---
 
 ## Architecture (아키텍처)
 
-### SSR + D1 전용
+### SSR + D1 전용 (Astro 6 + Cloudflare Workers)
 
 > ⚠️ **SSG 빌드는 지원하지 않습니다.** 모든 entry 페이지는 D1에서 실시간 조회합니다.
 
 | 항목 | 설명 |
 |:-----|:-----|
-| 렌더링 모드 | **SSR** (Cloudflare Workers) |
+| 빌드 도구 | **Astro 6** (`astro build`) |
+| 렌더링 모드 | **SSR** (`output: 'server'`) |
+| 어댑터 | `@astrojs/cloudflare` |
 | 데이터베이스 | Cloudflare D1 (`context-db`) |
 | 배포 명령어 | `pnpm deploy` |
 
 ### 아키텍처 다이어그램
 
 ```
-vite.config.ts (TanStack Start + Cloudflare)
-├── tanstackStart() - SSR 프레임워크
-├── cloudflare() - Workers 어댑터
-└── loader() → D1 Database 실시간 쿼리
+astro.config.mjs (Astro 6 + Cloudflare adapter)
+├── @astrojs/cloudflare (adapter)
+├── output: 'server' (SSR)
+└── i18n: en (default) + ko (prefix)
 
 Cloudflare Workers:
-├── dist/server/ (Workers 핸들러)
-│   ├── /entry/:id → D1 쿼리
-│   ├── /api/offline-db → D1 전체 덤프 (오프라인용)
-│   └── /sitemap*.xml → D1에서 동적 생성
-├── dist/client/ (Workers Assets - 정적 파일)
+├── dist/_worker.js/ (Astro fetch handler)
+│   ├── /entry/[entryId].astro → D1 쿼리
+│   ├── /api/offline-db.ts → D1 전체 덤프 (오프라인용)
+│   └── /sitemap*.xml.ts → D1에서 동적 생성
+├── dist/ (정적 자산)
 └── D1 Database (context-db)
-    ├── entries (16394 rows)
+    ├── entries (16,394 rows)
     ├── categories (52 rows)
     └── conversations (53 rows)
 ```
@@ -108,7 +109,6 @@ CREATE TABLE conversations (
 -- FK가 있으면 entries 테이블을 먼저 수정해야 하지만,
 -- FK가 없으면 categories만 수정하면 됨
 
--- migrations/0003_sync_categories.sql
 DELETE FROM categories WHERE id = 'daily-life';
 INSERT INTO categories (...) VALUES ('daily-misc', '일상생활', ...);
 ```
@@ -118,12 +118,10 @@ INSERT INTO categories (...) VALUES ('daily-misc', '일상생활', ...);
 | ❌ 카테고리 삭제 시 에러   | ✅ 유연한 마이그레이션   |
 | ❌ entries 먼저 수정 필요  | ✅ 바로 삭제 가능        |
 
-**결과**: 카테고리 구조 변경 시 entries 테이블 수정 없이 유연하게 마이그레이션할 수 있습니다.
-
 ### Data Flow
 
 ```
-Request → Cloudflare Workers → D1 Query → React SSR → HTML Response
+Request → Cloudflare Workers → Astro page (D1 access via Astro.locals.runtime.env.DB) → HTML Response
 ```
 
 ### Sitemap Generation
@@ -133,10 +131,10 @@ SSR 모드에서 사이트맵은 D1에서 **실시간 동적 생성**됩니다:
 | Route | 설명 |
 |:------|:-----|
 | `/sitemap.xml` | 인덱스 (모든 사이트맵 링크) |
-| `/sitemap-pages.xml` | 정적 페이지 |
-| `/sitemap-categories.xml` | 카테고리 목록 |
-| `/sitemaps/entries/{categoryId}.xml` | 카테고리별 엔트리 (52개) |
-| `/api/offline-db` | 오프라인 DB 덤프 (JSON) |
+| `/sitemap-pages.xml.ts` | 정적 페이지 |
+| `/sitemap-categories.xml.ts` | 카테고리 목록 |
+| `/sitemap-entry-[categoryId].xml.ts` | 카테고리별 엔트리 (52개) |
+| `/api/offline-db.ts` | 오프라인 DB 덤프 (JSON) |
 
 ---
 
@@ -144,23 +142,22 @@ SSR 모드에서 사이트맵은 D1에서 **실시간 동적 생성**됩니다:
 
 | Route | EN | KO | Mode | Description |
 |:------|:--:|:--:|:----:|:------------|
-| `/` | ✓ | ✓ | Static | Home |
-| `/browse` | ✓ | ✓ | Static | Browse all entries |
-| `/entry/:entryId` | ✓ | ✓ | **SSR** | Word entry page (D1) |
-| `/category/:categoryId` | ✓ | ✓ | Static | Category page |
-| `/conversation/:conversationId` | ✓ | ✓ | Static | Conversation page |
+| `/` | ✓ | ✓ | SSR | Home |
+| `/browse` | ✓ | ✓ | SSR | Browse all entries |
+| `/entry/[entryId]` | ✓ | ✓ | **SSR** | Word entry page (D1) |
+| `/category/[categoryId]` | ✓ | ✓ | SSR | Category page |
+| `/conversation/[conversationId]` | ✓ | ✓ | SSR | Conversation page |
 | `/sitemap.xml` | ✓ | - | **SSR** | Sitemap index (D1) |
-| `/sitemaps/entries/*.xml` | ✓ | - | **SSR** | Category sitemaps (D1) |
 | `/api/offline-db` | ✓ | - | **SSR** | Offline DB dump (D1) |
-| `/download` | ✓ | ✓ | Static | Offline download page |
-| `/about` | ✓ | ✓ | Static | About |
-| `/my-learning` | ✓ | ✓ | Static | Learning progress |
-| `/built-with` | ✓ | ✓ | Static | Tech stack |
-| `/privacy` | ✓ | ✓ | Static | Privacy policy |
-| `/terms` | ✓ | ✓ | Static | Terms of service |
-| `/license` | ✓ | ✓ | Static | License |
+| `/download` | ✓ | ✓ | SSR | Offline download page |
+| `/about` | ✓ | ✓ | SSR | About |
+| `/my-learning` | ✓ | ✓ | SSR | Learning progress |
+| `/built-with` | ✓ | ✓ | SSR | Tech stack |
+| `/privacy` | ✓ | ✓ | SSR | Privacy policy |
+| `/terms` | ✓ | ✓ | SSR | Terms of service |
+| `/license` | ✓ | ✓ | SSR | License |
 
-**Data:** 16394 entries + 52 categories (D1 Database)
+**Data:** 16,394 entries + 52 categories + 53 conversations (D1 Database)
 
 ---
 
@@ -168,13 +165,15 @@ SSR 모드에서 사이트맵은 D1에서 **실시간 동적 생성**됩니다:
 
 | Feature | Implementation |
 |:--------|:---------------|
-| 🔍 Search | MiniSearch (useSearchWorker) |
-| 📱 PWA | vite-plugin-pwa |
+| 🔍 Search | MiniSearch via `@soundblue/search` |
+| 📱 PWA | Service Worker (`@soundblue/pwa`) |
 | 🌙 Dark Mode | localStorage + CSS variables |
-| 🌐 i18n | URL-based (`/ko/*`) + Paraglide |
-| 💾 Favorites | IndexedDB (Dexie) |
+| 🌐 i18n | URL-based (`/ko/*`) via Astro `i18n` config |
+| 💾 Favorites | IndexedDB (Dexie via `@soundblue/platform`) |
 | 📊 Study Records | IndexedDB (Dexie) |
 | 📥 Offline Mode | D1 → IndexedDB 동기화 (`/api/offline-db`) |
+
+> ⚠️ React 의존성(`@astrojs/react`, `react`, `react-dom`)이 `package.json`에 있으나 현재 `src/`에 `.tsx` 컴포넌트나 `client:` 디렉티브는 0건. 미래의 Astro Islands용 placeholder.
 
 ---
 
@@ -194,6 +193,32 @@ const { query, setQuery, results, isReady } = useSearchWorker({
 
 ---
 
+## Astro Page + D1 Pattern
+
+```astro
+---
+// src/pages/entry/[entryId].astro
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const { entryId } = Astro.params;
+const db = Astro.locals.runtime?.env?.DB;
+if (!db) {
+  return new Response('D1 not bound', { status: 500 });
+}
+const entry = await db.prepare('SELECT * FROM entries WHERE id = ?')
+  .bind(entryId).first();
+if (!entry) {
+  return Astro.redirect('/404', 404);
+}
+---
+
+<BaseLayout title={`${entry.korean} | Context`}>
+  <h1>{entry.korean}</h1>
+</BaseLayout>
+```
+
+---
+
 ## Development (개발)
 
 ```bash
@@ -201,7 +226,7 @@ const { query, setQuery, results, isReady } = useSearchWorker({
 pnpm dev:context     # → http://localhost:3003
 
 # Build
-pnpm build:context   # SSR 빌드 (기본)
+pnpm build:context   # Astro SSR 빌드
 ```
 
 ---
@@ -210,20 +235,22 @@ pnpm build:context   # SSR 빌드 (기본)
 
 ```bash
 cd apps/context
-pnpm build   # SSR 빌드
+pnpm build   # Astro SSR 빌드
 pnpm deploy  # Cloudflare Workers 배포
 ```
 
 **필수 설정 (Cloudflare Dashboard):**
 - D1 Binding: `DB` → `context-db`
+- D1 Binding: `PRIVATE_DB` → `private` (저작권 자료)
 
 ### Configuration Files
 
 | File | Purpose |
 |:-----|:--------|
+| `astro.config.mjs` | Astro + Cloudflare adapter 설정 |
 | `wrangler.toml` | D1 바인딩, Workers 설정 |
-| `vite.config.ts` | TanStack Start + Cloudflare 설정 |
-| `app/routes/` | 파일 기반 라우트 (API 엔드포인트 포함) |
+| `src/pages/` | Astro 파일 기반 라우트 |
+| `app/data/` | 데이터 헬퍼 + SSoT (`site.json`) |
 
 ---
 
@@ -231,12 +258,11 @@ pnpm deploy  # Cloudflare Workers 배포
 
 | Role | Technology |
 |:-----|:-----------|
-| Framework | TanStack Start (SSR mode) |
-| UI | React 19 |
+| Framework | Astro 6 (SSR mode) |
 | Styling | Tailwind CSS v4 |
 | Language | TypeScript |
 | **Database** | **Cloudflare D1** (SQLite) |
-| Search | MiniSearch (via @soundblue/search) |
+| Search | MiniSearch (via `@soundblue/search`) |
 | Storage | localStorage / IndexedDB (client) |
 | Hosting | Cloudflare Workers |
 
@@ -255,7 +281,7 @@ return entries.length || 978;
 export const LIMITS = { ID_LENGTH: 100 } as const;  // Named, documented
 ```
 
-See [root README](../../README.md#-code-quality-rules-코드-품질-규칙) for full guidelines.
+See [root README](../../README.md) for full guidelines.
 
 ---
 
