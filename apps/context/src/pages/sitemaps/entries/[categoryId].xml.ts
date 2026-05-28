@@ -1,13 +1,14 @@
+import { env } from 'cloudflare:workers';
 import type { APIRoute } from 'astro';
 import { getEntryIdsByCategoryFromD1 } from '../../../../app/services/d1';
 
 const SITE_URL = 'https://context.soundbluemusic.com';
 
-export const GET: APIRoute = async ({ params, locals }) => {
+export const GET: APIRoute = async ({ params }) => {
   const { categoryId } = params;
   if (!categoryId) return new Response('Not Found', { status: 404 });
 
-  const db = locals.runtime.env.DB;
+  const db = env.DB;
   const entryIds = await getEntryIdsByCategoryFromD1(db, categoryId).catch(() => []);
 
   if (entryIds.length === 0) return new Response('Not Found', { status: 404 });

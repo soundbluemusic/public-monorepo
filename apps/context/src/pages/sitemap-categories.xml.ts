@@ -1,10 +1,11 @@
+import { env } from 'cloudflare:workers';
 import type { APIRoute } from 'astro';
 import { getCategoriesFromD1 } from '../../app/services/d1';
 
 const SITE_URL = 'https://context.soundbluemusic.com';
 
-export const GET: APIRoute = async ({ locals }) => {
-  const db = locals.runtime.env.DB;
+export const GET: APIRoute = async () => {
+  const db = env.DB;
 
   let categories: Array<{ id: string }> = [];
   try {
