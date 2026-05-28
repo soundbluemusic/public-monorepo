@@ -25,7 +25,8 @@ const usedHere = libraries.filter((l) => l.usedHere).slice(0, 4);
       <p class="text-lg text-(--text-secondary) mb-6 max-w-xl">
         Web Standard APIs and open-source libraries with license metadata.
       </p>
-      <!-- Search form -->
+      <!-- Search form (form: no-JS fallback; data-search-trigger: opens
+           SearchDialog when JS is active). -->
       <form method="get" action="/libraries" class="flex gap-2 max-w-lg">
         <div class="relative flex-1">
           <svg
@@ -47,9 +48,14 @@ const usedHere = libraries.filter((l) => l.usedHere).slice(0, 4);
           <input
             type="search"
             name="q"
-            placeholder="Search libraries..."
-            class="w-full pl-10 pr-4 py-2.5 rounded-xl border border-(--border-primary) bg-(--bg-elevated) text-(--text-primary) placeholder:text-(--text-tertiary) focus:outline-none focus:border-(--border-focus) transition-colors"
+            placeholder="Search libraries and Web APIs..."
+            data-search-trigger
+            readonly
+            class="w-full pl-10 pr-16 py-2.5 rounded-xl border border-(--border-primary) bg-(--bg-elevated) text-(--text-primary) placeholder:text-(--text-tertiary) focus:outline-none focus:border-(--border-focus) transition-colors cursor-pointer"
           />
+          <kbd class="absolute right-3 top-1/2 -translate-y-1/2 text-xs text-(--text-tertiary) bg-(--bg-tertiary) px-1.5 py-0.5 rounded border border-(--border-primary)">
+            ⌘K
+          </kbd>
         </div>
         <button
           type="submit"

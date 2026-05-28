@@ -1,4 +1,5 @@
 ---
+import { getLocaleFromPath } from '@soundblue/i18n';
 import { createCriticalCss, createStructuredData, detectLanguage } from '@soundblue/ui/shell';
 import {
   DARK_MODE_INIT_SCRIPT,
@@ -8,6 +9,7 @@ import {
   SIDEBAR_COLLAPSE_SCRIPT,
 } from '@soundblue/ui/utils';
 import { shellConfig } from '../../app/shell.config';
+import SearchDialog from '../components/search/SearchDialog.tsx';
 import '../styles/global.css';
 
 interface Props {
@@ -22,6 +24,7 @@ interface Props {
 const { title, description, canonical, ogTitle, ogImage, noIndex } = Astro.props;
 const pathname = Astro.url.pathname;
 const lang = detectLanguage(pathname);
+const searchLocale = getLocaleFromPath(pathname) === 'ko' ? 'ko' : 'en';
 const baseUrl = shellConfig.baseUrl;
 const canonicalUrl = canonical ?? `${baseUrl}${pathname}`;
 
@@ -75,6 +78,9 @@ const FONT_URL =
   </head>
   <body>
     <slot />
+
+    <!-- Instant search (Cmd/Ctrl+K). client:idle: not needed on initial paint -->
+    <SearchDialog client:idle locale={searchLocale} />
 
     <!-- Event-delegated scripts: dark mode toggle, sidebar, mobile menu -->
     <script is:inline set:html={DARK_MODE_TOGGLE_SCRIPT_DUAL} />

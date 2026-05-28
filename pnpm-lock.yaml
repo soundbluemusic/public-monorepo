@@ -311,6 +311,9 @@ importers:
       '@astrojs/cloudflare':
         specifier: ^13.5.4
         version: 13.5.4(@types/node@25.9.1)(astro@6.3.7(@types/node@25.9.1)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.4)(terser@5.46.2)(tsx@4.22.3)(yaml@2.9.0))(jiti@2.7.0)(lightningcss@1.32.0)(terser@5.46.2)(tsx@4.22.3)(workerd@1.20260520.1)(wrangler@4.93.1(@cloudflare/workers-types@4.20260521.1))(yaml@2.9.0)
+      '@astrojs/react':
+        specifier: ^4.0.0
+        version: 4.4.2(@types/node@25.9.1)(@types/react-dom@19.2.3(@types/react@19.2.15))(@types/react@19.2.15)(jiti@2.7.0)(lightningcss@1.32.0)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)(terser@5.46.2)(tsx@4.22.3)(yaml@2.9.0)
       '@soundblue/config':
         specifier: workspace:*
         version: link:../../packages/config
@@ -320,6 +323,9 @@ importers:
       '@soundblue/i18n':
         specifier: workspace:*
         version: link:../../packages/i18n
+      '@soundblue/search':
+        specifier: workspace:*
+        version: link:../../packages/search
       '@soundblue/seo':
         specifier: workspace:*
         version: link:../../packages/seo
@@ -332,6 +338,12 @@ importers:
       nanostores:
         specifier: ^0.11.4
         version: 0.11.4
+      react:
+        specifier: ^19.2.6
+        version: 19.2.6
+      react-dom:
+        specifier: ^19.2.6
+        version: 19.2.6(react@19.2.6)
     devDependencies:
       '@astrojs/check':
         specifier: ^0.9.4
@@ -341,10 +353,16 @@ importers:
         version: 4.20260521.1
       '@tailwindcss/vite':
         specifier: ^4.3.0
-        version: 4.3.0(vite@8.0.14(@types/node@25.9.1)(esbuild@0.28.0)(jiti@2.7.0)(terser@5.46.2)(tsx@4.22.3)(yaml@2.9.0))
+        version: 4.3.0(vite@6.4.2(@types/node@25.9.1)(jiti@2.7.0)(lightningcss@1.32.0)(terser@5.46.2)(tsx@4.22.3)(yaml@2.9.0))
       '@types/node':
         specifier: ^25.9.1
         version: 25.9.1
+      '@types/react':
+        specifier: ^19.2.15
+        version: 19.2.15
+      '@types/react-dom':
+        specifier: ^19.2.3
+        version: 19.2.3(@types/react@19.2.15)
       tailwindcss:
         specifier: ^4.3.0
         version: 4.3.0
@@ -12364,6 +12382,13 @@ snapshots:
   '@tailwindcss/typography@0.5.19':
     dependencies:
       postcss-selector-parser: 6.0.10
+
+  '@tailwindcss/vite@4.3.0(vite@6.4.2(@types/node@25.9.1)(jiti@2.7.0)(lightningcss@1.32.0)(terser@5.46.2)(tsx@4.22.3)(yaml@2.9.0))':
+    dependencies:
+      '@tailwindcss/node': 4.3.0
+      '@tailwindcss/oxide': 4.3.0
+      tailwindcss: 4.3.0
+      vite: 6.4.2(@types/node@25.9.1)(jiti@2.7.0)(lightningcss@1.32.0)(terser@5.46.2)(tsx@4.22.3)(yaml@2.9.0)
 
   '@tailwindcss/vite@4.3.0(vite@7.3.3(@types/node@25.9.1)(jiti@2.7.0)(lightningcss@1.32.0)(terser@5.46.2)(tsx@4.22.3)(yaml@2.9.0))':
     dependencies:

@@ -6,6 +6,7 @@
   "type": "module",
   "scripts": {
     "dev": "astro dev",
+    "prebuild": "tsx scripts/generate-search-index.ts",
     "build": "astro build && node scripts/strip-bindings.mjs",
     "preview": "astro preview",
     "deploy": "pnpm build && wrangler deploy",
@@ -23,19 +24,25 @@
   },
   "dependencies": {
     "@astrojs/cloudflare": "^13.5.4",
+    "@astrojs/react": "^4.0.0",
     "@soundblue/config": "workspace:*",
     "@soundblue/core": "workspace:*",
     "@soundblue/i18n": "workspace:*",
+    "@soundblue/search": "workspace:*",
     "@soundblue/seo": "workspace:*",
     "@soundblue/ui": "workspace:*",
     "astro": "^6.3.7",
-    "nanostores": "^0.11.4"
+    "nanostores": "^0.11.4",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.4",
     "@cloudflare/workers-types": "^4.20260521.1",
     "@tailwindcss/vite": "^4.3.0",
     "@types/node": "^25.9.1",
+    "@types/react": "^19.2.15",
+    "@types/react-dom": "^19.2.3",
     "tailwindcss": "^4.3.0",
     "tsx": "^4.22.3",
     "typescript": "^6.0.3",

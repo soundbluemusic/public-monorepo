@@ -45,9 +45,14 @@ const trending = libraries.filter((l) => l.trending).slice(0, 6);
           <input
             type="search"
             name="q"
-            placeholder="라이브러리 검색..."
-            class="w-full pl-10 pr-4 py-2.5 rounded-xl border border-(--border-primary) bg-(--bg-elevated) text-(--text-primary) placeholder:text-(--text-tertiary) focus:outline-none focus:border-(--border-focus) transition-colors"
+            placeholder="라이브러리와 Web API 검색..."
+            data-search-trigger
+            readonly
+            class="w-full pl-10 pr-16 py-2.5 rounded-xl border border-(--border-primary) bg-(--bg-elevated) text-(--text-primary) placeholder:text-(--text-tertiary) focus:outline-none focus:border-(--border-focus) transition-colors cursor-pointer"
           />
+          <kbd class="absolute right-3 top-1/2 -translate-y-1/2 text-xs text-(--text-tertiary) bg-(--bg-tertiary) px-1.5 py-0.5 rounded border border-(--border-primary)">
+            ⌘K
+          </kbd>
         </div>
         <button
           type="submit"
