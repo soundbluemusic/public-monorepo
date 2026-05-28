@@ -56,12 +56,15 @@ public/
 
 | Route | EN | KO | Description |
 |:------|:--:|:--:|:------------|
-| `/` | ✓ | ✓ | Home with search form |
+| `/` | ✓ | ✓ | Home with Cmd+K search + 6 goal cards |
+| `/build` | ✓ | ✓ | 6 build guides (goal-based entry) |
+| `/build/:goal` | ✓ | ✓ | Goal detail (website/webapp/interactive/dataviz/ai-app/commerce) |
 | `/libraries` | ✓ | ✓ | Libraries list (`src/pages/libraries.astro`) |
-| `/library/:slug` | ✓ | ✓ | Library detail (120) |
-| `/category/:categoryId` | ✓ | ✓ | Category page (25) |
+| `/library/:slug` | ✓ | ✓ | Library detail (120) — with FavoriteButton |
+| `/category/:categoryId` | ✓ | ✓ | Category page (10 — Phase 2 consolidation) |
 | `/tag/:tagId` | ✓ | ✓ | Tag page (153) |
 | `/tags` | ✓ | ✓ | All tags |
+| `/favorites` | ✓ | ✓ | Saved libraries (localStorage) |
 | `/web-api` | ✓ | ✓ | Web APIs list |
 | `/web-api/:slug` | ✓ | ✓ | Web API detail (56) |
 | `/built-with` | ✓ | ✓ | Open source used here |
@@ -75,11 +78,12 @@ public/
 
 | Feature | Implementation | Status |
 |:--------|:---------------|:-------|
-| 🔍 Search | HTML form GET → `/libraries?q=` | ⚠️ 인스턴트 검색 아님 (Phase 3에서 개선 예정) |
+| 🔍 Instant Search | `@soundblue/search` (MiniSearch) via React Island, Cmd+K | ✅ |
+| 🎯 Goal-based entry | `/build/[goal]` 6개 큐레이션 스택 (website/webapp/interactive/dataviz/ai-app/commerce) | ✅ |
+| 💾 Favorites | localStorage 기반 즐겨찾기 + `/favorites` 페이지 | ✅ |
 | 🌙 Dark Mode | localStorage + CSS variables | ✅ |
 | 🌐 i18n | URL-based (`/ko/*`) via Astro `i18n` config | ✅ |
-| 📱 PWA | _없음_ | ❌ (context와 달리 미적용) |
-| 💾 Favorites | _없음_ | ❌ (Phase 5에서 검토) |
+| 📱 PWA | _없음_ | ❌ (Phase 후속에서 검토) |
 
 ---
 

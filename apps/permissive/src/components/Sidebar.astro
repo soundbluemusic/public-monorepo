@@ -1,5 +1,6 @@
 ---
 import { getLocaleFromPath } from '@soundblue/i18n';
+import { goals } from '../../app/data/goals';
 import { categoryMeta } from '../../app/data/libraries';
 import { PANEL_LEFT_CLOSE_SVG, PANEL_LEFT_OPEN_SVG } from '@soundblue/ui/utils';
 
@@ -38,6 +39,11 @@ const navItems = [
     name: isKo ? '태그' : 'Tags',
     path: `${prefix}/tags`,
     icon: '<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"/><circle cx="7.5" cy="7.5" r=".5" fill="currentColor"/></svg>',
+  },
+  {
+    name: isKo ? '저장' : 'Favorites',
+    path: `${prefix}/favorites`,
+    icon: '<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>',
   },
 ];
 ---
@@ -111,6 +117,28 @@ const navItems = [
         ))
       }
     </ul>
+
+    <!-- Quick Build section: goals 6개를 사이드바에서도 즉시 접근 -->
+    <div class="mt-4 sidebar-label">
+      <p class="px-2.5 py-1 text-xs font-semibold text-(--text-tertiary) uppercase tracking-wider">
+        {isKo ? '빌드 가이드' : 'Build by goal'}
+      </p>
+      <ul class="mt-1 space-y-0.5">
+        {
+          goals.map((goal) => (
+            <li>
+              <a
+                href={`${prefix}/build/${goal.id}`}
+                class="flex items-center gap-2 px-2.5 py-1.5 rounded-lg text-sm text-(--text-secondary) hover:text-(--text-primary) hover:bg-(--bg-tertiary) transition-colors"
+              >
+                <span class="shrink-0" aria-hidden="true">{goal.icon}</span>
+                <span class="truncate">{isKo ? goal.name.ko : goal.name.en}</span>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
 
     <!-- Category section -->
     <div class="mt-4 sidebar-label">
