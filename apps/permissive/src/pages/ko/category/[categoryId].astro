@@ -1,22 +1,32 @@
 ---
-import { getCategoryBySlug, getLibrarySlug, getLibrariesByCategorySlug } from '../../../../app/data/libraries';
+import {
+  getCategoryBySlug,
+  getLibrarySlug,
+  getLibrariesByCategorySlug,
+  resolveCategorySlug,
+} from '../../../../app/data/libraries';
 import AppShell from '../../../components/AppShell.astro';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 
 const { categoryId } = Astro.params;
 if (!categoryId) return Astro.redirect('/ko/libraries', 302);
 
-const category = getCategoryBySlug(categoryId);
+// Phase 2 카테고리 통폐합 (25 → 10) 이전 slug면 새 slug로 301 redirect.
+const resolved = resolveCategorySlug(categoryId);
+if (!resolved) return Astro.redirect('/ko/libraries', 302);
+if (resolved !== categoryId) return Astro.redirect(`/ko/category/${resolved}`, 301);
+
+const category = getCategoryBySlug(resolved);
 if (!category) return Astro.redirect('/ko/libraries', 302);
 
-const libs = getLibrariesByCategorySlug(categoryId);
+const libs = getLibrariesByCategorySlug(resolved);
 const baseUrl = 'https://permissive.soundbluemusic.com';
 ---
 
 <BaseLayout
   title={`${category.name.ko} 라이브러리 - Permissive`}
   description={category.description.ko}
-  canonical={`${baseUrl}/ko/category/${categoryId}`}
+  canonical={`${baseUrl}/ko/category/${resolved}`}
 >
   <AppShell locale="ko">
     <div class="mb-6">

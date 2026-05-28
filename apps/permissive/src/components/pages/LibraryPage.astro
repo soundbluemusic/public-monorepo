@@ -116,12 +116,14 @@ const softwareSchema = generateSoftwareApplicationSchema({
           ✨ {isKo ? '이 사이트에 사용됨' : 'Used here'}
         </span>
       )}
-      <a
-        href={`${prefix}/category/${getCategorySlug(lib.category)}`}
-        class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-sm font-medium bg-(--bg-tertiary) text-(--text-secondary) hover:bg-(--bg-elevated) hover:text-(--text-primary) transition-colors"
-      >
-        {lib.category}
-      </a>
+      {lib.categories.map((cat) => (
+        <a
+          href={`${prefix}/category/${getCategorySlug(cat)}`}
+          class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-sm font-medium bg-(--bg-tertiary) text-(--text-secondary) hover:bg-(--bg-elevated) hover:text-(--text-primary) transition-colors"
+        >
+          {cat}
+        </a>
+      ))}
     </div>
 
     <!-- Stats grid -->

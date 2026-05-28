@@ -48,12 +48,15 @@ function generateSearchIndex() {
         en: lib.description,
         ko: lib.descriptionKo,
       },
-      field: lib.category,
+      // useSearchWorker의 field는 단일 string (categories/domain) 기대.
+      // primary category(lib.categories[0])를 인덱스에 기록.
+      // Phase 5에서 다중 카테고리 지원 시 packages/search 인터페이스 확장 필요.
+      field: lib.categories[0] ?? '',
       tags: lib.tags || [],
     });
   }
 
-  // Web APIs
+  // Web APIs (단일 category 필드 유지 — Library와 다른 타입)
   for (const api of webApis) {
     searchIndex.push({
       id: `api-${slugify(api.name)}`,

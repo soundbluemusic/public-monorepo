@@ -23,7 +23,7 @@ const description = isKo
 
 const q = searchQuery?.toLowerCase() ?? '';
 const filtered = libraries.filter((lib) => {
-  const matchesCategory = !categoryFilter || lib.category === categoryFilter;
+  const matchesCategory = !categoryFilter || lib.categories.includes(categoryFilter);
   const matchesSearch =
     !q ||
     lib.name.toLowerCase().includes(q) ||
@@ -136,7 +136,7 @@ const filtered = libraries.filter((lib) => {
                 {lib.license}
               </span>
               <span class="px-2 py-0.5 rounded text-xs bg-(--bg-tertiary) text-(--text-tertiary)">
-                {lib.category}
+                {lib.categories[0]}
               </span>
               {lib.trending && (
                 <span class="px-2 py-0.5 rounded text-xs bg-orange-500/10 text-orange-500">

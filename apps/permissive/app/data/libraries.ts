@@ -2328,9 +2328,14 @@ export function getLibraryBySlug(slug: string): Library | undefined {
   return libraries.find((lib) => getLibrarySlug(lib.name) === slug);
 }
 
+/**
+ * 관련 라이브러리: 같은 카테고리(다중 분류 중 하나라도 겹침)를 가진 라이브러리.
+ * `lib.name` 자체는 제외.
+ */
 export function getRelatedLibraries(library: Library, limit = 3): Library[] {
+  const own = new Set(library.categories);
   return libraries
-    .filter((lib) => lib.name !== library.name && lib.category === library.category)
+    .filter((lib) => lib.name !== library.name && lib.categories.some((c) => own.has(c)))
     .slice(0, limit);
 }
 
@@ -2353,19 +2358,72 @@ export function getCategoryMetaByName(categoryName: string): CategoryMeta | unde
   return getCategoryBySlug(slug);
 }
 
-/** 특정 카테고리의 라이브러리 조회 */
+/**
+ * 특정 카테고리의 라이브러리 조회 (다중 분류 중 하나라도 일치하면 포함).
+ */
 export function getLibrariesByCategory(categoryName: string): Library[] {
-  return libraries.filter((lib) => lib.category === categoryName);
+  return libraries.filter((lib) => lib.categories.includes(categoryName));
 }
 
-/** 특정 카테고리 slug의 라이브러리 조회 */
+/**
+ * 특정 카테고리 slug의 라이브러리 조회.
+ * slug → 카테고리 이름 → categories 배열에 포함된 라이브러리 모두.
+ */
 export function getLibrariesByCategorySlug(slug: string): Library[] {
   const meta = getCategoryBySlug(slug);
   if (!meta) return [];
-  // slug를 카테고리 이름으로 변환하여 필터링
-  const categoryName = categories.find((cat) => getCategorySlug(cat) === slug);
-  if (!categoryName || categoryName === 'All') return [];
-  return libraries.filter((lib) => lib.category === categoryName);
+  return libraries.filter((lib) => lib.categories.includes(meta.name.en));
+}
+
+/**
+ * Phase 2 카테고리 통폐합 (25 → 10) 이전의 옛 slug → 새 slug 매핑.
+ * 검색엔진/북마크 호환성을 위한 301 redirect 용도.
+ * 'math-science'는 옛/새 동일 (이름이 'Math/Science' → 'Math & Science'로
+ * 바뀌었지만 slug는 그대로).
+ */
+export const OLD_CATEGORY_SLUG_REDIRECTS: Record<string, string> = {
+  // 옛 → 'ui-styling'
+  'ui-components': 'ui-styling',
+  styling: 'ui-styling',
+  animation: 'ui-styling',
+  // 옛 → 'app-frameworks'
+  routing: 'app-frameworks',
+  'meta-frameworks': 'app-frameworks',
+  frameworks: 'app-frameworks',
+  // 옛 → 'build-dx'
+  'build-tools': 'build-dx',
+  testing: 'build-dx',
+  'type-safety': 'build-dx',
+  // 옛 → 'state-data'
+  'state-management': 'state-data',
+  'data-fetching': 'state-data',
+  forms: 'state-data',
+  // 옛 → 'visuals-graphics'
+  'graphics-canvas': 'visuals-graphics',
+  '3d-graphics': 'visuals-graphics',
+  'image-processing': 'visuals-graphics',
+  // 옛 → 'data-security'
+  'data-serialization': 'data-security',
+  cryptography: 'data-security',
+  compression: 'data-security',
+  // 옛 → 'runtime-wasm'
+  'wasm-runtime': 'runtime-wasm',
+  runtime: 'runtime-wasm',
+  // 옛 → 'ai-vision'
+  'machine-learning': 'ai-vision',
+  'computer-vision': 'ai-vision',
+  // 옛 → 'media-documents'
+  'audio-video': 'media-documents',
+  'pdf-documents': 'media-documents',
+};
+
+/**
+ * 옛 카테고리 slug가 들어왔을 때 새 slug로 변환. 새 slug면 그대로 반환.
+ * 매칭되지 않으면 undefined (caller에서 404 처리).
+ */
+export function resolveCategorySlug(slug: string): string | undefined {
+  if (getCategoryBySlug(slug)) return slug;
+  return OLD_CATEGORY_SLUG_REDIRECTS[slug];
 }
 
 // ============================================================================
