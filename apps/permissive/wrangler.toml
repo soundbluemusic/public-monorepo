@@ -5,6 +5,11 @@ compatibility_flags = ["nodejs_compat"]
 
 [assets]
 directory = "dist/client"
+# Worker handles all routes first for dynamic routes (sitemap.xml etc.).
+# Without this, Cloudflare matches static assets first and `.xml`/`.json`
+# extensions fall through to 404 before reaching the worker.
+run_worker_first = true
+binding = "ASSETS"
 
 # 데이터 소스: TypeScript in-memory (`data/permissive/libraries.json` 110개,
 # `web-apis.json` 56개). D1 바인딩은 사용하지 않습니다.
