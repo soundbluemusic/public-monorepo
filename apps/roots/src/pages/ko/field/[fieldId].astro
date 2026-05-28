@@ -1,8 +1,10 @@
 ---
+import { fields } from '../../../../app/data/fields';
 import FieldPage from '../../../components/pages/FieldPage.astro';
 
 const { fieldId } = Astro.params;
 if (!fieldId) return Astro.redirect('/404', 404);
+if (!fields.some((f) => f.id === fieldId)) return Astro.redirect('/404', 404);
 ---
 
 <FieldPage fieldId={fieldId} locale="ko" />

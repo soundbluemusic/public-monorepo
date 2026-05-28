@@ -1,8 +1,10 @@
 ---
+import { getLibraryBySlug } from '../../../app/data/libraries';
 import LibraryPage from '../../components/pages/LibraryPage.astro';
 
 const { slug } = Astro.params;
 if (!slug) return Astro.redirect('/404', 404);
+if (!getLibraryBySlug(slug)) return Astro.redirect('/404', 404);
 ---
 
 <LibraryPage slug={slug} locale="en" />
