@@ -1,3 +1,4 @@
 # pre-commit에서 typecheck 완료됨 → 캐시 활용하여 build만 실행
 # Cloudflare Pages 빌드 실패 방지를 위해 전체 빌드 검증
-pnpm build:test
+# pre-commit과 동일하게 Turbo sequential 실행 (디버그 포트 9229 충돌 회피).
+TURBO_CONCURRENCY=1 pnpm build:test
