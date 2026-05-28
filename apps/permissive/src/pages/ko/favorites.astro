@@ -1,0 +1,38 @@
+---
+import { getLibrarySlug, libraries } from '../../../app/data/libraries';
+import AppShell from '../../components/AppShell.astro';
+import FavoritesList from '../../components/favorites/FavoritesList.tsx';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const baseUrl = 'https://permissive.soundbluemusic.com';
+
+const minimalLibs = libraries.map((lib) => ({
+  name: lib.name,
+  slug: getLibrarySlug(lib.name),
+  description: lib.description,
+  descriptionKo: lib.descriptionKo,
+  license: lib.license,
+  stars: lib.stars,
+  categories: lib.categories,
+}));
+---
+
+<BaseLayout
+  title="저장된 라이브러리 - Permissive"
+  description="나중에 보기 위해 저장한 라이브러리 (브라우저에 저장됨)"
+  canonical={`${baseUrl}/ko/favorites`}
+  noIndex={true}
+>
+  <AppShell locale="ko">
+    <header class="mb-8">
+      <h1 class="text-2xl sm:text-3xl font-bold text-(--text-primary) mb-2">
+        저장된 라이브러리
+      </h1>
+      <p class="text-(--text-secondary)">
+        브라우저에 로컬 저장됩니다. 사이트 데이터를 지우면 함께 삭제됩니다.
+      </p>
+    </header>
+
+    <FavoritesList client:only="react" libraries={minimalLibs} locale="ko" />
+  </AppShell>
+</BaseLayout>

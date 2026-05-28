@@ -1,8 +1,11 @@
 # Dependencies
 node_modules/
 
-# Build outputs
-build/
+# Build outputs (루트 또는 패키지 루트의 build 폴더만; src/pages/build/ 같은
+# 라우트 폴더는 영향 없음 — `**/` 없이 leading slash로 한정)
+/build/
+apps/*/build/
+packages/*/build/
 .vinxi/
 .output/
 dist/

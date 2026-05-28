@@ -1,0 +1,50 @@
+---
+import { goals } from '../../../../app/data/goals';
+import AppShell from '../../../components/AppShell.astro';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const baseUrl = 'https://permissive.soundbluemusic.com';
+---
+
+<BaseLayout
+  title="무엇을 만들고 싶나요? - Permissive"
+  description="6가지 목적별 큐레이션된 오픈소스 스택: 웹사이트·웹앱·게임·데이터 시각화·AI 앱·커머스."
+  canonical={`${baseUrl}/ko/build`}
+>
+  <AppShell locale="ko">
+    <section class="mb-10">
+      <h1 class="text-3xl sm:text-4xl font-bold text-(--text-primary) mb-3">
+        무엇을 <span class="text-(--accent-primary)">만들고</span> 싶나요?
+      </h1>
+      <p class="text-lg text-(--text-secondary) max-w-2xl">
+        목적을 선택하면 큐레이션된 오픈소스 라이브러리 스택과 단계별 시작 가이드를 보여드립니다. 모든 라이브러리에는 라이선스 메타데이터가 포함되어 있습니다.
+      </p>
+    </section>
+
+    <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      {goals.map((goal) => (
+        <a
+          href={`/ko/build/${goal.id}`}
+          class="group p-6 rounded-2xl bg-(--bg-elevated) border border-(--border-primary) hover:border-(--border-focus) transition-colors"
+        >
+          <p class="text-4xl mb-3" aria-hidden="true">{goal.icon}</p>
+          <h2 class={`text-lg font-semibold ${goal.accent} group-hover:underline mb-1.5`}>
+            {goal.name.ko}
+          </h2>
+          <p class="text-sm text-(--text-secondary) mb-3 line-clamp-2">
+            {goal.tagline.ko}
+          </p>
+          <p class="text-xs text-(--text-tertiary)">
+            {goal.libraries.length}개 추천 라이브러리 · {goal.steps.length}단계 가이드
+          </p>
+        </a>
+      ))}
+    </section>
+
+    <section class="mt-12 p-5 rounded-xl bg-(--bg-tertiary) border border-(--border-primary)">
+      <p class="text-sm text-(--text-secondary)">
+        💡 <strong>아직 정하지 못했나요?</strong> 전체 라이브러리 카탈로그를 <a href="/ko/libraries" class="text-(--accent-primary) hover:underline">카테고리별</a>로 살펴보거나 <a href="/ko" class="text-(--accent-primary) hover:underline">홈</a>에서 이름으로 검색해보세요.
+      </p>
+    </section>
+  </AppShell>
+</BaseLayout>

@@ -1,5 +1,14 @@
 # TanStack Start SSR 마이그레이션 계획 (최종)
 
+> ⚠️ **STATUS: 완료된 역사 기록 (Historical Record)**
+>
+> 이 문서는 **React Router v7 → TanStack Start** 마이그레이션의 계획서입니다.
+> 이 마이그레이션은 완료되었으며, **이후 추가로 TanStack Start → Astro 6 재마이그레이션이 수행**되었습니다.
+> 현재 세 앱(Context / Permissive / Roots) 모두 Astro 6로 동작합니다.
+>
+> 이 문서는 **수정하지 마세요**. 변경 이력 추적용 보존 문서입니다.
+> 현재 아키텍처는 [ARCHITECTURE.md](ARCHITECTURE.md)와 [CLAUDE.md](CLAUDE.md)를 참고하세요.
+
 > **목표**: React Router v7 SSR → TanStack Start SSR 전환
 > **범위**: 3개 앱 + 관련 패키지
 > **TanStack Start 버전**: v1.x (1.0 RC)

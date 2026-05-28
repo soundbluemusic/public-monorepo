@@ -84,6 +84,54 @@ const navLinkClass = (path: string) =>
 
     <!-- Right controls -->
     <div class="flex items-center gap-1 ml-auto">
+      <!-- Search trigger (Cmd+K) -->
+      <button
+        type="button"
+        data-search-trigger
+        aria-label={isKo ? '검색 (⌘K)' : 'Search (⌘K)'}
+        title={isKo ? '검색 (⌘K)' : 'Search (⌘K)'}
+        class="hidden sm:inline-flex items-center gap-2 px-2.5 py-1.5 rounded-lg text-sm text-(--text-secondary) hover:text-(--text-primary) hover:bg-(--bg-tertiary) transition-colors"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path>
+        </svg>
+        <kbd class="text-xs text-(--text-tertiary) bg-(--bg-tertiary) px-1.5 py-0.5 rounded border border-(--border-primary)">⌘K</kbd>
+      </button>
+
+      <!-- Mobile search icon -->
+      <button
+        type="button"
+        data-search-trigger
+        aria-label={isKo ? '검색' : 'Search'}
+        class="sm:hidden p-2 rounded-lg text-(--text-secondary) hover:text-(--text-primary) hover:bg-(--bg-tertiary) transition-colors"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path>
+        </svg>
+      </button>
+
       <!-- Language toggle -->
       <a
         href={altLocalePath}

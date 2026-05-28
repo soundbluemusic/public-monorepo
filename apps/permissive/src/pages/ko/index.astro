@@ -1,4 +1,5 @@
 ---
+import { goals } from '../../../app/data/goals';
 import { getLibrarySlug, libraries } from '../../../app/data/libraries';
 import { webApis } from '../../../app/data/web-apis';
 import AppShell from '../../components/AppShell.astro';
@@ -44,9 +45,14 @@ const trending = libraries.filter((l) => l.trending).slice(0, 6);
           <input
             type="search"
             name="q"
-            placeholder="라이브러리 검색..."
-            class="w-full pl-10 pr-4 py-2.5 rounded-xl border border-(--border-primary) bg-(--bg-elevated) text-(--text-primary) placeholder:text-(--text-tertiary) focus:outline-none focus:border-(--border-focus) transition-colors"
+            placeholder="라이브러리와 Web API 검색..."
+            data-search-trigger
+            readonly
+            class="w-full pl-10 pr-16 py-2.5 rounded-xl border border-(--border-primary) bg-(--bg-elevated) text-(--text-primary) placeholder:text-(--text-tertiary) focus:outline-none focus:border-(--border-focus) transition-colors cursor-pointer"
           />
+          <kbd class="absolute right-3 top-1/2 -translate-y-1/2 text-xs text-(--text-tertiary) bg-(--bg-tertiary) px-1.5 py-0.5 rounded border border-(--border-primary)">
+            ⌘K
+          </kbd>
         </div>
         <button
           type="submit"
@@ -55,6 +61,34 @@ const trending = libraries.filter((l) => l.trending).slice(0, 6);
           검색
         </button>
       </form>
+    </section>
+
+    <!-- 무엇을 만들고 싶나요? -->
+    <section class="mb-12" aria-labelledby="build-heading">
+      <div class="flex items-baseline justify-between mb-4">
+        <h2 id="build-heading" class="text-xl font-semibold text-(--text-primary)">
+          무엇을 만들고 싶나요?
+        </h2>
+        <a href="/ko/build" class="text-sm text-(--accent-primary) hover:underline">
+          전체 6개 보기 →
+        </a>
+      </div>
+      <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+        {goals.map((goal) => (
+          <a
+            href={`/ko/build/${goal.id}`}
+            class="group p-4 rounded-xl bg-(--bg-elevated) border border-(--border-primary) hover:border-(--border-focus) transition-colors"
+          >
+            <p class="text-2xl mb-1.5" aria-hidden="true">{goal.icon}</p>
+            <p class={`font-semibold ${goal.accent} group-hover:underline text-sm`}>
+              {goal.name.ko}
+            </p>
+            <p class="text-xs text-(--text-tertiary) line-clamp-1 mt-0.5">
+              {goal.tagline.ko}
+            </p>
+          </a>
+        ))}
+      </div>
     </section>
 
     <!-- Quick nav -->

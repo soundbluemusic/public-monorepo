@@ -155,6 +155,6 @@ export const meta = dynamicMetaFactory<typeof loader>({
 | 기술 | 문서 |
 |------|------|
 | Tailwind CSS v4 | [tailwindcss.com](https://tailwindcss.com/docs) |
-| TanStack Start | [tanstack.com/start](https://tanstack.com/start/latest) |
-| TanStack Router | [tanstack.com/router](https://tanstack.com/router/latest) |
+| Astro 6 | [docs.astro.build](https://docs.astro.build) |
+| @astrojs/cloudflare | [docs.astro.build/en/guides/integrations-guide/cloudflare/](https://docs.astro.build/en/guides/integrations-guide/cloudflare/) |
 | TypeScript | [typescriptlang.org](https://www.typescriptlang.org/docs) |

@@ -209,27 +209,34 @@ function getRootsStats() {
 }
 
 /**
- * Permissive 앱 통계 수집
+ * Permissive 앱 통계 수집.
+ * SSoT는 apps/permissive/app/data/*.ts (TypeScript in-memory).
+ * dynamic import는 빌드 부담이 크므로, 정규식으로 라이브러리/Web API
+ * 항목을 카운트합니다.
  */
 function getPermissiveStats() {
-  const librariesFile = join(ROOT_DIR, 'data/permissive/libraries.json');
-  const webApisFile = join(ROOT_DIR, 'data/permissive/web-apis.json');
+  const librariesFile = join(ROOT_DIR, 'apps/permissive/app/data/libraries.ts');
+  const webApisFile = join(ROOT_DIR, 'apps/permissive/app/data/web-apis.ts');
 
   let libraries = 0;
   let webApis = 0;
 
   if (existsSync(librariesFile)) {
-    const data = JSON.parse(readFileSync(librariesFile, 'utf-8'));
-    libraries = Array.isArray(data) ? data.length : 0;
+    const content = readFileSync(librariesFile, 'utf-8');
+    // 각 라이브러리 항목은 들여쓰기 4칸 + `name: '...'` 패턴으로 시작.
+    // categoryMeta 항목은 들여쓰기 2칸이므로 제외됨.
+    const matches = content.match(/^ {4}name: '/gm);
+    libraries = matches ? matches.length : 0;
   }
 
   if (existsSync(webApisFile)) {
-    const data = JSON.parse(readFileSync(webApisFile, 'utf-8'));
-    webApis = Array.isArray(data) ? data.length : 0;
+    const content = readFileSync(webApisFile, 'utf-8');
+    const matches = content.match(/^ {4}name: '/gm);
+    webApis = matches ? matches.length : 0;
   }
 
-  // 라우트: 정적 페이지만
-  const routes = 8; // /, /ko, /libraries, /ko/libraries, /web-apis, /ko/web-apis, /about, /ko/about
+  // 라우트: 정적 페이지만 (홈, libraries, web-api, tags, built-with x EN/KO + 404)
+  const routes = 9;
 
   return { libraries, webApis, routes };
 }

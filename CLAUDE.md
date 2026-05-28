@@ -63,18 +63,6 @@ Strong success criteria let you loop independently. Weak criteria ("make it work
 ---
 
 **These guidelines are working if:** fewer unnecessary changes in diffs, fewer rewrites due to overcomplication, and clarifying questions come before implementation rather than after mistakes.
-<!-- END-EXTERNAL-CLAUDE-MD -->
-
-<!--
-================================================================================
-[EXTERNAL SOURCE - 위 영역 (1번 줄 ~ END 마커 직전) 은 verbatim 유지]
-Source: https://github.com/forrestchang/andrej-karpathy-skills/blob/main/CLAUDE.md
-Raw:    https://raw.githubusercontent.com/forrestchang/andrej-karpathy-skills/main/CLAUDE.md
-Policy: 위 영역은 scripts/sync-external-claude.sh 가 자동 교체. 수동 편집 금지.
-        업스트림 변경은 .github/workflows/sync-external-claude.yml 이 매일 PR 생성.
-================================================================================
--->
-
 ---
 
 # CLAUDE.md - AI Assistant Guidelines
@@ -92,72 +80,66 @@ Policy: 위 영역은 scripts/sync-external-claude.sh 가 자동 교체. 수동 
 
 **현재 배포 모드:**
 
-| App | Mode | 데이터 소스 | D1 바인딩 | 설정 파일 |
-| :-- | :--- | :---------- | :-------- | :-------- |
-| Context | **SSR** | Cloudflare D1 | `DB` (context-db), `PRIVATE_DB` (private) | `wrangler.toml` |
-| Permissive | SSR | TypeScript (in-memory) | _없음_ | `wrangler.toml` |
-| Roots | SSR | TypeScript (in-memory) | _없음_ | `wrangler.toml` |
+| App | Framework | Mode | 데이터 소스 | D1 바인딩 | 설정 파일 |
+| :-- | :-------- | :--- | :---------- | :-------- | :-------- |
+| Context | Astro 6 | **SSR** | Cloudflare D1 | `DB` (context-db), `PRIVATE_DB` (private) | `astro.config.mjs`, `wrangler.toml` |
+| Permissive | Astro 6 | SSR | TypeScript (in-memory) | _없음_ | `astro.config.mjs`, `wrangler.toml` |
+| Roots | Astro 6 | SSR | TypeScript (in-memory) | _없음_ | `astro.config.mjs`, `wrangler.toml` |
 
 **금지 사항:**
 
-- SPA 모드 전환 금지 (클라이언트 사이드 렌더링만으로 콘텐츠 생성 금지)
+- SPA 모드 전환 금지 (`output: 'server'` 유지 — 클라이언트 사이드 렌더링만으로 콘텐츠 생성 금지)
 - 빈 `<div id="root"></div>` HTML 금지
-- `loader` 없는 동적 라우트 금지 (SEO 데이터 누락)
+- 동적 라우트에서 데이터 누락 금지 (SEO meta 필수)
 - Context 앱: D1 바인딩 없이 SSR 배포 금지
 
-**SSR 모드 필수 패턴 (TanStack Start + D1):**
+**SSR 모드 필수 패턴 (Astro 6 + D1):**
 
-```typescript
-// ✅ TanStack Start - createFileRoute + createServerFn
-import { createFileRoute, notFound } from '@tanstack/react-router';
-import { createServerFn } from '@tanstack/react-start';
-import { getD1Database } from '../services/d1';
+```astro
+---
+// apps/context/src/pages/entry/[entryId].astro
+import BaseLayout from '../../layouts/BaseLayout.astro';
 
-// Server Function (D1 접근)
-const fetchEntry = createServerFn({ method: 'POST' })
-  .inputValidator((data: { entryId: string; locale: string }) => data)
-  .handler(async ({ data }) => {
-    const db = getD1Database();
-    if (!db) {
-      console.error('[fetchEntry] D1 database not available');
-      return null;
-    }
-    const entry = await db.prepare('SELECT * FROM entries WHERE id = ?')
-      .bind(data.entryId).first();
-    return entry;
-  });
+const { entryId } = Astro.params;
+const db = Astro.locals.runtime?.env?.DB;
+if (!db) {
+  console.error('[entry] D1 database not available');
+  return new Response('Server misconfigured', { status: 500 });
+}
 
-// Route 정의
-export const Route = createFileRoute('/entry/$entryId')({
-  loader: async ({ params }) => {
-    const entry = await fetchEntry({ data: { entryId: params.entryId, locale: 'en' } });
-    if (!entry) throw notFound();
-    return { entry };
-  },
-  head: ({ loaderData }) => ({
-    meta: [{ title: loaderData.entry.korean }],
-  }),
-  component: EntryPage,
-});
+const entry = await db.prepare('SELECT * FROM entries WHERE id = ?')
+  .bind(entryId)
+  .first();
+
+if (!entry) {
+  return Astro.redirect('/404', 404);
+}
+---
+
+<BaseLayout title={`${entry.korean} | Context`} description={entry.english}>
+  <h1>{entry.korean}</h1>
+  <p>{entry.english}</p>
+</BaseLayout>
 ```
 
 **SSR 모드 필수 패턴 (Roots/Permissive - 정적 데이터):**
 
-```typescript
-// ✅ TanStack Start - loader에서 직접 데이터 로딩
-import { createFileRoute, notFound } from '@tanstack/react-router';
+```astro
+---
+// apps/roots/src/pages/concept/[conceptId].astro
+import { getConceptById } from '../../../app/data/concepts';
+import BaseLayout from '../../layouts/BaseLayout.astro';
 
-export const Route = createFileRoute('/concept/$conceptId')({
-  loader: async ({ params }) => {
-    const concept = getConceptById(params.conceptId);
-    if (!concept) throw notFound();
-    return { concept };
-  },
-  head: ({ loaderData }) => ({
-    meta: [{ title: loaderData.concept.name.en }],
-  }),
-  component: ConceptPage,
-});
+const { conceptId } = Astro.params;
+const concept = getConceptById(conceptId!);
+if (!concept) {
+  return Astro.redirect('/404', 404);
+}
+---
+
+<BaseLayout title={concept.name.en}>
+  <h1>{concept.name.en}</h1>
+</BaseLayout>
 ```
 
 **검증 방법:**
@@ -306,20 +288,22 @@ endpoint = https://${{ secrets.CLOUDFLARE_ACCOUNT_ID }}.r2.cloudflarestorage.com
 
 ### 9. Context App: SSR + D1 전용
 
-> ⚠️ **Context는 SSR + D1 전용**입니다.
+> ⚠️ **Context는 Astro SSR + D1 전용**입니다.
 
 **금지 사항:**
 
-- `app.config.ts`에서 SSR 비활성화 금지
-- Entry 페이지에 `loader` 없이 클라이언트에서만 데이터 로딩 금지
-- D1 없이 entry 데이터 로딩 시도 금지
-- `createServerFn` 없이 서버 데이터 접근 금지
+- `astro.config.mjs`에서 `output: 'static'`으로 변경 금지 (SSR 유지)
+- Entry 페이지에서 D1 없이 클라이언트에서만 데이터 로딩 금지
+- D1 바인딩 없이 entry 데이터 로딩 시도 금지
+- `Astro.locals.runtime` 우회 시도 금지
 
 **현재 운영 구조:**
 
 | 구성요소 | 설명 |
 | -------- | ---- |
+| 프레임워크 | **Astro 6** |
 | 렌더링 모드 | **SSR 전용** (Cloudflare Workers) |
+| 어댑터 | `@astrojs/cloudflare` |
 | 데이터베이스 | Cloudflare D1 (`context-db`) |
 | 엔트리 수 | 16,944 entries + 65 categories (`data/context/entries/*.json`, `data/context/categories.json` 기준) |
 | 사이트맵 | D1에서 동적 생성 |
@@ -327,9 +311,9 @@ endpoint = https://${{ secrets.CLOUDFLARE_ACCOUNT_ID }}.r2.cloudflarestorage.com
 **배포 명령어:**
 
 ```bash
-# SSR 빌드 + 배포 (기본)
+# SSR 빌드 + 배포
 cd apps/context
-pnpm build  # BUILD_MODE=ssr가 기본값
+pnpm build  # astro build + strip-bindings.mjs
 pnpm deploy
 ```
 
@@ -344,31 +328,18 @@ pnpm deploy
 
 | Route | 설명 |
 | ----- | ---- |
-| `/sitemap.xml` | 인덱스 (정적·카테고리·conversations·tags + 카테고리별 entries 링크) |
+| `/sitemap.xml` | 인덱스 |
 | `/sitemap-pages.xml` | 정적 페이지 (`app/data/sitemap-static-pages.json` SSoT) |
 | `/sitemap-categories.xml` | 카테고리 목록 |
-| `/sitemap-conversations.xml` | conversations 카테고리 |
 | `/sitemap-tags.xml` | tags 목록 |
-| `/sitemaps/entries/{categoryId}.xml` | 카테고리별 엔트리 |
-| `/sitemap-entry-{categoryId}.xml` | 레거시 경로 → 위 경로로 301 redirect |
+| `/sitemap-entry-[categoryId].xml` | 카테고리별 엔트리 |
 
 **참고 파일:**
 
+- `apps/context/astro.config.mjs` - Astro + Cloudflare adapter 설정
 - `apps/context/wrangler.toml` - Workers + D1 바인딩 설정
-- `apps/context/scripts/inject-polyfill.mjs` - **프로덕션의 실제 fetch handler를 생성하는 파일**
-- `apps/context/app/server.ts` - dev 모드용 참조 구현 (프로덕션 번들에 포함되지 않음, 아래 경고 참조)
-
-> ⚠️ **Context 빌드 진입점 함정**
->
-> Permissive와 Roots는 `app/server.tsx` + `createStartHandler` 형태의 TanStack Start 정식 server entry 패턴을 사용하므로 빌드가 자동으로 그 핸들러를 default export합니다. 반면 **Context는 `app/server.ts`(다른 확장자)에 raw fetch handler를 두고 있어 TanStack의 자동 발견 대상이 아닙니다.** Cloudflare에 배포된 1.7MB worker 번들에서 `apps/context/app/server.ts`의 어떤 식별자도 0건 검출됨을 grep으로 확인했습니다.
->
-> 결과적으로:
-> - 프로덕션 fetch handler / API 라우트(`/sitemap*.xml`, `/api/offline-db`, `/search-index.json`, `/data/browse/*`) 모든 로직은 **`scripts/inject-polyfill.mjs`가 빌드 후 inject한 코드**가 수행합니다.
-> - HTML 응답의 보안 헤더(`X-Frame-Options`, `X-XSS-Protection`, `Referrer-Policy`)·ETag·Last-Modified·304 처리도 모두 inject-polyfill.mjs 책임입니다.
-> - `app/server.ts`를 수정해도 dev 모드에서만 반영됩니다. **프로덕션에 반영하려면 `scripts/inject-polyfill.mjs`의 inject 코드도 같이 갱신해야 합니다.**
-> - 사이트맵 데이터(`app/data/sitemap-static-pages.json`)와 도메인(`app/data/site.json`)은 양쪽이 같은 JSON을 참조하도록 SSoT 처리되어 있어 데이터 드리프트는 차단되었으나, **핸들러 로직 자체는 두 곳에 따로 작성되어 있습니다.**
->
-> 향후 권장 작업(별도 PR로 검증 후): Context를 `app/server.tsx` + `createStartHandler` 패턴으로 마이그레이션하여 inject-polyfill.mjs 의존을 폐기.
+- `apps/context/src/pages/` - 페이지 + API 라우트 (sitemap*.xml.ts 포함)
+- `apps/context/scripts/strip-bindings.mjs` - 빌드 후처리
 
 ---
 
@@ -378,7 +349,7 @@ pnpm deploy
 
 | 규칙 | 설명 |
 | ---- | ---- |
-| **한글 답변 및 문서 작성 필수** (Korean Required for Responses and Documents) | 모든 설명, 대답, 그리고 계획표(Plan) 등의 문서는 반드시 한글로 작성해야 합니다. (All explanations, answers, and documents like plans must be written in Korean.) |
+| **한글 답변 및 문서 작성 필수** | 모든 설명, 대답, 그리고 계획표(Plan) 등의 문서는 반드시 한글로 작성해야 합니다. |
 | **확인 전 단정 금지** | 추측 말고 코드 확인 후 답변 |
 | **환경 맥락 파악 필수** | 기능/도구 추천 전 현재 개발 환경(로컬/클라우드, CI/CD, 호스팅 등) 확인 후 해당 환경에 맞는 답변 제공 |
 | **완전한 코드 제공** | `// ...` 사용 금지 |
@@ -403,31 +374,30 @@ pnpm deploy
 
 ### en/ko 라우트 쌍 공통화 규칙 (중요)
 
-TanStack Start 파일 기반 라우팅 때문에 `routes/xxx.tsx` + `routes/ko/xxx.tsx` 쌍은 **파일 구조상 필수**입니다.
-하지만 **내용은 단일 소스**여야 합니다. 새 동적/정적 라우트 추가 시 아래 패턴을 따르세요:
+Astro 6의 파일 기반 라우팅 + `i18n` 설정 때문에 `src/pages/xxx.astro` + `src/pages/ko/xxx.astro` 쌍은 **파일 구조상 필수**입니다.
+하지만 **내용은 단일 소스**여야 합니다. 공통 페이지 컴포넌트를 `src/components/pages/`에 두고, 라우트는 그것을 호출하는 얇은 wrapper로 유지하세요.
 
-**정적 라우트 (head 콘텐츠가 data에 의존하지 않음):**
+**패턴 예시:**
 
-- 메타는 페이지 컴포넌트 파일에 `xxxMeta` 로 export
-  - Roots: `apps/roots/app/components/pages/*.tsx` 의 `export const xxxMeta = { ko, en }`
-  - Context: `apps/context/app/components/pages/*Content.tsx` 동일
-  - Permissive: `apps/permissive/app/routes-meta.ts` 단일 파일
-- 라우트 파일은 `headFactoryEn/Ko(xxxMeta, APP_CONFIG.baseUrl)` 만 호출
+```astro
+---
+// src/pages/libraries.astro (영어)
+import LibrariesPage from '../components/pages/LibrariesPage.astro';
+const q = Astro.url.searchParams.get('q') ?? undefined;
+---
+<LibrariesPage locale="en" searchQuery={q} />
+```
 
-**동적 라우트 (loader + dynamicHeadFactoryEn/Ko):**
+```astro
+---
+// src/pages/ko/libraries.astro (한국어)
+import LibrariesPage from '../../components/pages/LibrariesPage.astro';
+const q = Astro.url.searchParams.get('q') ?? undefined;
+---
+<LibrariesPage locale="ko" searchQuery={q} />
+```
 
-- 페이지 컴포넌트 파일에 4가지 export:
-  - `xxxRouteLoader` — 쌍이 공유하는 loader. `location.pathname.startsWith('/ko')`로 locale 감지
-  - `buildXxxRouteHead` — `dynamicHeadFactoryEn/Ko`에 전달할 head builder
-  - `xxxCanonicalPath` — **locale prefix 없이** `/xxx/{id}` 만 반환 (`dynamicHeadFactoryKo`가 `/ko` 자동 prefix)
-  - `type XxxLoaderData` — loader 반환 타입
-- 라우트 파일은 15줄 이내 boilerplate만 유지
-
-**canonical path 주의:**
-
-- `dynamicHeadFactoryKo`는 `getPathname` 반환값에 `/ko` 를 **자동 prefix** 합니다 ([packages/seo/src/meta/head-factory.ts:338](packages/seo/src/meta/head-factory.ts#L338)).
-- ko 라우트 파일에서 canonical에 `/ko/xxx` 를 반환하면 `/ko/ko/xxx` 이중 prefix 버그.
-- 공유 canonical 함수는 반드시 locale-agnostic (`/xxx/{id}` 만).
+공통 컴포넌트(`LibrariesPage.astro`)에서 `locale` prop으로 분기하여 한 곳에서만 콘텐츠를 관리합니다.
 
 ---
 
@@ -461,16 +431,15 @@ import { useSearch } from '@soundblue/search/react';      // L2
 | ---- | --------- |
 | `packages/core/` | 순수 함수, 타입, 상수 (브라우저 API 금지) |
 | `packages/data/schemas/` | Zod 스키마 |
-| `packages/ui/components/` | React 컴포넌트 |
-| `apps/*/routes/` | 라우트 컴포넌트 |
+| `packages/ui/components/` | Astro 컴포넌트 (`.astro`) + React 컴포넌트 (`.tsx`) |
+| `apps/*/src/pages/` | Astro 라우트 컴포넌트 |
 | `data/**/*.json` | 스키마 준수 데이터 |
 
 ### 금지
 
 | 위치 | 금지 액션 |
 | ---- | --------- |
-| `apps/*/app.config.ts` | SSR 비활성화 설정 (모든 앱 SSR) |
-| `apps/*/vite.config.ts` | `tanstackStart` 플러그인 제거 |
+| `apps/*/astro.config.mjs` | `output: 'static'` 설정 (모든 앱 SSR 유지) |
 | `*.browser.ts` | SSR 빌드 시점 실행 코드 |
 | `*.noop.ts` | 실제 로직 (빈 구현만) |
 | `wrangler.toml` (Context) | D1 바인딩 제거 |
@@ -486,61 +455,51 @@ import { useSearch } from '@soundblue/search/react';      // L2
 /ko/entry/hello  → Korean
 ```
 
-### 동적 라우트에서 locale 추출 (중요!)
+### 동적 라우트에서 locale 추출
 
-> **⛔ `params.locale` 사용 금지** - 항상 `undefined`입니다!
+> Astro 6의 `i18n` 설정에서는 `Astro.url.pathname`을 사용해 locale을 추출합니다.
 
-TanStack Start 파일 기반 라우팅에서 `ko/entry/$entryId.tsx`로 정의하면 `ko`는 **폴더명(고정 문자열)**입니다.
-따라서 `params.locale`은 항상 `undefined`가 됩니다.
-
-```typescript
+```astro
+---
 import { getLocaleFromPath } from '@soundblue/i18n';
 
-// ❌ 금지 (params.locale은 항상 undefined)
-const locale = params.locale === 'ko' ? 'ko' : 'en';
-
-// ✅ TanStack Start loader에서 (location.pathname 사용)
-export const Route = createFileRoute('/entry/$entryId')({
-  loader: async ({ params, location }) => {
-    const locale = getLocaleFromPath(location.pathname);  // '/ko/entry/...' → 'ko'
-    return { entry, locale };
-  },
-});
-
-// ✅ 컴포넌트에서 (useLocation 사용)
-function EntryPage() {
-  const { pathname } = useLocation();
-  const locale = getLocaleFromPath(pathname);
-}
+const locale = getLocaleFromPath(Astro.url.pathname);
+// '/ko/entry/...' → 'ko'
+// '/entry/...'    → 'en'
+---
 ```
 
-### Head Factory 필수 (TanStack Start)
+### Head / Meta 설정 (Astro)
 
-```typescript
-// ✅ TanStack Start - head 옵션 사용
-export const Route = createFileRoute('/about')({
-  head: () => ({
-    meta: [
-      { title: 'About | Context' },
-      { name: 'description', content: 'About this app' },
-    ],
-    links: [{ rel: 'canonical', href: 'https://app.soundbluemusic.com/about' }],
-  }),
-  component: AboutPage,
-});
-
-// ✅ 동적 라우트 - loaderData 활용
-export const Route = createFileRoute('/entry/$entryId')({
-  loader: async ({ params }) => getEntry(params.entryId),
-  head: ({ loaderData }) => ({
-    meta: [
-      { title: `${loaderData.entry.korean} | Context` },
-      { name: 'description', content: loaderData.entry.english },
-    ],
-  }),
-  component: EntryPage,
-});
+```astro
+---
+// 정적 페이지
+---
+<html>
+  <head>
+    <title>About | Context</title>
+    <meta name="description" content="About this app" />
+    <link rel="canonical" href="https://context.soundbluemusic.com/about" />
+  </head>
+  ...
+</html>
 ```
+
+```astro
+---
+// 동적 페이지 (D1 또는 TS data 기반)
+const entry = await db.prepare('SELECT * FROM entries WHERE id = ?').bind(id).first();
+---
+<html>
+  <head>
+    <title>{entry.korean} | Context</title>
+    <meta name="description" content={entry.english} />
+  </head>
+  ...
+</html>
+```
+
+공통 `BaseLayout.astro`(`apps/*/src/layouts/BaseLayout.astro`)가 `<slot name="head">` 와 `title`/`description` prop으로 메타를 일관 관리합니다.
 
 ---
 
@@ -583,20 +542,20 @@ export const Route = createFileRoute('/entry/$entryId')({
 | `/cost-check` | R2 비용 최적화 규칙 검사. Turborepo Remote Cache 비활성화 상태 확인 |
 | `/explore [질문]` | 코드베이스 구조 분석 (fork context) |
 | `/find [검색어]` | 파일/함수 위치 검색 (haiku) |
-| `/rendering-check` | SSR 규칙 위반 검사 (Roots 앱 전용) |
+| `/rendering-check` | SSR 규칙 위반 검사 |
 | `/layer-check` | import 레이어 규칙 검사 (fork context) |
 | `/link-check` | 프로덕션 URL 링크 무결성 검사 (lychee) |
 | `/quality-gate` | 병렬 품질 검사 통합 (SSR, Layer, Link, TypeCheck, Lint) |
 | `/latest-check` | 기술 스택 최신 정보 검색 (GitHub API로 정확한 릴리스 날짜 확인) |
-| `/edge-test` | 엣지 케이스 테스트 자동 생성. 함수 분석 → 경계값/예외 상황 식별 → 테스트 코드 자동 작성 |
+| `/edge-test` | 엣지 케이스 테스트 자동 생성 |
 
 **⚠️ 앱별 라우트 수정 검증:**
 
 | 앱 | 수정 시 확인 사항 |
 | -- | ----------------- |
-| Context (SSR) | D1 바인딩 존재, loader에서 DB 쿼리 |
-| Permissive (SSR) | wrangler.toml 설정 |
-| Roots (SSR) | wrangler.toml 설정 |
+| Context (SSR + D1) | D1 바인딩 존재, `Astro.locals.runtime.env.DB`로 쿼리 |
+| Permissive (SSR) | wrangler.toml 설정, `app/data/*.ts` SSoT |
+| Roots (SSR) | wrangler.toml 설정, `app/data/*.ts` SSoT |
 
 ### 모델 사용 기준
 
@@ -610,15 +569,15 @@ export const Route = createFileRoute('/entry/$entryId')({
 
 ## 🔍 최신 정보 확인 필수 (공식 문서 우선)
 
-> ⚠️ **내 지식 컷오프(2025년 5월) 이후 변경 가능성이 높은 주제**.
+> ⚠️ **내 지식 컷오프 이후 변경 가능성이 높은 주제**.
 > 아래 주제 답변 전 **반드시 공식 문서 확인**.
 
 | 주제 | 공식 문서 URL | 이유 |
 | ---- | ------------- | ---- |
 | Cloudflare Workers | developers.cloudflare.com/workers/platform/changelog | Pages/Workers 통합 진행 중 |
 | Cloudflare D1 | developers.cloudflare.com/d1/platform/release-notes | GA 이후 변경사항 |
-| TanStack Start | tanstack.com/start/latest/docs/overview | 빠른 릴리스 주기, SSR 프레임워크 |
-| TanStack Router | tanstack.com/router/latest/docs/overview | 파일 기반 라우팅 |
+| Astro 6 | docs.astro.build | 빠른 릴리스 주기, SSR 프레임워크 |
+| `@astrojs/cloudflare` | docs.astro.build/en/guides/integrations-guide/cloudflare/ | 어댑터 |
 | Tailwind CSS v4 | tailwindcss.com/docs/upgrade-guide | v3 → v4 대규모 변경 |
 | TypeScript 5.x | typescriptlang.org/docs/handbook/release-notes | 분기별 릴리스 |
 
@@ -628,7 +587,7 @@ export const Route = createFileRoute('/entry/$entryId')({
 2. **GitHub API로 정확한 릴리스 날짜 확인** (HTML 페이지의 상대 시간 표시는 부정확)
    - TypeScript: `https://api.github.com/repos/microsoft/TypeScript/releases?per_page=5`
    - Tailwind CSS: `https://api.github.com/repos/tailwindlabs/tailwindcss/releases?per_page=5`
-   - TanStack Start: `https://api.github.com/repos/TanStack/router/releases?per_page=5`
+   - Astro: `https://api.github.com/repos/withastro/astro/releases?per_page=5`
 3. 공식 문서에서 정보 부족 시에만 WebSearch 사용 (공식 도메인 필터 적용)
 4. 출처 우선순위: **GitHub API > 공식 문서 > GitHub 릴리스 > 공식 블로그 > 기타**
 5. Medium, dev.to, 개인 블로그, 커뮤니티 포럼은 **지양**
@@ -639,61 +598,54 @@ export const Route = createFileRoute('/entry/$entryId')({
 
 | 기술 | 문서 |
 | ---- | ---- |
-| TanStack Start | [tanstack.com/start](https://tanstack.com/start/latest) |
-| TanStack Router | [tanstack.com/router](https://tanstack.com/router/latest) |
+| Astro 6 | [docs.astro.build](https://docs.astro.build) |
+| Astro Cloudflare adapter | [docs.astro.build/en/guides/integrations-guide/cloudflare/](https://docs.astro.build/en/guides/integrations-guide/cloudflare/) |
 | Tailwind CSS v4 | [tailwindcss.com](https://tailwindcss.com/docs) |
 | TypeScript | [typescriptlang.org](https://www.typescriptlang.org/docs) |
 | Cloudflare D1 | [developers.cloudflare.com/d1](https://developers.cloudflare.com/d1/) |
 | Cloudflare Workers | [developers.cloudflare.com/workers](https://developers.cloudflare.com/workers/) |
-| Cloudflare Pages | [developers.cloudflare.com/pages](https://developers.cloudflare.com/pages/) |
 
 ---
 
-## 🛠 기술 스택 버전 (2026-05-21 기준)
+## 🛠 기술 스택 버전 (2026-05-28 기준)
 
 > ⚠️ **AI 어시스턴트 참고용**: 이 버전들은 실제 사용 중인 버전입니다. 변경 시 `package.json`을 단일 출처(SSoT)로 보고 이 표는 동기화하세요.
 
 | 기술 | 버전 | 비고 |
 | ---- | ---- | ---- |
-| **React** | ^19.2.6 | React 19 Stable |
-| **TanStack Start** | ^1.168.9 | SSR 프레임워크 |
-| **TanStack Router** | ^1.170.6 | 파일 기반 라우팅 |
-| **Vite** | ^8.0.14 | Rolldown 번들러 (7x 빠른 빌드), Stable |
+| **Astro** | ^6.3.7 | SSR 프레임워크 (세 앱 공통) |
+| **@astrojs/cloudflare** | ^13.5.4 | Cloudflare Workers adapter |
+| **@astrojs/react** | ^4.0.0 | Context 앱만 (선언만, 현재 코드 사용 0건) |
+| **React** | ^19.2.6 | Context 앱만 (선언만, 현재 코드 사용 0건) |
 | **TypeScript** | ^6.0.3 | 타입 체크 |
 | **Tailwind CSS** | ^4.3.0 | v4 사용 중 |
 | **Zod** | ^4.4.3 | 모든 워크스페이스 동일 |
-| **Zustand** | ^5.0.13 | 상태 관리 |
+| **Zustand** | ^5.0.13 | Context 앱 상태 관리 |
+| **nanostores** | ^0.11.4 | Permissive 상태 관리 |
+| **KaTeX** | ^0.16.47 | Roots 수식 렌더링 |
 | **Cloudflare Wrangler** | ^4.93.1 | Workers 배포 |
-| **@cloudflare/vite-plugin** | ^1.37.3 | Vite 통합 |
 | **@cloudflare/workers-types** | ^4.20260521.1 | Workers TypeScript 타입 |
-| **@inlang/paraglide-js** | ^2.18.1 | i18n 컴파일러 |
 | **Node.js** | >=20 | 런타임 (`package.json#engines`) |
 | **pnpm** | 10.11.0 | `package.json#packageManager` |
 
 ---
 
-## 📂 빌드 출력 구조 (Vite 8 + Cloudflare)
-
-> **Vite 8**부터 빌드 출력 경로가 `build/` → `dist/`로 변경되었습니다.
+## 📂 빌드 출력 구조 (Astro 6 + Cloudflare)
 
 ```text
 apps/context/dist/
-├── server/
-│   └── index.js          # Workers 진입점 (all-in-one 번들)
-└── client/
-    ├── assets/           # 정적 자산 (CSS, JS, 이미지)
-    └── [prerendered]/    # 사전 렌더링된 페이지
+├── _worker.js/           # Astro Cloudflare 어댑터 산출물 (fetch handler)
+└── _astro/               # 정적 자산 (CSS, JS, 이미지) + 사전 렌더링된 페이지
 ```
 
 **wrangler.toml 설정 (모든 앱 공통):**
 
 ```toml
-main = "@tanstack/react-start/server-entry"
 compatibility_date = "2026-01-22"
 compatibility_flags = ["nodejs_compat"]
 
 [assets]
-directory = "dist/client"
+directory = "dist"
 ```
 
 ---
@@ -704,7 +656,7 @@ directory = "dist/client"
 | :- | :----- | :----------- | :--- |
 | **Context** | `DB` | context-db | 한국어 사전 (16,944 entries, 65 categories, 53 conversations) |
 | **Context** | `PRIVATE_DB` | private | 저작권 자료 |
-| **Permissive** | _없음_ | — | 데이터 소스: TypeScript in-memory (`data/permissive/libraries.json` 110개, `web-apis.json` 56개) |
-| **Roots** | _없음_ | — | 데이터 소스: TypeScript in-memory (`apps/roots/app/data/concepts/*.ts` 438 concepts, `fields.ts` 18 fields) |
+| **Permissive** | _없음_ | — | 데이터 소스: TypeScript in-memory (`app/data/libraries.ts` 120개, `web-apis.ts` 56개) |
+| **Roots** | _없음_ | — | 데이터 소스: TypeScript in-memory (`app/data/concepts.ts` 438 concepts, `fields.ts` 18 fields) |
 
 > ⚠️ **Permissive/Roots에 D1 바인딩 없음을 확인했습니다.** `wrangler.toml`에 어떠한 `[[d1_databases]]` 섹션도 두지 마세요. 코드에서 `env.KNOWLEDGE_DB` 등을 참조하는 부분이 0건임을 `grep -rn 'KNOWLEDGE_DB' apps/permissive apps/roots`로 검증할 수 있습니다.

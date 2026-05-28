@@ -1,0 +1,39 @@
+---
+import { getLibrarySlug, libraries } from '../../app/data/libraries';
+import AppShell from '../components/AppShell.astro';
+import FavoritesList from '../components/favorites/FavoritesList.tsx';
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const baseUrl = 'https://permissive.soundbluemusic.com';
+
+/** 클라이언트로 전달할 최소 메타 (전체 Library 객체를 직렬화하지 않음) */
+const minimalLibs = libraries.map((lib) => ({
+  name: lib.name,
+  slug: getLibrarySlug(lib.name),
+  description: lib.description,
+  descriptionKo: lib.descriptionKo,
+  license: lib.license,
+  stars: lib.stars,
+  categories: lib.categories,
+}));
+---
+
+<BaseLayout
+  title="Saved Libraries - Permissive"
+  description="Libraries you've saved for later (stored in your browser)"
+  canonical={`${baseUrl}/favorites`}
+  noIndex={true}
+>
+  <AppShell>
+    <header class="mb-8">
+      <h1 class="text-2xl sm:text-3xl font-bold text-(--text-primary) mb-2">
+        Saved Libraries
+      </h1>
+      <p class="text-(--text-secondary)">
+        Stored locally in your browser. Clearing site data will remove them.
+      </p>
+    </header>
+
+    <FavoritesList client:only="react" libraries={minimalLibs} locale="en" />
+  </AppShell>
+</BaseLayout>

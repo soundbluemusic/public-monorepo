@@ -10,7 +10,7 @@
       "en": "Declarative routing for React",
       "ko": "React를 위한 선언적 라우팅"
     },
-    "field": "Routing",
+    "field": "App Frameworks",
     "tags": [
       "React",
       "SSG",
@@ -29,7 +29,7 @@
       "en": "Type-safe routing for React",
       "ko": "React를 위한 타입 안전 라우팅"
     },
-    "field": "Routing",
+    "field": "App Frameworks",
     "tags": [
       "React",
       "TypeScript",
@@ -47,7 +47,7 @@
       "en": "Minimalist routing for React",
       "ko": "React를 위한 미니멀 라우팅"
     },
-    "field": "Routing",
+    "field": "App Frameworks",
     "tags": [
       "React",
       "Minimal"
@@ -64,7 +64,7 @@
       "en": "The React framework for production",
       "ko": "프로덕션을 위한 React 프레임워크"
     },
-    "field": "Meta-frameworks",
+    "field": "App Frameworks",
     "tags": [
       "React",
       "SSR",
@@ -83,7 +83,7 @@
       "en": "Build fast websites, faster",
       "ko": "빠른 웹사이트를 더 빠르게"
     },
-    "field": "Meta-frameworks",
+    "field": "App Frameworks",
     "tags": [
       "SSG",
       "MPA",
@@ -101,7 +101,7 @@
       "en": "Full stack web framework",
       "ko": "풀스택 웹 프레임워크"
     },
-    "field": "Meta-frameworks",
+    "field": "App Frameworks",
     "tags": [
       "React",
       "SSR",
@@ -119,7 +119,7 @@
       "en": "The Intuitive Vue Framework",
       "ko": "직관적인 Vue 프레임워크"
     },
-    "field": "Meta-frameworks",
+    "field": "App Frameworks",
     "tags": [
       "Vue",
       "SSR",
@@ -138,7 +138,7 @@
       "en": "The fastest way to build Svelte apps",
       "ko": "Svelte 앱을 만드는 가장 빠른 방법"
     },
-    "field": "Meta-frameworks",
+    "field": "App Frameworks",
     "tags": [
       "Svelte",
       "SSR",
@@ -157,7 +157,7 @@
       "en": "Instant-loading web apps",
       "ko": "즉시 로딩되는 웹 앱"
     },
-    "field": "Meta-frameworks",
+    "field": "App Frameworks",
     "tags": [
       "Resumability",
       "SSR",
@@ -175,7 +175,7 @@
       "en": "Build blazing fast websites",
       "ko": "매우 빠른 웹사이트 구축"
     },
-    "field": "Meta-frameworks",
+    "field": "App Frameworks",
     "tags": [
       "React",
       "SSG",
@@ -193,7 +193,7 @@
       "en": "A JavaScript library for building user interfaces",
       "ko": "사용자 인터페이스 구축을 위한 자바스크립트 라이브러리"
     },
-    "field": "Frameworks",
+    "field": "App Frameworks",
     "tags": [
       "UI",
       "Components",
@@ -211,7 +211,7 @@
       "en": "Progressive JavaScript framework",
       "ko": "점진적 자바스크립트 프레임워크"
     },
-    "field": "Frameworks",
+    "field": "App Frameworks",
     "tags": [
       "UI",
       "Components",
@@ -229,7 +229,7 @@
       "en": "Cybernetically enhanced web apps",
       "ko": "사이버네틱하게 향상된 웹 앱"
     },
-    "field": "Frameworks",
+    "field": "App Frameworks",
     "tags": [
       "UI",
       "Compiler",
@@ -247,7 +247,7 @@
       "en": "Simple and performant reactivity",
       "ko": "간단하고 성능 좋은 반응성"
     },
-    "field": "Frameworks",
+    "field": "App Frameworks",
     "tags": [
       "UI",
       "Reactive",
@@ -265,7 +265,7 @@
       "en": "Fast 3kB alternative to React",
       "ko": "React의 빠른 3kB 대안"
     },
-    "field": "Frameworks",
+    "field": "App Frameworks",
     "tags": [
       "UI",
       "Minimal",
@@ -283,7 +283,7 @@
       "en": "Lightweight JavaScript framework",
       "ko": "경량 자바스크립트 프레임워크"
     },
-    "field": "Frameworks",
+    "field": "App Frameworks",
     "tags": [
       "Minimal",
       "HTML-first"
@@ -300,7 +300,7 @@
       "en": "Simple. Fast. Web Components.",
       "ko": "간단하고 빠른 웹 컴포넌트"
     },
-    "field": "Frameworks",
+    "field": "App Frameworks",
     "tags": [
       "Web Components",
       "TypeScript"
@@ -317,7 +317,7 @@
       "en": "Next generation frontend tooling",
       "ko": "차세대 프론트엔드 도구"
     },
-    "field": "Build Tools",
+    "field": "Build & DX",
     "tags": [
       "Build",
       "Dev Server",
@@ -335,7 +335,7 @@
       "en": "Incremental bundler integrated with Next.js",
       "ko": "Next.js에 통합된 증분 번들러"
     },
-    "field": "Build Tools",
+    "field": "Build & DX",
     "tags": [
       "Build",
       "Next.js",
@@ -353,7 +353,7 @@
       "en": "Rust-powered webpack",
       "ko": "Rust 기반 webpack"
     },
-    "field": "Build Tools",
+    "field": "Build & DX",
     "tags": [
       "Build",
       "Rust",
@@ -371,7 +371,7 @@
       "en": "Extremely fast bundler",
       "ko": "극도로 빠른 번들러"
     },
-    "field": "Build Tools",
+    "field": "Build & DX",
     "tags": [
       "Build",
       "Go",
@@ -389,7 +389,7 @@
       "en": "Module bundler",
       "ko": "모듈 번들러"
     },
-    "field": "Build Tools",
+    "field": "Build & DX",
     "tags": [
       "Build",
       "Classic"
@@ -406,7 +406,7 @@
       "en": "Module bundler for libraries",
       "ko": "라이브러리를 위한 모듈 번들러"
     },
-    "field": "Build Tools",
+    "field": "Build & DX",
     "tags": [
       "Build",
       "ESM"
@@ -423,7 +423,7 @@
       "en": "Zero config build tool",
       "ko": "제로 설정 빌드 도구"
     },
-    "field": "Build Tools",
+    "field": "Build & DX",
     "tags": [
       "Build",
       "Zero-config"
@@ -440,7 +440,7 @@
       "en": "Rust-based platform for fast tools",
       "ko": "Rust 기반 빠른 도구 플랫폼"
     },
-    "field": "Build Tools",
+    "field": "Build & DX",
     "tags": [
       "Build",
       "Rust",
@@ -458,7 +458,7 @@
       "en": "Toolchain for web projects",
       "ko": "웹 프로젝트를 위한 툴체인"
     },
-    "field": "Build Tools",
+    "field": "Build & DX",
     "tags": [
       "Linter",
       "Formatter",
@@ -476,7 +476,7 @@
       "en": "All-in-one JavaScript runtime",
       "ko": "올인원 자바스크립트 런타임"
     },
-    "field": "Runtime",
+    "field": "Runtime & WASM",
     "tags": [
       "Runtime",
       "Fast",
@@ -494,7 +494,7 @@
       "en": "Secure runtime for JavaScript",
       "ko": "안전한 자바스크립트 런타임"
     },
-    "field": "Runtime",
+    "field": "Runtime & WASM",
     "tags": [
       "Runtime",
       "Secure",
@@ -512,7 +512,7 @@
       "en": "JavaScript runtime built on V8",
       "ko": "V8 기반 자바스크립트 런타임"
     },
-    "field": "Runtime",
+    "field": "Runtime & WASM",
     "tags": [
       "Runtime",
       "Classic"
@@ -529,7 +529,7 @@
       "en": "Small, fast state-management",
       "ko": "작고 빠른 상태 관리"
     },
-    "field": "State Management",
+    "field": "State & Data",
     "tags": [
       "React",
       "State",
@@ -547,7 +547,7 @@
       "en": "Official Redux toolset",
       "ko": "공식 Redux 툴셋"
     },
-    "field": "State Management",
+    "field": "State & Data",
     "tags": [
       "React",
       "State",
@@ -565,7 +565,7 @@
       "en": "Primitive and flexible state",
       "ko": "원시적이고 유연한 상태 관리"
     },
-    "field": "State Management",
+    "field": "State & Data",
     "tags": [
       "React",
       "Atomic",
@@ -583,7 +583,7 @@
       "en": "Simple, scalable state management",
       "ko": "간단하고 확장 가능한 상태 관리"
     },
-    "field": "State Management",
+    "field": "State & Data",
     "tags": [
       "Observable",
       "TypeScript"
@@ -600,7 +600,7 @@
       "en": "Proxy-based state management",
       "ko": "Proxy 기반 상태 관리"
     },
-    "field": "State Management",
+    "field": "State & Data",
     "tags": [
       "React",
       "Proxy",
@@ -618,7 +618,7 @@
       "en": "State machines and statecharts",
       "ko": "상태 머신과 상태 차트"
     },
-    "field": "State Management",
+    "field": "State & Data",
     "tags": [
       "State Machine",
       "TypeScript"
@@ -635,7 +635,7 @@
       "en": "Intuitive Vue Store",
       "ko": "직관적인 Vue 스토어"
     },
-    "field": "State Management",
+    "field": "State & Data",
     "tags": [
       "Vue",
       "State",
@@ -653,7 +653,7 @@
       "en": "Powerful asynchronous state management",
       "ko": "강력한 비동기 상태 관리"
     },
-    "field": "Data Fetching",
+    "field": "State & Data",
     "tags": [
       "React",
       "Data",
@@ -671,7 +671,7 @@
       "en": "React Hooks for data fetching",
       "ko": "데이터 페칭을 위한 React Hooks"
     },
-    "field": "Data Fetching",
+    "field": "State & Data",
     "tags": [
       "React",
       "Hooks",
@@ -689,7 +689,7 @@
       "en": "GraphQL client for React",
       "ko": "React를 위한 GraphQL 클라이언트"
     },
-    "field": "Data Fetching",
+    "field": "State & Data",
     "tags": [
       "GraphQL",
       "React",
@@ -707,7 +707,7 @@
       "en": "End-to-end typesafe APIs",
       "ko": "엔드투엔드 타입 안전 API"
     },
-    "field": "Data Fetching",
+    "field": "State & Data",
     "tags": [
       "TypeScript",
       "Type-safe",
@@ -725,7 +725,7 @@
       "en": "Promise based HTTP client",
       "ko": "Promise 기반 HTTP 클라이언트"
     },
-    "field": "Data Fetching",
+    "field": "State & Data",
     "tags": [
       "HTTP",
       "Promise"
@@ -742,7 +742,7 @@
       "en": "Typed superset of JavaScript",
       "ko": "타입이 있는 자바스크립트 상위집합"
     },
-    "field": "Type Safety",
+    "field": "Build & DX",
     "tags": [
       "Language",
       "Types"
@@ -759,7 +759,7 @@
       "en": "TypeScript-first schema validation",
       "ko": "TypeScript 우선 스키마 검증"
     },
-    "field": "Type Safety",
+    "field": "Build & DX",
     "tags": [
       "Validation",
       "TypeScript"
@@ -776,7 +776,7 @@
       "en": "Modular and type safe schema library",
       "ko": "모듈식 타입 안전 스키마 라이브러리"
     },
-    "field": "Type Safety",
+    "field": "Build & DX",
     "tags": [
       "Validation",
       "TypeScript",
@@ -794,7 +794,7 @@
       "en": "Schema validation library",
       "ko": "스키마 검증 라이브러리"
     },
-    "field": "Type Safety",
+    "field": "Build & DX",
     "tags": [
       "Validation",
       "Schema"
@@ -811,7 +811,7 @@
       "en": "Utility-first CSS framework",
       "ko": "유틸리티 우선 CSS 프레임워크"
     },
-    "field": "Styling",
+    "field": "UI & Styling",
     "tags": [
       "CSS",
       "Utility"
@@ -828,7 +828,7 @@
       "en": "Instant on-demand atomic CSS",
       "ko": "즉시 온디맨드 아토믹 CSS"
     },
-    "field": "Styling",
+    "field": "UI & Styling",
     "tags": [
       "CSS",
       "Atomic",
@@ -846,7 +846,7 @@
       "en": "CSS-in-JS with build time generation",
       "ko": "빌드 타임 생성 CSS-in-JS"
     },
-    "field": "Styling",
+    "field": "UI & Styling",
     "tags": [
       "CSS-in-JS",
       "TypeScript"
@@ -863,7 +863,7 @@
       "en": "CSS-in-JS for React",
       "ko": "React를 위한 CSS-in-JS"
     },
-    "field": "Styling",
+    "field": "UI & Styling",
     "tags": [
       "CSS-in-JS",
       "React"
@@ -880,7 +880,7 @@
       "en": "CSS-in-JS library",
       "ko": "CSS-in-JS 라이브러리"
     },
-    "field": "Styling",
+    "field": "UI & Styling",
     "tags": [
       "CSS-in-JS",
       "React"
@@ -897,7 +897,7 @@
       "en": "CSS with superpowers",
       "ko": "슈퍼파워가 있는 CSS"
     },
-    "field": "Styling",
+    "field": "UI & Styling",
     "tags": [
       "CSS",
       "Preprocessor"
@@ -914,7 +914,7 @@
       "en": "Transform CSS with JS",
       "ko": "JS로 CSS 변환"
     },
-    "field": "Styling",
+    "field": "UI & Styling",
     "tags": [
       "CSS",
       "Transform"
@@ -931,7 +931,7 @@
       "en": "Zero-runtime CSS-in-TypeScript",
       "ko": "제로 런타임 CSS-in-TypeScript"
     },
-    "field": "Styling",
+    "field": "UI & Styling",
     "tags": [
       "CSS-in-JS",
       "TypeScript",
@@ -949,7 +949,7 @@
       "en": "Meta's CSS-in-JS solution",
       "ko": "Meta의 CSS-in-JS 솔루션"
     },
-    "field": "Styling",
+    "field": "UI & Styling",
     "tags": [
       "CSS-in-JS",
       "Meta"
@@ -966,7 +966,7 @@
       "en": "Unstyled, accessible components",
       "ko": "스타일 없는 접근성 컴포넌트"
     },
-    "field": "UI Components",
+    "field": "UI & Styling",
     "tags": [
       "React",
       "Headless",
@@ -984,7 +984,7 @@
       "en": "Re-usable components built with Radix",
       "ko": "Radix로 만든 재사용 컴포넌트"
     },
-    "field": "UI Components",
+    "field": "UI & Styling",
     "tags": [
       "React",
       "Tailwind",
@@ -1002,7 +1002,7 @@
       "en": "Adobe's accessible UI primitives",
       "ko": "Adobe의 접근 가능한 UI 프리미티브"
     },
-    "field": "UI Components",
+    "field": "UI & Styling",
     "tags": [
       "React",
       "Headless",
@@ -1020,7 +1020,7 @@
       "en": "Completely unstyled UI components",
       "ko": "완전히 스타일 없는 UI 컴포넌트"
     },
-    "field": "UI Components",
+    "field": "UI & Styling",
     "tags": [
       "React",
       "Headless",
@@ -1038,7 +1038,7 @@
       "en": "Full-featured React components",
       "ko": "풀 기능 React 컴포넌트"
     },
-    "field": "UI Components",
+    "field": "UI & Styling",
     "tags": [
       "React",
       "TypeScript"
@@ -1055,7 +1055,7 @@
       "en": "Modular and accessible components",
       "ko": "모듈식이고 접근 가능한 컴포넌트"
     },
-    "field": "UI Components",
+    "field": "UI & Styling",
     "tags": [
       "React",
       "Accessible"
@@ -1072,7 +1072,7 @@
       "en": "Enterprise UI design system",
       "ko": "엔터프라이즈 UI 디자인 시스템"
     },
-    "field": "UI Components",
+    "field": "UI & Styling",
     "tags": [
       "React",
       "Enterprise"
@@ -1089,7 +1089,7 @@
       "en": "React Material Design components",
       "ko": "React Material Design 컴포넌트"
     },
-    "field": "UI Components",
+    "field": "UI & Styling",
     "tags": [
       "React",
       "Material Design"
@@ -1106,7 +1106,7 @@
       "en": "Tailwind CSS component library",
       "ko": "Tailwind CSS 컴포넌트 라이브러리"
     },
-    "field": "UI Components",
+    "field": "UI & Styling",
     "tags": [
       "Tailwind",
       "CSS"
@@ -1123,7 +1123,7 @@
       "en": "Beautifully designed components",
       "ko": "아름답게 디자인된 컴포넌트"
     },
-    "field": "UI Components",
+    "field": "UI & Styling",
     "tags": [
       "React",
       "Panda CSS"
@@ -1140,7 +1140,7 @@
       "en": "Spring-physics based animation",
       "ko": "스프링 물리 기반 애니메이션"
     },
-    "field": "Animation",
+    "field": "UI & Styling",
     "tags": [
       "React",
       "Physics"
@@ -1157,7 +1157,7 @@
       "en": "Zero-config animations",
       "ko": "제로 설정 애니메이션"
     },
-    "field": "Animation",
+    "field": "UI & Styling",
     "tags": [
       "Animation",
       "Zero-config"
@@ -1174,7 +1174,7 @@
       "en": "Modern animation library for JavaScript and React",
       "ko": "JavaScript와 React를 위한 모던 애니메이션 라이브러리"
     },
-    "field": "Animation",
+    "field": "UI & Styling",
     "tags": [
       "Animation",
       "React",
@@ -1192,7 +1192,7 @@
       "en": "Performant forms with easy validation",
       "ko": "쉬운 검증과 성능 좋은 폼"
     },
-    "field": "Forms",
+    "field": "State & Data",
     "tags": [
       "React",
       "Forms",
@@ -1210,7 +1210,7 @@
       "en": "Powerful and type-safe form state",
       "ko": "강력하고 타입 안전한 폼 상태"
     },
-    "field": "Forms",
+    "field": "State & Data",
     "tags": [
       "React",
       "Forms",
@@ -1228,7 +1228,7 @@
       "en": "Build forms in React",
       "ko": "React에서 폼 만들기"
     },
-    "field": "Forms",
+    "field": "State & Data",
     "tags": [
       "React",
       "Forms"
@@ -1245,7 +1245,7 @@
       "en": "High performance subscription-based form",
       "ko": "고성능 구독 기반 폼"
     },
-    "field": "Forms",
+    "field": "State & Data",
     "tags": [
       "React",
       "Forms"
@@ -1262,7 +1262,7 @@
       "en": "Blazing fast unit test framework",
       "ko": "매우 빠른 유닛 테스트 프레임워크"
     },
-    "field": "Testing",
+    "field": "Build & DX",
     "tags": [
       "Testing",
       "Vite",
@@ -1280,7 +1280,7 @@
       "en": "Reliable end-to-end testing",
       "ko": "신뢰할 수 있는 E2E 테스팅"
     },
-    "field": "Testing",
+    "field": "Build & DX",
     "tags": [
       "E2E",
       "Testing"
@@ -1297,7 +1297,7 @@
       "en": "Fast, easy and reliable E2E testing",
       "ko": "빠르고 쉽고 신뢰할 수 있는 E2E 테스팅"
     },
-    "field": "Testing",
+    "field": "Build & DX",
     "tags": [
       "E2E",
       "Testing"
@@ -1314,7 +1314,7 @@
       "en": "Simple testing utilities",
       "ko": "간단한 테스팅 유틸리티"
     },
-    "field": "Testing",
+    "field": "Build & DX",
     "tags": [
       "React",
       "Testing"
@@ -1331,7 +1331,7 @@
       "en": "Delightful JavaScript testing",
       "ko": "즐거운 자바스크립트 테스팅"
     },
-    "field": "Testing",
+    "field": "Build & DX",
     "tags": [
       "Testing",
       "Classic"
@@ -1348,7 +1348,7 @@
       "en": "UI component development",
       "ko": "UI 컴포넌트 개발 도구"
     },
-    "field": "Testing",
+    "field": "Build & DX",
     "tags": [
       "UI",
       "Documentation"
@@ -1365,7 +1365,7 @@
       "en": "FFmpeg compiled to WebAssembly for browser video/audio processing",
       "ko": "브라우저에서 비디오/오디오 처리를 위해 WebAssembly로 컴파일된 FFmpeg"
     },
-    "field": "WASM Runtime",
+    "field": "Runtime & WASM",
     "tags": [
       "WASM",
       "Video",
@@ -1384,7 +1384,7 @@
       "en": "SQLite compiled to JavaScript via Emscripten",
       "ko": "Emscripten을 통해 JavaScript로 컴파일된 SQLite"
     },
-    "field": "WASM Runtime",
+    "field": "Runtime & WASM",
     "tags": [
       "WASM",
       "Database",
@@ -1402,7 +1402,7 @@
       "en": "Python runtime for the browser via WebAssembly",
       "ko": "WebAssembly를 통한 브라우저용 Python 런타임"
     },
-    "field": "WASM Runtime",
+    "field": "Runtime & WASM",
     "tags": [
       "WASM",
       "Python",
@@ -1420,7 +1420,7 @@
       "en": "TypeScript-like language that compiles to WebAssembly",
       "ko": "WebAssembly로 컴파일되는 TypeScript 유사 언어"
     },
-    "field": "WASM Runtime",
+    "field": "Runtime & WASM",
     "tags": [
       "WASM",
       "TypeScript",
@@ -1438,7 +1438,7 @@
       "en": "Facilitates communication between Rust and JavaScript",
       "ko": "Rust와 JavaScript 간 통신을 용이하게 하는 도구"
     },
-    "field": "WASM Runtime",
+    "field": "Runtime & WASM",
     "tags": [
       "WASM",
       "Rust",
@@ -1456,7 +1456,7 @@
       "en": "LLVM-to-WebAssembly compiler toolchain",
       "ko": "LLVM에서 WebAssembly로 컴파일하는 툴체인"
     },
-    "field": "WASM Runtime",
+    "field": "Runtime & WASM",
     "tags": [
       "WASM",
       "C",
@@ -1475,7 +1475,7 @@
       "en": "OpenCV compiled to JavaScript for browser-based computer vision",
       "ko": "브라우저 기반 컴퓨터 비전을 위해 JavaScript로 컴파일된 OpenCV"
     },
-    "field": "Computer Vision",
+    "field": "AI & Vision",
     "tags": [
       "WASM",
       "Vision",
@@ -1493,7 +1493,7 @@
       "en": "Google ML solutions for face, hand, and pose detection",
       "ko": "얼굴, 손, 자세 감지를 위한 Google ML 솔루션"
     },
-    "field": "Computer Vision",
+    "field": "AI & Vision",
     "tags": [
       "ML",
       "Google",
@@ -1512,7 +1512,7 @@
       "en": "Machine learning library for JavaScript",
       "ko": "JavaScript용 머신러닝 라이브러리"
     },
-    "field": "Machine Learning",
+    "field": "AI & Vision",
     "tags": [
       "ML",
       "AI",
@@ -1531,7 +1531,7 @@
       "en": "Run ONNX models in browser with WebAssembly/WebGL",
       "ko": "WebAssembly/WebGL로 브라우저에서 ONNX 모델 실행"
     },
-    "field": "Machine Learning",
+    "field": "AI & Vision",
     "tags": [
       "ML",
       "ONNX",
@@ -1550,7 +1550,7 @@
       "en": "Run Hugging Face transformers in the browser",
       "ko": "브라우저에서 Hugging Face 트랜스포머 실행"
     },
-    "field": "Machine Learning",
+    "field": "AI & Vision",
     "tags": [
       "ML",
       "NLP",
@@ -1569,7 +1569,7 @@
       "en": "Friendly machine learning for the web",
       "ko": "웹을 위한 친화적인 머신러닝"
     },
-    "field": "Machine Learning",
+    "field": "AI & Vision",
     "tags": [
       "ML",
       "Beginner",
@@ -1587,7 +1587,7 @@
       "en": "GPU accelerated neural networks in JavaScript",
       "ko": "JavaScript에서 GPU 가속 신경망"
     },
-    "field": "Machine Learning",
+    "field": "AI & Vision",
     "tags": [
       "ML",
       "Neural Network",
@@ -1605,7 +1605,7 @@
       "en": "Skia graphics library compiled to WebAssembly",
       "ko": "WebAssembly로 컴파일된 Skia 그래픽 라이브러리"
     },
-    "field": "Graphics/Canvas",
+    "field": "Visuals & Graphics",
     "tags": [
       "WASM",
       "Graphics",
@@ -1623,7 +1623,7 @@
       "en": "2D canvas library for desktop and mobile",
       "ko": "데스크톱 및 모바일용 2D 캔버스 라이브러리"
     },
-    "field": "Graphics/Canvas",
+    "field": "Visuals & Graphics",
     "tags": [
       "Canvas",
       "2D",
@@ -1641,7 +1641,7 @@
       "en": "Powerful canvas library with interactive object model",
       "ko": "인터랙티브 객체 모델을 갖춘 강력한 캔버스 라이브러리"
     },
-    "field": "Graphics/Canvas",
+    "field": "Visuals & Graphics",
     "tags": [
       "Canvas",
       "Editor",
@@ -1659,7 +1659,7 @@
       "en": "Vector graphics scripting framework",
       "ko": "벡터 그래픽 스크립팅 프레임워크"
     },
-    "field": "Graphics/Canvas",
+    "field": "Visuals & Graphics",
     "tags": [
       "Canvas",
       "Vector",
@@ -1677,7 +1677,7 @@
       "en": "JavaScript library for creative coding",
       "ko": "크리에이티브 코딩을 위한 JavaScript 라이브러리"
     },
-    "field": "Graphics/Canvas",
+    "field": "Visuals & Graphics",
     "tags": [
       "Creative",
       "Art",
@@ -1695,7 +1695,7 @@
       "en": "3D library for creating WebGL content",
       "ko": "WebGL 콘텐츠 생성을 위한 3D 라이브러리"
     },
-    "field": "3D Graphics",
+    "field": "Visuals & Graphics",
     "tags": [
       "3D",
       "WebGL",
@@ -1713,7 +1713,7 @@
       "en": "Powerful 3D game engine for the web",
       "ko": "웹을 위한 강력한 3D 게임 엔진"
     },
-    "field": "3D Graphics",
+    "field": "Visuals & Graphics",
     "tags": [
       "3D",
       "Game Engine",
@@ -1731,7 +1731,7 @@
       "en": "React renderer for Three.js",
       "ko": "Three.js를 위한 React 렌더러"
     },
-    "field": "3D Graphics",
+    "field": "Visuals & Graphics",
     "tags": [
       "React",
       "Three.js",
@@ -1749,7 +1749,7 @@
       "en": "Web framework for building VR experiences",
       "ko": "VR 경험 구축을 위한 웹 프레임워크"
     },
-    "field": "3D Graphics",
+    "field": "Visuals & Graphics",
     "tags": [
       "VR",
       "AR",
@@ -1767,7 +1767,7 @@
       "en": "High performance (de)compression in pure JavaScript",
       "ko": "순수 JavaScript로 구현된 고성능 (압축/해제)"
     },
-    "field": "Compression",
+    "field": "Data & Security",
     "tags": [
       "Compression",
       "Zip",
@@ -1785,7 +1785,7 @@
       "en": "Brotli compression compiled to WebAssembly",
       "ko": "WebAssembly로 컴파일된 Brotli 압축"
     },
-    "field": "Compression",
+    "field": "Data & Security",
     "tags": [
       "WASM",
       "Compression",
@@ -1803,7 +1803,7 @@
       "en": "Zstandard compression for JavaScript via WASM",
       "ko": "WASM을 통한 JavaScript용 Zstandard 압축"
     },
-    "field": "Compression",
+    "field": "Data & Security",
     "tags": [
       "WASM",
       "Compression",
@@ -1821,7 +1821,7 @@
       "en": "Audited elliptic curve cryptography in JavaScript",
       "ko": "감사된 JavaScript 타원 곡선 암호화"
     },
-    "field": "Cryptography",
+    "field": "Data & Security",
     "tags": [
       "Crypto",
       "Elliptic Curve",
@@ -1839,7 +1839,7 @@
       "en": "JavaScript port of libsodium cryptographic library",
       "ko": "libsodium 암호화 라이브러리의 JavaScript 포팅"
     },
-    "field": "Cryptography",
+    "field": "Data & Security",
     "tags": [
       "WASM",
       "Crypto",
@@ -1857,7 +1857,7 @@
       "en": "JavaScript library of crypto standards",
       "ko": "암호화 표준의 JavaScript 라이브러리"
     },
-    "field": "Cryptography",
+    "field": "Data & Security",
     "tags": [
       "Crypto",
       "AES",
@@ -1876,7 +1876,7 @@
       "en": "Protocol Buffers for JavaScript",
       "ko": "JavaScript용 Protocol Buffers"
     },
-    "field": "Data Serialization",
+    "field": "Data & Security",
     "tags": [
       "Protobuf",
       "Binary",
@@ -1894,7 +1894,7 @@
       "en": "Efficient cross-platform serialization library",
       "ko": "효율적인 크로스 플랫폼 직렬화 라이브러리"
     },
-    "field": "Data Serialization",
+    "field": "Data & Security",
     "tags": [
       "Binary",
       "Google",
@@ -1912,7 +1912,7 @@
       "en": "Fast MessagePack encoder/decoder",
       "ko": "빠른 MessagePack 인코더/디코더"
     },
-    "field": "Data Serialization",
+    "field": "Data & Security",
     "tags": [
       "MessagePack",
       "Binary",
@@ -1930,7 +1930,7 @@
       "en": "Fast CBOR encoder/decoder",
       "ko": "빠른 CBOR 인코더/디코더"
     },
-    "field": "Data Serialization",
+    "field": "Data & Security",
     "tags": [
       "CBOR",
       "Binary",
@@ -1948,7 +1948,7 @@
       "en": "High performance image processing",
       "ko": "고성능 이미지 처리"
     },
-    "field": "Image Processing",
+    "field": "Visuals & Graphics",
     "tags": [
       "Image",
       "Resize",
@@ -1966,7 +1966,7 @@
       "en": "JavaScript Image Manipulation Program",
       "ko": "JavaScript 이미지 조작 프로그램"
     },
-    "field": "Image Processing",
+    "field": "Visuals & Graphics",
     "tags": [
       "Image",
       "Pure JS",
@@ -1984,7 +1984,7 @@
       "en": "Web Audio framework for music synthesis",
       "ko": "음악 합성을 위한 Web Audio 프레임워크"
     },
-    "field": "Audio/Video",
+    "field": "Media & Documents",
     "tags": [
       "Audio",
       "Music",
@@ -2002,7 +2002,7 @@
       "en": "Audio library for the modern web",
       "ko": "모던 웹을 위한 오디오 라이브러리"
     },
-    "field": "Audio/Video",
+    "field": "Media & Documents",
     "tags": [
       "Audio",
       "Sound",
@@ -2020,7 +2020,7 @@
       "en": "Audio visualization and playback",
       "ko": "오디오 시각화 및 재생"
     },
-    "field": "Audio/Video",
+    "field": "Media & Documents",
     "tags": [
       "Audio",
       "Waveform",
@@ -2038,7 +2038,7 @@
       "en": "HTML5 video player framework",
       "ko": "HTML5 비디오 플레이어 프레임워크"
     },
-    "field": "Audio/Video",
+    "field": "Media & Documents",
     "tags": [
       "Video",
       "Player",
@@ -2056,7 +2056,7 @@
       "en": "PDF reader built with JavaScript",
       "ko": "JavaScript로 만든 PDF 리더"
     },
-    "field": "PDF/Documents",
+    "field": "Media & Documents",
     "tags": [
       "PDF",
       "Viewer",
@@ -2074,7 +2074,7 @@
       "en": "Convert Word documents to HTML",
       "ko": "Word 문서를 HTML로 변환"
     },
-    "field": "PDF/Documents",
+    "field": "Media & Documents",
     "tags": [
       "Word",
       "DOCX",
@@ -2092,7 +2092,7 @@
       "en": "Extensive math library for JavaScript",
       "ko": "JavaScript용 광범위한 수학 라이브러리"
     },
-    "field": "Math/Science",
+    "field": "Math & Science",
     "tags": [
       "Math",
       "Algebra",
@@ -2110,7 +2110,7 @@
       "en": "Statistical methods in JavaScript",
       "ko": "JavaScript 통계 메서드"
     },
-    "field": "Math/Science",
+    "field": "Math & Science",
     "tags": [
       "Statistics",
       "Math",
@@ -2128,7 +2128,7 @@
       "en": "Standard library for JavaScript numerical computing",
       "ko": "JavaScript 수치 컴퓨팅 표준 라이브러리"
     },
-    "field": "Math/Science",
+    "field": "Math & Science",
     "tags": [
       "Math",
       "Scientific",

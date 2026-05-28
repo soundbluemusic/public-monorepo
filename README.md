@@ -105,18 +105,18 @@ public-monorepo/
 
 | Category | Technology | Source |
 |:---------|:-----------|:-------|
-| **Framework** | React 19 + TanStack Start (SSR) | [apps/*/routes/](apps/context/app/routes) |
+| **Framework** | Astro 6 (SSR) | [apps/*/src/pages/](apps/context/src/pages) |
 | **Language** | TypeScript 5.x | [tsconfig.json](tsconfig.json) |
 | **Styling** | Tailwind CSS v4 | [packages/config/](packages/config) |
-| **Database** | Cloudflare D1 | [apps/context/wrangler.toml](apps/context/wrangler.toml) |
+| **Database** | Cloudflare D1 (Context only) | [apps/context/wrangler.toml](apps/context/wrangler.toml) |
 | **Search** | MiniSearch | [packages/search/](packages/search) |
-| **i18n** | Paraglide | [packages/i18n/](packages/i18n) |
+| **i18n** | Astro built-in `i18n` config (`/ko/*`) | [astro.config.mjs](apps/context/astro.config.mjs) |
 | **SEO** | Meta Factory | [packages/seo/](packages/seo) |
 | **Storage** | IndexedDB (Dexie) | [packages/platform/](packages/platform) |
-| **PWA** | Service Worker | [packages/pwa/](packages/pwa) |
+| **PWA** | Service Worker (Context only) | [packages/pwa/](packages/pwa) |
 | **UI** | Components | [packages/ui/](packages/ui) |
 | **Hosting** | Cloudflare Workers | — |
-| **Build** | Vite + Turborepo | [turbo.json](turbo.json) |
+| **Build** | Astro + Turborepo | [turbo.json](turbo.json) |
 
 ---
 
