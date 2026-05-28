@@ -13,8 +13,8 @@
   "permissive": {
     "libraries": 120,
     "webApis": 56,
-    "routes": 8
+    "routes": 9
   },
-  "totalRoutes": 33842,
-  "generatedAt": "2026-05-28T13:18:22.457Z"
+  "totalRoutes": 33843,
+  "generatedAt": "2026-05-28T15:03:30.015Z"
 }

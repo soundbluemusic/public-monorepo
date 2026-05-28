@@ -1,2 +1,5 @@
 pnpm sync:stats && git add meta.json data/context/meta.json README.md CLAUDE.md apps/context/README.md apps/roots/README.md apps/permissive/README.md
-pnpm typecheck
+# Turbo 병렬 실행 시 astro check가 Node inspect 포트(9229)에서 충돌하여
+# EADDRINUSE → esbuild service stopped 연쇄 실패가 발생함. Sequential로
+# 강제 실행하여 회피 (단일 개발자 환경이라 속도 영향 미미).
+TURBO_CONCURRENCY=1 pnpm typecheck
