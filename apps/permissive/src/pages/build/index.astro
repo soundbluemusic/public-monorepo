@@ -1,0 +1,50 @@
+---
+import { goals } from '../../../app/data/goals';
+import AppShell from '../../components/AppShell.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const baseUrl = 'https://permissive.soundbluemusic.com';
+---
+
+<BaseLayout
+  title="What do you want to build? - Permissive"
+  description="Curated open-source stacks for 6 common goals: websites, web apps, games, data viz, AI apps, and e-commerce."
+  canonical={`${baseUrl}/build`}
+>
+  <AppShell>
+    <section class="mb-10">
+      <h1 class="text-3xl sm:text-4xl font-bold text-(--text-primary) mb-3">
+        What do you want to <span class="text-(--accent-primary)">build</span>?
+      </h1>
+      <p class="text-lg text-(--text-secondary) max-w-2xl">
+        Pick a goal and get a curated stack of open-source libraries with a step-by-step start guide. All libraries come with license metadata.
+      </p>
+    </section>
+
+    <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      {goals.map((goal) => (
+        <a
+          href={`/build/${goal.id}`}
+          class="group p-6 rounded-2xl bg-(--bg-elevated) border border-(--border-primary) hover:border-(--border-focus) transition-colors"
+        >
+          <p class="text-4xl mb-3" aria-hidden="true">{goal.icon}</p>
+          <h2 class={`text-lg font-semibold ${goal.accent} group-hover:underline mb-1.5`}>
+            {goal.name.en}
+          </h2>
+          <p class="text-sm text-(--text-secondary) mb-3 line-clamp-2">
+            {goal.tagline.en}
+          </p>
+          <p class="text-xs text-(--text-tertiary)">
+            {goal.libraries.length} curated libraries · {goal.steps.length} steps
+          </p>
+        </a>
+      ))}
+    </section>
+
+    <section class="mt-12 p-5 rounded-xl bg-(--bg-tertiary) border border-(--border-primary)">
+      <p class="text-sm text-(--text-secondary)">
+        💡 <strong>Not sure yet?</strong> Browse the full library catalog by <a href="/libraries" class="text-(--accent-primary) hover:underline">category</a> or search by name on the <a href="/" class="text-(--accent-primary) hover:underline">home page</a>.
+      </p>
+    </section>
+  </AppShell>
+</BaseLayout>

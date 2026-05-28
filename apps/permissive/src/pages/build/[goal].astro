@@ -1,0 +1,104 @@
+---
+import { getGoalById, getLibrariesForGoal } from '../../../app/data/goals';
+import { getLibrarySlug } from '../../../app/data/libraries';
+import AppShell from '../../components/AppShell.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const { goal: goalId } = Astro.params;
+if (!goalId) return Astro.redirect('/build', 302);
+
+const goal = getGoalById(goalId);
+if (!goal) return Astro.redirect('/build', 302);
+
+const libs = getLibrariesForGoal(goal);
+const baseUrl = 'https://permissive.soundbluemusic.com';
+---
+
+<BaseLayout
+  title={`${goal.name.en} — Build Guide | Permissive`}
+  description={goal.tagline.en}
+  canonical={`${baseUrl}/build/${goal.id}`}
+>
+  <AppShell>
+    <nav aria-label="Breadcrumb" class="mb-6">
+      <ol class="flex items-center gap-1.5 text-sm text-(--text-tertiary)">
+        <li><a href="/" class="hover:text-(--text-primary) transition-colors">Home</a></li>
+        <li aria-hidden="true">/</li>
+        <li><a href="/build" class="hover:text-(--text-primary) transition-colors">Build</a></li>
+        <li aria-hidden="true">/</li>
+        <li class="text-(--text-primary) font-medium">{goal.name.en}</li>
+      </ol>
+    </nav>
+
+    <header class="mb-10">
+      <p class="text-5xl mb-3" aria-hidden="true">{goal.icon}</p>
+      <h1 class={`text-3xl sm:text-4xl font-bold ${goal.accent} mb-3`}>
+        {goal.name.en}
+      </h1>
+      <p class="text-lg text-(--text-secondary) max-w-2xl mb-4">{goal.tagline.en}</p>
+      <p class="text-(--text-secondary) max-w-3xl leading-relaxed">{goal.hero.en}</p>
+    </header>
+
+    <section class="mb-12" aria-labelledby="steps-heading">
+      <h2 id="steps-heading" class="text-2xl font-bold text-(--text-primary) mb-4">
+        Getting started
+      </h2>
+      <ol class="space-y-4">
+        {goal.steps.map((step, idx) => (
+          <li class="flex gap-4">
+            <span class={`shrink-0 w-8 h-8 rounded-full ${goal.accent.replace('text-', 'bg-')}/10 ${goal.accent} flex items-center justify-center font-semibold text-sm`}>
+              {idx + 1}
+            </span>
+            <div>
+              <h3 class="font-semibold text-(--text-primary) mb-1">{step.title.en}</h3>
+              <p class="text-sm text-(--text-secondary) leading-relaxed">{step.description.en}</p>
+            </div>
+          </li>
+        ))}
+      </ol>
+    </section>
+
+    <section aria-labelledby="libs-heading">
+      <h2 id="libs-heading" class="text-2xl font-bold text-(--text-primary) mb-1">
+        Recommended libraries
+      </h2>
+      <p class="text-sm text-(--text-tertiary) mb-4">
+        {libs.length} libraries, sorted by relevance for this goal
+      </p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        {libs.map((lib) => (
+          <a
+            href={`/library/${getLibrarySlug(lib.name)}`}
+            class="p-4 rounded-xl bg-(--bg-elevated) border border-(--border-primary) hover:border-(--border-focus) transition-colors group"
+          >
+            <div class="flex items-start justify-between gap-2 mb-2">
+              <h3 class="font-semibold text-(--text-primary) group-hover:text-(--accent-primary) transition-colors">
+                {lib.name}
+              </h3>
+              <span class="text-xs text-(--text-tertiary) shrink-0">★ {lib.stars}</span>
+            </div>
+            <p class="text-sm text-(--text-secondary) line-clamp-2 mb-3">
+              {lib.description}
+            </p>
+            <div class="flex items-center gap-2 flex-wrap">
+              <span class="px-2 py-0.5 rounded text-xs bg-(--bg-tertiary) text-(--text-tertiary)">
+                {lib.license}
+              </span>
+              {lib.categories.map((cat) => (
+                <span class="px-2 py-0.5 rounded text-xs bg-(--bg-tertiary) text-(--text-tertiary)">
+                  {cat}
+                </span>
+              ))}
+            </div>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-12 p-5 rounded-xl bg-(--bg-tertiary) border border-(--border-primary)">
+      <p class="text-sm text-(--text-secondary)">
+        🤔 <strong>Different goal in mind?</strong> See <a href="/build" class="text-(--accent-primary) hover:underline">all 6 build guides</a> or browse the full <a href="/libraries" class="text-(--accent-primary) hover:underline">library catalog</a>.
+      </p>
+    </section>
+  </AppShell>
+</BaseLayout>

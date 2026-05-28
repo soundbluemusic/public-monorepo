@@ -1,8 +1,8 @@
 # Dependencies
 node_modules/
 
-# Build output
-build/
+# Build output (앱 루트의 build/ 폴더만; src/pages/build/ 같은 라우트는 제외)
+/build/
 dist/
 
 # Generated sitemaps (built during deploy)
