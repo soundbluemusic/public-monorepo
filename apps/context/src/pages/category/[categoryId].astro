@@ -1,4 +1,5 @@
 ---
+import { env } from 'cloudflare:workers';
 import { getCategoryById } from '../../../app/data/categories';
 import { getEntriesByCategoryPaginatedFromD1 } from '../../../app/services/d1';
 import AppShell from '../../components/AppShell.astro';
@@ -14,7 +15,7 @@ const pageParam = Astro.url.searchParams.get('page');
 const page = Math.max(1, parseInt(pageParam ?? '1', 10) || 1);
 const PAGE_SIZE = 50;
 
-const db = Astro.locals.runtime.env.DB;
+const db = env.DB;
 const result = await getEntriesByCategoryPaginatedFromD1(db, categoryId, 'en', page, PAGE_SIZE);
 const totalPages = Math.ceil(result.totalCount / PAGE_SIZE);
 const currentPage = Math.min(page, Math.max(1, totalPages));

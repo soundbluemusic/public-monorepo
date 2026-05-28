@@ -1,4 +1,5 @@
 ---
+import { env } from 'cloudflare:workers';
 import { getCategoryById } from '../../../../app/data/categories';
 import { getEntryByIdFromD1, getHomonymsByKoreanFromD1 } from '../../../../app/services/d1';
 import AppShell from '../../../components/AppShell.astro';
@@ -7,7 +8,7 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
 const { entryId } = Astro.params;
 if (!entryId) return Astro.redirect('/404', 404);
 
-const db = Astro.locals.runtime.env.DB;
+const db = env.DB;
 const entry = await getEntryByIdFromD1(db, entryId, 'ko');
 if (!entry) return Astro.redirect('/404', 404);
 

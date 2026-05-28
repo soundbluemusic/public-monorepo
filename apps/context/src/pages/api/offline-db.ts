@@ -1,7 +1,8 @@
+import { env } from 'cloudflare:workers';
 import type { APIRoute } from 'astro';
 
-export const GET: APIRoute = async ({ locals }) => {
-  const db = locals.runtime.env.DB;
+export const GET: APIRoute = async () => {
+  const db = env.DB;
 
   try {
     const [entriesResult, conversationsResult] = await Promise.all([

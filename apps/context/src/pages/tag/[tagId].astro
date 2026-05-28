@@ -1,4 +1,5 @@
 ---
+import { env } from 'cloudflare:workers';
 import { getEntriesByTagFromD1 } from '../../../app/services/d1';
 import { getCategoryById } from '../../../app/data/categories';
 import BaseLayout from '../../layouts/BaseLayout.astro';
@@ -8,7 +9,7 @@ const { tagId } = Astro.params;
 if (!tagId) return Astro.redirect('/404', 404);
 
 const tag = decodeURIComponent(tagId);
-const db = Astro.locals.runtime.env.DB;
+const db = env.DB;
 const entries = await getEntriesByTagFromD1(db, tag, 'en').catch(() => []);
 if (entries.length === 0) return Astro.redirect('/404', 404);
 

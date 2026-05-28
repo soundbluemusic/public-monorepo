@@ -1,11 +1,12 @@
 ---
+import { env } from 'cloudflare:workers';
 import { getCategoriesFromD1, getEntryCounts } from '../../app/services/d1';
 import AppShell from '../components/AppShell.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 const BASE_URL = 'https://context.soundbluemusic.com';
 
-const db = Astro.locals.runtime.env.DB;
+const db = env.DB;
 
 let categories: Awaited<ReturnType<typeof getCategoriesFromD1>> = [];
 let categoryCounts: Map<string, number> = new Map();

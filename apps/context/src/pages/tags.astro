@@ -1,9 +1,10 @@
 ---
+import { env } from 'cloudflare:workers';
 import { getAllTagsFromD1 } from '../../app/services/d1';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import AppShell from '../components/AppShell.astro';
 
-const db = Astro.locals.runtime.env.DB;
+const db = env.DB;
 const tags = await getAllTagsFromD1(db).catch(() => []);
 const BASE_URL = 'https://context.soundbluemusic.com';
 ---

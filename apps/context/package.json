@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build && node scripts/strip-bindings.mjs",
+    "build": "node scripts/guard-no-legacy-runtime.mjs && astro build && node scripts/strip-bindings.mjs",
     "preview": "astro preview",
     "deploy": "pnpm build && wrangler deploy",
     "start": "wrangler dev",
