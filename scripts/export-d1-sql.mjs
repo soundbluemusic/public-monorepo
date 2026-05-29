@@ -6,6 +6,16 @@ import { dirname, resolve } from 'node:path';
 
 const DEFAULT_BATCH_SIZE = 100;
 
+// 일시적 오류(네트워크 단절, 429, 5xx)에 대한 재시도 설정
+const MAX_API_ATTEMPTS = 4;
+const RETRYABLE_STATUS = new Set([429, 500, 502, 503, 504]);
+
+function sleep(ms) {
+  return new Promise((resolve) => {
+    setTimeout(resolve, ms);
+  });
+}
+
 function parseArgs(argv) {
   const args = {};
 
@@ -19,6 +29,10 @@ function parseArgs(argv) {
     const key = arg.slice(2);
     if (key === 'use-wrangler') {
       args.useWrangler = true;
+      continue;
+    }
+    if (key === 'check') {
+      args.check = true;
       continue;
     }
 
@@ -138,34 +152,62 @@ function createApiQuery({ accountId, apiToken, databaseId }) {
   const endpoint = `https://api.cloudflare.com/client/v4/accounts/${accountId}/d1/database/${databaseId}/query`;
 
   return async function query(sql) {
-    const response = await fetch(endpoint, {
-      method: 'POST',
-      headers: {
-        Authorization: `Bearer ${apiToken}`,
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ sql }),
-    });
+    let lastError;
 
-    const payload = await response.json().catch(() => null);
+    for (let attempt = 1; attempt <= MAX_API_ATTEMPTS; attempt += 1) {
+      let response;
+      try {
+        response = await fetch(endpoint, {
+          method: 'POST',
+          headers: {
+            Authorization: `Bearer ${apiToken}`,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ sql }),
+        });
+      } catch (networkError) {
+        // 네트워크 단절 등은 일시적일 수 있으므로 백오프 후 재시도
+        lastError =
+          networkError instanceof Error ? networkError : new Error(String(networkError));
+        if (attempt < MAX_API_ATTEMPTS) {
+          await sleep(2 ** attempt * 1000);
+          continue;
+        }
+        throw new Error(
+          `Cloudflare D1 request failed for ${databaseId} after ${MAX_API_ATTEMPTS} attempts: ${lastError.message}`,
+        );
+      }
 
-    if (!response.ok || !payload?.success) {
+      const payload = await response.json().catch(() => null);
+
+      if (response.ok && payload?.success) {
+        const firstResult = payload.result?.[0];
+        if (!firstResult?.success) {
+          throw new Error(
+            `Cloudflare D1 query returned an unsuccessful result: ${JSON.stringify(payload)}`,
+          );
+        }
+
+        return firstResult.results ?? [];
+      }
+
       const errors = payload?.errors?.map((error) => error.message).join('; ');
       const detail = errors || response.statusText || 'unknown Cloudflare API error';
+
+      // 429/5xx는 일시적 → 재시도. 그 외(400/401/403 등)는 결정적 오류이므로 즉시 실패.
+      if (RETRYABLE_STATUS.has(response.status) && attempt < MAX_API_ATTEMPTS) {
+        lastError = new Error(`HTTP ${response.status}: ${detail}`);
+        await sleep(2 ** attempt * 1000);
+        continue;
+      }
+
       throw new Error(
-        `Cloudflare D1 query failed for ${databaseId}: ${detail}. ` +
-          'Ensure the GitHub secret token has Account D1 Read or D1 Write permission.',
+        `Cloudflare D1 query failed for ${databaseId} (HTTP ${response.status}): ${detail}. ` +
+          'Ensure the GitHub secret token has Account D1 Read (or Edit) permission and CLOUDFLARE_ACCOUNT_ID is correct.',
       );
     }
 
-    const firstResult = payload.result?.[0];
-    if (!firstResult?.success) {
-      throw new Error(
-        `Cloudflare D1 query returned an unsuccessful result: ${JSON.stringify(payload)}`,
-      );
-    }
-
-    return firstResult.results ?? [];
+    throw lastError ?? new Error(`Cloudflare D1 query failed for ${databaseId}`);
   };
 }
 
@@ -304,7 +346,6 @@ async function dumpSql({ query, databaseName, outputPath, batchSize }) {
 async function main() {
   const args = parseArgs(process.argv.slice(2));
   const databaseName = getRequiredArg(args, 'database-name');
-  const outputPath = resolve(getRequiredArg(args, 'output'));
   const batchSize = Number(args['batch-size'] ?? DEFAULT_BATCH_SIZE);
 
   if (!Number.isInteger(batchSize) || batchSize < 1) {
@@ -327,6 +368,17 @@ async function main() {
     throw new Error('CLOUDFLARE_ACCOUNT_ID and CLOUDFLARE_API_TOKEN are required for API export');
   }
 
+  // Preflight: 토큰/계정/DB 읽기 권한만 검증하고 종료 (덤프 없음)
+  if (args.check) {
+    const rows = await query('SELECT 1 AS ok');
+    if (rows?.[0]?.ok !== 1) {
+      throw new Error(`Preflight check failed for ${databaseName}: unexpected response from D1`);
+    }
+    console.log(`Preflight OK: "${databaseName}" is reachable and the token can read it`);
+    return;
+  }
+
+  const outputPath = resolve(getRequiredArg(args, 'output'));
   const result = await dumpSql({ query, databaseName, outputPath, batchSize });
   console.log(`Wrote ${result.outputPath} (${result.tables} tables, ${result.rows} rows)`);
 }

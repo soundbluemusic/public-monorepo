@@ -19,6 +19,30 @@ jobs:
         with:
           node-version: 20
 
+      - name: Preflight - validate Cloudflare D1 access
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_D1_API_TOKEN || secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          echo "🔎 Validating Cloudflare D1 access (token + account + per-DB read)..."
+
+          if [ -z "$CLOUDFLARE_ACCOUNT_ID" ]; then
+            echo "::error::CLOUDFLARE_ACCOUNT_ID secret is empty. Set it in repository secrets."
+            exit 1
+          fi
+          if [ -z "$CLOUDFLARE_API_TOKEN" ]; then
+            echo "::error::No API token. Set CLOUDFLARE_D1_API_TOKEN (preferred) or CLOUDFLARE_API_TOKEN with Account → D1 → Read."
+            exit 1
+          fi
+
+          node scripts/export-d1-sql.mjs --check \
+            --database-name context-db \
+            --database-id 55c25518-db3d-4547-8ad8-e36fc66493c8
+
+          node scripts/export-d1-sql.mjs --check \
+            --database-name private \
+            --database-id de05bd43-f2be-41c5-8e4e-8d04fa4f4534
+
       - name: Export context-db
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_D1_API_TOKEN || secrets.CLOUDFLARE_API_TOKEN }}
@@ -37,22 +61,22 @@ jobs:
           SIZE=$(ls -lh backups/context-db.sql | awk '{print $5}')
           echo "✅ context-db exported: $SIZE"
 
-      - name: Export knowledge (shared DB)
+      - name: Export private DB
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_D1_API_TOKEN || secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
         run: |
-          echo "📦 Exporting knowledge db..."
+          echo "📦 Exporting private db..."
 
           node scripts/export-d1-sql.mjs \
-            --database-name knowledge \
-            --database-id 6f93ae7e-84ab-4d0a-9ba7-d392b2d00034 \
-            --output "$GITHUB_WORKSPACE/backups/knowledge.sql" \
+            --database-name private \
+            --database-id de05bd43-f2be-41c5-8e4e-8d04fa4f4534 \
+            --output "$GITHUB_WORKSPACE/backups/private.sql" \
             --batch-size 100
 
           # 파일 크기 확인
-          SIZE=$(ls -lh backups/knowledge.sql | awk '{print $5}')
-          echo "✅ knowledge exported: $SIZE"
+          SIZE=$(ls -lh backups/private.sql | awk '{print $5}')
+          echo "✅ private exported: $SIZE"
 
       - name: Compress backups
         run: |
