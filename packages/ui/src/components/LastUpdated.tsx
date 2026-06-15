@@ -197,11 +197,11 @@ export const VersionHistory = memo(function VersionHistory({
       </h3>
 
       <ul className="space-y-2">
-        {displayedItems.map((item, index) => {
+        {displayedItems.map((item) => {
           const dateObj = typeof item.date === 'string' ? new Date(item.date) : item.date;
 
           return (
-            <li key={`${item.version}-${index}`} className="flex items-start gap-3 text-sm">
+            <li key={item.version} className="flex items-start gap-3 text-sm">
               <span className="shrink-0 px-2 py-0.5 rounded text-xs font-mono bg-(--bg-tertiary) text-(--text-secondary)">
                 {item.version}
               </span>
