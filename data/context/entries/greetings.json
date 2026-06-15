@@ -252,7 +252,9 @@
       },
       "ja": {
         "word": "こんにちは",
-        "explanation": "「안녕하세요」は日本語で「こんにちは」。"
+        "explanation": "「안녕하세요」は日本語で「こんにちは」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -392,7 +394,9 @@
       },
       "ja": {
         "word": "ありがとうございます",
-        "explanation": "「감사합니다」は日本語で「ありがとうございます」。"
+        "explanation": "「감사합니다」は日本語で「ありがとうございます」。",
+        "verified": true,
+        "source": "manual"
       }
     }
   },
@@ -718,7 +722,9 @@
       },
       "ja": {
         "word": "ありがとう",
-        "explanation": "「고마워」は日本語で「ありがとう」。"
+        "explanation": "「고마워」は日本語で「ありがとう」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -820,7 +826,9 @@
       },
       "ja": {
         "word": "ごめん",
-        "explanation": "「미안해」は日本語で「ごめん」。"
+        "explanation": "「미안해」は日本語で「ごめん」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -922,7 +930,9 @@
       },
       "ja": {
         "word": "申し訳ありません",
-        "explanation": "「죄송합니다」は日本語で「申し訳ありません」。"
+        "explanation": "「죄송합니다」は日本語で「申し訳ありません」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -1220,7 +1230,9 @@
       },
       "ja": {
         "word": "元気です",
-        "explanation": "「잘 지내요」は日本語で「元気です」。"
+        "explanation": "「잘 지내요」は日本語で「元気です」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -1322,7 +1334,9 @@
       },
       "ja": {
         "word": "お久しぶりです",
-        "explanation": "「오랜만이에요」は日本語で「お久しぶりです」。"
+        "explanation": "「오랜만이에요」は日本語で「お久しぶりです」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -1424,7 +1438,9 @@
       },
       "ja": {
         "word": "はじめまして",
-        "explanation": "「처음 뵙겠습니다」は日本語で「はじめまして」。"
+        "explanation": "「처음 뵙겠습니다」は日本語で「はじめまして」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -1526,7 +1542,9 @@
       },
       "ja": {
         "word": "おはよう",
-        "explanation": "「좋은 아침」は日本語で「おはよう」。"
+        "explanation": "「좋은 아침」は日本語で「おはよう」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -1628,7 +1646,9 @@
       },
       "ja": {
         "word": "おやすみなさい",
-        "explanation": "「안녕히 주무세요」は日本語で「おやすみなさい」。"
+        "explanation": "「안녕히 주무세요」は日本語で「おやすみなさい」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -1730,7 +1750,9 @@
       },
       "ja": {
         "word": "おやすみ",
-        "explanation": "「잘 자」は日本語で「おやすみ」。"
+        "explanation": "「잘 자」は日本語で「おやすみ」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -1832,7 +1854,9 @@
       },
       "ja": {
         "word": "失礼します",
-        "explanation": "「실례합니다」は日本語で「失礼します」。"
+        "explanation": "「실례합니다」は日本語で「失礼します」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -1934,7 +1958,9 @@
       },
       "ja": {
         "word": "ちょっと待って",
-        "explanation": "「잠시만요」は日本語で「ちょっと待って」。"
+        "explanation": "「잠시만요」は日本語で「ちょっと待って」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -2036,7 +2062,9 @@
       },
       "ja": {
         "word": "もしもし",
-        "explanation": "「여보세요」は日本語で「もしもし」。"
+        "explanation": "「여보세요」は日本語で「もしもし」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -2236,7 +2264,9 @@
       },
       "ja": {
         "word": "お疲れ様でした",
-        "explanation": "「수고하셨어요」は日本語で「お疲れ様でした」。"
+        "explanation": "「수고하셨어요」は日本語で「お疲れ様でした」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -2436,7 +2466,9 @@
       },
       "ja": {
         "word": "どういたしまして",
-        "explanation": "「천만에요」は日本語で「どういたしまして」。"
+        "explanation": "「천만에요」は日本語で「どういたしまして」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -2636,7 +2668,9 @@
       },
       "ja": {
         "word": "大丈夫です",
-        "explanation": "「괜찮아요」は日本語で「大丈夫です」。"
+        "explanation": "「괜찮아요」は日本語で「大丈夫です」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -3032,7 +3066,9 @@
       },
       "ja": {
         "word": "気をつけて",
-        "explanation": "「조심하세요」は日本語で「気をつけて」。"
+        "explanation": "「조심하세요」は日本語で「気をつけて」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -3232,7 +3268,9 @@
       },
       "ja": {
         "word": "はい",
-        "explanation": "「네」は日本語で「はい」。"
+        "explanation": "「네」は日本語で「はい」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -3334,7 +3372,9 @@
       },
       "ja": {
         "word": "いいえ",
-        "explanation": "「아니요」は日本語で「いいえ」。"
+        "explanation": "「아니요」は日本語で「いいえ」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -3436,7 +3476,9 @@
       },
       "ja": {
         "word": "うん",
-        "explanation": "「응」は日本語で「うん」。"
+        "explanation": "「응」は日本語で「うん」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -3538,7 +3580,9 @@
       },
       "ja": {
         "word": "ううん",
-        "explanation": "「아니야」は日本語で「ううん」。"
+        "explanation": "「아니야」は日本語で「ううん」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -3640,7 +3684,9 @@
       },
       "ja": {
         "word": "本当に",
-        "explanation": "「정말」は日本語で「本当に」。"
+        "explanation": "「정말」は日本語で「本当に」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -3938,7 +3984,9 @@
       },
       "ja": {
         "word": "ファイト",
-        "explanation": "「화이팅」は日本語で「ファイト」。"
+        "explanation": "「화이팅」は日本語で「ファイト」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -4040,7 +4088,9 @@
       },
       "ja": {
         "word": "頑張って",
-        "explanation": "「힘내요」は日本語で「頑張って」。"
+        "explanation": "「힘내요」は日本語で「頑張って」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -4142,7 +4192,9 @@
       },
       "ja": {
         "word": "心配しないで",
-        "explanation": "「걱정마요」は日本語で「心配しないで」。"
+        "explanation": "「걱정마요」は日本語で「心配しないで」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -4342,7 +4394,9 @@
       },
       "ja": {
         "word": "また明日",
-        "explanation": "「내일 봐」は日本語で「また明日」。"
+        "explanation": "「내일 봐」は日本語で「また明日」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -4444,7 +4498,9 @@
       },
       "ja": {
         "word": "またね",
-        "explanation": "「또 봐요」は日本語で「またね」。"
+        "explanation": "「또 봐요」は日本語で「またね」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -4938,7 +4994,9 @@
       },
       "ja": {
         "word": "いただきます",
-        "explanation": "「잘 먹겠습니다」は日本語で「いただきます」。"
+        "explanation": "「잘 먹겠습니다」は日本語で「いただきます」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -5040,7 +5098,9 @@
       },
       "ja": {
         "word": "ごちそうさまでした",
-        "explanation": "「잘 먹었습니다」は日本語で「ごちそうさまでした」。"
+        "explanation": "「잘 먹었습니다」は日本語で「ごちそうさまでした」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {

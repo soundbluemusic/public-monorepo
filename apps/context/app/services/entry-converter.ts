@@ -29,11 +29,15 @@ export function rowToLocaleEntry(row: D1EntryRow, locale: Language): LocaleEntry
 
     const tags = row.tags ? (JSON.parse(row.tags) as string[]) : [];
 
-    // 다국어 대응어 추출 (존재하는 언어만) — 한국어 원어의 1:1 대응
+    // 다국어 대응어 추출 — 한국어 원어의 1:1 대응
+    // en은 원본이라 항상 노출; ja/es/pt는 검증 통과(verified)만 노출
     const targetWords: Partial<Record<TargetLanguage, string>> = {};
     for (const lang of ['en', 'ja', 'es', 'pt'] as const) {
-      const word = translations[lang]?.word;
-      if (word) targetWords[lang] = word;
+      const t = translations[lang];
+      if (!t?.word) continue;
+      if (lang === 'en' || t.verified === true) {
+        targetWords[lang] = t.word;
+      }
     }
 
     return {

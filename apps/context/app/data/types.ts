@@ -68,6 +68,10 @@ export interface Translation {
   examples?: LeveledExamples;
   dialogue?: EntryDialogue;
   variations?: Variations;
+  /** 대응어 검증 통과 여부 (ja/es/pt 다국어 확장용 — true만 매핑 카드에 노출) */
+  verified?: boolean;
+  /** 대응어 출처 (manual: 사람 검증, llm-verified: 생성 후 자동검증 통과) */
+  source?: 'manual' | 'llm-verified';
 }
 
 /**

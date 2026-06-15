@@ -121,7 +121,9 @@
       },
       "ja": {
         "word": "犬",
-        "explanation": "「개」は日本語で「犬」。"
+        "explanation": "「개」は日本語で「犬」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -251,7 +253,9 @@
       },
       "ja": {
         "word": "猫",
-        "explanation": "「고양이」は日本語で「猫」。"
+        "explanation": "「고양이」は日本語で「猫」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -381,7 +385,9 @@
       },
       "ja": {
         "word": "鳥",
-        "explanation": "「새」は日本語で「鳥」。"
+        "explanation": "「새」は日本語で「鳥」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -511,7 +517,9 @@
       },
       "ja": {
         "word": "魚",
-        "explanation": "「물고기」は日本語で「魚」。"
+        "explanation": "「물고기」は日本語で「魚」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -641,7 +649,9 @@
       },
       "ja": {
         "word": "うさぎ",
-        "explanation": "「토끼」は日本語で「うさぎ」。"
+        "explanation": "「토끼」は日本語で「うさぎ」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -772,7 +782,9 @@
       },
       "ja": {
         "word": "牛",
-        "explanation": "「소」は日本語で「牛」。"
+        "explanation": "「소」は日本語で「牛」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -902,7 +914,9 @@
       },
       "ja": {
         "word": "馬",
-        "explanation": "「말」は日本語で「馬」。"
+        "explanation": "「말」は日本語で「馬」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -1032,7 +1046,9 @@
       },
       "ja": {
         "word": "豚",
-        "explanation": "「돼지」は日本語で「豚」。"
+        "explanation": "「돼지」は日本語で「豚」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -1162,7 +1178,9 @@
       },
       "ja": {
         "word": "にわとり",
-        "explanation": "「닭」は日本語で「にわとり」。"
+        "explanation": "「닭」は日本語で「にわとり」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -1291,7 +1309,9 @@
       },
       "ja": {
         "word": "羊",
-        "explanation": "「양」は日本語で「羊」。"
+        "explanation": "「양」は日本語で「羊」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -1422,7 +1442,9 @@
       },
       "ja": {
         "word": "虎",
-        "explanation": "「호랑이」は日本語で「虎」。"
+        "explanation": "「호랑이」は日本語で「虎」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -1552,7 +1574,9 @@
       },
       "ja": {
         "word": "竜",
-        "explanation": "「용」は日本語で「竜」。"
+        "explanation": "「용」は日本語で「竜」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -1682,7 +1706,9 @@
       },
       "ja": {
         "word": "蛇",
-        "explanation": "「뱀」は日本語で「蛇」。"
+        "explanation": "「뱀」は日本語で「蛇」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -1812,7 +1838,9 @@
       },
       "ja": {
         "word": "猿",
-        "explanation": "「원숭이」は日本語で「猿」。"
+        "explanation": "「원숭이」は日本語で「猿」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -1941,7 +1969,9 @@
       },
       "ja": {
         "word": "ねずみ",
-        "explanation": "「쥐」は日本語で「ねずみ」。"
+        "explanation": "「쥐」は日本語で「ねずみ」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -2071,7 +2101,9 @@
       },
       "ja": {
         "word": "ライオン",
-        "explanation": "「사자」は日本語で「ライオン」。"
+        "explanation": "「사자」は日本語で「ライオン」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -2201,7 +2233,9 @@
       },
       "ja": {
         "word": "象",
-        "explanation": "「코끼리」は日本語で「象」。"
+        "explanation": "「코끼리」は日本語で「象」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -2331,7 +2365,9 @@
       },
       "ja": {
         "word": "熊",
-        "explanation": "「곰」は日本語で「熊」。"
+        "explanation": "「곰」は日本語で「熊」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -2461,7 +2497,9 @@
       },
       "ja": {
         "word": "狼",
-        "explanation": "「늑대」は日本語で「狼」。"
+        "explanation": "「늑대」は日本語で「狼」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -2591,7 +2629,9 @@
       },
       "ja": {
         "word": "狐",
-        "explanation": "「여우」は日本語で「狐」。"
+        "explanation": "「여우」は日本語で「狐」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -2721,7 +2761,9 @@
       },
       "ja": {
         "word": "鹿",
-        "explanation": "「사슴」は日本語で「鹿」。"
+        "explanation": "「사슴」は日本語で「鹿」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -2852,7 +2894,9 @@
       },
       "ja": {
         "word": "鷲",
-        "explanation": "「독수리」は日本語で「鷲」。"
+        "explanation": "「독수리」は日本語で「鷲」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -2982,7 +3026,9 @@
       },
       "ja": {
         "word": "カラス",
-        "explanation": "「까마귀」は日本語で「カラス」。"
+        "explanation": "「까마귀」は日本語で「カラス」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -3112,7 +3158,9 @@
       },
       "ja": {
         "word": "すずめ",
-        "explanation": "「참새」は日本語で「すずめ」。"
+        "explanation": "「참새」は日本語で「すずめ」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -3242,7 +3290,9 @@
       },
       "ja": {
         "word": "はと",
-        "explanation": "「비둘기」は日本語で「はと」。"
+        "explanation": "「비둘기」は日本語で「はと」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -3372,7 +3422,9 @@
       },
       "ja": {
         "word": "カエル",
-        "explanation": "「개구리」は日本語で「カエル」。"
+        "explanation": "「개구리」は日本語で「カエル」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -3502,7 +3554,9 @@
       },
       "ja": {
         "word": "カメ",
-        "explanation": "「거북이」は日本語で「カメ」。"
+        "explanation": "「거북이」は日本語で「カメ」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -3632,7 +3686,9 @@
       },
       "ja": {
         "word": "蝶",
-        "explanation": "「나비」は日本語で「蝶」。"
+        "explanation": "「나비」は日本語で「蝶」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -3762,7 +3818,9 @@
       },
       "ja": {
         "word": "ハチ",
-        "explanation": "「벌」は日本語で「ハチ」。"
+        "explanation": "「벌」は日本語で「ハチ」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -3892,7 +3950,9 @@
       },
       "ja": {
         "word": "アリ",
-        "explanation": "「개미」は日本語で「アリ」。"
+        "explanation": "「개미」は日本語で「アリ」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -4022,7 +4082,9 @@
       },
       "ja": {
         "word": "イルカ",
-        "explanation": "「돌고래」は日本語で「イルカ」。"
+        "explanation": "「돌고래」は日本語で「イルカ」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -4152,7 +4214,9 @@
       },
       "ja": {
         "word": "サメ",
-        "explanation": "「상어」は日本語で「サメ」。"
+        "explanation": "「상어」は日本語で「サメ」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -4282,7 +4346,9 @@
       },
       "ja": {
         "word": "クジラ",
-        "explanation": "「고래」は日本語で「クジラ」。"
+        "explanation": "「고래」は日本語で「クジラ」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -4412,7 +4478,9 @@
       },
       "ja": {
         "word": "アヒル",
-        "explanation": "「오리」は日本語で「アヒル」。"
+        "explanation": "「오리」は日本語で「アヒル」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -4441,7 +4509,9 @@
       "en": "penguin",
       "ja": {
         "word": "ペンギン",
-        "explanation": "「펭귄」は日本語で「ペンギン」。"
+        "explanation": "「펭귄」は日本語で「ペンギン」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -4469,7 +4539,9 @@
       "en": "giraffe",
       "ja": {
         "word": "キリン",
-        "explanation": "「기린」は日本語で「キリン」。"
+        "explanation": "「기린」は日本語で「キリン」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -4497,7 +4569,9 @@
       "en": "hippo",
       "ja": {
         "word": "カバ",
-        "explanation": "「하마」は日本語で「カバ」。"
+        "explanation": "「하마」は日本語で「カバ」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -4525,7 +4599,9 @@
       "en": "crocodile",
       "ja": {
         "word": "ワニ",
-        "explanation": "「악어」は日本語で「ワニ」。"
+        "explanation": "「악어」は日本語で「ワニ」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -4553,7 +4629,9 @@
       "en": "squirrel",
       "ja": {
         "word": "リス",
-        "explanation": "「다람쥐」は日本語で「リス」。"
+        "explanation": "「다람쥐」は日本語で「リス」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -4581,7 +4659,9 @@
       "en": "mole",
       "ja": {
         "word": "モグラ",
-        "explanation": "「두더지」は日本語で「モグラ」。"
+        "explanation": "「두더지」は日本語で「モグラ」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -4609,7 +4689,9 @@
       "en": "bat",
       "ja": {
         "word": "コウモリ",
-        "explanation": "「박쥐」は日本語で「コウモリ」。"
+        "explanation": "「박쥐」は日本語で「コウモリ」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -4637,7 +4719,9 @@
       "en": "hawk",
       "ja": {
         "word": "タカ",
-        "explanation": "「매」は日本語で「タカ」。"
+        "explanation": "「매」は日本語で「タカ」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -4665,7 +4749,9 @@
       "en": "owl",
       "ja": {
         "word": "フクロウ",
-        "explanation": "「부엉이」は日本語で「フクロウ」。"
+        "explanation": "「부엉이」は日本語で「フクロウ」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -4693,7 +4779,9 @@
       "en": "dragonfly",
       "ja": {
         "word": "トンボ",
-        "explanation": "「잠자리」は日本語で「トンボ」。"
+        "explanation": "「잠자리」は日本語で「トンボ」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -4721,7 +4809,9 @@
       "en": "ladybug",
       "ja": {
         "word": "テントウムシ",
-        "explanation": "「무당벌레」は日本語で「テントウムシ」。"
+        "explanation": "「무당벌레」は日本語で「テントウムシ」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -4749,7 +4839,9 @@
       "en": "earthworm",
       "ja": {
         "word": "ミミズ",
-        "explanation": "「지렁이」は日本語で「ミミズ」。"
+        "explanation": "「지렁이」は日本語で「ミミズ」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -4777,7 +4869,9 @@
       "en": "puppy",
       "ja": {
         "word": "子犬",
-        "explanation": "「강아지」は日本語で「子犬」。"
+        "explanation": "「강아지」は日本語で「子犬」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -4805,7 +4899,9 @@
       "en": "kitten",
       "ja": {
         "word": "子猫",
-        "explanation": "「새끼고양이」は日本語で「子猫」。"
+        "explanation": "「새끼고양이」は日本語で「子猫」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -4833,7 +4929,9 @@
       "en": "hamster",
       "ja": {
         "word": "ハムスター",
-        "explanation": "「햄스터」は日本語で「ハムスター」。"
+        "explanation": "「햄스터」は日本語で「ハムスター」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -4861,7 +4959,9 @@
       "en": "parrot",
       "ja": {
         "word": "オウム",
-        "explanation": "「앵무새」は日本語で「オウム」。"
+        "explanation": "「앵무새」は日本語で「オウム」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
