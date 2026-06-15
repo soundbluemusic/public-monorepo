@@ -3453,6 +3453,21 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "クリムゾン",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "carmesí",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "carmesim",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -4542,6 +4557,21 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "珊瑚色",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "coral",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "coral",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -5147,6 +5177,21 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "金色",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "dorado",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "dourado",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -22934,6 +22979,21 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "ルビー",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "rubí",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "rubi",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -23055,6 +23115,21 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "サファイア",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "zafiro",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "safira",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -23176,6 +23251,21 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "エメラルド",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "esmeralda",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "esmeralda",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -23297,6 +23387,21 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "アメジスト",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "amatista",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "ametista",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -23418,6 +23523,21 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "トパーズ",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "topacio",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "topázio",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -23539,6 +23659,21 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "真珠",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "perla",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "pérola",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -23660,6 +23795,21 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "オニキス",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "ónix",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "ônix",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -23781,6 +23931,21 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "翡翠",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "jade",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "jade",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -23902,6 +24067,21 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "オパール",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "ópalo",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "opala",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -24023,6 +24203,21 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "ガーネット",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "granate",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "granada",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -24144,6 +24339,21 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "琥珀",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "ámbar",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "âmbar",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -24265,6 +24475,21 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "黒曜石",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "obsidiana",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "obsidiana",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -24386,6 +24611,21 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "ラピスラズリ",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "lapislázuli",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "lápis-lazúli",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -24507,6 +24747,21 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "孔雀石",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "malaquita",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "malaquita",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -24628,6 +24883,21 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "ムーンストーン",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "piedra lunar",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "pedra da lua",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -24749,6 +25019,21 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "ペリドット",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "peridoto",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "peridoto",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -24870,6 +25155,21 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "ローズゴールド",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "oro rosa",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "ouro rosa",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -24991,6 +25291,21 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "ブロンズ",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "bronce",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "bronze",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -25112,6 +25427,21 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "銅色",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "cobre",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "cobre",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -25233,6 +25563,21 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "プラチナ",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "platino",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "platina",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -25354,6 +25699,21 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "真鍮",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "latón",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "latão",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -25475,6 +25835,21 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "ピューター",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "peltre",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "peltre",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -25596,6 +25971,21 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "クロム",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "cromo",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "cromo",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -25717,6 +26107,21 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "チタン",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "titanio",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "titânio",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -27895,6 +28300,21 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "アボカド",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "aguacate",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "abacate",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -28137,6 +28557,21 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "キャラメル",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "caramelo",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "caramelo",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -28258,6 +28693,21 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "シャンパン",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "champán",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "champanhe",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -28379,6 +28829,21 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "チェリー",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "cereza",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "cereja",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -28500,6 +28965,21 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "栗色",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "castaño",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "castanho",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -28621,6 +29101,21 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "シナモン",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "canela",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "canela",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -28742,6 +29237,21 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "ココナッツ",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "coco",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "coco",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -28863,6 +29373,21 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "コーヒー",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "café",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "café",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -29105,6 +29630,21 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "クリーム色",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "crema",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "creme",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -29226,6 +29766,21 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "茄子色",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "berenjena",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "berinjela",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -29347,6 +29902,21 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "エスプレッソ",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "café exprés",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "café expresso",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -29468,6 +30038,21 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "生姜色",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "jengibre",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "gengibre",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -29589,6 +30174,21 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "葡萄色",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "uva",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "uva",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -29710,6 +30310,21 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "蜂蜜色",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "miel",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "mel",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -29831,6 +30446,21 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "レモン色",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "limón",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "limão",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -29952,6 +30582,21 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "マンゴー",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "mango",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "manga",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -30073,6 +30718,21 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "メロン",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "melón",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "melão",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -30194,6 +30854,21 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "ミント",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "menta",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "menta",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -30315,6 +30990,21 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "モカ",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "moca",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "moca",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -30436,6 +31126,21 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "マスタード",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "mostaza",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "mostarda",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -30557,6 +31262,21 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "パプリカ",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "pimentón",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "páprica",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -30678,6 +31398,21 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "桃色",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "melocotón",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "pêssego",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -30799,6 +31534,21 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "洋梨色",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "pera",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "pera",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -31041,6 +31791,21 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "ピスタチオ",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "pistacho",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "pistache",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -31162,6 +31927,21 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "すもも色",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "ciruela",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "ameixa",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -31283,6 +32063,21 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "かぼちゃ色",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "calabaza",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "abóbora",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -31404,6 +32199,21 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "ラズベリー",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "frambuesa",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "framboesa",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -31525,6 +32335,21 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "サフラン",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "azafrán",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "açafrão",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -31646,6 +32471,21 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "いちご色",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "fresa",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "morango",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -31767,6 +32607,21 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "みかん色",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "mandarina",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "tangerina",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -31888,6 +32743,21 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "バニラ",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "vainilla",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "baunilha",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -32009,6 +32879,21 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "スイカ色",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "sandía",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "melancia",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -32130,6 +33015,21 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "ワインレッド",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "vino",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "vinho",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
