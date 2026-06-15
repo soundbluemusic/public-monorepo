@@ -119,6 +119,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "春",
+        "reading": "はる",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "primavera",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "primavera",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -246,6 +262,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "夏",
+        "reading": "なつ",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "verano",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "verão",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -373,6 +405,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "秋",
+        "reading": "あき",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "otoño",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "outono",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -500,6 +548,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "冬",
+        "reading": "ふゆ",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "invierno",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "inverno",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -4950,6 +5014,21 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "クリスマス",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "Navidad",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "Natal",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -6091,6 +6170,21 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "バレンタインデー",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "San Valentín",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "Dia dos Namorados",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {

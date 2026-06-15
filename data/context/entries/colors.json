@@ -27073,6 +27073,21 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "砂色",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "arena",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "areia",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
