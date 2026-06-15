@@ -90,6 +90,10 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "一つ",
+        "explanation": "「하나」は日本語で「一つ」。"
       }
     },
     "pronunciation": {
@@ -188,6 +192,10 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "二つ",
+        "explanation": "「둘」は日本語で「二つ」。"
       }
     },
     "pronunciation": {
@@ -286,6 +294,10 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "三つ",
+        "explanation": "「셋」は日本語で「三つ」。"
       }
     },
     "pronunciation": {
@@ -384,6 +396,10 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "四つ",
+        "explanation": "「넷」は日本語で「四つ」。"
       }
     },
     "pronunciation": {
@@ -482,6 +498,10 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "五つ",
+        "explanation": "「다섯」は日本語で「五つ」。"
       }
     },
     "pronunciation": {
@@ -580,6 +600,10 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "六つ",
+        "explanation": "「여섯」は日本語で「六つ」。"
       }
     },
     "pronunciation": {
@@ -678,6 +702,10 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "七つ",
+        "explanation": "「일곱」は日本語で「七つ」。"
       }
     },
     "pronunciation": {
@@ -776,6 +804,10 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "八つ",
+        "explanation": "「여덟」は日本語で「八つ」。"
       }
     },
     "pronunciation": {
@@ -874,6 +906,10 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "九つ",
+        "explanation": "「아홉」は日本語で「九つ」。"
       }
     },
     "pronunciation": {
@@ -972,6 +1008,10 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "十",
+        "explanation": "「열」は日本語で「十」。"
       }
     },
     "pronunciation": {
@@ -1070,6 +1110,10 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "一",
+        "explanation": "「일」は日本語で「一」。"
       }
     },
     "pronunciation": {
@@ -1168,6 +1212,10 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "二",
+        "explanation": "「이」は日本語で「二」。"
       }
     },
     "pronunciation": {
@@ -1266,6 +1314,10 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "三",
+        "explanation": "「삼」は日本語で「三」。"
       }
     },
     "pronunciation": {
@@ -1364,6 +1416,10 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "四",
+        "explanation": "「사」は日本語で「四」。"
       }
     },
     "pronunciation": {
@@ -1462,6 +1518,10 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "五",
+        "explanation": "「오」は日本語で「五」。"
       }
     },
     "pronunciation": {
@@ -1560,6 +1620,10 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "六",
+        "explanation": "「육」は日本語で「六」。"
       }
     },
     "pronunciation": {
@@ -1658,6 +1722,10 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "七",
+        "explanation": "「칠」は日本語で「七」。"
       }
     },
     "pronunciation": {
@@ -1756,6 +1824,10 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "八",
+        "explanation": "「팔」は日本語で「八」。"
       }
     },
     "pronunciation": {
@@ -1854,6 +1926,10 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "九",
+        "explanation": "「구」は日本語で「九」。"
       }
     },
     "pronunciation": {
@@ -1952,6 +2028,10 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "十",
+        "explanation": "「십」は日本語で「十」。"
       }
     },
     "pronunciation": {
@@ -2050,6 +2130,10 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "百",
+        "explanation": "「백」は日本語で「百」。"
       }
     },
     "pronunciation": {
@@ -2148,6 +2232,10 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "千",
+        "explanation": "「천」は日本語で「千」。"
       }
     },
     "pronunciation": {
@@ -2246,6 +2334,10 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "万",
+        "explanation": "「만」は日本語で「万」。"
       }
     },
     "pronunciation": {
@@ -2344,6 +2436,10 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "零",
+        "explanation": "「영」は日本語で「零」。"
       }
     },
     "pronunciation": {
@@ -2442,6 +2538,10 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "半分",
+        "explanation": "「반」は日本語で「半分」。"
       }
     },
     "pronunciation": {
@@ -2540,6 +2640,10 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "最初",
+        "explanation": "「첫」は日本語で「最初」。"
       }
     },
     "pronunciation": {
@@ -2638,6 +2742,10 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "二番目",
+        "explanation": "「두 번째」は日本語で「二番目」。"
       }
     },
     "pronunciation": {
@@ -2736,6 +2844,10 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "最後",
+        "explanation": "「마지막」は日本語で「最後」。"
       }
     },
     "pronunciation": {
@@ -2834,6 +2946,10 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "いくつ",
+        "explanation": "「몇」は日本語で「いくつ」。"
       }
     },
     "pronunciation": {
@@ -2932,6 +3048,10 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "全部",
+        "explanation": "「모두」は日本語で「全部」。"
       }
     },
     "pronunciation": {
