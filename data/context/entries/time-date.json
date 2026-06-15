@@ -90,6 +90,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "今日",
+        "reading": "きょう",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "hoy",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "hoje",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -188,6 +204,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "明日",
+        "reading": "あした",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "mañana",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "amanhã",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -286,6 +318,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "昨日",
+        "reading": "きのう",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "ayer",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "ontem",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -384,6 +432,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "朝",
+        "reading": "あさ",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "mañana",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "manhã",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -482,6 +546,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "夕方",
+        "reading": "ゆうがた",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "tarde",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "tarde",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -580,6 +660,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "夜",
+        "reading": "よる",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "noche",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "noite",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -678,6 +774,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "時",
+        "reading": "じ",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "hora",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "hora",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -776,6 +888,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "分",
+        "reading": "ふん",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "minuto",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "minuto",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -874,6 +1002,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "秒",
+        "reading": "びょう",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "segundo",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "segundo",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -972,6 +1116,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "月",
+        "reading": "つき",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "mes",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "mês",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -1070,6 +1230,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "日",
+        "reading": "ひ",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "día",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "dia",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -1168,6 +1344,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "年",
+        "reading": "とし",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "año",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "ano",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -1266,6 +1458,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "週末",
+        "reading": "しゅうまつ",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "fin de semana",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "fim de semana",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -1364,6 +1572,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "平日",
+        "reading": "へいじつ",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "día laborable",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "dia útil",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -1462,6 +1686,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "月曜日",
+        "reading": "げつようび",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "lunes",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "segunda-feira",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -1560,6 +1800,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "火曜日",
+        "reading": "かようび",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "martes",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "terça-feira",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -1658,6 +1914,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "水曜日",
+        "reading": "すいようび",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "miércoles",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "quarta-feira",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -1756,6 +2028,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "木曜日",
+        "reading": "もくようび",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "jueves",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "quinta-feira",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -1854,6 +2142,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "金曜日",
+        "reading": "きんようび",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "viernes",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "sexta-feira",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -1952,6 +2256,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "土曜日",
+        "reading": "どようび",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "sábado",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "sábado",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -2050,6 +2370,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "日曜日",
+        "reading": "にちようび",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "domingo",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "domingo",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -2148,6 +2484,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "今",
+        "reading": "いま",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "ahora",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "agora",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -2246,6 +2598,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "後で",
+        "reading": "あとで",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "más tarde",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "mais tarde",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -2442,6 +2810,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "以前",
+        "reading": "いぜん",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "antes",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "antes",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -2540,6 +2924,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "以後",
+        "reading": "いご",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "después",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "depois",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -2638,6 +3038,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "休み",
+        "reading": "やすみ",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "vacaciones",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "férias",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -2736,6 +3152,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "休日",
+        "reading": "きゅうじつ",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "día festivo",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "feriado",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -2834,6 +3266,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "記念日",
+        "reading": "きねんび",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "aniversario",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "aniversário",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -2932,6 +3380,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "新年",
+        "reading": "しんねん",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "Año Nuevo",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "Ano Novo",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -3030,6 +3494,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "誕生日",
+        "reading": "たんじょうび",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "cumpleaños",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "aniversário",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -3128,6 +3608,21 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "カレンダー",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "calendario",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "calendário",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -3226,6 +3721,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "時計",
+        "reading": "とけい",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "reloj",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "relógio",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -3324,6 +3835,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "午前",
+        "reading": "ごぜん",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "mañana",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "manhã",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -3422,6 +3949,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "午後",
+        "reading": "ごご",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "tarde",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "tarde",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -3520,6 +4063,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "正午",
+        "reading": "しょうご",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "mediodía",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "meio-dia",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -3618,6 +4177,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "真夜中",
+        "reading": "まよなか",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "medianoche",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "meia-noite",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -3716,6 +4291,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "毎日",
+        "reading": "まいにち",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "cada día",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "todo dia",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -3814,6 +4405,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "毎週",
+        "reading": "まいしゅう",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "cada semana",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "toda semana",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -3912,6 +4519,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "毎月",
+        "reading": "まいつき",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "cada mes",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "todo mês",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -4010,6 +4633,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "毎年",
+        "reading": "まいとし",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "cada año",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "todo ano",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -4108,6 +4747,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "一週間",
+        "reading": "いっしゅうかん",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "una semana",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "uma semana",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -4206,6 +4861,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "一ヶ月",
+        "reading": "いっかげつ",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "un mes",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "um mês",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -4304,6 +4975,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "一年",
+        "reading": "いちねん",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "un año",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "um ano",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -4402,6 +5089,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "過去",
+        "reading": "かこ",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "pasado",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "passado",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -4500,6 +5203,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "現在",
+        "reading": "げんざい",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "presente",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "presente",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -4598,6 +5317,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "未来",
+        "reading": "みらい",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "futuro",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "futuro",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -4794,6 +5529,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "半年",
+        "reading": "はんとし",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "medio año",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "meio ano",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -4892,6 +5643,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "十日",
+        "reading": "とおか",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "diez días",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "dez dias",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
