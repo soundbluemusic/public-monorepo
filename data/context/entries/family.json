@@ -90,6 +90,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "家族",
+        "reading": "かぞく",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "familia",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "família",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -188,6 +204,21 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "ママ",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "mamá",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "mãe",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -286,6 +317,21 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "パパ",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "papá",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "pai",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -384,6 +430,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "母",
+        "reading": "はは",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "madre",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "mãe",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -482,6 +544,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "父",
+        "reading": "ちち",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "padre",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "pai",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -580,6 +658,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "両親",
+        "reading": "りょうしん",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "padres",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "pais",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -678,6 +772,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "兄",
+        "reading": "あに",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "hermano mayor",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "irmão mais velho",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -776,6 +886,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "姉",
+        "reading": "あね",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "hermana mayor",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "irmã mais velha",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -874,6 +1000,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "兄",
+        "reading": "あに",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "hermano mayor",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "irmão mais velho",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -972,6 +1114,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "姉",
+        "reading": "あね",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "hermana mayor",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "irmã mais velha",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -1168,6 +1326,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "弟",
+        "reading": "おとうと",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "hermano menor",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "irmão mais novo",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -1266,6 +1440,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "妹",
+        "reading": "いもうと",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "hermana menor",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "irmã mais nova",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -1364,6 +1554,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "祖母",
+        "reading": "そぼ",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "abuela",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "avó",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -1462,6 +1668,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "祖父",
+        "reading": "そふ",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "abuelo",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "avô",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -1560,6 +1782,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "祖父母",
+        "reading": "そふぼ",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "abuelos",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "avós",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -1658,6 +1896,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "息子",
+        "reading": "むすこ",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "hijo",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "filho",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -1756,6 +2010,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "娘",
+        "reading": "むすめ",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "hija",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "filha",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -1854,6 +2124,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "子供",
+        "reading": "こども",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "hijos",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "filhos",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -1952,6 +2238,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "孫娘",
+        "reading": "まごむすめ",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "nieta",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "neta",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -2050,6 +2352,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "孫",
+        "reading": "まご",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "nieto",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "neto",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -2148,6 +2466,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "叔父",
+        "reading": "おじ",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "tío",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "tio",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -2246,6 +2580,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "叔母",
+        "reading": "おば",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "tía",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "tia",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -2344,6 +2694,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "叔母",
+        "reading": "おば",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "tía",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "tia",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -2442,6 +2808,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "叔父",
+        "reading": "おじ",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "tío",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "tio",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -2540,6 +2922,21 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "いとこ",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "primo",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "primo",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -2736,6 +3133,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "夫",
+        "reading": "おっと",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "esposo",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "marido",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -2834,6 +3247,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "妻",
+        "reading": "つま",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "esposa",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "esposa",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -2932,6 +3361,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "夫婦",
+        "reading": "ふうふ",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "matrimonio",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "casal",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -3030,6 +3475,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "義両親",
+        "reading": "ぎりょうしん",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "suegros",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "sogros",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -3128,6 +3589,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "義母",
+        "reading": "ぎぼ",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "suegra",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "sogra",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -3226,6 +3703,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "義父",
+        "reading": "ぎふ",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "suegro",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "sogro",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -3324,6 +3817,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "嫁",
+        "reading": "よめ",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "nuera",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "nora",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -3422,6 +3931,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "婿",
+        "reading": "むこ",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "yerno",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "genro",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -3520,6 +4045,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "親戚",
+        "reading": "しんせき",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "parientes",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "parentes",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -3618,6 +4159,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "結婚",
+        "reading": "けっこん",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "matrimonio",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "casamento",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -3716,6 +4273,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "離婚",
+        "reading": "りこん",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "divorcio",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "divórcio",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -3814,6 +4387,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "友達",
+        "reading": "ともだち",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "amigo",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "amigo",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -4010,6 +4599,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "彼氏",
+        "reading": "かれし",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "novio",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "namorado",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -4108,6 +4713,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "彼女",
+        "reading": "かのじょ",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "novia",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "namorada",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -4500,6 +5121,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "隣人",
+        "reading": "りんじん",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "vecino",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "vizinho",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -4696,6 +5333,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "兄弟姉妹",
+        "reading": "きょうだいしまい",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "hermanos",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "irmãos",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -4794,6 +5447,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "一人っ子",
+        "reading": "ひとりっこ",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "hijo único",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "filho único",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -4892,6 +5561,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "双子",
+        "reading": "ふたご",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "gemelos",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "gêmeos",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {

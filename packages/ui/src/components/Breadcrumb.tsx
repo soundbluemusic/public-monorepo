@@ -132,7 +132,7 @@ export const Breadcrumb = memo(function Breadcrumb({
           const isFirst = index === 0;
 
           return (
-            <li key={`${item.label}-${index}`} className="flex items-center gap-1">
+            <li key={item.href ?? item.label} className="flex items-center gap-1">
               {/* 구분자 (첫 번째 제외) */}
               {!isFirst && (separator || defaultSeparator)}
 

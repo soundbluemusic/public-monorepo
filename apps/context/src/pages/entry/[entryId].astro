@@ -1,8 +1,10 @@
 ---
 import { env } from 'cloudflare:workers';
 import { getCategoryById } from '../../../app/data/categories';
+import { buildTargets } from '../../../app/data/target-languages';
 import { getEntryByIdFromD1, getHomonymsByKoreanFromD1 } from '../../../app/services/d1';
 import AppShell from '../../components/AppShell.astro';
+import MappingCard from '../../components/MappingCard.astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
 const { entryId } = Astro.params;
@@ -15,6 +17,7 @@ if (!entry) return Astro.redirect('/404', 404);
 const homonyms = await getHomonymsByKoreanFromD1(db, entry.korean).catch(() => []);
 
 const category = getCategoryById(entry.categoryId);
+const targets = buildTargets(entry.targetWords, 'en');
 const BASE_URL = 'https://context.soundbluemusic.com';
 const difficultyColors: Record<string, string> = {
   beginner: 'bg-green-100 text-green-800 dark:bg-green-900/50 dark:text-green-200',
@@ -34,9 +37,12 @@ const otherHomonyms = homonyms.filter((h) => h.id !== entry.id);
   <AppShell locale="en">
     <article>
       <header class="mb-8">
-        <h1 class="text-3xl font-bold text-(--text-primary) mb-1">{entry.korean}</h1>
-        <p class="text-xl text-(--accent-primary) font-medium mb-1">"{entry.translation.word}"</p>
-        <p class="text-sm text-(--text-tertiary) mb-3">{entry.romanization}</p>
+        <MappingCard
+          korean={entry.korean}
+          romanization={entry.romanization}
+          leftLabel="Korean"
+          targets={targets}
+        />
         <div class="flex items-center gap-2 flex-wrap">
           {category && (
             <a

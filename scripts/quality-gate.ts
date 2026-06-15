@@ -13,6 +13,7 @@
  */
 
 import { type ChildProcess, spawn } from 'node:child_process';
+import { existsSync } from 'node:fs';
 
 interface CheckResult {
   name: string;
@@ -27,6 +28,8 @@ interface CheckConfig {
   command: string;
   args: string[];
   skipInQuick?: boolean;
+  /** 실행 전 전제 조건 검사. ok=false면 검사를 skip 처리 (예: 빌드 산출물 필요). */
+  precondition?: () => { ok: boolean; reason: string };
   parser?: (output: string) => string[];
 }
 
@@ -35,6 +38,16 @@ const checks: CheckConfig[] = [
     name: 'SSR Check',
     command: 'tsx',
     args: ['scripts/verify-html.ts'],
+    precondition: () => {
+      const builtDirs = ['apps/context/dist', 'apps/permissive/dist', 'apps/roots/dist'];
+      const missing = builtDirs.filter((d) => !existsSync(d));
+      return missing.length === 0
+        ? { ok: true, reason: '' }
+        : {
+            ok: false,
+            reason: `빌드 산출물 없음 (${missing.length}/3 앱). 'pnpm build' 후 검사 가능.`,
+          };
+    },
     parser: (output) => {
       const errors: string[] = [];
       if (output.includes('❌')) {
@@ -102,6 +115,22 @@ const checks: CheckConfig[] = [
 function runCheck(config: CheckConfig): Promise<CheckResult> {
   return new Promise((resolve) => {
     const start = Date.now();
+
+    // 전제 조건 미충족 시 검사를 건너뜀 (실패 아님)
+    if (config.precondition) {
+      const pre = config.precondition();
+      if (!pre.ok) {
+        resolve({
+          name: config.name,
+          status: 'skip',
+          duration: Date.now() - start,
+          output: pre.reason,
+          errors: [],
+        });
+        return;
+      }
+    }
+
     let output = '';
 
     const proc: ChildProcess = spawn(config.command, config.args, {
@@ -173,6 +202,10 @@ async function main() {
   for (const result of results) {
     const icon = result.status === 'pass' ? '✅' : result.status === 'skip' ? '⏭️' : '❌';
     console.log(`${icon} ${result.name} (${formatDuration(result.duration)})`);
+
+    if (result.status === 'skip' && result.output) {
+      console.log(`   └─ ${result.output}`);
+    }
 
     if (result.status === 'fail') {
       allPassed = false;

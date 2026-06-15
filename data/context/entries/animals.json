@@ -118,6 +118,12 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "犬",
+        "explanation": "「개」は日本語で「犬」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -244,6 +250,12 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "猫",
+        "explanation": "「고양이」は日本語で「猫」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -370,6 +382,12 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "鳥",
+        "explanation": "「새」は日本語で「鳥」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -496,6 +514,12 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "魚",
+        "explanation": "「물고기」は日本語で「魚」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -622,6 +646,12 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "うさぎ",
+        "explanation": "「토끼」は日本語で「うさぎ」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -749,6 +779,12 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "牛",
+        "explanation": "「소」は日本語で「牛」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -875,6 +911,12 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "馬",
+        "explanation": "「말」は日本語で「馬」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -1001,6 +1043,12 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "豚",
+        "explanation": "「돼지」は日本語で「豚」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -1127,6 +1175,12 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "にわとり",
+        "explanation": "「닭」は日本語で「にわとり」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -1252,6 +1306,12 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "羊",
+        "explanation": "「양」は日本語で「羊」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -1379,6 +1439,12 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "虎",
+        "explanation": "「호랑이」は日本語で「虎」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -1505,6 +1571,12 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "竜",
+        "explanation": "「용」は日本語で「竜」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -1631,6 +1703,12 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "蛇",
+        "explanation": "「뱀」は日本語で「蛇」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -1757,6 +1835,12 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "猿",
+        "explanation": "「원숭이」は日本語で「猿」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -1882,6 +1966,12 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "ねずみ",
+        "explanation": "「쥐」は日本語で「ねずみ」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -2008,6 +2098,12 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "ライオン",
+        "explanation": "「사자」は日本語で「ライオン」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -2134,6 +2230,12 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "象",
+        "explanation": "「코끼리」は日本語で「象」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -2260,6 +2362,12 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "熊",
+        "explanation": "「곰」は日本語で「熊」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -2386,6 +2494,12 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "狼",
+        "explanation": "「늑대」は日本語で「狼」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -2512,6 +2626,12 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "狐",
+        "explanation": "「여우」は日本語で「狐」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -2638,6 +2758,12 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "鹿",
+        "explanation": "「사슴」は日本語で「鹿」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -2765,6 +2891,12 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "鷲",
+        "explanation": "「독수리」は日本語で「鷲」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -2891,6 +3023,12 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "カラス",
+        "explanation": "「까마귀」は日本語で「カラス」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -3017,6 +3155,12 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "すずめ",
+        "explanation": "「참새」は日本語で「すずめ」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -3143,6 +3287,12 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "はと",
+        "explanation": "「비둘기」は日本語で「はと」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -3269,6 +3419,12 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "カエル",
+        "explanation": "「개구리」は日本語で「カエル」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -3395,6 +3551,12 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "カメ",
+        "explanation": "「거북이」は日本語で「カメ」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -3521,6 +3683,12 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "蝶",
+        "explanation": "「나비」は日本語で「蝶」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -3647,6 +3815,12 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "ハチ",
+        "explanation": "「벌」は日本語で「ハチ」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -3773,6 +3947,12 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "アリ",
+        "explanation": "「개미」は日本語で「アリ」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -3899,6 +4079,12 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "イルカ",
+        "explanation": "「돌고래」は日本語で「イルカ」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -4025,6 +4211,12 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "サメ",
+        "explanation": "「상어」は日本語で「サメ」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -4151,6 +4343,12 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "クジラ",
+        "explanation": "「고래」は日本語で「クジラ」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -4277,6 +4475,12 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "アヒル",
+        "explanation": "「오리」は日本語で「アヒル」。",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -4302,7 +4506,13 @@
     "hasDialogue": true,
     "translations": {
       "ko": "펭귄",
-      "en": "penguin"
+      "en": "penguin",
+      "ja": {
+        "word": "ペンギン",
+        "explanation": "「펭귄」は日本語で「ペンギン」。",
+        "verified": true,
+        "source": "manual"
+      }
     },
     "pronunciation": {
       "korean": "펭귄",
@@ -4326,7 +4536,13 @@
     "hasDialogue": true,
     "translations": {
       "ko": "기린",
-      "en": "giraffe"
+      "en": "giraffe",
+      "ja": {
+        "word": "キリン",
+        "explanation": "「기린」は日本語で「キリン」。",
+        "verified": true,
+        "source": "manual"
+      }
     },
     "pronunciation": {
       "korean": "기린",
@@ -4350,7 +4566,13 @@
     "hasDialogue": true,
     "translations": {
       "ko": "하마",
-      "en": "hippo"
+      "en": "hippo",
+      "ja": {
+        "word": "カバ",
+        "explanation": "「하마」は日本語で「カバ」。",
+        "verified": true,
+        "source": "manual"
+      }
     },
     "pronunciation": {
       "korean": "하마",
@@ -4374,7 +4596,13 @@
     "hasDialogue": true,
     "translations": {
       "ko": "악어",
-      "en": "crocodile"
+      "en": "crocodile",
+      "ja": {
+        "word": "ワニ",
+        "explanation": "「악어」は日本語で「ワニ」。",
+        "verified": true,
+        "source": "manual"
+      }
     },
     "pronunciation": {
       "korean": "아거",
@@ -4398,7 +4626,13 @@
     "hasDialogue": true,
     "translations": {
       "ko": "다람쥐",
-      "en": "squirrel"
+      "en": "squirrel",
+      "ja": {
+        "word": "リス",
+        "explanation": "「다람쥐」は日本語で「リス」。",
+        "verified": true,
+        "source": "manual"
+      }
     },
     "pronunciation": {
       "korean": "다람쥐",
@@ -4422,7 +4656,13 @@
     "hasDialogue": true,
     "translations": {
       "ko": "두더지",
-      "en": "mole"
+      "en": "mole",
+      "ja": {
+        "word": "モグラ",
+        "explanation": "「두더지」は日本語で「モグラ」。",
+        "verified": true,
+        "source": "manual"
+      }
     },
     "pronunciation": {
       "korean": "두더지",
@@ -4446,7 +4686,13 @@
     "hasDialogue": true,
     "translations": {
       "ko": "박쥐",
-      "en": "bat"
+      "en": "bat",
+      "ja": {
+        "word": "コウモリ",
+        "explanation": "「박쥐」は日本語で「コウモリ」。",
+        "verified": true,
+        "source": "manual"
+      }
     },
     "pronunciation": {
       "korean": "박쥐",
@@ -4470,7 +4716,13 @@
     "hasDialogue": true,
     "translations": {
       "ko": "매",
-      "en": "hawk"
+      "en": "hawk",
+      "ja": {
+        "word": "タカ",
+        "explanation": "「매」は日本語で「タカ」。",
+        "verified": true,
+        "source": "manual"
+      }
     },
     "pronunciation": {
       "korean": "매",
@@ -4494,7 +4746,13 @@
     "hasDialogue": true,
     "translations": {
       "ko": "부엉이",
-      "en": "owl"
+      "en": "owl",
+      "ja": {
+        "word": "フクロウ",
+        "explanation": "「부엉이」は日本語で「フクロウ」。",
+        "verified": true,
+        "source": "manual"
+      }
     },
     "pronunciation": {
       "korean": "부엉이",
@@ -4518,7 +4776,13 @@
     "hasDialogue": true,
     "translations": {
       "ko": "잠자리",
-      "en": "dragonfly"
+      "en": "dragonfly",
+      "ja": {
+        "word": "トンボ",
+        "explanation": "「잠자리」は日本語で「トンボ」。",
+        "verified": true,
+        "source": "manual"
+      }
     },
     "pronunciation": {
       "korean": "잠자리",
@@ -4542,7 +4806,13 @@
     "hasDialogue": true,
     "translations": {
       "ko": "무당벌레",
-      "en": "ladybug"
+      "en": "ladybug",
+      "ja": {
+        "word": "テントウムシ",
+        "explanation": "「무당벌레」は日本語で「テントウムシ」。",
+        "verified": true,
+        "source": "manual"
+      }
     },
     "pronunciation": {
       "korean": "무당벌레",
@@ -4566,7 +4836,13 @@
     "hasDialogue": true,
     "translations": {
       "ko": "지렁이",
-      "en": "earthworm"
+      "en": "earthworm",
+      "ja": {
+        "word": "ミミズ",
+        "explanation": "「지렁이」は日本語で「ミミズ」。",
+        "verified": true,
+        "source": "manual"
+      }
     },
     "pronunciation": {
       "korean": "지렁이",
@@ -4590,7 +4866,13 @@
     "hasDialogue": true,
     "translations": {
       "ko": "강아지",
-      "en": "puppy"
+      "en": "puppy",
+      "ja": {
+        "word": "子犬",
+        "explanation": "「강아지」は日本語で「子犬」。",
+        "verified": true,
+        "source": "manual"
+      }
     },
     "pronunciation": {
       "korean": "강아지",
@@ -4614,7 +4896,13 @@
     "hasDialogue": true,
     "translations": {
       "ko": "새끼고양이",
-      "en": "kitten"
+      "en": "kitten",
+      "ja": {
+        "word": "子猫",
+        "explanation": "「새끼고양이」は日本語で「子猫」。",
+        "verified": true,
+        "source": "manual"
+      }
     },
     "pronunciation": {
       "korean": "새끼고양이",
@@ -4638,7 +4926,13 @@
     "hasDialogue": true,
     "translations": {
       "ko": "햄스터",
-      "en": "hamster"
+      "en": "hamster",
+      "ja": {
+        "word": "ハムスター",
+        "explanation": "「햄스터」は日本語で「ハムスター」。",
+        "verified": true,
+        "source": "manual"
+      }
     },
     "pronunciation": {
       "korean": "햄스터",
@@ -4662,7 +4956,13 @@
     "hasDialogue": true,
     "translations": {
       "ko": "앵무새",
-      "en": "parrot"
+      "en": "parrot",
+      "ja": {
+        "word": "オウム",
+        "explanation": "「앵무새」は日本語で「オウム」。",
+        "verified": true,
+        "source": "manual"
+      }
     },
     "pronunciation": {
       "korean": "앵무새",

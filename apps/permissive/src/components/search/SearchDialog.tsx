@@ -230,11 +230,6 @@ export default function SearchDialog({
     [visibleResults, selectedIdx, locale],
   );
 
-  /** 검색어가 바뀌면 selectedIdx 리셋 */
-  useEffect(() => {
-    setSelectedIdx(0);
-  }, [query, activeCategory, sortMode]);
-
   /** 선택된 항목이 화면에 보이도록 스크롤 */
   useEffect(() => {
     if (!resultsRef.current) return;
@@ -249,16 +244,21 @@ export default function SearchDialog({
   if (!open) return null;
 
   return (
-    <div
-      role="dialog"
-      aria-modal="true"
-      aria-label={locale === 'ko' ? '라이브러리 검색' : 'Search libraries'}
-      className="fixed inset-0 z-modal flex items-start justify-center pt-16 px-4 bg-black/50"
-      onClick={(e) => {
-        if (e.target === e.currentTarget) setOpen(false);
-      }}
-    >
-      <div className="w-full max-w-2xl bg-(--bg-elevated) border border-(--border-primary) rounded-2xl shadow-2xl overflow-hidden flex flex-col max-h-[80vh]">
+    <div className="fixed inset-0 z-modal flex items-start justify-center pt-16 px-4">
+      {/* 백드롭: 마우스로 바깥 클릭 시 닫기. 키보드 사용자는 Esc(전역 핸들러)로 닫음. */}
+      <button
+        type="button"
+        aria-label={labels.close}
+        tabIndex={-1}
+        onClick={() => setOpen(false)}
+        className="absolute inset-0 bg-black/50 cursor-default"
+      />
+      <div
+        role="dialog"
+        aria-modal="true"
+        aria-label={locale === 'ko' ? '라이브러리 검색' : 'Search libraries'}
+        className="relative w-full max-w-2xl bg-(--bg-elevated) border border-(--border-primary) rounded-2xl shadow-2xl overflow-hidden flex flex-col max-h-[80vh]"
+      >
         {/* Search input */}
         <div className="flex items-center gap-2 px-4 py-3 border-b border-(--border-primary)">
           <svg
@@ -281,7 +281,10 @@ export default function SearchDialog({
             ref={inputRef}
             type="search"
             value={query}
-            onChange={(e) => setQuery(e.target.value)}
+            onChange={(e) => {
+              setQuery(e.target.value);
+              setSelectedIdx(0);
+            }}
             onKeyDown={onKeyNav}
             placeholder={labels.placeholder}
             className="flex-1 bg-transparent text-(--text-primary) placeholder:text-(--text-tertiary) focus:outline-none"
@@ -302,7 +305,10 @@ export default function SearchDialog({
           <div className="flex items-center gap-2 px-4 py-2 border-b border-(--border-primary) overflow-x-auto scrollbar-none">
             <select
               value={activeCategory}
-              onChange={(e) => setActiveCategory(e.target.value)}
+              onChange={(e) => {
+                setActiveCategory(e.target.value);
+                setSelectedIdx(0);
+              }}
               className="text-xs bg-(--bg-tertiary) text-(--text-secondary) rounded px-2 py-1 border border-(--border-primary)"
               aria-label={labels.allCategories}
             >
@@ -315,7 +321,10 @@ export default function SearchDialog({
             </select>
             <select
               value={sortMode}
-              onChange={(e) => setSortMode(e.target.value as SortMode)}
+              onChange={(e) => {
+                setSortMode(e.target.value as SortMode);
+                setSelectedIdx(0);
+              }}
               className="text-xs bg-(--bg-tertiary) text-(--text-secondary) rounded px-2 py-1 border border-(--border-primary)"
               aria-label="Sort"
             >
@@ -342,39 +351,38 @@ export default function SearchDialog({
             <p className="px-4 py-6 text-sm text-(--text-tertiary)">{labels.empty}</p>
           )}
           {visibleResults.length > 0 && (
-            <ul ref={resultsRef} role="listbox" className="py-1">
+            <ul ref={resultsRef} className="py-1">
               {visibleResults.map((item, idx) => (
-                <li
-                  key={item.id}
-                  data-result-idx={idx}
-                  role="option"
-                  aria-selected={idx === selectedIdx}
-                  className={`px-4 py-2.5 flex items-start gap-3 cursor-pointer ${
-                    idx === selectedIdx ? 'bg-(--bg-tertiary)' : 'hover:bg-(--bg-tertiary)/50'
-                  }`}
-                  onMouseEnter={() => setSelectedIdx(idx)}
-                  onClick={() => {
-                    window.location.href = itemToHref(item, locale);
-                  }}
-                >
-                  <span
-                    className={`text-xs font-medium px-1.5 py-0.5 rounded shrink-0 mt-0.5 ${
-                      item.type === 'library'
-                        ? 'bg-blue-500/10 text-blue-500'
-                        : 'bg-purple-500/10 text-purple-500'
+                <li key={item.id} data-result-idx={idx}>
+                  <a
+                    href={itemToHref(item, locale)}
+                    aria-current={idx === selectedIdx ? 'true' : undefined}
+                    onMouseEnter={() => setSelectedIdx(idx)}
+                    className={`px-4 py-2.5 flex items-start gap-3 no-underline ${
+                      idx === selectedIdx ? 'bg-(--bg-tertiary)' : 'hover:bg-(--bg-tertiary)/50'
                     }`}
                   >
-                    {item.type === 'library' ? labels.library : labels.api}
-                  </span>
-                  <div className="flex-1 min-w-0">
-                    <p className="font-medium text-(--text-primary) truncate">{item.searchName}</p>
-                    <p className="text-xs text-(--text-secondary) line-clamp-1 mt-0.5">
-                      {item.searchDesc}
-                    </p>
-                  </div>
-                  <span className="text-xs text-(--text-tertiary) shrink-0 mt-1 hidden sm:block">
-                    {item.field}
-                  </span>
+                    <span
+                      className={`text-xs font-medium px-1.5 py-0.5 rounded shrink-0 mt-0.5 ${
+                        item.type === 'library'
+                          ? 'bg-blue-500/10 text-blue-500'
+                          : 'bg-purple-500/10 text-purple-500'
+                      }`}
+                    >
+                      {item.type === 'library' ? labels.library : labels.api}
+                    </span>
+                    <div className="flex-1 min-w-0">
+                      <p className="font-medium text-(--text-primary) truncate">
+                        {item.searchName}
+                      </p>
+                      <p className="text-xs text-(--text-secondary) line-clamp-1 mt-0.5">
+                        {item.searchDesc}
+                      </p>
+                    </div>
+                    <span className="text-xs text-(--text-tertiary) shrink-0 mt-1 hidden sm:block">
+                      {item.field}
+                    </span>
+                  </a>
                 </li>
               ))}
             </ul>
