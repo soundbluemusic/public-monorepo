@@ -112,6 +112,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "赤",
+        "reading": "あか",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "rojo",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "vermelho",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -233,6 +249,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "赤",
+        "reading": "あか",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "rojo",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "vermelho",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -354,6 +386,21 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "オレンジ",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "naranja",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "laranja",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -475,6 +522,21 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "オレンジ",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "naranja",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "laranja",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -596,6 +658,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "黄色",
+        "reading": "きいろ",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "amarillo",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "amarelo",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -717,6 +795,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "黄色",
+        "reading": "きいろ",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "amarillo",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "amarelo",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -838,6 +932,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "緑",
+        "reading": "みどり",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "verde",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "verde",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -959,6 +1069,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "緑",
+        "reading": "みどり",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "verde",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "verde",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -1080,6 +1206,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "青",
+        "reading": "あお",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "azul",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "azul",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -1201,6 +1343,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "青",
+        "reading": "あお",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "azul",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "azul",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -1322,6 +1480,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "紫",
+        "reading": "むらさき",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "morado",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "roxo",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -1443,6 +1617,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "紫",
+        "reading": "むらさき",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "morado",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "roxo",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -1564,6 +1754,21 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "ピンク",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "rosa",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "rosa",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -1685,6 +1890,21 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "ピンク",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "rosa",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "rosa",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -1806,6 +2026,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "茶色",
+        "reading": "ちゃいろ",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "marrón",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "marrom",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -1927,6 +2163,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "黒",
+        "reading": "くろ",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "negro",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "preto",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -2048,6 +2300,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "黒",
+        "reading": "くろ",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "negro",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "preto",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -2169,6 +2437,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "白",
+        "reading": "しろ",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "blanco",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "branco",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -2290,6 +2574,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "白",
+        "reading": "しろ",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "blanco",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "branco",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -2411,6 +2711,22 @@
             }
           ]
         }
+      },
+      "ja": {
+        "word": "灰色",
+        "reading": "はいいろ",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "gris",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "cinza",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {

@@ -96,6 +96,16 @@
         "explanation": "「하나」は日本語で「一つ」。",
         "verified": true,
         "source": "manual"
+      },
+      "es": {
+        "word": "uno",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "um",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -198,6 +208,16 @@
       "ja": {
         "word": "二つ",
         "explanation": "「둘」は日本語で「二つ」。",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "dos",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "dois",
         "verified": true,
         "source": "manual"
       }
@@ -304,6 +324,16 @@
         "explanation": "「셋」は日本語で「三つ」。",
         "verified": true,
         "source": "manual"
+      },
+      "es": {
+        "word": "tres",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "três",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -406,6 +436,16 @@
       "ja": {
         "word": "四つ",
         "explanation": "「넷」は日本語で「四つ」。",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "cuatro",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "quatro",
         "verified": true,
         "source": "manual"
       }
@@ -512,6 +552,16 @@
         "explanation": "「다섯」は日本語で「五つ」。",
         "verified": true,
         "source": "manual"
+      },
+      "es": {
+        "word": "cinco",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "cinco",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -614,6 +664,16 @@
       "ja": {
         "word": "六つ",
         "explanation": "「여섯」は日本語で「六つ」。",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "seis",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "seis",
         "verified": true,
         "source": "manual"
       }
@@ -720,6 +780,16 @@
         "explanation": "「일곱」は日本語で「七つ」。",
         "verified": true,
         "source": "manual"
+      },
+      "es": {
+        "word": "siete",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "sete",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -822,6 +892,16 @@
       "ja": {
         "word": "八つ",
         "explanation": "「여덟」は日本語で「八つ」。",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "ocho",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "oito",
         "verified": true,
         "source": "manual"
       }
@@ -928,6 +1008,16 @@
         "explanation": "「아홉」は日本語で「九つ」。",
         "verified": true,
         "source": "manual"
+      },
+      "es": {
+        "word": "nueve",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "nove",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -1030,6 +1120,16 @@
       "ja": {
         "word": "十",
         "explanation": "「열」は日本語で「十」。",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "diez",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "dez",
         "verified": true,
         "source": "manual"
       }
@@ -1136,6 +1236,16 @@
         "explanation": "「일」は日本語で「一」。",
         "verified": true,
         "source": "manual"
+      },
+      "es": {
+        "word": "uno",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "um",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -1238,6 +1348,16 @@
       "ja": {
         "word": "二",
         "explanation": "「이」は日本語で「二」。",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "dos",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "dois",
         "verified": true,
         "source": "manual"
       }
@@ -1344,6 +1464,16 @@
         "explanation": "「삼」は日本語で「三」。",
         "verified": true,
         "source": "manual"
+      },
+      "es": {
+        "word": "tres",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "três",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -1446,6 +1576,16 @@
       "ja": {
         "word": "四",
         "explanation": "「사」は日本語で「四」。",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "cuatro",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "quatro",
         "verified": true,
         "source": "manual"
       }
@@ -1552,6 +1692,16 @@
         "explanation": "「오」は日本語で「五」。",
         "verified": true,
         "source": "manual"
+      },
+      "es": {
+        "word": "cinco",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "cinco",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -1654,6 +1804,16 @@
       "ja": {
         "word": "六",
         "explanation": "「육」は日本語で「六」。",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "seis",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "seis",
         "verified": true,
         "source": "manual"
       }
@@ -1760,6 +1920,16 @@
         "explanation": "「칠」は日本語で「七」。",
         "verified": true,
         "source": "manual"
+      },
+      "es": {
+        "word": "siete",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "sete",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -1862,6 +2032,16 @@
       "ja": {
         "word": "八",
         "explanation": "「팔」は日本語で「八」。",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "ocho",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "oito",
         "verified": true,
         "source": "manual"
       }
@@ -1968,6 +2148,16 @@
         "explanation": "「구」は日本語で「九」。",
         "verified": true,
         "source": "manual"
+      },
+      "es": {
+        "word": "nueve",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "nove",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -2070,6 +2260,16 @@
       "ja": {
         "word": "十",
         "explanation": "「십」は日本語で「十」。",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "diez",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "dez",
         "verified": true,
         "source": "manual"
       }
@@ -2176,6 +2376,16 @@
         "explanation": "「백」は日本語で「百」。",
         "verified": true,
         "source": "manual"
+      },
+      "es": {
+        "word": "cien",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "cem",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -2278,6 +2488,16 @@
       "ja": {
         "word": "千",
         "explanation": "「천」は日本語で「千」。",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "mil",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "mil",
         "verified": true,
         "source": "manual"
       }
@@ -2384,6 +2604,16 @@
         "explanation": "「만」は日本語で「万」。",
         "verified": true,
         "source": "manual"
+      },
+      "es": {
+        "word": "diez mil",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "dez mil",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -2486,6 +2716,16 @@
       "ja": {
         "word": "零",
         "explanation": "「영」は日本語で「零」。",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "cero",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "zero",
         "verified": true,
         "source": "manual"
       }
@@ -2592,6 +2832,16 @@
         "explanation": "「반」は日本語で「半分」。",
         "verified": true,
         "source": "manual"
+      },
+      "es": {
+        "word": "mitad",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "metade",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -2694,6 +2944,16 @@
       "ja": {
         "word": "最初",
         "explanation": "「첫」は日本語で「最初」。",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "primero",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "primeiro",
         "verified": true,
         "source": "manual"
       }
@@ -2800,6 +3060,16 @@
         "explanation": "「두 번째」は日本語で「二番目」。",
         "verified": true,
         "source": "manual"
+      },
+      "es": {
+        "word": "segundo",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "segundo",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -2902,6 +3172,16 @@
       "ja": {
         "word": "最後",
         "explanation": "「마지막」は日本語で「最後」。",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "último",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "último",
         "verified": true,
         "source": "manual"
       }
@@ -3008,6 +3288,16 @@
         "explanation": "「몇」は日本語で「いくつ」。",
         "verified": true,
         "source": "manual"
+      },
+      "es": {
+        "word": "cuántos",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "quantos",
+        "verified": true,
+        "source": "manual"
       }
     },
     "pronunciation": {
@@ -3110,6 +3400,16 @@
       "ja": {
         "word": "全部",
         "explanation": "「모두」は日本語で「全部」。",
+        "verified": true,
+        "source": "manual"
+      },
+      "es": {
+        "word": "todos",
+        "verified": true,
+        "source": "manual"
+      },
+      "pt": {
+        "word": "todos",
         "verified": true,
         "source": "manual"
       }
