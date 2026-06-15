@@ -1,0 +1,65 @@
+---
+/**
+ * 1:1 매핑 카드 — 한국어 원어와 외국어 대응어들을 양방향 화살표로 시각화.
+ * Context 정체성("한국어 ↔ 외국어 1:1 매핑, 번역기가 아님")을 entry 헤더에서 즉시 드러낸다.
+ * 다국어 확장: 영어/일본어/스페인어/포르투갈어 등 존재하는 대응어를 우측에 나열.
+ * SSR 인라인 SVG만 사용 (클라이언트 JS 불필요).
+ *
+ * entry 상세 헤더 전용: 좌측 korean을 <h1>(페이지 제목)으로 렌더한다.
+ */
+import type { MappingTarget } from '../../app/data/target-languages';
+
+interface Props {
+  korean: string;
+  romanization?: string;
+  /** 좌측(한국어) 라벨: 'Korean' | '한국어' */
+  leftLabel: string;
+  /** 우측 대응어 목록 (존재하는 언어만, 정렬됨) */
+  targets: MappingTarget[];
+}
+const { korean, romanization, leftLabel, targets } = Astro.props;
+---
+
+<div class="mb-4 rounded-2xl border border-(--border-primary) bg-(--bg-elevated) overflow-hidden">
+  <div class="grid grid-cols-[1fr_auto_1fr] items-center gap-2 sm:gap-5 px-4 py-5 sm:px-6 sm:py-6">
+    {/* 좌: 한국어 원어 */}
+    <div class="min-w-0 text-center sm:text-right">
+      <p class="text-[0.7rem] uppercase tracking-wider text-(--text-tertiary) mb-1">{leftLabel}</p>
+      <h1 class="text-2xl sm:text-3xl font-bold text-(--text-primary) leading-tight break-keep">{korean}</h1>
+      {romanization && <p class="text-xs text-(--text-tertiary) mt-1">{romanization}</p>}
+    </div>
+
+    {/* 중앙: 양방향 매핑 화살표 (장식이므로 aria-hidden, 의미는 좌우 텍스트로 전달) */}
+    <div class="flex flex-col items-center justify-center text-(--accent-primary)" aria-hidden="true">
+      <svg
+        viewBox="0 0 40 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="w-8 sm:w-10 h-auto"
+      >
+        <line x1="6" y1="9" x2="33" y2="9" />
+        <polyline points="28,4 33,9 28,14" />
+        <line x1="34" y1="17" x2="7" y2="17" />
+        <polyline points="12,12 7,17 12,22" />
+      </svg>
+      <span class="text-[0.6rem] font-semibold tracking-wide text-(--text-tertiary) mt-1">1:1</span>
+    </div>
+
+    {/* 우: 외국어 대응어들 (존재하는 언어만) */}
+    <div class="min-w-0 text-center sm:text-left space-y-2">
+      {
+        targets.map((t) => (
+          <div>
+            <p class="text-[0.7rem] uppercase tracking-wider text-(--text-tertiary)">{t.label}</p>
+            <p class="text-xl sm:text-2xl font-bold text-(--accent-primary) leading-tight break-words">
+              {t.word}
+            </p>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</div>

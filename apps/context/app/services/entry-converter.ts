@@ -7,7 +7,7 @@
  */
 
 import type { D1EntryRow } from '@soundblue/platform/sqlite/types';
-import type { Language, LocaleEntry, Translation } from '@/data/types';
+import type { Language, LocaleEntry, TargetLanguage, Translation } from '@/data/types';
 
 /**
  * D1 row를 LocaleEntry로 변환
@@ -20,15 +20,21 @@ export function rowToLocaleEntry(row: D1EntryRow, locale: Language): LocaleEntry
   if (!row.translations) return null;
 
   try {
-    const translations = JSON.parse(row.translations) as {
-      ko?: Translation;
-      en?: Translation;
-    };
+    const translations = JSON.parse(row.translations) as Partial<
+      Record<'ko' | TargetLanguage, Translation>
+    >;
 
     const translation = translations[locale];
     if (!translation) return null;
 
     const tags = row.tags ? (JSON.parse(row.tags) as string[]) : [];
+
+    // 다국어 대응어 추출 (존재하는 언어만) — 한국어 원어의 1:1 대응
+    const targetWords: Partial<Record<TargetLanguage, string>> = {};
+    for (const lang of ['en', 'ja', 'es', 'pt'] as const) {
+      const word = translations[lang]?.word;
+      if (word) targetWords[lang] = word;
+    }
 
     return {
       id: row.id,
@@ -46,6 +52,7 @@ export function rowToLocaleEntry(row: D1EntryRow, locale: Language): LocaleEntry
         examples: translation.examples,
         variations: translation.variations,
       },
+      targetWords,
     };
   } catch (error) {
     console.error(`Failed to parse entry ${row.id}:`, error);

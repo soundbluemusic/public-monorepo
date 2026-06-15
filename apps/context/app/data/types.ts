@@ -104,6 +104,8 @@ export interface MeaningEntry {
   translations: {
     ko: Translation;
     en: Translation;
+    /** 일본어 대응어 (다국어 1:1 매핑 확장. 정확한 데이터부터 단계적으로 채움) */
+    ja?: Translation;
   };
   tags: string[];
   difficulty: DifficultyLevel;
@@ -113,6 +115,12 @@ export interface MeaningEntry {
   createdAt?: string;
   updatedAt?: string;
 }
+
+/**
+ * 대응 언어 (한국어 원어에 1:1 매핑되는 외국어).
+ * UI 로케일(Language: 'ko'|'en')과는 별개의 축이다.
+ */
+export type TargetLanguage = 'en' | 'ja' | 'es' | 'pt';
 
 /**
  * Locale별 엔트리 (번들 최적화용)
@@ -142,6 +150,8 @@ export interface LocaleEntry {
   colorCode?: string;
   /** 단일 locale의 번역 */
   translation: Omit<Translation, 'dialogue'>;
+  /** 다국어 대응어 (한국어 원어의 1:1 대응 단어. 존재하는 언어만, 매핑 카드용) */
+  targetWords?: Partial<Record<TargetLanguage, string>>;
 }
 
 /**
