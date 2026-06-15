@@ -26,5 +26,5 @@ if (config.kv_namespaces) {
   }
 }
 
-fs.writeFileSync(wranglerJsonPath, JSON.stringify(config, null, 2) + '\n');
+fs.writeFileSync(wranglerJsonPath, `${JSON.stringify(config, null, 2)}\n`);
 console.log('strip-bindings: done');

@@ -30,7 +30,7 @@ try {
 if (output) {
   console.error('[guard-no-legacy-runtime] Astro v6에서 제거된 `Astro.locals.runtime` 패턴 발견:');
   console.error('');
-  for (const line of output.split('\n')) console.error('  ' + line);
+  for (const line of output.split('\n')) console.error(`  ${line}`);
   console.error('');
   console.error("→ 대신 다음 패턴 사용:");
   console.error("    import { env } from 'cloudflare:workers';");
