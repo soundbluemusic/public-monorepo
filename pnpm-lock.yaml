@@ -14,6 +14,9 @@ overrides:
   brace-expansion@<=5.0.7: ^5.0.8
   sharp@<0.35.0: ^0.35.3
 
+patchedDependencies:
+  brace-expansion@5.0.8: 63635fb46b37d0f4b79c0625966f6d45fb0253ffda8f3f14c79fba41984663af
+
 importers:
 
   .:
@@ -13074,7 +13077,7 @@ snapshots:
 
   boolbase@1.0.0: {}
 
-  brace-expansion@5.0.8:
+  brace-expansion@5.0.8(patch_hash=63635fb46b37d0f4b79c0625966f6d45fb0253ffda8f3f14c79fba41984663af):
     dependencies:
       balanced-match: 4.0.4
 
@@ -15188,23 +15191,23 @@ snapshots:
 
   minimatch@10.2.5:
     dependencies:
-      brace-expansion: 5.0.8
+      brace-expansion: 5.0.8(patch_hash=63635fb46b37d0f4b79c0625966f6d45fb0253ffda8f3f14c79fba41984663af)
 
   minimatch@3.1.5:
     dependencies:
-      brace-expansion: 5.0.8
+      brace-expansion: 5.0.8(patch_hash=63635fb46b37d0f4b79c0625966f6d45fb0253ffda8f3f14c79fba41984663af)
 
   minimatch@5.1.9:
     dependencies:
-      brace-expansion: 5.0.8
+      brace-expansion: 5.0.8(patch_hash=63635fb46b37d0f4b79c0625966f6d45fb0253ffda8f3f14c79fba41984663af)
 
   minimatch@7.4.9:
     dependencies:
-      brace-expansion: 5.0.8
+      brace-expansion: 5.0.8(patch_hash=63635fb46b37d0f4b79c0625966f6d45fb0253ffda8f3f14c79fba41984663af)
 
   minimatch@9.0.9:
     dependencies:
-      brace-expansion: 5.0.8
+      brace-expansion: 5.0.8(patch_hash=63635fb46b37d0f4b79c0625966f6d45fb0253ffda8f3f14c79fba41984663af)
 
   minimist@1.2.8: {}
 
