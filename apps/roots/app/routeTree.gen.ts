@@ -9,65 +9,39 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as TagsRouteImport } from './routes/tags'
-import { Route as SitemapRouteImport } from './routes/sitemap'
-import { Route as SearchRouteImport } from './routes/search'
-import { Route as FavoritesRouteImport } from './routes/favorites'
-import { Route as ConstantsRouteImport } from './routes/constants'
-import { Route as BuiltWithRouteImport } from './routes/built-with'
-import { Route as BrowseRouteImport } from './routes/browse'
-import { Route as AboutRouteImport } from './routes/about'
-import { Route as IndexRouteImport } from './routes/_index'
 import { Route as SplatRouteImport } from './routes/$'
-import { Route as TagTagIdRouteImport } from './routes/tag/$tagId'
-import { Route as KoTagsRouteImport } from './routes/ko/tags'
-import { Route as KoSitemapRouteImport } from './routes/ko/sitemap'
-import { Route as KoSearchRouteImport } from './routes/ko/search'
-import { Route as KoFavoritesRouteImport } from './routes/ko/favorites'
-import { Route as KoConstantsRouteImport } from './routes/ko/constants'
-import { Route as KoBuiltWithRouteImport } from './routes/ko/built-with'
-import { Route as KoBrowseRouteImport } from './routes/ko/browse'
-import { Route as KoAboutRouteImport } from './routes/ko/about'
-import { Route as KoIndexRouteImport } from './routes/ko/_index'
-import { Route as FieldFieldIdRouteImport } from './routes/field/$fieldId'
+import { Route as IndexRouteImport } from './routes/_index'
+import { Route as AboutRouteImport } from './routes/about'
+import { Route as BrowseRouteImport } from './routes/browse'
+import { Route as BuiltWithRouteImport } from './routes/built-with'
+import { Route as ConstantsRouteImport } from './routes/constants'
+import { Route as FavoritesRouteImport } from './routes/favorites'
+import { Route as SearchRouteImport } from './routes/search'
+import { Route as SitemapRouteImport } from './routes/sitemap'
+import { Route as TagsRouteImport } from './routes/tags'
 import { Route as ConceptConceptIdRouteImport } from './routes/concept/$conceptId'
-import { Route as KoTagTagIdRouteImport } from './routes/ko/tag/$tagId'
-import { Route as KoFieldFieldIdRouteImport } from './routes/ko/field/$fieldId'
+import { Route as FieldFieldIdRouteImport } from './routes/field/$fieldId'
+import { Route as KoIndexRouteImport } from './routes/ko/_index'
+import { Route as KoAboutRouteImport } from './routes/ko/about'
+import { Route as KoBrowseRouteImport } from './routes/ko/browse'
+import { Route as KoBuiltWithRouteImport } from './routes/ko/built-with'
+import { Route as KoConstantsRouteImport } from './routes/ko/constants'
+import { Route as KoFavoritesRouteImport } from './routes/ko/favorites'
+import { Route as KoSearchRouteImport } from './routes/ko/search'
+import { Route as KoSitemapRouteImport } from './routes/ko/sitemap'
+import { Route as KoTagsRouteImport } from './routes/ko/tags'
+import { Route as TagTagIdRouteImport } from './routes/tag/$tagId'
 import { Route as KoConceptConceptIdRouteImport } from './routes/ko/concept/$conceptId'
+import { Route as KoFieldFieldIdRouteImport } from './routes/ko/field/$fieldId'
+import { Route as KoTagTagIdRouteImport } from './routes/ko/tag/$tagId'
 
-const TagsRoute = TagsRouteImport.update({
-  id: '/tags',
-  path: '/tags',
+const SplatRoute = SplatRouteImport.update({
+  id: '/$',
+  path: '/$',
   getParentRoute: () => rootRouteImport,
 } as any)
-const SitemapRoute = SitemapRouteImport.update({
-  id: '/sitemap',
-  path: '/sitemap',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const SearchRoute = SearchRouteImport.update({
-  id: '/search',
-  path: '/search',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const FavoritesRoute = FavoritesRouteImport.update({
-  id: '/favorites',
-  path: '/favorites',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ConstantsRoute = ConstantsRouteImport.update({
-  id: '/constants',
-  path: '/constants',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const BuiltWithRoute = BuiltWithRouteImport.update({
-  id: '/built-with',
-  path: '/built-with',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const BrowseRoute = BrowseRouteImport.update({
-  id: '/browse',
-  path: '/browse',
+const IndexRoute = IndexRouteImport.update({
+  id: '/_index',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AboutRoute = AboutRouteImport.update({
@@ -75,68 +49,39 @@ const AboutRoute = AboutRouteImport.update({
   path: '/about',
   getParentRoute: () => rootRouteImport,
 } as any)
-const IndexRoute = IndexRouteImport.update({
-  id: '/_index',
+const BrowseRoute = BrowseRouteImport.update({
+  id: '/browse',
+  path: '/browse',
   getParentRoute: () => rootRouteImport,
 } as any)
-const SplatRoute = SplatRouteImport.update({
-  id: '/$',
-  path: '/$',
+const BuiltWithRoute = BuiltWithRouteImport.update({
+  id: '/built-with',
+  path: '/built-with',
   getParentRoute: () => rootRouteImport,
 } as any)
-const TagTagIdRoute = TagTagIdRouteImport.update({
-  id: '/tag/$tagId',
-  path: '/tag/$tagId',
+const ConstantsRoute = ConstantsRouteImport.update({
+  id: '/constants',
+  path: '/constants',
   getParentRoute: () => rootRouteImport,
 } as any)
-const KoTagsRoute = KoTagsRouteImport.update({
-  id: '/ko/tags',
-  path: '/ko/tags',
+const FavoritesRoute = FavoritesRouteImport.update({
+  id: '/favorites',
+  path: '/favorites',
   getParentRoute: () => rootRouteImport,
 } as any)
-const KoSitemapRoute = KoSitemapRouteImport.update({
-  id: '/ko/sitemap',
-  path: '/ko/sitemap',
+const SearchRoute = SearchRouteImport.update({
+  id: '/search',
+  path: '/search',
   getParentRoute: () => rootRouteImport,
 } as any)
-const KoSearchRoute = KoSearchRouteImport.update({
-  id: '/ko/search',
-  path: '/ko/search',
+const SitemapRoute = SitemapRouteImport.update({
+  id: '/sitemap',
+  path: '/sitemap',
   getParentRoute: () => rootRouteImport,
 } as any)
-const KoFavoritesRoute = KoFavoritesRouteImport.update({
-  id: '/ko/favorites',
-  path: '/ko/favorites',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const KoConstantsRoute = KoConstantsRouteImport.update({
-  id: '/ko/constants',
-  path: '/ko/constants',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const KoBuiltWithRoute = KoBuiltWithRouteImport.update({
-  id: '/ko/built-with',
-  path: '/ko/built-with',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const KoBrowseRoute = KoBrowseRouteImport.update({
-  id: '/ko/browse',
-  path: '/ko/browse',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const KoAboutRoute = KoAboutRouteImport.update({
-  id: '/ko/about',
-  path: '/ko/about',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const KoIndexRoute = KoIndexRouteImport.update({
-  id: '/ko/_index',
-  path: '/ko',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const FieldFieldIdRoute = FieldFieldIdRouteImport.update({
-  id: '/field/$fieldId',
-  path: '/field/$fieldId',
+const TagsRoute = TagsRouteImport.update({
+  id: '/tags',
+  path: '/tags',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ConceptConceptIdRoute = ConceptConceptIdRouteImport.update({
@@ -144,9 +89,64 @@ const ConceptConceptIdRoute = ConceptConceptIdRouteImport.update({
   path: '/concept/$conceptId',
   getParentRoute: () => rootRouteImport,
 } as any)
-const KoTagTagIdRoute = KoTagTagIdRouteImport.update({
-  id: '/ko/tag/$tagId',
-  path: '/ko/tag/$tagId',
+const FieldFieldIdRoute = FieldFieldIdRouteImport.update({
+  id: '/field/$fieldId',
+  path: '/field/$fieldId',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KoIndexRoute = KoIndexRouteImport.update({
+  id: '/ko/_index',
+  path: '/ko',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KoAboutRoute = KoAboutRouteImport.update({
+  id: '/ko/about',
+  path: '/ko/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KoBrowseRoute = KoBrowseRouteImport.update({
+  id: '/ko/browse',
+  path: '/ko/browse',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KoBuiltWithRoute = KoBuiltWithRouteImport.update({
+  id: '/ko/built-with',
+  path: '/ko/built-with',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KoConstantsRoute = KoConstantsRouteImport.update({
+  id: '/ko/constants',
+  path: '/ko/constants',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KoFavoritesRoute = KoFavoritesRouteImport.update({
+  id: '/ko/favorites',
+  path: '/ko/favorites',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KoSearchRoute = KoSearchRouteImport.update({
+  id: '/ko/search',
+  path: '/ko/search',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KoSitemapRoute = KoSitemapRouteImport.update({
+  id: '/ko/sitemap',
+  path: '/ko/sitemap',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KoTagsRoute = KoTagsRouteImport.update({
+  id: '/ko/tags',
+  path: '/ko/tags',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TagTagIdRoute = TagTagIdRouteImport.update({
+  id: '/tag/$tagId',
+  path: '/tag/$tagId',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KoConceptConceptIdRoute = KoConceptConceptIdRouteImport.update({
+  id: '/ko/concept/$conceptId',
+  path: '/ko/concept/$conceptId',
   getParentRoute: () => rootRouteImport,
 } as any)
 const KoFieldFieldIdRoute = KoFieldFieldIdRouteImport.update({
@@ -154,9 +154,9 @@ const KoFieldFieldIdRoute = KoFieldFieldIdRouteImport.update({
   path: '/ko/field/$fieldId',
   getParentRoute: () => rootRouteImport,
 } as any)
-const KoConceptConceptIdRoute = KoConceptConceptIdRouteImport.update({
-  id: '/ko/concept/$conceptId',
-  path: '/ko/concept/$conceptId',
+const KoTagTagIdRoute = KoTagTagIdRouteImport.update({
+  id: '/ko/tag/$tagId',
+  path: '/ko/tag/$tagId',
   getParentRoute: () => rootRouteImport,
 } as any)
 
@@ -356,60 +356,11 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/tags': {
-      id: '/tags'
-      path: '/tags'
-      fullPath: '/tags'
-      preLoaderRoute: typeof TagsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/sitemap': {
-      id: '/sitemap'
-      path: '/sitemap'
-      fullPath: '/sitemap'
-      preLoaderRoute: typeof SitemapRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/search': {
-      id: '/search'
-      path: '/search'
-      fullPath: '/search'
-      preLoaderRoute: typeof SearchRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/favorites': {
-      id: '/favorites'
-      path: '/favorites'
-      fullPath: '/favorites'
-      preLoaderRoute: typeof FavoritesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/constants': {
-      id: '/constants'
-      path: '/constants'
-      fullPath: '/constants'
-      preLoaderRoute: typeof ConstantsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/built-with': {
-      id: '/built-with'
-      path: '/built-with'
-      fullPath: '/built-with'
-      preLoaderRoute: typeof BuiltWithRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/browse': {
-      id: '/browse'
-      path: '/browse'
-      fullPath: '/browse'
-      preLoaderRoute: typeof BrowseRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/about': {
-      id: '/about'
-      path: '/about'
-      fullPath: '/about'
-      preLoaderRoute: typeof AboutRouteImport
+    '/$': {
+      id: '/$'
+      path: '/$'
+      fullPath: '/$'
+      preLoaderRoute: typeof SplatRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/_index': {
@@ -419,88 +370,60 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/$': {
-      id: '/$'
-      path: '/$'
-      fullPath: '/$'
-      preLoaderRoute: typeof SplatRouteImport
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/tag/$tagId': {
-      id: '/tag/$tagId'
-      path: '/tag/$tagId'
-      fullPath: '/tag/$tagId'
-      preLoaderRoute: typeof TagTagIdRouteImport
+    '/browse': {
+      id: '/browse'
+      path: '/browse'
+      fullPath: '/browse'
+      preLoaderRoute: typeof BrowseRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/ko/tags': {
-      id: '/ko/tags'
-      path: '/ko/tags'
-      fullPath: '/ko/tags'
-      preLoaderRoute: typeof KoTagsRouteImport
+    '/built-with': {
+      id: '/built-with'
+      path: '/built-with'
+      fullPath: '/built-with'
+      preLoaderRoute: typeof BuiltWithRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/ko/sitemap': {
-      id: '/ko/sitemap'
-      path: '/ko/sitemap'
-      fullPath: '/ko/sitemap'
-      preLoaderRoute: typeof KoSitemapRouteImport
+    '/constants': {
+      id: '/constants'
+      path: '/constants'
+      fullPath: '/constants'
+      preLoaderRoute: typeof ConstantsRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/ko/search': {
-      id: '/ko/search'
-      path: '/ko/search'
-      fullPath: '/ko/search'
-      preLoaderRoute: typeof KoSearchRouteImport
+    '/favorites': {
+      id: '/favorites'
+      path: '/favorites'
+      fullPath: '/favorites'
+      preLoaderRoute: typeof FavoritesRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/ko/favorites': {
-      id: '/ko/favorites'
-      path: '/ko/favorites'
-      fullPath: '/ko/favorites'
-      preLoaderRoute: typeof KoFavoritesRouteImport
+    '/search': {
+      id: '/search'
+      path: '/search'
+      fullPath: '/search'
+      preLoaderRoute: typeof SearchRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/ko/constants': {
-      id: '/ko/constants'
-      path: '/ko/constants'
-      fullPath: '/ko/constants'
-      preLoaderRoute: typeof KoConstantsRouteImport
+    '/sitemap': {
+      id: '/sitemap'
+      path: '/sitemap'
+      fullPath: '/sitemap'
+      preLoaderRoute: typeof SitemapRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/ko/built-with': {
-      id: '/ko/built-with'
-      path: '/ko/built-with'
-      fullPath: '/ko/built-with'
-      preLoaderRoute: typeof KoBuiltWithRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/ko/browse': {
-      id: '/ko/browse'
-      path: '/ko/browse'
-      fullPath: '/ko/browse'
-      preLoaderRoute: typeof KoBrowseRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/ko/about': {
-      id: '/ko/about'
-      path: '/ko/about'
-      fullPath: '/ko/about'
-      preLoaderRoute: typeof KoAboutRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/ko/_index': {
-      id: '/ko/_index'
-      path: '/ko'
-      fullPath: '/ko'
-      preLoaderRoute: typeof KoIndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/field/$fieldId': {
-      id: '/field/$fieldId'
-      path: '/field/$fieldId'
-      fullPath: '/field/$fieldId'
-      preLoaderRoute: typeof FieldFieldIdRouteImport
+    '/tags': {
+      id: '/tags'
+      path: '/tags'
+      fullPath: '/tags'
+      preLoaderRoute: typeof TagsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/concept/$conceptId': {
@@ -510,11 +433,88 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ConceptConceptIdRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/ko/tag/$tagId': {
-      id: '/ko/tag/$tagId'
-      path: '/ko/tag/$tagId'
-      fullPath: '/ko/tag/$tagId'
-      preLoaderRoute: typeof KoTagTagIdRouteImport
+    '/field/$fieldId': {
+      id: '/field/$fieldId'
+      path: '/field/$fieldId'
+      fullPath: '/field/$fieldId'
+      preLoaderRoute: typeof FieldFieldIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ko/_index': {
+      id: '/ko/_index'
+      path: '/ko'
+      fullPath: '/ko'
+      preLoaderRoute: typeof KoIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ko/about': {
+      id: '/ko/about'
+      path: '/ko/about'
+      fullPath: '/ko/about'
+      preLoaderRoute: typeof KoAboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ko/browse': {
+      id: '/ko/browse'
+      path: '/ko/browse'
+      fullPath: '/ko/browse'
+      preLoaderRoute: typeof KoBrowseRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ko/built-with': {
+      id: '/ko/built-with'
+      path: '/ko/built-with'
+      fullPath: '/ko/built-with'
+      preLoaderRoute: typeof KoBuiltWithRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ko/constants': {
+      id: '/ko/constants'
+      path: '/ko/constants'
+      fullPath: '/ko/constants'
+      preLoaderRoute: typeof KoConstantsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ko/favorites': {
+      id: '/ko/favorites'
+      path: '/ko/favorites'
+      fullPath: '/ko/favorites'
+      preLoaderRoute: typeof KoFavoritesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ko/search': {
+      id: '/ko/search'
+      path: '/ko/search'
+      fullPath: '/ko/search'
+      preLoaderRoute: typeof KoSearchRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ko/sitemap': {
+      id: '/ko/sitemap'
+      path: '/ko/sitemap'
+      fullPath: '/ko/sitemap'
+      preLoaderRoute: typeof KoSitemapRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ko/tags': {
+      id: '/ko/tags'
+      path: '/ko/tags'
+      fullPath: '/ko/tags'
+      preLoaderRoute: typeof KoTagsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tag/$tagId': {
+      id: '/tag/$tagId'
+      path: '/tag/$tagId'
+      fullPath: '/tag/$tagId'
+      preLoaderRoute: typeof TagTagIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ko/concept/$conceptId': {
+      id: '/ko/concept/$conceptId'
+      path: '/ko/concept/$conceptId'
+      fullPath: '/ko/concept/$conceptId'
+      preLoaderRoute: typeof KoConceptConceptIdRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/ko/field/$fieldId': {
@@ -524,11 +524,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof KoFieldFieldIdRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/ko/concept/$conceptId': {
-      id: '/ko/concept/$conceptId'
-      path: '/ko/concept/$conceptId'
-      fullPath: '/ko/concept/$conceptId'
-      preLoaderRoute: typeof KoConceptConceptIdRouteImport
+    '/ko/tag/$tagId': {
+      id: '/ko/tag/$tagId'
+      path: '/ko/tag/$tagId'
+      fullPath: '/ko/tag/$tagId'
+      preLoaderRoute: typeof KoTagTagIdRouteImport
       parentRoute: typeof rootRouteImport
     }
   }

@@ -6,7 +6,7 @@
  *
  * TanStack Start 공식 패턴:
  * - createServerFn({ method: 'POST' }) - POST 메서드 지정 (데이터 전송용)
- * - .inputValidator() - 입력 타입 검증
+ * - .validator() - 입력 타입 검증
  * - .handler() - 실제 처리 로직
  */
 
@@ -87,7 +87,7 @@ const FetchEntryIdsByCategoryInputSchema = z.object({
  * const entry = await fetchEntryFromD1({ data: { entryId: 'hello', locale: 'ko' } });
  */
 export const fetchEntryFromD1 = createServerFn({ method: 'POST' })
-  .inputValidator(FetchEntryInputSchema)
+  .validator(FetchEntryInputSchema)
   .handler(async ({ data }): Promise<LocaleEntry | null> => {
     const { entryId, locale } = data;
     const db = getD1Database();
@@ -125,7 +125,7 @@ export const fetchCategoriesFromD1 = createServerFn().handler(async () => {
  * const ids = await fetchEntryIdsByCategoryFromD1({ data: { categoryId: 'greetings' } });
  */
 export const fetchEntryIdsByCategoryFromD1 = createServerFn({ method: 'POST' })
-  .inputValidator(FetchEntryIdsByCategoryInputSchema)
+  .validator(FetchEntryIdsByCategoryInputSchema)
   .handler(async ({ data }): Promise<string[]> => {
     const { categoryId } = data;
     const db = getD1Database();
@@ -153,7 +153,7 @@ const FetchEntriesByCategoryPaginatedInputSchema = z.object({
  * const entries = await fetchEntriesByCategoryFromD1({ data: { categoryId: 'greetings', locale: 'ko' } });
  */
 export const fetchEntriesByCategoryFromD1 = createServerFn({ method: 'POST' })
-  .inputValidator(FetchEntriesByCategoryInputSchema)
+  .validator(FetchEntriesByCategoryInputSchema)
   .handler(async ({ data }): Promise<LocaleEntry[]> => {
     const { categoryId, locale } = data;
     const db = getD1Database();
@@ -164,7 +164,7 @@ export const fetchEntriesByCategoryFromD1 = createServerFn({ method: 'POST' })
  * 카테고리별 Entry 목록을 페이지네이션하여 D1에서 로드하는 서버 함수
  */
 export const fetchEntriesByCategoryPaginated = createServerFn({ method: 'POST' })
-  .inputValidator(FetchEntriesByCategoryPaginatedInputSchema)
+  .validator(FetchEntriesByCategoryPaginatedInputSchema)
   .handler(async ({ data }): Promise<PaginatedEntries> => {
     const { categoryId, locale, page, pageSize } = data;
     const db = getD1Database();
@@ -183,7 +183,7 @@ const FetchHomonymsInputSchema = z.object({
  * const homonyms = await fetchHomonyms({ data: { korean: '안녕' } });
  */
 export const fetchHomonyms = createServerFn({ method: 'POST' })
-  .inputValidator(FetchHomonymsInputSchema)
+  .validator(FetchHomonymsInputSchema)
   .handler(async ({ data }): Promise<HomonymEntryFromD1[]> => {
     const { korean } = data;
     const db = getD1Database();
@@ -204,7 +204,7 @@ const FetchEntriesByTagInputSchema = z.object({
  * 태그별 Entry 목록을 D1에서 로드하는 서버 함수
  */
 export const fetchEntriesByTagFromD1 = createServerFn({ method: 'POST' })
-  .inputValidator(FetchEntriesByTagInputSchema)
+  .validator(FetchEntriesByTagInputSchema)
   .handler(async ({ data }): Promise<LocaleEntry[]> => {
     const { tag, locale } = data;
     const db = getD1Database();
@@ -224,7 +224,7 @@ export const fetchAllTagsFromD1 = createServerFn().handler(async (): Promise<Tag
  * dayOfYear를 시드로 사용하여 매일 다른 단어 선택
  */
 export const fetchDailyWordFromD1 = createServerFn({ method: 'POST' })
-  .inputValidator(z.object({ locale: z.enum(['en', 'ko']) }))
+  .validator(z.object({ locale: z.enum(['en', 'ko']) }))
   .handler(async ({ data }): Promise<LocaleEntry | null> => {
     const db = getD1Database();
 

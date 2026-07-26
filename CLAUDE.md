@@ -649,26 +649,26 @@ export const Route = createFileRoute('/entry/$entryId')({
 
 ---
 
-## 🛠 기술 스택 버전 (2026-05-12 기준)
+## 🛠 기술 스택 버전 (2026-07-27 기준)
 
 > ⚠️ **AI 어시스턴트 참고용**: 이 버전들은 실제 사용 중인 버전입니다. 변경 시 `package.json`을 단일 출처(SSoT)로 보고 이 표는 동기화하세요.
 
 | 기술 | 버전 | 비고 |
 | ---- | ---- | ---- |
-| **React** | ^19.2.5 | React 19 Stable |
-| **TanStack Start** | ^1.167.43 | SSR 프레임워크 |
-| **TanStack Router** | ^1.168.23 | 파일 기반 라우팅 |
-| **Vite** | ^8.0.10 | Rolldown 번들러 (7x 빠른 빌드), Stable |
-| **TypeScript** | ^6.0.3 | 타입 체크 |
-| **Tailwind CSS** | ^4.2.4 | v4 사용 중 |
-| **Zod** | ^4.3.6 | 모든 워크스페이스 동일 |
-| **Zustand** | ^5.0.12 | 상태 관리 |
-| **Cloudflare Wrangler** | ^4.84.1 | Workers 배포 |
-| **@cloudflare/vite-plugin** | ^1.33.1 | Vite 통합 |
-| **@cloudflare/workers-types** | ^4.20260424.1 | Workers TypeScript 타입 |
-| **@inlang/paraglide-js** | ^2.16.0 | i18n 컴파일러 |
+| **React** | ^19.2.8 | React 19 Stable |
+| **TanStack Start** | ^1.168.32 | SSR 프레임워크 |
+| **TanStack Router** | ^1.170.18 | 파일 기반 라우팅 |
+| **Vite** | ^8.1.5 | Rolldown 번들러 (7x 빠른 빌드), Stable |
+| **TypeScript** | ^7.0.2 | 타입 체크 |
+| **Tailwind CSS** | ^4.3.3 | v4 사용 중 |
+| **Zod** | ^4.4.3 | 모든 워크스페이스 동일 |
+| **Zustand** | ^5.0.14 | 상태 관리 |
+| **Cloudflare Wrangler** | ^4.114.0 | Workers 배포 |
+| **@cloudflare/vite-plugin** | ^1.47.0 | Vite 통합 |
+| **@cloudflare/workers-types** | ^5.20260726.1 | Workers TypeScript 타입 |
+| **@inlang/paraglide-js** | ^2.23.0 | i18n 컴파일러 |
 | **Node.js** | >=20 | 런타임 (`package.json#engines`) |
-| **pnpm** | 10.11.0 | `package.json#packageManager` |
+| **pnpm** | 11.17.0 | `package.json#packageManager` |
 
 ---
 

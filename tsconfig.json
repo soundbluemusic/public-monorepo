@@ -18,19 +18,19 @@
     "noImplicitReturns": true
   },
   "references": [
-    { "path": "./apps/context" },
-    { "path": "./apps/permissive" },
-    { "path": "./apps/roots" },
-    { "path": "./packages/core" },
-    { "path": "./packages/config" },
-    { "path": "./packages/data" },
-    { "path": "./packages/platform" },
-    { "path": "./packages/i18n" },
-    { "path": "./packages/search" },
-    { "path": "./packages/seo" },
-    { "path": "./packages/pwa" },
-    { "path": "./packages/features" },
-    { "path": "./packages/ui" }
+    { "path": "./apps/context/tsconfig.json" },
+    { "path": "./apps/permissive/tsconfig.json" },
+    { "path": "./apps/roots/tsconfig.json" },
+    { "path": "./packages/core/tsconfig.json" },
+    { "path": "./packages/config/tsconfig.json" },
+    { "path": "./packages/data/tsconfig.json" },
+    { "path": "./packages/platform/tsconfig.json" },
+    { "path": "./packages/i18n/tsconfig.json" },
+    { "path": "./packages/search/tsconfig.json" },
+    { "path": "./packages/seo/tsconfig.json" },
+    { "path": "./packages/pwa/tsconfig.json" },
+    { "path": "./packages/features/tsconfig.json" },
+    { "path": "./packages/ui/tsconfig.json" }
   ],
   "files": []
 }

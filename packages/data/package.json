@@ -30,10 +30,10 @@
     "./metadata": "./src/metadata.ts"
   },
   "dependencies": {
-    "zod": "^4.3.6"
+    "zod": "^4.4.3"
   },
   "devDependencies": {
-    "@types/node": "^25.6.0",
-    "typescript": "^6.0.3"
+    "@types/node": "^26.1.1",
+    "typescript": "^7.0.2"
   }
 }

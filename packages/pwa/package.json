@@ -24,11 +24,11 @@
     "./react": "./src/react/index.ts"
   },
   "peerDependencies": {
-    "react": "^19.2.5"
+    "react": "^19.2.8"
   },
   "devDependencies": {
-    "@types/node": "^25.6.0",
-    "@types/react": "^19.2.14",
-    "typescript": "^6.0.3"
+    "@types/node": "^26.1.1",
+    "@types/react": "^19.2.17",
+    "typescript": "^7.0.2"
   }
 }
