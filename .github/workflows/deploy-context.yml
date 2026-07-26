@@ -6,6 +6,9 @@ on:
     paths:
       - 'apps/context/**'
       - 'packages/**'
+      - 'package.json'
+      - 'pnpm-lock.yaml'
+      - 'pnpm-workspace.yaml'
       - '.github/workflows/deploy-context.yml'
   workflow_dispatch:
 

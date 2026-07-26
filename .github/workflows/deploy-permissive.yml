@@ -7,6 +7,10 @@ on:
       - 'apps/permissive/**'
       - 'packages/**'
       - 'data/permissive/**'
+      - 'package.json'
+      - 'pnpm-lock.yaml'
+      - 'pnpm-workspace.yaml'
+      - '.github/workflows/deploy-permissive.yml'
   workflow_dispatch:
 
 concurrency:
