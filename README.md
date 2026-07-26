@@ -6,7 +6,7 @@
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 [![Node](https://img.shields.io/badge/Node-%3E%3D20-green.svg)](https://nodejs.org)
-[![pnpm](https://img.shields.io/badge/pnpm-10.11.0-orange.svg)](https://pnpm.io)
+[![pnpm](https://img.shields.io/badge/pnpm-11.17.0-orange.svg)](https://pnpm.io)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue.svg)](https://www.typescriptlang.org/)
 [![React](https://img.shields.io/badge/React-19-61dafb.svg)](https://react.dev/)
 [![SSR + D1](https://img.shields.io/badge/SSR-D1_Database-F38020?logo=cloudflare)](https://developers.cloudflare.com/d1/)
@@ -70,7 +70,7 @@ pnpm dev:permissive  # → http://localhost:3004
 pnpm dev:roots       # → http://localhost:3005
 ```
 
-> **Prerequisites:** Node.js ≥ 20, pnpm 10.11.0 · [package.json](package.json)
+> **Prerequisites:** Node.js ≥ 20, pnpm 11.17.0 · [package.json](package.json)
 
 ---
 
@@ -105,7 +105,7 @@ public-monorepo/
 
 | Category | Technology | Source |
 |:---------|:-----------|:-------|
-| **Framework** | Astro 6 (SSR) | [apps/*/src/pages/](apps/context/src/pages) |
+| **Framework** | Astro 7 (SSR) | [apps/*/src/pages/](apps/context/src/pages) |
 | **Language** | TypeScript 5.x | [tsconfig.json](tsconfig.json) |
 | **Styling** | Tailwind CSS v4 | [packages/config/](packages/config) |
 | **Database** | Cloudflare D1 (Context only) | [apps/context/wrangler.toml](apps/context/wrangler.toml) |

@@ -2,3 +2,22 @@ packages:
   - 'apps/*'
   - '!apps/docs'
   - 'packages/*'
+
+allowBuilds:
+  '@parcel/watcher': true
+  esbuild: true
+  sharp: true
+  workerd: true
+
+minimumReleaseAgeExclude:
+  - '@cloudflare/workers-types@5.20260726.1'
+  - '@hookform/resolvers@5.5.7'
+  - '@inlang/paraglide-js@2.23.0'
+  - lucide-react@1.27.0
+
+overrides:
+  'rollup@>=4.0.0 <4.59.0': ^4.60.0
+  'rollup@<2.80.0': ^2.80.0
+  'serialize-javascript@<7.0.5': ^7.0.5
+  'uuid@<14.0.0': ^14.0.0
+  'tmp@<=0.2.3': ^0.2.4

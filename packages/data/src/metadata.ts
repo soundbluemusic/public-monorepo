@@ -66,7 +66,7 @@ export const PROJECT_METADATA = {
     reactRouter: '7',
     typescript: '5.x',
     tailwind: '4',
-    pnpm: '10.11.0',
+    pnpm: '11.17.0',
   },
   totals: {
     apps: 3,

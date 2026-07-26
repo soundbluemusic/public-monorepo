@@ -125,7 +125,7 @@ export default defineConfig({
         {
           label: 'Packages',
           translations: { ko: '패키지', ja: 'パッケージ' },
-          autogenerate: { directory: 'packages' },
+          items: [{ autogenerate: { directory: 'packages' } }],
         },
         {
           label: 'Contributing',

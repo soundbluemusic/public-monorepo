@@ -24,7 +24,7 @@ A math documentation site designed for learners:
 
 ## Architecture (아키텍처)
 
-### Astro 6 + Cloudflare Workers (SSR)
+### Astro 7 + Cloudflare Workers (SSR)
 
 ```
 astro.config.mjs
@@ -129,7 +129,7 @@ pnpm build:roots
 
 | Role | Technology |
 |:-----|:-----------|
-| Framework | Astro 6 |
+| Framework | Astro 7 |
 | Styling | Tailwind CSS v4 |
 | Language | TypeScript |
 | Math Rendering | KaTeX (server-rendered) |

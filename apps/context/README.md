@@ -24,13 +24,13 @@ A Korean dictionary designed for language learners:
 
 ## Architecture (아키텍처)
 
-### SSR + D1 전용 (Astro 6 + Cloudflare Workers)
+### SSR + D1 전용 (Astro 7 + Cloudflare Workers)
 
 > ⚠️ **SSG 빌드는 지원하지 않습니다.** 모든 entry 페이지는 D1에서 실시간 조회합니다.
 
 | 항목 | 설명 |
 |:-----|:-----|
-| 빌드 도구 | **Astro 6** (`astro build`) |
+| 빌드 도구 | **Astro 7** (`astro build`) |
 | 렌더링 모드 | **SSR** (`output: 'server'`) |
 | 어댑터 | `@astrojs/cloudflare` |
 | 데이터베이스 | Cloudflare D1 (`context-db`) |
@@ -39,7 +39,7 @@ A Korean dictionary designed for language learners:
 ### 아키텍처 다이어그램
 
 ```
-astro.config.mjs (Astro 6 + Cloudflare adapter)
+astro.config.mjs (Astro 7 + Cloudflare adapter)
 ├── @astrojs/cloudflare (adapter)
 ├── output: 'server' (SSR)
 └── i18n: en (default) + ko (prefix)
@@ -258,7 +258,7 @@ pnpm deploy  # Cloudflare Workers 배포
 
 | Role | Technology |
 |:-----|:-----------|
-| Framework | Astro 6 (SSR mode) |
+| Framework | Astro 7 (SSR mode) |
 | Styling | Tailwind CSS v4 |
 | Language | TypeScript |
 | **Database** | **Cloudflare D1** (SQLite) |

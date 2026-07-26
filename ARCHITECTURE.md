@@ -12,11 +12,11 @@
 
 | App | Framework | Mode | 데이터 소스 | 배포 대상 |
 |:----|:----------|:-----|:-----------|:----------|
-| **Context** | **Astro 6** | **SSR** | Cloudflare D1 | **Cloudflare Workers** |
-| Permissive | Astro 6 | SSR | In-memory TypeScript | Cloudflare Workers |
-| Roots | Astro 6 | SSR | TypeScript JSON | Cloudflare Workers |
+| **Context** | **Astro 7** | **SSR** | Cloudflare D1 | **Cloudflare Workers** |
+| Permissive | Astro 7 | SSR | In-memory TypeScript | Cloudflare Workers |
+| Roots | Astro 7 | SSR | TypeScript JSON | Cloudflare Workers |
 
-> **모든 앱은 Astro 6 + Cloudflare Workers**로 배포됩니다 (`@astrojs/cloudflare` 어댑터).
+> **모든 앱은 Astro 7 + Cloudflare Workers**로 배포됩니다 (`@astrojs/cloudflare` 어댑터).
 
 ---
 
@@ -24,7 +24,7 @@
 
 ### How It Works
 
-Astro 6의 SSR 모드(`output: 'server'`) + Cloudflare D1으로 **런타임에** 동적 페이지를 생성합니다.
+Astro 7의 SSR 모드(`output: 'server'`) + Cloudflare D1으로 **런타임에** 동적 페이지를 생성합니다.
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
@@ -93,7 +93,7 @@ export default defineConfig({
 # apps/context/wrangler.toml
 name = "context"
 compatibility_date = "2026-01-22"
-compatibility_flags = ["nodejs_compat"]
+compatibility_flags = ["nodejs_compat", "fetch_iterable_type_support"]
 
 [[d1_databases]]
 binding = "DB"
@@ -150,7 +150,7 @@ SSR 모드에서 사이트맵은 D1에서 실시간 생성됩니다. 라우트 �
 
 ### How It Works
 
-Astro 6의 SSR 모드 + Cloudflare Workers로 **런타임에** 동적 페이지를 생성합니다. D1 없이 TypeScript in-memory 데이터를 직접 사용합니다.
+Astro 7의 SSR 모드 + Cloudflare Workers로 **런타임에** 동적 페이지를 생성합니다. D1 없이 TypeScript in-memory 데이터를 직접 사용합니다.
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
@@ -217,7 +217,7 @@ if (!concept) {
 
 ### 다국어 동적 라우트 패턴
 
-Astro 6의 `i18n` 설정과 폴더 기반 라우팅을 함께 사용합니다.
+Astro 7의 `i18n` 설정과 폴더 기반 라우팅을 함께 사용합니다.
 
 ```
 src/pages/
@@ -397,9 +397,9 @@ export function cn(...classes: string[]) {}
 
 ---
 
-## Astro 6 SSR (서버 사이드 렌더링)
+## Astro 7 SSR (서버 사이드 렌더링)
 
-> Astro 6는 `output: 'server'` + `@astrojs/cloudflare` 어댑터로 Cloudflare Workers와 완벽히 통합됩니다.
+> Astro 7는 `output: 'server'` + `@astrojs/cloudflare` 어댑터로 Cloudflare Workers와 완벽히 통합됩니다.
 
 ### 핵심 파일 (앱당)
 
@@ -416,7 +416,7 @@ export function cn(...classes: string[]) {}
 
 ### 관련 문서
 
-- [Astro 6 Docs](https://docs.astro.build)
+- [Astro 7 Docs](https://docs.astro.build)
 - [@astrojs/cloudflare](https://docs.astro.build/en/guides/integrations-guide/cloudflare/)
 - [Astro i18n routing](https://docs.astro.build/en/guides/internationalization/)
 
@@ -503,7 +503,7 @@ apps/permissive ──────┘    @soundblue/pwa
 
 ### v4.0.0 (2026-05-28) — TanStack → Astro 마이그레이션 후속 정리
 - **마이그레이션 이전 잔재 제거**: 이미 완료된 TanStack Start → Astro 6 마이그레이션 이후 갱신되지 않았던 문서와 파일 정리
-- 문서를 실제 사용 중인 Astro 6 + `@astrojs/cloudflare` 어댑터 구조로 재작성
+- 문서를 당시 실제 사용 중인 Astro 6 + `@astrojs/cloudflare` 어댑터 구조로 재작성
 - 세 앱 모두 동일한 Astro 6 SSR 구조임을 명시
 - 마이그레이션 잔재 파일 삭제:
   - `apps/context/vite.config.ts` — TanStack Start 시절 빌드 설정 (Astro는 `astro.config.mjs` 사용)
