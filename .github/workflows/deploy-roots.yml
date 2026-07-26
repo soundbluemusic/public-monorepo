@@ -7,6 +7,10 @@ on:
       - 'apps/roots/**'
       - 'packages/**'
       - 'data/roots/**'
+      - 'package.json'
+      - 'pnpm-lock.yaml'
+      - 'pnpm-workspace.yaml'
+      - '.github/workflows/deploy-roots.yml'
   workflow_dispatch:
 
 concurrency:
