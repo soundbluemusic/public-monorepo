@@ -1,7 +1,7 @@
 [
   {
     "name": "context-js",
-    "path": "apps/context/dist/client/assets/*.js",
+    "path": "apps/context/dist/client/_astro/*.js",
     "limit": "500 KB"
   }
 ]
