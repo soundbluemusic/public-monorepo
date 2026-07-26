@@ -63,6 +63,7 @@ Strong success criteria let you loop independently. Weak criteria ("make it work
 ---
 
 **These guidelines are working if:** fewer unnecessary changes in diffs, fewer rewrites due to overcomplication, and clarifying questions come before implementation rather than after mistakes.
+<!-- END-EXTERNAL-CLAUDE-MD -->
 ---
 
 # CLAUDE.md - AI Assistant Guidelines
@@ -82,9 +83,9 @@ Strong success criteria let you loop independently. Weak criteria ("make it work
 
 | App | Framework | Mode | 데이터 소스 | D1 바인딩 | 설정 파일 |
 | :-- | :-------- | :--- | :---------- | :-------- | :-------- |
-| Context | Astro 6 | **SSR** | Cloudflare D1 | `DB` (context-db), `PRIVATE_DB` (private) | `astro.config.mjs`, `wrangler.toml` |
-| Permissive | Astro 6 | SSR | TypeScript (in-memory) | _없음_ | `astro.config.mjs`, `wrangler.toml` |
-| Roots | Astro 6 | SSR | TypeScript (in-memory) | _없음_ | `astro.config.mjs`, `wrangler.toml` |
+| Context | Astro 7 | **SSR** | Cloudflare D1 | `DB` (context-db), `PRIVATE_DB` (private) | `astro.config.mjs`, `wrangler.toml` |
+| Permissive | Astro 7 | SSR | TypeScript (in-memory) | _없음_ | `astro.config.mjs`, `wrangler.toml` |
+| Roots | Astro 7 | SSR | TypeScript (in-memory) | _없음_ | `astro.config.mjs`, `wrangler.toml` |
 
 **금지 사항:**
 
@@ -93,7 +94,7 @@ Strong success criteria let you loop independently. Weak criteria ("make it work
 - 동적 라우트에서 데이터 누락 금지 (SEO meta 필수)
 - Context 앱: D1 바인딩 없이 SSR 배포 금지
 
-**SSR 모드 필수 패턴 (Astro 6 + D1):**
+**SSR 모드 필수 패턴 (Astro 7 + D1):**
 
 ```astro
 ---
@@ -301,7 +302,7 @@ endpoint = https://${{ secrets.CLOUDFLARE_ACCOUNT_ID }}.r2.cloudflarestorage.com
 
 | 구성요소 | 설명 |
 | -------- | ---- |
-| 프레임워크 | **Astro 6** |
+| 프레임워크 | **Astro 7** |
 | 렌더링 모드 | **SSR 전용** (Cloudflare Workers) |
 | 어댑터 | `@astrojs/cloudflare` |
 | 데이터베이스 | Cloudflare D1 (`context-db`) |
@@ -374,7 +375,7 @@ pnpm deploy
 
 ### en/ko 라우트 쌍 공통화 규칙 (중요)
 
-Astro 6의 파일 기반 라우팅 + `i18n` 설정 때문에 `src/pages/xxx.astro` + `src/pages/ko/xxx.astro` 쌍은 **파일 구조상 필수**입니다.
+Astro 7의 파일 기반 라우팅 + `i18n` 설정 때문에 `src/pages/xxx.astro` + `src/pages/ko/xxx.astro` 쌍은 **파일 구조상 필수**입니다.
 하지만 **내용은 단일 소스**여야 합니다. 공통 페이지 컴포넌트를 `src/components/pages/`에 두고, 라우트는 그것을 호출하는 얇은 wrapper로 유지하세요.
 
 **패턴 예시:**
@@ -457,7 +458,7 @@ import { useSearch } from '@soundblue/search/react';      // L2
 
 ### 동적 라우트에서 locale 추출
 
-> Astro 6의 `i18n` 설정에서는 `Astro.url.pathname`을 사용해 locale을 추출합니다.
+> Astro 7의 `i18n` 설정에서는 `Astro.url.pathname`을 사용해 locale을 추출합니다.
 
 ```astro
 ---
@@ -576,10 +577,10 @@ const entry = await db.prepare('SELECT * FROM entries WHERE id = ?').bind(id).fi
 | ---- | ------------- | ---- |
 | Cloudflare Workers | developers.cloudflare.com/workers/platform/changelog | Pages/Workers 통합 진행 중 |
 | Cloudflare D1 | developers.cloudflare.com/d1/platform/release-notes | GA 이후 변경사항 |
-| Astro 6 | docs.astro.build | 빠른 릴리스 주기, SSR 프레임워크 |
+| Astro 7 | docs.astro.build | 빠른 릴리스 주기, SSR 프레임워크 |
 | `@astrojs/cloudflare` | docs.astro.build/en/guides/integrations-guide/cloudflare/ | 어댑터 |
 | Tailwind CSS v4 | tailwindcss.com/docs/upgrade-guide | v3 → v4 대규모 변경 |
-| TypeScript 5.x | typescriptlang.org/docs/handbook/release-notes | 분기별 릴리스 |
+| TypeScript 7.x | typescriptlang.org/docs/handbook/release-notes | 분기별 릴리스 |
 
 **규칙**:
 
@@ -598,7 +599,7 @@ const entry = await db.prepare('SELECT * FROM entries WHERE id = ?').bind(id).fi
 
 | 기술 | 문서 |
 | ---- | ---- |
-| Astro 6 | [docs.astro.build](https://docs.astro.build) |
+| Astro 7 | [docs.astro.build](https://docs.astro.build) |
 | Astro Cloudflare adapter | [docs.astro.build/en/guides/integrations-guide/cloudflare/](https://docs.astro.build/en/guides/integrations-guide/cloudflare/) |
 | Tailwind CSS v4 | [tailwindcss.com](https://tailwindcss.com/docs) |
 | TypeScript | [typescriptlang.org](https://www.typescriptlang.org/docs) |
@@ -607,30 +608,30 @@ const entry = await db.prepare('SELECT * FROM entries WHERE id = ?').bind(id).fi
 
 ---
 
-## 🛠 기술 스택 버전 (2026-05-28 기준)
+## 🛠 기술 스택 버전 (2026-07-27 기준)
 
 > ⚠️ **AI 어시스턴트 참고용**: 이 버전들은 실제 사용 중인 버전입니다. 변경 시 `package.json`을 단일 출처(SSoT)로 보고 이 표는 동기화하세요.
 
 | 기술 | 버전 | 비고 |
 | ---- | ---- | ---- |
-| **Astro** | ^6.3.7 | SSR 프레임워크 (세 앱 공통) |
-| **@astrojs/cloudflare** | ^13.5.4 | Cloudflare Workers adapter |
-| **@astrojs/react** | ^4.0.0 | Context 앱만 (선언만, 현재 코드 사용 0건) |
-| **React** | ^19.2.6 | Context 앱만 (선언만, 현재 코드 사용 0건) |
-| **TypeScript** | ^6.0.3 | 타입 체크 |
-| **Tailwind CSS** | ^4.3.0 | v4 사용 중 |
+| **Astro** | ^7.1.3 | SSR 프레임워크 (세 앱 공통) |
+| **@astrojs/cloudflare** | ^14.1.4 | Cloudflare Workers adapter |
+| **@astrojs/react** | ^6.0.1 | Context·Permissive React integration |
+| **React** | ^19.2.8 | Context·Permissive |
+| **TypeScript** | ^7.0.2 (Astro 앱 ^6.0.3) | `astro check`의 TypeScript 7 지원 전까지 앱만 호환판 유지 |
+| **Tailwind CSS** | ^4.3.3 | v4 사용 중 |
 | **Zod** | ^4.4.3 | 모든 워크스페이스 동일 |
-| **Zustand** | ^5.0.13 | Context 앱 상태 관리 |
-| **nanostores** | ^0.11.4 | Permissive 상태 관리 |
-| **KaTeX** | ^0.16.47 | Roots 수식 렌더링 |
-| **Cloudflare Wrangler** | ^4.93.1 | Workers 배포 |
-| **@cloudflare/workers-types** | ^4.20260521.1 | Workers TypeScript 타입 |
+| **Zustand** | ^5.0.14 | Context 앱 상태 관리 |
+| **nanostores** | ^1.4.1 | Permissive 상태 관리 |
+| **KaTeX** | ^0.18.1 | Roots 수식 렌더링 |
+| **Cloudflare Wrangler** | ^4.114.0 | Workers 배포 |
+| **@cloudflare/workers-types** | ^5.20260726.1 | Workers TypeScript 타입 |
 | **Node.js** | >=20 | 런타임 (`package.json#engines`) |
-| **pnpm** | 10.11.0 | `package.json#packageManager` |
+| **pnpm** | 11.17.0 | `package.json#packageManager` |
 
 ---
 
-## 📂 빌드 출력 구조 (Astro 6 + Cloudflare)
+## 📂 빌드 출력 구조 (Astro 7 + Cloudflare)
 
 ```text
 apps/context/dist/
@@ -642,7 +643,7 @@ apps/context/dist/
 
 ```toml
 compatibility_date = "2026-01-22"
-compatibility_flags = ["nodejs_compat"]
+compatibility_flags = ["nodejs_compat", "fetch_iterable_type_support"]
 
 [assets]
 directory = "dist"

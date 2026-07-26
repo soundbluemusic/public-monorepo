@@ -1,6 +1,6 @@
 # AGENTS.md
 
-Monorepo with 3 SSR apps (Astro 6 + Cloudflare Workers). **SPA mode is forbidden** — all pages must render complete HTML on the server for SEO.
+Monorepo with 3 SSR apps (Astro 7 + Cloudflare Workers). **SPA mode is forbidden** — all pages must render complete HTML on the server for SEO.
 
 ## Setup commands
 
@@ -14,7 +14,7 @@ Monorepo with 3 SSR apps (Astro 6 + Cloudflare Workers). **SPA mode is forbidden
 - Always use `pnpm dev:*` while iterating. Do **not** run `pnpm build` during development.
 - Use `pnpm --filter <name> <command>` to target specific apps or packages.
 - After adding dependencies, restart the dev server.
-- Build output goes to `dist/` (Astro 6 + `@astrojs/cloudflare` adapter).
+- Build output goes to `dist/` (Astro 7 + `@astrojs/cloudflare` adapter).
 
 ## Testing instructions
 

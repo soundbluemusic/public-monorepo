@@ -72,7 +72,6 @@ const filtered = lightConcepts.filter((c) => {
     </form>
 
     {q || filterField ? (
-      <!-- Filtered results -->
       <div>
         <p class="text-sm text-(--text-tertiary) mb-4">
           {filtered.length} concept{filtered.length !== 1 ? 's' : ''}
@@ -108,7 +107,6 @@ const filtered = lightConcepts.filter((c) => {
         )}
       </div>
     ) : (
-      <!-- Fields overview (default) -->
       <div class="space-y-10">
         {fields.map((field) => {
           const fieldConcepts = lightConcepts.filter(c => c.field === field.id);

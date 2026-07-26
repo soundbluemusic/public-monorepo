@@ -22,7 +22,7 @@ A comprehensive collection of web standards and open-source web development reso
 
 ## Architecture (아키텍처)
 
-### Astro 6 + Cloudflare Workers (SSR)
+### Astro 7 + Cloudflare Workers (SSR)
 
 ```
 astro.config.mjs (실제 빌드 설정)
@@ -91,7 +91,7 @@ public/
 
 | Feature | Context | Roots | Permissive |
 |:--------|:-------:|:-----:|:----------:|
-| Framework | Astro 6 | Astro 6 | Astro 6 |
+| Framework | Astro 7 | Astro 7 | Astro 7 |
 | Mode | SSR | SSR | SSR |
 | Database | Cloudflare D1 | _없음_ | _없음_ |
 | Search | MiniSearch | MiniSearch | Form GET (개선 예정) |
@@ -126,7 +126,7 @@ if (!lib) {
 
 | Role | Technology | License |
 |------|------------|---------|
-| Framework | [Astro 6](https://astro.build) | MIT |
+| Framework | [Astro 7](https://astro.build) | MIT |
 | Styling | [Tailwind CSS v4](https://tailwindcss.com) | MIT |
 | Language | [TypeScript](https://www.typescriptlang.org) | Apache 2.0 |
 | State (client) | [nanostores](https://github.com/nanostores/nanostores) | MIT |

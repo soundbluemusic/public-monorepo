@@ -1,7 +1,7 @@
 name = "permissive"
 main = "@astrojs/cloudflare/entrypoints/server"
 compatibility_date = "2026-01-22"
-compatibility_flags = ["nodejs_compat"]
+compatibility_flags = ["nodejs_compat", "fetch_iterable_type_support"]
 
 [assets]
 directory = "dist/client"

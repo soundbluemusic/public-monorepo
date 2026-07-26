@@ -11,6 +11,13 @@
       "dependencies": ["zod"],
       "dependencyTypes": ["dev", "prod"],
       "pinVersion": "^4.4.3"
+    },
+    {
+      "label": "Keep Astro apps on the latest TypeScript supported by astro check",
+      "packages": ["context", "permissive", "roots"],
+      "dependencies": ["typescript"],
+      "dependencyTypes": ["dev"],
+      "pinVersion": "^6.0.3"
     }
   ],
   "semverGroups": [
