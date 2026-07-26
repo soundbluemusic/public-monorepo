@@ -6,6 +6,7 @@ on:
     paths:
       - 'apps/context/**'
       - 'packages/**'
+      - '.github/workflows/deploy-context.yml'
   workflow_dispatch:
 
 concurrency:
@@ -53,39 +54,49 @@ jobs:
 
       - name: Verify static assets are accessible
         run: |
-          echo "⏳ Waiting 5s for deployment propagation..."
-          sleep 5
-
-          # Extract asset filenames from production HTML (Astro outputs to /_astro/)
-          HTML=$(curl -sL https://context.soundbluemusic.com/)
-          CSS_FILE=$(echo "$HTML" | grep -oE '/_astro/[A-Za-z0-9._-]+\.css' | head -1 | sed 's#^/_astro/##')
-          JS_FILE=$(echo "$HTML" | grep -oE '/_astro/[A-Za-z0-9._-]+\.js' | head -1 | sed 's#^/_astro/##')
-
-          echo "📦 Checking CSS: $CSS_FILE"
-          echo "📦 Checking JS: $JS_FILE"
-
+          BASE_URL="https://context.soundbluemusic.com"
           FAILED=0
+          CSS_STATUS=000
+
+          # A new Worker and its static assets can reach the custom domain at
+          # slightly different times. Retry the HTML and referenced CSS together.
+          for ATTEMPT in 1 2 3 4 5 6; do
+            echo "⏳ Asset verification attempt $ATTEMPT/6..."
+            HTML=$(curl --fail --silent --show-error --location "$BASE_URL/" || true)
+            CSS_PATH=$(echo "$HTML" | grep -oE '/_astro/[A-Za-z0-9._-]+\.css' | head -1)
+            JS_PATH=$(echo "$HTML" | grep -oE '/_astro/[A-Za-z0-9._-]+\.js' | head -1)
+
+            if [ -n "$CSS_PATH" ]; then
+              CSS_STATUS=$(curl --silent --output /dev/null --write-out '%{http_code}' "$BASE_URL$CSS_PATH")
+            fi
+
+            if [ "$CSS_STATUS" = "200" ]; then
+              break
+            fi
+
+            sleep 5
+          done
+
+          echo "📦 Checking CSS: $CSS_PATH"
+          echo "📦 Checking JS: $JS_PATH"
 
           # Check CSS
-          if [ -z "$CSS_FILE" ]; then
+          if [ -z "$CSS_PATH" ]; then
             echo "❌ CSS file not found in HTML (expected at least one /_astro/*.css)"
             FAILED=1
-          else
-            CSS_STATUS=$(curl -sI "https://context.soundbluemusic.com/_astro/$CSS_FILE" | head -1 | grep -oE '[0-9]{3}')
-            if [ "$CSS_STATUS" != "200" ]; then
-              echo "❌ CSS returned HTTP $CSS_STATUS (expected 200)"
-              FAILED=1
-            else
-              echo "✅ CSS: HTTP 200"
-            fi
-          fi
-
-          # Check JS
-          if [ -z "$JS_FILE" ]; then
-            echo "❌ JS file not found in HTML (expected at least one /_astro/*.js)"
+          elif [ "$CSS_STATUS" != "200" ]; then
+            echo "❌ CSS returned HTTP $CSS_STATUS (expected 200)"
             FAILED=1
           else
-            JS_STATUS=$(curl -sI "https://context.soundbluemusic.com/_astro/$JS_FILE" | head -1 | grep -oE '[0-9]{3}')
+            echo "✅ CSS: HTTP 200"
+          fi
+
+          # Astro does not emit a page-level JS reference when a fully SSR page
+          # has no client islands. If one is referenced, it must be accessible.
+          if [ -z "$JS_PATH" ]; then
+            echo "✅ No page-level JS referenced (valid for fully SSR HTML)"
+          else
+            JS_STATUS=$(curl --silent --output /dev/null --write-out '%{http_code}' "$BASE_URL$JS_PATH")
             if [ "$JS_STATUS" != "200" ]; then
               echo "❌ JS returned HTTP $JS_STATUS (expected 200)"
               FAILED=1
