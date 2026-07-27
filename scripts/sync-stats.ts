@@ -13,7 +13,7 @@
  */
 
 import { execSync } from 'node:child_process';
-import { existsSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { readdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -55,10 +55,15 @@ interface AllStats {
  * JSON 파일들의 배열 항목 수를 카운트
  */
 function countJsonArrayItems(dir: string): number {
-  if (!existsSync(dir)) return 0;
+  let files: string[];
+  try {
+    files = readdirSync(dir).filter((file) => file.endsWith('.json'));
+  } catch (error) {
+    if (isFileNotFoundError(error)) return 0;
+    throw error;
+  }
 
   let total = 0;
-  const files = readdirSync(dir).filter((f) => f.endsWith('.json'));
 
   for (const file of files) {
     const content = readFileSync(join(dir, file), 'utf-8');
@@ -75,11 +80,23 @@ function countJsonArrayItems(dir: string): number {
  * TypeScript 파일에서 배열 항목 수 추정 (id: 패턴 카운트)
  */
 function countTsArrayItems(filePath: string, pattern: RegExp): number {
-  if (!existsSync(filePath)) return 0;
-
-  const content = readFileSync(filePath, 'utf-8');
+  const content = readOptionalTextFile(filePath);
+  if (!content) return 0;
   const matches = content.match(pattern);
   return matches ? matches.length : 0;
+}
+
+function isFileNotFoundError(error: unknown): boolean {
+  return error instanceof Error && 'code' in error && error.code === 'ENOENT';
+}
+
+function readOptionalTextFile(filePath: string): string | undefined {
+  try {
+    return readFileSync(filePath, 'utf-8');
+  } catch (error) {
+    if (isFileNotFoundError(error)) return undefined;
+    throw error;
+  }
 }
 
 // ============================================================================
@@ -224,9 +241,9 @@ function getPermissiveStats() {
   const libraries = countTsArrayItems(libraryOrderFile, /^ {2}'[^']+',?$/gm);
   let webApis = 0;
 
-  if (existsSync(webApisFile)) {
-    const content = readFileSync(webApisFile, 'utf-8');
-    const matches = content.match(/^ {4}name: '/gm);
+  const webApisContent = readOptionalTextFile(webApisFile);
+  if (webApisContent) {
+    const matches = webApisContent.match(/^ {4}name: '/gm);
     webApis = matches ? matches.length : 0;
   }
 
@@ -583,13 +600,13 @@ function getPermissiveReadmeReplacements(stats: AllStats): Replacement[] {
  * 파일 내용 업데이트
  */
 function updateFile(filePath: string, replacements: Replacement[]): boolean {
-  if (!existsSync(filePath)) {
+  const originalContent = readOptionalTextFile(filePath);
+  if (originalContent === undefined) {
     console.warn(`⚠️  File not found: ${filePath}`);
     return false;
   }
 
-  let content = readFileSync(filePath, 'utf-8');
-  const originalContent = content;
+  let content = originalContent;
 
   for (const { pattern, replacement } of replacements) {
     content = content.replace(pattern, replacement);
@@ -667,14 +684,7 @@ function main() {
 
     // metadata.json 검증
     const metadataPath = join(ROOT_DIR, 'docs/docs-site/src/data/metadata.json');
-    let metadataContent: string | undefined;
-    try {
-      metadataContent = readFileSync(metadataPath, 'utf-8');
-    } catch (error) {
-      if (!(error instanceof Error && 'code' in error && error.code === 'ENOENT')) {
-        throw error;
-      }
-    }
+    const metadataContent = readOptionalTextFile(metadataPath);
     if (metadataContent) {
       const metadata = JSON.parse(metadataContent);
 
@@ -720,8 +730,9 @@ function main() {
 
   // data/context/meta.json 타임스탬프 업데이트 (SEO: 데이터 신선도 표시)
   const contextMetaPath = join(ROOT_DIR, 'data/context/meta.json');
-  if (existsSync(contextMetaPath)) {
-    const contextMeta = JSON.parse(readFileSync(contextMetaPath, 'utf-8'));
+  const contextMetaContent = readOptionalTextFile(contextMetaPath);
+  if (contextMetaContent) {
+    const contextMeta = JSON.parse(contextMetaContent);
     contextMeta.generatedAt = stats.generatedAt;
     writeFileSync(contextMetaPath, JSON.stringify(contextMeta, null, 2), 'utf-8');
     console.log('✅ Updated data/context/meta.json timestamp');
@@ -802,12 +813,12 @@ function main() {
  * GitHub Pages metadata.json 업데이트
  */
 function updateMetadataJson(filePath: string, stats: AllStats): boolean {
-  if (!existsSync(filePath)) {
+  const content = readOptionalTextFile(filePath);
+  if (content === undefined) {
     console.warn(`⚠️  File not found: ${filePath}`);
     return false;
   }
 
-  const content = readFileSync(filePath, 'utf-8');
   const metadata = JSON.parse(content);
   const originalContent = JSON.stringify(metadata, null, 2);
 
