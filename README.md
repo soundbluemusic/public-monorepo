@@ -7,7 +7,7 @@
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 [![Node](https://img.shields.io/badge/Node-%3E%3D20-green.svg)](https://nodejs.org)
 [![pnpm](https://img.shields.io/badge/pnpm-11.17.0-orange.svg)](https://pnpm.io)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue.svg)](https://www.typescriptlang.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-6%2F7-blue.svg)](https://www.typescriptlang.org/)
 [![React](https://img.shields.io/badge/React-19-61dafb.svg)](https://react.dev/)
 [![SSR + D1](https://img.shields.io/badge/SSR-D1_Database-F38020?logo=cloudflare)](https://developers.cloudflare.com/d1/)
 
@@ -31,7 +31,7 @@
 | | |
 |---|---|
 | **Live** | [context.soundbluemusic.com](https://context.soundbluemusic.com) |
-| **Source** | [apps/context/](apps/context) · [README](apps/context/README.md) · [config](apps/context/vite.config.ts) |
+| **Source** | [apps/context/](apps/context) · [README](apps/context/README.md) · [config](apps/context/astro.config.mjs) |
 | **Database** | Cloudflare D1 (`context-db`) |
 | **Features** | 16394 entries, 52 categories, 53 conversations |
 
@@ -41,7 +41,7 @@
 | | |
 |---|---|
 | **Live** | [permissive.soundbluemusic.com](https://permissive.soundbluemusic.com) |
-| **Source** | [apps/permissive/](apps/permissive) · [README](apps/permissive/README.md) · [config](apps/permissive/vite.config.ts) |
+| **Source** | [apps/permissive/](apps/permissive) · [README](apps/permissive/README.md) · [config](apps/permissive/astro.config.mjs) |
 | **Data** | [apps/permissive/app/data/](apps/permissive/app/data) |
 | **Features** | 120 libraries, 56 Web APIs |
 
@@ -51,7 +51,7 @@
 | | |
 |---|---|
 | **Live** | [roots.soundbluemusic.com](https://roots.soundbluemusic.com) |
-| **Source** | [apps/roots/](apps/roots) · [README](apps/roots/README.md) · [config](apps/roots/vite.config.ts) |
+| **Source** | [apps/roots/](apps/roots) · [README](apps/roots/README.md) · [config](apps/roots/astro.config.mjs) |
 | **Data** | [data/roots/](data/roots) |
 | **Features** | 438 concepts, 18 fields |
 
@@ -106,7 +106,7 @@ public-monorepo/
 | Category | Technology | Source |
 |:---------|:-----------|:-------|
 | **Framework** | Astro 7 (SSR) | [apps/*/src/pages/](apps/context/src/pages) |
-| **Language** | TypeScript 5.x | [tsconfig.json](tsconfig.json) |
+| **Language** | TypeScript 6.0.3 (apps) / 7.0.2 (shared packages) | [tsconfig.json](tsconfig.json) |
 | **Styling** | Tailwind CSS v4 | [packages/config/](packages/config) |
 | **Database** | Cloudflare D1 (Context only) | [apps/context/wrangler.toml](apps/context/wrangler.toml) |
 | **Search** | MiniSearch | [packages/search/](packages/search) |
