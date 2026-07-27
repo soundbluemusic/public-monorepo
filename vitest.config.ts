@@ -50,6 +50,7 @@ export default defineConfig({
         '**/*.mjs',
       ],
       include: [
+        'apps/*/app/lib/**/*.ts',
         'packages/core/src/**/!(index).ts',
         'packages/platform/src/**/!(index).ts',
         'packages/i18n/src/**/!(index).ts',

@@ -33,7 +33,7 @@ import { generateI18nRoutes, extractStaticRoutes } from '@soundblue/i18n/utils';
 
 ## Tech Stack
 
-React 19 · TanStack Start · TypeScript · Paraglide
+Astro 7 SSR · React 19 · TypeScript · Paraglide
 
 ## Links
 

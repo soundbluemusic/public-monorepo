@@ -27,7 +27,7 @@ import type { FavoriteItem, RecentViewItem, SettingsData } from '@soundblue/plat
 
 ## Tech Stack
 
-React 19 · TanStack Start · TypeScript · Dexie.js · IndexedDB
+Astro 7 SSR · React 19 · TypeScript · Dexie.js · IndexedDB
 
 ## Links
 

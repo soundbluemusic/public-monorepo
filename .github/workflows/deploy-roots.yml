@@ -10,6 +10,7 @@ on:
       - 'package.json'
       - 'pnpm-lock.yaml'
       - 'pnpm-workspace.yaml'
+      - 'scripts/smoke-worker.sh'
       - '.github/workflows/deploy-roots.yml'
   workflow_dispatch:
 
@@ -57,67 +58,10 @@ jobs:
             --data '{"purge_everything":true}'
 
       - name: Smoke test - SSR page rendering
-        run: |
-          echo "🔍 Testing SSR page rendering..."
-          echo "⏳ Waiting 5s for deployment propagation..."
-          sleep 5
-
-          FAILED=0
-          BASE_URL="https://roots.soundbluemusic.com"
-
-          # Test 1: Homepage has SSR content
-          echo ""
-          echo "📄 Test 1: Homepage SSR"
-          HOME_STATUS=$(curl -sL -o /tmp/roots-home.html -w "%{http_code}" "$BASE_URL/")
-          if [ "$HOME_STATUS" = "200" ] && grep -q '<title>.*Roots' /tmp/roots-home.html; then
-            echo "✅ Homepage has title tag"
-          else
-            echo "❌ Homepage missing title tag (SSR failed)"
-            echo "HTTP status: $HOME_STATUS"
-            FAILED=1
-          fi
-
-          # Test 2: Concept page renders
-          echo ""
-          echo "📄 Test 2: Concept page"
-          CONCEPT_STATUS=$(curl -sL -o /tmp/roots-concept.html -w "%{http_code}" "$BASE_URL/concept/pythagorean-theorem")
-          if [ "$CONCEPT_STATUS" = "200" ] && grep -qi 'pythagorean\|피타고라스' /tmp/roots-concept.html; then
-            echo "✅ Concept page renders"
-          else
-            echo "❌ Concept page failed"
-            echo "HTTP status: $CONCEPT_STATUS"
-            FAILED=1
-          fi
-
-          # Test 3: Korean version works
-          echo ""
-          echo "📄 Test 3: Korean version"
-          KO_STATUS=$(curl -sL -o /tmp/roots-ko.html -w "%{http_code}" "$BASE_URL/ko/")
-          if [ "$KO_STATUS" = "200" ] && grep -q 'Roots' /tmp/roots-ko.html; then
-            echo "✅ Korean version renders"
-          else
-            echo "❌ Korean version failed"
-            echo "HTTP status: $KO_STATUS"
-            FAILED=1
-          fi
-
-          # Test 4: Field page
-          echo ""
-          echo "📄 Test 4: Field page"
-          FIELD_STATUS=$(curl -sL -o /tmp/roots-field.html -w "%{http_code}" "$BASE_URL/field/algebra")
-          if [ "$FIELD_STATUS" = "200" ] && grep -qi 'algebra\|대수' /tmp/roots-field.html; then
-            echo "✅ Field page renders"
-          else
-            echo "❌ Field page failed"
-            echo "HTTP status: $FIELD_STATUS"
-            FAILED=1
-          fi
-
-          if [ "$FAILED" -eq 1 ]; then
-            echo ""
-            echo "🚨 SMOKE TEST FAILED!"
-            exit 1
-          fi
-
-          echo ""
-          echo "✨ All smoke tests passed!"
+        run: >-
+          ./scripts/smoke-worker.sh
+          https://roots.soundbluemusic.com
+          '<title>.*Roots'
+          /concept/pythagorean-theorem 'pythagorean|피타고라스'
+          /ko/ 'Roots'
+          /field/algebra 'algebra|대수'

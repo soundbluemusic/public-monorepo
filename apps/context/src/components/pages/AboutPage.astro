@@ -1,0 +1,47 @@
+---
+import AppShell from '../AppShell.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+interface Props {
+  locale: 'en' | 'ko';
+}
+
+const { locale } = Astro.props;
+const isKo = locale === 'ko';
+const BASE_URL = 'https://context.soundbluemusic.com';
+const copy = isKo
+  ? {
+      title: '소개 - Context',
+      description: '한국어 학습자를 위한 의미 중심 다국어 사전입니다.',
+      heading: 'Context 소개',
+      lead: '한국어 학습자를 위한 의미 중심 다국어 사전입니다.',
+      paragraphs: [
+        'Context는 한국어 학습자를 위한 의미 중심 사전입니다. 단순한 번역을 넘어 단어의 맥락과 뉘앙스를 이해할 수 있도록 돕습니다.',
+        '모든 콘텐츠는 무료로 제공되며, 오픈소스 기술로 제작되었습니다.',
+      ],
+    }
+  : {
+      title: 'About - Context',
+      description: 'About Context Korean Dictionary',
+      heading: 'About Context',
+      lead: 'A meaning-focused multilingual dictionary for Korean learners.',
+      paragraphs: [
+        'Context is a meaning-focused dictionary for Korean learners. It helps you understand the context and nuances of words beyond simple translation.',
+        'All content is provided for free and built with open-source technology.',
+      ],
+    };
+---
+
+<BaseLayout
+  title={copy.title}
+  description={copy.description}
+  canonical={`${BASE_URL}${isKo ? '/ko' : ''}/about`}
+>
+  <AppShell locale={locale}>
+    <h1 class="text-2xl sm:text-3xl font-bold text-(--text-primary) mb-4">{copy.heading}</h1>
+    <p class="text-(--text-secondary) mb-6">{copy.lead}</p>
+    <div class="space-y-3 text-(--text-secondary)">
+      {copy.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+    </div>
+  </AppShell>
+</BaseLayout>

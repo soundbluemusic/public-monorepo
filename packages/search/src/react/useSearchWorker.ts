@@ -26,84 +26,12 @@
  *
  * @see https://lucaong.github.io/minisearch/ - MiniSearch documentation
  */
-import MiniSearch from 'minisearch';
+import type MiniSearch from 'minisearch';
 import { useCallback, useEffect, useRef, useState } from 'react';
+import { clearSearchIndexCache, loadMiniSearch, loadSearchIndex } from './search-index';
+import type { LoadedSearchIndex, SearchIndexItem, SearchResult } from './types';
 
-/**
- * Represents a searchable item in the search index.
- *
- * This interface defines the structure of items that can be indexed and searched.
- * All apps (Context, Roots, Permissive) use this unified format in their
- * `/search-index.json` files.
- *
- * @example
- * ```typescript
- * // Context app entry
- * const entry: SearchIndexItem = {
- *   id: 'hello',
- *   type: 'entry',
- *   name: { en: 'Hello', ko: '안녕하세요' },
- *   description: { en: 'A greeting', ko: '인사말' },
- *   tags: ['greetings', 'basic'],
- * };
- *
- * // Roots app concept
- * const concept: SearchIndexItem = {
- *   id: 'pythagorean-theorem',
- *   type: 'concept',
- *   name: { en: 'Pythagorean Theorem', ko: '피타고라스 정리' },
- *   field: 'geometry',
- * };
- * ```
- */
-export interface SearchIndexItem {
-  /** Unique identifier (kebab-case, e.g., 'hello-world', 'pythagorean-theorem') */
-  id: string;
-
-  /**
-   * Item type for categorization and icon display.
-   * - 'concept': Math concept (Roots app)
-   * - 'entry': Korean word entry (Context app)
-   * - 'library': NPM library (Permissive app)
-   * - 'api': Web API (Permissive app)
-   */
-  type: 'concept' | 'entry' | 'library' | 'api';
-
-  /** Localized name (required for all items) */
-  name: { en: string; ko: string };
-
-  /** Localized description (optional, improves search relevance) */
-  description?: { en: string; ko: string };
-
-  /** Category/domain field (e.g., 'geometry', 'algebra', 'greetings') */
-  field?: string;
-
-  /** Additional search keywords */
-  tags?: string[];
-}
-
-/**
- * Search result with the matched item and relevance score.
- *
- * @example
- * ```typescript
- * const result: SearchResult = {
- *   item: { id: 'hello', type: 'entry', name: { en: 'Hello', ko: '안녕하세요' } },
- *   score: 15.234, // Higher = more relevant
- * };
- * ```
- */
-export interface SearchResult {
-  /** The matched search index item */
-  item: SearchIndexItem;
-
-  /**
-   * Relevance score from MiniSearch.
-   * Higher values indicate better matches.
-   * Score is affected by field boost weights and fuzzy matching.
-   */
-  score?: number;
-}
+export type { SearchIndexItem, SearchResult } from './types';
 
 /**
  * Configuration options for the useSearchWorker hook.
@@ -223,128 +151,9 @@ interface UseSearchWorkerReturn {
   error: string | null;
 }
 
-interface LoadedSearchIndex {
-  items: SearchIndexItem[];
-  itemsById: Map<string, SearchIndexItem>;
-}
-
-const searchIndexCache = new Map<string, Promise<LoadedSearchIndex>>();
-const miniSearchCache = new Map<string, Promise<MiniSearch<SearchIndexItem>>>();
-
 /** @internal Test helper for module-level search caches. */
 export function __clearSearchWorkerCacheForTests() {
-  searchIndexCache.clear();
-  miniSearchCache.clear();
-}
-
-async function loadSearchIndex(indexUrl: string): Promise<LoadedSearchIndex> {
-  const cached = searchIndexCache.get(indexUrl);
-  if (cached) {
-    return cached;
-  }
-
-  const loadPromise = fetch(indexUrl)
-    .then(async (response) => {
-      if (!response.ok) {
-        throw new Error(`Failed to load search index: ${response.status}`);
-      }
-
-      const items: SearchIndexItem[] = await response.json();
-      return {
-        items,
-        itemsById: new Map(items.map((item) => [item.id, item])),
-      };
-    })
-    .catch((error: unknown) => {
-      searchIndexCache.delete(indexUrl);
-      throw error;
-    });
-
-  searchIndexCache.set(indexUrl, loadPromise);
-  return loadPromise;
-}
-
-function createMiniSearch(locale: 'en' | 'ko'): MiniSearch<SearchIndexItem> {
-  return new MiniSearch<SearchIndexItem>({
-    // Searchable fields - order doesn't affect search, boost does
-    fields: [
-      `name.${locale}`, // Primary: current locale name
-      'name.en', // Fallback: English name (always indexed)
-      `description.${locale}`, // Secondary: current locale description
-      'description.en', // Fallback: English description
-      'field', // Category/domain field
-      'tags', // Additional keywords
-    ],
-    // Fields to store in search results (for display without lookup)
-    storeFields: ['id', 'type', 'name', 'description', 'field', 'tags'],
-
-    // Custom field extractor for nested objects (name.ko, description.en)
-    // MiniSearch only handles flat objects by default
-    extractField: (document, fieldName) => {
-      // Split field path: "name.ko" -> ["name", "ko"]
-      const parts = fieldName.split('.');
-      let value: unknown = document;
-
-      // Traverse the object path
-      for (const part of parts) {
-        if (value && typeof value === 'object' && part in value) {
-          value = (value as Record<string, unknown>)[part];
-        } else {
-          return undefined;
-        }
-      }
-
-      // Join arrays (tags) into space-separated string for indexing
-      if (Array.isArray(value)) {
-        return value.join(' ');
-      }
-
-      return typeof value === 'string' ? value : undefined;
-    },
-
-    // Default search options applied to all queries
-    searchOptions: {
-      // Boost multipliers for field relevance ranking
-      boost: {
-        [`name.${locale}`]: 3, // Primary language name: highest priority
-        'name.en': 2, // English name: high priority (fallback)
-        [`description.${locale}`]: 1.5, // Primary language desc: medium
-        'description.en': 1, // English description: base relevance
-        field: 1, // Category: base relevance
-        tags: 0.5, // Tags: lower (auxiliary keywords)
-      },
-      // Fuzzy matching: 0.2 = allow 20% character differences
-      // "hello" matches "helo" (1 char diff in 5 chars = 20%)
-      fuzzy: 0.2,
-      // Prefix matching: "hel" matches "hello"
-      prefix: true,
-    },
-  });
-}
-
-async function loadMiniSearch(
-  indexUrl: string,
-  locale: 'en' | 'ko',
-): Promise<MiniSearch<SearchIndexItem>> {
-  const cacheKey = `${indexUrl}::${locale}`;
-  const cached = miniSearchCache.get(cacheKey);
-  if (cached) {
-    return cached;
-  }
-
-  const loadPromise = loadSearchIndex(indexUrl)
-    .then((index) => {
-      const miniSearch = createMiniSearch(locale);
-      miniSearch.addAll(index.items);
-      return miniSearch;
-    })
-    .catch((error: unknown) => {
-      miniSearchCache.delete(cacheKey);
-      throw error;
-    });
-
-  miniSearchCache.set(cacheKey, loadPromise);
-  return loadPromise;
+  clearSearchIndexCache();
 }
 
 /**

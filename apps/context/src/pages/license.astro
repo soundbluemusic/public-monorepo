@@ -1,29 +1,5 @@
 ---
-import AppShell from '../components/AppShell.astro';
-import BaseLayout from '../layouts/BaseLayout.astro';
-
-const BASE_URL = 'https://context.soundbluemusic.com';
+import LicensePage from '../components/pages/LicensePage.astro';
 ---
 
-<BaseLayout
-  title="License - Context"
-  description="License information for Context Korean Dictionary"
-  canonical={`${BASE_URL}/license`}
->
-  <AppShell locale="en">
-    <h1 class="text-2xl font-bold text-(--text-primary) mb-6">License</h1>
-    <div class="text-(--text-secondary) space-y-4">
-      <p>This project is distributed under the <strong class="text-(--text-primary)">Apache License 2.0</strong>.</p>
-      <p>
-        <a
-          href="https://github.com/soundbluemusic/public-monorepo/blob/main/LICENSE"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="text-(--accent-primary) hover:underline"
-        >
-          View full license on GitHub →
-        </a>
-      </p>
-    </div>
-  </AppShell>
-</BaseLayout>
+<LicensePage locale="en" />

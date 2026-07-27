@@ -26,6 +26,7 @@
     "./utils": "./src/utils/index.ts",
     "./hooks": "./src/hooks/index.ts",
     "./components": "./src/components/index.ts",
+    "./astro/AppShellFrame.astro": "./src/astro/AppShellFrame.astro",
     "./table": "./src/components/Table/index.ts",
     "./shell": "./src/shell/index.ts",
     "./styles/base.css": "./src/styles/base.css"

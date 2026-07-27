@@ -1,0 +1,74 @@
+---
+import AppShell from '../AppShell.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+interface Props {
+  locale: 'en' | 'ko';
+}
+
+const { locale } = Astro.props;
+const isKo = locale === 'ko';
+const BASE_URL = 'https://context.soundbluemusic.com';
+const copy = isKo
+  ? {
+      title: '어휘 다운로드 - Context',
+      description: '오프라인 사용을 위한 한국어 어휘 데이터 다운로드',
+      heading: '어휘 다운로드',
+      lead: '오프라인 사용이나 연구 목적으로 한국어 어휘 데이터를 다운로드하세요.',
+      databaseTitle: '오프라인 데이터베이스',
+      databaseDescription: '앱에서 오프라인으로 접근하기 위한 전체 어휘 데이터베이스를 다운로드하세요.',
+      download: 'JSON 다운로드',
+      sourceTitle: '원본 데이터 (GitHub)',
+      sourceDescription: 'GitHub에서 원본 데이터 파일에 접근하세요.',
+      sourceLink: 'GitHub에서 보기',
+    }
+  : {
+      title: 'Download Vocabulary - Context',
+      description: 'Download all Korean vocabulary mappings for offline use',
+      heading: 'Download Vocabulary',
+      lead: 'Download Korean vocabulary data for offline use or research purposes.',
+      databaseTitle: 'Offline Database',
+      databaseDescription: 'Download the full vocabulary database for offline access in the app.',
+      download: 'Download JSON',
+      sourceTitle: 'Raw Data (GitHub)',
+      sourceDescription: 'Access the source data files on GitHub.',
+      sourceLink: 'View on GitHub',
+    };
+---
+
+<BaseLayout
+  title={copy.title}
+  description={copy.description}
+  canonical={`${BASE_URL}${isKo ? '/ko' : ''}/download`}
+>
+  <AppShell locale={locale}>
+    <h1 class="text-2xl sm:text-3xl font-bold text-(--text-primary) mb-4">{copy.heading}</h1>
+    <p class="text-(--text-secondary) mb-8">{copy.lead}</p>
+
+    <div class="space-y-4">
+      <div class="p-5 rounded-xl bg-(--bg-elevated) border border-(--border-primary)">
+        <h2 class="text-base font-semibold text-(--text-primary) mb-2">{copy.databaseTitle}</h2>
+        <p class="text-sm text-(--text-secondary) mb-4">{copy.databaseDescription}</p>
+        <a
+          href="/api/offline-db"
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-(--accent-primary) text-white text-sm font-medium hover:brightness-110 transition-all"
+        >
+          {copy.download}
+        </a>
+      </div>
+
+      <div class="p-5 rounded-xl bg-(--bg-elevated) border border-(--border-primary)">
+        <h2 class="text-base font-semibold text-(--text-primary) mb-2">{copy.sourceTitle}</h2>
+        <p class="text-sm text-(--text-secondary) mb-4">{copy.sourceDescription}</p>
+        <a
+          href="https://github.com/soundbluemusic/public-monorepo/tree/main/data/context"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-(--bg-tertiary) text-(--text-primary) text-sm font-medium hover:bg-(--bg-secondary) transition-colors border border-(--border-primary)"
+        >
+          {copy.sourceLink}
+        </a>
+      </div>
+    </div>
+  </AppShell>
+</BaseLayout>

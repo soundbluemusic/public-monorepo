@@ -1,5 +1,6 @@
 ---
 import { categoryMeta, getLibrarySlug, libraries } from '../../../app/data/libraries';
+import { filterLibraries } from '../../../app/lib/library-filters';
 import AppShell from '../AppShell.astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
@@ -21,15 +22,9 @@ const description = isKo
   ? 'MIT, Apache 2.0 등 라이선스 메타데이터와 함께 정리된 오픈소스 라이브러리 목록'
   : 'Open-source JavaScript libraries sorted by category with license metadata';
 
-const q = searchQuery?.toLowerCase() ?? '';
-const filtered = libraries.filter((lib) => {
-  const matchesCategory = !categoryFilter || lib.categories.includes(categoryFilter);
-  const matchesSearch =
-    !q ||
-    lib.name.toLowerCase().includes(q) ||
-    lib.description.toLowerCase().includes(q) ||
-    lib.tags?.some((t) => t.toLowerCase().includes(q));
-  return matchesCategory && matchesSearch;
+const filtered = filterLibraries(libraries, {
+  category: categoryFilter,
+  query: searchQuery,
 });
 ---
 

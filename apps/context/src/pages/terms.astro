@@ -1,18 +1,5 @@
 ---
-import AppShell from '../components/AppShell.astro';
-import BaseLayout from '../layouts/BaseLayout.astro';
-
-const BASE_URL = 'https://context.soundbluemusic.com';
+import TermsPage from '../components/pages/TermsPage.astro';
 ---
 
-<BaseLayout
-  title="Terms of Service - Context"
-  canonical={`${BASE_URL}/terms`}
->
-  <AppShell locale="en">
-    <h1 class="text-2xl sm:text-3xl font-bold text-(--text-primary) mb-6">Terms of Service</h1>
-    <div class="text-(--text-secondary)">
-      <p>By using this site, you agree to the following terms. All content is provided for educational purposes and may be used commercially.</p>
-    </div>
-  </AppShell>
-</BaseLayout>
+<TermsPage locale="en" />

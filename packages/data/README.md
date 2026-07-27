@@ -37,7 +37,7 @@ import { metadata } from '@soundblue/data/metadata';
 
 ## Tech Stack
 
-React 19 · TanStack Start · TypeScript · Zod · Cloudflare D1
+Astro 7 SSR · React 19 · TypeScript · Zod · Cloudflare D1
 
 ## Links
 

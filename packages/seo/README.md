@@ -18,7 +18,7 @@ This package is part of a monorepo powering three learning apps:
 ## Exports
 
 ```typescript
-// Meta tag factories (TanStack Start head)
+// Framework-neutral meta tag factories
 import { headFactory, dynamicHeadFactoryEn, dynamicHeadFactoryKo } from '@soundblue/seo/meta';
 
 // Sitemap generation
@@ -33,7 +33,7 @@ import { generateBreadcrumbSchema } from '@soundblue/seo/structured-data';
 
 ## Tech Stack
 
-React 19 · TanStack Start · TypeScript · SSR · Cloudflare Workers
+Astro 7 SSR · React 19 · TypeScript · Cloudflare Workers
 
 ## Links
 
