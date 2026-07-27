@@ -44,3 +44,18 @@ storybook-static/
 
 # 추가 대용량 데이터 (필요시 @파일명으로 직접 지정)
 data/roots/
+
+# 생성된 로컬라이징 코드
+apps/*/app/paraglide/
+apps/*/.inlang-plugins/
+
+# 대형 앱 데이터 (필요할 때 직접 열기)
+apps/roots/app/data/concepts/
+apps/permissive/app/data/libraries.ts
+apps/permissive/app/data/library-enrichment.ts
+apps/context/app/data/conversations.ts
+
+# 대형 일회성 생성기 (유지보수할 때 직접 열기)
+scripts/generate-examples-all.ts
+scripts/generate-geography-examples.ts
+scripts/convert-geography-vocabulary.ts
