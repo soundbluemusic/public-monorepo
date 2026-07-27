@@ -1,32 +1,24 @@
-/**
- * @fileoverview Context 앱 D1 서비스 테스트
- *
- * D1 데이터베이스 쿼리 함수들의 단위 테스트입니다.
- * 실제 D1이 아닌 Mock을 사용하여 로직을 검증합니다.
- */
+import type { D1Database, D1PreparedStatement } from '@cloudflare/workers-types';
+import { clearCache } from '../../../../../../apps/context/app/services/cache';
+import {
+  getAllTagsFromD1,
+  getCategoriesFromD1,
+  getConversationsByCategoryFromD1,
+  getEntriesByCategoryFromD1,
+  getEntriesByCategoryPaginatedFromD1,
+  getEntriesByTagFromD1,
+  getEntryByIdFromD1,
+  getEntryCounts,
+  getEntryIdsByCategoryFromD1,
+  getHomonymsByKoreanFromD1,
+} from '../../../../../../apps/context/app/services/d1';
+import {
+  type D1EntryRow,
+  rowToLocaleEntry,
+} from '../../../../../../apps/context/app/services/entry-converter';
+import { beforeEach, describe, expect, it, vi } from 'vitest';
 
-import { describe, expect, it, vi, beforeEach } from 'vitest';
-
-// Mock D1 Database 타입
-interface MockD1Result<T> {
-  results: T[];
-  success: boolean;
-  meta: Record<string, unknown>;
-}
-
-interface MockD1PreparedStatement {
-  bind: (...values: unknown[]) => MockD1PreparedStatement;
-  first: <T>() => Promise<T | null>;
-  all: <T>() => Promise<MockD1Result<T>>;
-  run: () => Promise<MockD1Result<unknown>>;
-}
-
-interface MockD1Database {
-  prepare: (query: string) => MockD1PreparedStatement;
-}
-
-// 테스트 데이터
-const mockEntryRow = {
+const entryRow: D1EntryRow = {
   id: 'hello',
   korean: '안녕',
   romanization: 'annyeong',
@@ -34,22 +26,14 @@ const mockEntryRow = {
   category_id: 'greetings',
   difficulty: 'beginner',
   frequency: 5,
-  tags: '["greeting", "common"]',
+  tags: '["greeting","common"]',
   translations: JSON.stringify({
-    ko: {
-      word: '안녕',
-      explanation: '친한 사이에서 쓰는 인사말',
-      examples: { beginner: '안녕, 잘 지냈어?' },
-    },
-    en: {
-      word: 'Hello',
-      explanation: 'A casual greeting used among friends',
-      examples: { beginner: 'Hello, how have you been?' },
-    },
+    ko: { word: '안녕', explanation: '친한 사이에서 쓰는 인사말' },
+    en: { word: 'Hello', explanation: 'A casual greeting' },
   }),
 };
 
-const mockCategoryRow = {
+const categoryRow = {
   id: 'greetings',
   name_ko: '인사',
   name_en: 'Greetings',
@@ -60,637 +44,256 @@ const mockCategoryRow = {
   sort_order: 1,
 };
 
-const mockConversationRow = {
+const conversationRow = {
   id: 'conv-1',
   category_id: 'greetings',
   title_ko: '첫 만남',
   title_en: 'First Meeting',
-  dialogue: JSON.stringify([
-    { speaker: 'A', text: '안녕하세요' },
-    { speaker: 'B', text: '안녕하세요, 반갑습니다' },
-  ]),
+  dialogue: JSON.stringify([{ speaker: 'A', text: '안녕하세요' }]),
 };
 
-// Mock D1 생성 함수
-function createMockD1(options?: {
-  entryRows?: typeof mockEntryRow[];
-  categoryRows?: typeof mockCategoryRow[];
-  conversationRows?: typeof mockConversationRow[];
+interface MockOptions {
+  categories?: typeof categoryRow[];
+  conversations?: typeof conversationRow[];
+  counts?: { category_id: string; count: number }[];
+  entries?: D1EntryRow[];
   shouldThrow?: boolean;
-  entryCountRows?: { category_id: string; count: number }[];
-}): MockD1Database {
-  const {
-    entryRows = [],
-    categoryRows = [],
-    conversationRows = [],
-    shouldThrow = false,
-    entryCountRows = [],
-  } = options || {};
+  tags?: { tags: string }[];
+}
 
+function createMockD1({
+  categories = [],
+  conversations = [],
+  counts = [],
+  entries = [],
+  shouldThrow = false,
+  tags = [],
+}: MockOptions = {}): D1Database {
   return {
-    prepare: (query: string) => {
-      let boundValues: unknown[] = [];
+    prepare(query: string) {
+      let values: unknown[] = [];
 
-      const statement: MockD1PreparedStatement = {
-        bind: (...values: unknown[]) => {
-          boundValues = values;
+      const statement = {
+        bind(...boundValues: unknown[]) {
+          values = boundValues;
           return statement;
         },
-        first: async <T>() => {
+        async first<T>() {
           if (shouldThrow) throw new Error('D1 connection failed');
 
-          // SELECT ... FROM entries WHERE id = ?
-          if (query.includes('FROM entries') && query.includes('WHERE id')) {
-            const id = boundValues[0];
-            const found = entryRows.find((r) => r.id === id);
-            return (found as T) || null;
+          if (query.includes('COUNT(*)') && query.includes('WHERE category_id')) {
+            return { count: entries.filter((row) => row.category_id === values[0]).length } as T;
+          }
+          if (query.includes('FROM entries WHERE id = ?')) {
+            return (entries.find((row) => row.id === values[0]) as T | undefined) ?? null;
           }
           return null;
         },
-        all: async <T>() => {
+        async all<T>() {
           if (shouldThrow) throw new Error('D1 connection failed');
 
-          // SELECT ... FROM entries WHERE category_id = ?
-          if (query.includes('FROM entries') && query.includes('WHERE category_id')) {
-            const categoryId = boundValues[0];
-            const results = entryRows.filter((r) => r.category_id === categoryId);
-            return { results: results as T[], success: true, meta: {} };
-          }
-
-          // SELECT id FROM entries WHERE category_id = ?
-          if (query.includes('SELECT id FROM entries') && query.includes('WHERE category_id')) {
-            const categoryId = boundValues[0];
-            const results = entryRows
-              .filter((r) => r.category_id === categoryId)
-              .map((r) => ({ id: r.id }));
-            return { results: results as T[], success: true, meta: {} };
-          }
-
-          // SELECT ... FROM categories
+          let results: unknown[] = [];
           if (query.includes('FROM categories')) {
-            return { results: categoryRows as T[], success: true, meta: {} };
+            results = categories;
+          } else if (query.includes('FROM conversations')) {
+            results = conversations.filter((row) => row.category_id === values[0]);
+          } else if (query.includes('GROUP BY category_id')) {
+            results = counts;
+          } else if (query.includes('SELECT tags FROM entries')) {
+            results = tags;
+          } else if (query.includes('WHERE korean = ?')) {
+            results = entries.filter((row) => row.korean === values[0]);
+          } else if (query.includes('WHERE tags LIKE ?')) {
+            const tag = String(values[0]).replaceAll('%"', '').replaceAll('"%', '');
+            results = entries.filter((row) => row.tags?.includes(`"${tag}"`));
+          } else if (query.includes('WHERE category_id = ?')) {
+            results = entries.filter((row) => row.category_id === values[0]);
           }
 
-          // SELECT ... FROM conversations WHERE category_id = ?
-          if (query.includes('FROM conversations') && query.includes('WHERE category_id')) {
-            const categoryId = boundValues[0];
-            const results = conversationRows.filter((r) => r.category_id === categoryId);
-            return { results: results as T[], success: true, meta: {} };
-          }
-
-          // SELECT category_id, COUNT(*) ... GROUP BY category_id
-          if (query.includes('COUNT(*)') && query.includes('GROUP BY category_id')) {
-            return { results: entryCountRows as T[], success: true, meta: {} };
-          }
-
-          return { results: [] as T[], success: true, meta: {} };
-        },
-        run: async () => {
-          if (shouldThrow) throw new Error('D1 connection failed');
-          return { results: [], success: true, meta: {} };
+          return { results: results as T[], success: true, meta: {} };
         },
       };
 
-      return statement;
+      return statement as unknown as D1PreparedStatement;
     },
-  };
+  } as unknown as D1Database;
 }
 
-// D1 서비스 함수들을 직접 재구현 (테스트용)
-// 실제 모듈 import는 Cloudflare 런타임 의존성 때문에 어려움
+beforeEach(() => {
+  clearCache();
+  vi.restoreAllMocks();
+});
 
-interface LocaleEntry {
-  id: string;
-  korean: string;
-  romanization: string;
-  partOfSpeech: string;
-  categoryId: string;
-  tags: string[];
-  difficulty: string;
-  frequency?: number;
-  hasDialogue: boolean;
-  translation: {
-    word: string;
-    explanation: string;
-    examples?: Record<string, string>;
-    variations?: string[];
-  };
-}
+describe('Context D1 production services', () => {
+  it('loads and localizes an entry through the public barrel', async () => {
+    const db = createMockD1({ entries: [entryRow] });
 
-type Language = 'ko' | 'en';
+    const ko = await getEntryByIdFromD1(db, 'hello', 'ko');
+    const en = await getEntryByIdFromD1(db, 'hello', 'en');
 
-interface D1EntryRow {
-  id: string;
-  korean: string;
-  romanization: string | null;
-  part_of_speech: string | null;
-  category_id: string;
-  difficulty: string | null;
-  frequency: number | null;
-  tags: string | null;
-  translations: string | null;
-}
+    expect(ko?.translation.word).toBe('안녕');
+    expect(en?.translation.word).toBe('Hello');
+    expect(ko?.tags).toEqual(['greeting', 'common']);
+  });
 
-interface Translation {
-  word: string;
-  explanation: string;
-  examples?: Record<string, string>;
-  variations?: string[];
-  dialogue?: unknown;
-}
+  it('returns safe fallbacks for missing entries and D1 errors', async () => {
+    expect(await getEntryByIdFromD1(createMockD1(), 'missing', 'en')).toBeNull();
 
-function rowToLocaleEntry(row: D1EntryRow, locale: Language): LocaleEntry | null {
-  if (!row.translations) return null;
+    vi.spyOn(console, 'error').mockImplementation(() => undefined);
+    expect(await getEntryByIdFromD1(createMockD1({ shouldThrow: true }), 'hello', 'en')).toBeNull();
+  });
 
-  try {
-    const translations = JSON.parse(row.translations) as {
-      ko?: Translation;
-      en?: Translation;
-    };
+  it('loads category entries and pagination without changing ordering', async () => {
+    const entries = [entryRow, { ...entryRow, id: 'goodbye', korean: '안녕히 가세요' }];
+    const db = createMockD1({ entries });
 
-    const translation = translations[locale];
-    if (!translation) return null;
+    expect((await getEntriesByCategoryFromD1(db, 'greetings', 'ko')).map(({ id }) => id)).toEqual([
+      'hello',
+      'goodbye',
+    ]);
+    expect(await getEntriesByCategoryPaginatedFromD1(db, 'greetings', 'en', 1, 20)).toMatchObject({
+      totalCount: 2,
+      entries: [{ id: 'hello' }, { id: 'goodbye' }],
+    });
+    expect(await getEntryIdsByCategoryFromD1(db, 'greetings')).toEqual(['hello', 'goodbye']);
+  });
 
-    const tags = row.tags ? (JSON.parse(row.tags) as string[]) : [];
+  it('maps categories and preserves defaults', async () => {
+    const db = createMockD1({
+      categories: [
+        categoryRow,
+        {
+          ...categoryRow,
+          id: 'other',
+          description_ko: null,
+          description_en: null,
+          icon: null,
+          color: null,
+        },
+      ],
+    });
 
-    return {
-      id: row.id,
-      korean: row.korean,
-      romanization: row.romanization || '',
-      partOfSpeech: row.part_of_speech || 'noun',
-      categoryId: row.category_id,
-      tags,
-      difficulty: row.difficulty || 'beginner',
-      frequency: row.frequency ?? undefined,
-      hasDialogue: !!translation.dialogue,
-      translation: {
-        word: translation.word,
-        explanation: translation.explanation,
-        examples: translation.examples,
-        variations: translation.variations,
+    const result = await getCategoriesFromD1(db);
+    expect(result[0]).toMatchObject({
+      id: 'greetings',
+      name: { ko: '인사', en: 'Greetings' },
+    });
+    expect(result[1]).toMatchObject({
+      description: { ko: '', en: '' },
+      icon: '',
+      color: 'blue',
+    });
+  });
+
+  it('parses conversations and skips malformed dialogue', async () => {
+    vi.spyOn(console, 'error').mockImplementation(() => undefined);
+    const db = createMockD1({
+      conversations: [
+        conversationRow,
+        { ...conversationRow, id: 'broken', dialogue: 'not-json' },
+      ],
+    });
+
+    expect(await getConversationsByCategoryFromD1(db, 'greetings')).toEqual([
+      {
+        id: 'conv-1',
+        categoryId: 'greetings',
+        title: { ko: '첫 만남', en: 'First Meeting' },
+        dialogue: [{ speaker: 'A', text: '안녕하세요' }],
       },
-    };
-  } catch {
-    return null;
-  }
-}
+    ]);
+  });
 
-async function getEntryByIdFromD1(
-  db: MockD1Database,
-  id: string,
-  locale: Language,
-): Promise<LocaleEntry | null> {
-  try {
-    const row = await db
-      .prepare(
-        `SELECT id, korean, romanization, part_of_speech, category_id, difficulty, frequency, tags, translations
-         FROM entries WHERE id = ?`,
-      )
-      .bind(id)
-      .first<D1EntryRow>();
-
-    if (!row) return null;
-    return rowToLocaleEntry(row, locale);
-  } catch {
-    return null;
-  }
-}
-
-async function getEntriesByCategoryFromD1(
-  db: MockD1Database,
-  categoryId: string,
-  locale: Language,
-): Promise<LocaleEntry[]> {
-  try {
-    const { results } = await db
-      .prepare(
-        `SELECT id, korean, romanization, part_of_speech, category_id, difficulty, frequency, tags, translations
-         FROM entries WHERE category_id = ?`,
-      )
-      .bind(categoryId)
-      .all<D1EntryRow>();
-
-    return results
-      .map((row) => rowToLocaleEntry(row, locale))
-      .filter((entry): entry is LocaleEntry => entry !== null);
-  } catch {
-    return [];
-  }
-}
-
-async function getCategoriesFromD1(db: MockD1Database) {
-  try {
-    const { results } = await db
-      .prepare(
-        `SELECT id, name_ko, name_en, description_ko, description_en, icon, color, sort_order
-         FROM categories ORDER BY sort_order`,
-      )
-      .all<{
-        id: string;
-        name_ko: string;
-        name_en: string;
-        description_ko: string | null;
-        description_en: string | null;
-        icon: string | null;
-        color: string | null;
-        sort_order: number;
-      }>();
-
-    return results.map((row) => ({
-      id: row.id,
-      name: { ko: row.name_ko, en: row.name_en },
-      description: { ko: row.description_ko || '', en: row.description_en || '' },
-      icon: row.icon || '',
-      color: row.color || 'blue',
-      order: row.sort_order,
-    }));
-  } catch {
-    return [];
-  }
-}
-
-async function getConversationsByCategoryFromD1(db: MockD1Database, categoryId: string) {
-  try {
-    const { results } = await db
-      .prepare(
-        `SELECT id, category_id, title_ko, title_en, dialogue
-         FROM conversations WHERE category_id = ?`,
-      )
-      .bind(categoryId)
-      .all<{
-        id: string;
-        category_id: string | null;
-        title_ko: string;
-        title_en: string;
-        dialogue: string;
-      }>();
-
-    return results
-      .map((row) => {
-        try {
-          return {
-            id: row.id,
-            categoryId: row.category_id || '',
-            title: { ko: row.title_ko, en: row.title_en },
-            dialogue: JSON.parse(row.dialogue),
-          };
-        } catch {
-          return null;
-        }
-      })
-      .filter((c): c is NonNullable<typeof c> => c !== null);
-  } catch {
-    return [];
-  }
-}
-
-async function getEntryIdsByCategoryFromD1(
-  db: MockD1Database,
-  categoryId: string,
-): Promise<string[]> {
-  try {
-    const { results } = await db
-      .prepare('SELECT id FROM entries WHERE category_id = ?')
-      .bind(categoryId)
-      .all<{ id: string }>();
-
-    return results.map((row) => row.id);
-  } catch {
-    return [];
-  }
-}
-
-async function getEntryCounts(db: MockD1Database): Promise<Map<string, number>> {
-  try {
-    const { results } = await db
-      .prepare('SELECT category_id, COUNT(*) as count FROM entries GROUP BY category_id')
-      .all<{ category_id: string; count: number }>();
-
-    const counts = new Map<string, number>();
-    for (const row of results) {
-      counts.set(row.category_id, row.count);
-    }
-    return counts;
-  } catch {
-    return new Map();
-  }
-}
-
-// 테스트 시작
-describe('D1 Service', () => {
-  describe('getEntryByIdFromD1', () => {
-    it('should return entry for valid ID with Korean locale', async () => {
-      const db = createMockD1({ entryRows: [mockEntryRow] });
-      const entry = await getEntryByIdFromD1(db, 'hello', 'ko');
-
-      expect(entry).not.toBeNull();
-      expect(entry?.id).toBe('hello');
-      expect(entry?.korean).toBe('안녕');
-      expect(entry?.romanization).toBe('annyeong');
-      expect(entry?.translation.word).toBe('안녕');
-      expect(entry?.translation.explanation).toBe('친한 사이에서 쓰는 인사말');
+  it('returns cached entry counts as a Map', async () => {
+    const db = createMockD1({
+      counts: [
+        { category_id: 'greetings', count: 50 },
+        { category_id: 'food', count: 100 },
+      ],
     });
 
-    it('should return entry for valid ID with English locale', async () => {
-      const db = createMockD1({ entryRows: [mockEntryRow] });
-      const entry = await getEntryByIdFromD1(db, 'hello', 'en');
+    expect(Array.from((await getEntryCounts(db)).entries())).toEqual([
+      ['greetings', 50],
+      ['food', 100],
+    ]);
+    expect((await getEntryCounts(createMockD1({ shouldThrow: true }))).get('food')).toBe(100);
+  });
 
-      expect(entry).not.toBeNull();
-      expect(entry?.translation.word).toBe('Hello');
-      expect(entry?.translation.explanation).toBe('A casual greeting used among friends');
+  it('maps homonyms and tolerates malformed translations', async () => {
+    const db = createMockD1({
+      entries: [
+        entryRow,
+        { ...entryRow, id: 'hello-2', translations: 'not-json' },
+      ],
     });
 
-    it('should return null for non-existent ID', async () => {
-      const db = createMockD1({ entryRows: [mockEntryRow] });
-      const entry = await getEntryByIdFromD1(db, 'nonexistent', 'ko');
+    expect(await getHomonymsByKoreanFromD1(db, '안녕')).toEqual([
+      {
+        id: 'hello',
+        korean: '안녕',
+        romanization: 'annyeong',
+        categoryId: 'greetings',
+        word: { ko: '안녕', en: 'Hello' },
+      },
+      {
+        id: 'hello-2',
+        korean: '안녕',
+        romanization: 'annyeong',
+        categoryId: 'greetings',
+        word: { ko: '', en: '' },
+      },
+    ]);
+  });
 
-      expect(entry).toBeNull();
+  it('filters entries by tag and aggregates tag counts', async () => {
+    const db = createMockD1({
+      entries: [entryRow, { ...entryRow, id: 'other', tags: '["common"]' }],
+      tags: [{ tags: '["greeting","common"]' }, { tags: '["common"]' }, { tags: 'broken' }],
     });
 
-    it('should return null when D1 throws error', async () => {
-      const db = createMockD1({ shouldThrow: true });
-      const entry = await getEntryByIdFromD1(db, 'hello', 'ko');
+    expect((await getEntriesByTagFromD1(db, 'greeting', 'en')).map(({ id }) => id)).toEqual([
+      'hello',
+    ]);
+    expect(await getAllTagsFromD1(db)).toEqual([
+      { tag: 'common', count: 2 },
+      { tag: 'greeting', count: 1 },
+    ]);
+  });
+});
 
-      expect(entry).toBeNull();
-    });
-
-    it('should parse tags correctly', async () => {
-      const db = createMockD1({ entryRows: [mockEntryRow] });
-      const entry = await getEntryByIdFromD1(db, 'hello', 'ko');
-
-      expect(entry?.tags).toEqual(['greeting', 'common']);
-    });
-
-    it('should handle missing romanization', async () => {
-      const rowWithoutRomanization = { ...mockEntryRow, romanization: null };
-      const db = createMockD1({ entryRows: [rowWithoutRomanization] });
-      const entry = await getEntryByIdFromD1(db, 'hello', 'ko');
-
-      expect(entry?.romanization).toBe('');
-    });
-
-    it('should handle missing translations', async () => {
-      const rowWithoutTranslations = { ...mockEntryRow, translations: null };
-      const db = createMockD1({ entryRows: [rowWithoutTranslations] });
-      const entry = await getEntryByIdFromD1(db, 'hello', 'ko');
-
-      expect(entry).toBeNull();
-    });
-
-    it('should handle invalid JSON in translations', async () => {
-      const rowWithInvalidJson = { ...mockEntryRow, translations: 'invalid json' };
-      const db = createMockD1({ entryRows: [rowWithInvalidJson] });
-      const entry = await getEntryByIdFromD1(db, 'hello', 'ko');
-
-      expect(entry).toBeNull();
+describe('rowToLocaleEntry', () => {
+  it('converts D1 rows and applies optional defaults', () => {
+    expect(
+      rowToLocaleEntry(
+        {
+          ...entryRow,
+          romanization: null,
+          part_of_speech: null,
+          difficulty: null,
+          tags: null,
+        },
+        'ko',
+      ),
+    ).toMatchObject({
+      id: 'hello',
+      romanization: '',
+      partOfSpeech: 'noun',
+      difficulty: 'beginner',
+      tags: [],
     });
   });
 
-  describe('getEntriesByCategoryFromD1', () => {
-    it('should return entries for valid category', async () => {
-      const entries = [
-        mockEntryRow,
-        { ...mockEntryRow, id: 'goodbye', korean: '안녕히 가세요' },
-      ];
-      const db = createMockD1({ entryRows: entries });
-      const result = await getEntriesByCategoryFromD1(db, 'greetings', 'ko');
-
-      expect(result).toHaveLength(2);
-      expect(result[0]?.id).toBe('hello');
-      expect(result[1]?.id).toBe('goodbye');
-    });
-
-    it('should return empty array for non-existent category', async () => {
-      const db = createMockD1({ entryRows: [mockEntryRow] });
-      const result = await getEntriesByCategoryFromD1(db, 'nonexistent', 'ko');
-
-      expect(result).toEqual([]);
-    });
-
-    it('should filter out entries with invalid translations', async () => {
-      const entries = [
-        mockEntryRow,
-        { ...mockEntryRow, id: 'invalid', translations: null },
-      ];
-      const db = createMockD1({ entryRows: entries });
-      const result = await getEntriesByCategoryFromD1(db, 'greetings', 'ko');
-
-      expect(result).toHaveLength(1);
-      expect(result[0]?.id).toBe('hello');
-    });
-
-    it('should return empty array when D1 throws error', async () => {
-      const db = createMockD1({ shouldThrow: true });
-      const result = await getEntriesByCategoryFromD1(db, 'greetings', 'ko');
-
-      expect(result).toEqual([]);
-    });
-  });
-
-  describe('getCategoriesFromD1', () => {
-    it('should return all categories', async () => {
-      const categories = [
-        mockCategoryRow,
-        { ...mockCategoryRow, id: 'food', name_ko: '음식', name_en: 'Food', sort_order: 2 },
-      ];
-      const db = createMockD1({ categoryRows: categories });
-      const result = await getCategoriesFromD1(db);
-
-      expect(result).toHaveLength(2);
-      expect(result[0]?.id).toBe('greetings');
-      expect(result[0]?.name.ko).toBe('인사');
-      expect(result[0]?.name.en).toBe('Greetings');
-    });
-
-    it('should handle null description', async () => {
-      const categoryWithNullDesc = {
-        ...mockCategoryRow,
-        description_ko: null,
-        description_en: null,
-      };
-      const db = createMockD1({ categoryRows: [categoryWithNullDesc] });
-      const result = await getCategoriesFromD1(db);
-
-      expect(result[0]?.description.ko).toBe('');
-      expect(result[0]?.description.en).toBe('');
-    });
-
-    it('should handle null icon and color', async () => {
-      const categoryWithNulls = {
-        ...mockCategoryRow,
-        icon: null,
-        color: null,
-      };
-      const db = createMockD1({ categoryRows: [categoryWithNulls] });
-      const result = await getCategoriesFromD1(db);
-
-      expect(result[0]?.icon).toBe('');
-      expect(result[0]?.color).toBe('blue');
-    });
-
-    it('should return empty array when D1 throws error', async () => {
-      const db = createMockD1({ shouldThrow: true });
-      const result = await getCategoriesFromD1(db);
-
-      expect(result).toEqual([]);
-    });
-  });
-
-  describe('getConversationsByCategoryFromD1', () => {
-    it('should return conversations for valid category', async () => {
-      const db = createMockD1({ conversationRows: [mockConversationRow] });
-      const result = await getConversationsByCategoryFromD1(db, 'greetings');
-
-      expect(result).toHaveLength(1);
-      expect(result[0]?.id).toBe('conv-1');
-      expect(result[0]?.title.ko).toBe('첫 만남');
-      expect(result[0]?.title.en).toBe('First Meeting');
-      expect(result[0]?.dialogue).toHaveLength(2);
-    });
-
-    it('should return empty array for non-existent category', async () => {
-      const db = createMockD1({ conversationRows: [mockConversationRow] });
-      const result = await getConversationsByCategoryFromD1(db, 'nonexistent');
-
-      expect(result).toEqual([]);
-    });
-
-    it('should filter out conversations with invalid JSON dialogue', async () => {
-      const invalidConversation = { ...mockConversationRow, id: 'invalid', dialogue: 'not json' };
-      const db = createMockD1({ conversationRows: [mockConversationRow, invalidConversation] });
-      const result = await getConversationsByCategoryFromD1(db, 'greetings');
-
-      expect(result).toHaveLength(1);
-      expect(result[0]?.id).toBe('conv-1');
-    });
-
-    it('should return empty array when D1 throws error', async () => {
-      const db = createMockD1({ shouldThrow: true });
-      const result = await getConversationsByCategoryFromD1(db, 'greetings');
-
-      expect(result).toEqual([]);
-    });
-  });
-
-  describe('getEntryIdsByCategoryFromD1', () => {
-    it('should return entry IDs for valid category', async () => {
-      const entries = [
-        mockEntryRow,
-        { ...mockEntryRow, id: 'goodbye' },
-        { ...mockEntryRow, id: 'thanks' },
-      ];
-      const db = createMockD1({ entryRows: entries });
-      const result = await getEntryIdsByCategoryFromD1(db, 'greetings');
-
-      expect(result).toEqual(['hello', 'goodbye', 'thanks']);
-    });
-
-    it('should return empty array for non-existent category', async () => {
-      const db = createMockD1({ entryRows: [mockEntryRow] });
-      const result = await getEntryIdsByCategoryFromD1(db, 'nonexistent');
-
-      expect(result).toEqual([]);
-    });
-
-    it('should return empty array when D1 throws error', async () => {
-      const db = createMockD1({ shouldThrow: true });
-      const result = await getEntryIdsByCategoryFromD1(db, 'greetings');
-
-      expect(result).toEqual([]);
-    });
-  });
-
-  describe('getEntryCounts', () => {
-    it('should return entry counts by category', async () => {
-      const db = createMockD1({
-        entryCountRows: [
-          { category_id: 'greetings', count: 50 },
-          { category_id: 'food', count: 100 },
-          { category_id: 'colors', count: 25 },
-        ],
-      });
-      const result = await getEntryCounts(db);
-
-      expect(result.get('greetings')).toBe(50);
-      expect(result.get('food')).toBe(100);
-      expect(result.get('colors')).toBe(25);
-      expect(result.size).toBe(3);
-    });
-
-    it('should return empty map when no entries exist', async () => {
-      const db = createMockD1({ entryCountRows: [] });
-      const result = await getEntryCounts(db);
-
-      expect(result.size).toBe(0);
-    });
-
-    it('should return empty map when D1 throws error', async () => {
-      const db = createMockD1({ shouldThrow: true });
-      const result = await getEntryCounts(db);
-
-      expect(result.size).toBe(0);
-    });
-  });
-
-  describe('rowToLocaleEntry', () => {
-    it('should correctly convert D1 row to LocaleEntry', () => {
-      const entry = rowToLocaleEntry(mockEntryRow as D1EntryRow, 'ko');
-
-      expect(entry).not.toBeNull();
-      expect(entry?.id).toBe('hello');
-      expect(entry?.korean).toBe('안녕');
-      expect(entry?.categoryId).toBe('greetings');
-      expect(entry?.difficulty).toBe('beginner');
-      expect(entry?.frequency).toBe(5);
-    });
-
-    it('should return null for missing locale translation', () => {
-      const rowWithOnlyKorean = {
-        ...mockEntryRow,
-        translations: JSON.stringify({
-          ko: { word: '안녕', explanation: '인사말' },
-        }),
-      };
-      const entry = rowToLocaleEntry(rowWithOnlyKorean as D1EntryRow, 'en');
-
-      expect(entry).toBeNull();
-    });
-
-    it('should handle empty tags', () => {
-      const rowWithEmptyTags = { ...mockEntryRow, tags: null };
-      const entry = rowToLocaleEntry(rowWithEmptyTags as D1EntryRow, 'ko');
-
-      expect(entry?.tags).toEqual([]);
-    });
-
-    it('should set hasDialogue based on translation dialogue field', () => {
-      const rowWithDialogue = {
-        ...mockEntryRow,
-        translations: JSON.stringify({
-          ko: {
-            word: '안녕',
-            explanation: '인사말',
-            dialogue: { lines: ['Hello'] },
-          },
-        }),
-      };
-      const entry = rowToLocaleEntry(rowWithDialogue as D1EntryRow, 'ko');
-
-      expect(entry?.hasDialogue).toBe(true);
-    });
-
-    it('should default partOfSpeech to noun', () => {
-      const rowWithNullPos = { ...mockEntryRow, part_of_speech: null };
-      const entry = rowToLocaleEntry(rowWithNullPos as D1EntryRow, 'ko');
-
-      expect(entry?.partOfSpeech).toBe('noun');
-    });
-
-    it('should default difficulty to beginner', () => {
-      const rowWithNullDifficulty = { ...mockEntryRow, difficulty: null };
-      const entry = rowToLocaleEntry(rowWithNullDifficulty as D1EntryRow, 'ko');
-
-      expect(entry?.difficulty).toBe('beginner');
-    });
+  it('returns null for missing or malformed locale data', () => {
+    expect(rowToLocaleEntry({ ...entryRow, translations: null }, 'ko')).toBeNull();
+    expect(rowToLocaleEntry({ ...entryRow, translations: 'not-json' }, 'ko')).toBeNull();
+    expect(
+      rowToLocaleEntry(
+        {
+          ...entryRow,
+          translations: JSON.stringify({ ko: { word: '안녕', explanation: '인사' } }),
+        },
+        'en',
+      ),
+    ).toBeNull();
   });
 });

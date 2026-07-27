@@ -16,6 +16,7 @@ on:
       - 'playwright.config.ts'
       - '.size-limit.json'
       - '.github/workflows/quality.yml'
+      - 'scripts/**'
       - 'tests/**'
   pull_request:
     branches: [main]
@@ -167,69 +168,10 @@ jobs:
   # Stage 3: 빌드 결과 사용하는 테스트들 (병렬 실행)
   # ============================================================
 
-  # Job 3-1: Playwright 통합 테스트
-  playwright:
-    name: Playwright Tests
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - uses: actions/checkout@v7
-
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v6
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v7
-        with:
-          node-version: 22
-          cache: 'pnpm'
-
-      - name: Restore node_modules cache
-        uses: actions/cache@v6
-        with:
-          path: |
-            node_modules
-            apps/*/node_modules
-            packages/*/node_modules
-          key: nm-${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml') }}
-
-      - name: Download build artifacts
-        uses: actions/download-artifact@v8
-        with:
-          name: build-output
-          path: apps
-
-      # Playwright 브라우저 캐싱
-      - name: Get Playwright version
-        id: playwright-version
-        run: echo "version=$(pnpm exec playwright --version | head -1)" >> $GITHUB_OUTPUT
-
-      - name: Cache Playwright browsers
-        uses: actions/cache@v6
-        id: playwright-cache
-        with:
-          path: ~/.cache/ms-playwright
-          key: playwright-${{ runner.os }}-${{ steps.playwright-version.outputs.version }}
-
-      - name: Install Playwright browsers
-        if: steps.playwright-cache.outputs.cache-hit != 'true'
-        run: pnpm exec playwright install --with-deps chromium
-
-      - name: Install Playwright deps (cached)
-        if: steps.playwright-cache.outputs.cache-hit == 'true'
-        run: pnpm exec playwright install-deps chromium
-
-      # 프로덕션 URL로 E2E 테스트 실행 (SSR 앱은 로컬 서버 불가)
-      - name: Run E2E tests against production
-        run: pnpm exec playwright test --project=production-smoke
-        env:
-          PLAYWRIGHT_BASE_URL_CONTEXT: https://context.soundbluemusic.com
-          PLAYWRIGHT_BASE_URL_PERMISSIVE: https://permissive.soundbluemusic.com
-          PLAYWRIGHT_BASE_URL_ROOTS: https://roots.soundbluemusic.com
-
-  # Job 3-2: 빌드 후 검증 (SSR + 번들 사이즈)
+  # PR 커밋으로 생성한 빌드 산출물을 직접 검증합니다.
+  # 배포된 운영 URL의 Playwright 검사는 e2e-production.yml이 담당합니다.
   post-build:
-    name: Post Build Checks
+    name: Build Artifact Checks
     runs-on: ubuntu-latest
     needs: build
     steps:

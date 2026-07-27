@@ -1,0 +1,68 @@
+---
+import { getWebApiSlug, webApis } from '../../../app/data/web-apis';
+import { filterWebApis } from '../../../app/lib/web-api-filters';
+import AppShell from '../AppShell.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+interface Props {
+  locale: 'en' | 'ko';
+}
+
+const { locale } = Astro.props;
+const isKo = locale === 'ko';
+const localePrefix = isKo ? '/ko' : '';
+const q = Astro.url.searchParams.get('q') ?? '';
+const filtered = filterWebApis(webApis, q);
+const BASE_URL = 'https://permissive.soundbluemusic.com';
+---
+
+<BaseLayout
+  title={isKo ? 'Web API - Permissive' : 'Web APIs - Permissive'}
+  description={isKo ? '브라우저 웹 표준 API 레퍼런스' : 'Browser Web Standard APIs reference with availability and usage'}
+  canonical={`${BASE_URL}${localePrefix}/web-api`}
+>
+  <AppShell locale={locale}>
+    <div class="mb-8">
+      <h1 class="text-2xl sm:text-3xl font-bold text-(--text-primary) mb-2">
+        {isKo ? 'Web API' : 'Web APIs'}
+      </h1>
+      <p class="text-(--text-secondary)">
+        {isKo ? `${webApis.length}개 브라우저 API` : `${webApis.length} browser APIs`}
+      </p>
+    </div>
+
+    <form method="get" action={`${localePrefix}/web-api`} class="mb-6">
+      <div class="relative max-w-lg">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="absolute left-3 top-1/2 -translate-y-1/2 text-(--text-tertiary)" aria-hidden="true">
+          <circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path>
+        </svg>
+        <input
+          type="search"
+          name="q"
+          value={q}
+          placeholder={isKo ? 'Web API 검색...' : 'Search Web APIs...'}
+          class="w-full pl-10 pr-4 py-2.5 rounded-xl border border-(--border-primary) bg-(--bg-elevated) text-(--text-primary) placeholder:text-(--text-tertiary) focus:outline-none focus:border-(--border-focus) transition-colors"
+        />
+      </div>
+    </form>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      {filtered.map((api) => (
+        <a
+          href={`${localePrefix}/web-api/${getWebApiSlug(api.name)}`}
+          class="p-4 rounded-xl bg-(--bg-elevated) border border-(--border-primary) hover:border-(--border-focus) transition-colors group"
+        >
+          <h2 class="font-semibold text-(--text-primary) group-hover:text-(--accent-primary) transition-colors mb-1">
+            {api.name}
+          </h2>
+          <p class="text-sm text-(--text-secondary) line-clamp-2 mb-3">
+            {isKo ? api.descriptionKo : api.description}
+          </p>
+          <span class="px-2 py-0.5 rounded text-xs bg-(--bg-tertiary) text-(--text-tertiary)">
+            {api.category}
+          </span>
+        </a>
+      ))}
+    </div>
+  </AppShell>
+</BaseLayout>

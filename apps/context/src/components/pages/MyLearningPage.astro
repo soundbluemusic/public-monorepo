@@ -1,0 +1,93 @@
+---
+import AppShell from '../AppShell.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+interface Props {
+  locale: 'en' | 'ko';
+}
+
+const { locale } = Astro.props;
+const isKo = locale === 'ko';
+const localePrefix = isKo ? '/ko' : '';
+const BASE_URL = 'https://context.soundbluemusic.com';
+---
+
+<BaseLayout
+  title={isKo ? '내 학습 - Context' : 'My Learning - Context'}
+  description={isKo ? '한국어 어휘 학습 진도 추적' : 'Track your Korean vocabulary learning progress'}
+  canonical={`${BASE_URL}${localePrefix}/my-learning`}
+  noIndex={true}
+>
+  <AppShell locale={locale}>
+    <h1 class="text-2xl font-bold text-(--text-primary) mb-6">{isKo ? '내 학습' : 'My Learning'}</h1>
+    <div
+      id="my-learning-content"
+      data-locale-prefix={localePrefix}
+      data-empty={isKo ? '아직 학습 데이터가 없어요. 단어를 학습해 보세요!' : 'No learning data yet. Start by studying some words!'}
+      data-browse={isKo ? '단어 탐색 →' : 'Browse Words →'}
+      data-studied={isKo ? '학습한 단어' : 'Words Studied'}
+      data-bookmarks={isKo ? '북마크' : 'Bookmarks'}
+      data-continue={isKo ? '계속 학습하기 →' : 'Continue Learning →'}
+      data-error={isKo ? '학습 데이터를 불러올 수 없습니다.' : 'Unable to load learning data.'}
+    >
+      <p class="text-(--text-secondary) mb-4">
+        {isKo ? '학습 데이터를 불러오는 중...' : 'Loading your learning progress...'}
+      </p>
+    </div>
+  </AppShell>
+</BaseLayout>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const content = document.getElementById('my-learning-content');
+    if (!content) return;
+
+    const {
+      localePrefix = '',
+      empty,
+      browse,
+      studied,
+      bookmarks,
+      continue: continueLabel,
+      error,
+    } = content.dataset;
+    try {
+      const studyData: unknown[] = JSON.parse(
+        localStorage.getItem('context-study-records') ?? '[]',
+      );
+      const favoriteData: unknown[] = JSON.parse(
+        localStorage.getItem('context-favorites') ?? '[]',
+      );
+
+      if (studyData.length === 0 && favoriteData.length === 0) {
+        content.innerHTML = `
+          <div class="text-center py-16">
+            <p class="text-(--text-secondary) mb-4">${empty}</p>
+            <a href="${localePrefix}/browse" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-(--accent-primary) text-white text-sm font-medium hover:brightness-110 transition-all">
+              ${browse}
+            </a>
+          </div>
+        `;
+        return;
+      }
+
+      content.innerHTML = `
+        <div class="space-y-4">
+          <div class="p-4 rounded-xl bg-(--bg-elevated) border border-(--border-primary)">
+            <p class="text-sm text-(--text-tertiary) mb-1">${studied}</p>
+            <p class="text-3xl font-bold text-(--text-primary)">${studyData.length}</p>
+          </div>
+          <div class="p-4 rounded-xl bg-(--bg-elevated) border border-(--border-primary)">
+            <p class="text-sm text-(--text-tertiary) mb-1">${bookmarks}</p>
+            <p class="text-3xl font-bold text-(--text-primary)">${favoriteData.length}</p>
+          </div>
+          <a href="${localePrefix}/browse" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-(--accent-primary) text-white text-sm font-medium hover:brightness-110 transition-all">
+            ${continueLabel}
+          </a>
+        </div>
+      `;
+    } catch {
+      content.innerHTML = `<p class="text-(--text-secondary)">${error}</p>`;
+    }
+  });
+</script>

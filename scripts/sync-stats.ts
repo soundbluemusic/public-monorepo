@@ -215,19 +215,14 @@ function getRootsStats() {
  * 항목을 카운트합니다.
  */
 function getPermissiveStats() {
-  const librariesFile = join(ROOT_DIR, 'apps/permissive/app/data/libraries.ts');
+  const libraryOrderFile = join(
+    ROOT_DIR,
+    'apps/permissive/app/data/libraries/library-order.ts',
+  );
   const webApisFile = join(ROOT_DIR, 'apps/permissive/app/data/web-apis.ts');
 
-  let libraries = 0;
+  const libraries = countTsArrayItems(libraryOrderFile, /^ {2}'[^']+',?$/gm);
   let webApis = 0;
-
-  if (existsSync(librariesFile)) {
-    const content = readFileSync(librariesFile, 'utf-8');
-    // 각 라이브러리 항목은 들여쓰기 4칸 + `name: '...'` 패턴으로 시작.
-    // categoryMeta 항목은 들여쓰기 2칸이므로 제외됨.
-    const matches = content.match(/^ {4}name: '/gm);
-    libraries = matches ? matches.length : 0;
-  }
 
   if (existsSync(webApisFile)) {
     const content = readFileSync(webApisFile, 'utf-8');
@@ -653,20 +648,6 @@ function main() {
 
   console.log(`\nTotal Routes: ${stats.totalRoutes}`);
 
-  // meta.json 저장
-  const metaPath = join(ROOT_DIR, 'meta.json');
-  writeFileSync(metaPath, JSON.stringify(stats, null, 2), 'utf-8');
-  console.log(`\n✅ Saved stats to meta.json`);
-
-  // data/context/meta.json 타임스탬프 업데이트 (SEO: 데이터 신선도 표시)
-  const contextMetaPath = join(ROOT_DIR, 'data/context/meta.json');
-  if (existsSync(contextMetaPath)) {
-    const contextMeta = JSON.parse(readFileSync(contextMetaPath, 'utf-8'));
-    contextMeta.generatedAt = stats.generatedAt;
-    writeFileSync(contextMetaPath, JSON.stringify(contextMeta, null, 2), 'utf-8');
-    console.log('✅ Updated data/context/meta.json timestamp');
-  }
-
   if (isCheckOnly) {
     console.log('\n🔍 Check mode: verifying docs are in sync...');
 
@@ -722,6 +703,20 @@ function main() {
 
     console.log('✅ All documentation is in sync with data sources.\n');
     process.exit(0);
+  }
+
+  // meta.json 저장
+  const metaPath = join(ROOT_DIR, 'meta.json');
+  writeFileSync(metaPath, JSON.stringify(stats, null, 2), 'utf-8');
+  console.log(`\n✅ Saved stats to meta.json`);
+
+  // data/context/meta.json 타임스탬프 업데이트 (SEO: 데이터 신선도 표시)
+  const contextMetaPath = join(ROOT_DIR, 'data/context/meta.json');
+  if (existsSync(contextMetaPath)) {
+    const contextMeta = JSON.parse(readFileSync(contextMetaPath, 'utf-8'));
+    contextMeta.generatedAt = stats.generatedAt;
+    writeFileSync(contextMetaPath, JSON.stringify(contextMeta, null, 2), 'utf-8');
+    console.log('✅ Updated data/context/meta.json timestamp');
   }
 
   // 문서 업데이트

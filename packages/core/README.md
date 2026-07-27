@@ -30,7 +30,7 @@ import type { Language, Theme } from '@soundblue/core/types';
 
 ## Tech Stack
 
-React 19 · TanStack Start · TypeScript · Tailwind CSS v4 · Cloudflare Workers · D1
+Astro 7 SSR · React 19 · TypeScript · Tailwind CSS v4 · Cloudflare Workers · D1
 
 ## Links
 

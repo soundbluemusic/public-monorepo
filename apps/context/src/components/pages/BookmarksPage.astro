@@ -1,0 +1,85 @@
+---
+import AppShell from '../AppShell.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+interface Props {
+  locale: 'en' | 'ko';
+}
+
+const { locale } = Astro.props;
+const isKo = locale === 'ko';
+const localePrefix = isKo ? '/ko' : '';
+const BASE_URL = 'https://context.soundbluemusic.com';
+---
+
+<BaseLayout
+  title={isKo ? '북마크 - Context' : 'Bookmarks - Context'}
+  description={isKo ? '북마크한 한국어 어휘 단어' : 'Your bookmarked Korean vocabulary words'}
+  canonical={`${BASE_URL}${localePrefix}/bookmarks`}
+  noIndex={true}
+>
+  <AppShell locale={locale}>
+    <h1 class="text-2xl font-bold text-(--text-primary) mb-6">{isKo ? '북마크' : 'Bookmarks'}</h1>
+    <div
+      id="bookmarks-content"
+      data-locale-prefix={localePrefix}
+      data-empty={isKo ? '아직 북마크가 없어요. 학습하면서 단어를 북마크해 보세요!' : 'No bookmarks yet. Bookmark words while studying!'}
+      data-browse={isKo ? '단어 탐색 →' : 'Browse Words →'}
+      data-count-label={isKo ? '북마크한 단어' : 'bookmarked word'}
+      data-error={isKo ? '북마크를 불러올 수 없습니다.' : 'Unable to load bookmarks.'}
+    >
+      <p class="text-(--text-secondary) mb-4">
+        {isKo ? '북마크를 불러오는 중...' : 'Loading your bookmarks...'}
+      </p>
+    </div>
+  </AppShell>
+</BaseLayout>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const content = document.getElementById('bookmarks-content');
+    if (!content) return;
+
+    const { localePrefix = '', empty, browse, countLabel, error } = content.dataset;
+    try {
+      const favorites: Array<{ id: string; korean: string; english?: string }> = JSON.parse(
+        localStorage.getItem('context-favorites') ?? '[]',
+      );
+
+      if (favorites.length === 0) {
+        content.innerHTML = `
+          <div class="text-center py-16">
+            <p class="text-(--text-secondary) mb-4">${empty}</p>
+            <a href="${localePrefix}/browse" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-(--accent-primary) text-white text-sm font-medium hover:brightness-110 transition-all">
+              ${browse}
+            </a>
+          </div>
+        `;
+        return;
+      }
+
+      const items = favorites
+        .map(
+          (item) => `
+            <a href="${localePrefix}/entry/${item.id}" class="block p-4 rounded-xl bg-(--bg-elevated) border border-(--border-primary) hover:border-(--accent-primary) transition-colors">
+              <p class="font-semibold text-(--text-primary)">${item.korean}</p>
+              ${item.english ? `<p class="text-sm text-(--text-secondary) mt-1">${item.english}</p>` : ''}
+            </a>
+          `,
+        )
+        .join('');
+      const count = localePrefix
+        ? `${countLabel} ${favorites.length}개`
+        : `${favorites.length} ${countLabel}${favorites.length === 1 ? '' : 's'}`;
+
+      content.innerHTML = `
+        <div class="mb-4">
+          <p class="text-sm text-(--text-tertiary)">${count}</p>
+        </div>
+        <div class="space-y-2">${items}</div>
+      `;
+    } catch {
+      content.innerHTML = `<p class="text-(--text-secondary)">${error}</p>`;
+    }
+  });
+</script>

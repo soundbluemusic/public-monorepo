@@ -1,0 +1,39 @@
+---
+import AppShell from '../AppShell.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+interface Props {
+  locale: 'en' | 'ko';
+}
+
+const { locale } = Astro.props;
+const isKo = locale === 'ko';
+const BASE_URL = 'https://context.soundbluemusic.com';
+---
+
+<BaseLayout
+  title={isKo ? '라이선스 | Context' : 'License - Context'}
+  description={isKo ? 'Context 한국어 사전 라이선스' : 'License information for Context Korean Dictionary'}
+  canonical={`${BASE_URL}${isKo ? '/ko' : ''}/license`}
+>
+  <AppShell locale={locale}>
+    <h1 class="text-2xl font-bold text-(--text-primary) mb-6">{isKo ? '라이선스' : 'License'}</h1>
+    <div class="text-(--text-secondary) space-y-4">
+      <p>
+        {isKo ? '이 프로젝트는 ' : 'This project is distributed under the '}
+        <strong class="text-(--text-primary)">Apache License 2.0</strong>
+        {isKo ? '으로 배포됩니다.' : '.'}
+      </p>
+      <p>
+        <a
+          href="https://github.com/soundbluemusic/public-monorepo/blob/main/LICENSE"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-(--accent-primary) hover:underline"
+        >
+          {isKo ? 'GitHub에서 전체 라이선스 보기 →' : 'View full license on GitHub →'}
+        </a>
+      </p>
+    </div>
+  </AppShell>
+</BaseLayout>

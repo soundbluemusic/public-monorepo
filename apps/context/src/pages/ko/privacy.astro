@@ -1,18 +1,5 @@
 ---
-import AppShell from '../../components/AppShell.astro';
-import BaseLayout from '../../layouts/BaseLayout.astro';
-
-const BASE_URL = 'https://context.soundbluemusic.com';
+import PrivacyPage from '../../components/pages/PrivacyPage.astro';
 ---
 
-<BaseLayout
-  title="개인정보처리방침 - Context"
-  canonical={`${BASE_URL}/ko/privacy`}
->
-  <AppShell locale="ko">
-    <h1 class="text-2xl sm:text-3xl font-bold text-(--text-primary) mb-6">개인정보처리방침</h1>
-    <div class="text-(--text-secondary)">
-      <p>이 사이트는 사용자의 개인정보를 수집하지 않습니다. 모든 데이터는 로컬 스토리지에만 저장됩니다.</p>
-    </div>
-  </AppShell>
-</BaseLayout>
+<PrivacyPage locale="ko" />

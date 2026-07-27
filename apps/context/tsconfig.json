@@ -10,6 +10,7 @@
   "include": [
     "src/**/*",
     "app/services/**/*",
+    "app/lib/**/*",
     "app/data/**/*",
     "app/config.ts",
     "app/shell.config.ts",

@@ -1,0 +1,87 @@
+---
+import { categories } from '../../../app/data/categories';
+import { findCategoryById } from '../../../app/lib/category-selection';
+import AppShell from '../AppShell.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+interface Props {
+  locale: 'en' | 'ko';
+}
+
+const { locale } = Astro.props;
+const isKo = locale === 'ko';
+const localePrefix = isKo ? '/ko' : '';
+const selectedCategory = findCategoryById(
+  categories,
+  Astro.url.searchParams.get('category') ?? '',
+);
+const BASE_URL = 'https://context.soundbluemusic.com';
+---
+
+<BaseLayout
+  title={isKo ? '탐색 - Context' : 'Browse - Context'}
+  description={isKo ? '모든 한국어 단어 탐색 및 필터링' : 'Browse and filter all Korean words'}
+  canonical={`${BASE_URL}${localePrefix}/browse`}
+>
+  <AppShell locale={locale}>
+    <header class="mb-6">
+      <h1 class="text-2xl sm:text-3xl font-bold text-(--text-primary) mb-2">{isKo ? '탐색' : 'Browse'}</h1>
+      <p class="text-(--text-secondary)">
+        {isKo ? '카테고리별로 한국어 어휘 탐색하기' : 'Browse Korean vocabulary by category'}
+      </p>
+    </header>
+
+    <div class="flex flex-wrap gap-2 mb-8">
+      <a
+        href={`${localePrefix}/browse`}
+        class={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${!selectedCategory ? 'bg-(--accent-primary) text-white' : 'bg-(--bg-elevated) border border-(--border-primary) text-(--text-secondary) hover:border-(--accent-primary)'}`}
+      >
+        {isKo ? '전체' : 'All'}
+      </a>
+      {categories.map((category) => (
+        <a
+          href={`${localePrefix}/browse?category=${category.id}`}
+          class={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${selectedCategory?.id === category.id ? 'bg-(--accent-primary) text-white' : 'bg-(--bg-elevated) border border-(--border-primary) text-(--text-secondary) hover:border-(--accent-primary)'}`}
+        >
+          {category.icon} {category.name[locale]}
+        </a>
+      ))}
+    </div>
+
+    {!selectedCategory ? (
+      <div class="grid gap-4 sm:grid-cols-2">
+        {categories.map((category) => (
+          <a
+            href={`${localePrefix}/category/${category.id}`}
+            class="block p-4 rounded-xl bg-(--bg-elevated) border border-(--border-primary) hover:border-(--accent-primary) transition-colors"
+          >
+            <div class="flex items-center gap-3 mb-2">
+              <span class="text-2xl">{category.icon}</span>
+              <div>
+                <h2 class="font-semibold text-(--text-primary)">{category.name[locale]}</h2>
+              </div>
+            </div>
+            {category.description[locale] && (
+              <p class="text-sm text-(--text-secondary) line-clamp-2">{category.description[locale]}</p>
+            )}
+          </a>
+        ))}
+      </div>
+    ) : (
+      <div class="text-center py-8">
+        <p class="text-(--text-secondary) mb-4">
+          {isKo
+            ? `${selectedCategory.name.ko} 단어 보기`
+            : `Viewing ${selectedCategory.name.en} words`}
+        </p>
+        <a
+          href={`${localePrefix}/category/${selectedCategory.id}`}
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-(--accent-primary) text-white text-sm font-medium hover:brightness-110 transition-all"
+        >
+          {selectedCategory.icon}{' '}
+          {isKo ? `${selectedCategory.name.ko} 보기 →` : `Browse ${selectedCategory.name.en} →`}
+        </a>
+      </div>
+    )}
+  </AppShell>
+</BaseLayout>
