@@ -667,8 +667,16 @@ function main() {
 
     // metadata.json 검증
     const metadataPath = join(ROOT_DIR, 'docs/docs-site/src/data/metadata.json');
-    if (existsSync(metadataPath)) {
-      const metadata = JSON.parse(readFileSync(metadataPath, 'utf-8'));
+    let metadataContent: string | undefined;
+    try {
+      metadataContent = readFileSync(metadataPath, 'utf-8');
+    } catch (error) {
+      if (!(error instanceof Error && 'code' in error && error.code === 'ENOENT')) {
+        throw error;
+      }
+    }
+    if (metadataContent) {
+      const metadata = JSON.parse(metadataContent);
 
       if (metadata.apps.context.entries !== stats.context.entries) {
         mismatches.push(
