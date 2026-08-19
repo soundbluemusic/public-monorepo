@@ -170,6 +170,22 @@ input:focus-visible {
     transform: translateX(0) !important;
     visibility: visible !important;
   }
+
+  /* 실제로 열리는 길은 이쪽이다.
+     메뉴 버튼을 처리하는 것은 공용 토글 스크립트
+     (packages/ui/src/utils/dark-mode.ts 의 MOBILE_SIDEBAR_TOGGLE_SCRIPT)인데,
+     그 스크립트는 aside 에 data-mobile-open 속성을 세우지 translate-x-0
+     클래스를 붙이지 않는다. 클래스를 붙이는 분기는 aside 가 처음부터
+     translate 계열 클래스를 달고 있을 때만 타는데 이 앱의 aside 에는 없다.
+
+     그래서 위 규칙만 있던 동안에는 1024px 미만에서 메뉴 버튼을 눌러도
+     사이드바가 열리지 않았다. 속성만 바뀌고 CSS 가 아무 반응을 하지
+     않았으니 화면에는 아무 일도 일어나지 않았다. permissive 앱은 같은
+     규칙을 갖고 있어 정상이었다. */
+  aside[aria-label][data-mobile-open='true'] {
+    transform: translateX(0) !important;
+    visibility: visible !important;
+  }
 }
 
 /* Desktop: Sidebar collapsed state via html.sidebar-collapsed class */
