@@ -18,9 +18,21 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  deploy:
-    name: Build & Deploy Workers
+  # 배포는 이 검사를 통과한 뒤에만 시작한다.
+  #
+  # 예전에는 이 워크플로와 Quality Gate 워크플로가 서로를 모른 채 동시에 출발했다.
+  # main 에 무엇이든 올라오면 둘 다 켜지지만 둘 사이에 아무 관계가 없어서, 타입
+  # 오류나 테스트 실패가 있어도 배포는 그대로 나갔다. 검사 결과는 사이트가 이미
+  # 바뀐 뒤에 빨간불로 남을 뿐이었다.
+  #
+  # Quality Gate 워크플로를 기다리게 만들지 않고 여기에 잡을 하나 두는 이유는,
+  # 그쪽에는 paths 조건이 붙어 있어 어떤 변경에서는 아예 돌지 않기 때문이다.
+  # 그 경우 배포가 영영 시작되지 않는 쪽이 더 위험하다. 검사가 조금 겹치더라도
+  # 배포 경로가 스스로 자기 문지기를 갖고 있는 편이 낫다.
+  quality:
+    name: Quality Gate
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v7
 
@@ -34,7 +46,38 @@ jobs:
           cache: 'pnpm'
 
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm install --frozen-lockfile
+
+      - name: TypeScript check
+        run: pnpm typecheck
+
+      - name: Lint
+        run: pnpm lint
+
+      - name: Test
+        run: pnpm test
+
+  deploy:
+    name: Build & Deploy Workers
+    needs: quality
+    runs-on: ubuntu-latest
+    # 멈춘 실행을 30분에 끊는다. 제한이 없으면 GitHub 기본 상한인 6시간까지
+    # 매달려 있고, 그동안 이 앱의 배포 줄이 통째로 막힌다.
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v6
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
 
       - name: Build Context (SSR + D1)
         run: pnpm build:context

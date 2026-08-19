@@ -227,3 +227,7 @@ Astro와 Cloudflare의 공식 문서를 확인합니다.
 - `CONTRIBUTING.md`: 기여 절차
 - `package.json`: 실제 명령과 도구 버전
 - `.github/workflows/`: CI와 배포 기준
+
+## 답변 형식
+
+- 답변은 항상 가능한 한 짧게 핵심만. 장황한 설명 금지.
