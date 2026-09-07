@@ -241,19 +241,19 @@ export const MOBILE_SIDEBAR_TOGGLE_SCRIPT = `(function() {
         sidebar.setAttribute('aria-hidden', willBeOpen ? 'false' : 'true');
       }
 
-      // Show/hide backdrop for Pattern A
-      if (usesTranslate) {
-        var existingBackdrop = document.querySelector('[data-sidebar-backdrop]');
-        if (willBeOpen) {
-          if (!existingBackdrop) {
-            var newBackdrop = document.createElement('div');
-            newBackdrop.setAttribute('data-sidebar-backdrop', '');
-            newBackdrop.className = 'fixed inset-0 bg-black/50 z-50 lg:hidden';
-            document.body.appendChild(newBackdrop);
-          }
-        } else if (existingBackdrop) {
-          existingBackdrop.remove();
+      // Both sidebar patterns need a clickable backdrop while open.
+      var existingBackdrop = document.querySelector('[data-sidebar-backdrop]');
+      if (willBeOpen) {
+        if (existingBackdrop) {
+          existingBackdrop.classList.remove('hidden');
+        } else {
+          var newBackdrop = document.createElement('div');
+          newBackdrop.setAttribute('data-sidebar-backdrop', '');
+          newBackdrop.className = 'fixed inset-0 bg-black/50 z-overlay lg:hidden';
+          document.body.appendChild(newBackdrop);
         }
+      } else if (existingBackdrop) {
+        existingBackdrop.remove();
       }
 
       // Dispatch custom event for React components to sync

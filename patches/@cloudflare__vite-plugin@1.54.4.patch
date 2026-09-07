@@ -1,0 +1,19 @@
+diff --git a/dist/index.mjs b/dist/index.mjs
+index 951cce8f127016adfc887db34552d450ee7ada46..2dd092842ff52da99f133f8992feff5b59537d92 100644
+--- a/dist/index.mjs	
++++ b/dist/index.mjs
+@@ -81565,7 +81565,13 @@ const devPlugin = createPlugin("dev", (ctx) => {
+ 					viteDevServer.middlewares.use(async function cloudflarePreMiddleware(req, res, next) {
+ 						assert2(req.url, `req.url not defined`);
+ 						const request$2 = new Request(new URL(req.url, UNKNOWN_HOST));
+-						if (req[kRequestType] === "asset") next();
++						// Let Vite serve development modules and existing public assets before Worker routing.
++						// https://github.com/cloudflare/workers-sdk/issues/14626
++						const publicDir = viteDevServer.config.publicDir;
++						const publicFile = publicDir && path.resolve(publicDir, "." + new URL(request$2.url).pathname);
++						const isPublicAsset = publicFile && publicFile.startsWith(withTrailingSlash(publicDir)) && await fsp.stat(publicFile).then((stat) => stat.isFile(), () => false);
++						if (isPublicAsset || ["script", "style", "font", "worker", "sharedworker"].includes(req.headers["sec-fetch-dest"])) next();
++						else if (req[kRequestType] === "asset") next();
+ 						else if (excludeRulesMatcher({ request: request$2 })) {
+ 							req[kRequestType] = "asset";
+ 							next();

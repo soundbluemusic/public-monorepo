@@ -10,7 +10,15 @@
  */
 
 // TanStack Table 타입 re-export
-export type { ColumnDef, ColumnFiltersState, SortingState } from '@tanstack/react-table';
+import type { RowData, ColumnDef as TanStackColumnDef } from '@tanstack/react-table';
+import type { dataTableFeatures } from './features';
+
+export type ColumnDef<TData extends RowData, TValue = unknown> = TanStackColumnDef<
+  typeof dataTableFeatures,
+  TData,
+  TValue
+>;
+export type { ColumnFiltersState, SortingState } from '@tanstack/react-table';
 export { DataTable } from './DataTable';
 export { TableFilter } from './TableFilter';
 export { TableHeader } from './TableHeader';

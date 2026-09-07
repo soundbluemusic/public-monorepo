@@ -37,29 +37,29 @@
     "build-storybook": "storybook build"
   },
   "peerDependencies": {
-    "@tanstack/react-table": "^8.21.3",
+    "@tanstack/react-table": "^9.2.4",
     "react": "^19.2.8",
     "react-dom": "^19.2.8"
   },
   "dependencies": {
     "@formkit/auto-animate": "^0.10.0",
     "@soundblue/core": "workspace:*",
-    "@tanstack/react-virtual": "^3.14.8",
+    "@tanstack/react-virtual": "^3.14.10",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
-    "lucide-react": "^1.27.0",
+    "lucide-react": "^1.41.0",
     "tailwind-merge": "^3.6.0"
   },
   "devDependencies": {
-    "@storybook/addon-a11y": "^10.5.4",
-    "@storybook/react-vite": "^10.5.4",
+    "@storybook/addon-a11y": "^10.6.0",
+    "@storybook/react-vite": "^10.6.0",
     "@tailwindcss/postcss": "^4.3.3",
-    "@types/react": "^19.2.17",
-    "@types/react-dom": "^19.2.3",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.7",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
-    "storybook": "^10.5.4",
+    "storybook": "^10.6.0",
     "typescript": "^7.0.2",
-    "vite": "^8.1.5"
+    "vite": "^8.2.2"
   }
 }
