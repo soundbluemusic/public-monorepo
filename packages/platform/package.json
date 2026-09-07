@@ -51,7 +51,7 @@
   },
   "dependencies": {
     "@soundblue/core": "workspace:*",
-    "dexie": "^4.4.4"
+    "dexie": "^4.4.5"
   },
   "devDependencies": {
     "typescript": "^7.0.2"

@@ -2,21 +2,21 @@ import path from 'node:path';
 import { defineConfig } from 'vitest/config';
 
 export default defineConfig({
-  esbuild: {
-    jsx: 'automatic',
+  oxc: {
+    jsx: { runtime: 'automatic' },
   },
   resolve: {
     alias: {
-      '@soundblue/core': path.resolve(__dirname, 'packages/core/src'),
-      '@soundblue/config': path.resolve(__dirname, 'packages/config/src'),
-      '@soundblue/data': path.resolve(__dirname, 'packages/data/src'),
-      '@soundblue/platform': path.resolve(__dirname, 'packages/platform/src'),
-      '@soundblue/i18n': path.resolve(__dirname, 'packages/i18n/src'),
-      '@soundblue/search': path.resolve(__dirname, 'packages/search/src'),
-      '@soundblue/seo': path.resolve(__dirname, 'packages/seo/src'),
-      '@soundblue/pwa': path.resolve(__dirname, 'packages/pwa/src'),
-      '@soundblue/features': path.resolve(__dirname, 'packages/features/src'),
-      '@soundblue/ui': path.resolve(__dirname, 'packages/ui/src'),
+      '@soundblue/core': path.resolve(import.meta.dirname, 'packages/core/src'),
+      '@soundblue/config': path.resolve(import.meta.dirname, 'packages/config/src'),
+      '@soundblue/data': path.resolve(import.meta.dirname, 'packages/data/src'),
+      '@soundblue/platform': path.resolve(import.meta.dirname, 'packages/platform/src'),
+      '@soundblue/i18n': path.resolve(import.meta.dirname, 'packages/i18n/src'),
+      '@soundblue/search': path.resolve(import.meta.dirname, 'packages/search/src'),
+      '@soundblue/seo': path.resolve(import.meta.dirname, 'packages/seo/src'),
+      '@soundblue/pwa': path.resolve(import.meta.dirname, 'packages/pwa/src'),
+      '@soundblue/features': path.resolve(import.meta.dirname, 'packages/features/src'),
+      '@soundblue/ui': path.resolve(import.meta.dirname, 'packages/ui/src'),
     },
   },
   test: {

@@ -6,17 +6,21 @@
 
 'use client';
 
-import type { Table } from '@tanstack/react-table';
+import type { RowData, Table } from '@tanstack/react-table';
 import { ChevronLeft, ChevronRight, ChevronsLeft, ChevronsRight } from 'lucide-react';
 import { cn } from '../../utils/cn';
+import type { dataTableFeatures } from './features';
 
-interface TablePaginationProps<TData> {
-  table: Table<TData>;
+interface TablePaginationProps<TData extends RowData> {
+  table: Table<typeof dataTableFeatures, TData>;
   className?: string;
 }
 
-export function TablePagination<TData>({ table, className }: TablePaginationProps<TData>) {
-  const currentPage = table.getState().pagination.pageIndex + 1;
+export function TablePagination<TData extends RowData>({
+  table,
+  className,
+}: TablePaginationProps<TData>) {
+  const currentPage = table.store.state.pagination.pageIndex + 1;
   const totalPages = table.getPageCount();
 
   return (

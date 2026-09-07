@@ -5,8 +5,8 @@
 🌐 **English** | [한국어](https://soundbluemusic.github.io/public-monorepo/ko/) | [日本語](https://soundbluemusic.github.io/public-monorepo/ja/)
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
-[![Node](https://img.shields.io/badge/Node-%3E%3D20-green.svg)](https://nodejs.org)
-[![pnpm](https://img.shields.io/badge/pnpm-11.17.0-orange.svg)](https://pnpm.io)
+[![Node](https://img.shields.io/badge/Node-%3E%3D22.22.2-green.svg)](https://nodejs.org)
+[![pnpm](https://img.shields.io/badge/pnpm-12.3.4-orange.svg)](https://pnpm.io)
 [![TypeScript](https://img.shields.io/badge/TypeScript-6%2F7-blue.svg)](https://www.typescriptlang.org/)
 [![React](https://img.shields.io/badge/React-19-61dafb.svg)](https://react.dev/)
 [![SSR + D1](https://img.shields.io/badge/SSR-D1_Database-F38020?logo=cloudflare)](https://developers.cloudflare.com/d1/)
@@ -70,7 +70,7 @@ pnpm dev:permissive  # → http://localhost:3004
 pnpm dev:roots       # → http://localhost:3005
 ```
 
-> **Prerequisites:** Node.js ≥ 20, pnpm 11.17.0 · [package.json](package.json)
+> **Prerequisites:** Node.js ^22.22.2 / ^24.15.0 / ≥26, pnpm 12.3.4 · [package.json](package.json)
 
 ---
 

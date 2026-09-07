@@ -16,28 +16,27 @@
 
 'use client';
 
+import type { RowData } from '@tanstack/react-table';
+
 import {
   type ColumnDef,
   type ColumnFiltersState,
   flexRender,
-  getCoreRowModel,
-  getFilteredRowModel,
-  getPaginationRowModel,
-  getSortedRowModel,
   type PaginationState,
   type SortingState,
-  useReactTable,
+  useTable,
 } from '@tanstack/react-table';
 import { useState } from 'react';
 import { cn } from '../../utils/cn';
+import { dataTableFeatures } from './features';
 import { TableHeader } from './TableHeader';
 import { TablePagination } from './TablePagination';
 
-interface DataTableProps<TData> {
+interface DataTableProps<TData extends RowData> {
   /** 테이블 데이터 */
   data: TData[];
   /** 컬럼 정의 */
-  columns: ColumnDef<TData, unknown>[];
+  columns: ColumnDef<typeof dataTableFeatures, TData, unknown>[];
   /** 행 클릭 핸들러 */
   onRowClick?: (row: TData) => void;
   /** 페이지네이션 사용 여부 */
@@ -60,7 +59,7 @@ interface DataTableProps<TData> {
   className?: string;
 }
 
-export function DataTable<TData>({
+export function DataTable<TData extends RowData>({
   data,
   columns,
   onRowClick,
@@ -81,7 +80,8 @@ export function DataTable<TData>({
     pageSize,
   });
 
-  const table = useReactTable({
+  const table = useTable({
+    features: dataTableFeatures,
     data,
     columns,
     state: {
@@ -94,10 +94,9 @@ export function DataTable<TData>({
     onColumnFiltersChange: setColumnFilters,
     onPaginationChange: setPagination,
     onGlobalFilterChange,
-    getCoreRowModel: getCoreRowModel(),
-    getSortedRowModel: enableSorting ? getSortedRowModel() : undefined,
-    getFilteredRowModel: enableFiltering ? getFilteredRowModel() : undefined,
-    getPaginationRowModel: enablePagination ? getPaginationRowModel() : undefined,
+    manualSorting: !enableSorting,
+    manualFiltering: !enableFiltering,
+    manualPagination: !enablePagination,
   });
 
   return (

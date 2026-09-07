@@ -100,48 +100,26 @@ test.describe('context - Specific Button Tests', () => {
     test.skip(testInfo.project.name !== 'context', 'Context-only tests.');
   });
 
-  test('menu button should open sidebar on mobile', async ({ page }) => {
-    // Set mobile viewport
+  test('menu button should open and close sidebar on mobile', async ({ page }) => {
     await page.setViewportSize({ width: 375, height: 667 });
     await page.goto('/');
 
-    // Wait for page to be fully loaded and React to hydrate
-    await page.waitForLoadState('networkidle');
-    await page.waitForTimeout(500);
+    const menuButton = page.getByRole('button', { name: 'Open Menu', exact: true });
+    const sidebar = page.locator('aside[data-sidebar]');
+    await expect(menuButton).toBeVisible();
+    await expect
+      .poll(() => sidebar.evaluate((el) => el.getBoundingClientRect().right))
+      .toBeLessThanOrEqual(0);
 
-    // Find menu button in header by aria-label
-    const menuButton = page
-      .locator(
-        'header button[aria-label*="Menu" i], header button[aria-label*="menu" i], header button[aria-label*="메뉴" i]',
-      )
-      .first();
+    await menuButton.click();
+    await expect.poll(() => sidebar.evaluate((el) => el.getBoundingClientRect().left)).toBe(0);
+    await expect(sidebar.getByRole('navigation')).toBeVisible();
 
-    // Ensure button is visible
-    await expect(menuButton).toBeVisible({ timeout: 5000 });
-
-    // Sidebar should be off-screen initially (mobile)
-    const sidebar = page.locator('aside').first();
-    const initialTransform = await sidebar.evaluate((el) => getComputedStyle(el).transform);
-    expect(initialTransform).toContain('matrix'); // Has translateX transform
-
-    // Click menu button
-    await menuButton.click({ force: true });
-
-    // Wait for React state update and CSS transition
-    await page.waitForTimeout(500);
-
-    // Check sidebar is visible (has translate-x-0 class)
-    const sidebarClass = await sidebar.getAttribute('class');
-    expect(sidebarClass).toContain('translate-x-0');
-
-    // Close sidebar by clicking the backdrop on the right side (away from sidebar)
-    // Sidebar is on left (w-72 = 288px), so click at x=350 to hit the backdrop
+    // Click the backdrop outside the sidebar and verify it moves off screen again.
     await page.mouse.click(350, 400);
-    await page.waitForTimeout(300);
-
-    // Verify sidebar closed (should have -translate-x-full)
-    const closedClass = await sidebar.getAttribute('class');
-    expect(closedClass).toContain('-translate-x-full');
+    await expect
+      .poll(() => sidebar.evaluate((el) => el.getBoundingClientRect().right))
+      .toBeLessThanOrEqual(0);
   });
 
   test('sidebar collapse button should work on desktop', async ({ page }) => {
@@ -255,61 +233,26 @@ test.describe('permissive - Specific Button Tests', () => {
     test.skip(testInfo.project.name !== 'permissive', 'Permissive-only tests.');
   });
 
-  test('menu button should open sidebar on mobile', async ({ page }) => {
-    // Set mobile viewport
+  test('menu button should open and close sidebar on mobile', async ({ page }) => {
     await page.setViewportSize({ width: 375, height: 667 });
     await page.goto('/');
 
-    // Wait for page to be fully loaded and React to hydrate
-    await page.waitForLoadState('networkidle');
-    await page.waitForTimeout(500);
-
-    // Find menu button in header
-    const menuButton = page
-      .locator(
-        'header button[aria-label*="Menu" i], header button[aria-label*="menu" i], header button[aria-label*="메뉴" i]',
-      )
-      .first();
-
-    // Ensure button is visible
+    const menuButton = page.getByRole('button', { name: 'Open Menu', exact: true });
+    const sidebar = page.locator('aside[data-sidebar]');
     await expect(menuButton).toBeVisible();
+    await expect
+      .poll(() => sidebar.evaluate((el) => el.getBoundingClientRect().right))
+      .toBeLessThanOrEqual(0);
 
-    // Get the sidebar
-    const sidebar = page.locator('aside').first();
+    await menuButton.click();
+    await expect.poll(() => sidebar.evaluate((el) => el.getBoundingClientRect().left)).toBe(0);
+    await expect(sidebar.getByRole('navigation')).toBeVisible();
 
-    // Sidebar should be hidden initially (via CSS visibility/transform)
-    const initialVisibility = await sidebar.evaluate((el) => {
-      const style = getComputedStyle(el);
-      return style.visibility;
-    });
-    expect(initialVisibility).toBe('hidden');
-
-    // Click menu button
-    await menuButton.click({ force: true });
-
-    // Wait for React state update and CSS transition
-    await page.waitForTimeout(500);
-
-    // After click, sidebar should be visible
-    const afterClickVisibility = await sidebar.evaluate((el) => {
-      const style = getComputedStyle(el);
-      return style.visibility;
-    });
-    expect(afterClickVisibility).toBe('visible');
-
-    // Close sidebar by clicking the overlay
-    const overlay = page.locator('.bg-black\\/50').first();
-    if (await overlay.isVisible({ timeout: 1000 }).catch(() => false)) {
-      await overlay.click();
-      await page.waitForTimeout(300);
-
-      // Verify sidebar hidden again
-      const closedVisibility = await sidebar.evaluate((el) => {
-        const style = getComputedStyle(el);
-        return style.visibility;
-      });
-      expect(closedVisibility).toBe('hidden');
-    }
+    // Click the backdrop outside the sidebar and verify it moves off screen again.
+    await page.mouse.click(350, 400);
+    await expect
+      .poll(() => sidebar.evaluate((el) => el.getBoundingClientRect().right))
+      .toBeLessThanOrEqual(0);
   });
 
   test('navigation links should work', async ({ page }) => {
@@ -342,6 +285,28 @@ test.describe('permissive - Specific Button Tests', () => {
 test.describe('roots - Specific Button Tests', () => {
   test.beforeEach(({}, testInfo) => {
     test.skip(testInfo.project.name !== 'roots', 'Roots-only tests.');
+  });
+
+  test('menu button should open and close sidebar on mobile', async ({ page }) => {
+    await page.setViewportSize({ width: 375, height: 667 });
+    await page.goto('/');
+
+    const menuButton = page.getByRole('button', { name: 'Open Menu', exact: true });
+    const sidebar = page.locator('aside[data-sidebar]');
+    await expect(menuButton).toBeVisible();
+    await expect
+      .poll(() => sidebar.evaluate((el) => el.getBoundingClientRect().right))
+      .toBeLessThanOrEqual(0);
+
+    await menuButton.click();
+    await expect.poll(() => sidebar.evaluate((el) => el.getBoundingClientRect().left)).toBe(0);
+    await expect(sidebar.getByRole('navigation')).toBeVisible();
+
+    // Click the backdrop outside the sidebar and verify it moves off screen again.
+    await page.mouse.click(350, 400);
+    await expect
+      .poll(() => sidebar.evaluate((el) => el.getBoundingClientRect().right))
+      .toBeLessThanOrEqual(0);
   });
 
   test('search dropdown should show results', async ({ page }) => {

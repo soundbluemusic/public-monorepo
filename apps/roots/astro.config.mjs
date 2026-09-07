@@ -7,6 +7,7 @@ export default defineConfig({
     imageService: 'passthrough',
   }),
   output: 'server',
+  server: { port: 3005 },
   srcDir: './src',
   i18n: {
     defaultLocale: 'en',
@@ -17,7 +18,7 @@ export default defineConfig({
   },
   vite: {
     plugins: [tailwindcss()],
-    server: { port: 3005 },
-    preview: { port: 3005 },
+    // Pre-bundle passthrough image and JSON logger modules before the Worker starts.
+    optimizeDeps: { include: ['astro/assets/services/noop', 'astro/logger/json'] },
   },
 });

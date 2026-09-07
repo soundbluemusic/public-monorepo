@@ -6,16 +6,22 @@
 
 'use client';
 
+import type { RowData } from '@tanstack/react-table';
+
 import { flexRender, type Header } from '@tanstack/react-table';
 import { ArrowDown, ArrowUp, ArrowUpDown } from 'lucide-react';
 import { cn } from '../../utils/cn';
+import type { dataTableFeatures } from './features';
 
-interface TableHeaderProps<TData> {
-  header: Header<TData, unknown>;
+interface TableHeaderProps<TData extends RowData> {
+  header: Header<typeof dataTableFeatures, TData, unknown>;
   enableSorting?: boolean;
 }
 
-export function TableHeader<TData>({ header, enableSorting = true }: TableHeaderProps<TData>) {
+export function TableHeader<TData extends RowData>({
+  header,
+  enableSorting = true,
+}: TableHeaderProps<TData>) {
   const canSort = enableSorting && header.column.getCanSort();
   const sortDirection = header.column.getIsSorted();
 

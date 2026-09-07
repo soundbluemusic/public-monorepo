@@ -9,6 +9,7 @@ export default defineConfig({
   }),
   integrations: [react()],
   output: 'server',
+  server: { port: 3004 },
   srcDir: './src',
   i18n: {
     defaultLocale: 'en',
@@ -19,7 +20,7 @@ export default defineConfig({
   },
   vite: {
     plugins: [tailwindcss()],
-    server: { port: 3004 },
-    preview: { port: 3004 },
+    // Pre-bundle passthrough image and JSON logger modules before the Worker starts.
+    optimizeDeps: { include: ['astro/assets/services/noop', 'astro/logger/json'] },
   },
 });
