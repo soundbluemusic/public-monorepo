@@ -230,12 +230,16 @@ const canonical = `${baseUrl}${prefix}/concept/${conceptId}`;
               <ul class="space-y-1">
                 {concept.relations.prerequisites.map((id) => (
                   <li>
-                    <a
-                      href={`${prefix}/concept/${id}`}
-                      class="text-sm text-(--accent-primary) hover:underline"
-                    >
-                      {getConceptName(id)}
-                    </a>
+                    {conceptsById.has(id) ? (
+                      <a
+                        href={`${prefix}/concept/${id}`}
+                        class="text-sm text-(--accent-primary) hover:underline"
+                      >
+                        {getConceptName(id)}
+                      </a>
+                    ) : (
+                      <span class="text-sm text-(--text-secondary)">{getConceptName(id)}</span>
+                    )}
                   </li>
                 ))}
               </ul>
@@ -249,12 +253,16 @@ const canonical = `${baseUrl}${prefix}/concept/${conceptId}`;
               <ul class="space-y-1">
                 {concept.relations.nextTopics.map((id) => (
                   <li>
-                    <a
-                      href={`${prefix}/concept/${id}`}
-                      class="text-sm text-(--accent-primary) hover:underline"
-                    >
-                      {getConceptName(id)}
-                    </a>
+                    {conceptsById.has(id) ? (
+                      <a
+                        href={`${prefix}/concept/${id}`}
+                        class="text-sm text-(--accent-primary) hover:underline"
+                      >
+                        {getConceptName(id)}
+                      </a>
+                    ) : (
+                      <span class="text-sm text-(--text-secondary)">{getConceptName(id)}</span>
+                    )}
                   </li>
                 ))}
               </ul>
@@ -268,12 +276,16 @@ const canonical = `${baseUrl}${prefix}/concept/${conceptId}`;
               <ul class="space-y-1">
                 {concept.relations.related.slice(0, 6).map((id) => (
                   <li>
-                    <a
-                      href={`${prefix}/concept/${id}`}
-                      class="text-sm text-(--accent-primary) hover:underline"
-                    >
-                      {getConceptName(id)}
-                    </a>
+                    {conceptsById.has(id) ? (
+                      <a
+                        href={`${prefix}/concept/${id}`}
+                        class="text-sm text-(--accent-primary) hover:underline"
+                      >
+                        {getConceptName(id)}
+                      </a>
+                    ) : (
+                      <span class="text-sm text-(--text-secondary)">{getConceptName(id)}</span>
+                    )}
                   </li>
                 ))}
               </ul>
