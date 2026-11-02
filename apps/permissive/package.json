@@ -31,7 +31,7 @@
     "@soundblue/search": "workspace:*",
     "@soundblue/seo": "workspace:*",
     "@soundblue/ui": "workspace:*",
-    "astro": "^7.3.1",
+    "astro": "7.3.3",
     "nanostores": "^1.5.3",
     "react": "^19.2.8",
     "react-dom": "^19.2.8"

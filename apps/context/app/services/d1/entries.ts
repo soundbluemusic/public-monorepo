@@ -28,11 +28,12 @@ export async function getEntryByIdFromD1(
     }
 
     const entry = rowToLocaleEntry(row, locale);
+    if (!entry) throw new Error(`Invalid entry data: ${id} (${locale})`);
     setCached(cacheKey, entry, cacheTTL.entry);
     return entry;
   } catch (error) {
-    logD1Error(`getEntryById(${id})`, error);
-    return null;
+    logD1Error(`getEntryById(${id}, locale=${locale})`, error);
+    throw new Error('Entry unavailable', { cause: error });
   }
 }
 

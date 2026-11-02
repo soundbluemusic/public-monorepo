@@ -22,7 +22,7 @@
     "@soundblue/i18n": "workspace:*",
     "@soundblue/seo": "workspace:*",
     "@soundblue/ui": "workspace:*",
-    "astro": "^7.3.1",
+    "astro": "7.3.3",
     "katex": "^0.18.6"
   },
   "devDependencies": {

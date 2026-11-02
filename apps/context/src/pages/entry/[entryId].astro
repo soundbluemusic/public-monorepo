@@ -11,7 +11,15 @@ const { entryId } = Astro.params;
 if (!entryId) return Astro.redirect('/404', 404);
 
 const db = env.DB;
-const entry = await getEntryByIdFromD1(db, entryId, 'en');
+let entry;
+try {
+  entry = await getEntryByIdFromD1(db, entryId, 'en');
+} catch {
+  return new Response('The dictionary is temporarily unavailable. Please try again shortly.', {
+    status: 503,
+    headers: { 'Content-Type': 'text/plain; charset=utf-8', 'Retry-After': '60', 'Cache-Control': 'no-store', 'X-Robots-Tag': 'noindex' },
+  });
+}
 if (!entry) return Astro.redirect('/404', 404);
 
 const homonyms = await getHomonymsByKoreanFromD1(db, entry.korean).catch(() => []);

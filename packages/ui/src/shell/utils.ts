@@ -74,13 +74,13 @@ function createWebSiteSchema(config: RootShellConfig): object {
 /**
  * Create Organization structured data schema
  */
-function createOrganizationSchema(baseUrl: string): object {
+function createOrganizationSchema(): object {
   return {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'SoundBlue Music',
     url: 'https://soundbluemusic.com',
-    logo: `${baseUrl}/logo.png`,
+    logo: 'https://soundbluemusic.com/branding-assets/official-logo.png',
     sameAs: [
       'https://www.youtube.com/@SoundBlueMusic',
       'https://x.com/SoundBlueMusic',
@@ -120,7 +120,7 @@ function createNavigationSchema(baseUrl: string, items: NavigationItem[]): objec
 export function createStructuredData(config: RootShellConfig): string {
   const schemas = [
     createWebSiteSchema(config),
-    createOrganizationSchema(config.baseUrl),
+    createOrganizationSchema(),
     createNavigationSchema(config.baseUrl, config.navigationItems),
   ];
 

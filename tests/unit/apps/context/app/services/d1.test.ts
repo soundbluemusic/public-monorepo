@@ -136,11 +136,17 @@ describe('Context D1 production services', () => {
     expect(ko?.tags).toEqual(['greeting', 'common']);
   });
 
-  it('returns safe fallbacks for missing entries and D1 errors', async () => {
+  it('distinguishes missing entries from service errors', async () => {
     expect(await getEntryByIdFromD1(createMockD1(), 'missing', 'en')).toBeNull();
 
     vi.spyOn(console, 'error').mockImplementation(() => undefined);
-    expect(await getEntryByIdFromD1(createMockD1({ shouldThrow: true }), 'hello', 'en')).toBeNull();
+    await expect(getEntryByIdFromD1(createMockD1({ shouldThrow: true }), 'hello', 'en')).rejects.toThrow('Entry unavailable');
+  });
+
+  it('does not turn damaged stored data into a missing page or cache the failure', async () => {
+    vi.spyOn(console, 'error').mockImplementation(() => undefined);
+    await expect(getEntryByIdFromD1(createMockD1({ entries: [{ ...entryRow, translations: 'broken' }] }), 'hello', 'en')).rejects.toThrow('Entry unavailable');
+    expect((await getEntryByIdFromD1(createMockD1({ entries: [entryRow] }), 'hello', 'en'))?.id).toBe('hello');
   });
 
   it('loads category entries and pagination without changing ordering', async () => {
