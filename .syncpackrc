@@ -10,7 +10,7 @@
       "label": "Pin zod to current project major",
       "dependencies": ["zod"],
       "dependencyTypes": ["dev", "prod"],
-      "pinVersion": "^4.5.4"
+      "pinVersion": "^4.6.6"
     },
     {
       "label": "Keep Astro apps on the latest TypeScript supported by astro check",
@@ -21,6 +21,12 @@
     }
   ],
   "semverGroups": [
+    {
+      "label": "Keep verified Astro and Vitest patch releases exact",
+      "range": "",
+      "dependencies": ["astro", "vitest", "@vitest/coverage-v8"],
+      "dependencyTypes": ["dev", "prod"]
+    },
     {
       "range": "^",
       "dependencyTypes": ["dev", "prod"],
