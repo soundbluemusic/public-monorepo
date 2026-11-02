@@ -86,6 +86,9 @@ export function extractLinks(html: string, parent: string): string[] {
   const add = (value: string) => {
     try {
       const url = new URL(value, parent);
+      // Cloudflare injects hidden, short-lived crawler decoys at this managed endpoint.
+      // They are not site content. Keep checking real /cdn-cgi/image/ resources.
+      if (url.origin === new URL(parent).origin && url.pathname === '/cdn-cgi/content') return;
       if (url.protocol === 'http:' || url.protocol === 'https:') links.add(url.href);
     } catch {
       /* Non-HTTP schemes and invalid URL values have no HTTP status to check. */

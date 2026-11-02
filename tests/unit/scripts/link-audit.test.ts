@@ -34,4 +34,8 @@ describe('link audit evidence', () => {
     const links = extractLinks('<a href="/entry/test">Entry</a><link rel="alternate" href="/ko/entry/test"><script type="application/ld+json">{"logo":"/logo.png"}</script>', 'https://example.com/');
     expect(links).toEqual(expect.arrayContaining(['https://example.com/entry/test', 'https://example.com/ko/entry/test', 'https://example.com/logo.png']));
   });
+  it('does not follow Cloudflare decoy links, but still checks transformed images', () => {
+    const links = extractLinks('<a href="/cdn-cgi/content?id=ephemeral" aria-hidden="true" rel="nofollow">Decoy</a><img src="/cdn-cgi/image/width=100/photo.jpg"><a href="/missing">Missing</a>', 'https://example.com/');
+    expect(links).toEqual(['https://example.com/cdn-cgi/image/width=100/photo.jpg', 'https://example.com/missing']);
+  });
 });
