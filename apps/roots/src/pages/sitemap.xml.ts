@@ -27,9 +27,10 @@ export const GET: APIRoute = () => {
     urlEntry(`${baseUrl}/ko/field/${f.id}`, '0.8'),
   ]);
 
-  const conceptUrls = allConcepts.flatMap((c) => [
-    urlEntry(`${baseUrl}/concept/${c.id}`, '0.7'),
-    urlEntry(`${baseUrl}/ko/concept/${c.id}`, '0.7'),
+  // A concept can belong to multiple source fields but has one URL per language.
+  const conceptUrls = [...new Set(allConcepts.map((concept) => concept.id))].flatMap((id) => [
+    urlEntry(`${baseUrl}/concept/${id}`, '0.7'),
+    urlEntry(`${baseUrl}/ko/concept/${id}`, '0.7'),
   ]);
 
   const tagUrls = allTags.flatMap((t) => [
