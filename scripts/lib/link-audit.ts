@@ -95,6 +95,14 @@ export function extractLinks(html: string, parent: string): string[] {
     }
   };
   for (const node of fragment.querySelectorAll('[href], [src], [srcset]')) {
+    const relations = (node.getAttribute('rel') ?? '').trim().toLowerCase().split(/\s+/);
+    // Connection hints name servers, not documents to fetch. Real links and
+    // resource requests (stylesheet, preload, icons, etc.) must still be checked.
+    if (
+      node.tagName === 'LINK' &&
+      relations.every((relation) => ['preconnect', 'dns-prefetch'].includes(relation))
+    )
+      continue;
     for (const attr of ['href', 'src']) {
       const value = node.getAttribute(attr);
       if (value) add(value);

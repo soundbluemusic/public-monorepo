@@ -38,4 +38,8 @@ describe('link audit evidence', () => {
     const links = extractLinks('<a href="/cdn-cgi/content?id=ephemeral" aria-hidden="true" rel="nofollow">Decoy</a><img src="/cdn-cgi/image/width=100/photo.jpg"><a href="/missing">Missing</a>', 'https://example.com/');
     expect(links).toEqual(['https://example.com/cdn-cgi/image/width=100/photo.jpg', 'https://example.com/missing']);
   });
+  it('does not request connection hints as documents, but still checks linked resources', () => {
+    const links = extractLinks('<link rel="preconnect" href="https://i.ytimg.com"><link rel="DNS-PREFETCH preconnect" href="//fonts.example.com"><link rel="preload" href="/font.woff2" as="font"><link rel="stylesheet" href="/style.css"><a rel="preconnect" href="https://i.ytimg.com/real-page">Actual link</a>', 'https://example.com/');
+    expect(links).toEqual(['https://example.com/font.woff2', 'https://example.com/style.css', 'https://i.ytimg.com/real-page']);
+  });
 });
