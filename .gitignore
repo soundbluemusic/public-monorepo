@@ -83,3 +83,6 @@ lint_output.txt
 
 # Auto-generated browse meta (regenerated on build)
 apps/context/public/data/browse/meta.json
+
+# Generated link audit evidence
+link-reports/

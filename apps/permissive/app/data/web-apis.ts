@@ -385,7 +385,7 @@ export const webApis: WebAPI[] = [
     descriptionKo: '주변 조도 감지',
     category: 'Device & Sensors',
     support: '68%',
-    mdnUrl: 'https://developer.mozilla.org/en-US/docs/Web/API/Ambient_Light_Events',
+    mdnUrl: 'https://developer.mozilla.org/en-US/docs/Web/API/AmbientLightSensor',
     yearStable: 2019,
   },
 

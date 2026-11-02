@@ -98,8 +98,8 @@ const checks: CheckConfig[] = [
   },
   {
     name: 'Link Check (Prod)',
-    command: 'lychee',
-    args: ['--config', '.lychee.toml', 'https://context.soundbluemusic.com', '--no-progress'],
+    command: 'pnpm',
+    args: ['check:links:prod'],
     skipInQuick: true,
     parser: (output) => {
       const errors: string[] = [];

@@ -36,7 +36,6 @@ export const shellConfig: RootShellConfig = {
   navigationItems: [
     { name: 'Home', path: '/' },
     { name: 'Browse', path: '/browse' },
-    { name: 'Categories', path: '/categories' },
     { name: 'Conversations', path: '/conversations' },
   ],
   siteVerification: {
