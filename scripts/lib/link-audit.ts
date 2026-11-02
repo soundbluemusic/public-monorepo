@@ -132,21 +132,49 @@ export function extractLinks(html: string, parent: string): string[] {
   return [...links];
 }
 
-async function readUrl(url: string): Promise<Response> {
-  let lastError: unknown;
-  for (let attempt = 0; attempt < 3; attempt++) {
-    try {
-      const response = await fetch(url, {
-        signal: AbortSignal.timeout(30_000),
-        headers: { 'User-Agent': 'SoundBlue-LinkAudit/1.0' },
-      });
-      if ((response.status < 500 && response.status !== 404) || attempt === 2) return response;
-      await response.body?.cancel();
-    } catch (error) {
-      lastError = error;
+export function createPageReader(): (url: string) => Promise<Response> {
+  // All sitemap workers share a cooldown. A blocked worker must not leave
+  // the other workers sending more requests during the server's Retry-After.
+  let blockedUntil = 0;
+  let nextStart = 0;
+  let spacing = 0;
+  const sleep = (milliseconds: number) =>
+    new Promise<void>((resolve) => setTimeout(resolve, milliseconds));
+  return async (url) => {
+    let lastError: unknown;
+    for (let attempt = 0; attempt < 3; attempt++) {
+      while (Math.max(blockedUntil, nextStart) > Date.now())
+        await sleep(Math.max(blockedUntil, nextStart) - Date.now());
+      nextStart = Date.now() + spacing;
+      try {
+        const response = await fetch(url, {
+          signal: AbortSignal.timeout(30_000),
+          headers: { 'User-Agent': 'SoundBlue-LinkAudit/1.0' },
+        });
+        if (response.status === 429) {
+          const now = Date.now();
+          const retryAfter = response.headers.get('retry-after')?.trim() ?? '';
+          const retryAt = /^\d+$/.test(retryAfter)
+            ? now + Number(retryAfter) * 1_000
+            : Date.parse(retryAfter);
+          const cooldown = Number.isFinite(retryAt) ? Math.max(1_000, retryAt - now) : 60_000;
+          if (now >= blockedUntil) spacing = Math.min(5_000, Math.max(500, spacing * 2));
+          blockedUntil = Math.max(blockedUntil, now + cooldown);
+        }
+        if (
+          (response.status < 500 && response.status !== 404 && response.status !== 429) ||
+          attempt === 2
+        )
+          return response;
+        await response.body?.cancel();
+        if (response.status !== 429) await sleep(1_000 * 2 ** attempt);
+      } catch (error) {
+        lastError = error;
+        if (attempt < 2) await sleep(1_000 * 2 ** attempt);
+      }
     }
-  }
-  throw lastError ?? new Error(`Request failed: ${url}`);
+    throw lastError ?? new Error(`Request failed: ${url}`);
+  };
 }
 
 export async function auditSite(
@@ -155,6 +183,7 @@ export async function auditSite(
   internalOnly = false,
 ): Promise<LinkReport & { pages: number }> {
   const root = new URL(origin).origin;
+  const readUrl = createPageReader();
   const pages = new Set<string>([`${root}/`]);
   const sitemaps = new Set<string>();
   const failures: LinkFailure[] = [];
