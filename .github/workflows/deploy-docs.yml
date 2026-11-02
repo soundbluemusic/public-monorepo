@@ -1,6 +1,11 @@
 name: Deploy Documentation to GitHub Pages
 
 on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'apps/docs/**'
+      - '.github/workflows/deploy-docs.yml'
   push:
     branches: [main]
     paths:
@@ -13,11 +18,9 @@ on:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 concurrency:
-  group: pages
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || 'pages' }}
   cancel-in-progress: false
 
 jobs:
@@ -54,6 +57,10 @@ jobs:
 
   deploy:
     name: Deploy to GitHub Pages
+    if: github.event_name != 'pull_request'
+    permissions:
+      pages: write
+      id-token: write
     needs: build
     runs-on: ubuntu-latest
     environment:
