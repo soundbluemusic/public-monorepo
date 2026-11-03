@@ -1,4 +1,5 @@
 ---
+import { allConcepts } from '../../../app/data/concepts';
 import { FEATURED_CONCEPTS } from '../../../app/data/featuredConcepts';
 import { fields } from '../../../app/data/fields';
 import AppShell from '../../components/AppShell.astro';
@@ -9,7 +10,7 @@ const baseUrl = 'https://roots.soundbluemusic.com';
 
 <BaseLayout
   title="수리 - 수학 문서"
-  description="누구나 쉽게 배우는 수학 개념 사전. 438개의 수학 개념과 18개 분야를 탐색하세요."
+  description={`누구나 쉽게 배우는 수학 개념 사전. ${allConcepts.length}개의 수학 개념과 ${fields.length}개 분야를 탐색하세요.`}
   canonical={`${baseUrl}/ko`}
 >
   <AppShell locale="ko">
@@ -96,7 +97,7 @@ const baseUrl = 'https://roots.soundbluemusic.com';
         href="/ko/browse"
         class="inline-flex items-center gap-2 px-6 py-3 rounded-lg text-(--accent-primary) font-medium transition-colors hover:bg-(--bg-tertiary)"
       >
-        438개 개념 모두 보기
+        {allConcepts.length}개 개념 모두 보기
         <span aria-hidden="true">→</span>
       </a>
     </div>
