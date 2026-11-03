@@ -89,7 +89,7 @@ import { topologyConcepts } from './topology';
 import { trigonometryConcepts } from './trigonometry';
 
 /** 모든 개념 목록 */
-export const allConcepts: MathConcept[] = [
+const conceptRecords: MathConcept[] = [
   ...foundationsConcepts,
   ...algebraConcepts,
   ...geometryConcepts,
@@ -142,6 +142,18 @@ export const allConcepts: MathConcept[] = [
   ...harmonicAnalysisConcepts,
 ];
 
+// A concept has one public URL. Preserve the existing last-record detail content,
+// while keeping tags and field membership from every source record.
+const canonicalConcepts = new Map<string, MathConcept>();
+for (const concept of conceptRecords) {
+  const previous = canonicalConcepts.get(concept.id);
+  canonicalConcepts.set(
+    concept.id,
+    previous ? { ...concept, tags: [...new Set([...previous.tags, ...concept.tags])] } : concept,
+  );
+}
+export const allConcepts: MathConcept[] = [...canonicalConcepts.values()];
+
 // ============================================================================
 // Pre-computed Maps for O(1) lookup (빌드 시 1회 계산)
 // ============================================================================
@@ -151,19 +163,23 @@ export const conceptsById = new Map<string, MathConcept>(allConcepts.map((c) => 
 
 /** Field → Concept[] 맵 (O(1) 조회용) */
 export const conceptsByField = new Map<string, MathConcept[]>();
-for (const concept of allConcepts) {
-  const list = conceptsByField.get(concept.field) || [];
-  list.push(concept);
-  conceptsByField.set(concept.field, list);
+for (const record of conceptRecords) {
+  const concept = conceptsById.get(record.id);
+  if (!concept) throw new Error(`Missing canonical concept: ${record.id}`);
+  const list = conceptsByField.get(record.field) || [];
+  if (!list.includes(concept)) list.push(concept);
+  conceptsByField.set(record.field, list);
 }
 
 /** Subfield → Concept[] 맵 (O(1) 조회용) */
 export const conceptsBySubfield = new Map<string, MathConcept[]>();
-for (const concept of allConcepts) {
-  if (concept.subfield) {
-    const list = conceptsBySubfield.get(concept.subfield) || [];
-    list.push(concept);
-    conceptsBySubfield.set(concept.subfield, list);
+for (const record of conceptRecords) {
+  const concept = conceptsById.get(record.id);
+  if (!concept) throw new Error(`Missing canonical concept: ${record.id}`);
+  if (record.subfield) {
+    const list = conceptsBySubfield.get(record.subfield) || [];
+    if (!list.includes(concept)) list.push(concept);
+    conceptsBySubfield.set(record.subfield, list);
   }
 }
 
@@ -191,7 +207,6 @@ export function getConceptsByTag(tag: string): MathConcept[] {
 export function getConceptsByDifficulty(level: number): MathConcept[] {
   return allConcepts.filter((c) => c.difficulty === level);
 }
-
 
 // ============================================================================
 // 경량 버전 (LightConcept) - browse 페이지 최적화용
@@ -227,6 +242,11 @@ function toLightConcept(c: MathConcept): LightConcept {
 
 /** 경량 개념 배열 (browse 페이지용) */
 export const lightConcepts: LightConcept[] = allConcepts.map(toLightConcept);
+
+/** Keep cross-field concepts visible in every original browse category. */
+export const lightConceptsByField = new Map<string, LightConcept[]>(
+  [...conceptsByField].map(([field, concepts]) => [field, concepts.map(toLightConcept)]),
+);
 
 // ============================================================================
 // Pre-sorted arrays for O(1) access (빌드 시 1회 정렬)

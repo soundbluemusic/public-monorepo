@@ -1,4 +1,5 @@
 ---
+import { allConcepts } from '../../app/data/concepts';
 import { FEATURED_CONCEPTS } from '../../app/data/featuredConcepts';
 import { fields } from '../../app/data/fields';
 import AppShell from '../components/AppShell.astro';
@@ -9,7 +10,7 @@ const baseUrl = 'https://roots.soundbluemusic.com';
 
 <BaseLayout
   title="Roots - Math Documentation"
-  description="Learn math concepts easily. Browse 438 concepts across 18 fields."
+  description={`Learn math concepts easily. Browse ${allConcepts.length} concepts across ${fields.length} fields.`}
   canonical={baseUrl}
 >
   <AppShell locale="en">
@@ -96,7 +97,7 @@ const baseUrl = 'https://roots.soundbluemusic.com';
         href="/browse"
         class="inline-flex items-center gap-2 px-6 py-3 rounded-lg text-(--accent-primary) font-medium transition-colors hover:bg-(--bg-tertiary)"
       >
-        Browse all 438 concepts
+        Browse all {allConcepts.length} concepts
         <span aria-hidden="true">→</span>
       </a>
     </div>

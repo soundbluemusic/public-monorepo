@@ -28,7 +28,7 @@ const canonicalUrl = canonical ?? `${baseUrl}${pathname}`;
 const CRITICAL_CSS = createCriticalCss(shellConfig.themeColors);
 const STRUCTURED_DATA = createStructuredData(shellConfig);
 const FONT_URL =
-  'https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css';
+  '/fonts/pretendard-1.3.9/pretendardvariable-subset.css';
 ---
 
 <!doctype html>
@@ -46,8 +46,8 @@ const FONT_URL =
     <link rel="icon" href="/favicon.svg" />
     <link rel="manifest" href="/manifest.json" />
 
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
-    <link rel="stylesheet" href={FONT_URL} />
+    <link rel="preload" as="style" href={FONT_URL} onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href={FONT_URL} /></noscript>
 
     <style set:html={CRITICAL_CSS} />
     <script is:inline set:html={DARK_MODE_INIT_SCRIPT} />

@@ -1,5 +1,5 @@
 ---
-import { lightConcepts } from '../../../app/data/concepts';
+import { lightConcepts, lightConceptsByField } from '../../../app/data/concepts';
 import { fields } from '../../../app/data/fields';
 import { filterConcepts } from '../../../app/lib/concept-filters';
 import { getSubfieldsByParent } from '../../../app/data/subfields';
@@ -16,14 +16,15 @@ const isKo = locale === 'ko';
 const localePrefix = isKo ? '/ko' : '';
 const q = Astro.url.searchParams.get('q') ?? '';
 const filterField = Astro.url.searchParams.get('field') ?? '';
-const filtered = filterConcepts(lightConcepts, { field: filterField, query: q });
+const candidates = filterField ? (lightConceptsByField.get(filterField) ?? []) : lightConcepts;
+const filtered = filterConcepts(candidates, { query: q });
 const selectedField = fields.find((field) => field.id === filterField);
 const BASE_URL = 'https://roots.soundbluemusic.com';
 ---
 
 <BaseLayout
   title={isKo ? '탐색 - 수리' : 'Browse - Roots'}
-  description={isKo ? '18개 분야의 438개 수학 개념 탐색' : 'Browse 438 math concepts across 18 fields'}
+  description={isKo ? `${fields.length}개 분야의 ${lightConcepts.length}개 수학 개념 탐색` : `Browse ${lightConcepts.length} math concepts across ${fields.length} fields`}
   canonical={`${BASE_URL}${localePrefix}/browse`}
 >
   <AppShell locale={locale}>
@@ -112,7 +113,7 @@ const BASE_URL = 'https://roots.soundbluemusic.com';
     ) : (
       <div class="space-y-10">
         {fields.map((field) => {
-          const fieldConcepts = lightConcepts.filter((concept) => concept.field === field.id);
+          const fieldConcepts = lightConceptsByField.get(field.id) ?? [];
           const subfields = getSubfieldsByParent(field.id);
           return (
             <section aria-labelledby={`field-${field.id}`}>
