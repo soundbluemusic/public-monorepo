@@ -16,11 +16,12 @@ export const appliedConcepts: MathConcept[] = [
     content: {
       ko: {
         definition:
-          '푸리에 급수는 주기 함수를 사인과 코사인의 무한 급수로 표현하는 방법입니다. 모든 주기 함수는 진동 성분으로 분해될 수 있습니다.',
+          '푸리에 급수는 주기 함수를 사인과 코사인의 급수로 나타냅니다. 수렴 여부는 함수와 수렴 방식에 따라 다릅니다.',
         formulas: [
           {
             latex: 'f(x) = \\frac{a_0}{2} + \\sum_{n=1}^{\\infty} (a_n \\cos nx + b_n \\sin nx)',
-            description: '푸리에 급수',
+            description:
+              '2π 주기이고 구간별로 매끄러우면 급수는 좌우 극한의 평균에 수렴하며 연속점에서는 f(x)에 수렴',
           },
           {
             latex: 'a_n = \\frac{1}{\\pi} \\int_{-\\pi}^{\\pi} f(x) \\cos(nx) dx',
@@ -51,11 +52,12 @@ export const appliedConcepts: MathConcept[] = [
       },
       en: {
         definition:
-          'Fourier series represents periodic functions as infinite sums of sines and cosines. Any periodic function can be decomposed into oscillatory components.',
+          'A Fourier series represents a periodic function using sines and cosines. Convergence depends on the function and the sense of convergence.',
         formulas: [
           {
             latex: 'f(x) = \\frac{a_0}{2} + \\sum_{n=1}^{\\infty} (a_n \\cos nx + b_n \\sin nx)',
-            description: 'Fourier series',
+            description:
+              'For a piecewise smooth 2π-periodic function, the series converges to the average of the one-sided limits, equal to f(x) at continuity points',
           },
           {
             latex: 'a_n = \\frac{1}{\\pi} \\int_{-\\pi}^{\\pi} f(x) \\cos(nx) dx',
@@ -201,7 +203,8 @@ export const appliedConcepts: MathConcept[] = [
           },
           {
             latex: '\\oint_C f(z) dz = 0',
-            description: '코시 적분 정리 (단순 연결)',
+            description:
+              '코시 적분 정리: 단일 연결 영역에서 f가 해석적이고 C가 그 안의 구간별 매끄러운 닫힌 곡선일 때',
           },
         ],
         examples: [
@@ -236,7 +239,8 @@ export const appliedConcepts: MathConcept[] = [
           },
           {
             latex: '\\oint_C f(z) dz = 0',
-            description: "Cauchy's integral theorem (simply connected)",
+            description:
+              "Cauchy's integral theorem: f analytic on a simply connected domain and C a piecewise smooth closed curve in it",
           },
         ],
         examples: [
@@ -352,7 +356,8 @@ export const appliedConcepts: MathConcept[] = [
         formulas: [
           {
             latex: 'c = m^e \\mod n, \\quad m = c^d \\mod n',
-            description: 'RSA 암호화/복호화',
+            description:
+              '교과서 RSA의 정수 연산 예시. 실제 암호화에는 안전한 패딩과 충분히 큰 키가 필요합니다.',
           },
           {
             latex: 'ed \\equiv 1 \\pmod{\\phi(n)}',
@@ -377,7 +382,8 @@ export const appliedConcepts: MathConcept[] = [
         formulas: [
           {
             latex: 'c = m^e \\mod n, \\quad m = c^d \\mod n',
-            description: 'RSA encryption/decryption',
+            description:
+              'Textbook RSA integer operations. Real encryption requires secure padding and sufficiently large keys.',
           },
           {
             latex: 'ed \\equiv 1 \\pmod{\\phi(n)}',

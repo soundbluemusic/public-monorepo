@@ -1,7 +1,41 @@
 /**
  * @fileoverview 수학 18개 대분류 정의
  */
-import type { MathFieldInfo } from './types';
+import type { MathField, MathFieldInfo } from './types';
+
+/** Connect specialized data fields to the broad fields shown in navigation. */
+export const fieldParents: Partial<Record<MathField, readonly MathField[]>> = {
+  'abstract-algebra': ['algebra'],
+  'algebraic-geometry': ['geometry', 'algebra'],
+  'algebraic-topology': ['topology'],
+  'calculus-of-variations': ['analysis', 'optimization'],
+  'category-theory': ['logic'],
+  combinatorics: ['discrete'],
+  'complex-analysis': ['analysis'],
+  cryptography: ['number-theory', 'applied'],
+  'differential-geometry': ['geometry'],
+  'discrete-mathematics': ['discrete'],
+  'functional-analysis': ['analysis'],
+  'game-theory': ['applied'],
+  'graph-theory': ['discrete'],
+  'harmonic-analysis': ['analysis'],
+  'homological-algebra': ['algebra'],
+  'information-theory': ['applied'],
+  'lie-theory': ['algebra'],
+  'measure-theory': ['analysis'],
+  'numerical-analysis': ['numerical'],
+  'operations-research': ['optimization', 'applied'],
+  'partial-differential-equations': ['analysis'],
+  'representation-theory': ['algebra'],
+  'set-theory': ['discrete', 'logic'],
+  statistics: ['probability'],
+  'stochastic-processes': ['probability'],
+  'applied-cs': ['applied'],
+  'applied-engineering': ['applied'],
+  'applied-finance': ['applied'],
+  'applied-music': ['applied'],
+  'applied-physics': ['applied'],
+};
 
 export const fields: MathFieldInfo[] = [
   {

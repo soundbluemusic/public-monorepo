@@ -31,8 +31,9 @@ export const financeConcepts: MathConcept[] = [
             description: '연속 복리',
           },
           {
-            latex: 't_{2x} = \\frac{72}{r\\%} \\approx \\frac{\\ln 2}{r}',
-            description: '72의 법칙 (원금 2배 시간)',
+            latex: 't_{2x} = \\frac{\\ln 2}{\\ln(1+r)} \\approx \\frac{72}{100r} \\quad (r>0)',
+            description:
+              '연 복리 식을 연속 시간으로 확장한 2배 시간과 72의 법칙 근사 (r은 소수로 나타낸 연이율)',
           },
         ],
         examples: [
@@ -42,7 +43,8 @@ export const financeConcepts: MathConcept[] = [
           },
           {
             problem: '연 6%일 때 원금이 2배가 되는 시간은?',
-            solution: '72의 법칙: 72 ÷ 6 = 12년',
+            solution:
+              '72의 법칙: 약 12년. 연 복리 식을 연속 시간으로 확장하면 ln 2 / ln 1.06 ≈ 11.90년입니다. 이자가 매년 말에만 붙는다면 실제로 2배 이상이 되는 시점은 12년 말입니다.',
           },
         ],
         applications: [
@@ -68,8 +70,9 @@ export const financeConcepts: MathConcept[] = [
             description: 'Continuous compounding',
           },
           {
-            latex: 't_{2x} = \\frac{72}{r\\%} \\approx \\frac{\\ln 2}{r}',
-            description: 'Rule of 72 (doubling time)',
+            latex: 't_{2x} = \\frac{\\ln 2}{\\ln(1+r)} \\approx \\frac{72}{100r} \\quad (r>0)',
+            description:
+              'Doubling time for the annual-compounding formula extended to real times, with Rule of 72 approximation (r is the annual rate as a decimal)',
           },
         ],
         examples: [
@@ -79,7 +82,8 @@ export const financeConcepts: MathConcept[] = [
           },
           {
             problem: 'At 6%, how long to double?',
-            solution: 'Rule of 72: 72 ÷ 6 = 12 years',
+            solution:
+              'Rule of 72: about 12 years. Extending the annual-compounding formula to real times gives ln 2 / ln 1.06 ≈ 11.90 years. If interest is credited only at year-end, the balance first reaches twice the principal at the end of year 12.',
           },
         ],
         applications: [
@@ -200,7 +204,7 @@ export const financeConcepts: MathConcept[] = [
           },
           {
             latex: '\\%B = \\frac{P - Lower}{Upper - Lower}',
-            description: '%B 지표 (밴드 내 위치)',
+            description: '%B 지표 (Upper ≠ Lower일 때 밴드에 대한 상대 위치)',
           },
         ],
         examples: [
@@ -210,7 +214,8 @@ export const financeConcepts: MathConcept[] = [
           },
           {
             problem: '가격이 상단 밴드에 닿으면?',
-            solution: '과매수 신호로 해석 가능, 변동성 확대 또는 추세 강화 신호',
+            solution:
+              '일부 분석가는 과매수 신호로 해석하지만, 가격 하락이나 수익을 보장하지는 않습니다.',
           },
         ],
         history: {
@@ -242,7 +247,7 @@ export const financeConcepts: MathConcept[] = [
           },
           {
             latex: '\\%B = \\frac{P - Lower}{Upper - Lower}',
-            description: '%B indicator (position in band)',
+            description: '%B indicator (relative position to the bands when Upper ≠ Lower)',
           },
         ],
         examples: [
@@ -252,7 +257,8 @@ export const financeConcepts: MathConcept[] = [
           },
           {
             problem: 'What if price touches upper band?',
-            solution: 'Possible overbought signal, or volatility expansion/trend strength',
+            solution:
+              'Some analysts interpret this as an overbought signal, but it does not guarantee a price decline or profit.',
           },
         ],
         history: {
@@ -286,7 +292,7 @@ export const financeConcepts: MathConcept[] = [
     content: {
       ko: {
         definition:
-          '블랙-숄즈 모형은 유럽형 옵션의 이론적 가격을 계산하는 수학적 모형입니다. 확률미적분학에 기반합니다.',
+          '블랙-숄즈 모형은 일정한 이자율과 변동성 등 가정 아래 유럽형 옵션의 이론적 가격을 계산합니다. 아래 콜옵션 식은 배당이 없는 주식에 적용하며 S₀, K, T, σ는 양수입니다. T는 연 단위, r은 연속 복리 연 이자율, N은 표준정규분포의 누적분포함수입니다.',
         formulas: [
           {
             latex: 'C = S_0 N(d_1) - Ke^{-rT}N(d_2)',
@@ -308,7 +314,7 @@ export const financeConcepts: MathConcept[] = [
         ],
         examples: [
           {
-            problem: 'S=100, K=100, r=5%, σ=20%, T=1일 때 콜옵션 가격은?',
+            problem: 'S=100달러, K=100달러, r=연 5%, σ=연 20%, T=1년일 때 콜옵션의 모형 가격은?',
             solution: 'd₁ ≈ 0.35, d₂ ≈ 0.15, C ≈ $10.45',
           },
         ],
@@ -325,7 +331,7 @@ export const financeConcepts: MathConcept[] = [
       },
       en: {
         definition:
-          'Black-Scholes model calculates theoretical prices of European options. Based on stochastic calculus.',
+          'The Black-Scholes model prices European options under assumptions including constant interest rate and volatility. The call formula below assumes a non-dividend-paying stock and positive S₀, K, T and σ. T is in years, r is the continuously compounded annual rate, and N is the standard normal cumulative distribution function.',
         formulas: [
           {
             latex: 'C = S_0 N(d_1) - Ke^{-rT}N(d_2)',
@@ -347,7 +353,8 @@ export const financeConcepts: MathConcept[] = [
         ],
         examples: [
           {
-            problem: 'S=100, K=100, r=5%, σ=20%, T=1. Call price?',
+            problem:
+              'S=$100, K=$100, r=5% per year, σ=20% per year, T=1 year. What is the model call price?',
             solution: 'd₁ ≈ 0.35, d₂ ≈ 0.15, C ≈ $10.45',
           },
         ],
@@ -386,11 +393,11 @@ export const financeConcepts: MathConcept[] = [
     content: {
       ko: {
         definition:
-          '피보나치 되돌림은 추세 조정 시 지지/저항 수준을 예측하는 도구입니다. 피보나치 수열의 비율을 사용합니다.',
+          '피보나치 되돌림은 가격 변동 구간에 피보나치 수열과 관련된 비율로 참고선을 표시하는 기술적 분석 도구입니다. 미래 가격의 예측 효과는 보장되지 않습니다.',
         formulas: [
           {
             latex: '\\text{되돌림 수준} = 23.6\\%, 38.2\\%, 50\\%, 61.8\\%, 78.6\\%',
-            description: '주요 피보나치 비율',
+            description: '주요 되돌림 수준 (50%는 피보나치 비율이 아닙니다)',
           },
           {
             latex: '\\phi = \\frac{1+\\sqrt{5}}{2} \\approx 1.618',
@@ -408,22 +415,23 @@ export const financeConcepts: MathConcept[] = [
           },
           {
             problem: '61.8% 되돌림이 중요한 이유는?',
-            solution: '황금비의 역수(1/φ)로, 자연과 시장에서 자주 나타나는 비율',
+            solution:
+              '피보나치 수열의 이웃한 항의 비가 가까워지는 황금비의 역수(1/φ)입니다. 이 수치의 시장 예측 효과는 보장되지 않습니다.',
           },
         ],
         applications: [
-          { field: '주식/외환', description: '지지/저항선 예측' },
-          { field: '진입점 결정', description: '매수/매도 타이밍' },
+          { field: '주식/외환', description: '가격 변동의 참고선 표시' },
+          { field: '진입점 결정', description: '매수/매도 검토 시 참고' },
           { field: '목표가 설정', description: '확장 수준 활용' },
         ],
       },
       en: {
         definition:
-          'Fibonacci retracement predicts support/resistance levels during trend corrections using Fibonacci ratios.',
+          'Fibonacci retracement is a technical analysis tool that marks reference levels using ratios related to the Fibonacci sequence. Its ability to predict future prices is not guaranteed.',
         formulas: [
           {
             latex: '\\text{Retracement levels} = 23.6\\%, 38.2\\%, 50\\%, 61.8\\%, 78.6\\%',
-            description: 'Key Fibonacci ratios',
+            description: 'Common retracement levels (50% is not a Fibonacci ratio)',
           },
           {
             latex: '\\phi = \\frac{1+\\sqrt{5}}{2} \\approx 1.618',
@@ -441,12 +449,13 @@ export const financeConcepts: MathConcept[] = [
           },
           {
             problem: 'Why is 61.8% significant?',
-            solution: 'Inverse of golden ratio (1/φ), appears frequently in nature and markets',
+            solution:
+              'It is the inverse golden ratio (1/φ), approached by ratios of adjacent Fibonacci numbers. Its ability to predict markets is not guaranteed.',
           },
         ],
         applications: [
-          { field: 'Stocks/Forex', description: 'Support/resistance prediction' },
-          { field: 'Entry Points', description: 'Buy/sell timing' },
+          { field: 'Stocks/Forex', description: 'Marking reference levels for price changes' },
+          { field: 'Entry Points', description: 'A reference when considering buy/sell timing' },
           { field: 'Price Targets', description: 'Using extension levels' },
         ],
       },
@@ -496,11 +505,12 @@ export const financeConcepts: MathConcept[] = [
         examples: [
           {
             problem: '가격이 구름 위에 있으면?',
-            solution: '상승 추세, 구름이 지지선 역할. 구름이 두꺼울수록 지지가 강함',
+            solution:
+              '일부 분석가는 상승 추세나 지지 영역으로 해석하지만, 가격 방향이나 지지를 보장하지는 않습니다.',
           },
           {
             problem: '전환선이 기준선을 상향 돌파하면?',
-            solution: '매수 신호 (골든크로스와 유사)',
+            solution: '일부 분석가는 매수 신호로 해석하지만, 수익이나 상승을 보장하지는 않습니다.',
           },
         ],
         history: {
@@ -542,11 +552,13 @@ export const financeConcepts: MathConcept[] = [
         examples: [
           {
             problem: 'What if price is above the cloud?',
-            solution: 'Uptrend, cloud acts as support. Thicker cloud = stronger support',
+            solution:
+              'Some analysts interpret this as an uptrend or support area, but neither is guaranteed.',
           },
           {
             problem: 'Tenkan crosses above Kijun?',
-            solution: 'Buy signal (similar to golden cross)',
+            solution:
+              'Some analysts interpret this as a buy signal, but it does not guarantee a profit or price increase.',
           },
         ],
         history: {
@@ -664,33 +676,34 @@ export const financeConcepts: MathConcept[] = [
     content: {
       ko: {
         definition:
-          '샤프 비율은 위험 대비 초과수익을 측정합니다. 높을수록 같은 위험에서 더 좋은 수익을 의미합니다.',
+          '샤프 비율은 초과수익의 평균을 그 표준편차로 나눈 값입니다. 표준편차는 0보다 커야 합니다. 같은 기간과 기준으로 비교해야 하며, 투자 성과를 보장하지는 않습니다.',
         formulas: [
           {
-            latex: 'SR = \\frac{R_p - R_f}{\\sigma_p}',
+            latex: 'SR = \\frac{\\mathbb{E}[R_p - R_f]}{\\sigma(R_p - R_f)}',
             description: '샤프 비율',
           },
           {
             latex: 'R_p = \\text{포트폴리오 수익률}',
-            description: '포트폴리오 기대수익',
+            description: '같은 기간의 포트폴리오 수익률',
           },
           {
             latex: 'R_f = \\text{무위험 수익률}',
             description: '국채 등 무위험 자산',
           },
           {
-            latex: '\\sigma_p = \\text{포트폴리오 표준편차}',
+            latex: '\\sigma(R_p-R_f) = \\text{초과수익률의 표준편차}',
             description: '변동성 (위험)',
           },
         ],
         examples: [
           {
-            problem: '수익률 12%, 무위험 2%, 표준편차 15%일 때 샤프 비율은?',
+            problem: '평균 수익률 12%, 무위험 수익률 2%, 초과수익률 표준편차 15%일 때 샤프 비율은?',
             solution: 'SR = (12% - 2%) / 15% = 0.67',
           },
           {
             problem: '샤프 비율이 1 이상이면?',
-            solution: '일반적으로 좋은 투자로 평가됨',
+            solution:
+              '1 이상이라는 수치만으로 좋은 투자라고 확정할 수 없습니다. 같은 기간과 기준의 다른 투자 및 위험을 함께 살펴야 합니다.',
           },
         ],
         history: {
@@ -706,33 +719,35 @@ export const financeConcepts: MathConcept[] = [
       },
       en: {
         definition:
-          'Sharpe ratio measures excess return per unit of risk. Higher means better returns for the same risk level.',
+          'The Sharpe ratio divides average excess return by its positive standard deviation. Comparisons require the same period and benchmark; the ratio does not guarantee future performance.',
         formulas: [
           {
-            latex: 'SR = \\frac{R_p - R_f}{\\sigma_p}',
+            latex: 'SR = \\frac{\\mathbb{E}[R_p - R_f]}{\\sigma(R_p - R_f)}',
             description: 'Sharpe Ratio',
           },
           {
             latex: 'R_p = \\text{Portfolio return}',
-            description: 'Expected portfolio return',
+            description: 'Portfolio return over the same period',
           },
           {
             latex: 'R_f = \\text{Risk-free rate}',
             description: 'Treasury bonds, etc.',
           },
           {
-            latex: '\\sigma_p = \\text{Portfolio std deviation}',
+            latex: '\\sigma(R_p-R_f) = \\text{standard deviation of excess return}',
             description: 'Volatility (risk)',
           },
         ],
         examples: [
           {
-            problem: 'Return 12%, risk-free 2%, std dev 15%. Sharpe ratio?',
+            problem:
+              'Average return 12%, risk-free rate 2%, excess-return standard deviation 15%. Sharpe ratio?',
             solution: 'SR = (12% - 2%) / 15% = 0.67',
           },
           {
             problem: 'Is Sharpe ratio > 1 good?',
-            solution: 'Generally considered a good investment',
+            solution:
+              'A ratio above 1 alone does not establish a good investment. Compare the same period and benchmark, and consider other risks.',
           },
         ],
         history: {

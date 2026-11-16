@@ -33,10 +33,10 @@ export const graphTheoryAdvancedConcepts: MathConcept[] = [
     subfield: 'graph-theory',
     difficulty: 3,
     content: {
-      ko: '변이 교차하지 않게 평면에 그릴 수 있는 그래프입니다. 오일러 공식 V-E+F=2가 성립하며, K₅와 K₃,₃를 부분 그래프로 포함하지 않습니다.',
-      en: "A graph that can be drawn on a plane without edge crossings. Euler's formula V-E+F=2 holds, and it contains neither K₅ nor K₃,₃ as a subdivision.",
+      ko: '변이 교차하지 않게 평면에 그릴 수 있는 그래프입니다. 연결된 평면 표현에서는 V-E+F=2입니다. K₅와 K₃,₃의 세분을 부분 그래프로 포함하지 않습니다.',
+      en: 'A graph drawable in the plane without edge crossings. For a connected plane embedding V-E+F=2. It contains no subdivision of K₅ or K₃,₃.',
     },
-    latex: 'V - E + F = 2, \\quad E \\leq 3V - 6 \\text{ (simple connected)}',
+    latex: 'V-E+F=2\\ \\text{(connected)};\\quad E\\leq 3V-6\\ \\text{(simple, }V\\geq3\\text{)}',
     relations: {
       prerequisites: ['graph', 'euler-formula'],
       nextTopics: ['kuratowski-theorem', 'four-color-theorem'],
@@ -59,7 +59,7 @@ export const graphTheoryAdvancedConcepts: MathConcept[] = [
       en: 'The problem of finding maximum flow from source to sink in a directed graph. The max-flow min-cut theorem is the key result.',
     },
     latex:
-      '\\max |f| = \\min_{S-T \\text{ cut}} c(S,T), \\quad \\sum_{v:(u,v)\\in E} f(u,v) = \\sum_{v:(v,u)\\in E} f(v,u)',
+      '\\max |f| = \\min_{S-T\\text{ cut}} c(S,T),\\quad \\sum_{v:(u,v)\\in E}f(u,v)=\\sum_{v:(v,u)\\in E}f(v,u)\\quad(u\\notin\\{s,t\\})',
     relations: {
       prerequisites: ['directed-graph', 'graph-algorithms'],
       nextTopics: ['ford-fulkerson', 'bipartite-matching'],
@@ -78,10 +78,11 @@ export const graphTheoryAdvancedConcepts: MathConcept[] = [
     subfield: 'graph-theory',
     difficulty: 4,
     content: {
-      ko: '그래프의 인접행렬이나 라플라시안 행렬의 고유값을 연구합니다. 그래프의 연결성, 확장성 등 구조적 성질과 밀접한 관련이 있습니다.',
-      en: 'Studies eigenvalues of adjacency or Laplacian matrices of graphs. Closely related to structural properties like connectivity and expansion.',
+      ko: '그래프의 인접행렬이나 라플라시안 행렬의 고유값을 연구합니다. 정점이 둘 이상인 유한 무방향 그래프에서 두 번째로 작은 라플라시안 고유값이 양수일 필요충분조건은 그래프가 연결되어 있는 것입니다.',
+      en: 'Studies eigenvalues of adjacency or Laplacian matrices. For a finite undirected graph with at least two vertices, the second-smallest Laplacian eigenvalue is positive if and only if the graph is connected.',
     },
-    latex: 'L = D - A, \\quad \\lambda_2(L) > 0 \\Leftrightarrow G \\text{ connected}',
+    latex:
+      'L = D - A, \\quad 0 = \\lambda_1 \\le \\lambda_2 \\le \\cdots, \\quad \\lambda_2 > 0 \\Leftrightarrow G \\text{ connected}',
     relations: {
       prerequisites: ['eigenvalue', 'graph', 'laplacian-matrix'],
       nextTopics: ['cheeger-inequality', 'graph-partitioning'],
@@ -100,11 +101,11 @@ export const graphTheoryAdvancedConcepts: MathConcept[] = [
     subfield: 'graph-theory',
     difficulty: 4,
     content: {
-      ko: '확률적으로 생성되는 그래프를 연구합니다. Erdős-Rényi 모델 G(n,p)에서 위상 전이와 임계 현상을 분석합니다.',
-      en: 'Studies graphs generated probabilistically. Analyzes phase transitions and threshold phenomena in the Erdős-Rényi model G(n,p).',
+      ko: '확률적으로 생성되는 그래프를 연구합니다. Erdős-Rényi 모델 G(n,p)는 각 정점 쌍의 간선을 서로 독립적으로 확률 p로 넣습니다. n이 커질 때 연결성의 임계 규모는 ln(n)/n입니다.',
+      en: 'Studies probabilistically generated graphs. The Erdős-Rényi model G(n,p) includes each possible edge independently with probability p. As n grows, ln(n)/n is the connectivity threshold scale.',
     },
     latex:
-      'G(n,p): \\Pr[\\text{edge } (i,j)] = p, \\quad \\text{threshold for connectivity: } p = \\frac{\\ln n}{n}',
+      'G(n,p): \\Pr[\\text{edge } (i,j)] = p, \\quad \\text{connectivity threshold scale: } \\frac{\\ln n}{n} \\quad (n\\to\\infty)',
     relations: {
       prerequisites: ['probability', 'graph'],
       nextTopics: ['small-world-networks', 'scale-free-networks'],
@@ -123,11 +124,11 @@ export const graphTheoryAdvancedConcepts: MathConcept[] = [
     subfield: 'graph-theory',
     difficulty: 3,
     content: {
-      ko: '그래프에서 공유 정점이 없는 변들의 집합을 찾는 문제입니다. 이분 그래프의 완전 매칭 존재 조건은 Hall의 정리로 주어집니다.',
-      en: "The problem of finding a set of edges with no shared vertices. The existence of a perfect matching in bipartite graphs is given by Hall's theorem.",
+      ko: '그래프에서 정점을 공유하지 않는 간선의 집합인 매칭을 다룹니다. 유한 이분 그래프에서 Hall의 조건은 한쪽 X의 모든 정점을 짝지을 수 있는 필요충분조건입니다. 양쪽의 정점 수가 같으면 완전 매칭이 됩니다.',
+      en: 'A matching is a set of edges with no shared vertices. Hall’s condition characterizes matchings covering X in finite bipartite graphs. If both sides have equal size, such a matching is perfect.',
     },
     latex:
-      '|N(S)| \\geq |S| \\text{ for all } S \\subseteq X \\Rightarrow \\text{perfect matching exists}',
+      '|N(S)|\\geq |S|\\ \\text{for all }S\\subseteq X\\ \\Longleftrightarrow\\ \\text{a matching covers }X',
     relations: {
       prerequisites: ['bipartite-graph', 'graph'],
       nextTopics: ['hungarian-algorithm', 'stable-matching'],
@@ -168,11 +169,11 @@ export const graphTheoryAdvancedConcepts: MathConcept[] = [
     subfield: 'graph-theory',
     difficulty: 4,
     content: {
-      ko: '두 그래프가 구조적으로 같은지 판별하는 문제입니다. 복잡도 클래스 NP에 속하지만 NP-완전인지는 미해결입니다.',
-      en: "The problem of determining if two graphs are structurally identical. Belongs to complexity class NP, but whether it's NP-complete is unknown.",
+      ko: '두 그래프의 정점 사이에 간선 관계를 보존하는 일대일 대응이 있는지 판별하는 문제입니다. 복잡도 클래스 NP에 속합니다.',
+      en: 'The problem of determining whether there is a bijection between two graphs that preserves adjacency. It belongs to complexity class NP.',
     },
     latex:
-      'G_1 \\cong G_2 \\Leftrightarrow \\exists \\phi: V_1 \\to V_2 \\text{ bijective, } (u,v) \\in E_1 \\Leftrightarrow (\\phi(u),\\phi(v)) \\in E_2',
+      'G_1 \\cong G_2 \\Leftrightarrow \\exists \\phi: V_1 \\to V_2 \\text{ bijective}, \\; \\forall u,v \\in V_1:\\; ((u,v) \\in E_1 \\Leftrightarrow (\\phi(u),\\phi(v)) \\in E_2)',
     relations: {
       prerequisites: ['graph', 'bijection'],
       nextTopics: ['weisfeiler-lehman', 'babai-algorithm'],

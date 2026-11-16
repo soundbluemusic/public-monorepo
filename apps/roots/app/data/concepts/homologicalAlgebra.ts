@@ -159,7 +159,7 @@ export const homologicalAlgebraConcepts: MathConcept[] = [
           'Tor₁(A,B): 텐서곱의 비자명한 관계',
           '평탄 모듈: Tor₁(-,F) = 0',
         ],
-        examples: ['Tor₁(ℤ/m, ℤ/n) = ℤ/gcd(m,n)', 'Tor(A,B) = 0 if A or B free'],
+        examples: ['Tor₁(ℤ/m, ℤ/n) = ℤ/gcd(m,n)', 'Torₙ(A,B) = 0 for n > 0 if A or B is free'],
         applications: ['평탄성', '대수기하', '호몰로지'],
       },
       en: {
@@ -169,7 +169,7 @@ export const homologicalAlgebraConcepts: MathConcept[] = [
           'Tor₁(A,B): nontrivial relations in tensor',
           'Flat module: Tor₁(-,F) = 0',
         ],
-        examples: ['Tor₁(ℤ/m, ℤ/n) = ℤ/gcd(m,n)', 'Tor(A,B) = 0 if A or B free'],
+        examples: ['Tor₁(ℤ/m, ℤ/n) = ℤ/gcd(m,n)', 'Torₙ(A,B) = 0 for n > 0 if A or B is free'],
         applications: ['Flatness', 'Algebraic geometry', 'Homology'],
       },
     },
@@ -231,8 +231,8 @@ export const homologicalAlgebraConcepts: MathConcept[] = [
       ko: {
         definition: '자유 모듈의 직합인수. 사영 분해의 기본 구성 요소',
         formulas: [
-          '리프팅: P →f A →^π B → 0, ∃g: P → A with πg = f',
-          '동치: 분할되는 전사의 정의역',
+          '리프팅: 전사 π: A → B와 f: P → B에 대해 πg = f인 g: P → A가 존재',
+          '동치: P로 가는 모든 전사 A → P가 분할됨',
           '동치: Hom(P,-)가 완전',
         ],
         examples: ['자유 모듈', 'ℤ/6 위의 ℤ/2 ⊕ ℤ/3'],
@@ -241,8 +241,8 @@ export const homologicalAlgebraConcepts: MathConcept[] = [
       en: {
         definition: 'Direct summand of free module. Building block for projective resolutions',
         formulas: [
-          'Lifting: P →f A →^π B → 0, ∃g: P → A with πg = f',
-          'Equiv: domain of split epimorphism',
+          'Lifting: for every surjection π: A → B and map f: P → B, some g: P → A satisfies πg = f',
+          'Equivalent: every surjection A → P splits',
           'Equiv: Hom(P,-) exact',
         ],
         examples: ['Free modules', 'ℤ/2 ⊕ ℤ/3 over ℤ/6'],
@@ -271,23 +271,23 @@ export const homologicalAlgebraConcepts: MathConcept[] = [
       ko: {
         definition: '단사 분해의 기본 구성 요소. 사영 모듈의 쌍대',
         formulas: [
-          '확장: 0 → A →^ι B → C, ∃g: B → I with gι = f',
-          '동치: 분할되는 단사의 공역',
+          '확장: 단사 ι: A → B와 f: A → I에 대해 gι = f인 g: B → I가 존재',
+          '동치: I에서 출발하는 모든 단사 I → B가 분할됨',
           '동치: Hom(-,I)가 완전',
           '베어 기준',
         ],
-        examples: ['ℚ/ℤ', '나눗셈군'],
+        examples: ['정수환 ℤ 위의 모듈 ℚ/ℤ', '정수환 ℤ 위의 나눗셈 가능 아벨 군'],
         applications: ['호몰로지', '층 이론', '대수기하'],
       },
       en: {
         definition: 'Building block for injective resolutions. Dual of projective module',
         formulas: [
-          'Extension: 0 → A →^ι B → C, ∃g: B → I with gι = f',
-          'Equiv: codomain of split mono',
+          'Extension: for every injection ι: A → B and map f: A → I, some g: B → I satisfies gι = f',
+          'Equivalent: every injection I → B splits',
           'Equiv: Hom(-,I) exact',
           'Baer criterion',
         ],
-        examples: ['ℚ/ℤ', 'Divisible groups'],
+        examples: ['The ℤ-module ℚ/ℤ', 'Divisible abelian groups as ℤ-modules'],
         applications: ['Homology', 'Sheaf theory', 'Algebraic geometry'],
       },
     },

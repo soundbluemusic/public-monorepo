@@ -45,26 +45,27 @@ export const representationTheoryConcepts: MathConcept[] = [
     difficulty: 4,
     content: {
       ko: {
-        definition: '비자명한 진부분 표현을 갖지 않는 표현. 표현론의 기본 구성 요소',
+        definition:
+          '0이 아닌 표현 중 비자명한 진부분 표현을 갖지 않는 표현. 표현론의 기본 구성 요소',
         formulas: [
           '마슈케 정리: 유한군, char=0이면 완전 가약',
-          '슈어 보조정리: Hom(V,W) = 0 또는 동형',
+          '슈어 보조정리: 기약 표현 사이의 준동형은 영사상이거나 동형사상',
         ],
         examples: ['1차원 표현', 'S₃의 2차원 기약 표현'],
         applications: ['분류 문제', '양자역학', '입자물리'],
       },
       en: {
         definition:
-          'Representation with no nontrivial proper subrepresentations. Building blocks of representation theory',
+          'A nonzero representation with no nontrivial proper subrepresentations. Building blocks of representation theory',
         formulas: [
           'Maschke: finite group, char=0 ⟹ completely reducible',
-          'Schur lemma: Hom(V,W) = 0 or isomorphism',
+          'Schur lemma: A homomorphism between irreducible representations is zero or an isomorphism',
         ],
         examples: ['1-dimensional representations', 'S₃ 2-dim irreducible'],
         applications: ['Classification', 'Quantum mechanics', 'Particle physics'],
       },
     },
-    latex: 'V = V_1 \\oplus V_2 \\oplus \\cdots \\oplus V_k',
+    latex: 'W \\subseteq V,\\; W \\text{ invariant} \\;\\Rightarrow\\; W=0 \\text{ or } W=V',
     relations: {
       prerequisites: ['group-representation'],
       nextTopics: ['character-theory'],
@@ -85,7 +86,12 @@ export const representationTheoryConcepts: MathConcept[] = [
     content: {
       ko: {
         definition: '표현의 대각합(트레이스)을 통해 표현을 연구하는 방법',
-        formulas: ['χ_V(g) = tr(ρ(g))', '직교성: ⟨χ_V, χ_W⟩ = δ_{V,W}', '지표표', '정규 표현 분해'],
+        formulas: [
+          'χ_V(g) = tr(ρ(g))',
+          '유한군의 복소 기약 표현 지표의 직교성: ⟨χ_V, χ_W⟩ = 1 (동형), 0 (비동형)',
+          '지표표',
+          '정규 표현 분해',
+        ],
         examples: ['S₃의 지표표', '순환군의 지표'],
         applications: ['표현 분류', '분자 대칭', '번사이드 정리'],
       },
@@ -93,7 +99,7 @@ export const representationTheoryConcepts: MathConcept[] = [
         definition: 'Study of representations through trace (diagonal sum) of matrices',
         formulas: [
           'χ_V(g) = tr(ρ(g))',
-          'Orthogonality: ⟨χ_V, χ_W⟩ = δ_{V,W}',
+          'For irreducible complex representations of a finite group: ⟨χ_V, χ_W⟩ = 1 if isomorphic, 0 otherwise',
           'Character table',
           'Regular rep decomposition',
         ],

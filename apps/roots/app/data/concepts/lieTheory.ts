@@ -34,11 +34,10 @@ export const lieTheoryConcepts: MathConcept[] = [
     subfield: 'lie-theory',
     difficulty: 5,
     content: {
-      ko: '리 군의 항등원에서의 접공간으로, 리 괄호 연산을 갖습니다. 군의 무한소 구조를 인코딩합니다.',
-      en: 'The tangent space at the identity of a Lie group, equipped with Lie bracket. Encodes infinitesimal structure of the group.',
+      ko: '교대성과 야코비 항등식을 만족하는 쌍선형 리 괄호를 갖춘 벡터 공간입니다. 리 군의 항등원에서의 접공간은 그 예입니다.',
+      en: 'A vector space with a bilinear Lie bracket satisfying alternation and the Jacobi identity. The tangent space at the identity of a Lie group is an example.',
     },
-    latex:
-      '\\mathfrak{g} = T_eG, \\quad [X,Y] = XY - YX, \\quad [X,[Y,Z]] + [Y,[Z,X]] + [Z,[X,Y]] = 0',
+    latex: '\\mathfrak{g} = T_eG, \\quad [X,[Y,Z]] + [Y,[Z,X]] + [Z,[X,Y]] = 0',
     relations: {
       prerequisites: ['lie-group', 'vector-space'],
       nextTopics: ['structure-constants', 'killing-form'],
@@ -61,7 +60,7 @@ export const lieTheoryConcepts: MathConcept[] = [
       en: 'A map from Lie algebra to Lie group. Generates finite transformations from infinitesimal generators.',
     },
     latex:
-      '\\exp: \\mathfrak{g} \\to G, \\quad \\exp(X) = \\sum_{n=0}^{\\infty} \\frac{X^n}{n!} = e^X',
+      '\\exp: \\mathfrak{g} \\to G, \\quad \\exp(X) = \\sum_{n=0}^{\\infty} \\frac{X^n}{n!} \\quad (\\text{matrix Lie group})',
     relations: {
       prerequisites: ['lie-group', 'lie-algebra'],
       nextTopics: ['baker-campbell-hausdorff', 'one-parameter-subgroup'],
@@ -105,7 +104,8 @@ export const lieTheoryConcepts: MathConcept[] = [
       ko: '리 군이 자신의 리 대수에 작용하는 표현입니다. 리 대수의 구조를 연구하는 데 핵심적입니다.',
       en: 'A representation of a Lie group acting on its own Lie algebra. Essential for studying Lie algebra structure.',
     },
-    latex: '\\text{Ad}_g(X) = gXg^{-1}, \\quad \\text{ad}_X(Y) = [X,Y]',
+    latex:
+      '\\text{Ad}_g(X) = gXg^{-1} \\quad (\\text{matrix Lie group}), \\qquad \\text{ad}_X(Y) = [X,Y]',
     relations: {
       prerequisites: ['lie-group', 'lie-algebra', 'group-representation'],
       nextTopics: ['killing-form', 'root-system'],
@@ -169,8 +169,8 @@ export const lieTheoryConcepts: MathConcept[] = [
     subfield: 'lie-theory',
     difficulty: 5,
     content: {
-      ko: '가해 이데알이 없는 리 대수입니다. 단순 리 대수들의 직합으로 분해되며, 킬링 형식이 비퇴화입니다.',
-      en: 'A Lie algebra with no solvable ideals. Decomposes as direct sum of simple Lie algebras; Killing form is non-degenerate.',
+      ko: '특성 0인 체 위의 유한 차원 리 대수 중 0이 아닌 가해 이데알이 없는 대수입니다. 단순 리 대수들의 직합으로 분해되며, 킬링 형식이 비퇴화입니다.',
+      en: 'A finite-dimensional Lie algebra over a field of characteristic zero with no nonzero solvable ideals. It decomposes into a direct sum of simple Lie algebras, and its Killing form is non-degenerate.',
     },
     latex:
       '\\mathfrak{g} = \\mathfrak{g}_1 \\oplus \\cdots \\oplus \\mathfrak{g}_k, \\quad \\mathfrak{g}_i \\text{ simple}',

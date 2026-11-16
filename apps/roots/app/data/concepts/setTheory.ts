@@ -19,6 +19,7 @@ export const setTheoryConcepts: MathConcept[] = [
           '합집합 공리: ∀A∃B(B=∪A)',
           '멱집합 공리: ∀A∃B(B=P(A))',
           '무한 공리: 귀납적 집합 존재',
+          '분리 공리꼴: 기존 집합에서 조건을 만족하는 원소를 모은 부분집합이 존재',
           '치환 공리꼴',
           '정칙성/기초 공리',
           '선택 공리(AC)',
@@ -35,6 +36,7 @@ export const setTheoryConcepts: MathConcept[] = [
           'Union: ∀A∃B(B=∪A)',
           'Power set: ∀A∃B(B=P(A))',
           'Infinity: inductive set exists',
+          'Separation schema: elements of a set satisfying a formula form a set',
           'Replacement schema',
           'Regularity/Foundation',
           'Axiom of Choice (AC)',
@@ -114,7 +116,7 @@ export const setTheoryConcepts: MathConcept[] = [
           'c = |ℝ| = 2^ℵ₀',
           '칸토어 정리: |A| < |P(A)|',
         ],
-        examples: ['ℵ₀, ℵ₁, ℵ₂, ...', '연속체 가설: c = ℵ₁?'],
+        examples: ['ℵ₀, ℵ₁, ℵ₂, ...', '|ℕ| < |ℝ|'],
         applications: ['무한 비교', '집합론', '기초론'],
       },
       en: {
@@ -126,14 +128,14 @@ export const setTheoryConcepts: MathConcept[] = [
           'c = |ℝ| = 2^ℵ₀',
           'Cantor: |A| < |P(A)|',
         ],
-        examples: ['ℵ₀, ℵ₁, ℵ₂, ...', 'Continuum hypothesis: c = ℵ₁?'],
+        examples: ['ℵ₀, ℵ₁, ℵ₂, ...', '|ℕ| < |ℝ|'],
         applications: ['Infinity comparison', 'Set theory', 'Foundations'],
       },
     },
     latex: '|A| < |\\mathcal{P}(A)|',
     relations: {
       prerequisites: ['bijection', 'ordinal-numbers'],
-      nextTopics: ['continuum-hypothesis', 'cardinal-arithmetic'],
+      nextTopics: ['cardinal-arithmetic'],
       related: ['countability'],
       applications: ['set-theory', 'logic'],
     },
@@ -172,7 +174,7 @@ export const setTheoryConcepts: MathConcept[] = [
       },
     },
     latex:
-      '\\forall \\mathcal{A}(\\emptyset \\notin \\mathcal{A} \\rightarrow \\exists f: \\mathcal{A} \\to \\bigcup\\mathcal{A})',
+      '\\forall \\mathcal{A}(\\emptyset \\notin \\mathcal{A} \\rightarrow \\exists f: \\mathcal{A} \\to \\bigcup\\mathcal{A}, \\ \\forall A \\in \\mathcal{A} \\ (f(A) \\in A))',
     relations: {
       prerequisites: ['zfc-axioms'],
       nextTopics: ['zorns-lemma', 'well-ordering-theorem'],
@@ -215,48 +217,6 @@ export const setTheoryConcepts: MathConcept[] = [
     tags: ['초른', 'Zorn', '극대원소', 'maximal'],
   },
   {
-    id: 'continuum-hypothesis',
-    name: {
-      ko: '연속체 가설',
-      en: 'Continuum Hypothesis',
-    },
-    field: 'set-theory',
-    subfield: 'cardinals',
-    difficulty: 5,
-    content: {
-      ko: {
-        definition: 'ℵ₀과 2^ℵ₀ 사이에 다른 기수가 없다는 가설. ZFC와 독립',
-        formulas: [
-          'CH: 2^ℵ₀ = ℵ₁',
-          'GCH: 2^ℵα = ℵα₊₁',
-          '괴델: Con(ZFC) → Con(ZFC+CH)',
-          '코헨: Con(ZFC) → Con(ZFC+¬CH)',
-        ],
-        examples: ['실수 집합의 부분집합 기수'],
-        applications: ['집합론', '기초론', '수학철학'],
-      },
-      en: {
-        definition: 'Hypothesis that no cardinal exists between ℵ₀ and 2^ℵ₀. Independent of ZFC',
-        formulas: [
-          'CH: 2^ℵ₀ = ℵ₁',
-          'GCH: 2^ℵα = ℵα₊₁',
-          'Gödel: Con(ZFC) → Con(ZFC+CH)',
-          'Cohen: Con(ZFC) → Con(ZFC+¬CH)',
-        ],
-        examples: ['Cardinality of subsets of reals'],
-        applications: ['Set theory', 'Foundations', 'Philosophy of math'],
-      },
-    },
-    latex: '2^{\\aleph_0} = \\aleph_1',
-    relations: {
-      prerequisites: ['cardinal-numbers', 'zfc-axioms'],
-      nextTopics: ['forcing', 'large-cardinals'],
-      related: ['godel-incompleteness'],
-      applications: ['set-theory', 'logic'],
-    },
-    tags: ['연속체', 'continuum', 'CH', 'independence'],
-  },
-  {
     id: 'cantors-theorem',
     name: {
       ko: '칸토어 정리',
@@ -286,7 +246,7 @@ export const setTheoryConcepts: MathConcept[] = [
     latex: '|A| < |\\mathcal{P}(A)|',
     relations: {
       prerequisites: ['bijection', 'power-set'],
-      nextTopics: ['cardinal-numbers', 'continuum-hypothesis'],
+      nextTopics: ['cardinal-numbers'],
       related: ['russells-paradox'],
       applications: ['set-theory', 'logic'],
     },
@@ -304,13 +264,19 @@ export const setTheoryConcepts: MathConcept[] = [
     content: {
       ko: {
         definition: '모든 집합은 정렬순서를 가질 수 있다. 선택 공리와 동치',
-        formulas: ['∀A∃≤(A,≤)가 정렬집합)', '정렬: 모든 부분집합이 최소원소 보유'],
+        formulas: [
+          '∀A∃≤ ((A,≤)는 정렬집합)',
+          '정렬: 공집합이 아닌 모든 부분집합이 최소 원소를 가짐',
+        ],
         examples: ['ℕ의 자연스러운 정렬', 'ℝ의 정렬 (비구성적)'],
         applications: ['초한귀납법', '서수 이론', '집합론'],
       },
       en: {
         definition: 'Every set can be well-ordered. Equivalent to Axiom of Choice',
-        formulas: ['∀A∃≤((A,≤) is well-ordered)', 'Well-order: every subset has least element'],
+        formulas: [
+          '∀A∃≤((A,≤) is well-ordered)',
+          'Well-order: every nonempty subset has a least element',
+        ],
         examples: ['Natural ordering of ℕ', 'Well-ordering of ℝ (non-constructive)'],
         applications: ['Transfinite induction', 'Ordinal theory', 'Set theory'],
       },

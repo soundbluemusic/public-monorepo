@@ -20,15 +20,15 @@ export const physicsConcepts: MathConcept[] = [
         formulas: [
           {
             latex: 'v = v_0 + at',
-            description: '속도-시간 관계',
+            description: '일정한 가속도에서의 속도-시간 관계',
           },
           {
             latex: 'x = x_0 + v_0 t + \\frac{1}{2}at^2',
-            description: '위치-시간 관계',
+            description: '일정한 가속도에서의 위치-시간 관계',
           },
           {
             latex: 'v^2 = v_0^2 + 2a(x - x_0)',
-            description: '속도-위치 관계',
+            description: '일정한 가속도에서의 속도-위치 관계',
           },
           {
             latex: 'v = \\frac{dx}{dt}, \\quad a = \\frac{dv}{dt} = \\frac{d^2x}{dt^2}',
@@ -57,15 +57,15 @@ export const physicsConcepts: MathConcept[] = [
         formulas: [
           {
             latex: 'v = v_0 + at',
-            description: 'Velocity-time relation',
+            description: 'Velocity-time relation for constant acceleration',
           },
           {
             latex: 'x = x_0 + v_0 t + \\frac{1}{2}at^2',
-            description: 'Position-time relation',
+            description: 'Position-time relation for constant acceleration',
           },
           {
             latex: 'v^2 = v_0^2 + 2a(x - x_0)',
-            description: 'Velocity-position relation',
+            description: 'Velocity-position relation for constant acceleration',
           },
           {
             latex: 'v = \\frac{dx}{dt}, \\quad a = \\frac{dv}{dt} = \\frac{d^2x}{dt^2}',
@@ -121,11 +121,11 @@ export const physicsConcepts: MathConcept[] = [
           },
           {
             latex: 'u(x,t) = f(x - ct) + g(x + ct)',
-            description: '일반해 (달랑베르)',
+            description: '1차원에서 충분히 매끄러운 일반해 (달랑베르)',
           },
           {
             latex: 'u(x,t) = A\\sin(kx - \\omega t)',
-            description: '정현파 해',
+            description: '정현파 해 (ω² = c²k²)',
           },
         ],
         examples: [
@@ -164,11 +164,11 @@ export const physicsConcepts: MathConcept[] = [
           },
           {
             latex: 'u(x,t) = f(x - ct) + g(x + ct)',
-            description: "General solution (d'Alembert)",
+            description: 'One-dimensional sufficiently smooth general solution (d’Alembert)',
           },
           {
             latex: 'u(x,t) = A\\sin(kx - \\omega t)',
-            description: 'Sinusoidal solution',
+            description: 'Sinusoidal solution (ω² = c²k²)',
           },
         ],
         examples: [

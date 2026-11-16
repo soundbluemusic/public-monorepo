@@ -55,10 +55,11 @@ export const algebraicTopologyConcepts: MathConcept[] = [
     subfield: 'algebraic-topology',
     difficulty: 5,
     content: {
-      ko: '호몰로지의 쌍대 개념으로, 곱 구조(컵곱)를 가집니다. 미분 형식과 드람 코호몰로지와 연결됩니다.',
-      en: 'Dual notion of homology with product structure (cup product). Connected to differential forms and de Rham cohomology.',
+      ko: '호몰로지와 관련된 쌍대 개념이며 계수환에 따라 컵곱을 정의할 수 있습니다. 체 K를 계수로 쓰면 코호몰로지는 같은 체 계수 호몰로지의 쌍대입니다.',
+      en: 'Cohomology is related to the dual of homology and has a cup product for suitable coefficient rings. Over a field K, it is dual to homology with coefficients in K.',
     },
-    latex: 'H^n(X; R) = \\text{Hom}(H_n(X), R), \\quad \\smile: H^p \\times H^q \\to H^{p+q}',
+    latex:
+      'H^n(X;K)\\cong\\operatorname{Hom}_K(H_n(X;K),K),\\quad \\smile:H^p(X;K)\\times H^q(X;K)\\to H^{p+q}(X;K)\\quad(K\\text{ a field})',
     relations: {
       prerequisites: ['homology-group', 'dual-space'],
       nextTopics: ['cup-product', 'de-rham-cohomology'],
@@ -77,10 +78,11 @@ export const algebraicTopologyConcepts: MathConcept[] = [
     subfield: 'algebraic-topology',
     difficulty: 5,
     content: {
-      ko: 'n차원 구의 공간으로의 사상을 호모토피 동치류로 분류한 군입니다. n≥2일 때 아벨 군이 됩니다.',
-      en: 'Groups classifying maps from n-spheres to spaces up to homotopy. Abelian for n≥2.',
+      ko: 'n≥1일 때 기준점을 보존하는 n차원 구에서 공간으로의 사상을 기준점을 보존하는 호모토피로 분류한 군입니다. n≥2일 때 아벨 군이 됩니다.',
+      en: 'For n≥1, groups of based maps from n-spheres to a space, up to based homotopy. They are abelian for n≥2.',
     },
-    latex: '\\pi_n(X, x_0) = [(S^n, s_0), (X, x_0)], \\quad \\pi_n(S^n) \\cong \\mathbb{Z}',
+    latex:
+      '\\pi_n(X, x_0) = [(S^n, s_0), (X, x_0)], \\quad \\pi_n(S^n) \\cong \\mathbb{Z} \\quad (n\\geq 1)',
     relations: {
       prerequisites: ['fundamental-group', 'spheres'],
       nextTopics: ['fibration', 'exact-homotopy-sequence'],
@@ -99,8 +101,8 @@ export const algebraicTopologyConcepts: MathConcept[] = [
     subfield: 'algebraic-topology',
     difficulty: 4,
     content: {
-      ko: '각 점의 균등 피복 근방이 존재하는 연속 전사입니다. 기본군의 부분군과 일대일 대응합니다.',
-      en: 'A continuous surjection with evenly covered neighborhoods at each point. In bijection with subgroups of the fundamental group.',
+      ko: '각 점에 균등 피복 근방이 있는 연속 전사입니다. 경로 연결, 국소 경로 연결, 반국소 단일 연결인 공간에서는 연결된 기준점 있는 피복의 동형류가 기본군의 부분군에 대응합니다. 기준점을 무시하면 부분군의 켤레류에 대응합니다.',
+      en: 'A continuous surjection with evenly covered neighborhoods. For a path-connected, locally path-connected, semilocally simply connected base, based isomorphism classes of connected coverings correspond to subgroups of its fundamental group; unbased classes correspond to conjugacy classes.',
     },
     latex:
       'p: \\tilde{X} \\to X, \\quad p^{-1}(U) = \\bigsqcup_\\alpha V_\\alpha, \\quad p|_{V_\\alpha}: V_\\alpha \\xrightarrow{\\sim} U',
@@ -148,7 +150,7 @@ export const algebraicTopologyConcepts: MathConcept[] = [
       en: 'A topological space built by attaching cells dimension by dimension. Standard approach for handling spaces in algebraic topology.',
     },
     latex:
-      'X = X^0 \\subset X^1 \\subset X^2 \\subset \\cdots, \\quad X^n = X^{n-1} \\cup_\\phi e^n',
+      'X = X^0 \\subset X^1 \\subset X^2 \\subset \\cdots, \\quad X^n = X^{n-1} \\cup_\\phi \\bigsqcup_\\alpha D^n_\\alpha',
     relations: {
       prerequisites: ['topology', 'cell'],
       nextTopics: ['cellular-homology', 'whitehead-theorem'],
@@ -167,11 +169,11 @@ export const algebraicTopologyConcepts: MathConcept[] = [
     subfield: 'algebraic-topology',
     difficulty: 3,
     content: {
-      ko: '공간의 위상적 불변량으로, 베티 수의 교대합입니다. 다면체에서는 V-E+F로 계산됩니다.',
-      en: 'A topological invariant of spaces, alternating sum of Betti numbers. For polyhedra, computed as V-E+F.',
+      ko: '유한 CW 복합체 등에서 정의되는 위상적 불변량으로, 베티 수의 교대합입니다. 다면체의 표면에서는 V-E+F로 계산됩니다.',
+      en: 'A topological invariant defined for spaces such as finite CW complexes, given by the alternating sum of Betti numbers. For a polyhedral surface, it is V-E+F.',
     },
     latex:
-      '\\chi(X) = \\sum_{n=0}^{\\infty} (-1)^n b_n = \\sum_{n=0}^{\\infty} (-1)^n \\dim H_n(X)',
+      '\\chi(X) = \\sum_{n\\geq 0} (-1)^n b_n, \\quad b_n=\\dim_{\\mathbb Q} H_n(X;\\mathbb Q) \\quad (X \\text{ finite CW})',
     relations: {
       prerequisites: ['homology-group', 'betti-numbers'],
       nextTopics: ['gauss-bonnet', 'lefschetz-fixed-point'],

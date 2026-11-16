@@ -168,14 +168,18 @@ export const operationsResearchConcepts: MathConcept[] = [
     content: {
       ko: {
         definition: '복잡한 문제를 하위 문제로 분해하여 순차적으로 최적화',
-        formulas: ["벨만 방정식: V(s) = max_a {r(s,a) + γV(s')}", '최적 부분구조', '중복 부분문제'],
+        formulas: [
+          '결정적 전이 s′=f(s,a), 무한 기간 할인 문제의 예: V(s) = max_a {r(s,a) + γV(s′)}, 0≤γ<1',
+          '최적 부분구조',
+          '중복 부분문제',
+        ],
         examples: ['배낭 문제', '최단 경로', '재고 관리'],
         applications: ['자원 배분', '투자', '로봇공학'],
       },
       en: {
         definition: 'Decomposing complex problems into subproblems for sequential optimization',
         formulas: [
-          "Bellman equation: V(s) = max_a {r(s,a) + γV(s')}",
+          'Example for deterministic transitions s′=f(s,a) and an infinite discounted horizon: V(s) = max_a {r(s,a) + γV(s′)}, 0≤γ<1',
           'Optimal substructure',
           'Overlapping subproblems',
         ],
@@ -204,7 +208,13 @@ export const operationsResearchConcepts: MathConcept[] = [
     content: {
       ko: {
         definition: '재고 보유 비용과 주문 비용을 최소화하는 최적 재고 정책 결정',
-        formulas: ['EOQ: Q* = √(2DK/h)', '재주문점: ROP = d × L', 'ABC 분석', '(s,S) 정책'],
+        formulas: [
+          'EOQ: Q* = √(2DK/h)',
+          '일정한 수요, 즉시 입고, 재고 부족 없음; D: 기간당 수요, K: 주문당 비용, h: 기간당 단위 보유비용',
+          '재주문점: 일정한 수요와 조달 기간, 안전재고가 없을 때 ROP = d × L',
+          'ABC 분석',
+          '(s,S) 정책',
+        ],
         examples: ['제조업 원자재', '소매 재고', '창고 관리'],
         applications: ['공급망', '제조', '소매'],
       },
@@ -212,7 +222,8 @@ export const operationsResearchConcepts: MathConcept[] = [
         definition: 'Determining optimal inventory policies minimizing holding and ordering costs',
         formulas: [
           'EOQ: Q* = √(2DK/h)',
-          'Reorder point: ROP = d × L',
+          'Constant demand, instantaneous replenishment and no shortages; D: demand per period, K: cost per order, h: holding cost per unit per period',
+          'Reorder point with constant demand and lead time, without safety stock: ROP = d × L',
           'ABC analysis',
           '(s,S) policy',
         ],
@@ -262,7 +273,7 @@ export const operationsResearchConcepts: MathConcept[] = [
         applications: ['Manufacturing', 'Computer systems', 'Airlines'],
       },
     },
-    latex: '\\min C_{max} = \\max_j C_j',
+    latex: 'C_{\\max} = \\max_j C_j, \\quad \\min_{\\text{feasible schedules}} C_{\\max}',
     relations: {
       prerequisites: ['graph-theory', 'combinatorial-optimization'],
       nextTopics: ['constraint-programming'],
@@ -285,7 +296,7 @@ export const operationsResearchConcepts: MathConcept[] = [
         definition: '순차적 의사결정을 위한 확률적 모델. 상태, 행동, 보상, 전이확률',
         formulas: [
           '(S, A, P, R, γ)',
-          "벨만 최적 방정식: V*(s) = max_a Σ P(s'|s,a)[R + γV*(s')]",
+          "무한 기간 할인 문제의 벨만 최적 방정식 (유한 상태·행동, 유계 보상, 0≤γ<1): V*(s) = max_a Σ P(s'|s,a)[R(s,a,s') + γV*(s')]",
           '정책: π(s) → a',
         ],
         examples: ['로봇 네비게이션', '게임 AI', '추천 시스템'],
@@ -296,7 +307,7 @@ export const operationsResearchConcepts: MathConcept[] = [
           'Stochastic model for sequential decision making. States, actions, rewards, transitions',
         formulas: [
           '(S, A, P, R, γ)',
-          "Bellman optimality: V*(s) = max_a Σ P(s'|s,a)[R + γV*(s')]",
+          "Bellman optimality for an infinite discounted horizon (finite states and actions, bounded rewards, 0≤γ<1): V*(s) = max_a Σ P(s'|s,a)[R(s,a,s') + γV*(s')]",
           'Policy: π(s) → a',
         ],
         examples: ['Robot navigation', 'Game AI', 'Recommendation systems'],

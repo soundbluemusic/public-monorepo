@@ -16,7 +16,7 @@ export const numberTheoryConcepts: MathConcept[] = [
     content: {
       ko: {
         definition:
-          '소수는 1과 자기 자신만을 약수로 가지는 1보다 큰 자연수입니다. 모든 자연수는 소수의 곱으로 유일하게 표현됩니다.',
+          '소수는 1과 자기 자신만을 약수로 가지는 1보다 큰 자연수입니다. 1보다 큰 모든 자연수는 소수들의 곱으로 표현되며, 곱하는 순서를 제외하면 그 표현은 유일합니다.',
         formulas: [
           {
             latex: '\\pi(x) \\sim \\frac{x}{\\ln x}',
@@ -48,7 +48,7 @@ export const numberTheoryConcepts: MathConcept[] = [
       },
       en: {
         definition:
-          'A prime number is a natural number greater than 1 that has no positive divisors other than 1 and itself. Every natural number can be uniquely expressed as a product of primes.',
+          'A prime number is a natural number greater than 1 that has no positive divisors other than 1 and itself. Every natural number greater than 1 can be expressed as a product of primes, uniquely up to their order.',
         formulas: [
           {
             latex: '\\pi(x) \\sim \\frac{x}{\\ln x}',
@@ -98,15 +98,15 @@ export const numberTheoryConcepts: MathConcept[] = [
     content: {
       ko: {
         definition:
-          '최대공약수(GCD)는 두 수의 공통 약수 중 가장 큰 것이고, 최소공배수(LCM)는 공통 배수 중 가장 작은 것입니다.',
+          '정수 a, b가 동시에 0이 아닐 때 최대공약수는 공통 약수 중 가장 큰 양의 정수입니다. 두 수가 모두 0이 아니면 최소공배수는 가장 작은 양의 공통 배수이며, 한 수가 0이면 최소공배수를 0으로 정합니다.',
         formulas: [
           {
-            latex: '\\gcd(a, b) \\times \\text{lcm}(a, b) = a \\times b',
+            latex: '\\gcd(a, b) \\times \\text{lcm}(a, b) = |a b|',
             description: 'GCD와 LCM의 관계',
           },
           {
             latex: '\\gcd(a, b) = \\gcd(b, a \\mod b)',
-            description: '유클리드 호제법',
+            description: '유클리드 호제법 (b ≠ 0)',
           },
         ],
         examples: [
@@ -132,15 +132,15 @@ export const numberTheoryConcepts: MathConcept[] = [
       },
       en: {
         definition:
-          'GCD (Greatest Common Divisor) is the largest common divisor of two numbers. LCM (Least Common Multiple) is the smallest common multiple.',
+          'For integers a and b not both zero, the GCD is their greatest positive common divisor. If both are nonzero, the LCM is their least positive common multiple; if either is zero, the LCM is defined as zero.',
         formulas: [
           {
-            latex: '\\gcd(a, b) \\times \\text{lcm}(a, b) = a \\times b',
+            latex: '\\gcd(a, b) \\times \\text{lcm}(a, b) = |a b|',
             description: 'Relationship between GCD and LCM',
           },
           {
             latex: '\\gcd(a, b) = \\gcd(b, a \\mod b)',
-            description: 'Euclidean algorithm',
+            description: 'Euclidean algorithm (b ≠ 0)',
           },
         ],
         examples: [
@@ -274,7 +274,7 @@ export const numberTheoryConcepts: MathConcept[] = [
           },
           {
             latex: 'F_n = \\frac{\\phi^n - \\psi^n}{\\sqrt{5}}',
-            description: '비네 공식 (φ = 황금비)',
+            description: '비네 공식 (φ = (1+√5)/2, ψ = (1−√5)/2)',
           },
           {
             latex: '\\lim_{n \\to \\infty} \\frac{F_{n+1}}{F_n} = \\phi = \\frac{1+\\sqrt{5}}{2}',
@@ -293,7 +293,7 @@ export const numberTheoryConcepts: MathConcept[] = [
           background: '피보나치가 토끼 번식 문제를 설명하면서 이 수열을 소개했습니다.',
         },
         applications: [
-          { field: '자연', description: '해바라기 씨앗 배열, 조개껍질 나선' },
+          { field: '자연', description: '일부 해바라기 씨앗의 나선 배열' },
           { field: '금융', description: '피보나치 되돌림' },
           { field: '알고리즘', description: '피보나치 힙, 동적 프로그래밍 예제' },
         ],
@@ -308,7 +308,7 @@ export const numberTheoryConcepts: MathConcept[] = [
           },
           {
             latex: 'F_n = \\frac{\\phi^n - \\psi^n}{\\sqrt{5}}',
-            description: "Binet's formula (φ = golden ratio)",
+            description: "Binet's formula (φ = (1+√5)/2, ψ = (1−√5)/2)",
           },
           {
             latex: '\\lim_{n \\to \\infty} \\frac{F_{n+1}}{F_n} = \\phi = \\frac{1+\\sqrt{5}}{2}',
@@ -327,7 +327,7 @@ export const numberTheoryConcepts: MathConcept[] = [
           background: 'Fibonacci introduced this sequence while explaining rabbit breeding.',
         },
         applications: [
-          { field: 'Nature', description: 'Sunflower seeds, shell spirals' },
+          { field: 'Nature', description: 'Spiral arrangements in some sunflower seed heads' },
           { field: 'Finance', description: 'Fibonacci retracement' },
           { field: 'Algorithms', description: 'Fibonacci heap, DP example' },
         ],
@@ -364,7 +364,7 @@ export const numberTheoryConcepts: MathConcept[] = [
           },
           {
             latex: 'x^n + y^n = z^n',
-            description: '페르마의 마지막 정리 (n≥3일 때 정수해 없음)',
+            description: '페르마의 마지막 정리: 정수 n ≥ 3일 때 양의 정수 해가 없음',
           },
         ],
         examples: [
@@ -398,7 +398,7 @@ export const numberTheoryConcepts: MathConcept[] = [
           },
           {
             latex: 'x^n + y^n = z^n',
-            description: "Fermat's Last Theorem (no integer solutions for n≥3)",
+            description: "Fermat's Last Theorem: no positive integer solutions for integer n ≥ 3",
           },
         ],
         examples: [
@@ -522,7 +522,7 @@ export const numberTheoryConcepts: MathConcept[] = [
     content: {
       ko: {
         definition:
-          '서로소인 법들에 대한 연립 합동식은 유일한 해를 가집니다. 큰 수의 계산을 작은 계산으로 분해할 수 있게 합니다.',
+          '법들이 양의 정수이고 서로 쌍마다 서로소이면 연립 합동식의 해는 존재하며, 법들의 곱을 기준으로 유일합니다.',
         formulas: [
           {
             latex: 'x \\equiv a_1 \\pmod{n_1}, \\ldots, x \\equiv a_k \\pmod{n_k}',
@@ -553,7 +553,7 @@ export const numberTheoryConcepts: MathConcept[] = [
       },
       en: {
         definition:
-          'A system of congruences with pairwise coprime moduli has a unique solution. It allows decomposing large computations into smaller ones.',
+          'For pairwise coprime positive moduli, the system has a solution unique modulo the product of the moduli.',
         formulas: [
           {
             latex: 'x \\equiv a_1 \\pmod{n_1}, \\ldots, x \\equiv a_k \\pmod{n_k}',
@@ -705,11 +705,11 @@ export const numberTheoryConcepts: MathConcept[] = [
     content: {
       ko: {
         definition:
-          '정수 a가 mod n에서 이차 잉여라는 것은 x² ≡ a (mod n)을 만족하는 x가 존재한다는 것입니다.',
+          '양의 정수 n에 대해 x² ≡ a (mod n)을 만족하는 정수 x가 있으면 a는 제곱 잉여입니다. 여기서는 0도 포함합니다. 아래 르장드르 기호와 오일러 판정법에서 p는 홀수 소수입니다.',
         formulas: [
           {
             latex:
-              '\\left(\\frac{a}{p}\\right) = \\begin{cases} 1 & \\text{이차 잉여} \\\\ -1 & \\text{이차 비잉여} \\\\ 0 & p|a \\end{cases}',
+              '\\left(\\frac{a}{p}\\right) = \\begin{cases} 1 & \\text{이차 잉여이고 } p\\nmid a \\\\ -1 & \\text{이차 비잉여} \\\\ 0 & p|a \\end{cases}',
             description: '르장드르 기호',
           },
           {
@@ -724,7 +724,7 @@ export const numberTheoryConcepts: MathConcept[] = [
         examples: [
           {
             problem: 'mod 7에서 이차 잉여를 모두 찾으세요.',
-            solution: '1² ≡ 1, 2² ≡ 4, 3² ≡ 2, 4² ≡ 2, 5² ≡ 4, 6² ≡ 1. 이차 잉여: {1, 2, 4}',
+            solution: '0² ≡ 0, 1² ≡ 1, 2² ≡ 4, 3² ≡ 2. 제곱 잉여: {0, 1, 2, 4}',
           },
           {
             problem: '3이 mod 11에서 이차 잉여인지 판별하세요.',
@@ -739,11 +739,11 @@ export const numberTheoryConcepts: MathConcept[] = [
       },
       en: {
         definition:
-          'An integer a is a quadratic residue mod n if there exists x such that x² ≡ a (mod n).',
+          'For a positive integer n, a is a square residue mod n if some integer x satisfies x² ≡ a (mod n). Here zero is included. In the Legendre symbol and Euler criterion below, p is an odd prime.',
         formulas: [
           {
             latex:
-              '\\left(\\frac{a}{p}\\right) = \\begin{cases} 1 & \\text{QR} \\\\ -1 & \\text{QNR} \\\\ 0 & p|a \\end{cases}',
+              '\\left(\\frac{a}{p}\\right) = \\begin{cases} 1 & \\text{QR and } p\\nmid a \\\\ -1 & \\text{QNR} \\\\ 0 & p|a \\end{cases}',
             description: 'Legendre symbol',
           },
           {
@@ -758,7 +758,7 @@ export const numberTheoryConcepts: MathConcept[] = [
         examples: [
           {
             problem: 'Find all quadratic residues mod 7.',
-            solution: '1² ≡ 1, 2² ≡ 4, 3² ≡ 2, 4² ≡ 2, 5² ≡ 4, 6² ≡ 1. QRs: {1, 2, 4}',
+            solution: '0² ≡ 0, 1² ≡ 1, 2² ≡ 4, 3² ≡ 2. Square residues: {0, 1, 2, 4}',
           },
           {
             problem: 'Is 3 a quadratic residue mod 11?',

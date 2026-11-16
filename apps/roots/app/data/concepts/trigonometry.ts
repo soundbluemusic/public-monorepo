@@ -242,7 +242,8 @@ export const trigonometryConcepts: MathConcept[] = [
     difficulty: 2,
     content: {
       ko: {
-        definition: '라디안은 호의 길이가 반지름과 같을 때의 중심각입니다. 360° = 2π 라디안입니다.',
+        definition:
+          '라디안은 각도의 단위입니다. 호의 길이가 반지름과 같은 중심각은 1라디안이며, 360° = 2π 라디안입니다.',
         formulas: [
           {
             latex: '\\theta_{\\text{rad}} = \\frac{\\pi}{180} \\times \\theta_{\\text{deg}}',
@@ -270,7 +271,7 @@ export const trigonometryConcepts: MathConcept[] = [
       },
       en: {
         definition:
-          'A radian is the angle where the arc length equals the radius. 360° = 2π radians.',
+          'The radian is a unit of angle. One radian is the central angle subtended by an arc whose length equals the radius. 360° = 2π radians.',
         formulas: [
           {
             latex: '\\theta_{\\text{rad}} = \\frac{\\pi}{180} \\times \\theta_{\\text{deg}}',

@@ -16,15 +16,15 @@ export const computerScienceConcepts: MathConcept[] = [
     content: {
       ko: {
         definition:
-          'Big-O 표기법은 알고리즘의 시간/공간 복잡도를 입력 크기에 따른 증가율로 표현합니다. 최악의 경우를 나타냅니다.',
+          'Big-O 표기법은 입력 크기가 커질 때 함수의 증가율에 대한 상한을 나타냅니다. 최악이나 평균 실행 시간 등 여러 경우에 쓸 수 있습니다.',
         formulas: [
           {
-            latex: 'O(1) < O(\\log n) < O(n) < O(n\\log n) < O(n^2) < O(2^n) < O(n!)',
-            description: '복잡도 순서',
+            latex: '1\\prec\\log n\\prec n\\prec n\\log n\\prec n^2\\prec 2^n\\prec n!',
+            description: '증가율 비교: f ≺ g는 f(n)/g(n) → 0을 뜻함',
           },
           {
             latex:
-              'f(n) = O(g(n)) \\Leftrightarrow \\exists c, n_0: f(n) \\leq c \\cdot g(n), \\forall n > n_0',
+              'f(n)=O(g(n))\\iff\\exists c>0,\\ n_0:\\ |f(n)|\\le c|g(n)|\\quad\\forall n\\ge n_0',
             description: 'Big-O 정의',
           },
         ],
@@ -46,15 +46,15 @@ export const computerScienceConcepts: MathConcept[] = [
       },
       en: {
         definition:
-          'Big-O notation expresses algorithm complexity as growth rate relative to input size. Represents worst case.',
+          'Big-O notation describes an asymptotic upper bound on growth. It can describe worst-case, average-case, or other quantities.',
         formulas: [
           {
-            latex: 'O(1) < O(\\log n) < O(n) < O(n\\log n) < O(n^2) < O(2^n) < O(n!)',
-            description: 'Complexity order',
+            latex: '1\\prec\\log n\\prec n\\prec n\\log n\\prec n^2\\prec 2^n\\prec n!',
+            description: 'Growth comparison: f ≺ g means f(n)/g(n) → 0',
           },
           {
             latex:
-              'f(n) = O(g(n)) \\Leftrightarrow \\exists c, n_0: f(n) \\leq c \\cdot g(n), \\forall n > n_0',
+              'f(n)=O(g(n))\\iff\\exists c>0,\\ n_0:\\ |f(n)|\\le c|g(n)|\\quad\\forall n\\ge n_0',
             description: 'Big-O definition',
           },
         ],
@@ -101,7 +101,7 @@ export const computerScienceConcepts: MathConcept[] = [
             description: '이진수를 십진수로 변환',
           },
           {
-            latex: '1 \\text{ byte} = 8 \\text{ bits} = 2^8 = 256 \\text{ values}',
+            latex: '1 \\text{ byte} = 8 \\text{ bits},\\quad 2^8 = 256 \\text{ bit patterns}',
             description: '바이트와 비트',
           },
           {
@@ -134,7 +134,7 @@ export const computerScienceConcepts: MathConcept[] = [
             description: 'Binary to decimal conversion',
           },
           {
-            latex: '1 \\text{ byte} = 8 \\text{ bits} = 2^8 = 256 \\text{ values}',
+            latex: '1 \\text{ byte} = 8 \\text{ bits},\\quad 2^8 = 256 \\text{ bit patterns}',
             description: 'Bytes and bits',
           },
           {
@@ -202,7 +202,8 @@ export const computerScienceConcepts: MathConcept[] = [
           },
           {
             problem: '2배 확대 후 (5,3) 이동하는 행렬은?',
-            solution: 'Scale(2) × Translate(5,3) 순서로 행렬 곱',
+            solution:
+              '열벡터에 오른쪽부터 적용하므로 Translate(5,3) × Scale(2)입니다. 원점은 (5,3)으로 이동합니다.',
           },
         ],
         applications: [
@@ -237,7 +238,8 @@ export const computerScienceConcepts: MathConcept[] = [
           },
           {
             problem: 'Matrix for 2× scale then translate (5,3)?',
-            solution: 'Scale(2) × Translate(5,3) matrix multiplication',
+            solution:
+              'With column vectors, transformations act right to left: Translate(5,3) × Scale(2). The origin maps to (5,3).',
           },
         ],
         applications: [
@@ -278,7 +280,7 @@ export const computerScienceConcepts: MathConcept[] = [
           },
           {
             latex: 'C = B \\log_2(1 + \\frac{S}{N})',
-            description: '샤논-하틀리 정리 (채널 용량)',
+            description: '샤논-하틀리 정리 (대역폭 B인 가우스 잡음 채널의 용량, S와 N은 평균 전력)',
           },
         ],
         examples: [
@@ -316,7 +318,8 @@ export const computerScienceConcepts: MathConcept[] = [
           },
           {
             latex: 'C = B \\log_2(1 + \\frac{S}{N})',
-            description: 'Shannon-Hartley theorem (channel capacity)',
+            description:
+              'Shannon-Hartley theorem (capacity of a bandwidth-B Gaussian noise channel; S and N are average powers)',
           },
         ],
         examples: [
@@ -464,8 +467,8 @@ export const computerScienceConcepts: MathConcept[] = [
             description: '곱셈 해시 (A는 상수)',
           },
           {
-            latex: 'P(\\text{충돌}) \\approx \\frac{n^2}{2m}',
-            description: '생일 역설 (n개 항목, m개 슬롯)',
+            latex: 'P(\\text{collision}) \\approx \\frac{n(n-1)}{2m}',
+            description: '각 항목이 m개 슬롯에 독립적이고 균등하게 배정되며 충돌 확률이 작을 때',
           },
         ],
         examples: [
@@ -497,8 +500,9 @@ export const computerScienceConcepts: MathConcept[] = [
             description: 'Multiplication hash (constant A)',
           },
           {
-            latex: 'P(\\text{collision}) \\approx \\frac{n^2}{2m}',
-            description: 'Birthday paradox (n items, m slots)',
+            latex: 'P(\\text{collision}) \\approx \\frac{n(n-1)}{2m}',
+            description:
+              'For independent uniform assignments to m slots when collision probability is small',
           },
         ],
         examples: [

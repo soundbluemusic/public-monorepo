@@ -11,8 +11,8 @@ export const logicAdvancedConcepts: MathConcept[] = [
     subfield: 'mathematical-logic',
     difficulty: 5,
     content: {
-      ko: '충분히 강력한 형식 체계는 참이지만 증명할 수 없는 명제를 포함하며(제1정리), 자신의 무모순성을 증명할 수 없습니다(제2정리).',
-      en: 'Sufficiently powerful formal systems contain true but unprovable statements (first theorem) and cannot prove their own consistency (second theorem).',
+      ko: '무모순이고 효과적으로 공리화되며 페아노 산술을 포함하는 형식 체계 T에는 T에서 증명도 반증도 할 수 없는 명제가 있습니다(제1정리). T는 표준적으로 표현한 자신의 무모순성도 T 안에서 증명할 수 없습니다(제2정리).',
+      en: 'For a consistent, effectively axiomatized formal theory T containing Peano arithmetic, some statement is neither provable nor refutable in T (first theorem). T also cannot prove its own standard consistency statement (second theorem).',
     },
     latex:
       '\\text{Con}(T) \\Rightarrow \\exists \\varphi: T \\nvdash \\varphi \\land T \\nvdash \\neg\\varphi',
@@ -34,10 +34,11 @@ export const logicAdvancedConcepts: MathConcept[] = [
     subfield: 'mathematical-logic',
     difficulty: 5,
     content: {
-      ko: '형식 언어와 그것이 해석되는 수학적 구조(모델) 사이의 관계를 연구합니다. 완전성, 콤팩트성, 뢰벤하임-스콜렘 정리가 핵심입니다.',
-      en: 'Studies the relationship between formal languages and mathematical structures (models) interpreting them. Completeness, compactness, and Löwenheim-Skolem are key results.',
+      ko: '형식 언어와 그것이 해석되는 수학적 구조(모델) 사이의 관계를 연구합니다. 일차 논리에서는 완전성, 콤팩트성, 뢰벤하임-스콜렘 정리가 핵심입니다.',
+      en: 'Studies the relationship between formal languages and the mathematical structures (models) interpreting them. For first-order logic, completeness, compactness, and Löwenheim-Skolem are key results.',
     },
-    latex: 'T \\models \\varphi \\Leftrightarrow T \\vdash \\varphi \\quad \\text{(Completeness)}',
+    latex:
+      'T \\models \\varphi \\Leftrightarrow T \\vdash \\varphi \\quad \\text{(first-order completeness)}',
     relations: {
       prerequisites: ['first-order-logic', 'set-theory'],
       nextTopics: ['stability-theory', 'categoricity'],
@@ -147,14 +148,14 @@ export const logicAdvancedConcepts: MathConcept[] = [
     subfield: 'set-theory',
     difficulty: 5,
     content: {
-      ko: '집합론의 독립성 증명에 사용되는 기법입니다. 코헨이 연속체 가설의 독립성을 증명하는 데 사용했습니다.',
-      en: 'A technique used to prove independence results in set theory. Used by Cohen to prove the independence of the continuum hypothesis.',
+      ko: '집합론의 독립성 증명에 사용되는 기법으로, 폴 코헨이 도입했습니다.',
+      en: 'A technique introduced by Paul Cohen to prove independence results in set theory.',
     },
     latex: 'p \\Vdash \\varphi \\quad \\text{(p forces } \\varphi\\text{)}',
     relations: {
       prerequisites: ['set-theory', 'model-theory'],
       nextTopics: ['iterated-forcing', 'proper-forcing'],
-      related: ['continuum-hypothesis', 'independence-proofs'],
+      related: ['independence-proofs'],
       applications: ['foundations-of-mathematics', 'infinite-combinatorics'],
     },
     tags: ['logic', 'set-theory', 'forcing'],

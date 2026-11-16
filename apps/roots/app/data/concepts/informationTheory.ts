@@ -12,9 +12,10 @@ export const informationTheoryConcepts: MathConcept[] = [
     difficulty: 3,
     content: {
       ko: {
-        definition: '확률변수의 불확실성을 측정하는 정보량. 정보이론의 기본 개념',
+        definition:
+          '유한한 값을 갖는 이산 확률변수의 불확실성을 나타내는 정보량. 밑이 2인 로그를 쓰면 단위는 비트입니다.',
         formulas: [
-          'H(X) = -Σ p(x) log₂ p(x)',
+          'H(X) = -Σ p(x) log₂ p(x) (0 log₂ 0 = 0)',
           'H(X) ≥ 0',
           '최대: H = log₂ n (균등분포)',
           '결합 엔트로피: H(X,Y)',
@@ -24,9 +25,9 @@ export const informationTheoryConcepts: MathConcept[] = [
       },
       en: {
         definition:
-          'Measure of uncertainty of random variable. Fundamental concept of information theory',
+          'A measure of uncertainty of a finite discrete random variable. With base-2 logarithms it is measured in bits.',
         formulas: [
-          'H(X) = -Σ p(x) log₂ p(x)',
+          'H(X) = -Σ p(x) log₂ p(x) (0 log₂ 0 = 0)',
           'H(X) ≥ 0',
           'Maximum: H = log₂ n (uniform)',
           'Joint entropy: H(X,Y)',
@@ -55,24 +56,28 @@ export const informationTheoryConcepts: MathConcept[] = [
     difficulty: 4,
     content: {
       ko: {
-        definition: '두 확률변수가 공유하는 정보량. 한 변수가 다른 변수에 대해 제공하는 정보',
+        definition:
+          '두 확률변수가 공유하는 정보량. 아래 식은 유한한 값을 갖는 이산 확률변수에 대해 비트 단위로 표시합니다.',
         formulas: [
           'I(X;Y) = H(X) + H(Y) - H(X,Y)',
           'I(X;Y) = H(X) - H(X|Y)',
-          'I(X;Y) = Σ p(x,y) log(p(x,y)/(p(x)p(y)))',
+          'I(X;Y) = Σ p(x,y) log₂(p(x,y)/(p(x)p(y))) (p(x,y) > 0)',
         ],
-        examples: ['독립이면 I(X;Y) = 0', '결정적 관계면 I(X;Y) = H(X)'],
+        examples: ['독립이면 I(X;Y) = 0', 'X가 Y로 결정되면 H(X|Y) = 0이므로 I(X;Y) = H(X)'],
         applications: ['특징 선택', '채널 용량', '인과 추론'],
       },
       en: {
         definition:
-          'Information shared between two random variables. Information one provides about the other',
+          'Information shared between two random variables. The formulas below use bits for finite discrete variables.',
         formulas: [
           'I(X;Y) = H(X) + H(Y) - H(X,Y)',
           'I(X;Y) = H(X) - H(X|Y)',
-          'I(X;Y) = Σ p(x,y) log(p(x,y)/(p(x)p(y)))',
+          'I(X;Y) = Σ p(x,y) log₂(p(x,y)/(p(x)p(y))) (p(x,y) > 0)',
         ],
-        examples: ['Independent: I(X;Y) = 0', 'Deterministic: I(X;Y) = H(X)'],
+        examples: [
+          'Independent: I(X;Y) = 0',
+          'If X is determined by Y, H(X|Y) = 0 and I(X;Y) = H(X)',
+        ],
         applications: ['Feature selection', 'Channel capacity', 'Causal inference'],
       },
     },
@@ -98,10 +103,10 @@ export const informationTheoryConcepts: MathConcept[] = [
       ko: {
         definition: '잡음 채널을 통해 신뢰성 있게 전송 가능한 최대 정보량',
         formulas: [
-          'C = max_{p(x)} I(X;Y)',
-          '섀넌 정리: R < C면 오류 0 가능',
-          'BSC: C = 1 - H(p)',
-          'AWGN: C = ½log(1 + S/N)',
+          '유한 이산 무기억 채널: C = max_{p(x)} I(X;Y)',
+          '섀넌 정리: 유한 이산 무기억 채널에서 R < C이면 긴 부호를 사용해 오류 확률을 임의로 작게 할 수 있음',
+          '이진 대칭 채널: C = 1 - H₂(p) (사용당 비트)',
+          '실수 가우스 잡음 채널, 평균 전력 제한: C = ½log₂(1 + S/N) (사용당 비트)',
         ],
         examples: ['이진 대칭 채널', '소거 채널', '가우시안 채널'],
         applications: ['통신 시스템', '데이터 저장', '네트워크'],
@@ -109,10 +114,10 @@ export const informationTheoryConcepts: MathConcept[] = [
       en: {
         definition: 'Maximum information rate reliably transmittable through noisy channel',
         formulas: [
-          'C = max_{p(x)} I(X;Y)',
-          'Shannon theorem: R < C allows error-free',
-          'BSC: C = 1 - H(p)',
-          'AWGN: C = ½log(1 + S/N)',
+          'Finite discrete memoryless channel: C = max_{p(x)} I(X;Y)',
+          'Shannon theorem: for a finite discrete memoryless channel and R < C, sufficiently long codes make error probability arbitrarily small',
+          'BSC: C = 1 - H₂(p) (bits per use)',
+          'Real AWGN, average power constraint: C = ½log₂(1 + S/N) (bits per use)',
         ],
         examples: ['Binary symmetric channel', 'Erasure channel', 'Gaussian channel'],
         applications: ['Communication systems', 'Data storage', 'Networks'],
@@ -138,21 +143,23 @@ export const informationTheoryConcepts: MathConcept[] = [
     difficulty: 4,
     content: {
       ko: {
-        definition: '두 확률분포 사이의 차이를 측정하는 비대칭적 척도',
+        definition:
+          '두 확률분포 사이의 차이를 측정하는 비대칭적 척도. 아래 합은 유한 이산 분포에 대한 식입니다.',
         formulas: [
-          'D_KL(P||Q) = Σ P(x) log(P(x)/Q(x))',
+          'D_KL(P||Q) = Σ P(x) log(P(x)/Q(x)) (P(x) > 0; Q(x)=0이면 +∞)',
           'D_KL ≥ 0, = 0 iff P = Q',
-          '비대칭: D_KL(P||Q) ≠ D_KL(Q||P)',
+          '일반적으로 비대칭: D_KL(P||Q)와 D_KL(Q||P)는 다를 수 있음',
         ],
         examples: ['가우시안 간 KL', 'VAE 손실 함수'],
         applications: ['기계학습', '통계적 추론', '변분 추론'],
       },
       en: {
-        definition: 'Asymmetric measure of difference between two probability distributions',
+        definition:
+          'An asymmetric measure of difference between probability distributions. The sum below is for finite discrete distributions.',
         formulas: [
-          'D_KL(P||Q) = Σ P(x) log(P(x)/Q(x))',
+          'D_KL(P||Q) = Σ P(x) log(P(x)/Q(x)) (P(x) > 0; +∞ if Q(x)=0)',
           'D_KL ≥ 0, = 0 iff P = Q',
-          'Asymmetric: D_KL(P||Q) ≠ D_KL(Q||P)',
+          'Generally asymmetric: D_KL(P||Q) and D_KL(Q||P) can differ',
         ],
         examples: ['KL between Gaussians', 'VAE loss function'],
         applications: ['Machine learning', 'Statistical inference', 'Variational inference'],
@@ -178,27 +185,30 @@ export const informationTheoryConcepts: MathConcept[] = [
     difficulty: 4,
     content: {
       ko: {
-        definition: '무손실 압축의 이론적 한계. 평균 코드 길이는 엔트로피 이상',
+        definition:
+          '유한한 이산 정보원의 단일 기호에 대한 최적 이진 접두 부호의 평균 길이는 엔트로피 이상이고 엔트로피보다 1비트 미만 더 깁니다.',
         formulas: [
-          'H(X) ≤ L̄ < H(X) + 1',
+          '최적 이진 접두 부호: H(X) ≤ L̄ < H(X) + 1',
           '크래프트 부등식: Σ 2^{-lᵢ} ≤ 1',
-          '최적 코드 길이: lᵢ ≈ -log₂ p(xᵢ)',
+          '섀넌 부호의 길이: lᵢ = ⌈-log₂ p(xᵢ)⌉ (p(xᵢ) > 0)',
         ],
         examples: ['허프만 코드', '산술 코드', 'Lempel-Ziv'],
         applications: ['ZIP 압축', '이미지/비디오 압축', '통신'],
       },
       en: {
-        definition: 'Theoretical limit of lossless compression. Average code length ≥ entropy',
+        definition:
+          'For a finite discrete source, the optimal binary prefix code for individual symbols has an average length at least the entropy and less than one bit above it.',
         formulas: [
-          'H(X) ≤ L̄ < H(X) + 1',
+          'Optimal binary prefix code: H(X) ≤ L̄ < H(X) + 1',
           'Kraft inequality: Σ 2^{-lᵢ} ≤ 1',
-          'Optimal code length: lᵢ ≈ -log₂ p(xᵢ)',
+          'Shannon code lengths: lᵢ = ⌈-log₂ p(xᵢ)⌉ (p(xᵢ) > 0)',
         ],
         examples: ['Huffman code', 'Arithmetic coding', 'Lempel-Ziv'],
         applications: ['ZIP compression', 'Image/video compression', 'Communication'],
       },
     },
-    latex: 'H(X) \\leq \\bar{L} < H(X) + 1',
+    latex:
+      'H(X) \\leq \\bar{L}_{\\mathrm{opt}} < H(X) + 1 \\quad (\\text{finite source, binary prefix code})',
     relations: {
       prerequisites: ['shannon-entropy', 'coding-theory'],
       nextTopics: ['huffman-coding', 'arithmetic-coding'],
@@ -261,22 +271,26 @@ export const informationTheoryConcepts: MathConcept[] = [
     content: {
       ko: {
         definition: '허용 가능한 왜곡 수준에서 필요한 최소 전송률',
-        formulas: ['R(D) = min_{p(x̂|x):E[d(X,X̂)]≤D} I(X;X̂)', 'D: 왜곡 측도', 'R(0) = H(X)'],
+        formulas: [
+          'R(D) = inf_{p(x̂|x):E[d(X,X̂)]≤D} I(X;X̂)',
+          'D: 허용 평균 왜곡, d: 왜곡 함수',
+          '유한 이산 소스와 해밍 왜곡에서 R(0) = H(X)',
+        ],
         examples: ['가우시안 소스', '이미지 압축', '비디오 코딩'],
         applications: ['손실 압축', '스트리밍', '이미지/비디오 코덱'],
       },
       en: {
         definition: 'Minimum rate required for given acceptable distortion level',
         formulas: [
-          'R(D) = min_{p(x̂|x):E[d(X,X̂)]≤D} I(X;X̂)',
-          'D: distortion measure',
-          'R(0) = H(X)',
+          'R(D) = inf_{p(x̂|x):E[d(X,X̂)]≤D} I(X;X̂)',
+          'D: allowed average distortion; d: distortion function',
+          'R(0) = H(X) for a finite discrete source with Hamming distortion',
         ],
         examples: ['Gaussian source', 'Image compression', 'Video coding'],
         applications: ['Lossy compression', 'Streaming', 'Image/video codecs'],
       },
     },
-    latex: 'R(D) = \\min_{p(\\hat{x}|x)} I(X;\\hat{X})',
+    latex: 'R(D) = \\inf_{p(\\hat{x}|x):\\,\\mathbb{E}[d(X,\\hat{X})] \\le D} I(X;\\hat{X})',
     relations: {
       prerequisites: ['mutual-information', 'source-coding-theorem'],
       nextTopics: ['quantization'],

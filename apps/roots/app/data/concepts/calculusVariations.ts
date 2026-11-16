@@ -82,9 +82,10 @@ export const calculusVariationsConcepts: MathConcept[] = [
     difficulty: 4,
     content: {
       ko: {
-        definition: '중력장에서 두 점 사이를 가장 빠르게 이동하는 곡선을 찾는 문제',
+        definition:
+          '균일한 중력장에서 정지 상태로 출발하는 입자가 마찰 없이 내려갈 때 두 점 사이의 이동 시간이 가장 짧은 곡선을 찾는 문제',
         formulas: [
-          "T = ∫ds/v = ∫√(1+y'²)/√(2gy) dx",
+          "y를 출발점에서 아래쪽으로 잰 높이로 두면 T = ∫ds/v = ∫√(1+y'²)/√(2gy) dx",
           '해: 사이클로이드',
           'x = a(θ - sinθ), y = a(1 - cosθ)',
         ],
@@ -92,9 +93,10 @@ export const calculusVariationsConcepts: MathConcept[] = [
         applications: ['물리학', '최적화', '역사적 중요성'],
       },
       en: {
-        definition: 'Finding curve of fastest descent between two points in gravitational field',
+        definition:
+          'Finding the curve of fastest descent between two points for a particle starting from rest, without friction, in a uniform gravitational field',
         formulas: [
-          "T = ∫ds/v = ∫√(1+y'²)/√(2gy) dx",
+          "With y measured downward from the start: T = ∫ds/v = ∫√(1+y'²)/√(2gy) dx",
           'Solution: cycloid',
           'x = a(θ - sinθ), y = a(1 - cosθ)',
         ],
@@ -201,7 +203,11 @@ export const calculusVariationsConcepts: MathConcept[] = [
     content: {
       ko: {
         definition: '범함수의 극값 존재를 함수공간의 컴팩트성과 하반연속성으로 증명',
-        formulas: ['J: X → ℝ 하반연속, 강제적', 'inf J 달성됨', '약수렴 + 하반연속성'],
+        formulas: [
+          'X: 반사 바나흐 공간, C ⊆ X: 공집합이 아닌 약하게 닫힌 집합',
+          'J: C → ℝ가 강제적이고 약하게 하반연속이면 C에서 최솟값을 가짐',
+          '최소화 수열의 약수렴 부분수열과 약한 하반연속성 이용',
+        ],
         examples: ['디리클레 원리', '탄성 에너지 최소화', 'PDE 약해 존재'],
         applications: ['편미분방정식', '탄성이론', '기하학'],
       },
@@ -209,15 +215,15 @@ export const calculusVariationsConcepts: MathConcept[] = [
         definition:
           'Proving existence of extrema using compactness and lower semicontinuity in function spaces',
         formulas: [
-          'J: X → ℝ lower semicontinuous, coercive',
-          'inf J attained',
-          'Weak convergence + lower semicontinuity',
+          'X: reflexive Banach space; C ⊆ X: nonempty weakly closed set',
+          'A coercive, weakly lower semicontinuous J: C → ℝ attains its minimum on C',
+          'Use a weakly convergent subsequence and weak lower semicontinuity',
         ],
         examples: ['Dirichlet principle', 'Elastic energy minimization', 'PDE weak solutions'],
         applications: ['PDEs', 'Elasticity theory', 'Geometry'],
       },
     },
-    latex: '\\inf_X J \\text{ is attained}',
+    latex: '\\inf_{x \\in C} J(x) = J(x_0), \\quad x_0 \\in C',
     relations: {
       prerequisites: ['weak-convergence', 'functional-analysis'],
       nextTopics: ['gamma-convergence'],
@@ -237,14 +243,15 @@ export const calculusVariationsConcepts: MathConcept[] = [
     difficulty: 3,
     content: {
       ko: {
-        definition: '빛은 두 점 사이를 최소 시간 경로로 이동. 광학의 변분 원리',
+        definition:
+          '빛의 경로는 인접한 경로와 비교할 때 이동 시간의 변화가 0인 정지 경로입니다. 이 시간이 항상 최소인 것은 아닙니다.',
         formulas: ['δT = δ∫ds/v = 0', 'n = c/v', '광학 경로 길이: ∫n ds'],
         examples: ['반사 법칙', '굴절 법칙 (스넬)', '신기루'],
         applications: ['렌즈 설계', '광섬유', '기하광학'],
       },
       en: {
         definition:
-          'Light travels the path of least time between two points. Variational principle of optics',
+          'The optical path makes travel time stationary relative to nearby paths; the time need not always be a minimum.',
         formulas: ['δT = δ∫ds/v = 0', 'n = c/v', 'Optical path length: ∫n ds'],
         examples: ['Law of reflection', "Snell's law (refraction)", 'Mirages'],
         applications: ['Lens design', 'Fiber optics', 'Geometrical optics'],
@@ -272,7 +279,7 @@ export const calculusVariationsConcepts: MathConcept[] = [
       ko: {
         definition: '작용의 연속 대칭마다 보존량이 대응. 물리학의 근본 정리',
         formulas: [
-          '대칭 ⟹ 보존 법칙',
+          '작용의 연속 대칭 ⟹ 운동방정식의 해에서 보존량',
           '시간 불변 → 에너지 보존',
           '공간 불변 → 운동량 보존',
           '회전 불변 → 각운동량 보존',
@@ -284,7 +291,7 @@ export const calculusVariationsConcepts: MathConcept[] = [
         definition:
           'Every continuous symmetry of action corresponds to conservation law. Fundamental theorem of physics',
         formulas: [
-          'Symmetry ⟹ Conservation law',
+          'Continuous symmetry of the action ⟹ conserved quantity along solutions',
           'Time invariance → Energy',
           'Space invariance → Momentum',
           'Rotation invariance → Angular momentum',
@@ -296,7 +303,7 @@ export const calculusVariationsConcepts: MathConcept[] = [
         applications: ['Particle physics', 'General relativity', 'Field theory'],
       },
     },
-    latex: '\\text{Symmetry} \\Leftrightarrow \\text{Conservation Law}',
+    latex: '\\text{Continuous symmetry of the action} \\Rightarrow \\text{Conservation law}',
     relations: {
       prerequisites: ['hamiltons-principle', 'lie-groups'],
       nextTopics: ['gauge-theory'],

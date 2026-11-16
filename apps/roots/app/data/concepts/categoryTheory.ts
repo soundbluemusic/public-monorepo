@@ -92,13 +92,21 @@ export const categoryTheoryConcepts: MathConcept[] = [
       ko: {
         definition: '두 함자 사이의 "자연스러운" 사상 모음',
         formulas: ['η: F ⇒ G', '자연성: G(f)∘η_A = η_B∘F(f)', '모든 f:A→B에 대해 다이어그램 가환'],
-        examples: ['항등 자연변환', 'η: Id ⇒ List (단위원)', 'det: GL_n ⇒ GL_1'],
+        examples: [
+          '항등 자연변환',
+          'η: Id ⇒ List (단위원)',
+          '벡터공간에서 V → V** (자연스러운 이중쌍대 사상)',
+        ],
         applications: ['모나드', '동형 이론', '언어 의미론'],
       },
       en: {
         definition: 'Collection of "natural" morphisms between two functors',
         formulas: ['η: F ⇒ G', 'Naturality: G(f)∘η_A = η_B∘F(f)', 'Diagram commutes for all f:A→B'],
-        examples: ['Identity natural transformation', 'η: Id ⇒ List (unit)', 'det: GL_n ⇒ GL_1'],
+        examples: [
+          'Identity natural transformation',
+          'η: Id ⇒ List (unit)',
+          'The canonical map V → V** for vector spaces',
+        ],
         applications: ['Monads', 'Equivalence theory', 'Semantics'],
       },
     },

@@ -16,7 +16,7 @@ export const statisticsConcepts: MathConcept[] = [
         formulas: [
           '귀무가설 H₀ vs 대립가설 H₁',
           '검정통계량 T',
-          'p-value = P(T ≥ t | H₀)',
+          '오른쪽 단측 검정의 p값: P(T ≥ t | H₀). 방향과 검정 방식에 따라 달라짐',
           '유의수준 α (보통 0.05)',
         ],
         examples: ['t-검정', 'χ²-검정', 'F-검정'],
@@ -28,14 +28,14 @@ export const statisticsConcepts: MathConcept[] = [
         formulas: [
           'Null H₀ vs Alternative H₁',
           'Test statistic T',
-          'p-value = P(T ≥ t | H₀)',
+          'Upper-tailed test: p-value = P(T ≥ t | H₀). The tail depends on the alternative',
           'Significance level α (usually 0.05)',
         ],
         examples: ['t-test', 'χ²-test', 'F-test'],
         applications: ['Medical research', 'Quality control', 'A/B testing'],
       },
     },
-    latex: 'p\\text{-value} = P(T \\geq t | H_0)',
+    latex: 'p_{\\text{upper}} = P(T \\geq t \\mid H_0)',
     relations: {
       prerequisites: ['probability', 'normal-distribution'],
       nextTopics: ['confidence-interval', 'anova'],
@@ -56,22 +56,22 @@ export const statisticsConcepts: MathConcept[] = [
     content: {
       ko: {
         definition:
-          '모수가 포함될 것으로 예상되는 값의 범위. 95% 신뢰구간은 반복 표본에서 95%가 참값 포함',
+          '표본으로 모수를 추정하는 구간. 같은 조건에서 표본을 반복 추출해 95% 신뢰구간을 만들면, 장기적으로 그 구간 중 95%가 참 모수를 포함합니다. 근사 방법은 이 비율이 대략 95%입니다.',
         formulas: [
-          '평균의 CI: x̄ ± z_{α/2} · σ/√n',
-          't-CI: x̄ ± t_{α/2,n-1} · s/√n',
-          '비율의 CI: p̂ ± z_{α/2}√(p̂(1-p̂)/n)',
+          '평균의 z-구간: x̄ ± z_{α/2} · σ/√n (독립 정규표본, σ를 아는 경우)',
+          't-구간: x̄ ± t_{α/2,n-1} · s/√n (독립 정규표본, σ를 모르는 경우)',
+          '비율의 근사 구간: p̂ ± z_{α/2}√(p̂(1-p̂)/n) (독립 베르누이 표본, np와 n(1-p)가 충분히 클 때)',
         ],
         examples: ['95% CI for μ', '99% CI for proportion'],
         applications: ['여론조사', '의학 연구', '품질 추정'],
       },
       en: {
         definition:
-          'Range of values expected to contain parameter. 95% CI means 95% of repeated samples contain true value',
+          'An interval estimated from a sample. Under the same conditions, 95% of intervals constructed from repeated samples contain the true parameter in the long run; approximate methods achieve approximately 95%.',
         formulas: [
-          'Mean CI: x̄ ± z_{α/2} · σ/√n',
-          't-CI: x̄ ± t_{α/2,n-1} · s/√n',
-          'Proportion CI: p̂ ± z_{α/2}√(p̂(1-p̂)/n)',
+          'Mean z-interval: x̄ ± z_{α/2} · σ/√n (independent normal sample, known σ)',
+          't-interval: x̄ ± t_{α/2,n-1} · s/√n (independent normal sample, unknown σ)',
+          'Approximate proportion interval: p̂ ± z_{α/2}√(p̂(1-p̂)/n) (independent Bernoulli sample, np and n(1-p) sufficiently large)',
         ],
         examples: ['95% CI for μ', '99% CI for proportion'],
         applications: ['Polling', 'Medical research', 'Quality estimation'],
@@ -140,7 +140,8 @@ export const statisticsConcepts: MathConcept[] = [
     difficulty: 4,
     content: {
       ko: {
-        definition: '세 개 이상 그룹의 평균 차이를 검정하는 방법. 집단 간/내 분산 비교',
+        definition:
+          '두 개 이상 그룹의 평균 차이를 검정하는 방법. 일원 분산분석의 표준 F 검정은 독립성, 정규성, 등분산을 가정한다',
         formulas: [
           'F = MS_between / MS_within',
           'SS_total = SS_between + SS_within',
@@ -151,7 +152,7 @@ export const statisticsConcepts: MathConcept[] = [
       },
       en: {
         definition:
-          'Method for testing mean differences among three or more groups. Compares between/within variance',
+          'Method for testing mean differences among two or more groups. The standard one-way F test assumes independence, normality, and equal variances',
         formulas: [
           'F = MS_between / MS_within',
           'SS_total = SS_between + SS_within',
@@ -228,21 +229,27 @@ export const statisticsConcepts: MathConcept[] = [
       ko: {
         definition: '관측된 데이터를 가장 잘 설명하는 모수를 찾는 추정 방법',
         formulas: [
-          '가능도: L(θ) = P(data|θ) = ∏P(xᵢ|θ)',
-          '로그가능도: ℓ(θ) = Σlog P(xᵢ|θ)',
+          '가능도: L(θ) = ∏f(xᵢ|θ) (독립 표본; f는 확률질량함수 또는 확률밀도함수)',
+          '로그가능도: ℓ(θ) = Σlog f(xᵢ|θ)',
           'MLE: θ̂ = argmax L(θ)',
         ],
-        examples: ['정규분포 MLE: μ̂=x̄, σ̂²=s²', '베르누이 MLE: p̂ = x̄'],
+        examples: [
+          '독립 정규표본의 MLE: μ̂=x̄, σ̂²=Σ(xᵢ-x̄)²/n (표본이 모두 같지 않을 때)',
+          '독립 베르누이 표본의 MLE: p̂ = x̄',
+        ],
         applications: ['모수 추정', '기계학습', '통계 모델링'],
       },
       en: {
         definition: 'Estimation method finding parameters that best explain observed data',
         formulas: [
-          'Likelihood: L(θ) = P(data|θ) = ∏P(xᵢ|θ)',
-          'Log-likelihood: ℓ(θ) = Σlog P(xᵢ|θ)',
+          'Likelihood: L(θ) = ∏f(xᵢ|θ) (independent sample; f is a probability mass or density function)',
+          'Log-likelihood: ℓ(θ) = Σlog f(xᵢ|θ)',
           'MLE: θ̂ = argmax L(θ)',
         ],
-        examples: ['Normal MLE: μ̂=x̄, σ̂²=s²', 'Bernoulli MLE: p̂ = x̄'],
+        examples: [
+          'MLE for an independent normal sample: μ̂=x̄, σ̂²=Σ(xᵢ-x̄)²/n (when observations are not all equal)',
+          'MLE for an independent Bernoulli sample: p̂ = x̄',
+        ],
         applications: ['Parameter estimation', 'Machine learning', 'Statistical modeling'],
       },
     },
@@ -271,7 +278,7 @@ export const statisticsConcepts: MathConcept[] = [
           'AR(p): Xₜ = Σφᵢ Xₜ₋ᵢ + εₜ',
           'MA(q): Xₜ = εₜ + Σθⱼ εₜ₋ⱼ',
           'ARIMA(p,d,q)',
-          '정상성: E[Xₜ], Var[Xₜ] 일정',
+          '약한 정상성: 유한한 2차 모멘트, 일정한 평균, Cov(Xₜ,Xₜ₊ₕ)가 시차 h에만 의존',
         ],
         examples: ['주가 예측', '기온 예측', '수요 예측'],
         applications: ['금융', '기상학', '경제학'],
@@ -282,7 +289,7 @@ export const statisticsConcepts: MathConcept[] = [
           'AR(p): Xₜ = Σφᵢ Xₜ₋ᵢ + εₜ',
           'MA(q): Xₜ = εₜ + Σθⱼ εₜ₋ⱼ',
           'ARIMA(p,d,q)',
-          'Stationarity: E[Xₜ], Var[Xₜ] constant',
+          'Weak stationarity: finite second moments, constant mean, and Cov(Xₜ,Xₜ₊ₕ) depending only on lag h',
         ],
         examples: ['Stock forecasting', 'Temperature prediction', 'Demand forecasting'],
         applications: ['Finance', 'Meteorology', 'Economics'],

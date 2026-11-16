@@ -11,11 +11,11 @@ export const harmonicAnalysisConcepts: MathConcept[] = [
     subfield: 'harmonic-analysis',
     difficulty: 4,
     content: {
-      ko: '주기함수를 삼각함수의 급수로 전개합니다. 수렴 조건, 기브스 현상, 파세발 정리가 핵심 주제입니다.',
-      en: "Expansion of periodic functions as series of trigonometric functions. Convergence conditions, Gibbs phenomenon, and Parseval's theorem are key topics.",
+      ko: '주기함수를 삼각함수의 급수로 전개합니다. 제곱 적분 가능한 함수의 푸리에 급수는 L² 의미로 수렴하지만, 모든 점에서 수렴하는 것은 아닙니다.',
+      en: 'Expands periodic functions in trigonometric series. For square-integrable functions, the Fourier series converges in L², but not necessarily at every point.',
     },
     latex:
-      'f(x) = \\sum_{n=-\\infty}^{\\infty} c_n e^{inx}, \\quad \\sum|c_n|^2 = \\frac{1}{2\\pi}\\int|f|^2 dx',
+      'f = \\sum_{n\\in\\mathbb Z} c_n e^{inx}\\ (L^2), \\quad \\sum_{n\\in\\mathbb Z}|c_n|^2 = \\frac{1}{2\\pi}\\int_{-\\pi}^{\\pi}|f(x)|^2 dx \\quad (f\\in L^2([-\\pi,\\pi]))',
     relations: {
       prerequisites: ['fourier-series', 'convergence'],
       nextTopics: ['fourier-transform-advanced', 'distribution-theory'],
@@ -34,11 +34,11 @@ export const harmonicAnalysisConcepts: MathConcept[] = [
     subfield: 'harmonic-analysis',
     difficulty: 4,
     content: {
-      ko: '함수를 주파수 영역으로 변환합니다. 슈워츠 공간, 플랑슈렐 정리, 역변환이 핵심입니다.',
-      en: 'Transforms functions to frequency domain. Schwartz space, Plancherel theorem, and inverse transform are essential.',
+      ko: '함수를 주파수 영역으로 변환합니다. 아래 적분식과 플랑슈렐 등식은 예를 들어 f가 L¹과 L²에 모두 속할 때 성립합니다. 변환은 L² 전체로 확장할 수 있습니다.',
+      en: 'Transforms functions to the frequency domain. The integral formula and Plancherel identity below hold, for example, when f belongs to both L¹ and L²; the transform extends to all of L².',
     },
     latex:
-      '\\hat{f}(\\xi) = \\int_{\\mathbb{R}^n} f(x)e^{-2\\pi i x \\cdot \\xi}dx, \\quad \\|\\hat{f}\\|_2 = \\|f\\|_2',
+      '\\hat{f}(\\xi) = \\int_{\\mathbb{R}^n} f(x)e^{-2\\pi i x \\cdot \\xi}dx, \\quad \\|\\hat{f}\\|_2 = \\|f\\|_2 \\quad (f\\in L^1\\cap L^2)',
     relations: {
       prerequisites: ['fourier-transform', 'lebesgue-integral'],
       nextTopics: ['distribution-theory', 'wavelets'],
@@ -61,7 +61,7 @@ export const harmonicAnalysisConcepts: MathConcept[] = [
       en: 'Continuous linear functionals on test function spaces. Allows differentiation of singular objects like Dirac delta.',
     },
     latex:
-      "\\langle T, \\phi \\rangle, \\quad \\langle T', \\phi \\rangle = -\\langle T, \\phi' \\rangle, \\quad \\delta(x) = \\lim_{\\epsilon \\to 0} \\frac{1}{\\epsilon}\\phi(x/\\epsilon)",
+      "\\langle T',\\phi\\rangle=-\\langle T,\\phi'\\rangle,\\quad \\frac{1}{\\epsilon}\\rho(x/\\epsilon)\\xrightarrow[\\epsilon\\to0^+]{}\\delta\\ \\text{in distributions}\\quad(\\rho\\in C_c^\\infty(\\mathbb{R}),\\ \\int\\rho=1)",
     relations: {
       prerequisites: ['functional-analysis', 'test-functions'],
       nextTopics: ['sobolev-spaces', 'pseudodifferential-operators'],
@@ -103,8 +103,8 @@ export const harmonicAnalysisConcepts: MathConcept[] = [
     subfield: 'harmonic-analysis',
     difficulty: 4,
     content: {
-      ko: '구면 위 라플라시안의 고유함수입니다. 구면 위 함수의 정규직교 기저를 형성합니다.',
-      en: 'Eigenfunctions of the Laplacian on the sphere. Form an orthonormal basis for functions on the sphere.',
+      ko: '구면 위 라플라시안의 고유함수입니다. 적절히 고른 정규직교 구면 조화 함수들은 구면 위 제곱 적분 가능 함수 공간의 기저를 이룹니다.',
+      en: 'Eigenfunctions of the Laplacian on the sphere. A suitable orthonormal choice forms a basis for the square-integrable functions on the sphere.',
     },
     latex: 'Y_l^m(\\theta, \\phi), \\quad \\Delta_{S^2} Y_l^m = -l(l+1)Y_l^m',
     relations: {
@@ -150,7 +150,7 @@ export const harmonicAnalysisConcepts: MathConcept[] = [
       ko: '국소 콤팩트 아벨 군 위에서 푸리에 해석을 일반화합니다. 폰트랴긴 쌍대성이 핵심 정리입니다.',
       en: 'Generalizes Fourier analysis to locally compact abelian groups. Pontryagin duality is the key theorem.',
     },
-    latex: '\\hat{G} = \\text{Hom}(G, S^1), \\quad \\hat{\\hat{G}} \\cong G',
+    latex: '\\hat{G} = \\text{Hom}_{\\mathrm{cont}}(G, S^1), \\quad \\hat{\\hat{G}} \\cong G',
     relations: {
       prerequisites: ['group-theory', 'fourier-transform-advanced'],
       nextTopics: ['noncommutative-harmonic-analysis', 'representation-theory'],
@@ -169,10 +169,11 @@ export const harmonicAnalysisConcepts: MathConcept[] = [
     subfield: 'harmonic-analysis',
     difficulty: 5,
     content: {
-      ko: '함수를 주파수 대역별로 분해하는 이론입니다. 여러 함수 공간의 특성화와 조화해석에 필수적입니다.',
-      en: 'Theory decomposing functions by frequency bands. Essential for characterizing function spaces and harmonic analysis.',
+      ko: '함수를 주파수 대역별로 분해하는 이론입니다. 아래 비교식은 표준 리틀우드-페일리 분해에서 1<p<∞일 때 성립합니다.',
+      en: 'A theory decomposing functions into frequency bands. The comparison below holds for a standard Littlewood–Paley decomposition when 1<p<∞.',
     },
-    latex: '\\|f\\|_{L^p} \\sim \\left\\|\\left(\\sum_j |P_j f|^2\\right)^{1/2}\\right\\|_{L^p}',
+    latex:
+      '\\|f\\|_{L^p} \\sim \\left\\|\\left(\\sum_j |P_j f|^2\\right)^{1/2}\\right\\|_{L^p}, \\quad 1<p<\\infty',
     relations: {
       prerequisites: ['fourier-transform-advanced', 'functional-analysis'],
       nextTopics: ['besov-spaces', 'triebel-lizorkin'],

@@ -20,11 +20,11 @@ export const theoremsConcepts: MathConcept[] = [
         formulas: [
           {
             latex: '\\frac{d}{dx} \\int_a^x f(t) dt = f(x)',
-            description: '제1 기본정리',
+            description: '제1 기본정리 (f가 구간에서 연속일 때)',
           },
           {
             latex: '\\int_a^b f(x) dx = F(b) - F(a)',
-            description: "제2 기본정리 (F' = f)",
+            description: "제2 기본정리 (f가 [a,b]에서 연속이고 F' = f일 때)",
           },
         ],
         examples: [
@@ -50,11 +50,11 @@ export const theoremsConcepts: MathConcept[] = [
         formulas: [
           {
             latex: '\\frac{d}{dx} \\int_a^x f(t) dt = f(x)',
-            description: 'First Fundamental Theorem',
+            description: 'First Fundamental Theorem (f continuous on the interval)',
           },
           {
             latex: '\\int_a^b f(x) dx = F(b) - F(a)',
-            description: "Second Fundamental Theorem (F' = f)",
+            description: "Second Fundamental Theorem (f continuous on [a,b] and F' = f)",
           },
         ],
         examples: [
@@ -392,16 +392,17 @@ export const theoremsConcepts: MathConcept[] = [
         formulas: [
           {
             latex: 'P(A|B) = \\frac{P(B|A) \\cdot P(A)}{P(B)}',
-            description: '베이즈 정리',
+            description: '베이즈 정리 (P(A) > 0, P(B) > 0)',
           },
           {
             latex: 'P(B) = \\sum_i P(B|A_i)P(A_i)',
-            description: '전확률 공식',
+            description: '전확률 공식: Aᵢ는 서로 겹치지 않고 전체를 나누며 P(Aᵢ) > 0',
           },
         ],
         examples: [
           {
-            problem: '질병 발생률 1%, 검사 정확도 99%. 양성일 때 실제 질병 확률은?',
+            problem:
+              '질병이 있을 확률이 1%이고, 환자가 양성일 확률과 환자가 아닌 사람이 음성일 확률이 각각 99%입니다. 양성일 때 실제로 질병이 있을 확률은?',
             solution:
               'P(D|+) = P(+|D)P(D) / P(+) = (0.99)(0.01) / (0.99×0.01 + 0.01×0.99) = 0.5 (50%)',
           },
@@ -423,17 +424,17 @@ export const theoremsConcepts: MathConcept[] = [
         formulas: [
           {
             latex: 'P(A|B) = \\frac{P(B|A) \\cdot P(A)}{P(B)}',
-            description: "Bayes' Theorem",
+            description: "Bayes' theorem (P(A) > 0, P(B) > 0)",
           },
           {
             latex: 'P(B) = \\sum_i P(B|A_i)P(A_i)',
-            description: 'Law of total probability',
+            description: 'Law of total probability: Aᵢ partition the sample space and P(Aᵢ) > 0',
           },
         ],
         examples: [
           {
             problem:
-              "Disease rate 1%, test accuracy 99%. If positive, what's actual disease probability?",
+              'Disease prevalence is 1%. The probability of a positive test for a person with the disease and the probability of a negative test for a person without it are each 99%. What is the probability of disease after a positive result?',
             solution:
               'P(D|+) = P(+|D)P(D) / P(+) = (0.99)(0.01) / (0.99×0.01 + 0.01×0.99) = 0.5 (50%)',
           },
@@ -647,7 +648,7 @@ export const theoremsConcepts: MathConcept[] = [
     content: {
       ko: {
         definition:
-          '충분히 많은 독립 확률변수의 합의 분포는 원래 분포에 관계없이 정규분포에 근사합니다.',
+          '서로 독립이고 같은 분포를 따르며 분산이 유한하고 양수인 확률변수들의 표본평균을 표준화하면, 표본이 커질수록 그 분포가 표준정규분포에 가까워집니다.',
         formulas: [
           {
             latex: '\\bar{X}_n = \\frac{1}{n}\\sum_{i=1}^{n} X_i',
@@ -655,13 +656,14 @@ export const theoremsConcepts: MathConcept[] = [
           },
           {
             latex: '\\frac{\\bar{X}_n - \\mu}{\\sigma/\\sqrt{n}} \\xrightarrow{d} N(0,1)',
-            description: '표준화된 표본평균은 표준정규분포로 수렴',
+            description: '독립이고 같은 분포이며 평균 μ, 유한한 양의 분산 σ²인 경우',
           },
         ],
         examples: [
           {
-            problem: '동전을 100번 던져 앞면 개수의 분포는?',
-            solution: '평균 50, 표준편차 5인 정규분포에 근사. P(45 ≤ X ≤ 55) ≈ 68%',
+            problem: '공정한 동전을 독립적으로 100번 던질 때 앞면 개수의 분포는?',
+            solution:
+              '앞면 개수는 이항분포를 따릅니다. 평균 50, 표준편차 5이며, P(45 ≤ X ≤ 55)는 이항분포로 계산하면 약 72.9%입니다.',
           },
         ],
         history: {
@@ -677,7 +679,7 @@ export const theoremsConcepts: MathConcept[] = [
       },
       en: {
         definition:
-          'The distribution of sum of many independent random variables approaches normal distribution regardless of original distribution.',
+          'For independent, identically distributed random variables with finite positive variance, the standardized sample mean converges in distribution to the standard normal distribution.',
         formulas: [
           {
             latex: '\\bar{X}_n = \\frac{1}{n}\\sum_{i=1}^{n} X_i',
@@ -685,13 +687,15 @@ export const theoremsConcepts: MathConcept[] = [
           },
           {
             latex: '\\frac{\\bar{X}_n - \\mu}{\\sigma/\\sqrt{n}} \\xrightarrow{d} N(0,1)',
-            description: 'Standardized sample mean converges to standard normal',
+            description:
+              'For independent identically distributed variables with mean μ and finite positive variance σ²',
           },
         ],
         examples: [
           {
-            problem: "What's the distribution of heads in 100 coin flips?",
-            solution: 'Approximately normal with mean 50, std 5. P(45 ≤ X ≤ 55) ≈ 68%',
+            problem: 'What is the distribution of heads in 100 independent flips of a fair coin?',
+            solution:
+              'The count has a binomial distribution with mean 50 and standard deviation 5. The exact P(45 ≤ X ≤ 55) is approximately 72.9%.',
           },
         ],
         history: {
@@ -725,7 +729,7 @@ export const theoremsConcepts: MathConcept[] = [
     content: {
       ko: {
         definition:
-          '연속함수 f가 [a,b]에서 정의되고 f(a)와 f(b) 사이의 값 k가 있으면, f(c) = k인 c가 (a,b)에 존재합니다.',
+          '연속함수 f가 [a,b]에서 정의되고 k가 f(a)와 f(b) 사이에 엄격히 있으면, f(c) = k인 c가 (a,b)에 존재합니다.',
         formulas: [
           {
             latex: '\\text{f(a) < k < f(b)이면 f(c) = k인 c ∈ (a,b) 존재}',
@@ -752,7 +756,7 @@ export const theoremsConcepts: MathConcept[] = [
       },
       en: {
         definition:
-          'If continuous f on [a,b] and k is between f(a) and f(b), there exists c in (a,b) with f(c) = k.',
+          'If f is continuous on [a,b] and k is strictly between f(a) and f(b), there exists c in (a,b) with f(c) = k.',
         formulas: [
           {
             latex: '\\text{If f(a) < k < f(b), then ∃c ∈ (a,b) with f(c) = k}',
@@ -797,16 +801,16 @@ export const theoremsConcepts: MathConcept[] = [
     content: {
       ko: {
         definition:
-          '스토크스 정리는 벡터장의 회전의 면적분이 경계 곡선에서의 선적분과 같음을 말합니다. 미적분학의 기본정리를 일반화한 것입니다.',
+          '스토크스 정리는 곡면 위 벡터장의 회전의 면적분이 경계 곡선의 선적분과 같음을 말합니다. 벡터장은 곡면 근방에서 연속 미분 가능해야 하고, 곡면과 경계의 방향은 서로 맞아야 합니다.',
         formulas: [
           {
             latex:
               '\\oint_C \\vec{F} \\cdot d\\vec{r} = \\iint_S (\\nabla \\times \\vec{F}) \\cdot d\\vec{S}',
-            description: '스토크스 정리',
+            description: 'S는 방향이 정해진 조각별 매끄러운 곡면, C는 그에 맞는 방향의 경계',
           },
           {
             latex: "\\int_a^b f'(x)dx = f(b) - f(a)",
-            description: '1차원 특수 경우 (미적분 기본정리)',
+            description: '일반화된 스토크스 정리의 1차원 경우 (f가 연속 미분 가능할 때)',
           },
         ],
         examples: [
@@ -830,16 +834,17 @@ export const theoremsConcepts: MathConcept[] = [
       },
       en: {
         definition:
-          "Stokes' Theorem states the surface integral of curl equals the line integral around the boundary. Generalizes the Fundamental Theorem of Calculus.",
+          "Stokes' Theorem states that the surface integral of curl equals the line integral around the boundary. The vector field must be continuously differentiable near the surface, and the surface and boundary orientations must agree.",
         formulas: [
           {
             latex:
               '\\oint_C \\vec{F} \\cdot d\\vec{r} = \\iint_S (\\nabla \\times \\vec{F}) \\cdot d\\vec{S}',
-            description: "Stokes' Theorem",
+            description:
+              'S is an oriented piecewise smooth surface and C its consistently oriented boundary',
           },
           {
             latex: "\\int_a^b f'(x)dx = f(b) - f(a)",
-            description: '1D special case (FTC)',
+            description: '1D case of generalized Stokes theorem (f continuously differentiable)',
           },
         ],
         examples: [

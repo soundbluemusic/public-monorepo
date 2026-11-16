@@ -18,7 +18,8 @@ export function filterConcepts(
       concept.name.en.toLowerCase().includes(normalizedQuery) ||
       concept.name.ko.toLowerCase().includes(normalizedQuery) ||
       concept.def.en.toLowerCase().includes(normalizedQuery) ||
-      concept.def.ko.toLowerCase().includes(normalizedQuery);
+      concept.def.ko.toLowerCase().includes(normalizedQuery) ||
+      concept.tags.some((tag) => tag.toLowerCase().includes(normalizedQuery));
     const matchesField = !field || concept.field === field;
 
     return matchesQuery && matchesField;
@@ -29,10 +30,10 @@ export function searchConcepts(
   concepts: readonly LightConcept[],
   query: string,
   locale: Language,
-  limit = 30,
+  limit = concepts.length,
 ): LightConcept[] {
   const normalizedQuery = query.trim().toLowerCase();
-  if (normalizedQuery.length < 2) return [];
+  if (!normalizedQuery) return [];
 
   return concepts
     .filter(
@@ -40,6 +41,7 @@ export function searchConcepts(
         concept.name[locale].toLowerCase().includes(normalizedQuery) ||
         concept.name[locale === 'ko' ? 'en' : 'ko'].toLowerCase().includes(normalizedQuery) ||
         concept.def[locale].toLowerCase().includes(normalizedQuery) ||
+        concept.def[locale === 'ko' ? 'en' : 'ko'].toLowerCase().includes(normalizedQuery) ||
         concept.tags.some((tag) => tag.toLowerCase().includes(normalizedQuery)),
     )
     .slice(0, limit);

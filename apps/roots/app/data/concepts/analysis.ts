@@ -195,7 +195,7 @@ export const analysisConcepts: MathConcept[] = [
           },
           {
             latex: '\\frac{d}{dx}(x^n) = nx^{n-1}',
-            description: '거듭제곱 미분법',
+            description: '거듭제곱 미분법 (예: 정수 n ≥ 1 또는 실수 n과 x > 0)',
           },
           {
             latex: "(fg)' = f'g + fg'",
@@ -240,7 +240,7 @@ export const analysisConcepts: MathConcept[] = [
           },
           {
             latex: '\\frac{d}{dx}(x^n) = nx^{n-1}',
-            description: 'Power rule',
+            description: 'Power rule (e.g. integer n ≥ 1, or real n with x > 0)',
           },
           {
             latex: "(fg)' = f'g + fg'",
@@ -378,7 +378,8 @@ export const analysisConcepts: MathConcept[] = [
     difficulty: 3,
     content: {
       ko: {
-        definition: '삼각함수들의 도함수 공식이다.',
+        definition:
+          '삼각함수들의 도함수 공식이다. 각도 x는 라디안으로 나타내며, 각 공식은 해당 함수가 정의된 곳에서 적용한다.',
         formulas: [
           {
             latex: '\\frac{d}{dx}(\\sin x) = \\cos x',
@@ -406,7 +407,8 @@ export const analysisConcepts: MathConcept[] = [
         ],
       },
       en: {
-        definition: 'Derivative formulas for trigonometric functions.',
+        definition:
+          'Derivative formulas for trigonometric functions, with x measured in radians. Each formula applies where its function is defined.',
         formulas: [
           {
             latex: '\\frac{d}{dx}(\\sin x) = \\cos x',
@@ -461,15 +463,15 @@ export const analysisConcepts: MathConcept[] = [
           },
           {
             latex: '\\frac{d}{dx}(a^x) = a^x \\ln a',
-            description: '일반 지수함수의 미분',
+            description: '일반 지수함수의 미분 (a > 0)',
           },
           {
             latex: '\\frac{d}{dx}(\\ln x) = \\frac{1}{x}',
-            description: '자연로그의 미분',
+            description: '자연로그의 미분 (x > 0)',
           },
           {
             latex: '\\frac{d}{dx}(\\log_a x) = \\frac{1}{x \\ln a}',
-            description: '일반 로그의 미분',
+            description: '일반 로그의 미분 (x > 0, a > 0, a ≠ 1)',
           },
         ],
         examples: [
@@ -494,15 +496,15 @@ export const analysisConcepts: MathConcept[] = [
           },
           {
             latex: '\\frac{d}{dx}(a^x) = a^x \\ln a',
-            description: 'Derivative of general exponential',
+            description: 'Derivative of general exponential (a > 0)',
           },
           {
             latex: '\\frac{d}{dx}(\\ln x) = \\frac{1}{x}',
-            description: 'Derivative of natural log',
+            description: 'Derivative of natural log (x > 0)',
           },
           {
             latex: '\\frac{d}{dx}(\\log_a x) = \\frac{1}{x \\ln a}',
-            description: 'Derivative of general log',
+            description: 'Derivative of general log (x > 0, a > 0, a ≠ 1)',
           },
         ],
         examples: [
@@ -695,15 +697,17 @@ export const analysisConcepts: MathConcept[] = [
     difficulty: 4,
     content: {
       ko: {
-        definition: '함수와 x축 사이의 넓이를 나타내며, 극한으로 정의된다.',
+        definition:
+          '리만 정적분은 리만 합의 극한으로 정의됩니다. a ≤ b인 구간 [a,b]에서 그래프가 x축 위에 있는 넓이는 더하고 아래에 있는 넓이는 뺀 값입니다.',
         formulas: [
           {
             latex: '\\int_a^b f(x)\\,dx = \\lim_{n \\to \\infty} \\sum_{i=1}^n f(x_i)\\Delta x',
-            description: '리만 합의 극한으로 정의',
+            description:
+              '등분한 구간의 리만 합 (f가 리만 적분 가능하고 Δx=(b-a)/n, xᵢ는 각 구간의 점)',
           },
           {
             latex: '\\int_a^b f(x)\\,dx = F(b) - F(a)',
-            description: '미적분학의 기본정리',
+            description: '미적분학의 기본정리 (f가 연속이고 F가 f의 원시함수)',
           },
         ],
         examples: [
@@ -725,15 +729,18 @@ export const analysisConcepts: MathConcept[] = [
         ],
       },
       en: {
-        definition: 'Represents the area between a function and the x-axis, defined as a limit.',
+        definition:
+          'A definite Riemann integral is defined as a limit of Riemann sums. For a ≤ b, it gives signed area: area above the x-axis minus area below it.',
         formulas: [
           {
             latex: '\\int_a^b f(x)\\,dx = \\lim_{n \\to \\infty} \\sum_{i=1}^n f(x_i)\\Delta x',
-            description: 'Defined as limit of Riemann sums',
+            description:
+              'Equal-partition Riemann sums (f Riemann integrable, Δx=(b-a)/n, xᵢ in each subinterval)',
           },
           {
             latex: '\\int_a^b f(x)\\,dx = F(b) - F(a)',
-            description: 'Fundamental Theorem of Calculus',
+            description:
+              'Fundamental Theorem of Calculus (f continuous and F an antiderivative of f)',
           },
         ],
         examples: [
@@ -902,11 +909,12 @@ export const analysisConcepts: MathConcept[] = [
     difficulty: 5,
     content: {
       ko: {
-        definition: '함수를 무한 다항식으로 표현하는 급수 전개이다.',
+        definition:
+          '함수의 한 점에서의 도함수로 만든 멱급수입니다. 이 급수가 실제 함수값과 같은지는 별도로 확인해야 합니다.',
         formulas: [
           {
             latex: 'f(x) = \\sum_{n=0}^{\\infty} \\frac{f^{(n)}(a)}{n!}(x-a)^n',
-            description: '테일러 급수 (x=a 주위)',
+            description: '테일러 급수가 f(x)에 수렴하는 경우 (x=a 주위)',
           },
           {
             latex:
@@ -941,11 +949,12 @@ export const analysisConcepts: MathConcept[] = [
         ],
       },
       en: {
-        definition: 'A series expansion that represents a function as an infinite polynomial.',
+        definition:
+          'A power series built from derivatives at a point. Its convergence to the original function must be checked separately.',
         formulas: [
           {
             latex: 'f(x) = \\sum_{n=0}^{\\infty} \\frac{f^{(n)}(a)}{n!}(x-a)^n',
-            description: 'Taylor series about x=a',
+            description: 'When the Taylor series converges to f(x), about x=a',
           },
           {
             latex:
@@ -1091,7 +1100,7 @@ export const analysisConcepts: MathConcept[] = [
         formulas: [
           {
             latex: '\\iint_R f(x,y)\\,dA = \\int_a^b \\int_c^d f(x,y)\\,dy\\,dx',
-            description: '이중적분 (반복적분)',
+            description: 'R = [a,b] × [c,d]이고 f가 연속인 경우의 반복적분',
           },
           {
             latex: '\\iiint_V f(x,y,z)\\,dV',
@@ -1115,7 +1124,7 @@ export const analysisConcepts: MathConcept[] = [
         formulas: [
           {
             latex: '\\iint_R f(x,y)\\,dA = \\int_a^b \\int_c^d f(x,y)\\,dy\\,dx',
-            description: 'Double integral (iterated)',
+            description: 'Iterated integral for R = [a,b] × [c,d] and continuous f',
           },
           {
             latex: '\\iiint_V f(x,y,z)\\,dV',

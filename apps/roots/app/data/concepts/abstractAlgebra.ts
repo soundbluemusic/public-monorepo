@@ -211,11 +211,11 @@ export const abstractAlgebraConcepts: MathConcept[] = [
     content: {
       ko: {
         definition:
-          '체(Field)는 사칙연산이 자유롭게 가능한 대수구조입니다. 0이 아닌 모든 원소가 곱셈에 대한 역원을 가지는 가환환입니다.',
+          '체(Field)는 0 ≠ 1인 단위원을 가진 가환환이며, 0이 아닌 모든 원소가 곱셈에 대한 역원을 가집니다. 0으로 나누는 것은 정의되지 않습니다.',
         formulas: [
           {
             latex: '(F, +, \\cdot) \\text{ is a commutative ring with unity}',
-            description: '단위원을 가진 가환환',
+            description: '단위원을 가진 가환환 (0 ≠ 1)',
           },
           {
             latex: '\\forall a \\neq 0, \\exists a^{-1} : a \\cdot a^{-1} = 1',
@@ -235,7 +235,7 @@ export const abstractAlgebraConcepts: MathConcept[] = [
           {
             problem: 'ℚ(√2)가 체임을 보이세요.',
             solution:
-              'ℚ(√2) = {a + b√2 : a,b ∈ ℚ}. 사칙연산에 닫혀있고, (a+b√2)⁻¹ = (a-b√2)/(a²-2b²)로 역원 존재.',
+              'ℚ(√2) = {a + b√2 : a,b ∈ ℚ}. 덧셈과 곱셈에 닫혀 있고, a+b√2 ≠ 0일 때 (a+b√2)⁻¹ = (a-b√2)/(a²-2b²)로 역원이 존재합니다.',
           },
         ],
         history: {
@@ -251,11 +251,11 @@ export const abstractAlgebraConcepts: MathConcept[] = [
       },
       en: {
         definition:
-          "A field is an algebraic structure where all four arithmetic operations are freely possible. It's a commutative ring where every non-zero element has a multiplicative inverse.",
+          'A field is a commutative ring with unity 0 ≠ 1 in which every nonzero element has a multiplicative inverse. Division by zero is undefined.',
         formulas: [
           {
             latex: '(F, +, \\cdot) \\text{ is a commutative ring with unity}',
-            description: 'Commutative ring with unity',
+            description: 'Commutative ring with unity (0 ≠ 1)',
           },
           {
             latex: '\\forall a \\neq 0, \\exists a^{-1} : a \\cdot a^{-1} = 1',
@@ -275,7 +275,7 @@ export const abstractAlgebraConcepts: MathConcept[] = [
           {
             problem: 'Show ℚ(√2) is a field.',
             solution:
-              'ℚ(√2) = {a + b√2 : a,b ∈ ℚ}. Closed under operations, inverse (a+b√2)⁻¹ = (a-b√2)/(a²-2b²) exists.',
+              'ℚ(√2) = {a + b√2 : a,b ∈ ℚ}. It is closed under addition and multiplication; when a+b√2 ≠ 0, its inverse is (a-b√2)/(a²-2b²).',
           },
         ],
         history: {

@@ -40,22 +40,37 @@ describe('filterConcepts', () => {
     ).toEqual(['group']);
     expect(filterConcepts(concepts, { field: 'foundations', query: 'group' })).toEqual([]);
   });
+
+  it('finds tags in browse results', () => {
+    expect(filterConcepts(concepts, { query: 'sum' }).map(({ id }) => id)).toEqual(['addition']);
+  });
 });
 
 describe('searchConcepts', () => {
-  it('requires two characters and respects locale text', () => {
-    expect(searchConcepts(concepts, 'a', 'en')).toEqual([]);
+  it('accepts one-character queries and ignores whitespace-only queries', () => {
+    expect(searchConcepts(concepts, '군', 'ko').map(({ id }) => id)).toEqual(['group']);
+    expect(searchConcepts(concepts, '   ', 'en')).toEqual([]);
     expect(searchConcepts(concepts, '덧셈', 'ko').map(({ id }) => id)).toEqual(['addition']);
   });
 
-  it('matches alternate locale names and tags', () => {
+  it('matches alternate locale names and definitions, and tags', () => {
     expect(searchConcepts(concepts, 'group', 'ko').map(({ id }) => id)).toEqual(['group']);
+    expect(searchConcepts(concepts, '이항', 'en').map(({ id }) => id)).toEqual(['group']);
     expect(searchConcepts(concepts, 'sum', 'en').map(({ id }) => id)).toEqual(['addition']);
+  });
+
+  it('returns all matches by default, including mathematical symbols', () => {
+    const manyConcepts = Array.from({ length: 35 }, (_, index) => ({
+      ...concepts[0],
+      id: `symbol-${index}`,
+      name: { en: `π ${index}`, ko: `π ${index}` },
+    }));
+    expect(searchConcepts(manyConcepts, 'π', 'en')).toHaveLength(35);
   });
 
   it('honors the result limit without mutating input', () => {
     const original = [...concepts];
-    expect(searchConcepts(concepts, 'a', 'en', 1)).toEqual([]);
+    expect(searchConcepts(concepts, 'a', 'en', 1)).toHaveLength(1);
     expect(searchConcepts(concepts, 'al', 'en', 1)).toHaveLength(1);
     expect(concepts).toEqual(original);
   });
