@@ -188,7 +188,7 @@ export const symbolsConcepts: MathConcept[] = [
           },
           {
             latex: '\\infty + 1 = \\infty, \\quad \\infty \\cdot 2 = \\infty',
-            description: '무한대의 연산 (주의 필요)',
+            description: '확장 실수에서 +∞의 연산 (∞는 실수가 아님)',
           },
         ],
         examples: [
@@ -222,7 +222,7 @@ export const symbolsConcepts: MathConcept[] = [
           },
           {
             latex: '\\infty + 1 = \\infty, \\quad \\infty \\cdot 2 = \\infty',
-            description: 'Infinity operations (caution needed)',
+            description: 'Operations on +∞ in the extended real numbers (∞ is not a real number)',
           },
         ],
         examples: [

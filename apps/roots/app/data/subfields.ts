@@ -672,8 +672,8 @@ export const subfields: MathSubfield[] = [
     parentField: 'logic',
     name: { ko: '공리적 집합론', en: 'Axiomatic Set Theory' },
     description: {
-      ko: 'ZFC, 선택공리, 연속체 가설, 큰 기수',
-      en: 'ZFC, axiom of choice, continuum hypothesis, large cardinals',
+      ko: 'ZFC, 선택공리, 순서수, 기수',
+      en: 'ZFC, axiom of choice, ordinal numbers, cardinal numbers',
     },
     order: 5,
   },

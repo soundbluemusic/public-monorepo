@@ -30,7 +30,7 @@ export const linearAlgebraConcepts: MathConcept[] = [
           },
           {
             latex: '\\hat{v} = \\frac{\\vec{v}}{|\\vec{v}|}',
-            description: '단위 벡터',
+            description: '단위 벡터 (v ≠ 0)',
           },
         ],
         examples: [
@@ -63,7 +63,7 @@ export const linearAlgebraConcepts: MathConcept[] = [
           },
           {
             latex: '\\hat{v} = \\frac{\\vec{v}}{|\\vec{v}|}',
-            description: 'Unit vector',
+            description: 'Unit vector (v ≠ 0)',
           },
         ],
         examples: [
@@ -189,11 +189,11 @@ export const linearAlgebraConcepts: MathConcept[] = [
           },
           {
             latex: '\\vec{u} \\cdot \\vec{v} = |\\vec{u}||\\vec{v}|\\cos\\theta',
-            description: '내적의 기하학적 정의',
+            description: '두 벡터가 모두 0이 아닐 때의 기하학적 정의',
           },
           {
             latex: '\\cos\\theta = \\frac{\\vec{u} \\cdot \\vec{v}}{|\\vec{u}||\\vec{v}|}',
-            description: '두 벡터 사이의 각도',
+            description: '두 벡터가 모두 0이 아닐 때의 사이각',
           },
         ],
         examples: [
@@ -224,11 +224,11 @@ export const linearAlgebraConcepts: MathConcept[] = [
           },
           {
             latex: '\\vec{u} \\cdot \\vec{v} = |\\vec{u}||\\vec{v}|\\cos\\theta',
-            description: 'Geometric definition',
+            description: 'Geometric definition for two nonzero vectors',
           },
           {
             latex: '\\cos\\theta = \\frac{\\vec{u} \\cdot \\vec{v}}{|\\vec{u}||\\vec{v}|}',
-            description: 'Angle between vectors',
+            description: 'Angle between two nonzero vectors',
           },
         ],
         examples: [
@@ -710,11 +710,12 @@ export const linearAlgebraConcepts: MathConcept[] = [
     difficulty: 4,
     content: {
       ko: {
-        definition: '행렬 A에 대해 Av = λv를 만족하는 스칼라 λ를 고유값, 벡터 v를 고유벡터라 한다.',
+        definition:
+          '행렬 A에 대해 0이 아닌 벡터 v가 Av = λv를 만족하면 λ를 고유값, v를 고유벡터라 합니다.',
         formulas: [
           {
             latex: 'Av = \\lambda v',
-            description: '고유값 방정식',
+            description: '고유값 방정식 (v ≠ 0)',
           },
           {
             latex: '\\det(A - \\lambda I) = 0',
@@ -739,11 +740,12 @@ export const linearAlgebraConcepts: MathConcept[] = [
         ],
       },
       en: {
-        definition: 'For matrix A, λ is an eigenvalue and v is an eigenvector if Av = λv.',
+        definition:
+          'For a matrix A, if a nonzero vector v satisfies Av = λv, then λ is an eigenvalue and v is an eigenvector.',
         formulas: [
           {
             latex: 'Av = \\lambda v',
-            description: 'Eigenvalue equation',
+            description: 'Eigenvalue equation (v ≠ 0)',
           },
           {
             latex: '\\det(A - \\lambda I) = 0',

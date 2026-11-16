@@ -135,8 +135,8 @@ export const constantsConcepts: MathConcept[] = [
           },
         ],
         history: {
-          discoveredBy: '레온하르트 오일러',
-          year: '1727년',
+          discoveredBy: '야코프 베르누이, 레온하르트 오일러',
+          year: '17~18세기',
           background: '야코프 베르누이가 복리 문제에서 발견했고, 오일러가 체계화했습니다.',
         },
         applications: [
@@ -171,8 +171,8 @@ export const constantsConcepts: MathConcept[] = [
           },
         ],
         history: {
-          discoveredBy: 'Leonhard Euler',
-          year: '1727',
+          discoveredBy: 'Jacob Bernoulli, Leonhard Euler',
+          year: '17th–18th centuries',
           background: 'Jacob Bernoulli found it in compound interest; Euler systematized it.',
         },
         applications: [
@@ -223,19 +223,19 @@ export const constantsConcepts: MathConcept[] = [
         examples: [
           {
             problem: '1:φ 비율의 직사각형에서 정사각형을 제거하면?',
-            solution: '남은 직사각형도 1:φ 비율입니다. 이것이 황금 나선을 만듭니다.',
+            solution:
+              '남은 직사각형도 1:φ 비율입니다. 같은 과정을 반복해 나선 모양을 그릴 수 있습니다.',
           },
         ],
         history: {
-          discoveredBy: '고대 그리스 (피타고라스 학파)',
-          year: '기원전 6세기경',
-          background:
-            "유클리드가 '외중비'로 정의했고, 르네상스 시대에 '황금'이라 불리기 시작했습니다.",
+          discoveredBy: '고대 그리스 수학자들',
+          year: '고대 그리스',
+          background: "유클리드가 '외중비'로 정의했습니다. '황금'이라는 이름은 훗날 쓰였습니다.",
         },
         applications: [
           { field: '예술', description: '구도, 비율' },
-          { field: '건축', description: '파르테논 신전' },
-          { field: '자연', description: '해바라기, 조개껍질' },
+          { field: '기하학', description: '황금 직사각형, 정오각형' },
+          { field: '자연', description: '일부 식물의 잎과 씨앗 배열 연구' },
         ],
       },
       en: {
@@ -262,19 +262,20 @@ export const constantsConcepts: MathConcept[] = [
         examples: [
           {
             problem: 'Remove a square from a 1:φ rectangle. What remains?',
-            solution: 'The remaining rectangle is also 1:φ ratio. This creates the golden spiral.',
+            solution:
+              'The remaining rectangle is also 1:φ. Repeating the construction can produce a spiral-like curve.',
           },
         ],
         history: {
-          discoveredBy: 'Ancient Greeks (Pythagoreans)',
-          year: 'c. 6th century BCE',
+          discoveredBy: 'Ancient Greek mathematicians',
+          year: 'Ancient Greece',
           background:
-            "Euclid defined it as 'extreme and mean ratio'; called 'golden' since Renaissance.",
+            "Euclid defined it as 'extreme and mean ratio'; the name 'golden' came later.",
         },
         applications: [
           { field: 'Art', description: 'Composition, proportions' },
-          { field: 'Architecture', description: 'Parthenon' },
-          { field: 'Nature', description: 'Sunflowers, shells' },
+          { field: 'Geometry', description: 'Golden rectangles and regular pentagons' },
+          { field: 'Nature', description: 'Research on some plant leaf and seed arrangements' },
         ],
       },
     },
@@ -390,8 +391,7 @@ export const constantsConcepts: MathConcept[] = [
     difficulty: 4,
     content: {
       ko: {
-        definition:
-          '오일러-마스케로니 상수 γ는 조화급수와 자연로그의 차이의 극한입니다. 무리수인지조차 아직 증명되지 않았습니다.',
+        definition: '오일러-마스케로니 상수 γ는 조화급수의 부분합과 자연로그의 차이의 극한입니다.',
         formulas: [
           {
             latex:
@@ -423,7 +423,7 @@ export const constantsConcepts: MathConcept[] = [
       },
       en: {
         definition:
-          "The Euler-Mascheroni constant γ is the limit of the difference between harmonic series and natural log. Whether it's irrational is still unknown.",
+          'The Euler-Mascheroni constant γ is the limit of the difference between the partial sums of the harmonic series and the natural logarithm.',
         formulas: [
           {
             latex:
@@ -493,7 +493,7 @@ export const constantsConcepts: MathConcept[] = [
           },
         ],
         history: {
-          discoveredBy: '로제 아페리',
+          discoveredBy: '로제 아페리 (무리수성 증명)',
           year: '1978년',
           background:
             '200년 이상 미해결이던 ζ(3)의 무리수성을 증명하여 수학계에 충격을 주었습니다.',
@@ -526,7 +526,7 @@ export const constantsConcepts: MathConcept[] = [
           },
         ],
         history: {
-          discoveredBy: 'Roger Apéry',
+          discoveredBy: 'Roger Apéry (proof of irrationality)',
           year: '1978',
           background:
             'Proved irrationality of ζ(3) after 200+ years, shocking the mathematical community.',
@@ -556,8 +556,7 @@ export const constantsConcepts: MathConcept[] = [
     difficulty: 4,
     content: {
       ko: {
-        definition:
-          '카탈랑 상수는 교대 급수로 정의되는 상수입니다. 무리수인지 여부는 아직 증명되지 않았습니다.',
+        definition: '카탈랑 상수는 교대 급수로 정의되는 상수입니다.',
         formulas: [
           {
             latex:
@@ -591,8 +590,7 @@ export const constantsConcepts: MathConcept[] = [
         ],
       },
       en: {
-        definition:
-          "Catalan's constant is defined by an alternating series. Whether it's irrational remains unproven.",
+        definition: "Catalan's constant is defined by an alternating series.",
         formulas: [
           {
             latex:
@@ -645,7 +643,7 @@ export const constantsConcepts: MathConcept[] = [
     content: {
       ko: {
         definition:
-          '√2는 한 변이 1인 정사각형의 대각선 길이입니다. 최초로 발견된 무리수로, 피타고라스 학파에 큰 충격을 주었습니다.',
+          '√2는 한 변의 길이가 1인 정사각형의 대각선 길이이며, 정수의 비로 나타낼 수 없는 무리수입니다.',
         formulas: [
           {
             latex: '\\sqrt{2} = 1.41421356237...',
@@ -656,9 +654,8 @@ export const constantsConcepts: MathConcept[] = [
             description: '연분수 표현',
           },
           {
-            latex:
-              '\\left(\\frac{p}{q}\\right)^2 \\neq 2 \\text{ (모든 정수 } p, q \\text{에 대해)}',
-            description: '무리수 증명',
+            latex: '\\left(\\frac{p}{q}\\right)^2\\ne2\\quad(p,q\\in\\mathbb{Z},\\ q\\ne0)',
+            description: 'q ≠ 0인 정수 p, q에 대한 무리수 표현',
           },
         ],
         examples: [
@@ -669,24 +666,23 @@ export const constantsConcepts: MathConcept[] = [
           {
             problem: '√2가 무리수임을 증명하세요.',
             solution:
-              '귀류법: p/q = √2 가정 → p² = 2q² → p는 짝수 → p=2k → 4k² = 2q² → q도 짝수. 모순.',
+              '기약분수 p/q = √2라고 가정합니다 (q ≠ 0). p² = 2q²이므로 p는 짝수이고 p=2k입니다. 그러면 q² = 2k²이므로 q도 짝수입니다. 이는 p/q가 기약분수라는 가정에 모순입니다.',
           },
         ],
         history: {
-          discoveredBy: '피타고라스 학파 (히파수스)',
-          year: '기원전 5세기경',
-          background:
-            "최초의 무리수 발견으로, 피타고라스 학파의 '모든 수는 유리수' 신념을 깨뜨렸습니다.",
+          discoveredBy: '알려지지 않음',
+          year: '시기 불명',
+          background: '정사각형의 대각선은 무리수의 고전적인 예입니다.',
         },
         applications: [
           { field: '기하학', description: '대각선, 정사각형' },
           { field: '공학', description: 'A4 용지 비율 (1:√2)' },
-          { field: '음악', description: '반음 비율' },
+          { field: '음악', description: '12평균율에서 여섯 반음의 진동수 비율' },
         ],
       },
       en: {
         definition:
-          '√2 is the diagonal length of a unit square. The first discovered irrational number, it shocked the Pythagorean school.',
+          '√2 is the diagonal length of a square with side length 1. It is irrational and cannot be expressed as a ratio of integers.',
         formulas: [
           {
             latex: '\\sqrt{2} = 1.41421356237...',
@@ -697,9 +693,8 @@ export const constantsConcepts: MathConcept[] = [
             description: 'Continued fraction',
           },
           {
-            latex:
-              '\\left(\\frac{p}{q}\\right)^2 \\neq 2 \\text{ (for all integers } p, q \\text{)}',
-            description: 'Irrationality proof',
+            latex: '\\left(\\frac{p}{q}\\right)^2\\ne2\\quad(p,q\\in\\mathbb{Z},\\ q\\ne0)',
+            description: 'Irrationality for integers p, q with q ≠ 0',
           },
         ],
         examples: [
@@ -710,19 +705,21 @@ export const constantsConcepts: MathConcept[] = [
           {
             problem: 'Prove √2 is irrational.',
             solution:
-              'By contradiction: Assume p/q = √2 → p² = 2q² → p is even → p=2k → 4k² = 2q² → q is even. Contradiction.',
+              'Assume √2 = p/q in lowest terms, with q ≠ 0. From p² = 2q², p is even, so p=2k. Then q²=2k² makes q even too, contradicting that p/q is in lowest terms.',
           },
         ],
         history: {
-          discoveredBy: 'Pythagorean school (Hippasus)',
-          year: 'c. 5th century BCE',
-          background:
-            'First irrational number discovered, shattering Pythagorean belief that all numbers are rational.',
+          discoveredBy: 'Unknown',
+          year: 'Date unknown',
+          background: 'The diagonal of a square is a classical example of an irrational number.',
         },
         applications: [
           { field: 'Geometry', description: 'Diagonals, squares' },
           { field: 'Engineering', description: 'A4 paper ratio (1:√2)' },
-          { field: 'Music', description: 'Semitone ratio' },
+          {
+            field: 'Music',
+            description: 'Frequency ratio of six semitones in 12-tone equal temperament',
+          },
         ],
       },
     },
@@ -745,12 +742,12 @@ export const constantsConcepts: MathConcept[] = [
     content: {
       ko: {
         definition:
-          '파이겐바움 상수 δ는 카오스 이론에서 발견된 보편 상수로, 분기점 사이의 비율이 수렴하는 값입니다.',
+          '파이겐바움 상수 δ는 로지스틱 맵 등 특정 계열에서 주기 두 배 분기점 사이의 간격 비율이 수렴하는 값입니다.',
         formulas: [
           {
             latex:
               '\\delta = \\lim_{n \\to \\infty} \\frac{a_{n-1} - a_{n-2}}{a_n - a_{n-1}} \\approx 4.6692016...',
-            description: '분기점 비율의 극한',
+            description: 'aₙ이 로지스틱 맵의 연속된 주기 두 배 분기점일 때 간격 비율의 극한',
           },
           {
             latex: '\\alpha \\approx 2.5029...',
@@ -776,12 +773,13 @@ export const constantsConcepts: MathConcept[] = [
       },
       en: {
         definition:
-          'The Feigenbaum constant δ is a universal constant in chaos theory, the limiting ratio between bifurcation points.',
+          'The Feigenbaum constant δ is the limiting ratio of intervals between successive period-doubling bifurcations in families such as the logistic map.',
         formulas: [
           {
             latex:
               '\\delta = \\lim_{n \\to \\infty} \\frac{a_{n-1} - a_{n-2}}{a_n - a_{n-1}} \\approx 4.6692016...',
-            description: 'Limit of bifurcation ratios',
+            description:
+              'Limit of interval ratios when aₙ are successive period-doubling bifurcations of the logistic map',
           },
           {
             latex: '\\alpha \\approx 2.5029...',

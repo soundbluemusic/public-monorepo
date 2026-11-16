@@ -176,7 +176,11 @@ export const cryptographyConcepts: MathConcept[] = [
           '역상 저항성: H(x) = h인 x 찾기 어려움',
         ],
         examples: ['SHA-256: 256비트 출력', 'SHA-3 (Keccak)', 'BLAKE2'],
-        applications: ['비밀번호 저장', '무결성 검증', '디지털 서명'],
+        applications: [
+          '비밀번호 저장 (Argon2id 등 전용 함수와 고유 솔트 사용)',
+          '무결성 검증',
+          '디지털 서명',
+        ],
       },
       en: {
         definition: 'One-way function converting arbitrary data to fixed-length hash value',
@@ -186,7 +190,11 @@ export const cryptographyConcepts: MathConcept[] = [
           'Preimage resistance: Hard to find x given H(x) = h',
         ],
         examples: ['SHA-256: 256-bit output', 'SHA-3 (Keccak)', 'BLAKE2'],
-        applications: ['Password storage', 'Integrity verification', 'Digital signatures'],
+        applications: [
+          'Password storage (use a dedicated function such as Argon2id with unique salts)',
+          'Integrity verification',
+          'Digital signatures',
+        ],
       },
     },
     latex: 'H: \\{0,1\\}^* \\rightarrow \\{0,1\\}^n',
@@ -213,7 +221,7 @@ export const cryptographyConcepts: MathConcept[] = [
         formulas: [
           '서명: σ = Sign(SK, m)',
           '검증: Verify(PK, m, σ) → {true, false}',
-          'RSA 서명: σ = H(m)^d mod n',
+          '교과서식 RSA 연산 예: σ = H(m)^d mod n (안전한 서명 방식 자체는 아님; 실제 서명에는 RSA-PSS 등 사용)',
         ],
         examples: ['ECDSA (비트코인)', 'RSA-PSS', 'Ed25519'],
         applications: ['전자계약', 'SSL 인증서', '소프트웨어 배포'],
@@ -223,7 +231,7 @@ export const cryptographyConcepts: MathConcept[] = [
         formulas: [
           'Sign: σ = Sign(SK, m)',
           'Verify: Verify(PK, m, σ) → {true, false}',
-          'RSA signature: σ = H(m)^d mod n',
+          'Textbook RSA operation: σ = H(m)^d mod n (not a secure signature scheme by itself; use a scheme such as RSA-PSS)',
         ],
         examples: ['ECDSA (Bitcoin)', 'RSA-PSS', 'Ed25519'],
         applications: ['E-contracts', 'SSL certificates', 'Software distribution'],
@@ -249,21 +257,22 @@ export const cryptographyConcepts: MathConcept[] = [
     difficulty: 5,
     content: {
       ko: {
-        definition: '어떤 사실을 알고 있음을 증명하되, 그 사실 자체는 공개하지 않는 증명 방식',
+        definition: '명제가 참임을 증명하면서 그 사실 외에 추가 정보를 주지 않는 증명 방식',
         formulas: [
-          '완전성: 참이면 검증자가 납득',
-          '건전성: 거짓이면 속일 수 없음',
-          '영지식성: 비밀 정보 누출 없음',
+          '완전성: 참인 명제의 정직한 증명은 높은 확률로 받아들여짐',
+          '건전성: 거짓 명제가 받아들여질 확률은 작음',
+          '영지식성: 검증자는 명제의 참 여부 외에 추가 정보를 얻지 못함',
         ],
         examples: ['색칠 그래프 문제', 'zk-SNARKs', 'zk-STARKs'],
         applications: ['프라이버시 코인', '신원 증명', '투표 시스템'],
       },
       en: {
-        definition: 'Proof method demonstrating knowledge without revealing the knowledge itself',
+        definition:
+          'A proof that reveals no additional information beyond the validity of the statement',
         formulas: [
-          'Completeness: If true, verifier is convinced',
-          'Soundness: If false, cannot be deceived',
-          'Zero-knowledge: No secret information leaked',
+          'Completeness: An honest proof of a true statement is accepted with high probability',
+          'Soundness: A false statement is accepted only with low probability',
+          'Zero-knowledge: The verifier learns nothing beyond the validity of the statement',
         ],
         examples: ['Graph coloring problem', 'zk-SNARKs', 'zk-STARKs'],
         applications: ['Privacy coins', 'Identity proof', 'Voting systems'],

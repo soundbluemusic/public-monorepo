@@ -24,11 +24,11 @@ export const musicConcepts: MathConcept[] = [
           },
           {
             latex: '\\text{완전5도} = 3:2',
-            description: '가장 협화적인 음정',
+            description: '순정률에서의 완전5도',
           },
           {
             latex: '\\text{완전4도} = 4:3',
-            description: '옥타브의 보완',
+            description: '순정률에서의 완전4도',
           },
           {
             latex: '\\text{장3도} = 5:4',
@@ -41,14 +41,15 @@ export const musicConcepts: MathConcept[] = [
             solution: 'A5 = 440 × 2 = 880Hz (한 옥타브 위)',
           },
           {
-            problem: 'A4에서 완전5도 위의 E5 주파수는?',
+            problem: 'A4 = 440Hz일 때 순정률 완전5도 위 E5의 주파수는?',
             solution: 'E5 = 440 × (3/2) = 660Hz',
           },
         ],
         history: {
           discoveredBy: '피타고라스',
           year: '기원전 6세기',
-          background: '현의 길이와 음정의 관계를 발견하여 음악과 수학의 연결을 최초로 규명',
+          background:
+            '고대 그리스의 현 길이와 음정에 관한 연구는 피타고라스 학파와 관련이 있습니다.',
         },
         applications: [
           { field: '악기 제작', description: '현 길이, 관 길이 설계' },
@@ -66,11 +67,11 @@ export const musicConcepts: MathConcept[] = [
           },
           {
             latex: '\\text{Perfect 5th} = 3:2',
-            description: 'Most consonant interval',
+            description: 'Perfect fifth in just intonation',
           },
           {
             latex: '\\text{Perfect 4th} = 4:3',
-            description: 'Complement of octave',
+            description: 'Perfect fourth in just intonation',
           },
           {
             latex: '\\text{Major 3rd} = 5:4',
@@ -83,7 +84,7 @@ export const musicConcepts: MathConcept[] = [
             solution: 'A5 = 440 × 2 = 880Hz (one octave up)',
           },
           {
-            problem: 'What is E5 (perfect 5th above A4)?',
+            problem: 'For A4 = 440Hz, what is E5 a just perfect fifth above?',
             solution: 'E5 = 440 × (3/2) = 660Hz',
           },
         ],
@@ -91,7 +92,7 @@ export const musicConcepts: MathConcept[] = [
           discoveredBy: 'Pythagoras',
           year: '6th century BCE',
           background:
-            'Discovered relationship between string length and pitch, first linking music and math',
+            'Ancient Greek studies of string length and pitch are associated with the Pythagorean school',
         },
         applications: [
           { field: 'Instrument Making', description: 'String/tube length design' },
@@ -147,7 +148,8 @@ export const musicConcepts: MathConcept[] = [
         history: {
           discoveredBy: '주재육 (중국), 시몬 스테빈 (유럽)',
           year: '1584년 (중국), 1605년 (유럽)',
-          background: '바흐의 평균율 클라비어곡집으로 널리 보급됨',
+          background:
+            '12평균율은 여러 시대를 거쳐 발전해 현대 악기 조율에 널리 쓰입니다. 바흐의 평균율은 반드시 12평균율을 뜻하지 않습니다.',
         },
         applications: [
           { field: '피아노 조율', description: '표준 조율 체계' },
@@ -185,7 +187,8 @@ export const musicConcepts: MathConcept[] = [
         history: {
           discoveredBy: 'Zhu Zaiyu (China), Simon Stevin (Europe)',
           year: '1584 (China), 1605 (Europe)',
-          background: "Popularized by Bach's Well-Tempered Clavier",
+          background:
+            '12-tone equal temperament developed over time and is widely used today. Bach’s well temperament is not necessarily equal temperament.',
         },
         applications: [
           { field: 'Piano Tuning', description: 'Standard tuning system' },
@@ -213,11 +216,11 @@ export const musicConcepts: MathConcept[] = [
     content: {
       ko: {
         definition:
-          '박자는 음악에서 시간을 분할하는 방식입니다. 분수 형태로 표기하며, 위는 박 수, 아래는 기준 음표를 나타냅니다.',
+          '박자표의 위 숫자는 한 마디에 들어가는 기준 음표의 개수이고, 아래 숫자는 그 음표의 종류입니다. 실제 박의 묶음은 박자에 따라 달라집니다.',
         formulas: [
           {
-            latex: '\\frac{\\text{박 수}}{\\text{기준 음표}}',
-            description: '박자표 형식',
+            latex: '\\frac{\\text{한 마디의 기준 음표 개수}}{\\text{기준 음표의 종류}}',
+            description: '위: 기준 음표의 개수, 아래: 음표의 종류',
           },
           {
             latex: '\\frac{4}{4} = \\text{4분음표가 한 마디에 4개}',
@@ -250,11 +253,11 @@ export const musicConcepts: MathConcept[] = [
       },
       en: {
         definition:
-          'Time signature divides time in music. Written as fraction: top = beats per measure, bottom = note value per beat.',
+          'The top number gives the number of note values in a measure, and the bottom number identifies the note value. How these notes group into beats depends on the meter.',
         formulas: [
           {
-            latex: '\\frac{\\text{beats}}{\\text{note value}}',
-            description: 'Time signature format',
+            latex: '\\frac{\\text{number of note values per measure}}{\\text{note value}}',
+            description: 'Top: number of note values; bottom: note value',
           },
           {
             latex: '\\frac{4}{4} = \\text{4 quarter notes per measure}',
@@ -493,11 +496,11 @@ export const musicConcepts: MathConcept[] = [
     content: {
       ko: {
         definition:
-          '데시벨(dB)은 소리 크기의 로그 스케일입니다. 인간의 청각이 로그적으로 인식하기 때문에 사용됩니다.',
+          '데시벨(dB)은 두 물리량의 비율을 로그로 나타내는 단위입니다. 소리의 강도나 음압 수준을 표현할 때도 쓰입니다.',
         formulas: [
           {
             latex: 'L = 10 \\log_{10}\\left(\\frac{I}{I_0}\\right) \\text{ dB}',
-            description: '음압 레벨 (강도 기준)',
+            description: '소리 강도 레벨 (강도 기준)',
           },
           {
             latex: 'L = 20 \\log_{10}\\left(\\frac{P}{P_0}\\right) \\text{ dB}',
@@ -518,7 +521,7 @@ export const musicConcepts: MathConcept[] = [
             solution: '30dB 차이 = 10^(30/10) = 1000배 강도 차이',
           },
           {
-            problem: '2개의 같은 소리가 합쳐지면?',
+            problem: '서로 상관없는 두 소리의 강도가 같고 합쳐지면?',
             solution: '강도 2배 → +3dB 증가',
           },
         ],
@@ -530,11 +533,11 @@ export const musicConcepts: MathConcept[] = [
       },
       en: {
         definition:
-          'Decibel (dB) is a logarithmic scale for sound intensity. Used because human hearing perceives logarithmically.',
+          'The decibel (dB) expresses a ratio on a logarithmic scale. It is used for sound intensity and sound pressure levels, among other quantities.',
         formulas: [
           {
             latex: 'L = 10 \\log_{10}\\left(\\frac{I}{I_0}\\right) \\text{ dB}',
-            description: 'Sound level (intensity basis)',
+            description: 'Sound intensity level',
           },
           {
             latex: 'L = 20 \\log_{10}\\left(\\frac{P}{P_0}\\right) \\text{ dB}',
@@ -555,7 +558,7 @@ export const musicConcepts: MathConcept[] = [
             solution: '30dB difference = 10^(30/10) = 1000× intensity difference',
           },
           {
-            problem: 'Two identical sounds combined?',
+            problem: 'Two uncorrelated sounds of equal intensity combined?',
             solution: '2× intensity → +3dB increase',
           },
         ],

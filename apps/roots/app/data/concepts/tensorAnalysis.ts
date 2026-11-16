@@ -11,11 +11,11 @@ export const tensorAnalysisConcepts: MathConcept[] = [
     subfield: 'tensor-analysis',
     difficulty: 4,
     content: {
-      ko: '다중선형 사상으로 정의되는 수학적 객체입니다. (p,q)-텐서는 p개의 공변 성분과 q개의 반변 성분을 가집니다.',
-      en: 'A mathematical object defined as a multilinear map. A (p,q)-tensor has p covariant and q contravariant components.',
+      ko: '다중선형 사상으로 정의되는 수학적 객체입니다. 이 사이트의 (p,q)-텐서는 반변 차수 p, 공변 차수 q를 뜻합니다.',
+      en: 'A multilinear map. Here a (p,q)-tensor has contravariant degree p and covariant degree q.',
     },
     latex:
-      'T: V^* \\times \\cdots \\times V^* \\times V \\times \\cdots \\times V \\to \\mathbb{R}',
+      'T:\\underbrace{V^*\\times\\cdots\\times V^*}_{p}\\times\\underbrace{V\\times\\cdots\\times V}_{q}\\to\\mathbb{R}',
     relations: {
       prerequisites: ['vector-space', 'linear-transformation'],
       nextTopics: ['tensor-product', 'covariant-derivative'],
@@ -79,8 +79,8 @@ export const tensorAnalysisConcepts: MathConcept[] = [
     subfield: 'tensor-analysis',
     difficulty: 4,
     content: {
-      ko: '다양체 위의 거리와 각도를 정의하는 대칭 (0,2)-텐서입니다. 지표를 올리고 내리는 데 사용됩니다.',
-      en: 'A symmetric (0,2)-tensor defining distances and angles on a manifold. Used to raise and lower indices.',
+      ko: '다양체 위의 매끄럽고 비퇴화인 대칭 (0,2)-텐서입니다. 리만 계량은 양의 정부호여서 거리와 각도를 정의하고, 부호가 섞일 수 있는 유사 리만 계량도 있습니다. 역계량은 지표를 올리는 데 사용됩니다.',
+      en: 'A smooth, nondegenerate symmetric (0,2)-tensor on a manifold. A positive-definite Riemannian metric defines distances and angles; a pseudo-Riemannian metric may be indefinite. The inverse metric raises indices.',
     },
     latex: 'ds^2 = g_{ij}dx^i dx^j, \\quad T^i = g^{ij}T_j',
     relations: {
@@ -124,8 +124,8 @@ export const tensorAnalysisConcepts: MathConcept[] = [
     subfield: 'tensor-analysis',
     difficulty: 5,
     content: {
-      ko: '곡률이 있는 공간에서 텐서장을 미분하는 방법입니다. 평행 이동과 관련되며 좌표 독립적인 미분을 제공합니다.',
-      en: 'A method of differentiating tensor fields in curved spaces. Related to parallel transport, providing coordinate-independent differentiation.',
+      ko: '다양체에서 접속을 이용해 텐서장을 미분하는 방법입니다. 평행 이동과 관련되며 좌표에 무관하게 정의됩니다.',
+      en: 'A method of differentiating tensor fields on a manifold using a connection. It is related to parallel transport and is defined independently of coordinates.',
     },
     latex: '\\nabla_i T^j_k = \\partial_i T^j_k + \\Gamma^j_{il}T^l_k - \\Gamma^l_{ik}T^j_l',
     relations: {

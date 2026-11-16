@@ -19,7 +19,7 @@ export const geometryConcepts: MathConcept[] = [
     content: {
       ko: {
         definition:
-          '점은 위치만 있고 크기가 없는 기하학적 대상이다. 선은 두 점을 잇는 가장 짧은 경로이다. 면은 길이와 너비를 가진 2차원 영역이다.',
+          '점은 위치만 있고 크기가 없는 기하학적 대상이다. 직선은 양쪽으로 끝없이 뻗는다. 두 점 사이의 선분은 두 점을 잇는 가장 짧은 경로이다. 평면은 모든 방향으로 끝없이 뻗는 평평한 2차원 공간이다.',
         formulas: [
           {
             latex: '\\text{점 } P(x, y)',
@@ -27,7 +27,7 @@ export const geometryConcepts: MathConcept[] = [
           },
           {
             latex: 'ax + by + c = 0',
-            description: '직선의 일반형',
+            description: '직선의 일반형 (a, b는 실수이며 a² + b² > 0)',
           },
         ],
         examples: [
@@ -44,7 +44,7 @@ export const geometryConcepts: MathConcept[] = [
       },
       en: {
         definition:
-          'A point has position but no size. A line is the shortest path between two points. A plane is a 2-dimensional surface with length and width.',
+          'A point has position but no size. A line extends endlessly in both directions. The line segment between two points is the shortest path between them. A plane is a flat two-dimensional space extending endlessly in all directions.',
         formulas: [
           {
             latex: '\\text{Point } P(x, y)',
@@ -52,7 +52,7 @@ export const geometryConcepts: MathConcept[] = [
           },
           {
             latex: 'ax + by + c = 0',
-            description: 'General form of a line',
+            description: 'General form of a line (real a and b, with a² + b² > 0)',
           },
         ],
         examples: [
@@ -88,7 +88,7 @@ export const geometryConcepts: MathConcept[] = [
     content: {
       ko: {
         definition:
-          '두 직선이 한 점에서 만날 때 생기는 벌어진 정도를 각이라 하고, 그 크기를 각도라 한다.',
+          '한 점에서 시작하는 두 반직선이 이루는 도형을 각이라 하고, 두 반직선이 벌어진 크기를 각도라 한다.',
         formulas: [
           {
             latex: '\\text{예각: } 0° < \\theta < 90°',
@@ -109,8 +109,8 @@ export const geometryConcepts: MathConcept[] = [
         ],
         examples: [
           {
-            problem: '두 각이 보각일 때, 한 각이 35°이면 다른 각은?',
-            solution: '보각의 합은 90°이므로\n다른 각 = 90° - 35° = 55°',
+            problem: '두 각이 여각일 때, 한 각이 35°이면 다른 각은?',
+            solution: '여각의 합은 90°이므로\n다른 각 = 90° - 35° = 55°',
             difficulty: 1,
           },
           {
@@ -126,7 +126,7 @@ export const geometryConcepts: MathConcept[] = [
       },
       en: {
         definition:
-          'An angle is formed when two lines meet at a point. The measure of an angle indicates how far apart the lines are.',
+          'An angle is formed by two rays with a common endpoint. Its measure describes how far apart the rays open.',
         formulas: [
           {
             latex: '\\text{Acute: } 0° < \\theta < 90°',
@@ -1042,19 +1042,19 @@ export const geometryConcepts: MathConcept[] = [
     content: {
       ko: {
         definition:
-          '직선의 기울어진 정도를 나타내는 값으로, 수평 변화량에 대한 수직 변화량의 비율이다.',
+          '직선의 기울어진 정도를 나타내는 값으로, 수평 변화량에 대한 수직 변화량의 비율이다. 수직선의 기울기는 정의되지 않는다.',
         formulas: [
           {
             latex: 'm = \\frac{y_2 - y_1}{x_2 - x_1} = \\frac{\\Delta y}{\\Delta x}',
-            description: '두 점을 지나는 직선의 기울기',
+            description: '두 점을 지나는 직선의 기울기 (x₂ ≠ x₁)',
           },
           {
             latex: 'y = mx + b',
-            description: '기울기-절편 형태의 직선 방정식',
+            description: '수직선이 아닌 직선의 기울기-절편 형태',
           },
           {
             latex: 'm_1 \\cdot m_2 = -1',
-            description: '두 직선이 수직일 조건',
+            description: '기울기가 정의된 두 직선이 수직일 조건. 수평선과 수직선도 서로 수직이다.',
           },
         ],
         examples: [
@@ -1076,19 +1076,20 @@ export const geometryConcepts: MathConcept[] = [
       },
       en: {
         definition:
-          'A measure of how steep a line is, calculated as the ratio of vertical change to horizontal change.',
+          'A measure of how steep a line is, calculated as the ratio of vertical change to horizontal change. A vertical line has no defined slope.',
         formulas: [
           {
             latex: 'm = \\frac{y_2 - y_1}{x_2 - x_1} = \\frac{\\Delta y}{\\Delta x}',
-            description: 'Slope of a line through two points',
+            description: 'Slope of a line through two points (x₂ ≠ x₁)',
           },
           {
             latex: 'y = mx + b',
-            description: 'Slope-intercept form of a line',
+            description: 'Slope-intercept form of a nonvertical line',
           },
           {
             latex: 'm_1 \\cdot m_2 = -1',
-            description: 'Condition for perpendicular lines',
+            description:
+              'Condition for perpendicular lines with defined slopes. A horizontal line and a vertical line are also perpendicular.',
           },
         ],
         examples: [
@@ -1252,7 +1253,7 @@ export const geometryConcepts: MathConcept[] = [
           },
           {
             latex: '\\text{원기둥: } V = \\pi r^2 h, \\quad S = 2\\pi r(r + h)',
-            description: '밑면 반지름 r, 높이 h인 원기둥',
+            description: '밑면 반지름 r, 높이 h인 직원기둥',
           },
           {
             latex: '\\text{원뿔: } V = \\frac{1}{3}\\pi r^2 h',
@@ -1293,7 +1294,7 @@ export const geometryConcepts: MathConcept[] = [
           },
           {
             latex: '\\text{Cylinder: } V = \\pi r^2 h, \\quad S = 2\\pi r(r + h)',
-            description: 'Cylinder with radius r, height h',
+            description: 'Right circular cylinder with radius r and height h',
           },
           {
             latex: '\\text{Cone: } V = \\frac{1}{3}\\pi r^2 h',

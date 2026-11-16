@@ -6,6 +6,7 @@ import {
   lightConceptsByField,
 } from '../../../../apps/roots/app/data/concepts';
 import { filterConcepts } from '../../../../apps/roots/app/lib/concept-filters';
+import { fields } from '../../../../apps/roots/app/data/fields';
 
 describe('Roots concept integrity', () => {
   it('lists each route once and uses the same content as its detail page', () => {
@@ -27,5 +28,14 @@ describe('Roots concept integrity', () => {
         'prime-numbers',
       );
     }
+  });
+
+  it('places every concept in at least one visible field', () => {
+    const visibleIds = new Set(
+      fields.flatMap(({ id }) => (conceptsByField.get(id) ?? []).map((concept) => concept.id)),
+    );
+    expect(allConcepts.filter(({ id }) => !visibleIds.has(id)).map(({ id }) => id)).toEqual([]);
+    expect(conceptsByField.get('algebra')?.map(({ id }) => id)).toContain('group-theory');
+    expect(conceptsByField.get('probability')?.map(({ id }) => id)).toContain('confidence-interval');
   });
 });

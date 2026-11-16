@@ -2,7 +2,7 @@
 import katex from 'katex';
 import { conceptsById, getConceptById } from '../../../app/data/concepts';
 import { difficultyLabels } from '../../../app/data/types';
-import { fields } from '../../../app/data/fields';
+import { fieldParents, fields } from '../../../app/data/fields';
 import AppShell from '../AppShell.astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
@@ -20,7 +20,8 @@ const concept = getConceptById(conceptId);
 if (!concept) return new Response(null, { status: 404 });
 
 const name = isKo ? concept.name.ko : concept.name.en;
-const field = fields.find((f) => f.id === concept.field);
+const field = fields.find((f) => f.id === concept.field)
+  ?? fields.find((f) => f.id === fieldParents[concept.field]?.[0]);
 const fieldName = field ? (isKo ? field.name.ko : field.name.en) : concept.field;
 const diffLabel = difficultyLabels[concept.difficulty]?.[locale] ?? String(concept.difficulty);
 

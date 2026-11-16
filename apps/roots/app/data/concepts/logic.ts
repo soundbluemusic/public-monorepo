@@ -131,7 +131,7 @@ export const logicConcepts: MathConcept[] = [
           },
           {
             problem: "'모든 자연수에는 더 큰 소수가 있다'를 표현하세요.",
-            solution: '∀n ∃p (Prime(p) ∧ p > n)',
+            solution: '∀n ∈ ℕ, ∃p ∈ ℕ (Prime(p) ∧ p > n)',
           },
         ],
         applications: [
@@ -164,7 +164,7 @@ export const logicConcepts: MathConcept[] = [
           },
           {
             problem: "Express 'For every natural number, there's a larger prime'.",
-            solution: '∀n ∃p (Prime(p) ∧ p > n)',
+            solution: '∀n ∈ ℕ, ∃p ∈ ℕ (Prime(p) ∧ p > n)',
           },
         ],
         applications: [
@@ -276,7 +276,7 @@ export const logicConcepts: MathConcept[] = [
         formulas: [
           {
             latex:
-              'P(1) \\land (\\forall k \\, (P(k) \\to P(k+1))) \\Rightarrow \\forall n \\, P(n)',
+              'P(1) \\land (\\forall k\\geq 1 \\, (P(k) \\to P(k+1))) \\Rightarrow \\forall n\\geq 1 \\, P(n)',
             description: '수학적 귀납법의 원리',
           },
         ],
@@ -291,7 +291,7 @@ export const logicConcepts: MathConcept[] = [
           discoveredBy: '파스칼, 페르마',
           year: '17세기',
           background:
-            '귀납법의 원리는 자연수의 정의에 내재되어 있으며, 명시적으로 사용된 것은 17세기부터입니다.',
+            '파스칼과 페르마는 17세기에 귀납법을 사용했습니다. 귀납적 논증의 역사는 그보다 오래되었습니다.',
         },
         applications: [
           { field: '수학', description: '급수 공식, 부등식 증명' },
@@ -305,7 +305,7 @@ export const logicConcepts: MathConcept[] = [
         formulas: [
           {
             latex:
-              'P(1) \\land (\\forall k \\, (P(k) \\to P(k+1))) \\Rightarrow \\forall n \\, P(n)',
+              'P(1) \\land (\\forall k\\geq 1 \\, (P(k) \\to P(k+1))) \\Rightarrow \\forall n\\geq 1 \\, P(n)',
             description: 'Principle of mathematical induction',
           },
         ],
@@ -320,7 +320,7 @@ export const logicConcepts: MathConcept[] = [
           discoveredBy: 'Pascal, Fermat',
           year: '17th century',
           background:
-            'The principle is inherent in natural number definition, explicitly used from 17th century.',
+            'Pascal and Fermat used induction in the 17th century. Inductive arguments have a longer history.',
         },
         applications: [
           { field: 'Mathematics', description: 'Series formulas, inequality proofs' },
@@ -348,22 +348,22 @@ export const logicConcepts: MathConcept[] = [
     content: {
       ko: {
         definition:
-          '괴델의 불완전성 정리는 충분히 강력한 수학 체계에서는 증명도 반증도 할 수 없는 참인 명제가 존재함을 보여줍니다.',
+          '일관적이고 효과적으로 공리화되며 산술을 충분히 표현하는 체계에는 증명도 반증도 할 수 없는 문장이 있습니다. 이런 체계는 적절한 조건 아래 자신의 일관성도 증명할 수 없습니다.',
         formulas: [
           {
             latex: '\\text{Con}(F) \\to \\exists G \\, (F \\nvdash G \\land F \\nvdash \\neg G)',
-            description: '제1 불완전성 정리 (비형식적)',
+            description: '제1 불완전성 정리: F는 효과적으로 공리화되고 충분한 산술을 포함',
           },
           {
             latex: '\\text{Con}(F) \\to F \\nvdash \\text{Con}(F)',
-            description: '제2 불완전성 정리',
+            description: '제2 불완전성 정리: F는 적절히 공리화되고 충분한 산술을 포함',
           },
         ],
         examples: [
           {
             problem: '괴델 문장의 아이디어를 설명하세요.',
             solution:
-              "'이 문장은 증명될 수 없다'를 형식화. 만약 증명 가능하면 거짓인 것이 증명됨(모순). 증명 불가능하면 참이지만 증명 불가.",
+              '괴델 문장은 자신의 증명 불가능성을 산술로 표현합니다. 적절한 일관성 조건 아래 이 문장은 증명할 수 없습니다. 반증 불가능성에는 추가 조건 또는 다른 구성법이 필요합니다.',
           },
         ],
         history: {
@@ -380,22 +380,24 @@ export const logicConcepts: MathConcept[] = [
       },
       en: {
         definition:
-          "Gödel's incompleteness theorems show that in any sufficiently powerful mathematical system, there exist true statements that cannot be proved or disproved.",
+          'A consistent, effectively axiomatized system capable of expressing enough arithmetic has a sentence it can neither prove nor disprove. Under appropriate conditions, it also cannot prove its own consistency.',
         formulas: [
           {
             latex: '\\text{Con}(F) \\to \\exists G \\, (F \\nvdash G \\land F \\nvdash \\neg G)',
-            description: 'First incompleteness theorem (informal)',
+            description:
+              'First incompleteness theorem: F is effectively axiomatized and contains sufficient arithmetic',
           },
           {
             latex: '\\text{Con}(F) \\to F \\nvdash \\text{Con}(F)',
-            description: 'Second incompleteness theorem',
+            description:
+              'Second incompleteness theorem: F is suitably axiomatized and contains sufficient arithmetic',
           },
         ],
         examples: [
           {
             problem: 'Explain the idea of Gödel sentence.',
             solution:
-              "Formalize 'This statement is unprovable'. If provable, proves a false statement (contradiction). If unprovable, it's true but unprovable.",
+              'A Gödel sentence expresses its own unprovability in arithmetic. Under suitable consistency assumptions it is unprovable; unrefutability needs an additional assumption or a different construction.',
           },
         ],
         history: {

@@ -130,7 +130,8 @@ export const differentialGeometryConcepts: MathConcept[] = [
     difficulty: 4,
     content: {
       ko: {
-        definition: '곡면이나 다양체에서 두 점 사이의 최단 경로',
+        definition:
+          '곡면이나 다양체에서 곡선의 속도 방향이 가능한 한 곧게 유지되는 경로입니다. 리만 다양체에서는 충분히 짧은 부분이 거리를 최소화하지만 전체 경로가 항상 최단인 것은 아닙니다.',
         formulas: [
           '측지선 방정식: d²x^k/dt² + Γ^k_{ij} dx^i/dt dx^j/dt = 0',
           '크리스토펠 기호: Γ^k_{ij}',
@@ -139,7 +140,8 @@ export const differentialGeometryConcepts: MathConcept[] = [
         applications: ['항공 경로', '일반상대성이론', '컴퓨터 그래픽스'],
       },
       en: {
-        definition: 'Shortest path between two points on a surface or manifold',
+        definition:
+          'A curve whose velocity is parallel transported along itself. On a Riemannian manifold, sufficiently short segments minimize distance, but the full path need not be shortest.',
         formulas: [
           'Geodesic equation: d²x^k/dt² + Γ^k_{ij} dx^i/dt dx^j/dt = 0',
           'Christoffel symbols: Γ^k_{ij}',
@@ -231,7 +233,8 @@ export const differentialGeometryConcepts: MathConcept[] = [
         applications: ['Stokes theorem', 'Electromagnetism', 'de Rham cohomology'],
       },
     },
-    latex: 'd\\omega = \\sum_i \\frac{\\partial \\omega}{\\partial x^i} dx^i \\wedge \\omega',
+    latex:
+      '\\omega = \\sum_I f_I dx^I, \\quad d\\omega = \\sum_{i,I} \\frac{\\partial f_I}{\\partial x^i} dx^i \\wedge dx^I',
     relations: {
       prerequisites: ['manifold', 'multivariable-calculus'],
       nextTopics: ['de-rham-cohomology', 'stokes-theorem'],
@@ -251,24 +254,29 @@ export const differentialGeometryConcepts: MathConcept[] = [
     difficulty: 5,
     content: {
       ko: {
-        definition: '군이면서 동시에 미분 다양체인 구조. 연속적인 대칭을 기술',
-        formulas: ['군 연산: (g,h) ↦ gh, g ↦ g⁻¹ 가 매끄러움', '리 대수: T_e G', '[X,Y] = XY - YX'],
+        definition:
+          '군이면서 매끄러운 다양체이고, 곱셈과 역원 연산도 매끄러운 구조. 연속적인 대칭을 기술',
+        formulas: [
+          '군 연산: (g,h) ↦ gh, g ↦ g⁻¹ 가 매끄러움',
+          '리 대수: T_e G',
+          '행렬 리 대수에서 [X,Y] = XY - YX',
+        ],
         examples: ['GL(n,ℝ)', 'SO(n)', 'SU(n)', 'SL(n,ℝ)'],
         applications: ['물리학 대칭', '미분방정식', '양자역학'],
       },
       en: {
         definition:
-          'Structure that is both a group and differentiable manifold. Describes continuous symmetries',
+          'A group and smooth manifold whose multiplication and inversion are smooth. Describes continuous symmetries',
         formulas: [
           'Group ops: (g,h) ↦ gh, g ↦ g⁻¹ are smooth',
           'Lie algebra: T_e G',
-          '[X,Y] = XY - YX',
+          'For matrix Lie algebras: [X,Y] = XY - YX',
         ],
         examples: ['GL(n,ℝ)', 'SO(n)', 'SU(n)', 'SL(n,ℝ)'],
         applications: ['Physics symmetry', 'Differential equations', 'Quantum mechanics'],
       },
     },
-    latex: '[X, Y] = XY - YX',
+    latex: '[X, Y] = XY - YX \\quad (\\text{matrix Lie algebra})',
     relations: {
       prerequisites: ['group-theory', 'manifold'],
       nextTopics: ['lie-algebra', 'representation-theory'],
@@ -289,13 +297,21 @@ export const differentialGeometryConcepts: MathConcept[] = [
     content: {
       ko: {
         definition: '곡면의 내재적 곡률. 두 주곡률의 곱',
-        formulas: ['K = κ₁ · κ₂', '가우스-보네: ∫∫_S K dA = 2πχ(S)', 'K = (LN - M²)/(EG - F²)'],
+        formulas: [
+          'K = κ₁ · κ₂',
+          '가우스-보네: 경계 없는 닫힌 곡면에서 ∫∫_S K dA = 2πχ(S)',
+          'K = (LN - M²)/(EG - F²)',
+        ],
         examples: ['평면: K = 0', '구면: K = 1/r²', '안장: K < 0'],
         applications: ['지도 제작', '곡면 분류', '토폴로지'],
       },
       en: {
         definition: 'Intrinsic curvature of surface. Product of principal curvatures',
-        formulas: ['K = κ₁ · κ₂', 'Gauss-Bonnet: ∫∫_S K dA = 2πχ(S)', 'K = (LN - M²)/(EG - F²)'],
+        formulas: [
+          'K = κ₁ · κ₂',
+          'Gauss-Bonnet: ∫∫_S K dA = 2πχ(S) for a closed surface without boundary',
+          'K = (LN - M²)/(EG - F²)',
+        ],
         examples: ['Plane: K = 0', 'Sphere: K = 1/r²', 'Saddle: K < 0'],
         applications: ['Cartography', 'Surface classification', 'Topology'],
       },

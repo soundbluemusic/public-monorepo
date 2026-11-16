@@ -13,6 +13,7 @@
  * import { lightConcepts, getConceptById } from '@/data/concepts';
  * ```
  */
+import { fieldParents } from '../fields';
 import type { DifficultyLevel, MathConcept, MathField } from '../types';
 
 // ============================================================================
@@ -166,9 +167,11 @@ export const conceptsByField = new Map<string, MathConcept[]>();
 for (const record of conceptRecords) {
   const concept = conceptsById.get(record.id);
   if (!concept) throw new Error(`Missing canonical concept: ${record.id}`);
-  const list = conceptsByField.get(record.field) || [];
-  if (!list.includes(concept)) list.push(concept);
-  conceptsByField.set(record.field, list);
+  for (const field of [record.field, ...(fieldParents[record.field] ?? [])]) {
+    const list = conceptsByField.get(field) || [];
+    if (!list.includes(concept)) list.push(concept);
+    conceptsByField.set(field, list);
+  }
 }
 
 /** Subfield → Concept[] 맵 (O(1) 조회용) */

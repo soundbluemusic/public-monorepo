@@ -51,7 +51,7 @@ export const pdeConcepts: MathConcept[] = [
         definition: '파동의 전파를 기술하는 쌍곡선형 편미분방정식',
         formulas: [
           '∂²u/∂t² = c²∇²u',
-          '달랑베르 해: u = f(x-ct) + g(x+ct)',
+          '1차원 파동 방정식의 달랑베르 해: u = f(x-ct) + g(x+ct)',
           '특성선: x ± ct = const',
         ],
         examples: ['현의 진동', '음파', '전자기파'],
@@ -61,7 +61,7 @@ export const pdeConcepts: MathConcept[] = [
         definition: 'Hyperbolic PDE describing wave propagation',
         formulas: [
           '∂²u/∂t² = c²∇²u',
-          "d'Alembert: u = f(x-ct) + g(x+ct)",
+          "1D d'Alembert solution: u = f(x-ct) + g(x+ct)",
           'Characteristics: x ± ct = const',
         ],
         examples: ['String vibration', 'Sound waves', 'EM waves'],
@@ -122,7 +122,7 @@ export const pdeConcepts: MathConcept[] = [
       ko: {
         definition: '점성 유체의 운동을 기술하는 비선형 편미분방정식',
         formulas: [
-          'ρ(∂v/∂t + v·∇v) = -∇p + μ∇²v + f',
+          '밀도와 점성이 일정한 비압축성 유체: ρ(∂v/∂t + v·∇v) = -∇p + μ∇²v + f',
           '∇·v = 0 (비압축성)',
           '레이놀즈 수: Re = ρvL/μ',
         ],
@@ -132,7 +132,7 @@ export const pdeConcepts: MathConcept[] = [
       en: {
         definition: 'Nonlinear PDE describing viscous fluid motion',
         formulas: [
-          'ρ(∂v/∂t + v·∇v) = -∇p + μ∇²v + f',
+          'Incompressible fluid with constant density and viscosity: ρ(∂v/∂t + v·∇v) = -∇p + μ∇²v + f',
           '∇·v = 0 (incompressible)',
           'Reynolds: Re = ρvL/μ',
         ],
@@ -141,7 +141,7 @@ export const pdeConcepts: MathConcept[] = [
       },
     },
     latex:
-      '\\rho\\left(\\frac{\\partial \\mathbf{v}}{\\partial t} + \\mathbf{v} \\cdot \\nabla\\mathbf{v}\\right) = -\\nabla p + \\mu\\nabla^2\\mathbf{v}',
+      '\\rho\\left(\\frac{\\partial \\mathbf{v}}{\\partial t} + \\mathbf{v} \\cdot \\nabla\\mathbf{v}\\right) = -\\nabla p + \\mu\\nabla^2\\mathbf{v} + \\mathbf f,\\quad \\nabla\\cdot\\mathbf v=0',
     relations: {
       prerequisites: ['vector-calculus', 'fluid-dynamics'],
       nextTopics: ['turbulence', 'cfd'],
@@ -198,7 +198,11 @@ export const pdeConcepts: MathConcept[] = [
     content: {
       ko: {
         definition: '점 소스에 대한 응답. 선형 미분방정식의 해를 적분으로 표현',
-        formulas: ['LG(x,ξ) = δ(x-ξ)', '해: u(x) = ∫G(x,ξ)f(ξ)dξ', '상반정리: G(x,ξ) = G(ξ,x)'],
+        formulas: [
+          'LG(x,ξ) = δ(x-ξ)',
+          '해: u(x) = ∫G(x,ξ)f(ξ)dξ',
+          '상반정리: 적절한 자기수반 연산자와 경계 조건에서 G(x,ξ) = G(ξ,x)',
+        ],
         examples: ['포아송 방정식', '열 방정식', '파동 방정식'],
         applications: ['전자기학', '양자역학', '음향학'],
       },
@@ -207,7 +211,7 @@ export const pdeConcepts: MathConcept[] = [
         formulas: [
           'LG(x,ξ) = δ(x-ξ)',
           'Solution: u(x) = ∫G(x,ξ)f(ξ)dξ',
-          'Reciprocity: G(x,ξ) = G(ξ,x)',
+          'Reciprocity: G(x,ξ) = G(ξ,x) for appropriate self-adjoint operators and boundary conditions',
         ],
         examples: ['Poisson equation', 'Heat equation', 'Wave equation'],
         applications: ['Electromagnetism', 'Quantum mechanics', 'Acoustics'],
@@ -237,7 +241,7 @@ export const pdeConcepts: MathConcept[] = [
         formulas: [
           '∂u/∂x ≈ (u_{i+1} - u_{i-1})/(2Δx)',
           '∂²u/∂x² ≈ (u_{i+1} - 2uᵢ + u_{i-1})/(Δx)²',
-          'CFL 조건: cΔt/Δx ≤ 1',
+          '1차원 파동 방정식의 표준 명시적 중심 차분법에서 CFL 조건: cΔt/Δx ≤ 1',
         ],
         examples: ['열 방정식 (명시적/암시적)', '파동 방정식'],
         applications: ['CFD', '기상 예측', '금융'],
@@ -247,7 +251,7 @@ export const pdeConcepts: MathConcept[] = [
         formulas: [
           '∂u/∂x ≈ (u_{i+1} - u_{i-1})/(2Δx)',
           '∂²u/∂x² ≈ (u_{i+1} - 2uᵢ + u_{i-1})/(Δx)²',
-          'CFL condition: cΔt/Δx ≤ 1',
+          'CFL condition for the standard explicit centered scheme for the 1D wave equation: cΔt/Δx ≤ 1',
         ],
         examples: ['Heat equation (explicit/implicit)', 'Wave equation'],
         applications: ['CFD', 'Weather prediction', 'Finance'],
@@ -274,15 +278,21 @@ export const pdeConcepts: MathConcept[] = [
     difficulty: 3,
     content: {
       ko: {
-        definition: 'PDE의 유일한 해를 결정하기 위한 경계에서의 조건',
+        definition:
+          '편미분방정식에서 영역의 경계에 부과하는 조건. 적절한 초기 조건 등과 함께 해를 결정하는 데 쓰이지만, 경계 조건만으로 항상 유일성이 보장되지는 않습니다.',
         formulas: ['디리클레: u = g on ∂Ω', '노이만: ∂u/∂n = h on ∂Ω', '로빈: αu + β∂u/∂n = g'],
-        examples: ['고정 끝 (Dirichlet)', '단열 (Neumann)', '복사 (Robin)'],
+        examples: ['고정 끝 (Dirichlet)', '단열 (Neumann)', '대류 열전달 (Robin)'],
         applications: ['물리 모델링', '공학', '수치해석'],
       },
       en: {
-        definition: 'Conditions at boundary to determine unique solution of PDE',
+        definition:
+          'Conditions imposed at the boundary of a PDE domain. They help determine a solution with other required conditions, but boundary conditions alone do not always guarantee uniqueness.',
         formulas: ['Dirichlet: u = g on ∂Ω', 'Neumann: ∂u/∂n = h on ∂Ω', 'Robin: αu + β∂u/∂n = g'],
-        examples: ['Fixed end (Dirichlet)', 'Insulated (Neumann)', 'Radiating (Robin)'],
+        examples: [
+          'Fixed end (Dirichlet)',
+          'Insulated (Neumann)',
+          'Convective heat transfer (Robin)',
+        ],
         applications: ['Physics modeling', 'Engineering', 'Numerical analysis'],
       },
     },

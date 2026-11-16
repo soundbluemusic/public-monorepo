@@ -171,11 +171,12 @@ export const dynamicsConcepts: MathConcept[] = [
         formulas: [
           {
             latex: 'D = \\frac{\\log N}{\\log s}',
-            description: '프랙탈 차원 (N: 조각 수, s: 배율)',
+            description:
+              '같은 비율 1/s로 축소한 N개 조각이 적절히 분리된 자기유사 집합의 차원 (s > 1)',
           },
           {
             latex: 'z_{n+1} = z_n^2 + c',
-            description: '만델브로 집합의 점화식',
+            description: '만델브로 집합: z₀ = 0에서 시작한 수열이 유계인 c의 집합',
           },
         ],
         examples: [
@@ -184,7 +185,7 @@ export const dynamicsConcepts: MathConcept[] = [
             solution: '매 단계 3조각, 배율 2. D = log(3)/log(2) ≈ 1.585',
           },
           {
-            problem: '코흐 눈송이의 차원은?',
+            problem: '코흐 눈송이의 경계 곡선의 차원은?',
             solution: '매 단계 4조각, 배율 3. D = log(4)/log(3) ≈ 1.262',
           },
         ],
@@ -205,11 +206,13 @@ export const dynamicsConcepts: MathConcept[] = [
         formulas: [
           {
             latex: 'D = \\frac{\\log N}{\\log s}',
-            description: 'Fractal dimension (N: pieces, s: scale)',
+            description:
+              'Dimension of a self-similar set of N suitably separated pieces, each scaled by 1/s (s > 1)',
           },
           {
             latex: 'z_{n+1} = z_n^2 + c',
-            description: 'Mandelbrot set iteration',
+            description:
+              'Mandelbrot set: values of c for which the sequence starting at z₀ = 0 remains bounded',
           },
         ],
         examples: [
@@ -218,7 +221,7 @@ export const dynamicsConcepts: MathConcept[] = [
             solution: 'Each step: 3 pieces, scale 2. D = log(3)/log(2) ≈ 1.585',
           },
           {
-            problem: 'What is the dimension of Koch snowflake?',
+            problem: 'What is the dimension of the boundary of the Koch snowflake?',
             solution: 'Each step: 4 pieces, scale 3. D = log(4)/log(3) ≈ 1.262',
           },
         ],
@@ -268,7 +271,7 @@ export const dynamicsConcepts: MathConcept[] = [
           {
             problem: 'f(x) = x² - x - 1의 고정점과 안정성을 분석하세요.',
             solution:
-              "x = x² - x - 1에서 x² - 2x - 1 = 0, x = 1 ± √2. f'(x) = 2x - 1. |f'(1+√2)| = |1+2√2| > 1 (불안정), |f'(1-√2)| = |1-2√2| < 1 (안정)",
+              "x² - 2x - 1 = 0이므로 x = 1 ± √2입니다. f'(x) = 2x - 1이고, |1 + 2√2| > 1, |1 - 2√2| ≈ 1.828 > 1입니다. 두 고정점 모두 불안정합니다.",
           },
         ],
         applications: [
@@ -294,7 +297,7 @@ export const dynamicsConcepts: MathConcept[] = [
           {
             problem: 'Analyze fixed points and stability of f(x) = x² - x - 1.',
             solution:
-              "x = x² - x - 1 gives x² - 2x - 1 = 0, x = 1 ± √2. f'(x) = 2x - 1. |f'(1+√2)| = |1+2√2| > 1 (unstable), |f'(1-√2)| = |1-2√2| < 1 (stable)",
+              "The fixed points are x = 1 ± √2. Since f'(x) = 2x - 1, |1 + 2√2| > 1 and |1 - 2√2| ≈ 1.828 > 1. Both are unstable.",
           },
         ],
         applications: [
@@ -334,7 +337,7 @@ export const dynamicsConcepts: MathConcept[] = [
           {
             problem: '로지스틱 맵의 분기 과정을 설명하세요.',
             solution:
-              'r < 1: 소멸, r = 1: 초월분기, 1 < r < 3: 하나의 안정점, r = 3: 주기배가 분기 시작, r ≈ 3.57: 카오스 시작',
+              '0 < r < 1: [0,1]의 초기값은 0으로 수렴, r = 1: 교환 분기, 1 < r < 3: 0이 아닌 안정 고정점, r = 3: 주기배가 분기 시작, r ≈ 3.57: 주기배가가 누적되는 지점',
           },
         ],
         applications: [
@@ -356,7 +359,7 @@ export const dynamicsConcepts: MathConcept[] = [
           {
             problem: 'Describe the bifurcation process in logistic map.',
             solution:
-              'r < 1: extinction, r = 1: transcritical, 1 < r < 3: one stable point, r = 3: period doubling begins, r ≈ 3.57: chaos onset',
+              'For 0 < r < 1, initial values in [0,1] converge to 0; at r = 1 there is a transcritical bifurcation; for 1 < r < 3 a nonzero fixed point is stable; at r = 3 period doubling begins; r ≈ 3.57 is the accumulation point of period doubling',
           },
         ],
         applications: [
@@ -389,7 +392,7 @@ export const dynamicsConcepts: MathConcept[] = [
         formulas: [
           {
             latex: '\\frac{dy}{dx} = f(x, y)',
-            description: '1차 ODE의 일반형',
+            description: '도함수에 대해 푼 1차 ODE',
           },
           {
             latex: "y'' + p(x)y' + q(x)y = g(x)",
@@ -397,7 +400,7 @@ export const dynamicsConcepts: MathConcept[] = [
           },
           {
             latex: "\\frac{d^n y}{dx^n} = F(x, y, y', ..., y^{(n-1)})",
-            description: 'n차 ODE',
+            description: '최고차 도함수에 대해 푼 n차 ODE',
           },
         ],
         examples: [
@@ -427,7 +430,7 @@ export const dynamicsConcepts: MathConcept[] = [
         formulas: [
           {
             latex: '\\frac{dy}{dx} = f(x, y)',
-            description: 'General form of first-order ODE',
+            description: 'First-order ODE solved for the derivative',
           },
           {
             latex: "y'' + p(x)y' + q(x)y = g(x)",
@@ -435,7 +438,7 @@ export const dynamicsConcepts: MathConcept[] = [
           },
           {
             latex: "\\frac{d^n y}{dx^n} = F(x, y, y', ..., y^{(n-1)})",
-            description: 'nth-order ODE',
+            description: 'nth-order ODE solved for the highest derivative',
           },
         ],
         examples: [
@@ -580,7 +583,7 @@ export const dynamicsConcepts: MathConcept[] = [
         formulas: [
           {
             latex: '(q_1, ..., q_n, p_1, ..., p_n) \\in \\mathbb{R}^{2n}',
-            description: 'n 자유도 시스템의 위상공간 좌표',
+            description: '좌표와 운동량이 실수인 n 자유도 시스템의 위상공간 좌표 예',
           },
           {
             latex:
@@ -592,7 +595,7 @@ export const dynamicsConcepts: MathConcept[] = [
           {
             problem: '단진자의 위상공간을 그리세요.',
             solution:
-              'x축: 각도 θ, y축: 각속도 θ̇. 작은 진동은 타원 궤적, 큰 진동은 물결 모양, 회전 운동은 열린 곡선입니다.',
+              '마찰이 없는 단진자에서 x축을 각도 θ, y축을 각속도 θ̇로 잡습니다. 작은 진동의 궤적은 타원에 가깝습니다. 각도를 주기적으로 접지 않고 펼쳐 그리면 회전 운동은 열린 곡선으로 나타납니다.',
           },
           {
             problem: '조화 진동자의 위상공간 궤적은?',
@@ -618,7 +621,8 @@ export const dynamicsConcepts: MathConcept[] = [
         formulas: [
           {
             latex: '(q_1, ..., q_n, p_1, ..., p_n) \\in \\mathbb{R}^{2n}',
-            description: 'Phase space coordinates for n-degree system',
+            description:
+              'Example of phase space coordinates for n degrees of freedom with real positions and momenta',
           },
           {
             latex:
@@ -630,7 +634,7 @@ export const dynamicsConcepts: MathConcept[] = [
           {
             problem: 'Draw phase space for simple pendulum.',
             solution:
-              'x-axis: angle θ, y-axis: angular velocity θ̇. Small oscillations: ellipses, large: wave-like, rotation: open curves.',
+              'For a frictionless pendulum, use angle θ and angular velocity θ̇ as axes. Small oscillations give approximately elliptical trajectories. Rotation appears as an open curve when the angle is unwrapped rather than taken modulo one turn.',
           },
           {
             problem: 'What is the phase space trajectory of harmonic oscillator?',

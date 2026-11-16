@@ -32,7 +32,7 @@ export const discreteConcepts: MathConcept[] = [
           },
           {
             latex: '|A \\cup B| = |A| + |B| - |A \\cap B|',
-            description: '포함-배제 원리',
+            description: '유한 집합 A, B의 포함-배제 원리',
           },
         ],
         examples: [
@@ -71,7 +71,7 @@ export const discreteConcepts: MathConcept[] = [
           },
           {
             latex: '|A \\cup B| = |A| + |B| - |A \\cap B|',
-            description: 'Inclusion-exclusion principle',
+            description: 'Inclusion-exclusion for finite sets A and B',
           },
         ],
         examples: [
@@ -286,7 +286,7 @@ export const discreteConcepts: MathConcept[] = [
           },
           {
             latex: '|V| - |E| + |F| = 2',
-            description: '오일러 공식 (평면 그래프)',
+            description: '오일러 공식 (연결된 평면 그래프의 평면 표현)',
           },
         ],
         examples: [
@@ -317,7 +317,7 @@ export const discreteConcepts: MathConcept[] = [
           },
           {
             latex: '|V| - |E| + |F| = 2',
-            description: "Euler's formula (planar graphs)",
+            description: 'Euler formula for a connected plane graph',
           },
         ],
         examples: [
@@ -709,7 +709,7 @@ export const discreteConcepts: MathConcept[] = [
           },
           {
             latex: '\\text{leaves} \\geq 2',
-            description: '트리는 최소 2개의 잎(리프) 노드를 가짐',
+            description: '정점이 2개 이상인 유한 트리의 잎은 최소 2개',
           },
         ],
         examples: [
@@ -735,7 +735,7 @@ export const discreteConcepts: MathConcept[] = [
           },
           {
             latex: '\\text{leaves} \\geq 2',
-            description: 'A tree has at least 2 leaf nodes',
+            description: 'A finite tree with at least 2 vertices has at least 2 leaves',
           },
         ],
         examples: [
@@ -774,11 +774,11 @@ export const discreteConcepts: MathConcept[] = [
         formulas: [
           {
             latex: '(x + y)^n = \\sum_{k=0}^{n} \\binom{n}{k} x^{n-k} y^k',
-            description: '이항정리',
+            description: '이항정리 (n은 0 이상의 정수)',
           },
           {
             latex: '\\binom{n}{0} + \\binom{n}{1} + \\cdots + \\binom{n}{n} = 2^n',
-            description: '이항계수의 합',
+            description: '이항계수의 합 (n은 0 이상의 정수)',
           },
         ],
         examples: [
@@ -789,9 +789,10 @@ export const discreteConcepts: MathConcept[] = [
           },
         ],
         history: {
-          discoveredBy: '아이작 뉴턴',
-          year: '17세기',
-          background: '뉴턴이 음수/분수 지수로 일반화했습니다.',
+          discoveredBy: '여러 수학자; 아이작 뉴턴이 일반화',
+          year: '정수 지수 공식은 뉴턴 이전; 일반화는 17세기',
+          background:
+            '이항계수와 정수 지수 공식은 뉴턴 이전에 알려졌으며, 뉴턴이 음수와 분수 지수로 일반화했습니다.',
         },
         applications: [
           { field: '확률론', description: '이항분포 유도' },
@@ -804,11 +805,11 @@ export const discreteConcepts: MathConcept[] = [
         formulas: [
           {
             latex: '(x + y)^n = \\sum_{k=0}^{n} \\binom{n}{k} x^{n-k} y^k',
-            description: 'Binomial theorem',
+            description: 'Binomial theorem (n is a nonnegative integer)',
           },
           {
             latex: '\\binom{n}{0} + \\binom{n}{1} + \\cdots + \\binom{n}{n} = 2^n',
-            description: 'Sum of binomial coefficients',
+            description: 'Sum of binomial coefficients (n is a nonnegative integer)',
           },
         ],
         examples: [
@@ -820,9 +821,10 @@ export const discreteConcepts: MathConcept[] = [
           },
         ],
         history: {
-          discoveredBy: 'Isaac Newton',
-          year: '17th century',
-          background: 'Newton generalized to negative/fractional exponents.',
+          discoveredBy: 'Various mathematicians; generalized by Isaac Newton',
+          year: 'Integer powers before Newton; generalization in the 17th century',
+          background:
+            'Binomial coefficients and the integer-power formula were known before Newton, who generalized it to negative and fractional exponents.',
         },
         applications: [
           { field: 'Probability', description: 'Binomial distribution derivation' },

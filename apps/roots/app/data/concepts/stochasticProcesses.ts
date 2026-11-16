@@ -13,7 +13,11 @@ export const stochasticProcessesConcepts: MathConcept[] = [
     content: {
       ko: {
         definition: '미래 상태가 현재 상태에만 의존하는 확률 과정 (무기억성)',
-        formulas: ['P(Xₙ₊₁|Xₙ,...,X₀) = P(Xₙ₊₁|Xₙ)', '전이 행렬: P = (pᵢⱼ)', '정상 분포: πP = π'],
+        formulas: [
+          'P(Xₙ₊₁|Xₙ,...,X₀) = P(Xₙ₊₁|Xₙ)',
+          '시간에 따라 달라질 수 있는 전이확률: pᵢⱼ⁽ⁿ⁾ = P(Xₙ₊₁=j | Xₙ=i)',
+          '시간에 따라 일정한 전이 행렬 P에 대한 정상 분포: πP = π',
+        ],
         examples: ['랜덤 워크', '날씨 모델', '페이지랭크'],
         applications: ['금융', '유전학', '자연어처리'],
       },
@@ -21,14 +25,14 @@ export const stochasticProcessesConcepts: MathConcept[] = [
         definition: 'Stochastic process where future depends only on present state (memoryless)',
         formulas: [
           'P(Xₙ₊₁|Xₙ,...,X₀) = P(Xₙ₊₁|Xₙ)',
-          'Transition matrix: P = (pᵢⱼ)',
-          'Stationary: πP = π',
+          'Transition probabilities may depend on time: pᵢⱼ⁽ⁿ⁾ = P(Xₙ₊₁=j | Xₙ=i)',
+          'Stationary distribution for a time-homogeneous transition matrix P: πP = π',
         ],
         examples: ['Random walk', 'Weather model', 'PageRank'],
         applications: ['Finance', 'Genetics', 'NLP'],
       },
     },
-    latex: 'P(X_{n+1}|X_n) = P_{X_n, X_{n+1}}',
+    latex: 'P(X_{n+1}=j\\mid X_n=i) = p_{ij}^{(n)}',
     relations: {
       prerequisites: ['probability', 'matrix-operations'],
       nextTopics: ['markov-decision-process', 'hidden-markov-model'],
@@ -49,7 +53,7 @@ export const stochasticProcessesConcepts: MathConcept[] = [
     content: {
       ko: {
         definition: '연속 시간, 연속 상태의 기본 확률 과정. 위너 과정이라고도 함',
-        formulas: ['W(0) = 0', 'W(t) - W(s) ~ N(0, t-s)', '독립 증분', '연속 경로'],
+        formulas: ['W(0) = 0', '0 ≤ s < t일 때 W(t) - W(s) ~ N(0, t-s)', '독립 증분', '연속 경로'],
         examples: ['주가 모델', '입자 확산', '열 방정식'],
         applications: ['금융 수학', '물리학', '생물학'],
       },
@@ -58,7 +62,7 @@ export const stochasticProcessesConcepts: MathConcept[] = [
           'Fundamental continuous-time, continuous-state stochastic process. Also called Wiener process',
         formulas: [
           'W(0) = 0',
-          'W(t) - W(s) ~ N(0, t-s)',
+          'For 0 ≤ s < t, W(t) - W(s) ~ N(0, t-s)',
           'Independent increments',
           'Continuous paths',
         ],
@@ -66,7 +70,7 @@ export const stochasticProcessesConcepts: MathConcept[] = [
         applications: ['Financial math', 'Physics', 'Biology'],
       },
     },
-    latex: 'W(t) - W(s) \\sim N(0, t-s)',
+    latex: 'W(t) - W(s) \\sim N(0, t-s), \\quad 0 \\le s < t',
     relations: {
       prerequisites: ['normal-distribution', 'limits'],
       nextTopics: ['ito-calculus', 'stochastic-differential-equations'],
@@ -126,7 +130,7 @@ export const stochasticProcessesConcepts: MathConcept[] = [
         definition: '확률 과정에 대한 적분 이론. 확률미분방정식의 기초',
         formulas: [
           '∫f dW (이토 적분)',
-          '이토 공식: df = (∂f/∂t + ½σ²∂²f/∂x²)dt + σ∂f/∂x dW',
+          'f가 시간에 대해 한 번, 공간에 대해 두 번 연속 미분 가능하고 dX = μdt + σdW일 때 이토 공식: df = (∂f/∂t + μ∂f/∂x + ½σ²∂²f/∂x²)dt + σ∂f/∂x dW',
           '(dW)² = dt',
         ],
         examples: ['기하 브라운 운동', '옵션 가격 결정', '확률 미분방정식'],
@@ -136,7 +140,7 @@ export const stochasticProcessesConcepts: MathConcept[] = [
         definition: 'Integration theory for stochastic processes. Foundation of SDEs',
         formulas: [
           '∫f dW (Itô integral)',
-          'Itô formula: df = (∂f/∂t + ½σ²∂²f/∂x²)dt + σ∂f/∂x dW',
+          'For f continuously differentiable once in time and twice in space and dX = μdt + σdW, Itô formula: df = (∂f/∂t + μ∂f/∂x + ½σ²∂²f/∂x²)dt + σ∂f/∂x dW',
           '(dW)² = dt',
         ],
         examples: ['Geometric Brownian motion', 'Option pricing', 'SDEs'],
@@ -144,7 +148,7 @@ export const stochasticProcessesConcepts: MathConcept[] = [
       },
     },
     latex:
-      'df = \\left(\\frac{\\partial f}{\\partial t} + \\frac{1}{2}\\sigma^2\\frac{\\partial^2 f}{\\partial x^2}\\right)dt + \\sigma\\frac{\\partial f}{\\partial x}dW',
+      'dX=\\mu\\,dt+\\sigma\\,dW,\\quad df=\\left(\\frac{\\partial f}{\\partial t}+\\mu\\frac{\\partial f}{\\partial x}+\\frac{1}{2}\\sigma^2\\frac{\\partial^2 f}{\\partial x^2}\\right)dt+\\sigma\\frac{\\partial f}{\\partial x}dW',
     relations: {
       prerequisites: ['brownian-motion', 'calculus'],
       nextTopics: ['black-scholes', 'sde'],
@@ -164,16 +168,25 @@ export const stochasticProcessesConcepts: MathConcept[] = [
     difficulty: 4,
     content: {
       ko: {
-        definition: '조건부 기댓값이 현재 값과 같은 확률 과정 (공정한 게임)',
+        definition:
+          '각 시점의 정보 ℱₙ에 맞고 E|Xₙ|이 유한하며, 다음 값의 조건부 기댓값이 현재 값과 같은 확률 과정',
         formulas: ['E[Xₙ₊₁|ℱₙ] = Xₙ', '서브마팅게일: E[Xₙ₊₁|ℱₙ] ≥ Xₙ', '슈퍼마팅게일: ≤'],
-        examples: ['공정한 도박', '브라운 운동', '주가 (위험중립 측도)'],
+        examples: [
+          '공정한 도박',
+          '브라운 운동',
+          '위험중립 측도에서 배당 없는 주식의 할인 가격 (적절한 가격 결정 모형)',
+        ],
         applications: ['금융', '최적 정지', '확률론'],
       },
       en: {
         definition:
-          'Stochastic process where conditional expectation equals current value (fair game)',
+          'A process adapted to the filtration ℱₙ with finite E|Xₙ|, whose conditional expected next value equals its current value',
         formulas: ['E[Xₙ₊₁|ℱₙ] = Xₙ', 'Submartingale: E[Xₙ₊₁|ℱₙ] ≥ Xₙ', 'Supermartingale: ≤'],
-        examples: ['Fair gambling', 'Brownian motion', 'Stock prices (risk-neutral)'],
+        examples: [
+          'Fair gambling',
+          'Brownian motion',
+          'Discounted price of a non-dividend-paying stock under a risk-neutral measure in a suitable pricing model',
+        ],
         applications: ['Finance', 'Optimal stopping', 'Probability'],
       },
     },

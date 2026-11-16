@@ -166,11 +166,11 @@ export const numericalConcepts: MathConcept[] = [
         formulas: [
           {
             latex: '\\int_a^b f(x)dx \\approx \\frac{h}{2}(f(a) + f(b))',
-            description: '사다리꼴 공식 (단일 구간)',
+            description: '사다리꼴 공식: h = b - a',
           },
           {
             latex: '\\int_a^b f(x)dx \\approx \\frac{h}{3}(f(a) + 4f(m) + f(b))',
-            description: '심프슨 1/3 공식',
+            description: '심프슨 1/3 공식: h = (b - a)/2, m = (a + b)/2',
           },
         ],
         examples: [
@@ -192,11 +192,11 @@ export const numericalConcepts: MathConcept[] = [
         formulas: [
           {
             latex: '\\int_a^b f(x)dx \\approx \\frac{h}{2}(f(a) + f(b))',
-            description: 'Trapezoidal rule (single interval)',
+            description: 'Trapezoidal rule: h = b - a',
           },
           {
             latex: '\\int_a^b f(x)dx \\approx \\frac{h}{3}(f(a) + 4f(m) + f(b))',
-            description: "Simpson's 1/3 rule",
+            description: "Simpson's 1/3 rule: h = (b - a)/2, m = (a + b)/2",
           },
         ],
         examples: [
@@ -369,12 +369,14 @@ export const numericalConcepts: MathConcept[] = [
             description: '중점 계산',
           },
           {
-            latex: '\\text{if } f(a)f(c) < 0: b = c, \\text{ else } a = c',
-            description: '구간 갱신 규칙',
+            latex:
+              'f(c)=0: \\text{stop};\\quad f(a)f(c)<0: b=c;\\quad f(c)\\ne 0,\\ f(a)f(c)>0: a=c',
+            description:
+              '끝점의 부호가 반대일 때: 중점이 근이면 중지, 아니면 부호가 바뀌는 구간 선택',
           },
           {
             latex: '|x_n - r| \\leq \\frac{b-a}{2^{n+1}}',
-            description: 'n번 반복 후 오차 상한',
+            description: 'n번 구간을 반으로 나눈 뒤 새 중점 xₙ의 오차 상한',
           },
         ],
         examples: [
@@ -399,12 +401,14 @@ export const numericalConcepts: MathConcept[] = [
             description: 'Midpoint calculation',
           },
           {
-            latex: '\\text{if } f(a)f(c) < 0: b = c, \\text{ else } a = c',
-            description: 'Interval update rule',
+            latex:
+              'f(c)=0: \\text{stop};\\quad f(a)f(c)<0: b=c;\\quad f(c)\\ne 0,\\ f(a)f(c)>0: a=c',
+            description:
+              'For opposite signs at the endpoints: stop if the midpoint is a root; otherwise keep the sign-changing interval',
           },
           {
             latex: '|x_n - r| \\leq \\frac{b-a}{2^{n+1}}',
-            description: 'Error bound after n iterations',
+            description: 'Error bound for the new midpoint xₙ after n halvings',
           },
         ],
         examples: [
@@ -548,27 +552,27 @@ export const numericalConcepts: MathConcept[] = [
           '행렬 분해는 행렬을 더 간단한 행렬들의 곱으로 표현하는 것입니다. 연립방정식 풀이, 고유값 계산, 데이터 압축 등에 사용됩니다.',
         formulas: [
           {
-            latex: 'A = LU',
-            description: 'LU 분해 (하삼각 × 상삼각)',
+            latex: 'PA = LU',
+            description: '행 교환을 포함하는 LU 분해 (P: 순열행렬)',
           },
           {
             latex: 'A = QR',
-            description: 'QR 분해 (직교 × 상삼각)',
+            description: '실수 행렬의 QR 분해 (직교 × 상삼각)',
           },
           {
             latex: 'A = U\\Sigma V^T',
-            description: '특이값 분해 (SVD)',
+            description: '실수 행렬의 특이값 분해 (SVD)',
           },
           {
-            latex: 'A = LDL^T',
-            description: '촐레스키 분해 (대칭 양정치)',
+            latex: 'A = LL^T',
+            description: '실수 대칭 양정치 행렬의 촐레스키 분해',
           },
         ],
         examples: [
           {
             problem: 'LU 분해를 이용해 Ax = b를 푸는 방법을 설명하세요.',
             solution:
-              'A = LU로 분해. Ly = b를 전진대입으로 풀고, Ux = y를 후진대입으로 풉니다. 같은 A에 대해 여러 b를 풀 때 효율적입니다.',
+              '가역 행렬 A를 PA = LU로 분해합니다. Ly = Pb를 전진대입으로 풀고, Ux = y를 후진대입으로 풉니다. 같은 A에 대해 여러 b를 풀 때 효율적입니다.',
           },
         ],
         applications: [
@@ -582,27 +586,27 @@ export const numericalConcepts: MathConcept[] = [
           'Matrix factorization expresses a matrix as product of simpler matrices. Used for solving systems, eigenvalue computation, and data compression.',
         formulas: [
           {
-            latex: 'A = LU',
-            description: 'LU decomposition (lower × upper triangular)',
+            latex: 'PA = LU',
+            description: 'LU decomposition with row permutation P',
           },
           {
             latex: 'A = QR',
-            description: 'QR decomposition (orthogonal × upper triangular)',
+            description: 'QR decomposition of a real matrix (orthogonal × upper triangular)',
           },
           {
             latex: 'A = U\\Sigma V^T',
-            description: 'Singular Value Decomposition (SVD)',
+            description: 'Singular value decomposition (SVD) of a real matrix',
           },
           {
-            latex: 'A = LDL^T',
-            description: 'Cholesky decomposition (symmetric positive definite)',
+            latex: 'A = LL^T',
+            description: 'Cholesky decomposition of a real symmetric positive-definite matrix',
           },
         ],
         examples: [
           {
             problem: 'Explain how to solve Ax = b using LU decomposition.',
             solution:
-              'Factor A = LU. Solve Ly = b by forward substitution, then Ux = y by back substitution. Efficient for multiple b with same A.',
+              'For an invertible matrix, factor PA = LU. Solve Ly = Pb by forward substitution, then Ux = y by back substitution. This is efficient for multiple right-hand sides with the same A.',
           },
         ],
         applications: [
@@ -657,7 +661,7 @@ export const numericalConcepts: MathConcept[] = [
           {
             problem: '열 방정식 ∂u/∂t = α∂²u/∂x²를 차분으로 근사하세요.',
             solution:
-              'u(x,t+Δt) - u(x,t))/Δt = α(u(x+Δx,t) - 2u(x,t) + u(x-Δx,t))/Δx². 이를 정리하면 명시적 시간 진행 스킴이 됩니다.',
+              '(u(x,t+Δt) - u(x,t))/Δt = α(u(x+Δx,t) - 2u(x,t) + u(x-Δx,t))/Δx². 이를 정리하면 명시적 시간 진행 스킴이 됩니다.',
           },
         ],
         applications: [

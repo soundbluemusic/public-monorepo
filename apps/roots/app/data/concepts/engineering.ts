@@ -83,15 +83,27 @@ export const engineeringConcepts: MathConcept[] = [
     content: {
       ko: {
         definition: '시간 영역 함수를 복소 주파수 영역으로 변환하는 적분 변환',
-        formulas: ['L{f(t)} = F(s) = ∫₀^∞ f(t)e^{-st}dt', "L{f'(t)} = sF(s) - f(0)"],
-        examples: ['L{e^{at}} = 1/(s-a)', 'L{sin(ωt)} = ω/(s²+ω²)'],
+        formulas: [
+          'L{f(t)} = F(s) = ∫₀^∞ f(t)e^{-st}dt (적분이 수렴할 때)',
+          "L{f'(t)} = sF(s) - f(0) (f가 연속이고 구간별로 연속 미분 가능하며 f와 f'이 지수 차수일 때, 충분히 큰 Re(s)에서)",
+        ],
+        examples: [
+          'L{e^{at}} = 1/(s-a), Re(s) > Re(a)',
+          'L{sin(ωt)} = ω/(s²+ω²), Re(s) > 0, ω는 실수',
+        ],
         applications: ['회로 해석', '제어 시스템'],
       },
       en: {
         definition:
           'Integral transform converting time-domain functions to complex frequency domain',
-        formulas: ['L{f(t)} = F(s) = ∫₀^∞ f(t)e^{-st}dt', "L{f'(t)} = sF(s) - f(0)"],
-        examples: ['L{e^{at}} = 1/(s-a)', 'L{sin(ωt)} = ω/(s²+ω²)'],
+        formulas: [
+          'L{f(t)} = F(s) = ∫₀^∞ f(t)e^{-st}dt (where the integral converges)',
+          "L{f'(t)} = sF(s) - f(0) (f continuous and piecewise continuously differentiable, f and f' of exponential order, for sufficiently large Re(s))",
+        ],
+        examples: [
+          'L{e^{at}} = 1/(s-a), Re(s) > Re(a)',
+          'L{sin(ωt)} = ω/(s²+ω²), Re(s) > 0, ω real',
+        ],
         applications: ['Circuit analysis', 'Control systems'],
       },
     },
@@ -116,14 +128,20 @@ export const engineeringConcepts: MathConcept[] = [
     content: {
       ko: {
         definition: '이산 신호를 복소 평면으로 변환하는 기법',
-        formulas: ['Z{x[n]} = X(z) = Σx[n]z^{-n}', '역변환: x[n] = (1/2πi)∮X(z)z^{n-1}dz'],
-        examples: ['Z{δ[n]} = 1', 'Z{u[n]} = z/(z-1)'],
+        formulas: [
+          'Z{x[n]} = X(z) = Σx[n]z^{-n} (합이 수렴하는 영역에서)',
+          '역변환: x[n] = (1/2πi)∮X(z)z^{n-1}dz (수렴 영역 안에서 원점을 감싸는 경로)',
+        ],
+        examples: ['Z{δ[n]} = 1', 'Z{u[n]} = z/(z-1), |z| > 1'],
         applications: ['디지털 필터 설계', '이산 제어 시스템'],
       },
       en: {
         definition: 'Technique to transform discrete signals to the complex plane',
-        formulas: ['Z{x[n]} = X(z) = Σx[n]z^{-n}', 'Inverse: x[n] = (1/2πi)∮X(z)z^{n-1}dz'],
-        examples: ['Z{δ[n]} = 1', 'Z{u[n]} = z/(z-1)'],
+        formulas: [
+          'Z{x[n]} = X(z) = Σx[n]z^{-n} (where the sum converges)',
+          'Inverse: x[n] = (1/2πi)∮X(z)z^{n-1}dz (contour enclosing zero within the region of convergence)',
+        ],
+        examples: ['Z{δ[n]} = 1', 'Z{u[n]} = z/(z-1), |z| > 1'],
         applications: ['Digital filter design', 'Discrete control systems'],
       },
     },
@@ -214,14 +232,17 @@ export const engineeringConcepts: MathConcept[] = [
         definition: '유체(액체, 기체)의 운동과 힘을 연구하는 역학 분야',
         formulas: [
           '연속 방정식: ∂ρ/∂t + ∇·(ρv) = 0',
-          '나비에-스토크스: ρ(∂v/∂t + v·∇v) = -∇p + μ∇²v',
+          '나비에-스토크스 (밀도와 점도가 일정한 비압축성 유체, 체적력 없음): ρ(∂v/∂t + v·∇v) = -∇p + μ∇²v',
         ],
         examples: ['파이프 흐름', '항공기 양력'],
         applications: ['항공공학', '기상 예측'],
       },
       en: {
         definition: 'Branch of mechanics studying motion and forces in fluids',
-        formulas: ['Continuity: ∂ρ/∂t + ∇·(ρv) = 0', 'Navier-Stokes: ρ(∂v/∂t + v·∇v) = -∇p + μ∇²v'],
+        formulas: [
+          'Continuity: ∂ρ/∂t + ∇·(ρv) = 0',
+          'Navier-Stokes (incompressible fluid with constant density and viscosity, without body forces): ρ(∂v/∂t + v·∇v) = -∇p + μ∇²v',
+        ],
         examples: ['Pipe flow', 'Aircraft lift'],
         applications: ['Aerospace engineering', 'Weather prediction'],
       },
@@ -248,18 +269,26 @@ export const engineeringConcepts: MathConcept[] = [
     content: {
       ko: {
         definition: '열과 에너지 변환을 기술하는 수학적 프레임워크',
-        formulas: ['제1법칙: dU = δQ - δW', '제2법칙: dS ≥ δQ/T', '상태 방정식: PV = nRT'],
+        formulas: [
+          '제1법칙: dU = δQ - δW',
+          '가역 과정의 엔트로피 변화: dS = δQᵣₑᵥ/T',
+          '이상 기체 상태 방정식: PV = nRT',
+        ],
         examples: ['카르노 사이클 효율', '엔트로피 계산'],
         applications: ['엔진 설계', '냉동 시스템'],
       },
       en: {
         definition: 'Mathematical framework describing heat and energy conversion',
-        formulas: ['1st Law: dU = δQ - δW', '2nd Law: dS ≥ δQ/T', 'Equation of State: PV = nRT'],
+        formulas: [
+          '1st Law: dU = δQ - δW',
+          'Entropy change in a reversible process: dS = δQᵣₑᵥ/T',
+          'Ideal-gas equation of state: PV = nRT',
+        ],
         examples: ['Carnot cycle efficiency', 'Entropy calculation'],
         applications: ['Engine design', 'Refrigeration systems'],
       },
     },
-    latex: 'dS \\geq \\frac{\\delta Q}{T}',
+    latex: 'dS = \\frac{\\delta Q_{\\mathrm{rev}}}{T}',
     relations: {
       prerequisites: ['partial-differential-equations', 'multivariable-calculus'],
       nextTopics: ['statistical-mechanics'],

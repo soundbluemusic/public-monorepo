@@ -177,9 +177,9 @@ export const topologyConcepts: MathConcept[] = [
         ],
         examples: [
           {
-            problem: '구와 정육면체가 위상동형임을 설명하세요.',
+            problem: '구면과 정육면체의 표면이 위상동형임을 설명하세요.',
             solution:
-              '구를 연속적으로 변형하여 정육면체로 만들 수 있습니다(자르거나 붙이지 않고). 둘 다 종수 0인 닫힌 곡면입니다.',
+              '중심에서 나가는 각 반직선을 따라 구면의 점을 정육면체 표면의 점에 대응시키면 위상동형사상이 됩니다.',
           },
           {
             problem: '원과 직선이 위상동형이 아님을 설명하세요.',
@@ -204,9 +204,9 @@ export const topologyConcepts: MathConcept[] = [
         ],
         examples: [
           {
-            problem: 'Explain why a sphere and cube are homeomorphic.',
+            problem: 'Explain why a sphere and the surface of a cube are homeomorphic.',
             solution:
-              'A sphere can be continuously deformed into a cube (without cutting or gluing). Both are closed surfaces of genus 0.',
+              'Map each point of the sphere along the ray from the center to the corresponding point on the surface of the cube. This is a homeomorphism.',
           },
           {
             problem: 'Explain why a circle and line are not homeomorphic.',

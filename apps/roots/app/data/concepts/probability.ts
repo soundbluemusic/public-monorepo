@@ -16,11 +16,11 @@ export const probabilityConcepts: MathConcept[] = [
     content: {
       ko: {
         definition:
-          '확률은 사건이 일어날 가능성을 0과 1 사이의 수로 나타낸 것입니다. 0은 불가능, 1은 확실함을 의미합니다.',
+          '확률은 사건이 일어날 가능성을 0과 1 사이의 수로 나타냅니다. 불가능한 사건의 확률은 0이고 확실한 사건의 확률은 1이지만, 확률이 0인 사건도 일어날 수 있습니다.',
         formulas: [
           {
             latex: 'P(A) = \\frac{\\text{A가 일어나는 경우의 수}}{\\text{전체 경우의 수}}',
-            description: '고전적 확률의 정의',
+            description: '결과가 유한하고 모두 같은 확률일 때',
           },
           {
             latex: '0 \\leq P(A) \\leq 1',
@@ -33,11 +33,12 @@ export const probabilityConcepts: MathConcept[] = [
         ],
         examples: [
           {
-            problem: '주사위를 던져 3 이하가 나올 확률을 구하세요.',
+            problem: '공정한 주사위를 던져 3 이하가 나올 확률을 구하세요.',
             solution: '3 이하: {1, 2, 3}, 전체: {1, 2, 3, 4, 5, 6}, P = 3/6 = 1/2',
           },
           {
-            problem: '동전을 두 번 던져 적어도 한 번 앞면이 나올 확률을 구하세요.',
+            problem:
+              '공정한 동전을 독립적으로 두 번 던져 적어도 한 번 앞면이 나올 확률을 구하세요.',
             solution: '여사건(둘 다 뒷면) = 1/4, 따라서 P = 1 - 1/4 = 3/4',
           },
         ],
@@ -54,11 +55,11 @@ export const probabilityConcepts: MathConcept[] = [
       },
       en: {
         definition:
-          'Probability is a number between 0 and 1 representing the likelihood of an event occurring. 0 means impossible, 1 means certain.',
+          'Probability is a number between 0 and 1. Impossible events have probability 0 and certain events have probability 1, but an event of probability 0 can still occur.',
         formulas: [
           {
             latex: 'P(A) = \\frac{\\text{favorable outcomes}}{\\text{total outcomes}}',
-            description: 'Classical probability definition',
+            description: 'For finitely many equally likely outcomes',
           },
           {
             latex: '0 \\leq P(A) \\leq 1',
@@ -71,11 +72,11 @@ export const probabilityConcepts: MathConcept[] = [
         ],
         examples: [
           {
-            problem: 'Find the probability of rolling 3 or less on a die.',
+            problem: 'Find the probability of rolling 3 or less on a fair die.',
             solution: '3 or less: {1, 2, 3}, Total: {1, 2, 3, 4, 5, 6}, P = 3/6 = 1/2',
           },
           {
-            problem: 'Find P(at least one head) when flipping a coin twice.',
+            problem: 'Find P(at least one head) in two independent flips of a fair coin.',
             solution: 'Complement (both tails) = 1/4, so P = 1 - 1/4 = 3/4',
           },
         ],
@@ -114,15 +115,15 @@ export const probabilityConcepts: MathConcept[] = [
         formulas: [
           {
             latex: 'P(A|B) = \\frac{P(A \\cap B)}{P(B)}',
-            description: '조건부 확률의 정의',
+            description: '조건부 확률의 정의 (P(B) > 0)',
           },
           {
             latex: 'P(A \\cap B) = P(A|B) \\cdot P(B)',
-            description: '곱셈 법칙',
+            description: '곱셈 법칙 (P(B) > 0)',
           },
           {
             latex: 'P(A|B) = \\frac{P(B|A) \\cdot P(A)}{P(B)}',
-            description: '베이즈 정리',
+            description: '베이즈 정리 (P(A) > 0, P(B) > 0)',
           },
         ],
         examples: [
@@ -143,15 +144,15 @@ export const probabilityConcepts: MathConcept[] = [
         formulas: [
           {
             latex: 'P(A|B) = \\frac{P(A \\cap B)}{P(B)}',
-            description: 'Definition of conditional probability',
+            description: 'Conditional probability (P(B) > 0)',
           },
           {
             latex: 'P(A \\cap B) = P(A|B) \\cdot P(B)',
-            description: 'Multiplication rule',
+            description: 'Multiplication rule (P(B) > 0)',
           },
           {
             latex: 'P(A|B) = \\frac{P(B|A) \\cdot P(A)}{P(B)}',
-            description: "Bayes' theorem",
+            description: "Bayes' theorem (P(A) > 0, P(B) > 0)",
           },
         ],
         examples: [
@@ -186,24 +187,24 @@ export const probabilityConcepts: MathConcept[] = [
     content: {
       ko: {
         definition:
-          '기댓값(평균)은 확률변수의 가능한 값들을 각 확률로 가중 평균한 것입니다. 장기적인 평균을 나타냅니다.',
+          '기댓값은 확률분포를 이용해 계산한 평균입니다. E[|X|] < ∞이면 독립적이고 같은 분포를 따르는 값을 반복해 얻은 평균은 기댓값으로 거의 확실하게 수렴합니다. 모든 확률변수의 기댓값이 존재하는 것은 아닙니다.',
         formulas: [
           {
             latex: 'E[X] = \\sum_{i} x_i \\cdot P(X = x_i)',
-            description: '이산 확률변수의 기댓값',
+            description: '이산 확률변수의 기댓값 (E[|X|] < ∞일 때)',
           },
           {
             latex: 'E[X] = \\int_{-\\infty}^{\\infty} x \\cdot f(x) \\, dx',
-            description: '연속 확률변수의 기댓값',
+            description: '확률밀도함수 f를 가진 확률변수의 기댓값 (E[|X|] < ∞일 때)',
           },
           {
             latex: 'E[aX + b] = aE[X] + b',
-            description: '기댓값의 선형성',
+            description: '기댓값의 선형성 (E[|X|] < ∞일 때)',
           },
         ],
         examples: [
           {
-            problem: '주사위를 던졌을 때 나오는 수의 기댓값을 구하세요.',
+            problem: '공정한 주사위를 던졌을 때 나오는 수의 기댓값을 구하세요.',
             solution: 'E[X] = (1+2+3+4+5+6)/6 = 21/6 = 3.5',
           },
           {
@@ -219,24 +220,24 @@ export const probabilityConcepts: MathConcept[] = [
       },
       en: {
         definition:
-          'Expected value (mean) is the probability-weighted average of all possible values. It represents the long-run average.',
+          'Expected value is the mean calculated from a probability distribution. If E[|X|] < ∞, the average of independent samples with the same distribution converges almost surely to this mean. Not every random variable has an expected value.',
         formulas: [
           {
             latex: 'E[X] = \\sum_{i} x_i \\cdot P(X = x_i)',
-            description: 'Expected value (discrete)',
+            description: 'Expected value for a discrete random variable when E[|X|] < ∞',
           },
           {
             latex: 'E[X] = \\int_{-\\infty}^{\\infty} x \\cdot f(x) \\, dx',
-            description: 'Expected value (continuous)',
+            description: 'Expected value for a random variable with density f when E[|X|] < ∞',
           },
           {
             latex: 'E[aX + b] = aE[X] + b',
-            description: 'Linearity of expectation',
+            description: 'Linearity of expectation when E[|X|] < ∞',
           },
         ],
         examples: [
           {
-            problem: 'Find the expected value when rolling a die.',
+            problem: 'Find the expected value when rolling a fair die.',
             solution: 'E[X] = (1+2+3+4+5+6)/6 = 21/6 = 3.5',
           },
           {
@@ -274,7 +275,7 @@ export const probabilityConcepts: MathConcept[] = [
         formulas: [
           {
             latex: '\\text{Var}(X) = E[(X - \\mu)^2] = E[X^2] - (E[X])^2',
-            description: '분산의 정의',
+            description: 'μ = E[X], E[X²] < ∞일 때의 분산',
           },
           {
             latex: '\\sigma = \\sqrt{\\text{Var}(X)}',
@@ -287,7 +288,7 @@ export const probabilityConcepts: MathConcept[] = [
         ],
         examples: [
           {
-            problem: '데이터 {1, 2, 3, 4, 5}의 분산을 구하세요.',
+            problem: '데이터 {1, 2, 3, 4, 5} 전체를 모집단으로 볼 때 분산을 구하세요.',
             solution: '평균 μ = 3, Var = [(1-3)² + (2-3)² + (3-3)² + (4-3)² + (5-3)²]/5 = 10/5 = 2',
           },
         ],
@@ -303,7 +304,7 @@ export const probabilityConcepts: MathConcept[] = [
         formulas: [
           {
             latex: '\\text{Var}(X) = E[(X - \\mu)^2] = E[X^2] - (E[X])^2',
-            description: 'Variance definition',
+            description: 'Variance when μ = E[X] and E[X²] < ∞',
           },
           {
             latex: '\\sigma = \\sqrt{\\text{Var}(X)}',
@@ -316,7 +317,7 @@ export const probabilityConcepts: MathConcept[] = [
         ],
         examples: [
           {
-            problem: 'Find the variance of {1, 2, 3, 4, 5}.',
+            problem: 'Find the population variance of {1, 2, 3, 4, 5}.',
             solution: 'Mean μ = 3, Var = [(1-3)² + (2-3)² + (3-3)² + (4-3)² + (5-3)²]/5 = 10/5 = 2',
           },
         ],
@@ -350,7 +351,7 @@ export const probabilityConcepts: MathConcept[] = [
         formulas: [
           {
             latex: 'f(x) = \\frac{1}{\\sigma\\sqrt{2\\pi}} e^{-\\frac{(x-\\mu)^2}{2\\sigma^2}}',
-            description: '정규분포의 확률밀도함수',
+            description: '정규분포의 확률밀도함수 (μ는 실수, σ > 0)',
           },
           {
             latex: 'Z = \\frac{X - \\mu}{\\sigma}',
@@ -359,14 +360,16 @@ export const probabilityConcepts: MathConcept[] = [
         ],
         examples: [
           {
-            problem: '평균 170cm, 표준편차 10cm인 키 분포에서 180cm 이상일 확률은?',
+            problem:
+              '키가 평균 170cm, 표준편차 10cm인 정규분포를 따른다고 할 때, 180cm 이상일 확률은?',
             solution: 'Z = (180-170)/10 = 1, P(Z > 1) ≈ 0.1587 (약 15.87%)',
           },
         ],
         history: {
-          discoveredBy: '카를 프리드리히 가우스',
-          year: '1809년',
-          background: '가우스가 천문학적 측정 오차를 분석하면서 정규분포를 발견했습니다.',
+          discoveredBy: '아브라함 드무아브르',
+          year: '1733년',
+          background:
+            '드무아브르는 이항분포의 근사로 정규곡선을 연구했습니다. 이후 가우스는 측정 오차 분석에 정규분포를 활용했습니다.',
         },
         applications: [
           { field: '품질 관리', description: '6 시그마' },
@@ -380,7 +383,7 @@ export const probabilityConcepts: MathConcept[] = [
         formulas: [
           {
             latex: 'f(x) = \\frac{1}{\\sigma\\sqrt{2\\pi}} e^{-\\frac{(x-\\mu)^2}{2\\sigma^2}}',
-            description: 'Normal distribution PDF',
+            description: 'Normal distribution PDF (μ real, σ > 0)',
           },
           {
             latex: 'Z = \\frac{X - \\mu}{\\sigma}',
@@ -389,15 +392,16 @@ export const probabilityConcepts: MathConcept[] = [
         ],
         examples: [
           {
-            problem: 'Heights have mean 170cm, SD 10cm. Find P(height > 180cm).',
+            problem:
+              'Heights are normally distributed with mean 170cm and SD 10cm. Find P(height ≥ 180cm).',
             solution: 'Z = (180-170)/10 = 1, P(Z > 1) ≈ 0.1587 (about 15.87%)',
           },
         ],
         history: {
-          discoveredBy: 'Carl Friedrich Gauss',
-          year: '1809',
+          discoveredBy: 'Abraham de Moivre',
+          year: '1733',
           background:
-            'Gauss discovered the normal distribution while analyzing astronomical measurement errors.',
+            'De Moivre studied the normal curve as an approximation to the binomial distribution. Gauss later used the normal distribution to analyze measurement errors.',
         },
         applications: [
           { field: 'Quality Control', description: 'Six Sigma' },
@@ -596,7 +600,8 @@ export const probabilityConcepts: MathConcept[] = [
         ],
         examples: [
           {
-            problem: '시간당 평균 3통의 전화가 오는 콜센터에서 정확히 5통이 올 확률은?',
+            problem:
+              '콜센터의 한 시간 전화 횟수가 평균 3인 포아송 분포를 따른다고 할 때, 한 시간에 정확히 5통이 올 확률은?',
             solution: 'P(X=5) = (3⁵ × e⁻³) / 5! = 243 × 0.0498 / 120 ≈ 0.1008',
             difficulty: 3,
           },
@@ -622,7 +627,8 @@ export const probabilityConcepts: MathConcept[] = [
         ],
         examples: [
           {
-            problem: 'A call center averages 3 calls/hour. Find P(exactly 5 calls).',
+            problem:
+              'The number of calls in one hour follows a Poisson distribution with mean 3. Find the probability of exactly 5 calls in one hour.',
             solution: 'P(X=5) = (3⁵ × e⁻³) / 5! = 243 × 0.0498 / 120 ≈ 0.1008',
             difficulty: 3,
           },
@@ -660,14 +666,13 @@ export const probabilityConcepts: MathConcept[] = [
           },
           {
             latex: 'P(A|B) = P(A)',
-            description: '조건부 확률이 원래 확률과 같음',
+            description: 'P(B) > 0일 때 조건부 확률이 원래 확률과 같음',
           },
         ],
         examples: [
           {
-            problem: '동전을 두 번 던질 때, 두 결과가 독립인지 확인하세요.',
-            solution:
-              'P(첫째 앞면) = 1/2, P(둘째 앞면) = 1/2\nP(둘 다 앞면) = 1/4 = (1/2)(1/2) ✓ 독립',
+            problem: '공정한 동전의 두 번 던지기가 서로 독립일 때, 둘 다 앞면일 확률은?',
+            solution: '독립이라는 가정에 따라 P(둘 다 앞면) = (1/2)(1/2) = 1/4입니다.',
             difficulty: 1,
           },
         ],
@@ -686,14 +691,13 @@ export const probabilityConcepts: MathConcept[] = [
           },
           {
             latex: 'P(A|B) = P(A)',
-            description: 'Conditional equals unconditional probability',
+            description: 'Conditional equals unconditional probability when P(B) > 0',
           },
         ],
         examples: [
           {
-            problem: 'Are two coin flips independent?',
-            solution:
-              'P(1st heads) = 1/2, P(2nd heads) = 1/2\nP(both heads) = 1/4 = (1/2)(1/2) ✓ Independent',
+            problem: 'For two independent flips of a fair coin, what is P(both heads)?',
+            solution: 'By the independence assumption, P(both heads) = (1/2)(1/2) = 1/4.',
             difficulty: 1,
           },
         ],
@@ -725,16 +729,16 @@ export const probabilityConcepts: MathConcept[] = [
         formulas: [
           {
             latex: 'P(A|B) = \\frac{P(B|A) \\cdot P(A)}{P(B)}',
-            description: '베이즈 정리',
+            description: '베이즈 정리 (P(A) > 0, P(B) > 0)',
           },
           {
             latex: 'P(B) = \\sum_i P(B|A_i) P(A_i)',
-            description: '전체 확률 법칙',
+            description: '전체 확률 법칙: Aᵢ는 표본공간의 분할이며 P(Aᵢ) > 0',
           },
         ],
         examples: [
           {
-            problem: '검사 정확도 99%, 유병률 1%. 양성일 때 실제 질병일 확률은?',
+            problem: '민감도와 특이도가 각각 99%, 유병률이 1%입니다. 양성일 때 실제 질병일 확률은?',
             solution:
               'P(질병|양성) = (0.99 × 0.01) / (0.99×0.01 + 0.01×0.99)\n= 0.0099 / 0.0198 = 50%',
             difficulty: 4,
@@ -757,16 +761,17 @@ export const probabilityConcepts: MathConcept[] = [
         formulas: [
           {
             latex: 'P(A|B) = \\frac{P(B|A) \\cdot P(A)}{P(B)}',
-            description: "Bayes' theorem",
+            description: "Bayes' theorem (P(A) > 0, P(B) > 0)",
           },
           {
             latex: 'P(B) = \\sum_i P(B|A_i) P(A_i)',
-            description: 'Law of total probability',
+            description: 'Law of total probability: Aᵢ partition the sample space and P(Aᵢ) > 0',
           },
         ],
         examples: [
           {
-            problem: "Test accuracy 99%, disease prevalence 1%. If positive, what's P(disease)?",
+            problem:
+              "Sensitivity and specificity are each 99%, and disease prevalence is 1%. If positive, what's P(disease)?",
             solution:
               'P(disease|positive) = (0.99 × 0.01) / (0.99×0.01 + 0.01×0.99)\n= 0.0099 / 0.0198 = 50%',
             difficulty: 4,
@@ -820,8 +825,9 @@ export const probabilityConcepts: MathConcept[] = [
         examples: [
           {
             problem:
-              '평균이 50이라는 주장에 대해, 표본평균 52, 표준편차 10, n=25로 검정하시오 (α=0.05).',
-            solution: 'Z = (52-50)/(10/5) = 1\n임계값 ±1.96. |Z| < 1.96이므로 귀무가설 채택',
+              '정규 모집단의 알려진 표준편차가 10이고 독립 표본의 평균이 52, n=25일 때 평균이 50인지 양측 검정하시오 (α=0.05).',
+            solution:
+              'Z = (52-50)/(10/5) = 1\n임계값 ±1.96. |Z| < 1.96이므로 귀무가설을 기각하지 못합니다.',
             difficulty: 4,
           },
         ],
@@ -849,7 +855,8 @@ export const probabilityConcepts: MathConcept[] = [
         ],
         examples: [
           {
-            problem: 'Test μ=50 with sample mean 52, SD 10, n=25 (α=0.05).',
+            problem:
+              'For independent samples from a normal population with known SD 10, test μ=50 two-sided with sample mean 52 and n=25 (α=0.05).',
             solution: 'Z = (52-50)/(10/5) = 1\nCritical ±1.96. |Z| < 1.96, fail to reject H₀',
             difficulty: 4,
           },
@@ -885,7 +892,7 @@ export const probabilityConcepts: MathConcept[] = [
           {
             latex:
               'r = \\frac{\\sum (x_i - \\bar{x})(y_i - \\bar{y})}{\\sqrt{\\sum(x_i - \\bar{x})^2 \\sum(y_i - \\bar{y})^2}}',
-            description: '피어슨 상관계수',
+            description: '피어슨 표본 상관계수 (두 변수 각각의 표본값이 모두 같지 않을 때)',
           },
           {
             latex: '-1 \\leq r \\leq 1',
@@ -912,7 +919,8 @@ export const probabilityConcepts: MathConcept[] = [
           {
             latex:
               'r = \\frac{\\sum (x_i - \\bar{x})(y_i - \\bar{y})}{\\sqrt{\\sum(x_i - \\bar{x})^2 \\sum(y_i - \\bar{y})^2}}',
-            description: 'Pearson correlation coefficient',
+            description:
+              'Pearson sample correlation coefficient (neither variable is constant in the sample)',
           },
           {
             latex: '-1 \\leq r \\leq 1',
@@ -960,17 +968,18 @@ export const probabilityConcepts: MathConcept[] = [
           {
             latex:
               '\\hat{\\beta}_1 = \\frac{\\sum(x_i - \\bar{x})(y_i - \\bar{y})}{\\sum(x_i - \\bar{x})^2}',
-            description: '기울기 추정',
+            description: '절편이 있는 최소제곱 회귀의 기울기 (xᵢ가 모두 같지 않을 때)',
           },
           {
             latex: 'R^2 = 1 - \\frac{SS_{res}}{SS_{tot}}',
-            description: '결정계수 (설명력)',
+            description: '결정계수 (SS_tot > 0)',
           },
         ],
         examples: [
           {
             problem: 'R² = 0.75의 의미를 설명하시오.',
-            solution: '독립변수가 종속변수 변동의 75%를 설명함.',
+            solution:
+              '절편이 있는 최소제곱 회귀에서 표본 종속변수의 평균 주위 변동 중 75%가 모형의 적합값으로 설명됩니다. 이것만으로 인과관계가 증명되지는 않습니다.',
             difficulty: 2,
           },
         ],
@@ -991,18 +1000,18 @@ export const probabilityConcepts: MathConcept[] = [
           {
             latex:
               '\\hat{\\beta}_1 = \\frac{\\sum(x_i - \\bar{x})(y_i - \\bar{y})}{\\sum(x_i - \\bar{x})^2}',
-            description: 'Slope estimate',
+            description: 'Least-squares slope with intercept (when the xᵢ are not all equal)',
           },
           {
             latex: 'R^2 = 1 - \\frac{SS_{res}}{SS_{tot}}',
-            description: 'Coefficient of determination',
+            description: 'Coefficient of determination (SS_tot > 0)',
           },
         ],
         examples: [
           {
             problem: 'Interpret R² = 0.75.',
             solution:
-              'The independent variable explains 75% of the variation in the dependent variable.',
+              'In least-squares regression with an intercept, fitted values account for 75% of the sample variation around the mean. This alone does not establish causation.',
             difficulty: 2,
           },
         ],

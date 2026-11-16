@@ -24,7 +24,7 @@ export const optimizationConcepts: MathConcept[] = [
           },
           {
             latex: '\\nabla f(x^*) = 0',
-            description: '무제약 최적화의 필요조건',
+            description: '열린 영역에서 미분 가능한 함수의 극솟값 또는 극댓값에 필요한 조건',
           },
         ],
         examples: [
@@ -50,7 +50,8 @@ export const optimizationConcepts: MathConcept[] = [
           },
           {
             latex: '\\nabla f(x^*) = 0',
-            description: 'Necessary condition for unconstrained optimization',
+            description:
+              'Necessary condition for a local minimum or maximum of a differentiable function on an open domain',
           },
         ],
         examples: [
@@ -162,7 +163,8 @@ export const optimizationConcepts: MathConcept[] = [
           },
           {
             latex: '\\nabla f = \\lambda \\nabla g',
-            description: '최적점에서의 조건',
+            description:
+              'f와 g가 근방에서 연속 미분 가능하고 제약 g=0의 국소 최적점에서 ∇g ≠ 0일 때 필요한 조건',
           },
         ],
         examples: [
@@ -193,7 +195,8 @@ export const optimizationConcepts: MathConcept[] = [
           },
           {
             latex: '\\nabla f = \\lambda \\nabla g',
-            description: 'Condition at optimum',
+            description:
+              'Necessary at a local constrained optimum when f and g are continuously differentiable nearby and ∇g ≠ 0',
           },
         ],
         examples: [

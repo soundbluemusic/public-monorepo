@@ -89,19 +89,21 @@ export const gameTheoryConcepts: MathConcept[] = [
     difficulty: 4,
     content: {
       ko: {
-        definition: '영합 게임에서 최선의 전략은 최대 손실을 최소화하는 것',
+        definition:
+          '유한한 2인 영합 게임에서 혼합 전략을 허용하면 최대최소값과 최소최대값이 같습니다.',
         formulas: [
-          'max_x min_y u(x,y) = min_y max_x u(x,y)',
-          '안장점: u(x*, y) ≤ u(x*, y*) ≤ u(x, y*)',
+          '유한 2인 영합 게임의 혼합 전략: max_x min_y u(x,y) = min_y max_x u(x,y)',
+          '안장점: u(x, y*) ≤ u(x*, y*) ≤ u(x*, y)',
         ],
         examples: ['가위바위보', '체스', '틱택토'],
         applications: ['인공지능', '의사결정', '최적화'],
       },
       en: {
-        definition: 'In zero-sum games, optimal strategy minimizes maximum loss',
+        definition:
+          'In finite two-player zero-sum games with mixed strategies, the maximin and minimax values are equal.',
         formulas: [
-          'max_x min_y u(x,y) = min_y max_x u(x,y)',
-          'Saddle point: u(x*, y) ≤ u(x*, y*) ≤ u(x, y*)',
+          'Finite two-player zero-sum game with mixed strategies: max_x min_y u(x,y) = min_y max_x u(x,y)',
+          'Saddle point: u(x, y*) ≤ u(x*, y*) ≤ u(x*, y)',
         ],
         examples: ['Rock-Paper-Scissors', 'Chess', 'Tic-Tac-Toe'],
         applications: ['AI', 'Decision making', 'Optimization'],

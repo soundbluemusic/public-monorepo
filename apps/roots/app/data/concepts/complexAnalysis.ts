@@ -116,7 +116,7 @@ export const complexAnalysisConcepts: MathConcept[] = [
     content: {
       ko: {
         definition:
-          '코시-리만 방정식은 복소함수가 미분가능(해석적)할 필요충분조건입니다. 실수부와 허수부의 편미분 관계를 나타냅니다.',
+          '복소함수가 한 점에서 미분 가능하면 코시-리만 방정식이 성립합니다. 편미분이 그 점 주변에서 연속이고 방정식이 그 점에서 성립하면 미분 가능합니다. 주변 모든 점에서 미분 가능해야 해석적입니다.',
         formulas: [
           {
             latex: '\\frac{\\partial u}{\\partial x} = \\frac{\\partial v}{\\partial y}',
@@ -135,12 +135,12 @@ export const complexAnalysisConcepts: MathConcept[] = [
           {
             problem: 'f(z) = z²이 해석적임을 코시-리만 방정식으로 확인하세요.',
             solution:
-              'u = x² - y², v = 2xy. ∂u/∂x = 2x = ∂v/∂y ✓. ∂u/∂y = -2y = -∂v/∂x ✓. 해석적입니다.',
+              'u = x² - y², v = 2xy의 편미분은 연속이고 모든 점에서 ∂u/∂x = ∂v/∂y, ∂u/∂y = -∂v/∂x이므로 해석적입니다.',
           },
           {
             problem: 'f(z) = |z|²가 해석적이지 않음을 보이세요.',
             solution:
-              'f(z) = x² + y². u = x² + y², v = 0. ∂u/∂x = 2x ≠ 0 = ∂v/∂y (원점 제외). 해석적이지 않습니다.',
+              'u = x² + y², v = 0입니다. 코시-리만 방정식은 원점에서만 성립합니다. 원점에서는 미분 가능하지만 어느 근방에서도 모든 점에서 미분 가능하지 않으므로 해석적이지 않습니다.',
           },
         ],
         history: {
@@ -156,7 +156,7 @@ export const complexAnalysisConcepts: MathConcept[] = [
       },
       en: {
         definition:
-          'Cauchy-Riemann equations are necessary and sufficient conditions for a complex function to be differentiable (analytic). They relate partial derivatives of real and imaginary parts.',
+          'Complex differentiability at a point requires the Cauchy-Riemann equations. They are sufficient at a point if the partial derivatives are continuous in a neighborhood. Analyticity requires differentiability throughout a neighborhood.',
         formulas: [
           {
             latex: '\\frac{\\partial u}{\\partial x} = \\frac{\\partial v}{\\partial y}',
@@ -175,12 +175,12 @@ export const complexAnalysisConcepts: MathConcept[] = [
           {
             problem: 'Verify f(z) = z² is analytic using Cauchy-Riemann.',
             solution:
-              "u = x² - y², v = 2xy. ∂u/∂x = 2x = ∂v/∂y ✓. ∂u/∂y = -2y = -∂v/∂x ✓. It's analytic.",
+              'The partial derivatives of u = x² - y² and v = 2xy are continuous and satisfy both Cauchy-Riemann equations everywhere, so the function is analytic.',
           },
           {
             problem: 'Show f(z) = |z|² is not analytic.',
             solution:
-              'f(z) = x² + y². u = x² + y², v = 0. ∂u/∂x = 2x ≠ 0 = ∂v/∂y (except origin). Not analytic.',
+              'For u = x² + y², v = 0, the equations hold only at the origin. The function is differentiable there but is not differentiable throughout any neighborhood, so it is not analytic.',
           },
         ],
         history: {
@@ -215,7 +215,7 @@ export const complexAnalysisConcepts: MathConcept[] = [
     content: {
       ko: {
         definition:
-          '해석함수(정칙함수)는 정의역의 모든 점에서 복소미분가능한 함수입니다. 무한 번 미분가능하고 테일러 급수로 표현됩니다.',
+          '해석함수(정칙함수)는 열린 정의역의 모든 점에서 복소미분가능한 함수입니다. 각 점의 충분히 작은 주변에서 테일러 급수로 표현됩니다.',
         formulas: [
           {
             latex: 'f(z) = \\sum_{n=0}^{\\infty} a_n (z - z_0)^n',
@@ -224,7 +224,7 @@ export const complexAnalysisConcepts: MathConcept[] = [
           {
             latex:
               'a_n = \\frac{f^{(n)}(z_0)}{n!} = \\frac{1}{2\\pi i}\\oint_C \\frac{f(z)}{(z-z_0)^{n+1}}dz',
-            description: '테일러 계수',
+            description: '테일러 계수 (C는 z₀를 반시계 방향으로 둘러싸며, C와 내부에서 f가 정칙)',
           },
         ],
         examples: [
@@ -245,7 +245,7 @@ export const complexAnalysisConcepts: MathConcept[] = [
       },
       en: {
         definition:
-          "An analytic (holomorphic) function is complex differentiable at every point in its domain. It's infinitely differentiable and expressible as Taylor series.",
+          'An analytic (holomorphic) function is complex differentiable at every point of its open domain. It has a Taylor series in a sufficiently small neighborhood of each point.',
         formulas: [
           {
             latex: 'f(z) = \\sum_{n=0}^{\\infty} a_n (z - z_0)^n',
@@ -254,7 +254,8 @@ export const complexAnalysisConcepts: MathConcept[] = [
           {
             latex:
               'a_n = \\frac{f^{(n)}(z_0)}{n!} = \\frac{1}{2\\pi i}\\oint_C \\frac{f(z)}{(z-z_0)^{n+1}}dz',
-            description: 'Taylor coefficients',
+            description:
+              'Taylor coefficients (C encloses z₀ counterclockwise and f is holomorphic on and inside C)',
           },
         ],
         examples: [
@@ -294,7 +295,7 @@ export const complexAnalysisConcepts: MathConcept[] = [
     content: {
       ko: {
         definition:
-          '유수 정리는 닫힌 경로를 따른 복소적분이 내부 특이점들의 유수 합으로 계산됨을 말합니다. 실수 적분 계산에 강력한 도구입니다.',
+          '반시계 방향의 단순 닫힌 경로 C와 그 내부에서 유한 개의 고립 특이점을 제외하고 f가 정칙이면, C를 따른 적분은 내부 특이점의 유수 합에 2πi를 곱한 값입니다. 특이점은 C 위에 없어야 합니다.',
         formulas: [
           {
             latex: '\\oint_C f(z) dz = 2\\pi i \\sum_{k} \\text{Res}(f, z_k)',
@@ -335,7 +336,7 @@ export const complexAnalysisConcepts: MathConcept[] = [
       },
       en: {
         definition:
-          "The residue theorem states that contour integrals equal 2πi times the sum of residues at interior singularities. It's a powerful tool for computing real integrals.",
+          'If f is holomorphic on and inside a positively oriented simple closed contour C except at finitely many isolated interior singularities, its integral around C is 2πi times the sum of their residues.',
         formulas: [
           {
             latex: '\\oint_C f(z) dz = 2\\pi i \\sum_{k} \\text{Res}(f, z_k)',
@@ -421,7 +422,7 @@ export const complexAnalysisConcepts: MathConcept[] = [
               'z = re^(iθ), 0 < θ < π/2일 때, w = r²e^(2iθ), 0 < 2θ < π. 제1사분면이 상반면으로 사상됩니다.',
           },
           {
-            problem: '뫼비우스 변환이 원을 원으로 보냄을 설명하세요.',
+            problem: '뫼비우스 변환이 원이나 직선을 어떻게 사상하는지 설명하세요.',
             solution:
               '뫼비우스 변환은 원과 직선을 원과 직선으로 사상합니다. 직선은 무한대를 지나는 원으로 볼 수 있습니다.',
           },
@@ -429,7 +430,8 @@ export const complexAnalysisConcepts: MathConcept[] = [
         history: {
           discoveredBy: '베른하르트 리만',
           year: '1851년',
-          background: '리만 사상 정리: 단순 연결 영역은 단위 원판과 등각동형입니다.',
+          background:
+            '리만 사상 정리: 복소평면 전체가 아닌 단순 연결 영역은 단위 원판과 등각동형입니다.',
         },
         applications: [
           { field: '유체역학', description: '날개 주위 유동 (주코프스키)' },
@@ -465,7 +467,7 @@ export const complexAnalysisConcepts: MathConcept[] = [
               'For z = re^(iθ), 0 < θ < π/2, w = r²e^(2iθ), 0 < 2θ < π. First quadrant maps to upper half-plane.',
           },
           {
-            problem: 'Explain why Möbius maps circles to circles.',
+            problem: 'Explain how Möbius maps transform circles and lines.',
             solution:
               'Möbius transformations map circles and lines to circles and lines. Lines are circles passing through infinity.',
           },
@@ -474,7 +476,7 @@ export const complexAnalysisConcepts: MathConcept[] = [
           discoveredBy: 'Bernhard Riemann',
           year: '1851',
           background:
-            'Riemann Mapping Theorem: Simply connected regions are conformally equivalent to the unit disk.',
+            'Riemann Mapping Theorem: A simply connected region other than the entire complex plane is conformally equivalent to the unit disk.',
         },
         applications: [
           { field: 'Fluid Mechanics', description: 'Airfoil flow (Joukowski)' },

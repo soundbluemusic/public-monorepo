@@ -264,11 +264,11 @@ export const algebraConcepts: MathConcept[] = [
           },
           {
             latex: 'a^3 + b^3 = (a+b)(a^2 - ab + b^2)',
-            description: '합의 세제곱',
+            description: '세제곱의 합',
           },
           {
             latex: 'a^3 - b^3 = (a-b)(a^2 + ab + b^2)',
-            description: '차의 세제곱',
+            description: '세제곱의 차',
           },
         ],
         examples: [

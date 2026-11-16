@@ -89,7 +89,8 @@ export const measureTheoryConcepts: MathConcept[] = [
         definition: '함수값의 범위를 분할하여 정의하는 적분. 리만 적분을 일반화',
         formulas: [
           '단순함수: ∫φ dμ = Σa_i μ(A_i)',
-          '일반함수: ∫f dμ = sup{∫φ dμ: φ ≤ f, φ 단순}',
+          '음이 아닌 가측함수 f: ∫f dμ = sup{∫φ dμ: 0 ≤ φ ≤ f, φ는 가측 단순함수}',
+          '적분 가능한 실함수 f: ∫f dμ = ∫f⁺ dμ − ∫f⁻ dμ',
           'MCT, DCT',
         ],
         examples: ['디리클레 함수의 적분', '∫_ℝ e^{-x²} dx = √π'],
@@ -100,7 +101,8 @@ export const measureTheoryConcepts: MathConcept[] = [
           'Integration defined by partitioning range of function. Generalizes Riemann integral',
         formulas: [
           'Simple function: ∫φ dμ = Σa_i μ(A_i)',
-          'General: ∫f dμ = sup{∫φ dμ: φ ≤ f, φ simple}',
+          'For nonnegative measurable f: ∫f dμ = sup{∫φ dμ: 0 ≤ φ ≤ f, φ simple and measurable}',
+          'For integrable real f: ∫f dμ = ∫f⁺ dμ − ∫f⁻ dμ',
           'MCT, DCT',
         ],
         examples: ['Integral of Dirichlet function', '∫_ℝ e^{-x²} dx = √π'],
@@ -108,7 +110,7 @@ export const measureTheoryConcepts: MathConcept[] = [
       },
     },
     latex:
-      '\\int f \\, d\\mu = \\sup\\left\\{\\int \\phi \\, d\\mu : \\phi \\leq f, \\phi \\text{ simple}\\right\\}',
+      '\\int f \\, d\\mu = \\sup\\left\\{\\int \\phi \\, d\\mu : 0 \\leq \\phi \\leq f, \\phi \\text{ simple measurable}\\right\\} \\quad (f \\geq 0 \\text{ measurable})',
     relations: {
       prerequisites: ['lebesgue-measure', 'limits'],
       nextTopics: ['lp-spaces', 'fubini-theorem'],
@@ -163,7 +165,7 @@ export const measureTheoryConcepts: MathConcept[] = [
         definition: '다중 적분에서 적분 순서를 교환할 수 있는 조건을 제시',
         formulas: [
           '∬f d(μ×ν) = ∫(∫f(x,y) dν(y)) dμ(x) = ∫(∫f(x,y) dμ(x)) dν(y)',
-          '조건: f가 적분 가능 또는 비음',
+          '조건: μ, ν는 σ-유한 측도이고 f는 측정가능; ∫|f| < ∞이면 푸비니 정리, f ≥ 0이면 토넬리 정리',
         ],
         examples: ['이중적분 계산', '기댓값의 독립 분해'],
         applications: ['다변량 적분', '확률론', '푸리에 변환'],
@@ -173,7 +175,7 @@ export const measureTheoryConcepts: MathConcept[] = [
           'Conditions under which order of integration can be exchanged in multiple integrals',
         formulas: [
           '∬f d(μ×ν) = ∫(∫f(x,y) dν(y)) dμ(x) = ∫(∫f(x,y) dμ(x)) dν(y)',
-          'Condition: f integrable or non-negative',
+          'Conditions: μ and ν are σ-finite and f is measurable; Fubini applies if ∫|f| < ∞, Tonelli if f ≥ 0',
         ],
         examples: ['Double integral computation', 'Independent expectation decomposition'],
         applications: ['Multivariable integration', 'Probability', 'Fourier transform'],
@@ -201,14 +203,18 @@ export const measureTheoryConcepts: MathConcept[] = [
     content: {
       ko: {
         definition: '적분 가능한 함수에 의해 지배되는 함수열의 극한과 적분을 교환',
-        formulas: ['조건: |f_n| ≤ g, ∫g < ∞', '결론: lim∫f_n = ∫lim f_n', '즉: ∫f = lim∫f_n'],
+        formulas: [
+          '조건: 측정 가능한 f_n → f가 거의 모든 곳에서 성립하고, |f_n| ≤ g이며 ∫g < ∞',
+          '결론: lim∫f_n = ∫lim f_n',
+          '즉: ∫f = lim∫f_n',
+        ],
         examples: ['점별 수렴 함수열', '파라미터 적분의 미분'],
         applications: ['극한-적분 교환', '확률론'],
       },
       en: {
         definition: 'Exchange limit and integral for functions dominated by an integrable function',
         formulas: [
-          'Condition: |f_n| ≤ g, ∫g < ∞',
+          'Conditions: measurable f_n → f almost everywhere, |f_n| ≤ g, and ∫g < ∞',
           'Conclusion: lim∫f_n = ∫lim f_n',
           'i.e.: ∫f = lim∫f_n',
         ],
@@ -237,15 +243,22 @@ export const measureTheoryConcepts: MathConcept[] = [
     difficulty: 5,
     content: {
       ko: {
-        definition: '절대연속인 측도는 다른 측도에 대한 적분으로 표현 가능',
-        formulas: ['ν ≪ μ ⟺ ∃f: ν(A) = ∫_A f dμ', 'f = dν/dμ (라돈-니코딤 도함수)'],
+        definition:
+          'σ-유한 측도 ν가 σ-유한 측도 μ에 절대연속이면 μ에 대한 밀도의 적분으로 표현됩니다.',
+        formulas: [
+          'μ, ν가 σ-유한 측도일 때: ν ≪ μ ⟺ ∃f ≥ 0: ν(A) = ∫_A f dμ',
+          'f = dν/dμ (라돈-니코딤 도함수)',
+        ],
         examples: ['확률밀도함수', '조건부 기댓값'],
         applications: ['확률론', '통계역학', '함수해석'],
       },
       en: {
         definition:
-          'Absolutely continuous measure can be expressed as integral w.r.t. another measure',
-        formulas: ['ν ≪ μ ⟺ ∃f: ν(A) = ∫_A f dμ', 'f = dν/dμ (Radon-Nikodym derivative)'],
+          'If a σ-finite measure ν is absolutely continuous with respect to a σ-finite measure μ, ν is represented by integrating a density with respect to μ.',
+        formulas: [
+          'For σ-finite measures μ and ν: ν ≪ μ ⟺ ∃f ≥ 0: ν(A) = ∫_A f dμ',
+          'f = dν/dμ (Radon-Nikodym derivative)',
+        ],
         examples: ['Probability density function', 'Conditional expectation'],
         applications: ['Probability', 'Statistical mechanics', 'Functional analysis'],
       },
@@ -270,9 +283,10 @@ export const measureTheoryConcepts: MathConcept[] = [
     difficulty: 5,
     content: {
       ko: {
-        definition: 'p승 적분 가능한 함수들의 바나흐 공간',
+        definition:
+          '1 ≤ p < ∞에서 Lᵖ는 |f|의 p승이 적분 가능한 측정가능 함수들의 공간입니다. 거의 모든 곳에서 같은 함수는 같은 원소로 봅니다. L∞는 본질적으로 유계인 함수들의 공간입니다. 이 공간들은 바나흐 공간입니다.',
         formulas: [
-          '||f||_p = (∫|f|^p dμ)^{1/p}',
+          '||f||_p = (∫|f|^p dμ)^{1/p} (1 ≤ p < ∞)',
           'L^∞: ||f||_∞ = ess sup |f|',
           '횔더: ||fg||_1 ≤ ||f||_p||g||_q (1/p+1/q=1)',
         ],
@@ -280,9 +294,10 @@ export const measureTheoryConcepts: MathConcept[] = [
         applications: ['푸리에 해석', '양자역학', 'PDE'],
       },
       en: {
-        definition: 'Banach space of p-power integrable functions',
+        definition:
+          'For 1 ≤ p < ∞, Lᵖ consists of measurable functions whose absolute values have integrable pth powers. Functions equal almost everywhere represent the same element. L∞ consists of essentially bounded functions. These are Banach spaces.',
         formulas: [
-          '||f||_p = (∫|f|^p dμ)^{1/p}',
+          '||f||_p = (∫|f|^p dμ)^{1/p} (1 ≤ p < ∞)',
           'L^∞: ||f||_∞ = ess sup |f|',
           'Hölder: ||fg||_1 ≤ ||f||_p||g||_q (1/p+1/q=1)',
         ],
@@ -290,7 +305,7 @@ export const measureTheoryConcepts: MathConcept[] = [
         applications: ['Fourier analysis', 'Quantum mechanics', 'PDEs'],
       },
     },
-    latex: '\\|f\\|_p = \\left(\\int |f|^p \\, d\\mu\\right)^{1/p}',
+    latex: '\\|f\\|_p = \\left(\\int |f|^p \\, d\\mu\\right)^{1/p}, \\quad 1 \\le p < \\infty',
     relations: {
       prerequisites: ['lebesgue-integral', 'normed-space'],
       nextTopics: ['hilbert-space', 'dual-space'],

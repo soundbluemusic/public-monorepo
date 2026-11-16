@@ -90,18 +90,23 @@ export const algebraicGeometryConcepts: MathConcept[] = [
     difficulty: 5,
     content: {
       ko: {
-        definition: '국소환달린 공간. 대수적 다양체의 일반화로 현대 대수기하의 기초',
-        formulas: ['(X, O_X)', 'Spec A: 소 아이디얼의 집합', '구조층: O_X (국소환의 층)'],
+        definition:
+          '각 점이 어떤 아핀 스킴과 국소환달린 공간으로서 동형인 열린 근방을 갖는 국소환달린 공간입니다.',
+        formulas: [
+          '(X, O_X)',
+          'Spec A: 소 아이디얼의 집합',
+          '구조층: O_X (각 점에서의 줄기가 국소환)',
+        ],
         examples: ['Spec ℤ', 'Spec k[x]', 'Proj (사영 스킴)'],
         applications: ['수론', '대수기하', '호몰로지대수'],
       },
       en: {
         definition:
-          'Locally ringed space. Generalization of varieties, foundation of modern algebraic geometry',
+          'A locally ringed space in which every point has an open neighborhood isomorphic, as a locally ringed space, to an affine scheme.',
         formulas: [
           '(X, O_X)',
           'Spec A: set of prime ideals',
-          'Structure sheaf: O_X (sheaf of local rings)',
+          'Structure sheaf: O_X (each stalk is a local ring)',
         ],
         examples: ['Spec ℤ', 'Spec k[x]', 'Proj (projective scheme)'],
         applications: ['Number theory', 'Algebraic geometry', 'Homological algebra'],
@@ -173,16 +178,29 @@ export const algebraicGeometryConcepts: MathConcept[] = [
     difficulty: 4,
     content: {
       ko: {
-        definition: '두 사영 곡선의 교점 개수는 차수의 곱 (적절히 세면)',
-        formulas: ['deg(C₁) · deg(C₂) = Σ m_p', '중복도 포함, 복소수 체, 무한점 포함'],
-        examples: ['직선과 원뿔곡선: 2점', '두 원뿔곡선: 4점'],
+        definition:
+          '공통 곡선 성분이 없는 두 복소 사영 평면 곡선의 교점은 중복도를 포함해 세면 차수의 곱입니다.',
+        formulas: [
+          'deg(C₁) · deg(C₂) = Σ m_p',
+          '복소 사영 평면에서 공통 성분이 없어야 하며 중복도와 무한점을 포함',
+        ],
+        examples: [
+          '공통 성분이 없는 직선과 원뿔곡선: 중복도를 포함해 2',
+          '공통 성분이 없는 두 원뿔곡선: 중복도를 포함해 4',
+        ],
         applications: ['교점 이론', '대수기하', '기하학'],
       },
       en: {
         definition:
-          'Number of intersection points of two projective curves equals product of degrees (counted properly)',
-        formulas: ['deg(C₁) · deg(C₂) = Σ m_p', 'With multiplicity, over ℂ, including infinity'],
-        examples: ['Line and conic: 2 points', 'Two conics: 4 points'],
+          'Two complex projective plane curves without a common component intersect in a number of points, counted with multiplicity, equal to the product of their degrees.',
+        formulas: [
+          'deg(C₁) · deg(C₂) = Σ m_p',
+          'Over the complex projective plane, no common component; count multiplicities and points at infinity',
+        ],
+        examples: [
+          'A line and a conic with no common component: 2 intersections counting multiplicity',
+          'Two conics with no common component: 4 intersections counting multiplicity',
+        ],
         applications: ['Intersection theory', 'Algebraic geometry', 'Geometry'],
       },
     },
@@ -206,7 +224,8 @@ export const algebraicGeometryConcepts: MathConcept[] = [
     difficulty: 5,
     content: {
       ko: {
-        definition: '다항식의 아이디얼과 대수적 집합 사이의 대응. 대수기하학의 기초',
+        definition:
+          '대수적으로 닫힌 체 위에서 다항식의 아이디얼과 대수적 집합을 연결하는 정리. 대수기하학의 기초',
         formulas: [
           'I(V(I)) = √I (근기)',
           '약한 형태: k 대수폐체, I ≠ k[x] ⟹ V(I) ≠ ∅',
@@ -217,7 +236,7 @@ export const algebraicGeometryConcepts: MathConcept[] = [
       },
       en: {
         definition:
-          'Correspondence between polynomial ideals and algebraic sets. Foundation of algebraic geometry',
+          'A theorem connecting polynomial ideals and algebraic sets over an algebraically closed field. A foundation of algebraic geometry',
         formulas: [
           'I(V(I)) = √I (radical)',
           'Weak form: k alg. closed, I ≠ k[x] ⟹ V(I) ≠ ∅',
@@ -227,7 +246,8 @@ export const algebraicGeometryConcepts: MathConcept[] = [
         applications: ['Algebraic geometry', 'Commutative algebra', 'Number theory'],
       },
     },
-    latex: 'I(V(I)) = \\sqrt{I}',
+    latex:
+      'I(V(I)) = \\sqrt{I}, \\quad I\\subseteq k[x_1,\\ldots,x_n],\\quad k\\text{ algebraically closed}',
     relations: {
       prerequisites: ['ideal', 'polynomial-ring'],
       nextTopics: ['algebraic-variety', 'scheme'],
@@ -247,20 +267,19 @@ export const algebraicGeometryConcepts: MathConcept[] = [
     difficulty: 5,
     content: {
       ko: {
-        definition: '대수곡선 위 인자의 선형계 차원을 계산하는 기본 정리',
+        definition: '매끄러운 사영 대수곡선 위 인자에 관한 기본 정리',
         formulas: ['ℓ(D) - ℓ(K-D) = deg(D) - g + 1', 'g: 종수, K: 표준인자', 'ℓ(D) = dim L(D)'],
-        examples: ['g=0: ℓ(D) = max(0, deg(D)+1)', 'g=1 타원곡선'],
+        examples: ['P¹: ℓ(D) = max(0, deg(D)+1)', 'g=1 타원곡선'],
         applications: ['곡선론', '암호학', '코딩이론'],
       },
       en: {
-        definition:
-          'Fundamental theorem computing dimension of linear systems of divisors on algebraic curves',
+        definition: 'Fundamental theorem for divisors on smooth projective algebraic curves',
         formulas: [
           'ℓ(D) - ℓ(K-D) = deg(D) - g + 1',
           'g: genus, K: canonical divisor',
           'ℓ(D) = dim L(D)',
         ],
-        examples: ['g=0: ℓ(D) = max(0, deg(D)+1)', 'g=1 elliptic curve'],
+        examples: ['P¹: ℓ(D) = max(0, deg(D)+1)', 'g=1 elliptic curve'],
         applications: ['Curve theory', 'Cryptography', 'Coding theory'],
       },
     },
@@ -284,28 +303,29 @@ export const algebraicGeometryConcepts: MathConcept[] = [
     difficulty: 5,
     content: {
       ko: {
-        definition: '종수 1의 비특이 사영곡선. 군 구조를 가지며 정수론과 암호학의 핵심',
+        definition:
+          '종수 1인 매끄럽고 사영적인 곡선에 기준 체 위의 점을 하나 지정한 것. 이 점을 항등원으로 군 구조를 가짐',
         formulas: [
-          'y² = x³ + ax + b (바이어슈트라스)',
+          'y² = x³ + ax + b (체의 특성이 2와 3이 아닐 때의 짧은 바이어슈트라스 형태)',
           'Δ = -16(4a³ + 27b²) ≠ 0',
-          '점 덧셈: P + Q + R = O',
+          '점 덧셈: 한 직선이 만나는 세 점 P, Q, R에 대해 P + Q + R = O (중복도 포함)',
         ],
         examples: ['y² = x³ - x', 'y² = x³ - 432'],
         applications: ['암호학', '페르마의 마지막 정리', '정수론'],
       },
       en: {
         definition:
-          'Non-singular projective curve of genus 1. Has group structure, central to number theory and cryptography',
+          'A smooth projective curve of genus 1 with a specified point over the base field, which serves as the identity for its group law',
         formulas: [
-          'y² = x³ + ax + b (Weierstrass)',
+          'y² = x³ + ax + b (short Weierstrass form in characteristic other than 2 and 3)',
           'Δ = -16(4a³ + 27b²) ≠ 0',
-          'Point addition: P + Q + R = O',
+          'Point addition: P + Q + R = O for three collinear intersection points, counted with multiplicity',
         ],
         examples: ['y² = x³ - x', 'y² = x³ - 432'],
         applications: ['Cryptography', "Fermat's Last Theorem", 'Number theory'],
       },
     },
-    latex: 'y^2 = x^3 + ax + b',
+    latex: 'y^2 = x^3 + ax + b,\\quad 4a^3 + 27b^2 \\ne 0,\\quad \\operatorname{char}(k) \\ne 2,3',
     relations: {
       prerequisites: ['algebraic-variety', 'group-theory'],
       nextTopics: ['abelian-variety', 'modular-forms'],

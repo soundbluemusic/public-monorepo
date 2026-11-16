@@ -18,7 +18,8 @@ export const foundationsConcepts: MathConcept[] = [
     difficulty: 1,
     content: {
       ko: {
-        definition: '1, 2, 3, 4, ... 처럼 물건을 셀 때 사용하는 양의 정수이다.',
+        definition:
+          '이 사전에서는 1, 2, 3, ...과 같은 양의 정수를 자연수라고 한다. 다른 약속에서는 0도 포함한다.',
         formulas: [
           {
             latex: '\\mathbb{N} = \\{1, 2, 3, 4, 5, ...\\}',
@@ -28,7 +29,8 @@ export const foundationsConcepts: MathConcept[] = [
         examples: [
           {
             problem: '다음 중 자연수를 모두 고르시오: -3, 0, 5, 2.5, 100',
-            solution: '5와 100이 자연수입니다.\n-3은 음수, 0은 자연수가 아님, 2.5는 소수입니다.',
+            solution:
+              '이 사전의 약속에서는 5와 100이 자연수입니다.\n0을 자연수에 포함하는 약속도 있습니다.',
             difficulty: 1,
           },
           {
@@ -44,7 +46,8 @@ export const foundationsConcepts: MathConcept[] = [
         ],
       },
       en: {
-        definition: 'Positive integers used for counting: 1, 2, 3, 4, ...',
+        definition:
+          'In this dictionary, the natural numbers are the positive integers 1, 2, 3, ... . Other conventions also include 0.',
         formulas: [
           {
             latex: '\\mathbb{N} = \\{1, 2, 3, 4, 5, ...\\}',
@@ -55,7 +58,7 @@ export const foundationsConcepts: MathConcept[] = [
           {
             problem: 'Select all natural numbers: -3, 0, 5, 2.5, 100',
             solution:
-              '5 and 100 are natural numbers.\n-3 is negative, 0 is not a natural number, 2.5 is decimal.',
+              'Under this dictionary’s convention, 5 and 100 are natural numbers.\nSome conventions also include 0.',
             difficulty: 1,
           },
           {
@@ -100,7 +103,8 @@ export const foundationsConcepts: MathConcept[] = [
         examples: [
           {
             problem: '다음 중 정수를 모두 고르시오: -5, 0, 3.14, 7, -2.5',
-            solution: '-5, 0, 7이 정수입니다.\n3.14와 -2.5는 소수점이 있으므로 정수가 아닙니다.',
+            solution:
+              '-5, 0, 7이 정수입니다. 3.14와 -2.5는 정수가 아닙니다. 소수점이 있어도 2.0처럼 정수일 수 있습니다.',
             difficulty: 1,
           },
           {
@@ -127,7 +131,7 @@ export const foundationsConcepts: MathConcept[] = [
           {
             problem: 'Select all integers: -5, 0, 3.14, 7, -2.5',
             solution:
-              '-5, 0, and 7 are integers.\n3.14 and -2.5 have decimal points, so they are not integers.',
+              '-5, 0, and 7 are integers. 3.14 and -2.5 are not integers. A decimal such as 2.0 can still be an integer.',
             difficulty: 1,
           },
           {
@@ -246,7 +250,8 @@ export const foundationsConcepts: MathConcept[] = [
     difficulty: 2,
     content: {
       ko: {
-        definition: '분수로 나타낼 수 없는 수로, 소수점 이하가 무한히 계속되며 반복되지 않는다.',
+        definition:
+          '두 정수의 비로 나타낼 수 없는 실수이다. 소수점 이하가 무한히 계속되며 순환하지 않는다.',
         formulas: [
           {
             latex: '\\sqrt{2} = 1.41421356...',
@@ -281,7 +286,7 @@ export const foundationsConcepts: MathConcept[] = [
       },
       en: {
         definition:
-          'A number that cannot be expressed as a fraction, with infinite non-repeating decimal expansion.',
+          'A real number that cannot be expressed as a ratio of integers; its decimal expansion is infinite and not eventually periodic.',
         formulas: [
           {
             latex: '\\sqrt{2} = 1.41421356...',
@@ -432,7 +437,7 @@ export const foundationsConcepts: MathConcept[] = [
           },
           {
             latex: 'a \\div b = \\frac{a}{b}',
-            description: '나눗셈 (몫)',
+            description: '나눗셈 (몫, b ≠ 0)',
           },
         ],
         examples: [
@@ -470,7 +475,7 @@ export const foundationsConcepts: MathConcept[] = [
           },
           {
             latex: 'a \\div b = \\frac{a}{b}',
-            description: 'Division (quotient)',
+            description: 'Division (quotient, b ≠ 0)',
           },
         ],
         examples: [
@@ -514,7 +519,7 @@ export const foundationsConcepts: MathConcept[] = [
         formulas: [
           {
             latex: 'a^n = \\underbrace{a \\times a \\times ... \\times a}_{n\\text{번}}',
-            description: '거듭제곱의 정의',
+            description: '거듭제곱의 정의 (n은 양의 정수)',
             variables: [
               { symbol: 'a', meaning: '밑 (base)' },
               { symbol: 'n', meaning: '지수 (exponent)' },
@@ -522,15 +527,15 @@ export const foundationsConcepts: MathConcept[] = [
           },
           {
             latex: 'a^m \\times a^n = a^{m+n}',
-            description: '지수법칙: 곱셈',
+            description: '지수법칙: 곱셈 (a ≠ 0, m과 n은 정수)',
           },
           {
             latex: '\\frac{a^m}{a^n} = a^{m-n}',
-            description: '지수법칙: 나눗셈',
+            description: '지수법칙: 나눗셈 (a ≠ 0, m과 n은 정수)',
           },
           {
             latex: '(a^m)^n = a^{mn}',
-            description: '지수법칙: 거듭제곱의 거듭제곱',
+            description: '지수법칙: 거듭제곱의 거듭제곱 (a ≠ 0, m과 n은 정수)',
           },
           {
             latex: 'a^0 = 1 \\quad (a \\neq 0)',
@@ -562,7 +567,7 @@ export const foundationsConcepts: MathConcept[] = [
         formulas: [
           {
             latex: 'a^n = \\underbrace{a \\times a \\times ... \\times a}_{n\\text{ times}}',
-            description: 'Definition of exponent',
+            description: 'Definition of exponent (n is a positive integer)',
             variables: [
               { symbol: 'a', meaning: 'Base' },
               { symbol: 'n', meaning: 'Exponent' },
@@ -570,15 +575,15 @@ export const foundationsConcepts: MathConcept[] = [
           },
           {
             latex: 'a^m \\times a^n = a^{m+n}',
-            description: 'Exponent rule: multiplication',
+            description: 'Exponent rule: multiplication (a ≠ 0; m and n are integers)',
           },
           {
             latex: '\\frac{a^m}{a^n} = a^{m-n}',
-            description: 'Exponent rule: division',
+            description: 'Exponent rule: division (a ≠ 0; m and n are integers)',
           },
           {
             latex: '(a^m)^n = a^{mn}',
-            description: 'Exponent rule: power of a power',
+            description: 'Exponent rule: power of a power (a ≠ 0; m and n are integers)',
           },
           {
             latex: 'a^0 = 1 \\quad (a \\neq 0)',
@@ -625,7 +630,8 @@ export const foundationsConcepts: MathConcept[] = [
     difficulty: 1,
     content: {
       ko: {
-        definition: '제곱하여 어떤 수가 되는 수를 그 수의 제곱근이라 한다.',
+        definition:
+          '제곱하여 어떤 수가 되는 수를 그 수의 제곱근이라 한다. a ≥ 0일 때 √a는 그중 음이 아닌 제곱근이다.',
         formulas: [
           {
             latex: '\\sqrt{a} = b \\iff b^2 = a \\quad (b \\geq 0)',
@@ -633,15 +639,15 @@ export const foundationsConcepts: MathConcept[] = [
           },
           {
             latex: '\\sqrt{ab} = \\sqrt{a} \\cdot \\sqrt{b}',
-            description: '제곱근의 곱셈',
+            description: '제곱근의 곱셈 (a ≥ 0, b ≥ 0인 실수)',
           },
           {
             latex: '\\sqrt{\\frac{a}{b}} = \\frac{\\sqrt{a}}{\\sqrt{b}}',
-            description: '제곱근의 나눗셈',
+            description: '제곱근의 나눗셈 (a ≥ 0, b > 0인 실수)',
           },
           {
             latex: '\\sqrt{a^2} = |a|',
-            description: '제곱근과 제곱의 관계',
+            description: '제곱근과 제곱의 관계 (a는 실수)',
           },
         ],
         examples: [
@@ -664,7 +670,8 @@ export const foundationsConcepts: MathConcept[] = [
         ],
       },
       en: {
-        definition: 'A number that, when squared, gives the original number.',
+        definition:
+          'A square root of a number gives that number when squared. For a ≥ 0, √a denotes its nonnegative square root.',
         formulas: [
           {
             latex: '\\sqrt{a} = b \\iff b^2 = a \\quad (b \\geq 0)',
@@ -672,15 +679,15 @@ export const foundationsConcepts: MathConcept[] = [
           },
           {
             latex: '\\sqrt{ab} = \\sqrt{a} \\cdot \\sqrt{b}',
-            description: 'Product rule for square roots',
+            description: 'Product rule for square roots (real a ≥ 0, b ≥ 0)',
           },
           {
             latex: '\\sqrt{\\frac{a}{b}} = \\frac{\\sqrt{a}}{\\sqrt{b}}',
-            description: 'Quotient rule for square roots',
+            description: 'Quotient rule for square roots (real a ≥ 0, b > 0)',
           },
           {
             latex: '\\sqrt{a^2} = |a|',
-            description: 'Square root of a square',
+            description: 'Square root of a square (real a)',
           },
         ],
         examples: [
@@ -885,28 +892,29 @@ export const foundationsConcepts: MathConcept[] = [
     difficulty: 1,
     content: {
       ko: {
-        definition: '전체를 똑같이 나눈 것 중 일부를 나타내는 수이다.',
+        definition:
+          '분자와 0이 아닌 분모를 써서 나눗셈의 결과를 나타낸 수이다. 전체를 똑같이 나눈 부분을 나타낼 때도 쓴다.',
         formulas: [
           {
             latex: '\\frac{a}{b}',
             description: '분수의 기본 형태',
             variables: [
-              { symbol: 'a', meaning: '분자 (나눈 것 중 취한 부분)' },
-              { symbol: 'b', meaning: '분모 (전체를 나눈 수, b≠0)' },
+              { symbol: 'a', meaning: '분자 (나누어지는 수)' },
+              { symbol: 'b', meaning: '분모 (나누는 수, b≠0)' },
             ],
           },
           {
             latex: '\\frac{a}{b} + \\frac{c}{d} = \\frac{ad + bc}{bd}',
-            description: '분수의 덧셈',
+            description: '분수의 덧셈 (b ≠ 0, d ≠ 0)',
           },
           {
             latex: '\\frac{a}{b} \\times \\frac{c}{d} = \\frac{ac}{bd}',
-            description: '분수의 곱셈',
+            description: '분수의 곱셈 (b ≠ 0, d ≠ 0)',
           },
           {
             latex:
               '\\frac{a}{b} \\div \\frac{c}{d} = \\frac{a}{b} \\times \\frac{d}{c} = \\frac{ad}{bc}',
-            description: '분수의 나눗셈',
+            description: '분수의 나눗셈 (b ≠ 0, c ≠ 0, d ≠ 0)',
           },
         ],
         examples: [
@@ -930,28 +938,29 @@ export const foundationsConcepts: MathConcept[] = [
         ],
       },
       en: {
-        definition: 'A number representing part of a whole divided into equal parts.',
+        definition:
+          'A number written as a numerator divided by a nonzero denominator. It can also represent equal parts of a whole.',
         formulas: [
           {
             latex: '\\frac{a}{b}',
             description: 'Basic fraction form',
             variables: [
-              { symbol: 'a', meaning: 'Numerator (parts taken)' },
-              { symbol: 'b', meaning: 'Denominator (total parts, b≠0)' },
+              { symbol: 'a', meaning: 'Numerator (the number being divided)' },
+              { symbol: 'b', meaning: 'Denominator (the divisor, b≠0)' },
             ],
           },
           {
             latex: '\\frac{a}{b} + \\frac{c}{d} = \\frac{ad + bc}{bd}',
-            description: 'Fraction addition',
+            description: 'Fraction addition (b ≠ 0, d ≠ 0)',
           },
           {
             latex: '\\frac{a}{b} \\times \\frac{c}{d} = \\frac{ac}{bd}',
-            description: 'Fraction multiplication',
+            description: 'Fraction multiplication (b ≠ 0, d ≠ 0)',
           },
           {
             latex:
               '\\frac{a}{b} \\div \\frac{c}{d} = \\frac{a}{b} \\times \\frac{d}{c} = \\frac{ad}{bc}',
-            description: 'Fraction division',
+            description: 'Fraction division (b ≠ 0, c ≠ 0, d ≠ 0)',
           },
         ],
         examples: [
@@ -1169,11 +1178,11 @@ export const foundationsConcepts: MathConcept[] = [
         formulas: [
           {
             latex: 'a : b = \\frac{a}{b}',
-            description: '비의 표기',
+            description: '비의 표기 (b ≠ 0)',
           },
           {
             latex: 'a : b = ka : kb \\quad (k \\neq 0)',
-            description: '비의 성질 (같은 수를 곱해도 같다)',
+            description: '비의 성질 (b ≠ 0이고 양쪽에 0이 아닌 같은 수를 곱함)',
           },
         ],
         examples: [
@@ -1200,11 +1209,11 @@ export const foundationsConcepts: MathConcept[] = [
         formulas: [
           {
             latex: 'a : b = \\frac{a}{b}',
-            description: 'Ratio notation',
+            description: 'Ratio notation (b ≠ 0)',
           },
           {
             latex: 'a : b = ka : kb \\quad (k \\neq 0)',
-            description: 'Property of ratios (multiplying both by same number)',
+            description: 'Property of ratios (b ≠ 0; multiply both by the same nonzero number)',
           },
         ],
         examples: [
@@ -1250,7 +1259,7 @@ export const foundationsConcepts: MathConcept[] = [
         formulas: [
           {
             latex: 'a : b = c : d \\iff \\frac{a}{b} = \\frac{c}{d} \\iff ad = bc',
-            description: '비례식과 내항외항의 곱',
+            description: '비례식과 내항외항의 곱 (b ≠ 0, d ≠ 0)',
           },
           {
             latex: 'y = kx',
@@ -1258,7 +1267,7 @@ export const foundationsConcepts: MathConcept[] = [
           },
           {
             latex: 'y = \\frac{k}{x}',
-            description: '반비례',
+            description: '반비례 (x ≠ 0, k ≠ 0)',
           },
         ],
         examples: [
@@ -1268,7 +1277,7 @@ export const foundationsConcepts: MathConcept[] = [
             difficulty: 1,
           },
           {
-            problem: '4시간에 120km를 간다면 6시간에는 얼마나 갈 수 있는가?',
+            problem: '일정한 속도로 4시간에 120km를 간다면 같은 속도로 6시간에는 얼마나 가는가?',
             solution: '4:120 = 6:x\n4x = 120 × 6 = 720\nx = 180km',
             difficulty: 1,
           },
@@ -1284,7 +1293,7 @@ export const foundationsConcepts: MathConcept[] = [
         formulas: [
           {
             latex: 'a : b = c : d \\iff \\frac{a}{b} = \\frac{c}{d} \\iff ad = bc',
-            description: 'Proportion and cross multiplication',
+            description: 'Proportion and cross multiplication (b ≠ 0, d ≠ 0)',
           },
           {
             latex: 'y = kx',
@@ -1292,7 +1301,7 @@ export const foundationsConcepts: MathConcept[] = [
           },
           {
             latex: 'y = \\frac{k}{x}',
-            description: 'Inverse proportion',
+            description: 'Inverse proportion (x ≠ 0, k ≠ 0)',
           },
         ],
         examples: [
@@ -1302,7 +1311,8 @@ export const foundationsConcepts: MathConcept[] = [
             difficulty: 1,
           },
           {
-            problem: 'If you travel 120km in 4 hours, how far in 6 hours?',
+            problem:
+              'If you travel 120km in 4 hours at a constant speed, how far do you travel in 6 hours at the same speed?',
             solution: '4:120 = 6:x\n4x = 120 × 6 = 720\nx = 180km',
             difficulty: 1,
           },

@@ -98,20 +98,29 @@ export const functionalAnalysisConcepts: MathConcept[] = [
     difficulty: 4,
     content: {
       ko: {
-        definition: '노름이 유한인 선형 작용소. B(X,Y)는 X에서 Y로의 유계 작용소들의 바나흐 공간',
+        definition:
+          '노름이 유한인 선형 작용소. Y가 바나흐 공간이면 B(X,Y)는 X에서 Y로의 유계 선형 작용소들의 바나흐 공간',
         formulas: ['||T|| = sup{||Tx|| : ||x|| ≤ 1}', '||Tx|| ≤ ||T|| ||x||', '유계 ⟺ 연속'],
-        examples: ['적분 작용소', '미분 작용소 (비유계)', '행렬 (유한차원)'],
+        examples: [
+          '적분 작용소',
+          '유한차원 행렬',
+          'C¹[0,1]에서 C[0,1]로의 미분은 상한 노름에서 비유계',
+        ],
         applications: ['미분방정식', '양자역학', '근사이론'],
       },
       en: {
         definition:
-          'Linear operator with finite norm. B(X,Y) is Banach space of bounded operators from X to Y',
+          'A linear operator with finite norm. If Y is Banach, B(X,Y), the space of bounded linear operators from X to Y, is Banach',
         formulas: [
           '||T|| = sup{||Tx|| : ||x|| ≤ 1}',
           '||Tx|| ≤ ||T|| ||x||',
           'Bounded ⟺ Continuous',
         ],
-        examples: ['Integral operator', 'Differentiation (unbounded)', 'Matrix (finite dim)'],
+        examples: [
+          'Integral operator',
+          'Matrix (finite dimensional)',
+          'Differentiation from C¹[0,1] to C[0,1] is unbounded in the supremum norms',
+        ],
         applications: ['Differential equations', 'Quantum mechanics', 'Approximation theory'],
       },
     },
@@ -135,14 +144,15 @@ export const functionalAnalysisConcepts: MathConcept[] = [
     difficulty: 5,
     content: {
       ko: {
-        definition: '자기수반(에르미트) 작용소는 고유값과 고유벡터로 대각화 가능',
+        definition:
+          '자기수반 작용소는 스펙트럼 측도로 분해됩니다. 유한차원에서는 고유벡터의 직교기저로 대각화되지만 무한차원에서는 연속 스펙트럼도 있을 수 있습니다.',
         formulas: ['T = ∫λ dE_λ (스펙트럼 분해)', '유한차원: T = Σλᵢ Pᵢ', 'σ(T) ⊂ ℝ (자기수반)'],
         examples: ['대칭 행렬', '양자 관측 가능량', '슈튀름-리우빌 문제'],
         applications: ['양자역학', '미분방정식', '진동 해석'],
       },
       en: {
         definition:
-          'Self-adjoint (Hermitian) operators can be diagonalized via eigenvalues and eigenvectors',
+          'A self-adjoint operator has a spectral decomposition. In finite dimensions an orthonormal eigenbasis diagonalizes it; infinite-dimensional operators may have continuous spectrum.',
         formulas: [
           'T = ∫λ dE_λ (spectral decomposition)',
           'Finite dim: T = Σλᵢ Pᵢ',
@@ -252,21 +262,21 @@ export const functionalAnalysisConcepts: MathConcept[] = [
     difficulty: 5,
     content: {
       ko: {
-        definition: '유계 집합을 상대적으로 컴팩트한 집합으로 보내는 작용소',
+        definition: '유계 집합을 상대적으로 컴팩트한 집합으로 보내는 선형 작용소',
         formulas: [
           'T: X → Y, T(단위구)가 상대적 컴팩트',
-          '유한계수 작용소의 노름 극한',
-          'σ(T) \\ {0}는 고립된 고유값',
+          '힐베르트 공간 사이에서는 유한계수 작용소의 노름 극한',
+          '복소 바나흐 공간의 T: X → X에 대해 σ(T) \\ {0}는 고립된 고유값',
         ],
         examples: ['적분 작용소 (연속 핵)', '볼테라 작용소', '유한계수 작용소'],
         applications: ['적분방정식', '프레드홀름 이론', '스펙트럼 이론'],
       },
       en: {
-        definition: 'Operator mapping bounded sets to relatively compact sets',
+        definition: 'Linear operator mapping bounded sets to relatively compact sets',
         formulas: [
           'T: X → Y, T(unit ball) relatively compact',
-          'Norm limit of finite-rank operators',
-          'σ(T) \\ {0} isolated eigenvalues',
+          'Between Hilbert spaces, a norm limit of finite-rank operators',
+          'For T: X → X on a complex Banach space, σ(T) \\ {0} consists of isolated eigenvalues',
         ],
         examples: [
           'Integral operator (continuous kernel)',

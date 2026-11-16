@@ -11,10 +11,10 @@ export const numericalLinearAlgebraConcepts: MathConcept[] = [
     subfield: 'numerical-linear-algebra',
     difficulty: 3,
     content: {
-      ko: '행렬을 하삼각행렬(L)과 상삼각행렬(U)의 곱으로 분해하는 방법입니다. 연립방정식을 효율적으로 풀 때 사용됩니다.',
-      en: 'A method of decomposing a matrix into the product of a lower triangular matrix (L) and an upper triangular matrix (U). Used for efficiently solving systems of linear equations.',
+      ko: '행렬을 하삼각행렬(L)과 상삼각행렬(U)의 곱으로 분해하는 방법입니다. 일부 행렬은 행을 바꾸는 순열행렬 P가 필요해 PA=LU로 나타냅니다.',
+      en: 'A decomposition into a lower triangular matrix L and an upper triangular matrix U. Some matrices require a row permutation P, giving PA=LU.',
     },
-    latex: 'A = LU, \\quad L_{ij} = 0 \\text{ for } i < j, \\quad U_{ij} = 0 \\text{ for } i > j',
+    latex: 'PA = LU, \\quad L_{ij} = 0 \\text{ for } i < j, \\quad U_{ij} = 0 \\text{ for } i > j',
     relations: {
       prerequisites: ['matrix', 'gaussian-elimination'],
       nextTopics: ['cholesky-decomposition', 'qr-decomposition'],
@@ -55,10 +55,11 @@ export const numericalLinearAlgebraConcepts: MathConcept[] = [
     subfield: 'numerical-linear-algebra',
     difficulty: 4,
     content: {
-      ko: '임의의 행렬을 두 직교행렬과 대각행렬의 곱으로 분해하는 방법입니다. 데이터 압축, 차원 축소, 의사역행렬 계산에 핵심적입니다.',
-      en: 'A method of decomposing any matrix into the product of two orthogonal matrices and a diagonal matrix. Essential for data compression, dimensionality reduction, and pseudoinverse computation.',
+      ko: '임의의 실수 행렬을 두 직교행렬과 직사각 대각행렬의 곱으로 분해하는 방법입니다. 복소수 행렬에서는 직교행렬 대신 유니터리 행렬을 씁니다. 데이터 압축, 차원 축소, 의사역행렬 계산에 핵심적입니다.',
+      en: 'A method of decomposing any real matrix into two orthogonal matrices and a rectangular diagonal matrix. Complex matrices use unitary matrices instead. Essential for data compression, dimensionality reduction, and pseudoinverse computation.',
     },
-    latex: 'A = U\\Sigma V^T, \\quad \\Sigma = \\text{diag}(\\sigma_1, \\ldots, \\sigma_r)',
+    latex:
+      'A = U\\Sigma V^T \\quad (A\\text{ real}), \\qquad A = U\\Sigma V^* \\quad (A\\text{ complex})',
     relations: {
       prerequisites: ['eigenvalue', 'orthogonal-matrix'],
       nextTopics: ['pca', 'low-rank-approximation'],
@@ -171,7 +172,8 @@ export const numericalLinearAlgebraConcepts: MathConcept[] = [
       ko: '입력의 작은 변화에 대한 출력의 민감도를 측정하는 수입니다. 조건수가 크면 문제가 ill-conditioned하여 수치적으로 불안정합니다.',
       en: 'A measure of sensitivity of output to small changes in input. Large condition numbers indicate ill-conditioned problems that are numerically unstable.',
     },
-    latex: '\\kappa(A) = \\|A\\| \\cdot \\|A^{-1}\\| = \\frac{\\sigma_{\\max}}{\\sigma_{\\min}}',
+    latex:
+      '\\kappa_2(A)=\\|A\\|_2\\,\\|A^{-1}\\|_2=\\frac{\\sigma_{\\max}(A)}{\\sigma_{\\min}(A)}\\quad(A\\text{ invertible})',
     relations: {
       prerequisites: ['matrix-norm', 'svd'],
       nextTopics: ['preconditioning', 'regularization'],
