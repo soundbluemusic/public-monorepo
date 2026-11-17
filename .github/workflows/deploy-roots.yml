@@ -84,6 +84,7 @@ jobs:
         run: pnpm build:roots
 
       - name: Deploy to Cloudflare Workers
+        id: deploy_worker
         working-directory: apps/roots
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
@@ -95,12 +96,13 @@ jobs:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ZONE_ID: ${{ secrets.CLOUDFLARE_ZONE_ID }}
         run: |
-          curl -X POST "https://api.cloudflare.com/client/v4/zones/${CLOUDFLARE_ZONE_ID}/purge_cache" \
+          curl --fail-with-body --silent --show-error -X POST "https://api.cloudflare.com/client/v4/zones/${CLOUDFLARE_ZONE_ID}/purge_cache" \
             -H "Authorization: Bearer ${CLOUDFLARE_API_TOKEN}" \
             -H "Content-Type: application/json" \
-            --data '{"purge_everything":true}'
+            --data '{"purge_everything":true}' | jq -e 'if .success == true then "Cache purge succeeded" else error("Cache purge failed: " + ((.errors // []) | tojson)) end'
 
       - name: Smoke test - SSR page rendering
+        if: ${{ !cancelled() && steps.deploy_worker.outcome == 'success' }}
         run: >-
           ./scripts/smoke-worker.sh
           https://roots.soundbluemusic.com
