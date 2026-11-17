@@ -20,7 +20,7 @@ export default defineConfig({
   },
   vite: {
     plugins: [tailwindcss()],
-    // Pre-bundle passthrough image and JSON logger modules before the Worker starts.
-    optimizeDeps: { include: ['astro/assets/services/noop', 'astro/logger/json'] },
+    // Pre-bundle modules before the Worker starts to avoid reloads during SSR.
+    optimizeDeps: { include: ['astro/assets/services/noop', 'astro/logger/json', 'tailwind-merge'] },
   },
 });

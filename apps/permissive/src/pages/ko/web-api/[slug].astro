@@ -1,5 +1,9 @@
 ---
+import { getWebApiBySlug } from '../../../../app/data/web-apis';
 import WebApiPage from '../../../components/pages/WebApiPage.astro';
+
+const { slug } = Astro.params;
+if (!slug || !getWebApiBySlug(slug)) return Astro.rewrite('/404');
 ---
 
 <WebApiPage locale="ko" />

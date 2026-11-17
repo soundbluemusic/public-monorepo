@@ -6,12 +6,12 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
 import AppShell from '../../../components/AppShell.astro';
 
 const { tagId } = Astro.params;
-if (!tagId) return Astro.redirect('/404', 404);
+if (!tagId) return Astro.rewrite('/404');
 
 const tag = decodeURIComponent(tagId);
 const db = env.DB;
 const entries = await getEntriesByTagFromD1(db, tag, 'ko').catch(() => []);
-if (entries.length === 0) return Astro.redirect('/404', 404);
+if (entries.length === 0) return Astro.rewrite('/404');
 
 const relatedTagCounts = new Map<string, number>();
 for (const entry of entries) {

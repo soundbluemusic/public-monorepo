@@ -6,10 +6,10 @@ import AppShell from '../../components/AppShell.astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
 const { categoryId } = Astro.params;
-if (!categoryId) return Astro.redirect('/404', 404);
+if (!categoryId) return Astro.rewrite('/404');
 
 const category = getCategoryById(categoryId);
-if (!category) return Astro.redirect('/404', 404);
+if (!category) return Astro.rewrite('/404');
 
 const pageParam = Astro.url.searchParams.get('page');
 const page = Math.max(1, parseInt(pageParam ?? '1', 10) || 1);
