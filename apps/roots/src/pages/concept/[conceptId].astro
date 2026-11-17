@@ -3,8 +3,8 @@ import { getConceptById } from '../../../app/data/concepts';
 import ConceptPage from '../../components/pages/ConceptPage.astro';
 
 const { conceptId } = Astro.params;
-if (!conceptId) return Astro.redirect('/404', 404);
-if (!getConceptById(conceptId)) return Astro.redirect('/404', 404);
+if (!conceptId) return Astro.rewrite('/404');
+if (!getConceptById(conceptId)) return Astro.rewrite('/404');
 ---
 
 <ConceptPage conceptId={conceptId} locale="en" />

@@ -279,6 +279,7 @@ export function lazyWithSuspense<P extends object>(
 ): ComponentType<P> {
   const LazyComponent = lazy(factory);
 
+  // biome-ignore lint/correctness/noComponentHookFactories: Call this factory outside rendering to keep component identity stable.
   return function LazyWrapped(props: P) {
     return (
       <Suspense fallback={fallback ?? <LoadingSpinner />}>

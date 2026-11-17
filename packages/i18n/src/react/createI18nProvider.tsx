@@ -101,6 +101,7 @@ export function createI18nProvider<K extends string>(
   const I18nContext = createContext<I18nContextType<K> | null>(null);
 
   // Provider 컴포넌트
+  // biome-ignore lint/correctness/noComponentHookFactories: This factory creates stable exports outside rendering.
   function I18nProvider({ children }: { children: ReactNode }) {
     const routerState = useRouterState();
     const pathname = routerState.location.pathname;
@@ -162,6 +163,7 @@ export function createI18nProvider<K extends string>(
   }
 
   // 훅들
+  // biome-ignore lint/correctness/noComponentHookFactories: This factory creates stable exports outside rendering.
   function useI18n(): I18nContextType<K> {
     const context = useContext(I18nContext);
     if (!context) {
@@ -170,8 +172,11 @@ export function createI18nProvider<K extends string>(
     return context;
   }
 
+  // biome-ignore lint/correctness/noComponentHookFactories: This factory creates stable exports outside rendering.
   const useLocale = () => useI18n().locale;
+  // biome-ignore lint/correctness/noComponentHookFactories: This factory creates stable exports outside rendering.
   const useT = () => useI18n().t;
+  // biome-ignore lint/correctness/noComponentHookFactories: This factory creates stable exports outside rendering.
   const useTDynamic = () => useI18n().tDynamic;
 
   return {

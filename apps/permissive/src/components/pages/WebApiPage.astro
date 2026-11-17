@@ -14,7 +14,7 @@ const { slug } = Astro.params;
 if (!slug) return Astro.redirect(`${localePrefix}/web-api`, 302);
 
 const api = getWebApiBySlug(slug);
-if (!api) return Astro.redirect('/404', 404);
+if (!api) return new Response(null, { status: 404 });
 
 const related = getRelatedWebApis(api, 4);
 const BASE_URL = 'https://permissive.soundbluemusic.com';

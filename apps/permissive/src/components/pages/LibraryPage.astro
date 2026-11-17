@@ -20,7 +20,7 @@ const baseUrl = 'https://permissive.soundbluemusic.com';
 
 const lib = getLibraryBySlug(slug);
 if (!lib) {
-  return Astro.redirect('/404', 404);
+  return new Response(null, { status: 404 });
 }
 
 const related = getRelatedLibraries(lib, 6);

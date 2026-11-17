@@ -1,0 +1,22 @@
+diff --git a/dist/index.mjs b/dist/index.mjs
+--- a/dist/index.mjs
++++ b/dist/index.mjs
+@@ -94728,10 +94728,16 @@
+ 					request$2.headers.set(CoreHeaders.ROUTE_OVERRIDE, entryWorkerName);
+ 					return ctx.miniflare.dispatchFetch(request$2, { redirect: "manual" });
+ 				});
+-				viteDevServer.middlewares.use(function cloudflarePreMiddleware(req, res, next) {
++				viteDevServer.middlewares.use(async function cloudflarePreMiddleware(req, res, next) {
+ 					assert(req.url, `req.url not defined`);
+ 					const request$2 = new Request(resolveRequestTarget(req.url, UNKNOWN_HOST));
+-					if (req[kRequestType] === "asset") next();
++					// Let Vite serve development modules and existing public assets before Worker routing.
++					// https://github.com/cloudflare/workers-sdk/issues/14626
++					const publicDir = viteDevServer.config.publicDir;
++					const publicFile = publicDir && path.resolve(publicDir, "." + new URL(request$2.url).pathname);
++					const isPublicAsset = publicFile && publicFile.startsWith(withTrailingSlash(publicDir)) && await fsp.stat(publicFile).then((stat) => stat.isFile(), () => false);
++					if (isPublicAsset || ["script", "style", "font", "worker", "sharedworker"].includes(req.headers["sec-fetch-dest"])) next();
++					else if (req[kRequestType] === "asset") next();
+ 					else if (excludeRulesMatcher({ request: request$2 })) {
+ 						req[kRequestType] = "asset";
+ 						next();

@@ -14,6 +14,7 @@ export type BrandIcon = ForwardRefExoticComponent<
 >;
 
 function createBrandIcon(displayName: string, path: string): BrandIcon {
+  // biome-ignore lint/correctness/noComponentHookFactories: Icons are created once at module scope.
   const Component = forwardRef<SVGSVGElement, LucideProps>(
     ({ size = 24, className, color = 'currentColor', ...rest }, ref) => (
       <svg

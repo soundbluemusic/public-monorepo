@@ -30,7 +30,7 @@ overrides:
   'qs@6': ^6.16.1
   '@puppeteer/browsers>extract-zip': npm:@electron-internal/extract-zip@1.0.5
   'basic-ftp': ^6.2.1
-  'devalue': ^5.9.3
+  'devalue@<5.9.3': ^5.9.3
   'smol-toml': ^1.9.0
   'source-map-js': ^1.2.2
   'proxy-addr': ^2.0.8
@@ -45,7 +45,8 @@ overrides:
   'seroval': ^1.6.11
   'glob@>=9': ^14.0.2
   'minimatch@>=9': ^11.0.1
+  'depcheck>minimatch': ^11.0.8
 
 patchedDependencies:
-  '@cloudflare/vite-plugin@1.54.4': patches/@cloudflare__vite-plugin@1.54.4.patch
-  zod@3.25.76: patches/zod@3.25.76.patch
+  'depcheck@1.4.7': patches/depcheck@1.4.7.patch
+  '@cloudflare/vite-plugin@1.69.1': patches/@cloudflare__vite-plugin@1.69.1.patch

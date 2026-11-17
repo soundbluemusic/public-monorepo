@@ -5,11 +5,11 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import { difficultyLabels } from '../../../app/data/types';
 
 const { tagId } = Astro.params;
-if (!tagId) return Astro.redirect('/404', 404);
+if (!tagId) return Astro.rewrite('/404');
 
 const tag = decodeURIComponent(tagId);
 const concepts = conceptsByTag.get(tag) ?? [];
-if (concepts.length === 0) return Astro.redirect('/404', 404);
+if (concepts.length === 0) return Astro.rewrite('/404');
 
 const baseUrl = 'https://roots.soundbluemusic.com';
 

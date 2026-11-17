@@ -1,6 +1,8 @@
 ---
 import AppShell from '../components/AppShell.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
+
+Astro.response.status = 404;
 ---
 
 <BaseLayout title="Page Not Found - Roots" noIndex={true}>
